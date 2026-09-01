@@ -47,6 +47,7 @@ git push -u origin <your-branch-name>
 3. Add a brief description of what you changed.
 4. (Optional) Request a review from a group member if you want them to look it over.
 5. Once you are confident, you can click "Merge pull request" to combine your code into `main`!
+   - **WARNING:** PRs opened automatically by the CI Reliability Agent are not routine. Review the confidence score and reasoning trace in the PR body before merging. Do not fast-merge these.
 
 ### 6. Clean Up
 After merging, you can delete your branch locally and on GitHub to keep things tidy.
