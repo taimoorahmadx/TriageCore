@@ -57,7 +57,8 @@ The `ConfidenceEngine` is the core decision engine used by both agents. Its inte
 
 ## 5. Environment & Secrets
 The following environment variables are required. Real values live ONLY in `.env`, never in code or in this file:
-- `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`
+- `GEMINI_API_KEY` (Primary LLM)
+- `GROQ_API_KEY` (Fallback LLM)
 - `GITHUB_APP_ID`
 - `GITHUB_WEBHOOK_SECRET`
 - `GITHUB_TOKEN`
