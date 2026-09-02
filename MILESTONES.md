@@ -29,14 +29,18 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Owner:** Member 2 (QA + Browser)
 - **Non-Functional Targets:** Must recover the selector and classify the outcome in < 10 seconds.
 - **Technical Spec:** A standalone Playwright script that visits `tests/dummy/test_page.html` across two scenarios (Control vs. Trap). When the button's ID is manually changed by a human, it uses an LLM to relocate the button via semantic DOM matching, completes the click, gathers post-click evidence (DOM state and console errors), and uses the LLM to classify the final outcome as `SAFE_HEAL` or `MASKED_REGRESSION_ESCALATED`.
-- **Agent Prompt:** "Create a standalone Playwright script `poc_recovery.py`. It should load `tests/dummy/test_page.html` (use file:// absolute path) twice: once normally (`?scenario=control`) and once as a trap (`?scenario=trap`). Click the button with ID 'submit-btn'. If the selector fails, extract the surrounding DOM, send it to the LLM (using `openai` with `gpt-4o-mini`) to find the new selector, and retry the click. CRITICAL: After the click, extract the browser console logs and any changes to the DOM. Send this post-click evidence to the LLM to classify if the heal was safe (`SAFE_HEAL`) or if it masked a broken javascript handler (`MASKED_REGRESSION_ESCALATED`). Catch Playwright TimeoutErrors explicitly."
+- **Agent Prompt:** "Create a standalone Playwright script `poc_recovery.py`. It should load `tests/dummy/test_page.html` (use file:// absolute path) twice: once normally (`?scenario=control`) and once as a trap (`?scenario=trap`). Click the button with ID 'submit-btn'. If the selector fails, extract the surrounding DOM, send it to the LLM (using `langchain-google-genai` with `gemini-1.5-flash`) to find the new selector, and retry the click. CRITICAL: After the click, extract the browser console logs and any changes to the DOM. Send this post-click evidence to the LLM to classify if the heal was safe (`SAFE_HEAL`) or if it masked a broken javascript handler (`MASKED_REGRESSION_ESCALATED`). Catch Playwright TimeoutErrors explicitly."
 - **Definition of Done:** 
-  - [ ] Human alters the button's ID in the local HTML to simulate a break.
-  - [ ] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
-  - [ ] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
+  - [x] Human alters the button's ID in the local HTML to simulate a break.
+  - [x] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
+  - [x] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
 - **Human Tasks:** Alter the button's ID in `test_page.html` to break the initial selector before running. Provide API keys.
-- **AI Usage Log Template:** *[Action Performed]: [What was generated] verified by [Verification Method].*
-  - *Example: AI generated `poc_recovery.py` boilerplate; human verified the DOM extraction limits before execution.*
+- **AI Usage Log:** 
+  - *AI generated `poc_recovery.py` with Playwright and UI toasts. Human verified the visual demo.*
+  - *AI refactored script to bypass Langchain bugs by using raw `curl` subprocess calls.*
+  - *AI pivoted API from Gemini to Groq (`gpt-oss-20b`) due to strict Gemini rate limits.*
+  - *AI split execution into `demo_safe.py` and `demo_trap.py` for clear presentation separation.*
+  - *AI updated prompts to request LLM reasoning traces and fixed a regex bug (`re.findall`) that allowed backticks inside reasoning text to break extraction.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.
@@ -74,7 +78,7 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Owner:** Member 2 (QA + Browser)
 - **Non-Functional Targets:** Full heal cycle < 10 seconds.
 - **Technical Spec:** `qa_agent.py` uses LangGraph. Node 1: Receive Playwright failure. Node 2: LLM proposes new selector. Node 3: Call `ConfidenceEngine`. State schema includes the proposed selector and the engine's score. (Note: The threshold for self-healing is provisional until FYP-II).
-- **Agent Prompt:** "Build `src/agents/qa_agent.py` using LangGraph. The agent receives extracted DOM JSON, uses the `langchain-openai` package with `ChatOpenAI` models to propose a new selector, formats the data to the ConfidenceEngine Input Schema, and calls the engine. Return the engine's Output Schema. Explicitly do NOT invent the ConfidenceEngine interface; use the imported one."
+- **Agent Prompt:** "Build `src/agents/qa_agent.py` using LangGraph. The agent receives extracted DOM JSON, uses the `langchain-google-genai` package with `ChatGoogleGenerativeAI` models to propose a new selector, formats the data to the ConfidenceEngine Input Schema, and calls the engine. Return the engine's Output Schema. Explicitly do NOT invent the ConfidenceEngine interface; use the imported one."
 - **Definition of Done:**
   - [ ] Agent successfully passes payload to ConfidenceEngine and receives a valid score.
   - [ ] LLM proposes a valid selector for 3 distinct test cases.
@@ -103,7 +107,7 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Owner:** Member 3 (CI + Dashboard)
 - **Non-Functional Targets:** Triage analysis < 30 seconds.
 - **Technical Spec:** `src/agents/ci_agent.py`. Pops from Redis. LLM traces to a recent commit (searches the 10 most recent commits in the PR). If tie/ambiguity (multiple commits touched the same file), the agent explicitly passes `ambiguous_commit=true` in the `context` to the `ConfidenceEngine` to mathematically reduce the confidence score, rather than silently guessing.
-- **Agent Prompt:** "Build `src/agents/ci_agent.py`. Pop log from Redis using `redis-py`. Use the `langchain-openai` package with `ChatOpenAI` models to trace failure to one of the 10 most recent commits (fetch commits using the `PyGithub` library). If ambiguous, set `ambiguous_commit=true` in the evidence context. Format as Input Schema and call `ConfidenceEngine`. Handle empty logs gracefully. Do NOT silently guess commits if tied."
+- **Agent Prompt:** "Build `src/agents/ci_agent.py`. Pop log from Redis using `redis-py`. Use the `langchain-google-genai` package with `ChatGoogleGenerativeAI` models to trace failure to one of the 10 most recent commits (fetch commits using the `PyGithub` library). If ambiguous, set `ambiguous_commit=true` in the evidence context. Format as Input Schema and call `ConfidenceEngine`. Handle empty logs gracefully. Do NOT silently guess commits if tied."
 - **Definition of Done:**
   - [ ] Agent correctly identifies the bad commit in 3 clear test cases.
   - [ ] Agent correctly sets `ambiguous_commit=true` when 2 commits touch the failing file.
@@ -183,3 +187,4 @@ Before the semester starts, the team acknowledges the following risks and fallba
 - **Milestone 5:** If commit tracing is consistently inaccurate due to large PRs, fallback to flagging the *entire PR* rather than attempting to isolate the specific commit.
 - **Milestone 7:** If finding 50 real-world known-cause failures takes too long, fallback to injecting 25 synthetic, manually-crafted bugs into a clean repository.
 - **Milestone 8:** If no consenting open-source project is secured by the FYP-II start date, fallback to acceptance testing against another FYP team's repository.
+- **LLM Rate Limits:** If Google Gemini API limits (15 RPM) cause persistent failures during testing, fallback to using Groq API via `langchain-groq`.
