@@ -40,6 +40,7 @@ This document acts as the single source of truth for our project roadmap, gating
   - *AI refactored script to bypass Langchain bugs by using raw `curl` subprocess calls.*
   - *AI pivoted API from Gemini to Groq (`gpt-oss-20b`) due to strict Gemini rate limits.*
   - *AI split execution into `demo_safe.py` and `demo_trap.py` for clear presentation separation.*
+  - *AI updated prompts to request LLM reasoning traces and fixed a regex bug (`re.findall`) that allowed backticks inside reasoning text to break extraction.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.

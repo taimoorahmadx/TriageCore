@@ -145,17 +145,15 @@ def run_scenario(scenario: str):
             prompt = (
                 f"The CSS selector '{initial_selector}' failed to find the checkout/submit button.\n"
                 f"Here is the current HTML of the page:\n\n{dom_content}\n\n"
-                "Please analyze the HTML and provide the correct, updated CSS selector for the submit button. "
-                "Return ONLY the raw CSS selector string without any markdown formatting or explanation."
+                "Please analyze the HTML. First, write a brief 1-2 sentence reasoning explaining how you are locating the new button. "
+                "Then, on a new line, provide the correct, updated CSS selector wrapped in backticks (e.g., `#new-id`)."
             )
-            print("/n====================Injecting Prompt====================/n")
             with console.status("[bold yellow]Waiting for Groq API response...[/bold yellow]", spinner="dots"):
                 content_val = ask_llm(prompt)
-            print("/n====================Injected Prompt====================/n")
             console.print(Panel(str(content_val), title="[bold blue]AI Reasoning (Selector)[/bold blue]", border_style="blue"))
             
-            match = re.search(r'`([^`]+)`', str(content_val))
-            target_selector = match.group(1).strip() if match else str(content_val).strip()
+            matches = re.findall(r'`([^`]+)`', str(content_val))
+            target_selector = matches[-1].strip() if matches else str(content_val).strip()
             
             console.print(f"[green][{scenario}] LLM extracted new selector: '{target_selector}'[/green]")
             inject_toast(page, f"✨ Success! AI found new selector: '{target_selector}'", color="#10B981")
@@ -188,7 +186,8 @@ def run_scenario(scenario: str):
             "MASKED_REGRESSION_ESCALATED (e.g., JS errors in console, no success message)?\n\n"
             f"Console logs:\n{logs_str}\n\n"
             f"Post-click DOM:\n{post_click_dom}\n\n"
-            "Return strictly ONLY one of the following strings: 'SAFE_HEAL' or 'MASKED_REGRESSION_ESCALATED'."
+            "First, write a brief 1-2 sentence reasoning trace explaining your diagnosis. "
+            "Then, on a new line, provide strictly one of the following strings wrapped in backticks: `SAFE_HEAL` or `MASKED_REGRESSION_ESCALATED`."
         )
         
         with console.status("[bold yellow]Waiting for Groq API classification...[/bold yellow]", spinner="dots"):
@@ -196,8 +195,8 @@ def run_scenario(scenario: str):
         
         console.print(Panel(str(class_content), title="[bold magenta]AI Reasoning (Classification)[/bold magenta]", border_style="magenta"))
         
-        match = re.search(r'`([^`]+)`', str(class_content))
-        classification = match.group(1).strip() if match else str(class_content).strip()
+        matches = re.findall(r'`([^`]+)`', str(class_content))
+        classification = matches[-1].strip() if matches else str(class_content).strip()
         
         color = "green" if classification == "SAFE_HEAL" else "red"
         panel = Panel(
