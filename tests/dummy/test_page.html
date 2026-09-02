@@ -9,6 +9,7 @@
         .container { border: 1px solid #ccc; padding: 20px; max-width: 400px; margin: 0 auto; }
         .submit-btn { background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; }
         .submit-btn:hover { background-color: #0056b3; }
+        .success-msg { color: green; font-weight: bold; margin-top: 15px; display: none; }
     </style>
 </head>
 <body>
@@ -18,9 +19,30 @@
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email"><br><br>
             
-            <!-- In the POC, the human will change this ID to break the test, and the LLM will use surrounding semantic context to find it -->
+            <!-- In the POC, the human will manually change this ID to 'submit-btn-changed' before running the script -->
             <button type="button" id="submit-btn" class="submit-btn">Complete Purchase</button>
         </form>
+        <div id="success-msg" class="success-msg">Purchase Successful!</div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector(".submit-btn"); // Bind via class to simulate underlying logic surviving an ID change
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const scenario = urlParams.get('scenario');
+
+            btn.addEventListener("click", () => {
+                if (scenario === 'trap') {
+                    // Scenario 2: The trap. The button exists, but the logic is broken.
+                    console.error("Uncaught ReferenceError: processPayment is not defined at HTMLButtonElement.onclick");
+                    // Intentionally do NOT show the success message.
+                } else {
+                    // Scenario 1: The control. Everything works perfectly.
+                    document.getElementById("success-msg").style.display = "block";
+                }
+            });
+        });
+    </script>
 </body>
 </html>

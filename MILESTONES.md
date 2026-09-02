@@ -24,17 +24,17 @@ This document acts as the single source of truth for our project roadmap, gating
 ## 3. Phase 1: FYP-I (End-to-End System & Preliminary Baseline)
 
 ### Pre-Milestone: Proposal-Stage POC
-- **Goal:** Prove feasibility of DOM/semantic matching recovery at the proposal defense.
+- **Goal:** Prove the system can heal broken selectors *and* detect when a healed click masks a real regression (the core CCP claim).
 - **Depends on:** Nothing.
 - **Owner:** Member 2 (QA + Browser)
-- **Non-Functional Targets:** Must recover the selector in < 5 seconds.
-- **Technical Spec:** A tiny, standalone Python script using Playwright that visits the `tests/dummy/test_page.html` file, clicks a button, and when the button's ID is manually changed by a human, uses an LLM to relocate the button via semantic DOM matching and completes the click.
-- **Agent Prompt:** "Create a standalone Playwright script `poc_recovery.py`. It should load `tests/dummy/test_page.html` (use file:// absolute path) and click the button with ID 'submit-btn'. If the selector fails, extract the surrounding DOM, send it to the LLM (using the `openai` Python package with `gpt-4o-mini`) to find the new selector based on semantic context, and retry the click. Do NOT invent business logic. Catch Playwright TimeoutErrors explicitly."
+- **Non-Functional Targets:** Must recover the selector and classify the outcome in < 10 seconds.
+- **Technical Spec:** A standalone Playwright script that visits `tests/dummy/test_page.html` across two scenarios (Control vs. Trap). When the button's ID is manually changed by a human, it uses an LLM to relocate the button via semantic DOM matching, completes the click, gathers post-click evidence (DOM state and console errors), and uses the LLM to classify the final outcome as `SAFE_HEAL` or `MASKED_REGRESSION_ESCALATED`.
+- **Agent Prompt:** "Create a standalone Playwright script `poc_recovery.py`. It should load `tests/dummy/test_page.html` (use file:// absolute path) twice: once normally (`?scenario=control`) and once as a trap (`?scenario=trap`). Click the button with ID 'submit-btn'. If the selector fails, extract the surrounding DOM, send it to the LLM (using `openai` with `gpt-4o-mini`) to find the new selector, and retry the click. CRITICAL: After the click, extract the browser console logs and any changes to the DOM. Send this post-click evidence to the LLM to classify if the heal was safe (`SAFE_HEAL`) or if it masked a broken javascript handler (`MASKED_REGRESSION_ESCALATED`). Catch Playwright TimeoutErrors explicitly."
 - **Definition of Done:** 
-  - [ ] Script successfully clicks the original button.
-  - [ ] Human alters the button's ID/class in the local HTML.
-  - [ ] Script catches the failure, LLM successfully relocates the button, and the click completes (pass/fail recovery).
-- **Human Tasks:** Write the local HTML file and alter it mid-run. Provide API keys.
+  - [ ] Human alters the button's ID in the local HTML to simulate a break.
+  - [ ] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
+  - [ ] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
+- **Human Tasks:** Alter the button's ID in `test_page.html` to break the initial selector before running. Provide API keys.
 - **AI Usage Log Template:** *[Action Performed]: [What was generated] verified by [Verification Method].*
   - *Example: AI generated `poc_recovery.py` boilerplate; human verified the DOM extraction limits before execution.*
 
