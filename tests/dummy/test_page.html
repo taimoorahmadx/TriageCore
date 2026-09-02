@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriageCore Dummy Test Page</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .container { border: 1px solid #ccc; padding: 20px; max-width: 400px; margin: 0 auto; }
+        .submit-btn { background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        .submit-btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout Form</h2>
+        <form id="checkout-form">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <!-- In the POC, the human will change this ID to break the test, and the LLM will use surrounding semantic context to find it -->
+            <button type="button" id="submit-btn" class="submit-btn">Complete Purchase</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -18,7 +18,9 @@ dependencies = [
     "pydantic>=2.6.0",
     "psycopg2-binary>=2.9.9",
     "redis>=5.0.1",
-    "pytest>=8.0.0"
+    "pytest>=8.0.0",
+    "langchain-openai>=0.0.5",
+    "PyGithub>=2.1.1"
 ]
 requires-python = ">=3.11"
 
