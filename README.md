@@ -42,3 +42,17 @@ This is a central monorepo containing the following components:
    ```bash
    playwright install
    ```
+
+### Proof of Concept (POC) Demo
+
+The POC demonstrates the core danger of "blind" AI self-healing tools and how TriageCore solves it. It uses Playwright and the Groq LLM API to attempt to click a broken button.
+
+- **Scenario 1 (Safe Healing):** The script encounters a broken button ID, extracts the DOM, asks the AI for a new selector, and clicks it. The form submits successfully. The AI analyzes the post-click DOM, sees a success message, and correctly classifies it as a `SAFE_HEAL`.
+  ```bash
+  python3 demo_safe.py
+  ```
+
+- **Scenario 2 (Masked Regression):** The script heals the button and clicks it, just like before. However, this time, a hidden Javascript error is triggered upon clicking. A naive self-healing tool would assume success because the click physically went through. TriageCore analyzes the post-click console logs, detects the silent error, and correctly flags the action as a `MASKED_REGRESSION_ESCALATED` to prevent a false positive in the pipeline.
+  ```bash
+  python3 demo_trap.py
+  ```

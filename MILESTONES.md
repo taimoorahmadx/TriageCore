@@ -31,12 +31,15 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Technical Spec:** A standalone Playwright script that visits `tests/dummy/test_page.html` across two scenarios (Control vs. Trap). When the button's ID is manually changed by a human, it uses an LLM to relocate the button via semantic DOM matching, completes the click, gathers post-click evidence (DOM state and console errors), and uses the LLM to classify the final outcome as `SAFE_HEAL` or `MASKED_REGRESSION_ESCALATED`.
 - **Agent Prompt:** "Create a standalone Playwright script `poc_recovery.py`. It should load `tests/dummy/test_page.html` (use file:// absolute path) twice: once normally (`?scenario=control`) and once as a trap (`?scenario=trap`). Click the button with ID 'submit-btn'. If the selector fails, extract the surrounding DOM, send it to the LLM (using `langchain-google-genai` with `gemini-1.5-flash`) to find the new selector, and retry the click. CRITICAL: After the click, extract the browser console logs and any changes to the DOM. Send this post-click evidence to the LLM to classify if the heal was safe (`SAFE_HEAL`) or if it masked a broken javascript handler (`MASKED_REGRESSION_ESCALATED`). Catch Playwright TimeoutErrors explicitly."
 - **Definition of Done:** 
-  - [ ] Human alters the button's ID in the local HTML to simulate a break.
-  - [ ] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
-  - [ ] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
+  - [x] Human alters the button's ID in the local HTML to simulate a break.
+  - [x] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
+  - [x] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
 - **Human Tasks:** Alter the button's ID in `test_page.html` to break the initial selector before running. Provide API keys.
-- **AI Usage Log Template:** *[Action Performed]: [What was generated] verified by [Verification Method].*
-  - *Example: AI generated `poc_recovery.py` boilerplate; human verified the DOM extraction limits before execution.*
+- **AI Usage Log:** 
+  - *AI generated `poc_recovery.py` with Playwright and UI toasts. Human verified the visual demo.*
+  - *AI refactored script to bypass Langchain bugs by using raw `curl` subprocess calls.*
+  - *AI pivoted API from Gemini to Groq (`gpt-oss-20b`) due to strict Gemini rate limits.*
+  - *AI split execution into `demo_safe.py` and `demo_trap.py` for clear presentation separation.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.
