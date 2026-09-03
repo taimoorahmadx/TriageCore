@@ -25,15 +25,17 @@ def ask_llm(prompt: str) -> str:
         "temperature": 0
     }
     
+    timeout_secs = int(os.environ.get("GROQ_CURL_TIMEOUT_SECONDS", "10"))
     max_retries = 5
     for attempt in range(max_retries):
+        result = None
         try:
             result = subprocess.run([
                 "curl", "-sS", "-X", "POST", url,
                 "-H", "Content-Type: application/json",
                 "-H", f"Authorization: Bearer {api_key}",
                 "-d", json.dumps(payload)
-            ], capture_output=True, text=True, check=True)
+            ], capture_output=True, text=True, check=True, timeout=timeout_secs)
             
             json_data = json.loads(result.stdout)
             
@@ -51,11 +53,16 @@ def ask_llm(prompt: str) -> str:
                 
             return json_data["choices"][0]["message"]["content"]
             
+        except subprocess.TimeoutExpired:
+            if attempt < max_retries - 1:
+                time.sleep(3)
+                continue
+            return f"Error: Curl request timed out after {timeout_secs}s."
         except Exception as e:
             if attempt < max_retries - 1:
                 time.sleep(3)
                 continue
-            raw_out = result.stdout if 'result' in locals() else 'No stdout'
+            raw_out = result.stdout if result else 'No stdout'
             return f"Error connecting to API via curl: {str(e)}\nRaw output: {raw_out}"
 
 def inject_toast(page, message: str, color: str = "#4F46E5", duration_ms: int = 4000):

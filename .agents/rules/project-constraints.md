@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # TriageCore Standing Constraints
 
 - Never invent the mathematical weighting logic in `weights.yaml`. Generate placeholder fields with comments describing what each weight represents; a human fills in real values. If `weights.yaml` is missing or incomplete at runtime, raise an error — never default silently.
@@ -8,3 +12,4 @@
 - If a milestone's Technical Spec in `MILESTONES.md` conflicts with anything in `AGENTS.md`, stop and surface the conflict to the human instead of silently picking one.
 - When executing a milestone from `MILESTONES.md`, ONLY execute the instructions explicitly written in the **Agent Prompt** section. Treat all other sections (Goal, Technical Spec, Definition of Done, Human Tasks) purely as context to guide your understanding.
 - **PROACTIVE DOCUMENTATION**: You must proactively and automatically keep project documentation (`MILESTONES.md`, `README.md`, etc.) strictly up to date after completing ANY code change, bug fix, or milestone. Do not wait for the user to ask. When updating the AI Usage Log or commit notes, be highly specific about *what* was changed, *why* it was changed, and *what previous state* it replaced (e.g., "Pivoted from library X to library Y because of error Z"). Automatically check off `[ ]` to `[x]` for any completed Definition of Done items.
+- **NO AUTONOMOUS GIT PUSHES**: Never automatically run `git commit` or `git push` commands on behalf of the user. Only provide the commands in the chat interface so the user can manually execute them, as pushing to the remote repository is strictly the user's responsibility.
