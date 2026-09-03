@@ -46,6 +46,7 @@ This is a central monorepo containing the following components:
 ### Proof of Concept (POC) Demo
 
 The POC demonstrates the core danger of "blind" AI self-healing tools and how TriageCore solves it. It uses Playwright and the Groq LLM API to attempt to click a broken button.
+Prerequisite: ensure your `.env` contains a valid `GROQ_API_KEY`.
 
 - **Scenario 1 (Safe Healing):** The script encounters a broken button ID, extracts the DOM, asks the AI for a new selector, and clicks it. The form submits successfully. The AI analyzes the post-click DOM, sees a success message, and correctly classifies it as a `SAFE_HEAL`.
   ```bash

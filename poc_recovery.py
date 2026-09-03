@@ -33,7 +33,7 @@ def ask_llm(prompt: str) -> str:
                 "-H", "Content-Type: application/json",
                 "-H", f"Authorization: Bearer {api_key}",
                 "-d", json.dumps(payload)
-            ], capture_output=True, text=True, check=True)
+            ], capture_output=True, text=True, check=True, timeout=30)
             
             json_data = json.loads(result.stdout)
             

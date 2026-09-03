@@ -10,7 +10,7 @@ TriageCore heavily relies on Large Language Models (LLMs) for DOM semantic match
 We have decided to pivot our primary LLM provider from OpenAI to **Google Gemini** via Google AI Studio (`langchain-google-genai`). 
 
 1. **Primary Provider (Gemini 1.5 Flash):** Offers a highly generous free tier (15 RPM, 1 million tokens/min) with a massive context window ideal for parsing large HTML DOMs and raw CI logs.
-2. **Official Fallback (Groq / Llama 3):** If Gemini imposes stricter rate limits or performance issues arise, we will fall back to Groq (`langchain-groq`), which provides blazing fast inference of open-source models for free.
+2. **Official Fallback (Groq / OpenAI-compatible OSS models):** If Gemini imposes stricter rate limits or performance issues arise, we will fall back to Groq (`langchain-groq` or Groq's OpenAI-compatible API) for fast inference of open-source models.
 
 ## Consequences
 - **Positive:** The team will incur $0 in LLM API costs during FYP-I and FYP-II development and acceptance testing. The 1M token context window of Gemini 1.5 heavily reduces the risk of truncating large CI logs (mitigating an open risk in Milestone 4).
