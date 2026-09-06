@@ -117,13 +117,14 @@ def highlight_element(page, selector: str):
     """
     page.evaluate(script, selector)
 
-def run_scenario(scenario: str):
-    console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} ---[/bold magenta]")
+def run_scenario(scenario: str, headless: bool = False) -> dict:
+    start_time = time.perf_counter()
+    console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} (Headless={headless}) ---[/bold magenta]")
     
     file_uri = f"file:///home/user/Desktop/TriageCore/tests/dummy/test_page.html?scenario={scenario}"
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, slow_mo=500)
+        browser = p.chromium.launch(headless=headless, slow_mo=0 if headless else 500)
         page = browser.new_page()
 
         console_logs = []
@@ -131,22 +132,25 @@ def run_scenario(scenario: str):
         page.on("pageerror", lambda err: console_logs.append(f"ERROR: {str(err)}"))
 
         page.goto(file_uri)
-        page.wait_for_timeout(1000)
+        page.wait_for_timeout(500 if headless else 1000)
 
         initial_selector = "#submit-btn"
         target_selector = initial_selector
 
         try:
             console.print(f"[cyan][{scenario}][/cyan] Attempting click with selector [bold]'{initial_selector}'[/bold]...")
-            inject_toast(page, f"Agent: Attempting to click '{initial_selector}'...", color="#3B82F6")
+            if not headless:
+                inject_toast(page, f"Agent: Attempting to click '{initial_selector}'...", color="#3B82F6")
             page.click(initial_selector, timeout=2000)
         except PlaywrightTimeoutError:
             console.print(f"[red][{scenario}] TimeoutError: Selector '{initial_selector}' failed.[/red]")
-            inject_toast(page, f"🚨 Error: Selector '{initial_selector}' not found!", color="#EF4444")
-            page.wait_for_timeout(1500)
+            if not headless:
+                inject_toast(page, f"🚨 Error: Selector '{initial_selector}' not found!", color="#EF4444")
+                page.wait_for_timeout(1000)
             
             console.print(f"[yellow][{scenario}] Extracting DOM and calling AI for healing...[/yellow]")
-            inject_toast(page, "🧠 Agent: Extracting DOM & calculating new selector via Groq AI... (This takes 10-20s)", color="#8B5CF6", duration_ms=20000)
+            if not headless:
+                inject_toast(page, "🧠 Agent: Extracting DOM & calculating new selector via Groq AI... (This takes 10-20s)", color="#8B5CF6", duration_ms=20000)
             dom_content = page.content()
             
             prompt = (
@@ -163,27 +167,37 @@ def run_scenario(scenario: str):
             target_selector = matches[-1].strip() if matches else str(content_val).strip()
             
             console.print(f"[green][{scenario}] LLM extracted new selector: '{target_selector}'[/green]")
-            inject_toast(page, f"✨ Success! AI found new selector: '{target_selector}'", color="#10B981")
-            
-            highlight_element(page, target_selector)
-            page.wait_for_timeout(2000)
+            if not headless:
+                inject_toast(page, f"✨ Success! AI found new selector: '{target_selector}'", color="#10B981")
+                highlight_element(page, target_selector)
+                page.wait_for_timeout(1500)
             
             try:
                 console.print(f"[cyan][{scenario}][/cyan] Retrying click with new selector...")
-                inject_toast(page, "Agent: Retrying click...", color="#3B82F6")
+                if not headless:
+                    inject_toast(page, "Agent: Retrying click...", color="#3B82F6")
                 page.click(target_selector, timeout=2000)
                 console.print(f"[green][{scenario}] Click successful.[/green]")
             except PlaywrightTimeoutError:
                 console.print(f"[red][{scenario}] TimeoutError: Healed selector also failed. Aborting.[/red]")
                 browser.close()
-                return
+                duration_ms = int((time.perf_counter() - start_time) * 1000)
+                return {
+                    "scenario": scenario,
+                    "classification": "MASKED_REGRESSION_ESCALATED",
+                    "confidence_score": 10,
+                    "reasoning_trace": "Both original and healed selectors failed to resolve the clickable element.",
+                    "recommended_action": "escalate",
+                    "duration_ms": duration_ms
+                }
 
-        page.wait_for_timeout(1500)
+        page.wait_for_timeout(1000 if headless else 1500)
         
         post_click_dom = page.content()
         
         console.print(f"[yellow][{scenario}] Gathering post-click evidence and analyzing...[/yellow]")
-        inject_toast(page, "🧠 Agent: Analyzing post-click evidence... (Please wait)", color="#8B5CF6", duration_ms=20000)
+        if not headless:
+            inject_toast(page, "🧠 Agent: Analyzing post-click evidence... (Please wait)", color="#8B5CF6", duration_ms=20000)
         logs_str = "\n".join(console_logs) if console_logs else "No console logs."
         
         classification_prompt = (
@@ -193,32 +207,85 @@ def run_scenario(scenario: str):
             "MASKED_REGRESSION_ESCALATED (e.g., JS errors in console, no success message)?\n\n"
             f"Console logs:\n{logs_str}\n\n"
             f"Post-click DOM:\n{post_click_dom}\n\n"
-            "First, write a brief 1-2 sentence reasoning trace explaining your diagnosis. "
-            "Then, on a new line, provide strictly one of the following strings wrapped in backticks: `SAFE_HEAL` or `MASKED_REGRESSION_ESCALATED`."
+            "You MUST respond STRICTLY with a valid JSON object matching this schema (do NOT include backticks or markdown fences around the JSON):\n"
+            "{\n"
+            '  "classification": "SAFE_HEAL" or "MASKED_REGRESSION_ESCALATED",\n'
+            '  "confidence_score": <integer from 0 to 100 representing confidence in this diagnosis>,\n'
+            '  "reasoning_trace": "<1-2 concise sentences explaining your diagnosis based on post-click DOM and console errors>"\n'
+            "}"
         )
         
         with console.status("[bold yellow]Waiting for Groq API classification...[/bold yellow]", spinner="dots"):
             class_content = ask_llm(classification_prompt)
         
-        console.print(Panel(str(class_content), title="[bold magenta]AI Reasoning (Classification)[/bold magenta]", border_style="magenta"))
+        console.print(Panel(str(class_content), title="[bold magenta]AI Raw Output (Classification)[/bold magenta]", border_style="magenta"))
         
-        matches = re.findall(r'`([^`]+)`', str(class_content))
-        classification = matches[-1].strip() if matches else str(class_content).strip()
+        # Parse model-generated structured JSON
+        classification = "MASKED_REGRESSION_ESCALATED"
+        confidence_score = 50
+        reasoning_trace = str(class_content).strip()
+        
+        try:
+            # First attempt: direct JSON load
+            clean_text = class_content.strip()
+            # If wrapped in markdown ```json ... ```
+            if "```" in clean_text:
+                json_match = re.search(r'```(?:json)?\s*([\s\S]*?)\s*```', clean_text)
+                if json_match:
+                    clean_text = json_match.group(1).strip()
+            elif "{" in clean_text and "}" in clean_text:
+                json_match = re.search(r'(\{[\s\S]*\})', clean_text)
+                if json_match:
+                    clean_text = json_match.group(1).strip()
+                    
+            parsed = json.loads(clean_text)
+            if "classification" in parsed:
+                classification = parsed["classification"].strip()
+            if "confidence_score" in parsed:
+                confidence_score = int(parsed["confidence_score"])
+            if "reasoning_trace" in parsed:
+                reasoning_trace = parsed["reasoning_trace"].strip()
+        except Exception as parse_err:
+            console.print(f"[yellow]Warning: Could not parse pure JSON ({parse_err}). Using regex extraction fallback.[/yellow]")
+            if "SAFE_HEAL" in class_content:
+                classification = "SAFE_HEAL"
+                confidence_score = 90
+            elif "MASKED_REGRESSION_ESCALATED" in class_content:
+                classification = "MASKED_REGRESSION_ESCALATED"
+                confidence_score = 85
+            score_match = re.search(r'"confidence_score"\s*:\s*(\d+)', class_content)
+            if score_match:
+                confidence_score = int(score_match.group(1))
+
+        # Clamp confidence_score to [0, 100]
+        confidence_score = max(0, min(100, confidence_score))
+        recommended_action = "heal" if classification == "SAFE_HEAL" else "escalate"
         
         color = "green" if classification == "SAFE_HEAL" else "red"
         panel = Panel(
-            Text(classification, justify="center", style=f"bold {color}"),
+            Text(f"{classification} (Score: {confidence_score}%) - Action: {recommended_action.upper()}\nReasoning: {reasoning_trace}", justify="center", style=f"bold {color}"),
             title=f"Scenario: {scenario.upper()}",
             expand=False,
             border_style=color
         )
         console.print(panel)
         
-        toast_color = "#10B981" if classification == "SAFE_HEAL" else "#EF4444"
-        inject_toast(page, f"Final Verdict: {classification}", color=toast_color, duration_ms=5000)
-        page.wait_for_timeout(4000)
+        if not headless:
+            toast_color = "#10B981" if classification == "SAFE_HEAL" else "#EF4444"
+            inject_toast(page, f"Final Verdict: {classification} ({confidence_score}%)", color=toast_color, duration_ms=4000)
+            page.wait_for_timeout(3000)
         
         browser.close()
+        
+        duration_ms = int((time.perf_counter() - start_time) * 1000)
+        return {
+            "scenario": scenario,
+            "classification": classification,
+            "confidence_score": confidence_score,
+            "reasoning_trace": reasoning_trace,
+            "recommended_action": recommended_action,
+            "duration_ms": duration_ms
+        }
 
 if __name__ == "__main__":
     import sys
@@ -227,7 +294,8 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         target = sys.argv[1].lower()
         if target in ["control", "trap"]:
-            run_scenario(target)
+            res = run_scenario(target)
+            console.print(f"[cyan]Result dict:[/cyan] {res}")
         else:
             console.print("[red]Unknown scenario. Use 'control' or 'trap'.[/red]")
     else:
