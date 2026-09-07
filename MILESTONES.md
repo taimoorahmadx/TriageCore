@@ -34,6 +34,10 @@ This document acts as the single source of truth for our project roadmap, gating
   - [x] Human alters the button's ID in the local HTML to simulate a break.
   - [x] Scenario 1 (Control): Script heals the selector, sees the success message in the DOM, and outputs `SAFE_HEAL`.
   - [x] Scenario 2 (Trap): Script heals the selector, clicks, detects the ReferenceError in the console, and correctly outputs `MASKED_REGRESSION_ESCALATED`.
+  - [x] POC wrapped into local FastAPI service (`poc_api/main.py`) exposing `POST /api/poc/run`.
+  - [x] LLM prompt extended to return model-generated `confidence_score` (0-100) and `reasoning_trace` as pure JSON.
+  - [x] React + Tailwind demo frontend built in `frontend/` with dark dev-tool aesthetic.
+  - [x] QA detail screen wired with explicit "Run Live Detection" button triggering live detection over `http://localhost:8000/api/poc/run`.
 - **Human Tasks:** Alter the button's ID in `test_page.html` to break the initial selector before running. Provide API keys.
 - **AI Usage Log:** 
   - *AI generated `poc_recovery.py` with Playwright and UI toasts. Human verified the visual demo.*
@@ -41,6 +45,12 @@ This document acts as the single source of truth for our project roadmap, gating
   - *AI pivoted API from Gemini to Groq (`gpt-oss-20b`) due to strict Gemini rate limits.*
   - *AI split execution into `demo_safe.py` and `demo_trap.py` for clear presentation separation.*
   - *AI updated prompts to request LLM reasoning traces and fixed a regex bug (`re.findall`) that allowed backticks inside reasoning text to break extraction.*
+  - *AI refactored `poc_recovery.py` to accept `headless` parameter and return structured dict payload with duration timing.*
+  - *AI extended classification prompt to output structured JSON with model-produced numeric `confidence_score` (0-100) and `reasoning_trace`.*
+  - *AI built `poc_api/main.py` using FastAPI with CORS support for Vite localhost origins and exposed `POST /api/poc/run`.*
+  - *AI scaffolded and built dark dev-tool demo frontend in `frontend/` (Vite, React, Tailwind CSS) implementing all 5 screens from `triagecore-poc-frontend.md`.*
+  - *AI wired QA Agent detail screen to trigger `POST http://localhost:8000/api/poc/run` with scenario=trap, displaying live spinner/pulsing gauge and dynamically updating score, decision banner, and evidence drawer.*
+  - *AI addressed automated code review feedback: replaced hardcoded file URI in `poc_recovery.py` with repo-relative `Path.as_uri()`, aligned `classification` values (`stale_selector`/`likely_regression`) with `AGENTS.md` diagnosis contract while retaining `poc_verdict`, added explicit `ScenarioResponse.model_validate()` and 502/500 validation handling in `poc_api/main.py`, fixed UI label formatting in `Navbar.jsx`, and removed duplicate wording in `README.md`.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.

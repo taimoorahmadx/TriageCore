@@ -57,3 +57,22 @@ Prerequisite: ensure your `.env` contains a valid `GROQ_API_KEY`.
   ```bash
   python3 demo_trap.py
   ```
+
+### Interactive Frontend & Live Detection API
+
+To run the full click-through demo with live defense detection wired to the UI:
+
+1. **Start the POC Local API**:
+   ```bash
+   python3 -m uvicorn poc_api.main:app --port 8000
+   ```
+   *Exposes `POST /api/poc/run` returning model-generated confidence scores and reasoning traces in under 6 seconds.*
+
+2. **Start the Frontend Dashboard**:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   *Visit `http://localhost:5173` to explore the dark dev-tool dashboard. Navigate to the QA Agent detail screen and click **"Run Live Detection"** to compute real-time triage during the presentation.*
+

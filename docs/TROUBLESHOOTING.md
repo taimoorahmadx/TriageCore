@@ -15,6 +15,10 @@ Welcome to the TriageCore troubleshooting guide. If you spend more than 30 minut
 
 *(Add new issues above this line)*
 
+**Symptom:** `[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use`.
+**Cause:** A previous instance of the FastAPI/Uvicorn server is already running in the background and occupying port 8000.
+**Fix:** Free port 8000 by running `fuser -k 8000/tcp` in your terminal, or find and terminate the process using `lsof -i :8000`.
+
 **Symptom:** `playwright.TimeoutError` or "Browser closed unexpectedly" during early testing.
 **Cause:** Playwright requires system-level browser binaries that don't always install via simple `pip install`.
 **Fix:** Run `playwright install` and `playwright install-deps` in your terminal to ensure the underlying Chromium/Firefox binaries are present on your OS.
