@@ -3,6 +3,7 @@ import time
 import re
 import json
 import subprocess
+from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from dotenv import load_dotenv
 
@@ -121,7 +122,8 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
     start_time = time.perf_counter()
     console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} (Headless={headless}) ---[/bold magenta]")
     
-    file_uri = f"file:///home/user/Desktop/TriageCore/tests/dummy/test_page.html?scenario={scenario}"
+    html_path = (Path(__file__).resolve().parent / "tests" / "dummy" / "test_page.html").resolve()
+    file_uri = f"{html_path.as_uri()}?scenario={scenario}"
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=headless, slow_mo=0 if headless else 500)
@@ -203,13 +205,13 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
         classification_prompt = (
             "We have healed a broken selector and clicked the button.\n"
             "Based on the following post-click evidence, did the click result in a SAFE_HEAL "
-            "(e.g., successful action, success message visible) or did it mask a broken javascript handler "
-            "MASKED_REGRESSION_ESCALATED (e.g., JS errors in console, no success message)?\n\n"
+            "(stale_selector: e.g., successful action, success message visible, no console errors) or did it mask a broken javascript handler "
+            "MASKED_REGRESSION_ESCALATED (likely_regression: e.g., JS errors in console, no success message)?\n\n"
             f"Console logs:\n{logs_str}\n\n"
             f"Post-click DOM:\n{post_click_dom}\n\n"
             "You MUST respond STRICTLY with a valid JSON object matching this schema (do NOT include backticks or markdown fences around the JSON):\n"
             "{\n"
-            '  "classification": "SAFE_HEAL" or "MASKED_REGRESSION_ESCALATED",\n'
+            '  "classification": "stale_selector" or "likely_regression",\n'
             '  "confidence_score": <integer from 0 to 100 representing confidence in this diagnosis>,\n'
             '  "reasoning_trace": "<1-2 concise sentences explaining your diagnosis based on post-click DOM and console errors>"\n'
             "}"
@@ -221,7 +223,7 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
         console.print(Panel(str(class_content), title="[bold magenta]AI Raw Output (Classification)[/bold magenta]", border_style="magenta"))
         
         # Parse model-generated structured JSON
-        classification = "MASKED_REGRESSION_ESCALATED"
+        raw_classification = "likely_regression"
         confidence_score = 50
         reasoning_trace = str(class_content).strip()
         
@@ -240,18 +242,18 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
                     
             parsed = json.loads(clean_text)
             if "classification" in parsed:
-                classification = parsed["classification"].strip()
+                raw_classification = parsed["classification"].strip()
             if "confidence_score" in parsed:
                 confidence_score = int(parsed["confidence_score"])
             if "reasoning_trace" in parsed:
                 reasoning_trace = parsed["reasoning_trace"].strip()
         except Exception as parse_err:
             console.print(f"[yellow]Warning: Could not parse pure JSON ({parse_err}). Using regex extraction fallback.[/yellow]")
-            if "SAFE_HEAL" in class_content:
-                classification = "SAFE_HEAL"
+            if "SAFE_HEAL" in class_content or "stale_selector" in class_content:
+                raw_classification = "stale_selector"
                 confidence_score = 90
-            elif "MASKED_REGRESSION_ESCALATED" in class_content:
-                classification = "MASKED_REGRESSION_ESCALATED"
+            elif "MASKED_REGRESSION" in class_content or "likely_regression" in class_content:
+                raw_classification = "likely_regression"
                 confidence_score = 85
             score_match = re.search(r'"confidence_score"\s*:\s*(\d+)', class_content)
             if score_match:
@@ -259,11 +261,20 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
 
         # Clamp confidence_score to [0, 100]
         confidence_score = max(0, min(100, confidence_score))
-        recommended_action = "heal" if classification == "SAFE_HEAL" else "escalate"
         
-        color = "green" if classification == "SAFE_HEAL" else "red"
+        # Canonicalize classification (diagnosis-only) vs recommended_action vs poc_verdict per AGENTS.md contract
+        if raw_classification in ["SAFE_HEAL", "stale_selector"]:
+            classification = "stale_selector"
+            poc_verdict = "SAFE_HEAL"
+            recommended_action = "heal"
+        else:
+            classification = "likely_regression"
+            poc_verdict = "MASKED_REGRESSION_ESCALATED"
+            recommended_action = "escalate"
+        
+        color = "green" if recommended_action == "heal" else "red"
         panel = Panel(
-            Text(f"{classification} (Score: {confidence_score}%) - Action: {recommended_action.upper()}\nReasoning: {reasoning_trace}", justify="center", style=f"bold {color}"),
+            Text(f"{classification.upper()} ({poc_verdict}) - Score: {confidence_score}%\nRecommended Action: {recommended_action.upper()}\nReasoning: {reasoning_trace}", justify="center", style=f"bold {color}"),
             title=f"Scenario: {scenario.upper()}",
             expand=False,
             border_style=color
@@ -271,8 +282,8 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
         console.print(panel)
         
         if not headless:
-            toast_color = "#10B981" if classification == "SAFE_HEAL" else "#EF4444"
-            inject_toast(page, f"Final Verdict: {classification} ({confidence_score}%)", color=toast_color, duration_ms=4000)
+            toast_color = "#10B981" if recommended_action == "heal" else "#EF4444"
+            inject_toast(page, f"Final Verdict: {poc_verdict} ({confidence_score}%)", color=toast_color, duration_ms=4000)
             page.wait_for_timeout(3000)
         
         browser.close()
@@ -284,7 +295,8 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
             "confidence_score": confidence_score,
             "reasoning_trace": reasoning_trace,
             "recommended_action": recommended_action,
-            "duration_ms": duration_ms
+            "duration_ms": duration_ms,
+            "poc_verdict": poc_verdict
         }
 
 if __name__ == "__main__":

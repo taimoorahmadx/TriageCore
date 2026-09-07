@@ -21,7 +21,8 @@ export function App() {
   // QA screen state (updated live on button press)
   const [qaState, setQaState] = useState({
     confidenceScore: 68,
-    classification: 'MASKED_REGRESSION_ESCALATED',
+    classification: 'likely_regression',
+    pocVerdict: 'MASKED_REGRESSION_ESCALATED',
     recommendedAction: 'escalate',
     reasoningTrace: 'Selector healed, but post-click observation detected console ReferenceError during payment submission.',
     durationMs: 0,
@@ -85,7 +86,7 @@ export function App() {
           ...item,
           confidenceScore: newState.confidenceScore,
           status: newState.recommendedAction === 'heal' ? 'Auto-Healed' : 'Escalated — Needs Review',
-          subtitle: `Live Detection: ${newState.classification} (${newState.durationMs}ms)`,
+          subtitle: `Live Detection: ${newState.pocVerdict || newState.classification} (${newState.durationMs}ms)`,
           isLive: true
         };
       }

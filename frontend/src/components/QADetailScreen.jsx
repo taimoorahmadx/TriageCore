@@ -35,6 +35,7 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
         recommendedAction: result.recommended_action,
         reasoningTrace: result.reasoning_trace,
         durationMs: result.duration_ms,
+        pocVerdict: result.poc_verdict,
         isLive: true,
       });
 
@@ -225,7 +226,7 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
               {qaState.isLive 
-                ? `Live Groq Diagnosis: ${qaState.reasoningTrace}`
+                ? `Live Groq Diagnosis [${qaState.pocVerdict || qaState.classification}]: ${qaState.reasoningTrace}`
                 : "Selector physically healed, but silent JavaScript ReferenceError detected on button trigger."}
             </p>
           </div>

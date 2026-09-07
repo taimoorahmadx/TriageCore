@@ -50,6 +50,7 @@ This document acts as the single source of truth for our project roadmap, gating
   - *AI built `poc_api/main.py` using FastAPI with CORS support for Vite localhost origins and exposed `POST /api/poc/run`.*
   - *AI scaffolded and built dark dev-tool demo frontend in `frontend/` (Vite, React, Tailwind CSS) implementing all 5 screens from `triagecore-poc-frontend.md`.*
   - *AI wired QA Agent detail screen to trigger `POST http://localhost:8000/api/poc/run` with scenario=trap, displaying live spinner/pulsing gauge and dynamically updating score, decision banner, and evidence drawer.*
+  - *AI addressed automated code review feedback: replaced hardcoded file URI in `poc_recovery.py` with repo-relative `Path.as_uri()`, aligned `classification` values (`stale_selector`/`likely_regression`) with `AGENTS.md` diagnosis contract while retaining `poc_verdict`, added explicit `ScenarioResponse.model_validate()` and 502/500 validation handling in `poc_api/main.py`, fixed UI label formatting in `Navbar.jsx`, and removed duplicate wording in `README.md`.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.

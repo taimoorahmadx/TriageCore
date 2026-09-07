@@ -2,8 +2,8 @@ import sys
 from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
-from typing import Literal
+from pydantic import BaseModel, Field, ValidationError
+from typing import Literal, Optional
 
 # Ensure root workspace is on python path for importing poc_recovery
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -41,11 +41,12 @@ class ScenarioRequest(BaseModel):
 
 class ScenarioResponse(BaseModel):
     scenario: Literal["control", "trap"]
-    classification: Literal["SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]
-    confidence_score: int
+    classification: Literal["stale_selector", "likely_regression", "SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]
+    confidence_score: int = Field(ge=0, le=100)
     reasoning_trace: str
     recommended_action: Literal["heal", "escalate"]
     duration_ms: int
+    poc_verdict: Optional[Literal["SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]] = None
 
 @app.get("/health")
 def health_check():
@@ -56,7 +57,9 @@ def run_poc_scenario(payload: ScenarioRequest):
     try:
         # Run headless=True so execution is fast and robust in API context
         result = run_scenario(payload.scenario, headless=True)
-        return result
+        return ScenarioResponse.model_validate(result)
+    except ValidationError as e:
+        raise HTTPException(status_code=502, detail=f"POC returned invalid payload: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}")
 

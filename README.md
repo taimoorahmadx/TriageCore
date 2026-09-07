@@ -74,5 +74,5 @@ To run the full click-through demo with live defense detection wired to the UI:
    npm install
    npm run dev
    ```
-   *Visit `http://localhost:5173` to explore the dark dev-tool dashboard. Navigate to the QA Agent detail screen and click **"Run Live Detection"** to compute real live triage live during the presentation.*
+   *Visit `http://localhost:5173` to explore the dark dev-tool dashboard. Navigate to the QA Agent detail screen and click **"Run Live Detection"** to compute real-time triage during the presentation.*
 
