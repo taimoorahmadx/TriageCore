@@ -37,10 +37,11 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Human Tasks:** Alter the button's ID in `test_page.html` to break the initial selector before running. Provide API keys.
 - **AI Usage Log:** 
   - *AI generated `poc_recovery.py` with Playwright and UI toasts. Human verified the visual demo.*
-  - *AI refactored script to bypass Langchain bugs by using raw `curl` subprocess calls.*
-  - *AI pivoted API from Gemini to Groq (`gpt-oss-20b`) due to strict Gemini rate limits.*
+  - *AI refactored script to bypass Langchain bugs by using raw `curl` subprocess calls, later migrated to `requests` for cross-platform UTF-8 stability on Windows.*
+  - *AI pivoted API from Gemini to Groq (`openai/gpt-oss-120b`) due to strict Gemini rate limits.*
   - *AI split execution into `demo_safe.py` and `demo_trap.py` for clear presentation separation.*
-  - *AI updated prompts to request LLM reasoning traces and fixed a regex bug (`re.findall`) that allowed backticks inside reasoning text to break extraction.*
+  - *AI updated prompts to request LLM reasoning traces, added robust regex/code-fence stripping to prevent selector pollution, and fixed UTF-8 console output for Windows.*
+  - *AI resolved `test_page.html` absolute path dynamically and verified end-to-end execution of both `demo_safe.py` and `demo_trap.py`.*
 
 ### Milestone 1: The Core Confidence-Scoring Engine (The Brain)
 - **Goal:** Build the central shared logic that decides if evidence is strong enough to act automatically.

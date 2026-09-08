@@ -1,8 +1,10 @@
 import os
+import sys
+import io
 import time
 import re
 import json
-import subprocess
+import requests
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from dotenv import load_dotenv
 
@@ -10,8 +12,14 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
 
+if sys.platform == "win32":
+    if sys.stdout and hasattr(sys.stdout, "buffer"):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    if sys.stderr and hasattr(sys.stderr, "buffer"):
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 load_dotenv()
-console = Console()
+console = Console(legacy_windows=False)
 
 def ask_llm(prompt: str) -> str:
     api_key = os.environ.get("GROQ_API_KEY")
@@ -19,25 +27,22 @@ def ask_llm(prompt: str) -> str:
         return "Error: GROQ_API_KEY is missing."
         
     url = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}"
+    }
     payload = {
-        "model": "openai/gpt-oss-20b",
+        "model": "openai/gpt-oss-120b",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0
     }
     
-    timeout_secs = int(os.environ.get("GROQ_CURL_TIMEOUT_SECONDS", "10"))
+    timeout_secs = int(os.environ.get("GROQ_CURL_TIMEOUT_SECONDS", "15"))
     max_retries = 5
     for attempt in range(max_retries):
-        result = None
         try:
-            result = subprocess.run([
-                "curl", "-sS", "-X", "POST", url,
-                "-H", "Content-Type: application/json",
-                "-H", f"Authorization: Bearer {api_key}",
-                "-d", json.dumps(payload)
-            ], capture_output=True, text=True, check=True, timeout=timeout_secs)
-            
-            json_data = json.loads(result.stdout)
+            resp = requests.post(url, headers=headers, json=payload, timeout=timeout_secs)
+            json_data = resp.json()
             
             if "error" in json_data:
                 if attempt < max_retries - 1:
@@ -49,21 +54,20 @@ def ask_llm(prompt: str) -> str:
                 if attempt < max_retries - 1:
                     time.sleep(3)
                     continue
-                return f"Raw Response: {result.stdout}"
+                return f"Raw Response: {resp.text}"
                 
             return json_data["choices"][0]["message"]["content"]
             
-        except subprocess.TimeoutExpired:
+        except requests.Timeout:
             if attempt < max_retries - 1:
                 time.sleep(3)
                 continue
-            return f"Error: Curl request timed out after {timeout_secs}s."
+            return f"Error: Request timed out after {timeout_secs}s."
         except Exception as e:
             if attempt < max_retries - 1:
                 time.sleep(3)
                 continue
-            raw_out = result.stdout if result else 'No stdout'
-            return f"Error connecting to API via curl: {str(e)}\nRaw output: {raw_out}"
+            return f"Error connecting to API: {str(e)}"
 
 def inject_toast(page, message: str, color: str = "#4F46E5", duration_ms: int = 4000):
     script = """
@@ -117,10 +121,31 @@ def highlight_element(page, selector: str):
     """
     page.evaluate(script, selector)
 
+def extract_selector(text: str) -> str:
+    matches = re.findall(r'```(?:css|html)?\s*(.*?)\s*```', text, flags=re.DOTALL | re.IGNORECASE)
+    if not matches:
+        matches = re.findall(r'`([^`]+)`', text)
+    if matches:
+        cand = matches[-1].strip()
+    else:
+        lines = [line.strip() for line in text.splitlines() if line.strip()]
+        cand = lines[-1] if lines else text.strip()
+    cand = re.sub(r'^(?:css|html|javascript|selector)\s*', '', cand, flags=re.IGNORECASE).strip('` \n\r')
+    return cand.splitlines()[-1].strip() if '\n' in cand else cand
+
+def extract_classification(text: str) -> str:
+    if "MASKED_REGRESSION_ESCALATED" in text:
+        return "MASKED_REGRESSION_ESCALATED"
+    if "SAFE_HEAL" in text:
+        return "SAFE_HEAL"
+    matches = re.findall(r'`([^`]+)`', text)
+    return matches[-1].strip() if matches else text.strip()
+
 def run_scenario(scenario: str):
     console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} ---[/bold magenta]")
     
-    file_uri = f"file:///home/user/Desktop/TriageCore/tests/dummy/test_page.html?scenario={scenario}"
+    html_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "tests", "dummy", "test_page.html"))
+    file_uri = f"file:///{html_path.replace(os.sep, '/')}?scenario={scenario}"
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False, slow_mo=500)
@@ -159,8 +184,12 @@ def run_scenario(scenario: str):
                 content_val = ask_llm(prompt)
             console.print(Panel(str(content_val), title="[bold blue]AI Reasoning (Selector)[/bold blue]", border_style="blue"))
             
-            matches = re.findall(r'`([^`]+)`', str(content_val))
-            target_selector = matches[-1].strip() if matches else str(content_val).strip()
+            if str(content_val).startswith("Error") or str(content_val).startswith("API Error"):
+                console.print(f"[red][{scenario}] LLM error: {content_val}. Aborting scenario.[/red]")
+                browser.close()
+                return
+
+            target_selector = extract_selector(str(content_val))
             
             console.print(f"[green][{scenario}] LLM extracted new selector: '{target_selector}'[/green]")
             inject_toast(page, f"✨ Success! AI found new selector: '{target_selector}'", color="#10B981")
@@ -202,8 +231,7 @@ def run_scenario(scenario: str):
         
         console.print(Panel(str(class_content), title="[bold magenta]AI Reasoning (Classification)[/bold magenta]", border_style="magenta"))
         
-        matches = re.findall(r'`([^`]+)`', str(class_content))
-        classification = matches[-1].strip() if matches else str(class_content).strip()
+        classification = extract_classification(str(class_content))
         
         color = "green" if classification == "SAFE_HEAL" else "red"
         panel = Panel(
