@@ -6,6 +6,7 @@ import { CIDetailScreen } from './components/CIDetailScreen';
 import { PRReviewScreen } from './components/PRReviewScreen';
 import { BenchmarkScreen } from './components/BenchmarkScreen';
 import { EvidenceDrawer } from './components/EvidenceDrawer';
+import { TriageCoreLogo } from './components/TriageCoreLogo';
 
 export function App() {
   const [currentScreen, setCurrentScreen] = useState('dashboard');
@@ -127,7 +128,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F17] text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-black text-neutral-100 flex flex-col font-sans bg-dot-grid selection:bg-neutral-800 selection:text-white">
       <Navbar currentScreen={currentScreen} onNavigate={handleNavigate} />
 
       <main className="flex-1">
@@ -163,6 +164,25 @@ export function App() {
           <BenchmarkScreen onNavigate={handleNavigate} />
         )}
       </main>
+
+      {/* Minimalist Editorial Footer */}
+      <footer className="border-t border-white/[0.08] bg-black/90 py-8 px-6 mt-16">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
+          <div className="flex items-center gap-2.5">
+            <TriageCoreLogo size={20} />
+            <span className="text-neutral-300 font-semibold text-xs tracking-tight">TriageCore</span>
+            <span>&middot;</span>
+            <span>Shared Confidence Engine for Autonomous QA &amp; CI</span>
+          </div>
+          <div className="flex items-center gap-4 text-[11px]">
+            <span>FastAPI :8000</span>
+            <span>&middot;</span>
+            <span>Playwright Chromium</span>
+            <span>&middot;</span>
+            <span>Groq LPU</span>
+          </div>
+        </div>
+      </footer>
 
       {/* Shared Evidence Drawer */}
       <EvidenceDrawer
