@@ -8,17 +8,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
+        obsidian: {
+          DEFAULT: '#000000',
+          50: '#050505',
+          100: '#09090b',
+          200: '#0d0d10',
+          300: '#141418',
+        },
+        hairline: {
+          subtle: 'rgba(255, 255, 255, 0.06)',
+          DEFAULT: 'rgba(255, 255, 255, 0.09)',
+          strong: 'rgba(255, 255, 255, 0.16)',
+        },
+        champagne: {
+          100: '#fef3c7',
+          200: '#fde68a',
+          400: '#fbbf24',
+          500: '#f59e0b',
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'Fira Code', 'monospace']
       }
     },
   },

@@ -3,7 +3,7 @@ import { ConfidenceDial } from './ConfidenceDial';
 import { DiffView } from './DiffView';
 import { AgentBadge } from './AgentBadge';
 import { StatusPill } from './StatusPill';
-import { ArrowLeft, Play, AlertCircle, CheckCircle2, Terminal, RefreshCw, Cpu, Layers } from 'lucide-react';
+import { ArrowLeft, AlertCircle, CheckCircle2, Terminal, RefreshCw, Cpu, Layers, ExternalLink } from 'lucide-react';
 
 export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }) {
   const [loading, setLoading] = useState(false);
@@ -28,7 +28,6 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
 
       const result = await response.json();
 
-      // Update state with genuine model-computed result
       setQaState({
         confidenceScore: result.confidence_score,
         classification: result.classification,
@@ -50,57 +49,60 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
   const isHeal = qaState.recommendedAction === 'heal';
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-8 space-y-7">
+    <div className="max-w-5xl mx-auto px-6 py-10 space-y-8">
       
-      {/* Back Button & Agent Header */}
-      <div className="flex items-center justify-between">
+      {/* Back Button & Agent Metadata */}
+      <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
         <button
           onClick={() => onNavigate('dashboard')}
-          className="inline-flex items-center gap-2 text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 text-xs font-mono text-neutral-400 hover:text-white transition-colors cursor-pointer"
         >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Reliability Feed</span>
+          <ArrowLeft className="w-3.5 h-3.5" />
+          <span>&larr; Back to Reliability Feed</span>
         </button>
 
-        <div className="flex items-center gap-2">
-          <AgentBadge type="QA" />
+        <div className="flex items-center gap-2.5">
+          <AgentBadge type="QA" size="sm" />
           <StatusPill status={isHeal ? "Auto-Healed" : "Escalated — Needs Review"} />
         </div>
       </div>
 
-      {/* Title & Live Action Button */}
-      <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-5">
-        <div className="space-y-1">
-          <div className="flex items-center gap-2.5">
-            <h1 className="text-xl font-bold text-white tracking-tight">Guest can add item to cart and checkout</h1>
+      {/* Hero Header & Live Execution Button */}
+      <div className="bg-neutral-950/70 border border-white/[0.08] rounded-xl p-6 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="space-y-1.5">
+          <div className="flex items-center gap-3">
+            <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-wider">INCIDENT #QA-104</span>
             {qaState.isLive && (
-              <span className="text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/40 px-2 py-0.5 rounded font-mono font-semibold">
-                LIVE DETECTED ({qaState.durationMs}ms)
+              <span className="text-[10px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/25 px-2 py-0.5 rounded">
+                LIVE DETECTED &middot; {qaState.durationMs}ms
               </span>
             )}
           </div>
-          <p className="text-xs text-slate-400 font-mono">
-            tests/e2e/checkout.spec.ts:38 · Execution Engine: Playwright (Chromium)
+          <h1 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
+            Guest can add item to cart <span className="font-serif italic font-normal text-amber-200/90">& checkout</span>
+          </h1>
+          <p className="text-xs text-neutral-400 font-mono">
+            tests/e2e/checkout.spec.ts:38 &middot; Engine: Playwright (Chromium)
           </p>
         </div>
 
-        {/* ONE EXPLICIT LIVE DETECTION BUTTON */}
+        {/* High-Contrast Action Button */}
         <button
           id="run-live-detection-btn"
           onClick={handleRunLiveDetection}
           disabled={loading}
-          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:opacity-50 text-white rounded-lg font-semibold text-xs shadow-lg shadow-purple-900/30 transition-all cursor-pointer whitespace-nowrap"
+          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-white text-black hover:bg-neutral-200 disabled:opacity-60 rounded-lg font-semibold text-xs tracking-tight shadow-sm transition-all cursor-pointer whitespace-nowrap self-start md:self-auto"
         >
           {loading ? (
             <>
-              <RefreshCw className="w-4 h-4 animate-spin text-purple-200" />
-              <span>Executing Playwright & LLM (~6s)...</span>
+              <RefreshCw className="w-3.5 h-3.5 animate-spin text-neutral-700" />
+              <span>Running Playwright & LLM (~5s)...</span>
             </>
           ) : (
             <>
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span>Run Live Detection</span>
             </>
@@ -109,8 +111,8 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
       </div>
 
       {errorMsg && (
-        <div className="p-4 bg-rose-950/40 border border-rose-800 text-rose-300 rounded-xl text-xs flex items-center gap-2.5">
-          <AlertCircle className="w-4 h-4 shrink-0" />
+        <div className="p-4 bg-rose-500/[0.08] border border-rose-500/20 text-rose-300 rounded-xl text-xs flex items-center gap-2.5 font-mono">
+          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
           <span>{errorMsg}</span>
         </div>
       )}
@@ -119,50 +121,53 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* Left Column (2 spans): Execution trace and Selector Diff */}
-        <div className="lg:col-span-2 space-y-5">
+        <div className="lg:col-span-2 space-y-6">
           
           {/* Execution Trace */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-3">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
-              <Terminal className="w-4 h-4 text-purple-400" />
-              <span>Playwright Execution Trace</span>
-            </h2>
+          <div className="bg-neutral-950/70 border border-white/[0.08] rounded-xl p-5 space-y-3.5">
+            <div className="flex items-center justify-between border-b border-white/[0.06] pb-2.5">
+              <h2 className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400 flex items-center gap-2">
+                <Terminal className="w-3.5 h-3.5 text-neutral-300" />
+                <span>Playwright Execution Trace</span>
+              </h2>
+              <span className="text-[10px] font-mono text-neutral-500">4 STEPS RECORDED</span>
+            </div>
 
             <div className="space-y-2 text-xs font-mono">
-              <div className="flex items-center gap-3 p-2 bg-slate-950/70 rounded-lg text-slate-300 border border-slate-800/60">
+              <div className="flex items-center gap-3 p-2.5 bg-white/[0.02] rounded-lg text-neutral-300 border border-white/[0.05]">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span className="text-slate-500">1.</span>
+                <span className="text-neutral-500 text-[11px]">01</span>
                 <span>page.goto('/shop/products/wireless-headphones')</span>
               </div>
-              <div className="flex items-center gap-3 p-2 bg-slate-950/70 rounded-lg text-slate-300 border border-slate-800/60">
+              <div className="flex items-center gap-3 p-2.5 bg-white/[0.02] rounded-lg text-neutral-300 border border-white/[0.05]">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                <span className="text-slate-500">2.</span>
+                <span className="text-neutral-500 text-[11px]">02</span>
                 <span>page.waitForSelector('.product-details-container')</span>
               </div>
               {/* Highlighted Failing Step */}
-              <div className="flex items-center gap-3 p-2.5 bg-rose-950/30 rounded-lg text-rose-300 border border-rose-800/60">
+              <div className="flex items-center gap-3 p-2.5 bg-rose-500/[0.08] rounded-lg text-rose-200 border border-rose-500/20">
                 <AlertCircle className="w-3.5 h-3.5 text-rose-400 shrink-0" />
-                <span className="text-rose-500">3.</span>
+                <span className="text-rose-400/80 text-[11px]">03</span>
                 <span className="font-semibold">page.click('#add-to-cart-btn')</span>
-                <span className="ml-auto text-[11px] bg-rose-900/50 text-rose-300 px-2 py-0.5 rounded border border-rose-700/50">
-                  ✕ Element not found (Timeout 2000ms)
+                <span className="ml-auto text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded border border-rose-500/30">
+                  TimeoutError: 2000ms
                 </span>
               </div>
-              <div className="flex items-center gap-3 p-2 bg-purple-950/30 rounded-lg text-purple-300 border border-purple-800/60">
-                <Cpu className="w-3.5 h-3.5 text-purple-400 shrink-0" />
-                <span className="text-purple-500">4.</span>
+              <div className="flex items-center gap-3 p-2.5 bg-white/[0.03] rounded-lg text-neutral-200 border border-white/[0.08]">
+                <Cpu className="w-3.5 h-3.5 text-neutral-300 shrink-0" />
+                <span className="text-neutral-500 text-[11px]">04</span>
                 <span>Agent: Semantic relocation & post-click triage invoked</span>
               </div>
             </div>
           </div>
 
           {/* Before / After Selector Diff Card */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+          <div className="bg-neutral-950/70 border border-white/[0.08] rounded-xl p-5 space-y-3.5">
+            <div className="flex items-center justify-between border-b border-white/[0.06] pb-2.5">
+              <h2 className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-400">
                 Healed Selector Candidate
               </h2>
-              <span className="text-xs text-purple-400 font-mono">Role: button · Text: "Add to Cart"</span>
+              <span className="text-[11px] text-neutral-400 font-mono">Role: button &middot; Name: "Add to Cart"</span>
             </div>
 
             <DiffView
@@ -176,13 +181,14 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
         </div>
 
         {/* Right Column: Shared Confidence Dial & Evidence Trigger */}
-        <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-6 flex flex-col items-center justify-between space-y-6">
-          <div className="text-center">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400">Shared Confidence Dial</h2>
-            <p className="text-[11px] text-slate-500 mt-0.5">ConfidenceEngine Decision Threshold</p>
+        <div className="bg-neutral-950/70 border border-white/[0.08] rounded-xl p-6 flex flex-col items-center justify-between space-y-6">
+          <div className="text-center space-y-1">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-500">ENGINE METRIC</span>
+            <h2 className="text-sm font-semibold text-white tracking-tight">Confidence Score</h2>
+            <p className="text-[11px] text-neutral-400 font-mono">Empirical Decision Gate</p>
           </div>
 
-          {/* Circular SVG Gauge */}
+          {/* Modern Dial Gauge */}
           <ConfidenceDial
             score={qaState.confidenceScore}
             isLoading={loading}
@@ -190,17 +196,17 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
             label="Confidence"
           />
 
-          {/* Evidence Drawer Button */}
+          {/* Evidence Drawer Trigger Button */}
           <button
             onClick={() => onOpenDrawer('QA', qaState.reasoningTrace)}
-            className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-slate-800/80 hover:bg-slate-800 text-slate-200 hover:text-white rounded-lg text-xs font-medium border border-slate-700/60 transition-colors cursor-pointer"
+            className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-white/[0.04] hover:bg-white/[0.08] text-neutral-200 hover:text-white rounded-lg text-xs font-mono font-medium border border-white/[0.1] transition-all cursor-pointer"
           >
-            <Layers className="w-4 h-4 text-purple-400" />
-            <span>View evidence breakdown →</span>
+            <Layers className="w-3.5 h-3.5 text-neutral-400" />
+            <span>View Evidence Telemetry &rarr;</span>
           </button>
 
-          <div className="text-[11px] text-slate-500 text-center leading-relaxed">
-            Safe auto-heal threshold is calibrated to <span className="font-semibold text-slate-300">85%</span>. Decisions below threshold require human gating.
+          <div className="text-[11px] text-neutral-500 font-mono text-center leading-relaxed border-t border-white/[0.06] pt-3 w-full">
+            Autonomous threshold: <span className="text-neutral-300 font-semibold">85%</span>. Scores below threshold escalate to human.
           </div>
         </div>
 
@@ -209,34 +215,34 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
       {/* Decision Banner reflecting dial band */}
       <div className={`p-5 rounded-xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
         isHeal
-          ? 'bg-emerald-950/40 border-emerald-800/80 text-emerald-300'
-          : 'bg-amber-950/40 border-amber-800/80 text-amber-300'
+          ? 'bg-emerald-500/[0.06] border-emerald-500/20 text-emerald-300'
+          : 'bg-rose-500/[0.06] border-rose-500/25 text-rose-200'
       }`}>
-        <div className="flex items-center gap-3">
+        <div className="flex items-start sm:items-center gap-3">
           {isHeal ? (
-            <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
           ) : (
-            <AlertCircle className="w-5 h-5 text-amber-400 shrink-0" />
+            <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5 sm:mt-0" />
           )}
           <div>
-            <div className="text-sm font-bold text-white">
+            <div className="text-sm font-semibold text-white tracking-tight">
               {isHeal 
-                ? "Confidence above threshold — auto-healed and verified." 
+                ? "Confidence above threshold — safe heal verified." 
                 : "Confidence below auto-heal threshold — escalated for human review."}
             </div>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-neutral-400 font-mono mt-0.5">
               {qaState.isLive 
                 ? `Live Groq Diagnosis [${qaState.pocVerdict || qaState.classification}]: ${qaState.reasoningTrace}`
-                : "Selector physically healed, but silent JavaScript ReferenceError detected on button trigger."}
+                : "Selector physically healed, but post-click observation detected console ReferenceError during payment submission."}
             </p>
           </div>
         </div>
 
         <button
           onClick={() => onNavigate('pr-review', { type: 'QA', score: qaState.confidenceScore })}
-          className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white rounded-lg text-xs font-semibold whitespace-nowrap cursor-pointer transition-colors"
+          className="px-4 py-2 bg-white/[0.06] hover:bg-white/[0.12] border border-white/[0.12] text-white rounded-lg text-xs font-mono font-medium whitespace-nowrap cursor-pointer transition-all self-start sm:self-auto"
         >
-          Review Proposed Fix →
+          Review Escalation &rarr;
         </button>
       </div>
 
