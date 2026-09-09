@@ -54,6 +54,26 @@ class ScenarioResponse(BaseModel):
     duration_ms: int
     poc_verdict: Optional[Literal["SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]] = None
 
+class CiTriageRequest(BaseModel):
+    scenario: Literal["flaky", "bug", "ambiguous"] = Field(
+        default="bug", description="CI failure scenario to triage: flaky, bug, or ambiguous"
+    )
+    repo: Optional[str] = Field(default="taimoorahmadx/TriageCore")
+    workflow: Optional[str] = Field(default="ci.yml")
+    run_id: Optional[str] = Field(default="#1043")
+
+class CiTriageResponse(BaseModel):
+    scenario: Literal["flaky", "bug", "ambiguous"]
+    classification: Literal["flaky", "dependency", "bug", "infra"]
+    confidence_score: int = Field(ge=0, le=100)
+    recommended_action: Literal["rerun", "auto-fix", "escalate", "flag"]
+    reasoning_trace: str
+    attributed_commit: Optional[str] = None
+    author: Optional[str] = None
+    failure_signal: str
+    draft_pr: Optional[dict] = None
+    duration_ms: int = 420
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "triagecore-poc-api"}
@@ -69,6 +89,59 @@ def run_poc_scenario(payload: ScenarioRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}")
 
+@app.post("/api/ci/triage", response_model=CiTriageResponse)
+def run_ci_triage(payload: CiTriageRequest):
+    try:
+        if payload.scenario == "flaky":
+            return CiTriageResponse(
+                scenario="flaky",
+                classification="flaky",
+                confidence_score=92,
+                recommended_action="rerun",
+                reasoning_trace="Log analysis isolated a transient Redis socket timeout. Git diff reveals no modifications to database, cache, or network configuration. Historical run log indicates a 90% pass rate on identical commit SHA. Confidence exceeds threshold (92% >= 85%); safe for autonomous pipeline rerun.",
+                attributed_commit="None (Infrastructure Timeout)",
+                author="devops@triagecore.internal",
+                failure_signal="redis.exceptions.ConnectionError · 9/10 Past Passes",
+                draft_pr=None,
+                duration_ms=380
+            )
+        elif payload.scenario == "bug":
+            return CiTriageResponse(
+                scenario="bug",
+                classification="bug",
+                confidence_score=96,
+                recommended_action="auto-fix",
+                reasoning_trace="Failed pytest assertion 'psycopg2.errors.SyntaxError: syntax error at or near \",\" at line 42' matches AST of commit 4a8f9b ('feat: add org-level migrations'). Single author, isolated regression with 100% reproduction rate. Proposing draft fix PR; autonomous merge prohibited per safety constraint.",
+                attributed_commit="4a8f9b (feat: add org-level migrations)",
+                author="alice@triagecore.internal",
+                failure_signal="psycopg2.errors.SyntaxError · 100% Repro on Commit 4a8f9b",
+                draft_pr={
+                    "number": 142,
+                    "title": "fix(db): correct trailing comma syntax in db/migrations/004.sql",
+                    "branch": "triagecore/autofix-4a8f9b-migration-syntax",
+                    "diff": "- CREATE INDEX idx_org_users ON users (org_id,, created_at);\n+ CREATE INDEX idx_org_users ON users (org_id, created_at);",
+                    "safety_notice": "Safety Rule: CI Agent is restricted to proposing draft PRs. Autonomous merging is strictly forbidden."
+                },
+                duration_ms=450
+            )
+        else:
+            # Ambiguous commits scenario
+            return CiTriageResponse(
+                scenario="ambiguous",
+                classification="bug",
+                confidence_score=15,
+                recommended_action="escalate",
+                reasoning_trace="AttributeError: 'TenantContext' object has no attribute 'schema_name'. Git commit history shows 2 authors modified core/tenant_context.py within 45 minutes (commits 7c1a2e and 9b4f02). Rule violation: ambiguous_commit=true flagged. Confidence mathematically suppressed to 15% (< 85% threshold) to prevent hallucinated automated patch. Escalating to engineering team with unified blame diff.",
+                attributed_commit="Ambiguous: 7c1a2e (alice@) & 9b4f02 (bob@)",
+                author="Multiple Authors (Conflict)",
+                failure_signal="ambiguous_commit=true · 2 Overlapping Diffs in last 45m",
+                draft_pr=None,
+                duration_ms=410
+            )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"CI triage execution error: {str(e)}")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("poc_api.main:app", host="0.0.0.0", port=8000, reload=True)
+
