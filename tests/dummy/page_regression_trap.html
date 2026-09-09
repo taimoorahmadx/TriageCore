@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout (Regression Trap Demo)</title>
+    <style>
+        :root {
+            --primary: #EF4444;
+            --bg: #0B0F17;
+            --card-bg: #111827;
+            --text-main: #F9FAFB;
+            --text-muted: #9CA3AF;
+        }
+        body { 
+            font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+            background-color: var(--bg);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container { 
+            background-color: var(--card-bg);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 16px;
+            padding: 36px; 
+            width: 100%;
+            max-width: 420px; 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+        h2 { margin-top: 0; font-size: 22px; font-weight: 700; color: #FCA5A5; }
+        p.subtitle { color: var(--text-muted); font-size: 13px; margin-bottom: 24px; }
+        .order-summary {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px 14px;
+            background: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: white;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .submit-btn { 
+            background: #EF4444;
+            color: #FFFFFF;
+            border: none; 
+            border-radius: 8px;
+            padding: 12px 20px; 
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer; 
+            width: 100%;
+            transition: all 0.2s;
+        }
+        .submit-btn:hover { background: #DC2626; }
+        .badge {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.15);
+            color: #F87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            font-size: 11px;
+            font-family: monospace;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .error-banner {
+            background-color: rgba(239, 68, 68, 0.15);
+            color: #FCA5A5;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin-top: 16px;
+            font-size: 12px;
+            font-family: monospace;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Complete Purchase</h2>
+        <p class="subtitle">Broken Handler Regression (Escalation Trap Demo)</p>
+        
+        <div class="order-summary">
+            <span>Pro Plan Subscription</span>
+            <strong style="color: #EF4444;">$99.00</strong>
+        </div>
+
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="customer@example.com" readonly>
+            </div>
+            
+            <!-- Button renamed, BUT click calls undefined processPayment() -->
+            <button type="button" id="order-btn-primary" class="submit-btn" onclick="processPayment()">Complete Purchase ($99.00)</button>
+            <div class="badge">DOM ID: #order-btn-primary &middot; onclick="processPayment()"</div>
+        </form>
+        
+        <div id="error-banner" class="error-banner">
+            🚨 CRITICAL ERROR: Uncaught ReferenceError: processPayment is not defined! Check browser console (F12).
+        </div>
+    </div>
+
+    <script>
+        // NOTE: processPayment() is INTENTIONALLY NOT DEFINED to simulate developer coding regression!
+        window.addEventListener("error", (e) => {
+            console.error("Uncaught ReferenceError: processPayment is not defined at HTMLButtonElement.onclick");
+            const banner = document.getElementById("error-banner");
+            if (banner) banner.style.display = "block";
+        });
+    </script>
+</body>
+</html>

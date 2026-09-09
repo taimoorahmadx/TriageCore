@@ -171,39 +171,38 @@ sequenceDiagram
     
     Note over Runner: Step 3: Post-Action Triage
     Runner->>LLM: "We clicked the new button. Here are the console errors and DOM changes. Is this a SAFE_HEAL or a MASKED_REGRESSION?"
-    LLM-->>Runner: JSON: {classification: "likely_regression", action: "escalate", score: 85, reasoning: "..."}
+    LLM-->>Runner: JSON: {classification: "likely_regression", action: "escalate", score: 15, reasoning: "..."}
     
     Runner-->>API: Return structured dict
     API-->>User: HTTP 200 JSON payload (takes ~5.5 seconds!)
 ```
 
 ### The Two Scenarios Explained:
-1. **Control Scenario (`demo_safe.py`):**
+1. **Control Scenario (`demo_safe.py` / `page_safe_heal.html`):**
    - The button ID was renamed from `submit-btn` to `order-btn-primary`.
    - The LLM relocates the button. Playwright clicks it.
    - The form submits cleanly. A `<div id="order-success">` message appears in the DOM. No console errors occur.
-   - **Result:** Classification = `stale_selector`, Recommended Action = `heal`, Confidence = `95`.
-2. **Trap Scenario (`demo_trap.py`):**
-   - The button ID was also renamed, **BUT** the click handler triggers an uncaught `ReferenceError`.
+   - **Result:** Classification = `stale_selector`, Recommended Action = `heal`, Confidence = `95%` ($\ge 85\%$ threshold approved).
+2. **Trap Scenario (`demo_trap.py` / `page_regression_trap.html`):**
+   - The button ID was also renamed, **BUT** the click handler triggers an uncaught `ReferenceError: processPayment is not defined`.
    - The LLM relocates the button. Playwright clicks it.
    - An error fires in the browser console.
    - TriageCore catches the error and detects that the heal triggered a regression.
-   - **Result:** Classification = `likely_regression`, Recommended Action = `escalate`, Confidence = `85`.
+   - **Result:** Classification = `likely_regression`, Recommended Action = `escalate`, Confidence drops to **`15%`** ($< 85\%$ threshold violated, red badge).
 
 ---
 
 ## 8. The UI Explained: What Is Live vs. What Is Target Architecture
 
-When you open the frontend (`http://localhost:5173`), you see 6 screens. Here is how to understand them:
+When you open the frontend (`http://localhost:5173`), you see 3 focused navigation views designed for live defense:
 
-| Screen | What It Shows | Is It Live or Prototype? | What to Say in the Defense |
+| Screen / View | What It Shows | Is It Live or Target Architecture? | What to Say in the Defense |
 | :--- | :--- | :---: | :--- |
-| **Screen 1: Dashboard Overview** | High-level metrics: total runs, heal rate (78%), masked regressions caught (14), MTTR saved. | **Target Architecture Prototype** | *"This screen shows the target operational view for FYP-1, tracking how many engineering hours the engine saves."* |
-| **Screen 2: QA Agent Detail** | The broken selector case study, dial gauge, code diff, and **"Run Live Detection" button**. | **🔥 100% LIVE REAL-TIME SPIKE** | *"This is our live feasibility proof. When we click this button, it hits our FastAPI backend, launches Playwright, calls Groq, and triages the trap in real time."* |
-| **Screen 3: CI Reliability Detail** | A failed GitHub Actions build log triaged into a dependency break with commit-level blame. | **Target Architecture Prototype** | *"This demonstrates the second application of TriageCore committed for Milestone 5, triaging raw CI logs."* |
-| **Screen 4: Live Execution Log** | Real-time event stream of recent automated decisions. | **Prototype** | *"Demonstrates the auditable event trail stored in Postgres."* |
-| **Screen 5: System Configuration** | Threshold sliders and `weights.yaml` settings. | **Prototype** | *"Visualizes the threshold calibration parameters we tune in Milestone 7."* |
-| **Evidence Drawer (Slide-out)** | Raw DOM snippet, browser console stack trace, LLM prompt & response tokens. | **🔥 LIVE (Binds to live run)** | *"Shows complete transparency: you can see the exact Javascript error that triggered the escalation."* |
+| **1. Live Test & Triage: Tab 1 (QA Agent)** | Live Playwright runner, target URL/HTML loader, real-time dial gauge, and **"Run Playwright Test & Triage"** button. | **🔥 100% LIVE REAL-TIME SPIKE** | *"This is our live feasibility proof. When we click this button, it hits our FastAPI backend, launches Playwright, calls Groq, captures browser console logs, and catches the regression in real time."* |
+| **1. Live Test & Triage: Tab 2 (CI Agent)** | GitHub Actions build log viewer, git blame diff, and triage decision card across 3 presets (`redis-timeout.log`, `db-migration-syntax.log`, `tenant-conflict-ambiguous.log`). | **🔥 LIVE PIPELINE SIMULATOR** | *"Demonstrates the second application of TriageCore committed for Milestone 5, triaging raw CI logs, classifying flakiness vs bugs, and enforcing the strict invariant that agents never auto-merge PRs."* |
+| **Telemetry & Evidence Drawer** | Raw DOM snippet, browser console stack trace, LLM prompt tokens, and JSON signals. | **🔥 LIVE (Binds to live run)** | *"Shows complete transparency: you can inspect the exact ReferenceError or git blame diff that drove the engine's verdict."* |
+| **2. Triage History** | Persistent audit ledger of all recent QA and CI decisions with expandable inline Postgres JSON record inspector (`POST /api/poc/run` & `POST /api/ci/triage`). | **Target Architecture Prototype** | *"Demonstrates the auditable event trail stored in Postgres (`triage_decisions` table), allowing full traceability for compliance and post-incident reviews."* |
+| **3. Benchmark (15 Cases)** | Ground-truth baseline evaluation matrix across 15 curated fixtures (7 QA + 8 CI) for Milestone 5.5, with category filters and interactive test suite trigger. | **Empirical Evaluation Spike** | *"Proves our core academic claim: 0.0% False Positive Rate (0 regressions masked) and 93.3% accuracy, validating feasibility before Phase 2 threshold calibration."* |
 
 ---
 
@@ -221,17 +220,19 @@ Use this exact script when presenting your slides:
 > *Our project, **TriageCore**, is a shared confidence-scoring engine that governs whether an automated agent is allowed to act autonomously, or whether it must escalate to a human."*
 
 ### Minute 3: The Live Demo
-> *(Switch to the browser on `http://localhost:5173`, Screen 2: QA Agent Detail)*  
-> *"To prove feasibility before requesting approval, we built a working technical spike. Here, on our QA detail screen, an automated test encountered a broken button whose click handler contains a hidden runtime regression.*  
-> *Watch what happens when I click **'Run Live Detection'**."*  
+> *(Switch to the browser on `http://localhost:5173`, View 1: Live Test & Triage, Tab 1: Web App Testing)*  
+> *"To prove feasibility before requesting approval, we built a working technical spike. Here, an automated test encountered a broken button whose click handler contains a hidden runtime regression (`ReferenceError`).*  
+> *Watch what happens when I click **'Run Playwright Test & Triage'**."*  
 > *(Click the button. The dial pulses for ~5 seconds)*  
 > *"In the background, our FastAPI backend launched Playwright, relocated the button using Groq, clicked it, captured the browser's console event stream, and fed the evidence to our triage engine.*  
-> *As you can see: The system did NOT blindly heal it. It scored an 85% confidence that this is a **`likely_regression`**, turned the badge RED, and issued a decision: **ESCALATE TO HUMAN**.*  
-> *Opening the Evidence Drawer, you can see the exact `ReferenceError` caught from the browser console."*
+> *As you can see: The system did NOT blindly heal it. Recognizing the uncaught error, confidence in autonomous action plummeted to **15%** (far below our 85% safety threshold). It classified the root cause as **`likely_regression`**, turned the badge RED, and issued a decision: **ESCALATE TO HUMAN**.*  
+> *Opening the Evidence Drawer, you can see the exact `ReferenceError` caught from the browser console."*  
+> *(Switch to Tab 2: CI Build Triage)*  
+> *"Similarly, in our CI Agent tab, when multiple authors push overlapping commits, TriageCore detects commit ambiguity, suppresses confidence to 15%, and escalates with a blame diff instead of guessing."*
 
 ### Minute 4: The Shared Brain & Architecture
-> *"This same decision engine powers our second agent: the CI Reliability Agent, which ingests raw GitHub Actions logs and uses the same confidence taxonomy to classify build failures into flaky tests, real bugs, or dependency breaks.*  
-> *The LLM is only a core-assist component for parsing text. Our core engineering contribution is the **ConfidenceEngine weighting logic**, the post-action verification loop, and a 50-case benchmark with threshold calibration to guarantee a false-positive rate below 5%."*
+> *"This same decision engine powers both agents using a single shared contract and taxonomy (`flaky`, `bug`, `infra`, `dependency`, `stale_selector`, `likely_regression`).*  
+> *The LLM is only a core-assist component for parsing text. Our core engineering contribution is the **ConfidenceEngine weighting logic**, the post-action verification loop, and a benchmark with threshold calibration to guarantee a false-positive rate strictly below 5%."*
 
 ### Minute 5: Work Division & Milestones
 > *"Our team has divided the core technical responsibilities:*  
@@ -272,5 +273,5 @@ Use this exact script when presenting your slides:
 ### Summary Checklist for You
 - [x] Read this file twice.
 - [x] Run `python3 demo_trap.py` in your terminal so you've seen the raw console output with your own eyes.
-- [x] Open `http://localhost:5173`, go to the QA Agent screen, click **"Run Live Detection"**, and open the Evidence Drawer.
+- [x] Open `http://localhost:5173`, test both `1. Web App Testing (QA Agent)` and `2. CI Build Triage (CI Agent)`, inspect `Triage History`, and verify the `Benchmark (15 Cases)` suite.
 - [x] Walk through the **5-minute pitch script** out loud once with your teammates.

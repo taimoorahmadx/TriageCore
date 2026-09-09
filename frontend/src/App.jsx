@@ -7,9 +7,10 @@ import { PRReviewScreen } from './components/PRReviewScreen';
 import { BenchmarkScreen } from './components/BenchmarkScreen';
 import { EvidenceDrawer } from './components/EvidenceDrawer';
 import { TriageCoreLogo } from './components/TriageCoreLogo';
+import { PipelineSimulator } from './components/PipelineSimulator';
 
 export function App() {
-  const [currentScreen, setCurrentScreen] = useState('dashboard');
+  const [currentScreen, setCurrentScreen] = useState('simulator');
   
   // Drawer state
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -132,8 +133,21 @@ export function App() {
       <Navbar currentScreen={currentScreen} onNavigate={handleNavigate} />
 
       <main className="flex-1">
+        {currentScreen === 'simulator' && (
+          <PipelineSimulator
+            onNavigate={handleNavigate}
+            onOpenDrawer={handleOpenDrawer}
+            qaState={qaState}
+            setQaState={handleUpdateQaState}
+          />
+        )}
+
         {currentScreen === 'dashboard' && (
-          <ReliabilityDashboard feedItems={feedItems} onSelectRow={handleSelectFeedRow} />
+          <ReliabilityDashboard 
+            feedItems={feedItems} 
+            onSelectRow={handleSelectFeedRow}
+            onNavigate={handleNavigate}
+          />
         )}
 
         {currentScreen === 'qa-detail' && (
