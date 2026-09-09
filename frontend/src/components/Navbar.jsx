@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart2 } from 'lucide-react';
+import { BarChart2, Play } from 'lucide-react';
 import { TriageCoreLogo } from './TriageCoreLogo';
 
 export function Navbar({ currentScreen, onNavigate }) {
@@ -10,7 +10,7 @@ export function Navbar({ currentScreen, onNavigate }) {
         {/* Brand */}
         <div className="flex items-center gap-5">
           <div 
-            onClick={() => onNavigate('dashboard')}
+            onClick={() => onNavigate('simulator')}
             className="flex items-center gap-2.5 cursor-pointer group"
           >
             {/* Custom Isometric Core Logo */}
@@ -25,20 +25,22 @@ export function Navbar({ currentScreen, onNavigate }) {
               </span>
             </div>
           </div>
-
-          <div className="h-3.5 w-px bg-white/[0.1]" />
-
-          {/* Project indicator */}
-          <div className="hidden sm:flex items-center gap-2 text-xs">
-            <span className="text-neutral-500 font-mono text-[11px]">REPO</span>
-            <span className="font-mono text-neutral-300 text-xs bg-white/[0.03] px-2 py-0.5 rounded border border-white/[0.07]">
-              ShopFlow / main
-            </span>
-          </div>
         </div>
 
         {/* Navigation tabs */}
         <nav className="flex items-center gap-1.5">
+          <button
+            onClick={() => onNavigate('simulator')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+              currentScreen === 'simulator'
+                ? 'bg-white text-black font-semibold shadow-sm'
+                : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
+            }`}
+          >
+            <Play className="w-3 h-3 fill-current" />
+            <span>Live Test & Triage</span>
+          </button>
+
           <button
             onClick={() => onNavigate('dashboard')}
             className={`px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
@@ -47,7 +49,7 @@ export function Navbar({ currentScreen, onNavigate }) {
                 : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
             }`}
           >
-            Reliability Feed
+            Triage History
           </button>
           
           <button
@@ -59,7 +61,7 @@ export function Navbar({ currentScreen, onNavigate }) {
             }`}
           >
             <BarChart2 className="w-3.5 h-3.5" />
-            <span>Benchmark</span>
+            <span>Benchmark (15 Cases)</span>
           </button>
         </nav>
 

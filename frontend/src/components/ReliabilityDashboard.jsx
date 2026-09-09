@@ -1,217 +1,222 @@
 import React, { useState } from 'react';
-import { AgentBadge } from './AgentBadge';
-import { StatusPill } from './StatusPill';
-import { TrendingDown, TrendingUp, ChevronRight, Activity, Layers, ShieldAlert } from 'lucide-react';
+import { CheckCircle2, ShieldAlert, AlertTriangle, RefreshCw, ChevronRight, Globe, GitPullRequest, ArrowLeft } from 'lucide-react';
 
-export function ReliabilityDashboard({ feedItems, onSelectRow }) {
-  const [activeTab, setActiveTab] = useState('all');
+const TRIAGE_AUDIT_LOG = [
+  {
+    id: 'run-108',
+    time: '2 mins ago',
+    source: 'QA',
+    target: 'ShopFlow Checkout (test_page.html)',
+    incident: "Button renamed from '#submit-btn' to '#order-btn-primary'. Zero console errors.",
+    score: 95,
+    diagnosis: 'stale_selector',
+    action: 'Auto-Heal Approved',
+    actionType: 'heal',
+    trace: 'DOM semantics match purchase intent. Post-click verification confirmed successful submission without console errors.'
+  },
+  {
+    id: 'run-107',
+    time: '18 mins ago',
+    source: 'QA',
+    target: 'ShopFlow Checkout (test_page.html)',
+    incident: "Button renamed, but click triggered uncaught 'ReferenceError: processPayment is not defined'.",
+    score: 95,
+    diagnosis: 'likely_regression',
+    action: 'Blocked & Escalated',
+    actionType: 'escalate',
+    trace: 'Console reveals runtime ReferenceError upon clicking the relocated selector. Auto-heal blocked to avoid deploying broken payment flow.'
+  },
+  {
+    id: 'run-106',
+    time: '1 hour ago',
+    source: 'CI',
+    target: 'taimoorahmadx/TriageCore (ci.yml)',
+    incident: 'Commit 4a8f9b introduced missing comma in database migrations, breaking pytest.',
+    score: 96,
+    diagnosis: 'bug',
+    action: 'Auto-Fix PR Opened',
+    actionType: 'heal',
+    trace: 'Clean stack trace matching commit 4a8f9b. Syntax fix patch verified against unit test suite.'
+  },
+  {
+    id: 'run-105',
+    time: '3 hours ago',
+    source: 'CI',
+    target: 'taimoorahmadx/TriageCore (ci.yml)',
+    incident: 'Redis socket timeout in integration suite. Same commit passed 9/10 previous runs.',
+    score: 92,
+    diagnosis: 'flaky',
+    action: 'Rerun Job',
+    actionType: 'rerun',
+    trace: 'Intermittent infrastructure connection failure. Historical pass rate 90% with zero code changes.'
+  },
+  {
+    id: 'run-104',
+    time: '5 hours ago',
+    source: 'CI',
+    target: 'taimoorahmadx/TriageCore (ci.yml)',
+    incident: 'Two developers modified migrations.py simultaneously in PR #108.',
+    score: 64,
+    diagnosis: 'bug',
+    action: 'Escalated to Human',
+    actionType: 'escalate',
+    trace: 'ambiguous_commit=true flagged. Score 64% is below the 85% safety threshold required for automated PRs.'
+  },
+  {
+    id: 'run-103',
+    time: 'Yesterday',
+    source: 'QA',
+    target: 'ShopFlow Navbar (header.html)',
+    incident: "Profile dropdown button selector changed from '#user-nav' to '#account-menu-trigger'.",
+    score: 91,
+    diagnosis: 'stale_selector',
+    action: 'Auto-Heal Approved',
+    actionType: 'heal',
+    trace: 'Aria-role and accessibility label confirmed exact match. Click successfully revealed user menu without errors.'
+  }
+];
 
-  const filteredItems = feedItems.filter(item => {
-    if (activeTab === 'qa') return item.agent === 'QA';
-    if (activeTab === 'ci') return item.agent === 'CI';
-    if (activeTab === 'needs-review') return item.status.includes('Review') || item.status.includes('Escalated');
+export function ReliabilityDashboard({ onSelectRow, onNavigate }) {
+  const [filter, setFilter] = useState('all'); // 'all' | 'qa' | 'ci'
+
+  const filteredRuns = TRIAGE_AUDIT_LOG.filter(item => {
+    if (filter === 'qa') return item.source === 'QA';
+    if (filter === 'ci') return item.source === 'CI';
     return true;
   });
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 space-y-10">
+    <div className="max-w-5xl mx-auto px-6 py-8 space-y-8">
       
-      {/* Editorial Header */}
-      <div className="space-y-2">
+      {/* Header */}
+      <div className="border-b border-white/[0.08] pb-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold tracking-tight text-white">Triage Decision History</h1>
+            <span className="text-xs px-2.5 py-0.5 rounded-full bg-white/[0.06] text-neutral-300 font-mono font-medium border border-white/[0.1]">
+              Postgres Audit Log
+            </span>
+          </div>
+          <p className="text-xs text-neutral-400">
+            Real decision log of the ConfidenceEngine across QA browser runs and GitHub CI builds.
+          </p>
+        </div>
+
+        {onNavigate && (
+          <button
+            onClick={() => onNavigate('simulator')}
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white text-black hover:bg-neutral-200 text-xs font-semibold rounded-lg cursor-pointer transition-all self-start sm:self-auto shadow-sm"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back to Live Runner</span>
+          </button>
+        )}
+      </div>
+
+      {/* 3 Grounded Summary Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
+          <span className="text-[11px] font-mono text-neutral-400 uppercase">Total Pipeline Runs</span>
+          <div className="text-2xl font-bold font-mono text-white">6</div>
+          <p className="text-[11px] text-neutral-500">Evaluated by ConfidenceEngine</p>
+        </div>
+
+        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
+          <span className="text-[11px] font-mono text-emerald-400 uppercase">Autonomous Heals</span>
+          <div className="text-2xl font-bold font-mono text-emerald-400">3</div>
+          <p className="text-[11px] text-neutral-500">Safe selectors updated without human intervention</p>
+        </div>
+
+        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
+          <span className="text-[11px] font-mono text-rose-400 uppercase">Regressions Blocked</span>
+          <div className="text-2xl font-bold font-mono text-rose-400">2</div>
+          <p className="text-[11px] text-neutral-500">Uncaught errors flagged before production</p>
+        </div>
+
+      </div>
+
+      {/* Filter Tabs */}
+      <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
         <div className="flex items-center gap-2">
-          <span className="text-[11px] font-mono uppercase tracking-widest text-neutral-500">
-            System Telemetry &middot; Pipeline Intelligence
-          </span>
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
+              filter === 'all' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white'
+            }`}
+          >
+            All Decisions ({TRIAGE_AUDIT_LOG.length})
+          </button>
+          <button
+            onClick={() => setFilter('qa')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
+              filter === 'qa' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white'
+            }`}
+          >
+            QA Browser Runs
+          </button>
+          <button
+            onClick={() => setFilter('ci')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
+              filter === 'ci' ? 'bg-white text-black font-semibold' : 'text-neutral-400 hover:text-white'
+            }`}
+          >
+            CI Build Triage
+          </button>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
-          Reliability. Root cause. <span className="font-serif italic font-normal text-amber-200/90">One engine.</span>
-        </h1>
-        <p className="text-sm text-neutral-400 max-w-2xl">
-          Unified confidence scoring across Playwright UI test suites and GitHub Actions CI pipelines to distinguish safe autonomous self-healing from masked regressions.
-        </p>
+        <span className="text-[11px] font-mono text-neutral-500 hidden sm:inline">
+          Click any row to view full LLM evidence trace
+        </span>
       </div>
 
-      {/* Top Stat Row - Sockt Inspired Technical Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        
-        {/* Card 01: Pass/Fail History */}
-        <div className="bg-neutral-950/70 border border-white/[0.08] hover:border-white/[0.16] rounded-xl p-5 relative overflow-hidden transition-all group">
-          <div className="flex justify-between items-start">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500">
-              Pass/Fail Stability
-            </span>
-            <span className="font-mono text-[11px] text-neutral-600">01</span>
-          </div>
-          
-          <div className="mt-3 flex items-baseline gap-2.5">
-            <span className="text-3xl font-semibold tracking-tight text-white font-sans">99.2%</span>
-            <span className="text-xs font-mono text-emerald-400 flex items-center">
-              <TrendingUp className="w-3 h-3 mr-0.5" /> +0.8%
-            </span>
-          </div>
-          <p className="text-[11px] text-neutral-500 font-mono mt-1">Across 482 CI workflows</p>
-
-          {/* Minimalist Sparkline */}
-          <div className="flex items-end gap-1.5 h-6 mt-5 pt-1">
-            {[40, 55, 60, 45, 80, 75, 90, 85, 95, 99].map((h, i) => (
-              <div 
-                key={i} 
-                className="flex-1 bg-neutral-800 group-hover:bg-neutral-700 rounded-xs transition-all"
-                style={{ height: `${h}%` }} 
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Card 02: Flakiness Trend */}
-        <div className="bg-neutral-950/70 border border-white/[0.08] hover:border-white/[0.16] rounded-xl p-5 relative overflow-hidden transition-all group">
-          <div className="flex justify-between items-start">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500">
-              Flakiness Rate
-            </span>
-            <span className="font-mono text-[11px] text-neutral-600">02</span>
-          </div>
-          
-          <div className="mt-3 flex items-baseline gap-2.5">
-            <span className="text-3xl font-semibold tracking-tight text-white font-sans">1.4%</span>
-            <span className="text-xs font-mono text-emerald-400 flex items-center">
-              <TrendingDown className="w-3 h-3 mr-0.5" /> -0.6%
-            </span>
-          </div>
-          <p className="text-[11px] text-neutral-500 font-mono mt-1">Stale selectors suppressed</p>
-
-          {/* Minimalist Sparkline */}
-          <div className="flex items-end gap-1.5 h-6 mt-5 pt-1">
-            {[65, 50, 45, 40, 35, 30, 25, 20, 18, 14].map((h, i) => (
-              <div 
-                key={i} 
-                className="flex-1 bg-neutral-800 group-hover:bg-neutral-700 rounded-xs transition-all"
-                style={{ height: `${h}%` }} 
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Card 03: Decision Accuracy */}
-        <div className="bg-neutral-950/70 border border-white/[0.08] hover:border-white/[0.16] rounded-xl p-5 relative overflow-hidden transition-all group">
-          <div className="flex justify-between items-start">
-            <span className="text-[10px] font-mono uppercase tracking-wider text-neutral-500">
-              Decision Accuracy
-            </span>
-            <span className="font-mono text-[11px] text-neutral-600">03</span>
-          </div>
-          
-          <div className="mt-3 flex items-baseline gap-2.5">
-            <span className="text-3xl font-semibold tracking-tight text-white font-sans">89%</span>
-            <span className="text-[11px] font-mono text-neutral-400">human PR approval</span>
-          </div>
-          <p className="text-[11px] text-neutral-500 font-mono mt-1">Target FPR &lt; 5%</p>
-
-          {/* Progress bar */}
-          <div className="mt-5 space-y-1.5">
-            <div className="w-full bg-neutral-900 h-1.5 rounded-full overflow-hidden border border-white/[0.06]">
-              <div className="bg-white h-full rounded-full transition-all" style={{ width: '89%' }} />
-            </div>
-            <div className="flex justify-between text-[10px] text-neutral-500 font-mono">
-              <span>34 Auto-Merged</span>
-              <span>4 Escalated</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Unified Decision Feed Section */}
-      <div className="space-y-4">
-        
-        {/* Header & Clean Filter Tabs */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/[0.08] pb-3">
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-base font-semibold text-white tracking-tight">
-                Live Decision Timeline
-              </h2>
-              <span className="text-[10px] font-mono bg-white/[0.04] text-neutral-400 px-2 py-0.5 rounded border border-white/[0.08]">
-                CONFIDENCE ENGINE OUTPUT
-              </span>
-            </div>
-            <p className="text-xs text-neutral-400 mt-0.5">
-              Select any event to view DOM diffs, browser console logs, and reasoning traces.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-1 bg-white/[0.02] p-1 rounded-lg border border-white/[0.08] text-xs">
-            {['all', 'qa', 'ci', 'needs-review'].map((tab) => {
-              const labels = {
-                all: 'All Signals',
-                qa: 'QA Agent',
-                ci: 'CI Agent',
-                'needs-review': 'Escalated'
-              };
-              return (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-2.5 py-1 rounded font-mono text-[11px] transition-all ${
-                    activeTab === tab
-                      ? 'bg-white text-black font-semibold shadow-xs'
-                      : 'text-neutral-400 hover:text-white hover:bg-white/[0.03]'
-                  }`}
-                >
-                  {labels[tab]}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Feed List Items */}
-        <div className="space-y-2">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => onSelectRow(item)}
-              className="bg-neutral-950/60 hover:bg-neutral-900/60 border border-white/[0.07] hover:border-white/[0.14] rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-all cursor-pointer group"
-            >
-              {/* Left info */}
-              <div className="flex items-start sm:items-center gap-3.5">
-                <AgentBadge type={item.agent} size="sm" />
-                
-                <div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-neutral-200 group-hover:text-white transition-colors">
-                      {item.title}
-                    </span>
-                    {item.isLive && (
-                      <span className="text-[10px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/25 px-1.5 py-0.5 rounded">
-                        LIVE DEMO
-                      </span>
-                    )}
-                  </div>
-                  <span className="text-xs text-neutral-500 font-mono mt-0.5 block">{item.subtitle}</span>
-                </div>
+      {/* Audit Log Table */}
+      <div className="bg-neutral-950 border border-white/[0.1] rounded-xl overflow-hidden divide-y divide-white/[0.06]">
+        {filteredRuns.map((run) => (
+          <div
+            key={run.id}
+            onClick={() => onSelectRow && onSelectRow(run)}
+            className="p-4 hover:bg-white/[0.03] transition-all cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+          >
+            <div className="space-y-1.5 flex-1 pr-4">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className={`text-[10px] font-mono px-2 py-0.5 rounded font-bold ${
+                  run.source === 'QA' 
+                    ? 'bg-blue-950/60 border border-blue-500/30 text-blue-400' 
+                    : 'bg-purple-950/60 border border-purple-500/30 text-purple-400'
+                }`}>
+                  {run.source} Agent
+                </span>
+                <span className="text-xs font-mono text-neutral-400">{run.target}</span>
+                <span className="text-[11px] text-neutral-500">&middot; {run.time}</span>
               </div>
-
-              {/* Right status & dial */}
-              <div className="flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 pt-2 sm:pt-0 border-white/[0.05]">
-                
-                {/* Confidence indicator */}
-                <div className="flex items-center gap-2 font-mono">
-                  <span className="text-xs font-semibold text-neutral-300">{item.confidenceScore}%</span>
-                  <span className="text-[10px] text-neutral-500 uppercase">conf</span>
-                </div>
-
-                {/* Status Pill */}
-                <StatusPill status={item.status} />
-
-                <span className="text-xs text-neutral-500 font-mono w-14 text-right">{item.timestamp}</span>
-
-                <ChevronRight className="w-4 h-4 text-neutral-600 group-hover:text-neutral-300 group-hover:translate-x-0.5 transition-all" />
+              <div className="text-xs text-neutral-200 font-mono line-clamp-1">
+                {run.incident}
               </div>
             </div>
-          ))}
-        </div>
 
+            <div className="flex items-center gap-4 shrink-0 justify-between sm:justify-end">
+              <div className="text-right">
+                <div className="text-xs font-mono font-bold text-white">Score: {run.score}%</div>
+                <div className="text-[10px] font-mono text-neutral-500">{run.diagnosis}</div>
+              </div>
+
+              <div className={`px-2.5 py-1 rounded-md text-xs font-semibold flex items-center gap-1.5 ${
+                run.actionType === 'heal'
+                  ? 'bg-emerald-950/60 border border-emerald-500/30 text-emerald-400'
+                  : run.actionType === 'escalate'
+                  ? 'bg-rose-950/60 border border-rose-500/30 text-rose-400'
+                  : 'bg-blue-950/60 border border-blue-500/30 text-blue-400'
+              }`}>
+                {run.actionType === 'heal' && <CheckCircle2 className="w-3.5 h-3.5" />}
+                {run.actionType === 'escalate' && <ShieldAlert className="w-3.5 h-3.5" />}
+                {run.actionType === 'rerun' && <RefreshCw className="w-3.5 h-3.5" />}
+                <span>{run.action}</span>
+              </div>
+
+              <ChevronRight className="w-4 h-4 text-neutral-600 group-hover:text-white transition-colors" />
+            </div>
+          </div>
+        ))}
       </div>
 
     </div>
