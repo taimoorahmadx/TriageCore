@@ -206,8 +206,8 @@ Tone: Serious, technically precise, no buzzword fluff. Avoid sounding like a sal
 * **On-Slide Content:**
   * **Riskiest Assumption Tested:** Can an automated agent reliably distinguish between a safe selector repair and an action that triggers a silent client-side regression?
   * **Test Setup:** Standalone Playwright runner + Groq (`openai/gpt-oss-20b`) evaluating [`test_page.html`](file:///home/user/Desktop/TriageCore/tests/dummy/test_page.html) across two scenarios:
-    1. **Control Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Clean execution $\rightarrow$ **`SAFE_HEAL` / `heal`** (Score: ~95).
-    2. **Trap Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Triggers uncaught `ReferenceError` $\rightarrow$ **`MASKED_REGRESSION_ESCALATED` / `escalate`** (Score: ~85).
+    1. **Control Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Clean execution $\rightarrow$ **`SAFE_HEAL` / `heal`** (Score: ~95% $\ge 85\%$).
+    2. **Trap Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Triggers uncaught `ReferenceError` $\rightarrow$ **`MASKED_REGRESSION_ESCALATED` / `escalate`** (Confidence drops to 15%, below the 85% threshold).
   * **Non-Functional Performance:** Full end-to-end relocation, execution, and triage completes in **5.5 seconds** (Target: $<10\text{s}$).
   * **Design Impact:** Formally proved that post-action console streams must be a mandatory signal in the `ConfidenceEngine` contract.
 * **Speaker Script (Member 2 - 2 minutes LIVE DEMO):**  
@@ -281,21 +281,23 @@ Execute this during **Slide 7**. Follow this exact sequence:
 1. **Pre-Demo State Check (Before Entering the Room):**
    * Ensure Terminal 1 is running: `python3 -m uvicorn poc_api.main:app --port 8000`
    * Ensure Terminal 2 is running: `cd frontend && npm run dev`
-   * Have browser open to `http://localhost:5173` on Screen 2 (QA Agent Detail).
+   * Have browser open to `http://localhost:5173` on View 1: `Live Test & Triage` (Tab 1: Web App Testing - QA Agent).
    * Have a 3rd terminal tab open in root directory ready to run: `python3 demo_trap.py` (as a foolproof backup).
 2. **On-Screen Live Run (60 seconds):**
    * Point to the UI: *"Respected panel, here is our live technical spike. This test encountered a broken button. Notice the code diff: the button ID changed, but the developer also introduced a bug in the click handler."*
-   * Click the **"Run Live Detection"** button.
+   * Click the **"Run Playwright Test & Triage"** button.
    * Narrate while the dial pulses (~5 seconds):  
      *"In real time, our FastAPI backend launched Playwright, sent the DOM to Groq, relocated the selector, clicked it, and monitored the browser console for uncaught errors."*
    * Point to the result:  
-     *"Look at the outcome: Score 85. Classification: `likely_regression`. Recommended Action: `escalate`. The badge turned RED."*
-3. **Open the Evidence Drawer (30 seconds):**
-   * Click the **"View Full Evidence"** button on the right side.
+     *"Look at the outcome: Confidence dropped to 15% (far below the 85% safety threshold). Classification: `likely_regression`. Recommended Action: `escalate`. The badge turned RED."*
+3. **Open the Evidence Drawer & Telemetry (30 seconds):**
+   * Open the **Evidence Drawer** on the right side.
    * Point to the raw console error:  
      *"Here is the transparency: our engine caught the uncaught `ReferenceError` from the browser console. A blind tool would have reported a green pass. TriageCore prevented a false pass and escalated to a human."*
+   * Click **Tab 2: CI Build Triage (CI Agent)**:  
+     *"On the CI side, the same decision engine classifies raw build logs, dispatches automated retries for flaky timeouts, and flags ambiguous commits to block bad automated PR merges."*
 4. **Transition back to Slide 8:**  
-   *"This live spike proves that our core hypothesis works in under 6 seconds. Now, let me explain how we benchmark this across 50 real-world repositories."*
+   *"This live spike proves that our core hypothesis works in under 6 seconds. Now, let me explain how we benchmark this across our 15-case baseline and 50-case benchmark."*
 
 ---
 
