@@ -13,6 +13,10 @@ Welcome to the TriageCore troubleshooting guide. If you spend more than 30 minut
 
 ## Known Issues
 
+**Symptom:** Frontend UI appears completely unstyled (plain text on dark background, flex/grid layouts and card borders missing).
+**Cause:** The Vite dev server had stale module cache across branch checkouts, or Tailwind v4 was not loading project content/theme extensions without the `@config` directive.
+**Fix:** Ensure `@config "../tailwind.config.js";` is present in `frontend/src/index.css`. Terminate any stale Vite process (`lsof -i :5173`) and restart with `cd frontend && npm run dev`. Hard refresh the browser (`Ctrl+Shift+R`).
+
 *(Add new issues above this line)*
 
 **Symptom:** `[Errno 98] error while attempting to bind on address ('127.0.0.1', 8000): address already in use`.

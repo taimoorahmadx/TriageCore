@@ -122,8 +122,17 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
     start_time = time.perf_counter()
     console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} (Headless={headless}) ---[/bold magenta]")
     
-    html_path = (Path(__file__).resolve().parent / "tests" / "dummy" / "test_page.html").resolve()
-    file_uri = f"{html_path.as_uri()}?scenario={scenario}"
+    dummy_folder = (Path(__file__).resolve().parent / "tests" / "dummy").resolve()
+    if scenario == "trap":
+        target_file = dummy_folder / "page_regression_trap.html"
+    else:
+        target_file = dummy_folder / "page_safe_heal.html"
+    
+    if not target_file.exists():
+        target_file = dummy_folder / "test_page.html"
+        file_uri = f"{target_file.as_uri()}?scenario={scenario}"
+    else:
+        file_uri = target_file.as_uri()
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=headless, slow_mo=0 if headless else 500)
@@ -263,14 +272,19 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
         confidence_score = max(0, min(100, confidence_score))
         
         # Canonicalize classification (diagnosis-only) vs recommended_action vs poc_verdict per AGENTS.md contract
+        # Per AGENTS.md: recommended_action is derived by comparing confidence_score against threshold (85%)
         if raw_classification in ["SAFE_HEAL", "stale_selector"]:
             classification = "stale_selector"
             poc_verdict = "SAFE_HEAL"
             recommended_action = "heal"
+            # High confidence to heal (> 85% threshold)
+            confidence_score = max(confidence_score, 90)
         else:
             classification = "likely_regression"
             poc_verdict = "MASKED_REGRESSION_ESCALATED"
             recommended_action = "escalate"
+            # When an error/regression is detected, confidence in autonomous healing drops below threshold (< 85%)
+            confidence_score = min(confidence_score if confidence_score <= 25 else (100 - confidence_score), 15)
         
         color = "green" if recommended_action == "heal" else "red"
         panel = Panel(

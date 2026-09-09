@@ -34,6 +34,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.staticfiles import StaticFiles
+
+dummy_dir = ROOT_DIR / "tests" / "dummy"
+if dummy_dir.exists():
+    app.mount("/tests/dummy", StaticFiles(directory=str(dummy_dir)), name="dummy")
+
 class ScenarioRequest(BaseModel):
     scenario: Literal["control", "trap"] = Field(
         ..., description="The scenario to evaluate: 'control' (safe heal) or 'trap' (masked regression)"
