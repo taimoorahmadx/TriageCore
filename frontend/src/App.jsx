@@ -185,14 +185,14 @@ export function App() {
           <div className="flex items-center gap-2.5">
             <TriageCoreLogo size={20} />
             <span className="text-neutral-300 font-semibold text-xs tracking-tight">TriageCore</span>
-            <span>&middot;</span>
-            <span>Shared Confidence Engine for Autonomous QA &amp; CI</span>
+            <span>·</span>
+            <span>Shared Confidence Engine for Autonomous QA & CI</span>
           </div>
           <div className="flex items-center gap-4 text-[11px]">
             <span>FastAPI :8000</span>
-            <span>&middot;</span>
+            <span>·</span>
             <span>Playwright Chromium</span>
-            <span>&middot;</span>
+            <span>·</span>
             <span>Groq LPU</span>
           </div>
         </div>

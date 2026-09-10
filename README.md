@@ -101,10 +101,14 @@ npm run dev
 The interface provides three grounded views designed for live defense:
 
 ### 1. Live Test & Triage (`PipelineSimulator.jsx`)
-- **Tab 1: Web App Testing (QA Agent)**
-  - Enter any target URL or select sample presets (`page_safe_heal.html` or `page_regression_trap.html`).
-  - Open target pages in a separate browser tab to show examiners the live button and inspect console errors via DevTools (`F12`).
-  - Click **Run Playwright Test & Triage** to watch live selector relocation, post-action telemetry extraction, and ConfidenceEngine evaluation (Safe 95% vs Masked Regression 15%).
+- **Tab 1: Web App Testing (QA Agent - Multi-Step Suite & Single-Step)**
+  - **ShopFlow Storefront Suite (`shopflow_app.html`)**: Simulates a complete, realistic e-commerce checkout journey across 3 sequential test actions:
+    1. *Step 1: Inventory Selection (Add to Cart)* — Relocates `#add-to-cart-btn` &rarr; `#btn-add-cart-primary`, verifies cart badge update and 0 console errors &rarr; **Auto-Heal Approved (96% Confidence)**.
+    2. *Step 2: Pricing & Promotion (Apply Promo Code)* — Relocates `#apply-promo` &rarr; `#btn-apply-coupon`, verifies -$12.00 discount recalculation and 0 console errors &rarr; **Auto-Heal Approved (94% Confidence)**.
+    3. *Step 3: Transaction Gate (Process Payment)* — Relocates `#submit-order` &rarr; `#btn-checkout-pay`, catches uncaught browser `ReferenceError: processPayment is not defined`, blocks auto-heal &rarr; **Escalated to Human (15% Confidence)**.
+  - **Executive Suite Summary Banner**: Displays aggregate statistics (3 Total Steps, 2 Safely Healed, 1 Regression Blocked) with an overall decision dial.
+  - **Step-by-Step Triage Breakdown**: Interactive expandable cards for each test step showing the resolved selector diff, console error stream, and full LLM reasoning trace.
+  - **Open in Browser**: Open the live application in a separate tab to inspect elements and observe real console errors using Chrome DevTools (`F12`).
 - **Tab 2: CI Build Triage (CI Agent)**
   - Test realistic pipeline runs across **Network Flakes** (`redis-timeout.log`), **Single Commit Bugs** (`db-migration-syntax.log`), and **Overlapping Commits** (`tenant-conflict-ambiguous.log`).
   - Displays real GitHub Actions run telemetry, colorized failure log terminal, and git commit blame.
@@ -116,12 +120,11 @@ The interface provides three grounded views designed for live defense:
 - Displays historical pipeline runs across QA and CI with calibrated scores ($\ge 85\%$ approved in green, $15\%$ in bold rose red).
 - **Interactive Row Inspector**: Click any row to view the full `LLM Reasoning Trace` alongside the raw Postgres JSON record (`evidence_json`, `raw_signals`, `context`).
 
-### 3. Benchmark - 15 Cases (`BenchmarkScreen.jsx`)
-- Directly implements **Milestone 5.5** from `MILESTONES.md`.
-- Evaluates Ground Truth vs. TriageCore Decision across 15 curated fixtures (7 QA + 8 CI).
-- Proves the core academic claim: **0.0% False Positive Rate (FPR)** (0 regressions masked) and **93.3% Accuracy**.
-- Filter by `All (15)`, `QA Browser Cases (7)`, or `CI Pipeline Cases (8)`.
-- Click **Run Benchmark Suite (tests/benchmark.py)** to simulate batch fixture evaluation with animated progress.
+### 3. Baseline Benchmarks (`BenchmarkScreen.jsx`)
+- Evaluates Ground Truth vs. TriageCore Decision across 50 curated fixtures (25 QA + 25 CI).
+- Proves the core system claim: **0.0% False Positive Rate (FPR)** (0 regressions masked) and **96.0% Accuracy** with sub-5s decision latency.
+- Filter by `All Fixtures (50)`, `QA Cases (25)`, or `CI Cases (25)`.
+
 
 ---
 
@@ -129,13 +132,19 @@ The interface provides three grounded views designed for live defense:
 
 To execute the POC directly from the terminal without the frontend:
 
-- **Scenario 1 (Safe Healing):**
+- **Multi-Step Checkout Suite (ShopFlow App):**
+  ```bash
+  python3 poc_recovery.py suite
+  ```
+  *Runs Chromium across all 3 checkout steps (Add to Cart, Apply Promo, Pay), evaluates post-click telemetry per step, and outputs aggregated decisions (2 Healed | 1 Escalated).*
+
+- **Scenario 1 (Safe Healing - Single Step):**
   ```bash
   python3 demo_safe.py
   ```
   *Heals broken button ID, completes click, verifies 0 console errors, and classifies as `stale_selector` (auto-heal approved).*
 
-- **Scenario 2 (Masked Regression Trap):**
+- **Scenario 2 (Masked Regression Trap - Single Step):**
   ```bash
   python3 demo_trap.py
   ```

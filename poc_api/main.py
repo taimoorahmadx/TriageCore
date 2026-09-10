@@ -40,13 +40,44 @@ dummy_dir = ROOT_DIR / "tests" / "dummy"
 if dummy_dir.exists():
     app.mount("/tests/dummy", StaticFiles(directory=str(dummy_dir)), name="dummy")
 
+from typing import Literal, Optional, List, Union
+
+class StepTelemetry(BaseModel):
+    console_errors: List[str] = Field(default_factory=list)
+    target_badge: Optional[str] = None
+
+class StepResult(BaseModel):
+    step_index: int
+    step_name: str
+    original_selector: str
+    resolved_selector: str
+    selector_healed: bool
+    classification: Literal["stale_selector", "likely_regression"]
+    confidence_score: int = Field(ge=0, le=100)
+    recommended_action: Literal["heal", "escalate"]
+    reasoning_trace: str
+    runtime_telemetry: StepTelemetry
+    status: Literal["PASSED_HEALED", "ESCALATED_REGRESSION"]
+    duration_ms: int
+
+class SuiteResponse(BaseModel):
+    suite_name: str
+    target_url: str
+    total_steps: int
+    healed_count: int
+    escalated_count: int
+    overall_verdict: str
+    overall_recommended_action: Literal["heal", "escalate"]
+    duration_ms: int
+    steps: List[StepResult]
+
 class ScenarioRequest(BaseModel):
-    scenario: Literal["control", "trap"] = Field(
-        ..., description="The scenario to evaluate: 'control' (safe heal) or 'trap' (masked regression)"
+    scenario: Literal["control", "trap", "suite"] = Field(
+        default="suite", description="The scenario to evaluate: 'suite' (multi-step QA suite), 'control', or 'trap'"
     )
 
 class ScenarioResponse(BaseModel):
-    scenario: Literal["control", "trap"]
+    scenario: Literal["control", "trap", "suite"]
     classification: Literal["stale_selector", "likely_regression", "SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]
     confidence_score: int = Field(ge=0, le=100)
     reasoning_trace: str
@@ -78,16 +109,19 @@ class CiTriageResponse(BaseModel):
 def health_check():
     return {"status": "ok", "service": "triagecore-poc-api"}
 
-@app.post("/api/poc/run", response_model=ScenarioResponse)
+@app.post("/api/poc/run", response_model=Union[SuiteResponse, ScenarioResponse])
 def run_poc_scenario(payload: ScenarioRequest):
     try:
         # Run headless=True so execution is fast and robust in API context
         result = run_scenario(payload.scenario, headless=True)
+        if payload.scenario == "suite" or "steps" in result:
+            return SuiteResponse.model_validate(result)
         return ScenarioResponse.model_validate(result)
     except ValidationError as e:
         raise HTTPException(status_code=502, detail=f"POC returned invalid payload: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}")
+
 
 @app.post("/api/ci/triage", response_model=CiTriageResponse)
 def run_ci_triage(payload: CiTriageRequest):

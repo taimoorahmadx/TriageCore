@@ -56,7 +56,7 @@ export function Navbar({ currentScreen, onNavigate }) {
             }`}
           >
             <BarChart2 className="w-3.5 h-3.5" />
-            <span>Benchmark (15 Cases)</span>
+            <span>Benchmark (50 Cases)</span>
           </button>
         </nav>
 

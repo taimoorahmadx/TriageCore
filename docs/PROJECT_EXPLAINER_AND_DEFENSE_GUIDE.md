@@ -177,18 +177,14 @@ sequenceDiagram
     API-->>User: HTTP 200 JSON payload (takes ~5.5 seconds!)
 ```
 
-### The Two Scenarios Explained:
-1. **Control Scenario (`demo_safe.py` / `page_safe_heal.html`):**
-   - The button ID was renamed from `submit-btn` to `order-btn-primary`.
-   - The LLM relocates the button. Playwright clicks it.
-   - The form submits cleanly. A `<div id="order-success">` message appears in the DOM. No console errors occur.
-   - **Result:** Classification = `stale_selector`, Recommended Action = `heal`, Confidence = `95%` ($\ge 85\%$ threshold approved).
-2. **Trap Scenario (`demo_trap.py` / `page_regression_trap.html`):**
-   - The button ID was also renamed, **BUT** the click handler triggers an uncaught `ReferenceError: processPayment is not defined`.
-   - The LLM relocates the button. Playwright clicks it.
-   - An error fires in the browser console.
-   - TriageCore catches the error and detects that the heal triggered a regression.
-   - **Result:** Classification = `likely_regression`, Recommended Action = `escalate`, Confidence drops to **`15%`** ($< 85\%$ threshold violated, red badge).
+### The Scenarios Explained:
+1. **Primary Demonstration: ShopFlow Storefront Multi-Step Suite (`shopflow_app.html`):**
+   - Simulates a realistic e-commerce user checkout journey across 3 sequential actions in a single test run:
+     - **Step 1: Inventory Selection (Add to Cart):** Stale selector `#add-to-cart-btn` relocated to `#btn-add-cart-primary`. Cart badge updates to 1 item ($120.00). 0 console errors. **Verdict: `stale_selector` | Confidence: `96%` | Action: `heal` (Autonomous)**.
+     - **Step 2: Pricing & Promotion (Apply Promo Code):** Stale selector `#apply-promo` relocated to `#btn-apply-coupon`. 10% discount (-$12.00) applied cleanly. 0 console errors. **Verdict: `stale_selector` | Confidence: `94%` | Action: `heal` (Autonomous)**.
+     - **Step 3: Transaction Gate (Process Payment - The Trap):** Stale selector `#submit-order` relocated to `#btn-checkout-pay`. Click fires uncaught `ReferenceError: processPayment is not defined`. TriageCore catches the console crash, identifies the regression trap, drops confidence to **`15%`**, and blocks autonomous healing. **Verdict: `likely_regression` | Confidence: `15%` | Action: `escalate` (Human Escalation)**.
+2. **Standalone Scenarios (`demo_safe.py` / `demo_trap.py`):**
+   - Single-step control (`page_safe_heal.html`) and single-step trap (`page_regression_trap.html`) remain available as lightweight unit verification baselines.
 
 ---
 
@@ -198,11 +194,11 @@ When you open the frontend (`http://localhost:5173`), you see 3 focused navigati
 
 | Screen / View | What It Shows | Is It Live or Target Architecture? | What to Say in the Defense |
 | :--- | :--- | :---: | :--- |
-| **1. Live Test & Triage: Tab 1 (QA Agent)** | Live Playwright runner, target URL/HTML loader, real-time dial gauge, and **"Run Playwright Test & Triage"** button. | **🔥 100% LIVE REAL-TIME SPIKE** | *"This is our live feasibility proof. When we click this button, it hits our FastAPI backend, launches Playwright, calls Groq, captures browser console logs, and catches the regression in real time."* |
+| **1. Live Test & Triage: Tab 1 (QA Agent)** | Multi-step Playwright runner against ShopFlow Storefront, Executive Suite Summary Banner (2 Healed, 1 Escalated), and interactive Step-by-Step Triage Breakdown. | **🔥 100% LIVE REAL-TIME SPIKE** | *"This is our live feasibility proof. We run a full 3-step checkout journey. TriageCore safely heals cart and coupon steps (96%, 94%), but when payment throws an uncaught JavaScript error, it blocks auto-healing, drops confidence to 15%, and alerts an engineer."* |
 | **1. Live Test & Triage: Tab 2 (CI Agent)** | GitHub Actions build log viewer, git blame diff, and triage decision card across 3 presets (`redis-timeout.log`, `db-migration-syntax.log`, `tenant-conflict-ambiguous.log`). | **🔥 LIVE PIPELINE SIMULATOR** | *"Demonstrates the second application of TriageCore committed for Milestone 5, triaging raw CI logs, classifying flakiness vs bugs, and enforcing the strict invariant that agents never auto-merge PRs."* |
 | **Telemetry & Evidence Drawer** | Raw DOM snippet, browser console stack trace, LLM prompt tokens, and JSON signals. | **🔥 LIVE (Binds to live run)** | *"Shows complete transparency: you can inspect the exact ReferenceError or git blame diff that drove the engine's verdict."* |
 | **2. Triage History** | Persistent audit ledger of all recent QA and CI decisions with expandable inline Postgres JSON record inspector (`POST /api/poc/run` & `POST /api/ci/triage`). | **Target Architecture Prototype** | *"Demonstrates the auditable event trail stored in Postgres (`triage_decisions` table), allowing full traceability for compliance and post-incident reviews."* |
-| **3. Benchmark (15 Cases)** | Ground-truth baseline evaluation matrix across 15 curated fixtures (7 QA + 8 CI) for Milestone 5.5, with category filters and interactive test suite trigger. | **Empirical Evaluation Spike** | *"Proves our core academic claim: 0.0% False Positive Rate (0 regressions masked) and 93.3% accuracy, validating feasibility before Phase 2 threshold calibration."* |
+| **3. Benchmark (50 Cases)** | Ground-truth baseline evaluation matrix across 50 curated fixtures (25 QA + 25 CI) with category filters. | **Empirical Evaluation Spike** | *"Proves our core claim: 0.0% False Positive Rate (0 regressions masked) and 96.0% accuracy, validating feasibility before Phase 2 threshold calibration."* |
 
 ---
 
@@ -273,5 +269,5 @@ Use this exact script when presenting your slides:
 ### Summary Checklist for You
 - [x] Read this file twice.
 - [x] Run `python3 demo_trap.py` in your terminal so you've seen the raw console output with your own eyes.
-- [x] Open `http://localhost:5173`, test both `1. Web App Testing (QA Agent)` and `2. CI Build Triage (CI Agent)`, inspect `Triage History`, and verify the `Benchmark (15 Cases)` suite.
+- [x] Open `http://localhost:5173`, test both `1. Web App Testing (QA Agent)` and `2. CI Build Triage (CI Agent)`, inspect `Triage History`, and verify the `Benchmark (50 Cases)` suite.
 - [x] Walk through the **5-minute pitch script** out loud once with your teammates.

@@ -284,20 +284,20 @@ Execute this during **Slide 7**. Follow this exact sequence:
    * Have browser open to `http://localhost:5173` on View 1: `Live Test & Triage` (Tab 1: Web App Testing - QA Agent).
    * Have a 3rd terminal tab open in root directory ready to run: `python3 demo_trap.py` (as a foolproof backup).
 2. **On-Screen Live Run (60 seconds):**
-   * Point to the UI: *"Respected panel, here is our live technical spike. This test encountered a broken button. Notice the code diff: the button ID changed, but the developer also introduced a bug in the click handler."*
-   * Click the **"Run Playwright Test & Triage"** button.
-   * Narrate while the dial pulses (~5 seconds):  
-     *"In real time, our FastAPI backend launched Playwright, sent the DOM to Groq, relocated the selector, clicked it, and monitored the browser console for uncaught errors."*
-   * Point to the result:  
-     *"Look at the outcome: Confidence dropped to 15% (far below the 85% safety threshold). Classification: `likely_regression`. Recommended Action: `escalate`. The badge turned RED."*
-3. **Open the Evidence Drawer & Telemetry (30 seconds):**
-   * Open the **Evidence Drawer** on the right side.
+   * Point to the UI: *"Respected panel, here is our live technical spike running on an authentic e-commerce web application — ShopFlow Storefront. Rather than testing a trivial single button, our Playwright suite executes a realistic 3-step user checkout journey: Add to Cart, Apply Coupon, and Process Payment."*
+   * Click the **"Run Test"** button.
+   * Narrate while the stepper progresses:  
+     *"In real time, our backend launches Playwright, encounters stale selectors across the user journey, relocates them, and executes each action while recording console telemetry."*
+   * Point to the result banner and triage breakdown:  
+     *"Look at the outcome: Steps 1 & 2 (Cart and Coupon) were safely healed with 96% and 94% confidence because DOM state progressed with zero console errors. But on Step 3 (Payment), the developer introduced a bug. Confidence plunged to 15%. Classification: `likely_regression`. Recommended Action: `escalate`."*
+3. **Open the Breakdown & Telemetry (30 seconds):**
+   * Expand Step 3 or open the **Evidence Drawer**:
    * Point to the raw console error:  
-     *"Here is the transparency: our engine caught the uncaught `ReferenceError` from the browser console. A blind tool would have reported a green pass. TriageCore prevented a false pass and escalated to a human."*
+     *"Here is the critical distinction: a naive self-healing tool would click the relocated button, report all-green, and deploy a broken checkout to production. TriageCore captured the uncaught `ReferenceError: processPayment is not defined`, blocked the heal, and preserved pipeline safety."*
    * Click **Tab 2: CI Build Triage (CI Agent)**:  
      *"On the CI side, the same decision engine classifies raw build logs, dispatches automated retries for flaky timeouts, and flags ambiguous commits to block bad automated PR merges."*
 4. **Transition back to Slide 8:**  
-   *"This live spike proves that our core hypothesis works in under 6 seconds. Now, let me explain how we benchmark this across our 15-case baseline and 50-case benchmark."*
+   *"This live spike proves that our core hypothesis works in an end-to-end user journey. Now, let me explain how we benchmark this across our 50-case baseline benchmark suite."*
 
 ---
 

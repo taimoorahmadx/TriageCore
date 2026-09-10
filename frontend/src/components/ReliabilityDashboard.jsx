@@ -6,31 +6,31 @@ const TRIAGE_AUDIT_LOG = [
     id: 'run-108',
     time: '2 mins ago',
     source: 'QA',
-    target: 'tests/dummy/page_safe_heal.html',
-    incident: "Button renamed from '#submit-btn' to '#order-btn-primary'. Zero console errors.",
-    score: 95,
+    target: 'tests/dummy/shopflow_app.html (Step 1: Cart)',
+    incident: "Button renamed from '#add-to-cart-btn' to '#btn-add-cart-primary'. Zero console errors.",
+    score: 96,
     diagnosis: 'stale_selector',
     action: 'Auto-Heal Approved',
     actionType: 'heal',
-    trace: 'DOM semantics match purchase intent. Post-click verification confirmed successful submission with 0 console errors. Auto-heal patch applied.',
+    trace: 'DOM semantics match add-to-cart purchase intent. Post-click verification confirmed 1 item in cart ($120.00) with 0 console errors. Auto-heal patch applied.',
     evidenceJson: {
       evidence_type: 'dom_mutation',
       source: 'qa',
       raw_signals: {
-        original_selector: '#submit-btn',
-        resolved_selector: '#order-btn-primary',
+        original_selector: '#add-to-cart-btn',
+        resolved_selector: '#btn-add-cart-primary',
         semantic_similarity: 0.98,
         console_error_count: 0
       },
-      context: { page: 'tests/dummy/page_safe_heal.html', headless: true }
+      context: { page: 'tests/dummy/shopflow_app.html', headless: true }
     }
   },
   {
     id: 'run-107',
     time: '18 mins ago',
     source: 'QA',
-    target: 'tests/dummy/page_regression_trap.html',
-    incident: "Button renamed, but click triggered uncaught 'ReferenceError: processPayment is not defined'.",
+    target: 'tests/dummy/shopflow_app.html (Step 3: Payment)',
+    incident: "Button '#submit-order' relocated to '#btn-checkout-pay', but click fired uncaught 'ReferenceError: processPayment is not defined'.",
     score: 15,
     diagnosis: 'likely_regression',
     action: 'Blocked & Escalated',
@@ -40,13 +40,13 @@ const TRIAGE_AUDIT_LOG = [
       evidence_type: 'dom_mutation_with_console_error',
       source: 'qa',
       raw_signals: {
-        original_selector: '#submit-btn',
-        resolved_selector: '#order-btn-primary',
+        original_selector: '#submit-order',
+        resolved_selector: '#btn-checkout-pay',
         semantic_similarity: 0.96,
         console_error_count: 1,
         uncaught_exception: 'ReferenceError: processPayment is not defined'
       },
-      context: { page: 'tests/dummy/page_regression_trap.html', headless: true }
+      context: { page: 'tests/dummy/shopflow_app.html', headless: true }
     }
   },
   {
@@ -123,23 +123,23 @@ const TRIAGE_AUDIT_LOG = [
     id: 'run-103',
     time: 'Yesterday',
     source: 'QA',
-    target: 'tests/dummy/page_safe_heal.html',
-    incident: "Profile dropdown button selector changed from '#user-nav' to '#account-menu-trigger'.",
-    score: 91,
+    target: 'tests/dummy/shopflow_app.html (Step 2: Promo)',
+    incident: "Coupon button selector changed from '#apply-promo' to '#btn-apply-coupon'. 10% voucher applied cleanly.",
+    score: 94,
     diagnosis: 'stale_selector',
     action: 'Auto-Heal Approved',
     actionType: 'heal',
-    trace: 'Aria-role and accessibility label confirmed exact match. Click successfully revealed user menu without errors.',
+    trace: 'Aria-role and accessibility label confirmed promo code submission intent. Click successfully applied discount with 0 console errors.',
     evidenceJson: {
       evidence_type: 'dom_mutation',
       source: 'qa',
       raw_signals: {
-        original_selector: '#user-nav',
-        resolved_selector: '#account-menu-trigger',
-        semantic_similarity: 0.94,
+        original_selector: '#apply-promo',
+        resolved_selector: '#btn-apply-coupon',
+        semantic_similarity: 0.95,
         console_error_count: 0
       },
-      context: { page: 'tests/dummy/page_safe_heal.html', headless: true }
+      context: { page: 'tests/dummy/shopflow_app.html', headless: true }
     }
   }
 ];
@@ -199,13 +199,13 @@ export function ReliabilityDashboard({ onNavigate }) {
         <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
           <span className="text-[11px] font-mono text-emerald-400 uppercase">Autonomous Heals</span>
           <div className="text-2xl font-bold font-mono text-emerald-400">3 Approved</div>
-          <p className="text-[10px] text-neutral-500 font-mono">Score &ge; 85% threshold</p>
+          <p className="text-[10px] text-neutral-500 font-mono">Score ≥ 85% threshold</p>
         </div>
 
         <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
           <span className="text-[11px] font-mono text-rose-400 uppercase">Escalations Blocked</span>
           <div className="text-2xl font-bold font-mono text-rose-400">2 Blocked</div>
-          <p className="text-[10px] text-neutral-500 font-mono">Regressions &amp; conflicts</p>
+          <p className="text-[10px] text-neutral-500 font-mono">Regressions & conflicts</p>
         </div>
 
         <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
@@ -280,7 +280,7 @@ export function ReliabilityDashboard({ onNavigate }) {
                       {run.source} Agent
                     </span>
                     <span className="text-xs font-mono text-neutral-300 font-semibold">{run.target}</span>
-                    <span className="text-[11px] text-neutral-500">&middot; {run.time}</span>
+                    <span className="text-[11px] text-neutral-500">· {run.time}</span>
                   </div>
                   <div className="text-xs text-neutral-300 font-mono line-clamp-1">
                     {run.incident}

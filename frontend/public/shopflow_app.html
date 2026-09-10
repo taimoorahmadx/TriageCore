@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopFlow Storefront - E-Commerce Checkout Suite</title>
+    <style>
+        :root {
+            --bg: #090D14;
+            --card-bg: #0F172A;
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #3B82F6;
+            --primary-hover: #2563EB;
+            --success: #10B981;
+            --danger: #EF4444;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font);
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header-bar {
+            width: 100%;
+            max-width: 860px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--card-border);
+            margin-bottom: 32px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--primary);
+        }
+        .cart-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cart-pill span#cart-count-badge {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .main-layout {
+            width: 100%;
+            max-width: 860px;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+        }
+        @media (max-width: 768px) {
+            .main-layout { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .step-badge {
+            font-size: 11px;
+            font-family: monospace;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60A5FA;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .step-badge.trap {
+            background: rgba(239, 68, 68, 0.15);
+            color: #F87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .product-box {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--card-border);
+        }
+        .product-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+        .product-info { flex: 1; }
+        .product-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; }
+        .product-price { color: #38BDF8; font-weight: 600; font-size: 14px; }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s ease;
+        }
+        .btn-white {
+            background: #FFFFFF;
+            color: #0F172A;
+        }
+        .btn-white:hover { background: #E2E8F0; }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: var(--primary-hover); }
+        .btn-danger {
+            background: #EF4444;
+            color: white;
+        }
+        .btn-danger:hover { background: #DC2626; }
+        
+        .input-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .input-field {
+            flex: 1;
+            background: #020617;
+            border: 1px solid var(--card-border);
+            padding: 10px 14px;
+            border-radius: 8px;
+            color: white;
+            font-size: 13px;
+            outline: none;
+        }
+        .input-field:focus { border-color: var(--primary); }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .summary-row.total {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-main);
+            padding-top: 12px;
+            border-top: 1px solid var(--card-border);
+            margin-top: 12px;
+        }
+        .notification {
+            display: none;
+            margin-top: 12px;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .notification.success {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34D399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .notification.error {
+            background: rgba(239, 68, 68, 0.12);
+            color: #F87171;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .eval-notes {
+            margin-top: 24px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .eval-notes code {
+            color: #38BDF8;
+            background: rgba(56, 189, 248, 0.1);
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        <div class="brand">
+            <div class="brand-dot"></div>
+            <span>ShopFlow Storefront</span>
+        </div>
+        <div class="cart-pill">
+            <span>Cart:</span>
+            <span id="cart-count-badge">0 items ($0.00)</span>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <!-- Left Column: User Journey Steps -->
+        <div class="left-col">
+            
+            <!-- Step 1: Add to Cart -->
+            <div class="card" id="step-1-card">
+                <div class="card-title">
+                    <span>1. Inventory Selection</span>
+                </div>
+                <div class="product-box">
+                    <div class="product-icon">⌨️</div>
+                    <div class="product-info">
+                        <div class="product-title">Developer Mechanical Keyboard</div>
+                        <div class="product-price">$120.00 USD</div>
+                    </div>
+                    <!-- Refactored ID from original #add-to-cart-btn -->
+                    <button class="btn btn-white" id="btn-add-cart-primary" onclick="handleAddToCart()">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="notification success" id="cart-notification">
+                    ✓ Cart updated: 1 item added ($120.00). Ready for checkout.
+                </div>
+            </div>
+
+            <!-- Step 2: Apply Promo Code -->
+            <div class="card" id="step-2-card">
+                <div class="card-title">
+                    <span>2. Pricing & Voucher Promotion</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 10px;">
+                    Have an engineering promotional voucher? Apply it below.
+                </p>
+                <div class="input-group">
+                    <input type="text" class="input-field" id="voucher-input" value="DEV10_OFF" placeholder="Enter coupon" />
+                    <!-- Refactored ID from original #apply-promo -->
+                    <button class="btn btn-primary" id="btn-apply-coupon" onclick="handleApplyPromo()">
+                        Apply Coupon
+                    </button>
+                </div>
+                <div class="notification success" id="promo-notification">
+                    ✓ Promo DEV10_OFF applied: 10% discount (-$12.00) saved to order.
+                </div>
+            </div>
+
+            <!-- Step 3: Checkout Payment Gate -->
+            <div class="card" id="step-3-card">
+                <div class="card-title">
+                    <span>3. Payment & Complete Order</span>
+                </div>
+                <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 8px; margin-bottom: 14px; border: 1px solid var(--card-border);">
+                    <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                        <span style="color: var(--text-muted);">Payment Method:</span>
+                        <span style="font-weight: 500;">Visa Corporate •••• 4242</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 13px;">
+                        <span style="color: var(--text-muted);">Billing Contact:</span>
+                        <span style="font-weight: 500;">eng-lead@shopflow.io</span>
+                    </div>
+                </div>
+                <!-- Refactored ID from original #submit-order + Deliberate broken handler calling undefined processPayment() -->
+                <button class="btn btn-primary" id="btn-checkout-pay" style="width: 100%;" onclick="handlePayCheckout()">
+                    Pay & Complete Checkout ($108.00)
+                </button>
+                <div class="notification error" id="payment-error-banner">
+                    ⚠️ Payment failed: processPayment is not defined.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column: Live Order Summary -->
+        <div class="right-col">
+            <div class="card">
+                <div class="card-title">Order Summary</div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$120.00</span>
+                </div>
+                <div class="summary-row" id="summary-discount-row" style="display: none; color: #34D399;">
+                    <span>Discount (DEV10_OFF)</span>
+                    <span>-$12.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>$0.00 (Free)</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Estimated Total</span>
+                    <span id="summary-total">$120.00</span>
+                </div>
+            </div>
+
+            <!-- Inspector Callout for Evaluators -->
+            <div class="eval-notes">
+                <strong style="color: #F8FAFC; display: block; margin-bottom: 6px;">Evaluation Inspector:</strong>
+                • <strong>Step 1:</strong> Selector changed from <code>#add-to-cart-btn</code> to <code>#btn-add-cart-primary</code> (Clean execution).<br/>
+                • <strong>Step 2:</strong> Selector changed from <code>#apply-promo</code> to <code>#btn-apply-coupon</code> (Clean execution).<br/>
+                • <strong>Step 3:</strong> Selector changed from <code>#submit-order</code> to <code>#btn-checkout-pay</code>, <strong>AND</strong> click handler calls undefined <code>processPayment()</code> throwing a runtime error.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Global error stream listener to ensure browser console registers unhandled runtime errors
+        window.onerror = function(message, source, lineno, colno, error) {
+            console.error("Uncaught Client Error:", message, "at line", lineno);
+            return false;
+        };
+
+        function handleAddToCart() {
+            document.getElementById('cart-count-badge').innerText = '1 item ($120.00)';
+            document.getElementById('cart-notification').style.display = 'block';
+            console.log("[ShopFlow] Cart incremented successfully. Target reached: 1 item ($120.00)");
+        }
+
+        function handleApplyPromo() {
+            document.getElementById('summary-discount-row').style.display = 'flex';
+            document.getElementById('summary-total').innerText = '$108.00';
+            document.getElementById('promo-notification').style.display = 'block';
+            console.log("[ShopFlow] Coupon DEV10_OFF validated. New Total: $108.00");
+        }
+
+        function handlePayCheckout() {
+            // Intentional regression trap: processPayment is deliberately not defined!
+            // A naive tool clicking this button triggers an uncaught ReferenceError.
+            document.getElementById('payment-error-banner').style.display = 'block';
+            processPayment(); 
+        }
+    </script>
+</body>
+</html>
