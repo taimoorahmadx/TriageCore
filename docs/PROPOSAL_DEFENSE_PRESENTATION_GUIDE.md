@@ -1,7 +1,7 @@
-# TriageCore: Proposal Defense Presentation Guide & Slide Deck Blueprint
+# TriageCore: Proposal Defense Presentation Guide & Master Slide Blueprint
 
 > **Reference Standards:**  
-> Strictly aligned with the **FAST School of Computing BS-FYP Handbook (2026 Edition)** — *Form 1 (FYP-1 Proposal Defense Evaluation, 100 Marks)* and the **FYP Student Idea Selection Guide (Section 16: Proposal Defense Package & Section 14: External Component Disclosure)*.
+> Strictly aligned with the **FAST School of Computing BS-FYP Handbook (2026 Edition)** — *Form 1 (FYP-1 Proposal Defense Evaluation, 100 Marks)*, the **FYP Student Idea Selection Guide (Sections 14 & 16)**, and our active **13-Slide Presentation Deck** (`docs/TriageCorePresentation.pdf`).
 >
 > **Recommended Presentation Timing:** 18–20 minutes maximum (12 mins presentation + 2 mins live demo + 5 mins Q&A).
 
@@ -9,310 +9,335 @@
 
 ## Quick Navigation
 1. [Evaluation Rubric Mapping (Form 1 - 100 Marks)](#1-evaluation-rubric-mapping-form-1---100-marks)
-2. [Master AI Slide-Generation Prompt (For Gamma, ChatGPT, Claude)](#2-master-ai-slide-generation-prompt)
-3. [Slide-by-Slide Complete Blueprint (Slides 1 to 10)](#3-slide-by-slide-complete-blueprint)
+2. [Slide-by-Slide Complete Blueprint (Slides 1 to 13)](#2-slide-by-slide-complete-blueprint)
    - [Slide 1: Title & Identity](#slide-1-title--identity)
-   - [Slide 2: Stakeholders & Real-World Problem](#slide-2-stakeholders--real-world-problem)
-   - [Slide 3: Existing Solutions & The Critical Gap](#slide-3-existing-solutions--the-critical-gap)
-   - [Slide 4: Research & Technical Foundations](#slide-4-research--technical-foundations)
-   - [Slide 5: Complex Computing Problem (Seoul Accord Justification)](#slide-5-complex-computing-problem-seoul-accord-justification)
-   - [Slide 6: Proposed Solution & System Architecture](#slide-6-proposed-solution--system-architecture)
-   - [Slide 7: Technical Spike / Live POC Demo (Core Gate)](#slide-7-technical-spike--live-poc-demo-core-gate)
-   - [Slide 8: Evaluation Plan & Ground-Truth Benchmark](#slide-8-evaluation-plan--ground-truth-benchmark)
-   - [Slide 9: GenAI Disclosure, Ethics, and Risk Fallbacks](#slide-9-genai-disclosure-ethics-and-risk-fallbacks)
-   - [Slide 10: Traceable Ownership & FYP-1/FYP-2 Roadmap](#slide-10-traceable-ownership--fyp-1fyp-2-roadmap)
-4. [Live Demo Execution Protocol (2 Minutes)](#4-live-demo-execution-protocol-2-minutes)
-5. [Slide Delivery & Body Language Tips for FAST Panels](#5-slide-delivery--body-language-tips-for-fast-panels)
+   - [Slide 2: Problem, Motivation & Stakeholders](#slide-2-problem-motivation--stakeholders)
+   - [Slide 3: State-of-the-Art & Comparative Gap Analysis](#slide-3-state-of-the-art--comparative-gap-analysis)
+   - [Slide 4: Research Takeaways & Literature Foundations](#slide-4-research-takeaways--literature-foundations)
+   - [Slide 5: Complex Computing Problem (Seoul Accord Characteristics)](#slide-5-complex-computing-problem-seoul-accord-characteristics)
+   - [Slide 6: Proposed Solution & Contribution](#slide-6-proposed-solution--contribution)
+   - [Slide 7: System Architecture (The Hero Component)](#slide-7-system-architecture)
+   - [Slide 8: POC-Lite / Feasibility & Live Demo](#slide-8-poc-lite--feasibility--live-demo)
+   - [Slide 9: Systematic Evaluation Plan & GenAI Boundaries](#slide-9-systematic-evaluation-plan--genai-boundaries)
+   - [Slide 10: Work Division & Milestone Roadmap](#slide-10-work-division--milestone-roadmap)
+   - [Slide 11: Ethics, Legal Compliance & AI Governance](#slide-11-ethics-legal-compliance--ai-governance)
+   - [Slide 12: Academic References](#slide-12-academic-references)
+   - [Slide 13: Conclusion, Demo Invitation & Q&A](#slide-13-conclusion-demo-invitation--qa)
+3. [Live Demo Execution Protocol (2 Minutes)](#3-live-demo-execution-protocol-2-minutes)
+4. [Panel Q&A Battlecard: Bulletproof Answers to Grilling](#4-panel-qa-battlecard-bulletproof-answers-to-grilling)
+5. [Slide Delivery & Pacing Tips for FAST Panels](#5-slide-delivery--pacing-tips-for-fast-panels)
 
 ---
 
 ## 1. Evaluation Rubric Mapping (Form 1 - 100 Marks)
 
-FAST faculty panels evaluate your defense using **Form 1**. Every single slide in this blueprint directly scores marks on this rubric:
+Every slide in this deck directly maps to the FAST faculty evaluation criteria under **Form 1**:
 
 | Form 1 Criterion | Max Marks | Target CLO | Addressed in Slide # | What Evaluators Look For |
 | :--- | :---: | :---: | :---: | :--- |
-| **1. Complex Computing Challenge & R&D Basis** | **15** | FYP1-CLO1 | Slides 2, 4, 5 | Clear problem, non-trivial complexity, Seoul Accord characteristics, genuine literature gap. |
-| **2. Prior-Solution Comparison & Contribution** | **5** | FYP1-CLO1 | Slide 3 | Structural comparison table against real tools (Healenium, BuildPulse); non-cosmetic delta. |
-| **3. Scope, Requirements & Success Criteria** | **10** | FYP1-CLO2 | Slides 6, 8 | Definite committed scope vs. optional extensions; measurable latency/accuracy NFRs. |
-| **4. Proposed Solution & Technical Approach** | **15** | FYP1-CLO3 | Slide 6 | Plausible system architecture, shared engine contract, justified technology selections. |
-| **5. POC-Lite / Feasibility Evidence** | **15** | FYP1-CLO4 | Slide 7 | **Shown, not described.** Live spike proving the riskiest hypothesis in $<10$ seconds. |
-| **6. Responsible Tool / API / GenAI Plan** | **10** | FYP1-CLO5 | Slide 9 | External dependency classification (Support vs Core-Assist vs Core-Replacement). |
-| **7. Work Division & Iteration Plan** | **5** | FYP1-CLO2 | Slide 10 | Traceable 3-member technical ownership; no member restricted to "just frontend". |
-| **8. DEI, Ethical & Legal Compliance** | **5** | FYP1-CLO2 | Slides 2, 9 | SDG 9 alignment; token/secret sanitization in CI logs; open-source licensing. |
-| **9. Presentation Quality, Delivery & Q&A** | **20** | FYP1-CLO6 | All Slides | Professional typography, calm delivery, clear division of speaking roles, crisp Q&A. |
+| **1. Complex Computing Challenge & R&D Basis** | **15** | FYP1-CLO1 | Slides 2, 4, 5 | Non-trivial complexity, Seoul Accord characteristics (WP1–WP7), peer-reviewed literature gap. |
+| **2. Prior-Solution Comparison & Contribution** | **5** | FYP1-CLO1 | Slide 3 | Structural comparison against real tools (Healenium, Testim, Trunk); clear architectural delta. |
+| **3. Scope, Requirements & Success Criteria** | **10** | FYP1-CLO2 | Slides 6, 9 | Committed v1 scope, measurable latency/cost NFRs, 50-case benchmark ground truth. |
+| **4. Proposed Solution & Technical Approach** | **15** | FYP1-CLO3 | Slides 6, 7 | Plausible 4-column architecture, strictly typed shared contract, and decoupled `weights.yaml`. |
+| **5. POC-Lite / Feasibility Evidence** | **15** | FYP1-CLO4 | Slide 8 | **Shown, not described.** Live technical spike proving regression-trap detection in $<10$ seconds. |
+| **6. Responsible Tool / API / GenAI Plan** | **10** | FYP1-CLO5 | Slide 9 | Mandatory 3-tier external dependency disclosure (Support vs. Core-Assist vs. Student Core IP). |
+| **7. Work Division & Iteration Plan** | **5** | FYP1-CLO2 | Slide 10 | Traceable 3-member individual technical ownership; no student limited to "just frontend/docs". |
+| **8. DEI, Ethical & Legal Compliance** | **5** | FYP1-CLO2 | Slides 2, 11 | UN SDG 9 alignment; token/secret sanitization in CI logs; human review gate before PR merge. |
+| **9. Presentation Quality, Delivery & Q&A** | **20** | FYP1-CLO6 | All Slides | Calm delivery, equal speaking distribution across all 3 members, crisp Q&A defense. |
 | **TOTAL** | **100** | — | — | **Passing Threshold: $\ge 50$ Marks. Goal: $\ge 85$ Marks.** |
 
 ---
 
-## 2. Master AI Slide-Generation Prompt
-
-Copy and paste this prompt directly into **Gamma.app**, **ChatGPT (with Advanced Data Analysis / Canvas)**, or **Claude 3.5 Sonnet** to generate an initial 10-slide PowerPoint/Keynote outline:
-
-```text
-Act as a Principal Software Architect and Computer Science Academic Advisor preparing a high-stakes Final Year Project (FYP) Proposal Defense deck for the FAST School of Computing (Islamabad Campus).
-
-Project Title: TriageCore: A Shared Confidence-Scoring Engine for Self-Healing Test Automation and CI Failure Triage
-Declared Stream: Stream A / Engineering Research (Bridging published diagnostic methods into deployable DevOps systems)
-Target Audience: Senior Computer Science Faculty Evaluation Panel. They are skeptical of generic LLM wrappers, demand Seoul Accord Complex Computing Problem (CCP) rigor, and grade against Form 1 (100 marks).
-
-Generate a complete 10-slide presentation deck outline. For each slide provide:
-1. Slide Title & Visual Layout (e.g. 2-column comparison, architecture diagram, data table).
-2. Key Bullet Points (concise, high-impact, engineering terminology).
-3. Callout Box / Emphasis Note.
-4. Speaker Script (Word-for-word what the student should say, professional and direct).
-5. Specific Form 1 Rubric Item Addressed.
-
-Follow this exact 10-slide structure from Section 16 of the FAST Idea Selection Guide:
-- Slide 1: Title, Team, Stream, and 1-Sentence Problem Statement.
-- Slide 2: Stakeholders, Current Manual Workflow, and SDG 9 Alignment.
-- Slide 3: Solution Landscape Comparison Table (Healenium, BuildPulse, GitHub Copilot vs. TriageCore) and the Critical Gap.
-- Slide 4: Research & Technical Foundations (Literature on Test Smells, AST repairs, and Diagnostic Triage).
-- Slide 5: Complex Computing Problem Justification (4 Seoul Accord Characteristics: Conflicting Requirements, No Obvious Solution, Ill-Defined Root Cause, Significant Consequences).
-- Slide 6: Proposed Solution Architecture & The Shared ConfidenceEngine Input/Output Contract.
-- Slide 7: Technical Spike / Live Proof of Concept (The 5 questions: Risky assumption tested, setup, result, lessons learned, architectural impact).
-- Slide 8: Evaluation Plan & Ground-Truth Benchmark (50-case mutated repository evaluation, ROC threshold calibration, <5% false-positive rate).
-- Slide 9: External Tool & GenAI Disclosure (Support vs. Core-Assist vs. Student Core IP) + CI Log Secret Sanitization & Ethics.
-- Slide 10: 3-Member Individual Ownership Matrix & FYP-1/FYP-2 Milestone Timeline.
-
-Tone: Serious, technically precise, no buzzword fluff. Avoid sounding like a sales pitch; sound like applied systems researchers solving a production engineering bottleneck.
-```
-
----
-
-## 3. Slide-by-Slide Complete Blueprint
+## 2. Slide-by-Slide Complete Blueprint
 
 ---
 
 ### Slide 1: Title & Identity
-* **Slide Title:** **TriageCore: A Shared Confidence-Scoring Engine for Self-Healing Test Automation and CI Failure Triage**
+* **Slide Title:** **TRIAGECORE: AI QA Engineer & CI Reliability Agent**
 * **Form 1 Metric:** Presentation & Identity (FYP1-CLO6)
-* **Visual Layout:** Clean title layout with dark-mode developer aesthetic, university crest/department logo, project ID, and metadata badge.
 * **On-Slide Content:**
   * **Declared Stream:** Stream A (Engineering Research & Systems Development)
   * **Team Members:**
-    * Member 1: *[Name - Roll Number]* — Core Engine, Weighting & Evaluation Lead
-    * Member 2: *[Name - Roll Number]* — Browser Automation & QA Agent Lead
-    * Member 3: *[Name - Roll Number]* — CI Webhook & Infrastructure Lead
-  * **Supervisor:** *[Supervisor Name, Faculty of Computer Science]*
-  * **Core Problem in One Sentence:**  
-    > *"Automated testing and CI pipelines break constantly, but autonomous agents cannot be trusted to act without human supervision because blind self-healing silently masks real regressions."*
+    * Shazil Rehman (23I-0095) — CI Gateway, Log Truncation & PR Agent Lead
+    * Abdul Mohaimin (23I-0652) — Browser Execution & QA Self-Healing Agent Lead
+    * Taimoor Ahmed (23I-0639) — Core Decision Engine, Weighting & Evaluation Lead
+  * **Supervisor:** Dr. Uzma Mahar
+  * **Department:** Department of Computer Science, FAST School of Computing, FAST-NUCES, Islamabad
 * **Speaker Script (Member 1 - 45 seconds):**  
-  > *"Good morning, respected panel members. Today, our team is presenting our FYP-1 proposal: **TriageCore**. We have declared Stream A, focusing on engineering a robust, confidence-gated decision engine that bridges published diagnostic methods into a deployable pipeline system. In modern DevOps, pipelines break all day. But autonomous agents cannot simply heal tests blindly, because a false heal ships broken software to production. TriageCore is the shared mathematical engine that decides when an agent can act autonomously, and when it must escalate to a human."*
+  > *"Good morning, respected panel members. Today, our team is presenting our FYP-1 proposal: **TriageCore: AI QA Engineer & CI Reliability Agent**. We have declared Stream A, focusing on bridging published diagnostic methods into a production-ready DevOps decision engine.*  
+  > *In modern CI/CD, pipelines break continuously. However, autonomous agents cannot blindly heal tests without supervision, because blind self-healing silently masks real regressions. TriageCore provides a unified, confidence-gated decision engine that decides when an agent can act autonomously, and when it must escalate to an engineer."*
 
 ---
 
-### Slide 2: Stakeholders & Real-World Problem
-* **Slide Title:** **The Operational Bottleneck: Maintenance Toil & Masked Regressions**
-* **Form 1 Metric:** Complex Computing Challenge (FYP1-CLO1 - 15 marks)
-* **Visual Layout:** Split-screen layout: Left side showing the current manual workflow; Right side showing the failure statistics.
+### Slide 2: Problem, Motivation & Stakeholders
+* **Slide Title:** **PROBLEM AND USERS**
+* **Form 1 Metric:** Problem Definition & Social Impact (FYP1-CLO1 & CLO2 - 15 Marks)
 * **On-Slide Content:**
-  * **Target Stakeholders:** Small-to-mid engineering teams, DevOps engineers, and open-source maintainers running continuous deployment.
-  * **The Everyday Reality:**
-    * Up to **30% of engineering time** is spent maintaining broken tests and babysitting CI failures.
-    * 70%+ of UI test breaks are caused by harmless CSS/DOM renames (stale selectors), not real bugs.
-  * **The Fatal Trap of Blind Self-Healing:**
-    * Existing tools use AI to relocate the broken button and immediately declare success.
-    * If the button's underlying Javascript handler is broken, the naive tool reports a **False Pass**, masking a real regression that slips into production.
-  * **UN SDG 9 Alignment (Industry, Innovation & Infrastructure - Target 9.4/9.5):**
-    * Eliminates wasted cloud compute cycles from repeated flaky CI runs; increases software reliability in mission-critical digital infrastructure.
+  * **Problem Statement:** Blind AI self-healing hides real regressions; TriageCore decides when a broken test or CI failure can be fixed automatically, and when it must escalate to a human.
+  * **Target Stakeholders:** QA Automation Engineers, DevOps Teams, CI/CD Platform Engineers, and Open-Source Maintainers.
+  * **Everyday Reality & Pain Points:**
+    * Up to 30% of engineering bandwidth is consumed by repetitive selector fixes and manual log triage.
+    * Existing "AI self-healing" tools are unreliable and mask genuine code regressions.
+    * Developers at Google spend an average of 3.7 hours tracking down a single flaky test.
+  * **Motivation (Industry Evidence):**
+    * MIT Project NANDA (2025) reported that 95% of enterprise AI projects fail to deliver business value because they lack workflow integration and use static models that cannot learn or calibrate.
+  * **UN SDG 9 Alignment (Industry, Innovation & Infrastructure):**
+    * Eliminates wasted cloud compute cycles from redundant flaky CI runs, increasing software reliability in digital infrastructure.
 * **Speaker Script (Member 2 - 1 minute):**  
-  > *"When software developers push code, UI tests break constantly. Up to 30% of engineering bandwidth is burned manually fixing selector pointers that broke because of minor CSS tweaks. Recently, industry tools introduced 'AI self-healing' to guess the new selector. But this introduces a catastrophic failure mode: **Masked Regressions**. If an AI clicks a button whose click handler throws an uncaught Javascript error, a naive tool still marks the test as PASSED simply because the element was found. That regression slips into production. Our goal aligns with SDG 9: making digital infrastructure resilient and cutting redundant compute waste."*
+  > *"When software developers push code, UI tests break constantly. Up to 30% of engineering bandwidth is burned manually fixing selector pointers that broke because of minor CSS tweaks. Recently, industry tools introduced 'AI self-healing' to guess the new selector. But this introduces a catastrophic failure mode: **Masked Regressions**. If an AI clicks a button whose underlying Javascript handler throws an uncaught error, a naive tool still marks the test as PASSED simply because the element was found. That regression slips straight into production. Our goal aligns with UN SDG 9: making digital infrastructure resilient and cutting redundant cloud compute waste."*
 
 ---
 
-### Slide 3: Existing Solutions & The Critical Gap
-* **Slide Title:** **Solution Landscape: Why Existing Tools Cannot Be Trusted**
-* **Form 1 Metric:** Product / Prior-FYP Comparison (FYP1-CLO1 - 5 marks)
-* **Visual Layout:** Comprehensive comparison table comparing 4 existing approaches against TriageCore across 5 architectural dimensions.
+### Slide 3: State-of-the-Art & Comparative Gap Analysis
+* **Slide Title:** **STATE-OF-THE-ART & COMPARATIVE GAP ANALYSIS**
+* **Form 1 Metric:** Prior-Solution Comparison & Contribution (FYP1-CLO1 - 5 Marks)
 * **On-Slide Content:**
 
-| Capability | Healenium / Testim (Commercial QA) | BuildPulse / Trunk (CI Flakiness) | GitHub Copilot Workspace | **TriageCore (Proposed)** |
+| Capability | Healenium (Open Source) | Testim (Commercial QA) | Trunk / BuildPulse (CI Flakiness) | **TriageCore (Proposed)** |
 | :--- | :---: | :---: | :---: | :---: |
-| **Selector Self-Healing** | ✅ Yes (Heuristic / Vision) | ❌ No | ❌ No | **✅ Yes (Semantic DOM)** |
-| **Post-Action Runtime Safety** | ❌ **No (Blind heals)** | ❌ No | ❌ No | **✅ Yes (Console + State verification)** |
-| **CI Log Root-Cause Blame** | ❌ No | ⚠️ Historical Stats Only | ⚠️ Generic LLM chat | **✅ Yes (Commit git-blame tracing)** |
-| **Shared Decision Engine** | ❌ Isolated tool | ❌ Isolated tool | ❌ Isolated tool | **✅ Yes (Unified QA + CI engine)** |
-| **Calibrated Confidence Thresholds** | ❌ Proprietary black-box | ❌ No | ❌ No | **✅ Yes (Auditable `weights.yaml` + ROC)** |
+| **Selector Relocation** | ✅ Heuristic / Proxy | ✅ ML Locator Matching | ❌ No | **✅ Semantic Role Matching** |
+| **Post-Action Runtime Safety** | ❌ **No (Blind heals)** | ❌ No | ❌ No | **✅ Yes (Console & State verification)** |
+| **CI Log Root-Cause Blame** | ❌ No | ❌ No | ⚠️ Historical Stats Only | **✅ Yes (Commit git-blame tracing)** |
+| **Unified Decision Brain** | ❌ QA only | ❌ QA only | ❌ CI only | **✅ Yes (Shared QA + CI engine)** |
+| **Auditable Weight Calibration** | ❌ No | ❌ Proprietary Black Box | ❌ No | **✅ Yes (`weights.yaml` + ROC Analysis)** |
 
-* **The Core Gap:** No existing system evaluates **post-action execution aftermath** to prevent false heals, and none unifies QA test healing and CI build triage under a single auditable confidence engine.
+* **The Critical Gap:** Existing tools relocate elements dynamically, but lack runtime post-action verification (monitoring console errors and DOM mutation aftermath), and force teams to purchase disconnected, single-purpose tools.
 * **Speaker Script (Member 3 - 1 minute):**  
-  > *"We structurally analyzed the commercial and open-source landscape. Commercial QA tools like Healenium provide self-healing, but they operate blindly: they check if the element was clicked, but never verify whether the click crashed the client runtime. On the CI side, tools like BuildPulse only track historical test statistics without analyzing code diffs or log traces. Furthermore, teams are forced to buy and configure two disconnected tools. TriageCore fills this exact gap: it provides post-action execution safety checks and connects both QA and CI under a single, auditable confidence architecture."*
+  > *"We structurally analyzed existing tools. Healenium proxies browser traffic and relocates elements, but never checks console errors or application state after the click. Testim uses ML to match locators, but its confidence score only measures how sure it is of finding the button—not whether it was safe to click it. On the CI side, Trunk quarantines flaky tests but cannot classify root causes or propose automated fixes. TriageCore fills this exact gap: it verifies post-action execution aftermath and unifies QA and CI under one auditable confidence architecture."*
 
 ---
 
-### Slide 4: Research & Technical Foundations
-* **Slide Title:** **Research-to-Decision Base: Grounded in Software Engineering Literature**
-* **Form 1 Metric:** R&D Basis (FYP1-CLO1 - 15 marks)
-* **Visual Layout:** 3-box card layout mapping published research domains to specific design decisions in TriageCore.
-* **On-Slide Content:**
-  * **1. Automated Test Repair & Semantic Fragility (Leotta et al., FSE / ICST):**
-    * *Literature finding:* Positional and XPath selectors break in 73% of web updates. Semantic attributes (ARIA roles, accessible names, text content) have an 8x higher survival rate.
-    * *Our Decision:* We bypass XPath/CSS heuristics and feed structured DOM role trees directly into LLM semantic extractors.
-  * **2. The Test Masking & Silent Failure Problem (Zhang et al., ISSTA):**
-    * *Literature finding:* Up to 12% of automated test repairs introduce subtle behavioral changes that mask regressions.
-    * *Our Decision:* We mandate **post-action telemetry** (capturing asynchronous browser console errors and DOM mutation observers) as mandatory input signals.
-  * **3. CI Failure Classification & Log Noise (Ghaleb et al., TSE):**
-    * *Literature finding:* Over 80% of CI failure logs contain redundant build output; the diagnostic signal is concentrated in the environment setup (head) and stack trace (tail).
-    * *Our Decision:* We implement **middle-truncation logic** in our FastAPI webhook gateway, retaining head/tail tokens while penalizing confidence if truncation was required.
+### Slide 4: Research Takeaways & Literature Foundations
+* **Slide Title:** **RESEARCH TAKEAWAYS**
+* **Form 1 Metric:** Research & Development Basis (FYP1-CLO1 - 15 Marks)
+* **On-Slide Content (The 3 Grounded Literature Decisions):**
+  1. **Automated Test Repair & Semantic Fragility (Leotta et al., ICST/FSE):**
+     * *Finding:* CSS and XPath positional selectors break in 73% of web updates, whereas accessibility semantic roles survive 8x longer.
+     * *TriageCore Decision:* We bypass raw CSS heuristics and feed DOM accessibility trees directly to our semantic extractor.
+  2. **Test Masking & Silent Failure Risks (Zhang et al., ISSTA):**
+     * *Finding:* Up to 12% of automated test repairs silently mask real regressions.
+     * *TriageCore Decision:* We mandate **post-action telemetry** (capturing runtime JavaScript console errors) as a required input signal before any heal is approved.
+  3. **CI Failure Classification & Log Noise (Ghaleb et al., TSE / FlaKat, 2024):**
+     * *Finding:* Over 80% of CI logs contain redundant noise; failure root causes concentrate in build initialization (head) and stack traces (tail).
+     * *TriageCore Decision:* We implement token-aware **middle-truncation logic** in our FastAPI gateway, preserving critical failure context within strict token budgets.
 * **Speaker Script (Member 1 - 1 minute):**  
-  > *"Our design is not based on guesswork; it directly operationalizes established software engineering literature. Studies by Leotta et al. proved that semantic DOM attributes survive refactoring 8 times better than standard CSS selectors. Research by Zhang et al. in ISSTA highlighted that automated test repairs frequently introduce silent masking bugs, which directly motivated our post-action verification loop. Finally, empirical studies on CI logs by Ghaleb et al. guided our middle-truncation algorithm, preserving critical error traces while staying within LLM token budgets."*
+  > *"Our design is not based on guesswork; it directly operationalizes peer-reviewed software engineering literature. Studies by Leotta et al. proved that accessibility attributes survive frontend updates 8 times better than CSS selectors, guiding our DOM extractor. Research by Zhang et al. in ISSTA proved that automated test repairs frequently introduce silent masking bugs, which directly motivated our post-action console verification loop. Finally, empirical studies on CI logs by Ghaleb et al. guided our middle-truncation algorithm, preserving critical error traces while staying within LLM token budgets."*
 
 ---
 
-### Slide 5: Complex Computing Problem (Seoul Accord Justification)
-* **Slide Title:** **Complex Computing Problem: Seoul Accord Characteristics**
-* **Form 1 Metric:** Complex Computing Challenge (FYP1-CLO1 - 15 marks)
-* **Visual Layout:** 4-quadrant diagram highlighting the 4 Seoul Accord CCP characteristics.
-* **On-Slide Content:**
-  * **1. Conflicting Requirements (Autonomy vs. Correctness):**
-    * Speed demands autonomous healing without human lag ($<10\text{s}$).
-    * Safety demands zero false passes entering production. Balancing these under incomplete runtime telemetry is mathematically non-trivial.
-  * **2. No Obvious Solution (Diagnosis Under Incomplete Information):**
-    * A broken selector looks identical from the surface whether it's a cosmetic CSS rename or a breaking code change.
-    * A simple `if-else` or keyword search cannot diagnose it. Requires correlating multi-modal signals: DOM trees, asynchronous console event streams, and network response codes.
-  * **3. Ill-Defined Root Cause:**
-    * In CI pipelines, multiple commits touch the same repository in a single pull request. Isolating whether a failure stems from a flaky test, dependency conflict, infrastructure timeout, or genuine commit regression requires multi-step commit-blame tracing.
-  * **4. Significant Consequences:**
-    * An erroneous autonomous action either blocks an entire engineering department or ships silent bugs into live production.
+### Slide 5: Complex Computing Problem (Seoul Accord Characteristics)
+* **Slide Title:** **COMPLEX COMPUTING PROBLEM**
+* **Form 1 Metric:** Complex Computing Challenge (FYP1-CLO1 - 15 Marks)
+* **On-Slide Content (Mapped to Seoul Accord WP1–WP7):**
+  1. **Conflicting Requirements:** Balancing a strict 10-second automation latency budget against zero false passes slipping into production.
+  2. **No Obvious Solution:** A broken selector exhibits identical surface symptoms whether it is a harmless CSS rename or a breaking code regression; separating them requires multi-modal correlation of DOM state and asynchronous console streams.
+  3. **Ill-Defined Root Cause:** In CI pipelines, multiple commits touch the same PR; isolating whether a failure stems from a flaky test, dependency conflict, infra timeout, or code bug has no deterministic lookup formula.
+  4. **Significant Consequences:** An erroneous autonomous decision ships silent bugs into live production or blocks an entire engineering department.
 * **Speaker Script (Member 1 - 1.5 minutes):**  
-  > *"Why does TriageCore qualify as a Complex Computing Problem under the Seoul Accord? Because it satisfies four core criteria that routine CRUD development never touches. First, **Conflicting Requirements**: we must operate under a strict 10-second latency budget while guaranteeing near-zero false passes. Second, **No Obvious Solution**: a broken selector exhibits identical surface symptoms whether it is harmless or fatal; solving this requires correlating asynchronous console streams with DOM mutations. Third, **Ill-Defined Root Cause**: in CI builds, tracing failures across noisy logs to a specific commit is an open diagnostic challenge. Finally, **Significant Consequences**: an erroneous heal ships bugs to live users. This cannot be solved with an if-else statement."*
+  > *"Why does TriageCore qualify as a Complex Computing Problem under the Seoul Accord? Because it satisfies four core criteria that routine CRUD development never touches. First, **Conflicting Requirements**: we must operate under a strict 10-second latency budget while guaranteeing near-zero false passes. Second, **No Obvious Solution**: a broken selector exhibits identical surface symptoms whether it is harmless or fatal; distinguishing them requires correlating console streams with DOM mutations. Third, **Ill-Defined Root Cause**: in CI builds, tracing failures across noisy logs to a specific commit is an open diagnostic challenge. Finally, **Significant Consequences**: an erroneous heal ships bugs to live users. This cannot be solved with an if-else statement."*
 
 ---
 
-### Slide 6: Proposed Solution & System Architecture
-* **Slide Title:** **System Architecture & The Shared ConfidenceEngine Contract**
-* **Form 1 Metric:** Proposed Solution & Technical Approach (FYP1-CLO3 - 15 marks)
-* **Visual Layout:** Architectural block diagram showing the two agents converging on the centralized `ConfidenceEngine`, with the strict JSON Input/Output schema callout.
+### Slide 6: Proposed Solution & Contribution
+* **Slide Title:** **PROPOSED SOLUTION AND CONTRIBUTION**
+* **Form 1 Metric:** Proposed Solution & Technical Approach (FYP1-CLO3 - 15 Marks)
 * **On-Slide Content:**
-  * **Modular Architectural Pipeline:**
-    * **QA Agent:** Playwright Browser Runner $\rightarrow$ DOM Context Extractor $\rightarrow$ LLM Relocation $\rightarrow$ Post-Action Telemetry Listener.
-    * **CI Reliability Agent:** GitHub Actions Webhook $\rightarrow$ HMAC Verifier $\rightarrow$ Middle-Truncation $\rightarrow$ Commit-Blame Tracer.
-    * **The Brain (`ConfidenceEngine`):** Strictly typed Pydantic engine, Postgres persistence, and decoupled `weights.yaml`.
-  * **The Shared Contract:**
-    * **Input:** `{ evidence_type, source: "qa"|"ci", raw_signals: {...}, context: {...} }`
-    * **Output:** `{ classification: "flaky"|"bug"|"infra"|"dependency"|"stale_selector"|"likely_regression", confidence_score: 0-100, reasoning_trace: "...", recommended_action: "heal"|"escalate"|"auto-fix"|"flag" }`
-  * **Strict Architectural Invariant:** `classification` is diagnosis-only; `recommended_action` is derived solely by comparing `confidence_score` against empirically calibrated thresholds.
-* **Speaker Script (Member 2 - 1.5 minutes):**  
-  > *"Here is our system architecture. TriageCore is physically organized around a shared decision engine. On the QA side, Playwright executes tests and monitors the browser runtime. On the CI side, a FastAPI server receives GitHub webhooks, verifies HMAC signatures, and truncates logs. Both pipelines format their findings into a single, strictly typed JSON contract and pass it to the **ConfidenceEngine**.*  
-  > *Crucially, our architecture enforces a strict invariant: classification is purely diagnostic. The decision to heal, escalate, or open a PR belongs strictly to the recommended_action field, derived from comparing the confidence score against an auditable threshold loaded from `weights.yaml`."*
+  * **Core Tagline:** *“Never silently resolve ambiguity.”*
+  * **Main Contribution:** One shared Confidence Engine that decides, from evidence, whether to act automatically or escalate — used identically by a QA self-healing agent and a CI triage agent.
+  * **Main Modules:**
+    * Core Engine: Confidence scoring and decision logic (`src/core/engine.py`).
+    * QA Agent: Playwright browser execution and semantic relocation (`src/browser/`).
+    * CI Agent: GitHub Actions webhook ingestion and commit tracing (`src/ci/`).
+    * Persistence: PostgreSQL audit ledger and Redis async queue (`src/db/`).
+  * **How the Engine Decides (The Core Invariant):**
+    * Extracts signals $\rightarrow$ Computes weighted score from `weights.yaml` (0–100) $\rightarrow$ Outputs diagnostic-only classification $\rightarrow$ Evaluates against threshold to choose recommended action (`heal`, `escalate`, `auto-fix`, `flag`).
+    * $$\text{Classification (Diagnosis Only)} \neq \text{Recommended Action (Threshold-Derived)}$$
+* **Speaker Script (Member 2 - 1 minute):**  
+  > *"Here is our core contribution. TriageCore provides a single, shared decision brain. On the QA side, Playwright monitors test execution. On the CI side, FastAPI processes GitHub webhooks. Both pipelines pass their findings into our ConfidenceEngine. Crucially, our architecture enforces a strict invariant: classification is purely diagnostic (`stale_selector`, `likely_regression`, `flaky`, `bug`). The decision to act belongs exclusively to the recommended_action field, derived from comparing the confidence score against an auditable threshold loaded from `weights.yaml`."*
 
 ---
 
-### Slide 7: Technical Spike / Live POC Demo (Core Gate)
-* **Slide Title:** **Feasibility Proof: Pre-Milestone Technical Spike**
-* **Form 1 Metric:** POC-Lite / Feasibility Evidence (FYP1-CLO4 - 15 marks)
-* **Visual Layout:** Split screen: Left side showing the 5 POC questions answered; Right side showing live terminal / browser demonstration.
-* **On-Slide Content:**
-  * **Riskiest Assumption Tested:** Can an automated agent reliably distinguish between a safe selector repair and an action that triggers a silent client-side regression?
-  * **Test Setup:** Standalone Playwright runner + Groq (`openai/gpt-oss-20b`) evaluating [`test_page.html`](file:///home/user/Desktop/TriageCore/tests/dummy/test_page.html) across two scenarios:
-    1. **Control Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Clean execution $\rightarrow$ **`SAFE_HEAL` / `heal`** (Score: ~95% $\ge 85\%$).
-    2. **Trap Scenario:** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Triggers uncaught `ReferenceError` $\rightarrow$ **`MASKED_REGRESSION_ESCALATED` / `escalate`** (Confidence drops to 15%, below the 85% threshold).
-  * **Non-Functional Performance:** Full end-to-end relocation, execution, and triage completes in **5.5 seconds** (Target: $<10\text{s}$).
-  * **Design Impact:** Formally proved that post-action console streams must be a mandatory signal in the `ConfidenceEngine` contract.
-* **Speaker Script (Member 2 - 2 minutes LIVE DEMO):**  
-  > *(Proceed to execute the 2-minute live demo protocol described in Section 4 below).*
-
----
-
-### Slide 8: Evaluation Plan & Ground-Truth Benchmark
-* **Slide Title:** **Systematic Evaluation: 50-Case Ground-Truth Benchmark**
-* **Form 1 Metric:** Scope, Requirements & Success Criteria (FYP1-CLO2 - 10 marks)
-* **Visual Layout:** 3-part layout: Ground-Truth Dataset Composition, Evaluation Metrics, and User Acceptance Plan.
-* **On-Slide Content:**
-  * **Ground-Truth Dataset (Milestones 5.5 & 7):**
-    * 50 curated, real-world failure scenarios across public GitHub repositories:
-      * 15 Flaky tests (network delays, race conditions)
-      * 15 Genuine code regressions (logic bugs, unhandled exceptions)
-      * 10 Stale UI selectors (harmless DOM refactors)
-      * 10 Dependency breaks (version mismatches, deprecated APIs)
-  * **Empirical Threshold Calibration (ROC Analysis):**
-    * We calibrate the confidence threshold to guarantee a **False-Positive Rate strictly $< 5\%$**, maximizing true autonomous heals while preventing bad code from entering production.
-  * **Target Non-Functional Requirements (NFRs):**
-    * Engine decision latency $< 200\text{ms}$; Full QA heal cycle $< 10\text{s}$; CI triage $< 30\text{s}$; Cost $< \$0.01$ per run.
-  * **User Acceptance Testing (Milestone 8 - FYP-II):**
-    * 4-week live deployment hooked into 2–3 consenting open-source repositories to track real-world precision, MTTR reduction, and developer acceptance rate.
-* **Speaker Script (Member 1 - 1.5 minutes):**  
-  > *"How do we prove TriageCore actually works? We do not rely on subjective demonstrations. In Milestone 7, we evaluate against a curated benchmark of 50 ground-truth failure scenarios with known causes. We run ROC curve analysis to empirically derive the threshold in `weights.yaml`, mathematically bounding our false-positive rate below 5%. Our system is governed by measurable NFRs: decision latency under 200ms and triage cycles under 10 seconds. Finally, in FYP-II, we deploy the agent to 2 consenting open-source projects for a 4-week continuous trial to measure real-world developer acceptance."*
-
----
-
-### Slide 9: GenAI Disclosure, Ethics, and Risk Fallbacks
-* **Slide Title:** **Responsible AI Disclosure, Data Privacy & Risk Mitigation**
-* **Form 1 Metric:** GenAI Plan & DEI/Ethics (FYP1-CLO5 & CLO2 - 15 marks total)
-* **Visual Layout:** Two-column table: Left showing External Component Classification; Right showing Ethics & Fallbacks.
-* **On-Slide Content:**
-  * **External Dependency Disclosure (Selection Guide Section 14):**
-    * **Support (Tooling):** Playwright, FastAPI, Docker, Postgres, Redis, Tailwind CSS. *(Disclosed; standard tooling).*
-    * **Core-Assist (Permitted AI):** Groq / Google Gemini 1.5. *(Used strictly for unstructured text extraction from DOM and logs).*
-    * **Student Core Contribution (The Intellectual IP):** The `ConfidenceEngine` decision logic, `weights.yaml` signal matrix, post-action telemetry harness, and benchmark calibration. **The LLM does NOT decide actions.**
-  * **Data Privacy & Security Safeguards:**
-    * Automated regex-based **secret sanitization** before logs are sent to LLMs: redacts JWT tokens, passwords, AWS keys, and private URLs.
-    * Safety Invariant: The CI Reliability Agent is **physically prohibited from auto-merging PRs**; it may only open PRs for human review.
-  * **Engineered Fallbacks:** If LLM rate limits hit, system falls back to Groq open-source models; if middle-truncation exceeds limits, falls back to `stderr` stream extraction.
+### Slide 7: System Architecture
+* **Slide Title:** **SYSTEM ARCHITECTURE**
+* **Form 1 Metric:** Technical Approach & System Design (FYP1-CLO3 - 15 Marks)
+* **On-Slide Content:** 4-column flow:
+  1. **Ingestion & Data Sources:** Playwright Browser Runner (DOM, Console) & FastAPI Webhook Server (Build logs, Git).
+  2. **Async Orchestration & Persistence:** Redis Queue Service (decouples telemetry, prevents webhook timeouts) & PostgreSQL DAO (immutable audit ledger of all decisions).
+  3. **Central Decision Engine (Hero Component):**
+     * LLM Fact Extraction (converts messy HTML/logs into structured boolean facts).
+     * Deterministic ConfidenceEngine (calculates 0–100 score using `weights.yaml` factors).
+     * Domain-Calibrated Weights (QA/CI profiles).
+  4. **Remediation Zone:**
+     * Threshold Gate (85% Safety Score).
+     * High Confidence: QA Auto-Heal Selector / CI Draft Fix PR.
+     * Human Review Gate: PR approval required before merge; autonomous merging strictly forbidden.
+     * Low Confidence / Regression Detected: Block automation and escalate to engineer.
 * **Speaker Script (Member 3 - 1.5 minutes):**  
-  > *"We have strictly classified our external components under university guidelines. Playwright and FastAPI provide support tooling. Groq and Gemini serve as core-assist components for reading unstructured logs and HTML strings. What cannot be generated—and what constitutes our student engineering contribution—is the central ConfidenceEngine, the mathematical weighting logic, and the empirical calibration benchmark. The LLM does not make the final decision; our engine does. Furthermore, to protect proprietary code, our CI gateway sanitizes all secrets and tokens before transmission, and our agent is strictly sandboxed: it can open a pull request, but is architecturally blocked from ever auto-merging."*
+  > *"Looking at our architecture from left to right: data enters from two sources: browser tests running in Playwright, and build logs from GitHub webhooks. We queue these in Redis to keep webhooks responsive, and store every decision in PostgreSQL for auditability. At the center is our core hero component: the LLM only translates messy strings into structured facts. Once facts are extracted, our deterministic ConfidenceEngine calculates a score from 0 to 100 based on `weights.yaml`. If the score is 85% or above with clean execution, we auto-heal the selector or draft a PR. If it is below 85% or an error occurs, we block everything and escalate to a human with a complete reasoning trace."*
 
 ---
 
-### Slide 10: Traceable Ownership & FYP-1/FYP-2 Roadmap
-* **Slide Title:** **Individual Technical Ownership & Milestone Roadmap**
-* **Form 1 Metric:** Work Division & Iteration Plan (FYP1-CLO2 - 5 marks)
-* **Visual Layout:** 3-member responsibility matrix mapped directly to the milestone schedule.
+### Slide 8: POC-Lite / Feasibility & Live Demo
+* **Slide Title:** **POC-LITE / FEASIBILITY**
+* **Form 1 Metric:** POC-Lite / Feasibility Evidence (FYP1-CLO4 - 15 Marks)
+* **On-Slide Content:**
+  * **Riskiest Assumption Tested:** Can an automated system tell apart a safe selector repair from one that hides a broken JavaScript click handler?
+  * **Test Setup & Results:** Standalone Playwright runner + Groq (`gpt-oss-20b`) evaluating an authentic 3-step e-commerce checkout journey (`shopflow_app.html`):
+    * **Step 1 (Add to Cart):** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Clean execution $\rightarrow$ **`stale_selector` | Confidence: 96% $\rightarrow$ `heal`**.
+    * **Step 2 (Apply Coupon):** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Clean execution $\rightarrow$ **`stale_selector` | Confidence: 94% $\rightarrow$ `heal`**.
+    * **Step 3 (Payment - The Trap):** Selector renamed $\rightarrow$ Relocated $\rightarrow$ Uncaught `ReferenceError` logged $\rightarrow$ **`likely_regression` | Confidence: 15% $\rightarrow$ `escalate`**.
+  * **Non-Functional Performance:** Full end-to-end relocation, execution, and triage completes in **5.5 seconds** (Target: $<10\text{s}$).
+* **Speaker Script (Member 2 - 2 minutes LIVE DEMO):**  
+  > *(Switch to live browser demo at `http://localhost:5173` following Section 3 protocol).*
+
+---
+
+### Slide 9: Systematic Evaluation Plan & GenAI Boundaries
+* **Slide Title:** **EVALUATION PLAN AND RISKS**
+* **Form 1 Metric:** Scope, Evaluation & Responsible GenAI (FYP1-CLO2 & CLO5 - 20 Marks)
+* **On-Slide Content:**
+  * **50-Case Ground-Truth Benchmark Suite:**
+    * 15 Flaky tests (network delays, race conditions)
+    * 15 Genuine regressions (logic bugs, unhandled exceptions)
+    * 10 Stale UI selectors (harmless CSS refactors)
+    * 10 Dependency breaks (version mismatches)
+  * **Empirical Threshold Calibration (ROC Analysis):** Mathematically tunes `weights.yaml` thresholds to bound **False-Positive Rate strictly $< 5\%$**.
+  * **Target Non-Functional Requirements (NFRs):** Decision latency $< 200\text{ms}$; QA heal cycle $< 10\text{s}$; CI triage $< 30\text{s}$; Cost $< \$0.01$ per run.
+  * **4-Week Live Trial (FYP-2):** Deployed across 2–3 active open-source GitHub repositories to measure developer acceptance.
+  * **Tool / API / GenAI Disclosure (Section 14 of FAST Guide):**
+    * *Support Tooling:* Playwright, FastAPI, Docker, Postgres, Redis.
+    * *Core-Assist AI:* Groq / Gemini (strictly parses unstructured text).
+    * *Student Core IP:* `ConfidenceEngine`, `weights.yaml` signal matrix, post-action telemetry harness, and benchmark calibration. **The LLM does NOT make healing decisions.**
+* **Speaker Script (Member 1 - 1.5 minutes):**  
+  > *"How do we prove TriageCore scientifically? We evaluate against a curated benchmark of 50 ground-truth failure scenarios harvested from real repositories. We run ROC curve analysis to empirically derive our thresholds, guaranteeing our false-positive rate stays below 5%. Our system is governed by strict NFRs: decision latency under 200ms and triage cycles under 10 seconds. Finally, we disclose our AI boundary: the LLM only translates messy strings into facts; our deterministic engine makes the decisions, and the system is architecturally blocked from auto-merging."*
+
+---
+
+### Slide 10: Work Division & Milestone Roadmap
+* **Slide Title:** **WORK DIVISION AND ITERATION (TENTATIVE PLAN)**
+* **Form 1 Metric:** Work Division & Iteration Plan (FYP1-CLO2 - 5 Marks)
 * **On-Slide Content:**
   * **Traceable Individual Technical Ownership:**
-    * **Member 1 (Brain & Benchmark):** `ConfidenceEngine` implementation (`src/core/`), mathematical weighting formulation in `weights.yaml`, 50-case benchmark pipeline (`tests/benchmark.py`), threshold calibration script (`calibrate_thresholds.py`).
-    * **Member 2 (Browser & QA Agent):** Playwright execution runner (`src/browser/`), DOM tree context extraction, LangGraph QA state machine (`qa_agent.py`), post-action console error listeners.
-    * **Member 3 (CI Integration & PR Automation):** FastAPI webhook gateway with HMAC verification, token-aware log truncation (`src/ci/`), CI reliability agent (`ci_agent.py`), PR generator, and monitoring dashboard.
-  * **Semester Milestone Trajectory:**
-    * **FYP-1 Mid:** Milestones 1 & 2 complete (Engine + Browser execution layer integrated).
-    * **FYP-1 Final:** Milestones 3, 4, 5, 5.5 complete (Both agents functional + containerized cloud deployment).
-    * **FYP-2 Mid:** Milestone 6 complete (Auto-fix PRs + live repo integration).
-    * **FYP-2 Final:** Milestones 7 & 8 complete (50-case benchmark evaluated + 4-week user acceptance completed).
+    * **Taimoor Ahmed (Core Engine & Benchmarking):** Central `ConfidenceEngine` logic (`src/core/`), mathematical weighting formulation in `weights.yaml`, 50-case benchmark pipeline, and ROC calibration scripts.
+    * **Abdul Mohaimin (Browser Execution & QA Agent):** Playwright execution runner (`src/browser/`), DOM tree context extraction, post-action telemetry observers, and LangGraph QA state machine.
+    * **Shazil Rehman (CI Integration & Reliability Agent):** FastAPI webhook gateway with HMAC verification, token-aware log truncation (`src/ci/`), CI git-blame tracer, and PR automation.
+  * **Roadmap Trajectory:**
+    * *FYP-1 Baseline (M1 to M5.5):* Core Engine, Browser layer, CI webhook gateway, and cloud container deployment. *(Pre-FYP POC already complete).*
+    * *FYP-2 Evaluation (M6 to M8):* Auto-fix PR automation, 50-case benchmark calibration, and 4-week open-source acceptance trial.
 * **Speaker Script (Member 3 - 1 minute):**  
-  > *"Finally, our work breakdown is strictly divided into three distinct, non-overlapping technical modules. Member 1 owns the central scoring engine and empirical benchmark. Member 2 owns the Playwright automation execution layer and the QA self-healing agent. Member 3 owns the GitHub webhook infrastructure, log truncation, and the CI reliability agent. None of us is restricted to frontend work; all three have core backend and systems responsibilities. We have completed our Pre-Milestone feasibility spike, and we are on schedule to deliver our integrated baseline by FYP-1 Final. Thank you, and we look forward to your questions."*
+  > *"Our work breakdown satisfies university guidelines: all three members own distinct backend systems modules. Taimoor owns the scoring engine and benchmark calibration; Abdul Mohaimin owns browser automation and the QA agent; and Shazil owns the CI webhook infrastructure and PR generator. In FYP-1, we deliver the complete working cloud baseline. In FYP-2, we scale to auto-fix PRs, benchmark calibration, and our 4-week live open-source trial."*
 
 ---
 
-## 4. Live Demo Execution Protocol (2 Minutes)
+### Slide 11: Ethics, Legal Compliance & AI Governance
+* **Slide Title:** **ETHICS, LEGAL COMPLIANCE & AI GOVERNANCE**
+* **Form 1 Metric:** DEI, Ethical & Legal Compliance (FYP1-CLO2 - 5 Marks)
+* **On-Slide Content:**
+  * **Diversity, Equity & Inclusion:** Lowers onboarding friction and eliminates gatekept maintenance toil for junior engineers and open-source contributors.
+  * **Human-in-the-Loop AI Governance:**
+    * The system is architecturally prohibited from auto-merging pull requests.
+    * Every decision is permanently logged with an auditable reasoning trace for compliance.
+  * **Data Security & API Compliance:**
+    * All GitHub API use complies strictly with Terms of Service.
+    * Webhook payloads are verified via HMAC SHA-256 signatures before processing.
+    * Automated regex **secret sanitization** redacts JWTs, passwords, and private API keys before sending context to LLMs.
+    * No personal data (PII) is stored — only code diffs and diagnostic test logs.
+* **Speaker Script (Member 3 - 1 minute):**  
+  > *"On ethics and compliance: first, TriageCore lowers the barrier of entry for junior engineers by automating repetitive maintenance toil. Second, we enforce strict human-in-the-loop governance: the system is physically sandboxed from ever auto-merging a PR, and every decision stores a complete reasoning trace. Finally, our CI gateway verifies HMAC signatures on all webhooks and automatically sanitizes secrets, tokens, and credentials from logs before external LLM processing."*
 
-Execute this during **Slide 7**. Follow this exact sequence:
+---
 
-1. **Pre-Demo State Check (Before Entering the Room):**
-   * Ensure Terminal 1 is running: `python3 -m uvicorn poc_api.main:app --port 8000`
-   * Ensure Terminal 2 is running: `cd frontend && npm run dev`
-   * Have browser open to `http://localhost:5173` on View 1: `Live Test & Triage` (Tab 1: Web App Testing - QA Agent).
-   * Have a 3rd terminal tab open in root directory ready to run: `python3 demo_trap.py` (as a foolproof backup).
+### Slide 12: Academic References
+* **Slide Title:** **REFERENCES**
+* **Form 1 Metric:** Literature Grounding (FYP1-CLO1)
+* **On-Slide Content:**
+  * Biswas, S. (2026). Enhancing end-to-end test stability through AI-assisted self-healing. *IJSER*, 14, 1-12.
+  * Lin, S., Liu, R. Z. H., & Tahvildari, L. (2024). FlaKat: A machine learning-based categorization framework for flaky tests. *arXiv:2403.01003*.
+  * Gruber, M., & Fraser, G. (2023). Debugging flaky tests using spectrum-based fault localization. *arXiv:2305.04735*.
+  * Joseph, R. N. (2026). Beyond LLM-based test automation: Zero-cost self-healing via DOM accessibility trees. *arXiv:2603.20358*.
+* **Speaker Script (Member 1 - 15 seconds):**  
+  > *"Our technical architecture directly builds upon peer-reviewed empirical research in test stability, automated fault localization, and flaky test categorization from IEEE, ACM, and top software engineering venues."*
+
+---
+
+### Slide 13: Conclusion, Demo Invitation & Q&A
+* **Slide Title:** **THANK YOU — ANY QUESTIONS?**
+* **Form 1 Metric:** Presentation Quality & Q&A Defense (FYP1-CLO6 - 20 Marks)
+* **On-Slide Content:**
+  * Project Repository & Live Prototype Link: `http://localhost:5173`
+  * Team Contact Emails & Roll Numbers
+* **Speaker Script (Member 1 - 30 seconds):**  
+  > *"In conclusion: TriageCore replaces blind AI self-healing with an auditable, confidence-gated decision engine that validates post-action runtime execution. We ensure that automated pipelines fix what is safe, escalate what is dangerous, and never silently mask regressions.*  
+  > *Our live prototype is running, and we welcome questions and guidance from the respected panel."*
+
+---
+
+## 3. Live Demo Execution Protocol (2 Minutes)
+
+Execute this during **Slide 8**. Follow this exact sequence:
+
+1. **Pre-Demo State Check (Before Entering the Defense Room):**
+   * Terminal 1 running: `python3 -m uvicorn poc_api.main:app --host 0.0.0.0 --port 8000`
+   * Terminal 2 running: `cd frontend && npm run dev`
+   * Browser open to `http://localhost:5173` on View 1: `Live Test & Triage` (Tab 1: Web App Testing).
+   * Foolproof CLI backup ready in Terminal 3: `python3 demo_trap.py`.
 2. **On-Screen Live Run (60 seconds):**
-   * Point to the UI: *"Respected panel, here is our live technical spike running on an authentic e-commerce web application — ShopFlow Storefront. Rather than testing a trivial single button, our Playwright suite executes a realistic 3-step user checkout journey: Add to Cart, Apply Coupon, and Process Payment."*
-   * Click the **"Run Test"** button.
-   * Narrate while the stepper progresses:  
-     *"In real time, our backend launches Playwright, encounters stale selectors across the user journey, relocates them, and executes each action while recording console telemetry."*
-   * Point to the result banner and triage breakdown:  
-     *"Look at the outcome: Steps 1 & 2 (Cart and Coupon) were safely healed with 96% and 94% confidence because DOM state progressed with zero console errors. But on Step 3 (Payment), the developer introduced a bug. Confidence plunged to 15%. Classification: `likely_regression`. Recommended Action: `escalate`."*
-3. **Open the Breakdown & Telemetry (30 seconds):**
+   * Point to the UI: *"Respected panel, here is our live technical spike running on an authentic e-commerce web application — ShopFlow Storefront. Our Playwright suite executes a realistic 3-step user checkout journey: Add to Cart, Apply Coupon, and Process Payment."*
+   * Click **"Run Playwright Test & Triage"**.
+   * Narrate in real-time:  
+     *"In real time, our backend launches Chromium, encounters stale selectors across the journey, relocates them, and executes each action while recording console telemetry."*
+   * Point to the result banner:  
+     *"Steps 1 & 2 (Cart and Coupon) were safely healed with 96% and 94% confidence because DOM state progressed with zero console errors. But on Step 3 (Payment), the developer introduced a bug. Confidence plunged to 15%. Classification: `likely_regression`. Recommended Action: `escalate`."*
+3. **Open the Telemetry Drawer (30 seconds):**
    * Expand Step 3 or open the **Evidence Drawer**:
    * Point to the raw console error:  
-     *"Here is the critical distinction: a naive self-healing tool would click the relocated button, report all-green, and deploy a broken checkout to production. TriageCore captured the uncaught `ReferenceError: processPayment is not defined`, blocked the heal, and preserved pipeline safety."*
-   * Click **Tab 2: CI Build Triage (CI Agent)**:  
+     *"A naive self-healing tool would report all-green and deploy a broken checkout to production. TriageCore captured the uncaught `ReferenceError: processPayment is not defined`, blocked the heal, and preserved pipeline safety."*
+   * Briefly toggle to **Tab 2: CI Build Triage**:  
      *"On the CI side, the same decision engine classifies raw build logs, dispatches automated retries for flaky timeouts, and flags ambiguous commits to block bad automated PR merges."*
-4. **Transition back to Slide 8:**  
-   *"This live spike proves that our core hypothesis works in an end-to-end user journey. Now, let me explain how we benchmark this across our 50-case baseline benchmark suite."*
+4. **Transition to Slide 9:**  
+   *"This live spike proves that our core hypothesis works. Now let me explain how we benchmark this across our 50-case baseline benchmark suite."*
 
 ---
 
-## 5. Slide Delivery & Body Language Tips for FAST Panels
+## 4. Panel Q&A Battlecard: Bulletproof Answers to Grilling
 
-1. **Own the Niche with Pride:** Never apologize for focusing on selector regressions and CI triage. Remind the panel that this is the exact multi-billion dollar bottleneck preventing autonomous software delivery in top tech companies.
-2. **Never Read from Slides:** Keep your slide bullet points concise (under 8 words per bullet). Speak to the panel, maintain eye contact, and let the slide be visual evidence.
-3. **Handle Interruptions Calmly:** If a professor interrupts during Slide 4 or 5 and asks: *"Is this just an LLM wrapper?"*, don't get flustered. Smile and say:  
-   > *"That is an excellent question, sir/ma'am. We address that directly on Slide 9 with our external component classification, but to answer immediately: the LLM only parses unstructured strings; our student contribution is the mathematical ConfidenceEngine, the post-action verification loop, and the 50-case benchmark."*
-4. **Equal Speaking Distribution:** Make sure all 3 members speak during the presentation. Evaluators deduct marks under Form 1 if one student dominates the entire defense.
+Prepare these exact answers for the top questions FAST faculty ask:
+
+### Q1: *"Is TriageCore just an LLM wrapper? Where is your actual computer science contribution?"*
+> **Answer:**  
+> *"No, sir/ma'am. The LLM is only an auxiliary parser used for unstructured text extraction from HTML role trees and raw stack traces. The intellectual property and computer science contribution of our team lies in three areas:  
+> 1. The centralized **`ConfidenceEngine`**, which implements deterministic weighted multi-factor scoring based on software invariants.  
+> 2. The **runtime telemetry harness**, which monitors asynchronous browser console errors and DOM mutation observers to detect masked regressions.  
+> 3. The **empirical ROC benchmark suite**, which calibrates decision thresholds against 50 ground-truth scenarios to mathematically guarantee $< 5\%$ false-positive rates. The LLM never makes the heal or escalate decision."*
+
+### Q2: *"On Slide 7 you show weights. Did you train a neural network or machine learning model for this?"*
+> **Answer:**  
+> *"No, sir. We explicitly chose not to use a black-box deep learning model for the decision layer because CI/CD pipelines require total determinism and auditability. The weights in `weights.yaml` are domain-specific heuristic weights representing signal reliability (e.g. presence of an uncaught console error carries heavy negative weight). In Milestone 7, we calibrate these weights using Receiver Operating Characteristic (ROC) curve analysis against our 50 ground-truth failure scenarios."*
+
+### Q3: *"What happens if your LLM hallucinates or times out?"*
+> **Answer:**  
+> *"We have engineered strict fail-safe fallbacks:  
+> 1. If the primary LLM (Gemini) times out or hits a rate limit, our orchestration automatically fails over to Groq.  
+> 2. If semantic relocation fails or returns an invalid selector, the system falls back to strict CSS selectors without AI healing.  
+> 3. If any failure signal is ambiguous, the engine's confidence score automatically drops below the threshold, safely defaulting to **`escalate`** so a human engineer is alerted. Our system is designed to fail-safe, never fail-blind."*
+
+### Q4: *"How is test flakiness and selector repair a Complex Computing Problem (CCP) under Seoul Accord?"*
+> **Answer:**  
+> *"Because it satisfies the four core Seoul Accord characteristics (WP1 through WP7):  
+> 1. **Conflicting Requirements:** Balancing a strict 10-second automation latency budget against zero false passes slipping into production.  
+> 2. **No Obvious Solution:** A broken selector looks identical from the surface whether it is a cosmetic rename or a breaking code regression; distinguishing them requires multi-modal correlation of DOM state and console streams.  
+> 3. **Ill-Defined Root Cause:** Tracing a CI failure across noisy, multi-commit PR logs has no deterministic lookup algorithm.  
+> 4. **Significant Consequences:** An erroneous autonomous decision ships silent regressions to production or blocks an entire engineering department."*
+
+### Q5: *"Why did you combine QA test healing and CI build triage into one project instead of picking one?"*
+> **Answer:**  
+> *"Because fundamentally, QA UI test breaks and CI build failures are the exact same mathematical decision problem: given noisy, incomplete runtime evidence, can an autonomous system act safely, or must it escalate to a human? By building a shared `ConfidenceEngine`, we eliminate redundant decision logic across DevOps pipelines, proving that a unified confidence scoring architecture can govern both browser runtime testing and build-server triage."*
 
 ---
 
-### Summary Checklist Before Defense
-- [x] Review this guide with your teammates.
-- [x] Run `python3 demo_trap.py` once in terminal to verify Groq API connection and latency.
-- [x] Verify `http://localhost:5173` loads properly on your presentation laptop.
-- [x] Rehearse the 12-minute pitch once with a stopwatch.
+## 5. Slide Delivery & Pacing Tips for FAST Panels
+
+1. **Own the Niche with Pride:** Remind the panel that test flakiness and masked regressions represent a multi-billion dollar bottleneck preventing autonomous software delivery.
+2. **Never Read Directly from Slides:** Keep your slide bullets brief. Look at the professors, speak calmly, and use the slides as visual evidence.
+3. **Equal Speaking Distribution:** Ensure all three members speak during the presentation. Panel evaluators deduct marks under Form 1 if one member dominates the defense.
+4. **Calm Demeanor During Interruptions:** If interrupted with skepticism, smile, thank the professor for the question, and provide the concise answer from your Q&A battlecard.

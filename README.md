@@ -156,6 +156,6 @@ To execute the POC directly from the terminal without the frontend:
 
 - **`AGENTS.md`**: Global architecture, strict schemas, and shared contracts.
 - **`MILESTONES.md`**: Milestone dependency graph (M1 through M8), Definition of Done, and AI Usage Log.
-- **`docs/PROJECT_EXPLAINER_AND_DEFENSE_GUIDE.md`**: First-principles explainer, CCP criteria, and panel Q&A defense guide.
-- **`docs/PROPOSAL_DEFENSE_PRESENTATION_GUIDE.md`**: 10-slide presentation blueprint and 2-minute live demo protocol.
+- **`docs/PROJECT_EXPLAINER_AND_DEFENSE_GUIDE.md`**: First-principles explainer, CCP criteria, and 5-minute elevator pitch.
+- **`docs/PROPOSAL_DEFENSE_PRESENTATION_GUIDE.md`**: Authoritative 13-slide presentation blueprint, FAST Form 1 (100 Marks) rubric mapping, 2-minute live demo protocol, and panel Q&A battlecard.
 - **`docs/TROUBLESHOOTING.md`**: Port conflicts, Playwright setup, and Vite debugging tips.
