@@ -29,3 +29,9 @@ test-results/
 
 # Logs
 *.log
+
+# Local tooling / report drafts (kept out of the code history)
+.claude/worktrees/
+.ruff_cache/
+F26_FYP1_Mid_Report_LaTeX_Complete/
+relevant_papers/
