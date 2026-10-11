@@ -1,0 +1,99 @@
+# TriageCore ConfidenceEngine weights
+# ===================================
+# EVERY number in this file is authored by a human (AGENTS.md / project-constraints.md).
+# `null` = not yet filled in. The engine refuses to start until every value is filled.
+# Check progress with:   .venv/bin/python -m src.core.weights
+#
+# Rules the loader enforces:
+#   - probabilities lie strictly between 0 and 1 (never exactly 0 or 1: no evidence is ever certain)
+#   - priors sum to 1; each likelihood row (one cause, across that group's states) sums to 1
+#   - a row may be the word `uninformative` if that evidence says nothing about that cause
+#   - costs are non-negative numbers on any consistent scale (e.g. engineer-minutes)
+# Record the reason behind each number in docs/contracts/weights_elicitation.md.
+
+qa:
+  # Possible causes of a broken test step (must be values of the contract's classification enum).
+  hypotheses: [stale_selector, likely_regression, flaky]
+
+  # P(cause) BEFORE looking at any evidence: out of 100 broken steps, how many are each cause?
+  priors:
+    stale_selector: null      # harmless UI change: element renamed/moved, app still works
+    likely_regression: null   # real bug: the app itself is broken
+    flaky: null               # timing: element was just slow to appear
+
+  # Evidence groups. For each cause: "if this cause were true, how often would we see each state?"
+  groups:
+    runtime_failure:
+      # How many of {uncaught page error, error banner shown, failed network request} fired after the click.
+      states: ["0", "1", "2+"]
+      likelihoods:
+        stale_selector:    {"0": null, "1": null, "2+": null}
+        likely_regression: {"0": null, "1": null, "2+": null}
+        flaky:             {"0": null, "1": null, "2+": null}
+
+    state_progression:
+      # Did the step's expected result (e.g. "cart shows 1 item") appear after the click?
+      states: [reached, not_reached]
+      likelihoods:
+        stale_selector:    {reached: null, not_reached: null}
+        likely_regression: {reached: null, not_reached: null}
+        flaky:             {reached: null, not_reached: null}
+
+    console_noise:
+      # Any console.error messages after the click? Third-party scripts often log harmless errors,
+      # so this should usually differ only weakly between causes.
+      states: [present, absent]
+      likelihoods:
+        stale_selector:    {present: null, absent: null}
+        likely_regression: {present: null, absent: null}
+        flaky:             {present: null, absent: null}
+
+    action_outcome:
+      # Did the click itself execute without a Playwright error?
+      states: [succeeded, failed]
+      likelihoods:
+        stale_selector:    {succeeded: null, failed: null}
+        likely_regression: {succeeded: null, failed: null}
+        flaky:             {succeeded: null, failed: null}
+
+    timing:
+      # Before relocating, the ORIGINAL selector is re-tried with backoff. Did it appear after all?
+      states: [resolved_after_wait, not_resolved]
+      likelihoods:
+        stale_selector:    {resolved_after_wait: null, not_resolved: null}
+        likely_regression: {resolved_after_wait: null, not_resolved: null}
+        flaky:             {resolved_after_wait: null, not_resolved: null}
+
+  # Autonomous actions and the causes under which each is the RIGHT thing to do.
+  # (`escalate` = hand to a human; always available, so it is not listed here.)
+  actions:
+    heal: [stale_selector]    # apply the relocated selector and continue
+    flag: [flaky]             # keep the original selector, report the step as flaky
+
+ci:
+  # Iteration 2 (Milestones 4-5): causes flaky / dependency / bug / infra.
+  # Disabled until its likelihood tables are authored; evaluating CI evidence raises an error.
+  enabled: false
+
+thresholds:
+  qa:
+    # If the evidence is improbable under EVERY cause (per-group fit below this), the engine
+    # escalates as "unrecognised pattern" instead of forcing the nearest label. (0-1, e.g. small)
+    unknown_pattern_floor: null
+
+    # Cost of each action under each true cause, per risk tier of the step.
+    # Typical shape: a correct action costs 0; healing a real regression (masking a bug) is the
+    # most expensive mistake; escalating a harmless change costs some engineer time.
+    loss:
+      low:     # reversible step, e.g. add to cart
+        heal:     {stale_selector: null, likely_regression: null, flaky: null}
+        flag:     {stale_selector: null, likely_regression: null, flaky: null}
+        escalate: {stale_selector: null, likely_regression: null, flaky: null}
+      medium:  # e.g. apply coupon, form submission
+        heal:     {stale_selector: null, likely_regression: null, flaky: null}
+        flag:     {stale_selector: null, likely_regression: null, flaky: null}
+        escalate: {stale_selector: null, likely_regression: null, flaky: null}
+      high:    # irreversible step, e.g. payment
+        heal:     {stale_selector: null, likely_regression: null, flaky: null}
+        flag:     {stale_selector: null, likely_regression: null, flaky: null}
+        escalate: {stale_selector: null, likely_regression: null, flaky: null}
