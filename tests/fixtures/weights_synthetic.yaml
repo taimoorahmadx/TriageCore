@@ -1,0 +1,83 @@
+# SYNTHETIC TEST VALUES - NOT THE PROJECT'S WEIGHTS.
+# Chosen only so the engine's arithmetic can be checked by hand in tests/test_engine.py.
+# The real, human-authored numbers live in src/core/weights.yaml.
+
+qa:
+  hypotheses: [stale_selector, likely_regression, flaky]
+  priors: {stale_selector: 0.6, likely_regression: 0.3, flaky: 0.1}
+  groups:
+    runtime_failure:
+      states: ["0", "1", "2+"]
+      likelihoods:
+        stale_selector:    {"0": 0.90, "1": 0.08, "2+": 0.02}
+        likely_regression: {"0": 0.20, "1": 0.30, "2+": 0.50}
+        flaky:             {"0": 0.85, "1": 0.10, "2+": 0.05}
+    state_progression:
+      states: [reached, not_reached]
+      likelihoods:
+        stale_selector:    {reached: 0.9, not_reached: 0.1}
+        likely_regression: {reached: 0.2, not_reached: 0.8}
+        flaky:             {reached: 0.5, not_reached: 0.5}
+    console_noise:
+      states: [present, absent]
+      likelihoods:
+        stale_selector:    {present: 0.2, absent: 0.8}
+        likely_regression: {present: 0.6, absent: 0.4}
+        flaky:             uninformative
+    action_outcome:
+      states: [succeeded, failed]
+      likelihoods:
+        stale_selector:    {succeeded: 0.95, failed: 0.05}
+        likely_regression: {succeeded: 0.70, failed: 0.30}
+        flaky:             {succeeded: 0.90, failed: 0.10}
+    timing:
+      states: [resolved_after_wait, not_resolved]
+      likelihoods:
+        stale_selector:    {resolved_after_wait: 0.02, not_resolved: 0.98}
+        likely_regression: {resolved_after_wait: 0.02, not_resolved: 0.98}
+        flaky:             {resolved_after_wait: 0.90, not_resolved: 0.10}
+  actions:
+    heal: [stale_selector]
+    flag: [flaky]
+
+ci:
+  hypotheses: [flaky, dependency, bug, infra]
+  priors: {flaky: 0.4, dependency: 0.2, bug: 0.3, infra: 0.1}
+  groups:
+    log_signature:
+      states: [timeout, import_error, assertion, none]
+      likelihoods:
+        flaky:      {timeout: 0.50, import_error: 0.05, assertion: 0.35, none: 0.10}
+        dependency: {timeout: 0.05, import_error: 0.80, assertion: 0.10, none: 0.05}
+        bug:        {timeout: 0.05, import_error: 0.01, assertion: 0.89, none: 0.05}
+        infra:      {timeout: 0.70, import_error: 0.05, assertion: 0.05, none: 0.20}
+    rerun:
+      states: [passed, failed]
+      likelihoods:
+        flaky:      {passed: 0.80, failed: 0.20}
+        dependency: {passed: 0.05, failed: 0.95}
+        bug:        {passed: 0.05, failed: 0.95}
+        infra:      {passed: 0.40, failed: 0.60}
+  actions:
+    auto-fix: [dependency]
+    flag: [flaky]
+
+thresholds:
+  qa:
+    unknown_pattern_floor: 0.05
+    loss:
+      low:
+        heal:     {stale_selector: 0, likely_regression: 10, flaky: 3}
+        flag:     {stale_selector: 2, likely_regression: 10, flaky: 0}
+        escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
+      high:
+        heal:     {stale_selector: 0, likely_regression: 100, flaky: 3}
+        flag:     {stale_selector: 2, likely_regression: 100, flaky: 0}
+        escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
+  ci:
+    unknown_pattern_floor: 0.05
+    loss:
+      default:
+        auto-fix: {flaky: 3, dependency: 0, bug: 20, infra: 5}
+        flag:     {flaky: 0, dependency: 5, bug: 20, infra: 2}
+        escalate: {flaky: 1, dependency: 1, bug: 0, infra: 0}
