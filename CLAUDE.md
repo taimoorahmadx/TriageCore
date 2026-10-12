@@ -10,22 +10,26 @@ Agent contracts and standing rules (follow them; they override defaults):
 - Never run `git commit` or `git push`. Print the exact commands for the user to run instead.
 - Branches: `feature/...`, `bugfix/...`, `chore/...`. Commits: Conventional Commits with optional scope (`feat(poc):`, `fix(frontend):`, `docs:`).
 
-## Running things (always from repo root — `poc_api` imports `poc_recovery` via sys.path)
-- API: `python3 -m uvicorn poc_api.main:app --port 8000` (free the port with `fuser -k 8000/tcp`)
-- UI: `cd frontend && npm run dev` → http://localhost:5173 (API URL `http://localhost:8000` is hardcoded in components). Lint: `npm run lint` (oxlint, not ESLint).
-- PoC CLI: `python3 poc_recovery.py [suite|control|trap]` opens a **headed** browser by default. For non-interactive checks use `POST /api/poc/run` `{"scenario": "suite"}`, which runs headless.
-- Python lint: `ruff check <changed files>` (config in pyproject.toml; existing code has pre-existing findings, so lint only what you touched).
-- There are no tests yet (`tests/` only holds HTML fixtures). Verify with `npm run build`, lint, and a PoC run — see `/verify`.
+## Running things (always from repo root, with `.venv/bin/python`)
+- API: `.venv/bin/python -m uvicorn poc_api.main:app --port 8000` (free the port with `fuser -k 8000/tcp`). Real QA routes live in `src/api/qa_routes.py`.
+- UI: `cd frontend && npm run dev` → http://localhost:5173 (the API's CORS allows only 5173/3000/8000). Lint: `npm run lint` (oxlint, not ESLint).
+- QA pipeline CLI: `.venv/bin/python -m src.agents.qa_pipeline [scenario_id ...]`; evaluation: `.venv/bin/python -m src.eval.evaluate` (writes `results/`).
+- Weights: `.venv/bin/python -m src.core.weights` (validate), `.venv/bin/python -m src.core.sensitivity` (what decisions depend on).
+- Tests: `.venv/bin/python -m pytest` (~2 min; browser tests launch headless Chromium). Python lint: `.venv/bin/ruff check <changed files>` (pre-existing findings elsewhere, so lint only what you touched).
+
+## Architecture (QA, Iteration 1)
+`tests/scenarios/qa_scenarios.yaml` (ground truth) → `src/agents/qa_pipeline.py` → `src/browser/runner.py` (collects `raw_signals` per `docs/contracts/raw_signals.md`; Groq relocation in `relocator.py`) → `src/core/engine.py` (semi-naive Bayes in `evidence.py` + min-expected-loss in `decision.py`; ADR 004).
+- The engine is pure (no I/O beyond `weights.yaml`). Every number in `src/core/weights.yaml` is human-authored. Never edit those values; changes go through the user and `docs/contracts/weights_elicitation.md`.
+- Tests use `tests/fixtures/weights_synthetic.yaml` (synthetic) and `FixedRelocator`/`KnownRenames` stand-ins. Never use a stand-in relocator in the real pipeline (that was the PoC's hidden hardcoded fallback).
+- `ci:` in weights.yaml is disabled until Iteration 2.
 
 ## What's real vs scripted (don't misrepresent this)
-- Real: Playwright runs against local HTML; Groq LLM is actually called (`openai/gpt-oss-20b` via a `curl` subprocess, needs `GROQ_API_KEY`).
-- Scripted for the demo: suite step 3 is forced to escalate and scores are overwritten (94/96 heal, 15 escalate); `run_scenario` clamps scores; `/api/ci/triage` returns hardcoded responses; Triage History is a JS constant (no Postgres); the 50-case benchmark (96% / 0.0% FPR) is a static array in `BenchmarkScreen.jsx`.
-- Keep this scripted behavior unless asked to change it, but never describe it as live, measured, or "proven" in code comments, docs, or answers.
-- `src/` is mostly scaffold: only `src/core/models.py` has code. No `engine.py` / `weights.yaml` exists yet.
-- Known contract drift vs AGENTS.md: `poc_api` allows `recommended_action="rerun"` and legacy classifications (`SAFE_HEAL`, `MASKED_REGRESSION_ESCALATED`). Flag it, don't silently propagate it.
+- Real: the QA Engine and Evaluation screens, `/api/qa/*`, the engine, the browser collector, and the evaluation.
+- Scripted (legacy, labelled "Proposal PoC (scripted)" in the UI): `poc_recovery.py`, `/api/poc/run`, `/api/ci/triage`, `PipelineSimulator.jsx`, `ReliabilityDashboard.jsx`, and `BenchmarkScreen.jsx` (hardcoded 50-case/96%/0% FPR, never measured). Never cite them as results.
+- Known contract drift: `poc_api` allows `recommended_action="rerun"` (not in the enum). The CI `rerun` question is open for M5 (ADR 004).
 
 ## Conventions
-- New LLM work targets **Groq**, not Gemini (ADR 002 is outdated on this; Gemini/Postgres/Redis/GitHub env vars are unused by current code).
+- New LLM work targets **Groq**, not Gemini (ADR 003). Postgres/Redis/GitHub env vars are unused by current code.
 - HTML targets in `tests/dummy/` are duplicated in `frontend/public/` — edit both copies.
 - After non-trivial changes, add a `MILESTONES.md` AI Usage Log entry (what changed, why, what it replaced) and tick relevant DoD boxes; update README/docs if behavior changed. Skip for typo-level edits.
 - Tailwind v4: `frontend/src/index.css` must keep `@config "../tailwind.config.js";`.

@@ -95,11 +95,17 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Technical Spec:** Implement `src/browser/runner.py`. Function `run_test(script_path)` executes a test. On failure, `extract_context(page, selector)` extracts immediate DOM, roles, and position, returning structured JSON matching the ConfidenceEngine's `raw_signals`.
 - **Agent Prompt:** "Create `src/browser/runner.py` with `run_test` and `extract_context`. Run tests against the dummy HTML files in `tests/dummy/`. On Playwright failure, extract the immediate parent/child DOM of the failed selector and its structural position. Return this as structured JSON matching the `ConfidenceEngineInput.raw_signals` model from `src/core/models.py`. Handle `playwright.TimeoutError` and `playwright.TargetClosedError` gracefully."
 - **Definition of Done:**
-  - [ ] 3 failing test scripts correctly trigger extraction without crashing.
-  - [ ] Extracted JSON matches the expected structure.
+  - [x] 3 failing test scripts correctly trigger extraction without crashing. *(12 browser tests in `tests/test_runner.py` against the scenario-lab and ShopFlow pages.)*
+  - [x] Extracted JSON matches the expected structure. *(`raw_signals` + `context` per `docs/contracts/raw_signals.md`, consumed directly by the engine.)*
 - **Human Tasks:** Create dummy HTML pages in `tests/dummy/` and attach them to the chat context before running the prompt. Ensure Playwright installs correctly.
 - **AI Usage Log Template:** 
   - *Example: AI generated Playwright extraction logic; human wrote the dummy HTML targets and verified the extracted JSON structure.*
+- **AI Usage Log:**
+  - *2026-10-12 — Weights: in a guided session, AI explained each number and offered framed options; the human (Abdul Mohaimin) chose all 64 values in `src/core/weights.yaml`, recorded with reasons in `docs/contracts/weights_elicitation.md`. Sensitivity analysis: 6 decision flips under ±50% perturbation, all in the silent no-op case.*
+  - *2026-10-12 — Implementation: AI wrote `src/browser/runner.py` (evidence collector: original-selector re-wait with backoff, relocation, a post-click observation window for page errors, console errors, failed requests, and success/error markers) and `src/browser/relocator.py` (Groq via the standard library, replacing the PoC's `curl` subprocess; fails safe to "no element relocated"). The spec's function names `run_test`/`extract_context` became `collect_step_evidence`, because one call now covers extraction AND post-action telemetry (ADR 004).*
+  - *2026-10-12 — Test targets: AI built `tests/dummy/scenario_lab.html` (8 failure behaviours chosen with `?case=`), added a success marker `#order-confirmation` to ShopFlow (both copies), and wrote ground-truth labels in `tests/scenarios/qa_scenarios.yaml`. The ground-truth labels must be reviewed by the human.*
+  - *2026-10-12 — Finding during testing: Chromium logs its own "Failed to load resource" console line for every failed request, so one 404 was counted in two evidence groups and caused a needless escalation. Fixed by excluding those lines from `console_errors` (contract updated).*
+  - *2026-10-12 — Removed from the PoC path: the hardcoded scores (96/94/15), the forced step-3 escalation, and the silent fallback to the known correct selector when the LLM fails.*
 
 ### Milestone 3: The AI QA Agent (Self-Healing)
 - **Goal:** Connect the browser layer to the confidence engine via LangGraph to enable self-healing.
@@ -114,6 +120,7 @@ This document acts as the single source of truth for our project roadmap, gating
 - **Human Tasks:** Review early outputs for hallucinations. Set initial provisional threshold.
 - **AI Usage Log Template:** 
   - *Example: AI generated LangGraph nodes; human reviewed the first 10 self-healed selectors and corrected 2 hallucinations.*
+- **Progress note (2026-10-12, not complete):** `src/agents/qa_pipeline.py` already connects the browser layer to the ConfidenceEngine end to end, without LangGraph and using Groq (ADR 003) instead of `ChatGoogleGenerativeAI`. It is exposed in the UI (`/api/qa/run`) and evaluated in `src/eval/evaluate.py` against blind healing and a penalty-rule baseline. With known renames as a test stand-in for the LLM: 12/12 acceptable decisions and 0/4 regressions let through (blind healing let all 4 through). The LangGraph state machine and the DoD items remain open.
 
 ### Milestone 4: CI Integration Layer (GitHub Webhooks)
 - **Goal:** Ingest, secure, and truncate raw CI data from GitHub.

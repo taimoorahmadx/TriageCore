@@ -74,63 +74,74 @@ TriageCore/
 
 ---
 
-## 4. Running the Interactive Demo & Proof of Concept (POC)
+## 4. Running the QA Engine Demo (Iteration 1)
 
-TriageCore includes a complete dev-tool UI connected to a live FastAPI service for live FYP presentation defense:
+The live demo runs the real pipeline: a Chromium browser executes a test step, Groq proposes a
+replacement for a broken selector, the browser records what happens after the click, and the
+**ConfidenceEngine** (`src/core/`) decides from that evidence whether to auto-heal, flag the step as
+flaky, or escalate to a human. No scores are hardcoded. See `docs/adr/004-bayesian-confidence-engine.md`.
+
+### Step 0: Groq key
+Put `GROQ_API_KEY=...` in `.env`. Without it, relocation fails and every renamed step escalates (fail-safe).
 
 ### Step 1: Start the Backend API
 ```bash
-python3 -m uvicorn poc_api.main:app --host 0.0.0.0 --port 8000
+.venv/bin/python -m uvicorn poc_api.main:app --port 8000
 ```
-*Exposes:*
-- `POST /api/poc/run`: Executes live Playwright browser automation against target HTML, extracts DOM & console logs, and evaluates via Groq LLM.
-- `POST /api/ci/triage`: Ingests GitHub Actions build failure context, parses error traces, and evaluates commit blame.
+QA engine routes (`src/api/qa_routes.py`):
+- `GET /api/qa/status`: engine and Groq readiness
+- `GET /api/qa/scenarios`: test scenarios with ground truth (`tests/scenarios/qa_scenarios.yaml`)
+- `POST /api/qa/run` `{"scenario_id": "shopflow_checkout"}`: run one scenario live
+- `POST /api/qa/evaluate`: run all scenarios and compare three decision approaches
+- `GET /api/qa/engine`: the human-authored numbers in `src/core/weights.yaml`
 
 ### Step 2: Start the Frontend Application
-In a separate terminal:
 ```bash
-cd frontend
-npm run dev
+cd frontend && npm run dev
 ```
-*Open `http://localhost:5173` in your browser.*
+Open `http://localhost:5173` (the API only accepts this origin).
 
 ---
 
 ## 5. UI Features & Navigation
 
-The interface provides three grounded views designed for live defense:
+### 1. QA Engine (live) (`frontend/src/qa/QAEngineScreen.jsx`)
+Pick a scenario and run it in a real browser. Each step shows:
+1. **What the browser saw**: whether the original button reappeared, Groq's proposed selector, and the click result, errors and requests;
+2. **Which way each clue points**: how strongly each clue moves the odds toward "harmless rename" or "real bug";
+3. **Most likely cause**: probabilities for rename / real bug / slow page;
+4. **The decision**: expected cost of each action at the step's risk level, and why the cheapest one was chosen;
+5. the ground-truth check and timings.
 
-### 1. Live Test & Triage (`PipelineSimulator.jsx`)
-- **Tab 1: Web App Testing (QA Agent - Multi-Step Suite & Single-Step)**
-  - **ShopFlow Storefront Suite (`shopflow_app.html`)**: Simulates a complete, realistic e-commerce checkout journey across 3 sequential test actions:
-    1. *Step 1: Inventory Selection (Add to Cart)* — Relocates `#add-to-cart-btn` &rarr; `#btn-add-cart-primary`, verifies cart badge update and 0 console errors &rarr; **Auto-Heal Approved (96% Confidence)**.
-    2. *Step 2: Pricing & Promotion (Apply Promo Code)* — Relocates `#apply-promo` &rarr; `#btn-apply-coupon`, verifies -$12.00 discount recalculation and 0 console errors &rarr; **Auto-Heal Approved (94% Confidence)**.
-    3. *Step 3: Transaction Gate (Process Payment)* — Relocates `#submit-order` &rarr; `#btn-checkout-pay`, catches uncaught browser `ReferenceError: processPayment is not defined`, blocks auto-heal &rarr; **Escalated to Human (15% Confidence)**.
-  - **Executive Suite Summary Banner**: Displays aggregate statistics (3 Total Steps, 2 Safely Healed, 1 Regression Blocked) with an overall decision dial.
-  - **Step-by-Step Triage Breakdown**: Interactive expandable cards for each test step showing the resolved selector diff, console error stream, and full LLM reasoning trace.
-  - **Open in Browser**: Open the live application in a separate tab to inspect elements and observe real console errors using Chrome DevTools (`F12`).
-- **Tab 2: CI Build Triage (CI Agent)**
-  - Test realistic pipeline runs across **Network Flakes** (`redis-timeout.log`), **Single Commit Bugs** (`db-migration-syntax.log`), and **Overlapping Commits** (`tenant-conflict-ambiguous.log`).
-  - Displays real GitHub Actions run telemetry, colorized failure log terminal, and git commit blame.
-  - Generates draft PR #142 preview with safety banner (*Autonomous merging is strictly forbidden*).
-  - Includes collapsible **Defense & Presenter Notes** for speaking points during proposal defense.
+Scenarios: the ShopFlow checkout (`tests/dummy/shopflow_app.html`) and the scenario lab
+(`tests/dummy/scenario_lab.html?case=...`): harmless rename, crash, handled failure, silent no-op, slow render,
+console noise, a broken tracking pixel, and two look-alike buttons.
 
-### 2. Triage History (`ReliabilityDashboard.jsx`)
-- Represents the persistent **Postgres Audit Ledger** (`triage_decisions` table).
-- Displays historical pipeline runs across QA and CI with calibrated scores ($\ge 85\%$ approved in green, $15\%$ in bold rose red).
-- **Interactive Row Inspector**: Click any row to view the full `LLM Reasoning Trace` alongside the raw Postgres JSON record (`evidence_json`, `raw_signals`, `context`).
+### 2. Evaluation (`frontend/src/qa/EvaluationScreen.jsx`)
+Runs every scenario once and judges the same evidence with three approaches: **blind healing**, a **simple
+penalty rule**, and **TriageCore**. It reports acceptable decisions, real bugs let through, needless
+escalations, and where each step landed relative to the heal threshold. Results are saved to
+`results/qa_eval_<timestamp>.json/.csv`. This is a small, preliminary, hand-built suite, and the results are measured, not typed in.
 
-### 3. Baseline Benchmarks (`BenchmarkScreen.jsx`)
-- Evaluates Ground Truth vs. TriageCore Decision across 50 curated fixtures (25 QA + 25 CI).
-- Proves the core system claim: **0.0% False Positive Rate (FPR)** (0 regressions masked) and **96.0% Accuracy** with sub-5s decision latency.
-- Filter by `All Fixtures (50)`, `QA Cases (25)`, or `CI Cases (25)`.
-
+### 3. Proposal PoC (scripted) (`PipelineSimulator.jsx`)
+The proposal-defense demo, kept for reference. Its QA scores and the entire CI tab are **scripted**. The old
+"Triage History" and "Benchmark (50 cases)" screens displayed hardcoded data and were removed from the navigation.
 
 ---
 
 ## 6. Standalone CLI Demos
 
-To execute the POC directly from the terminal without the frontend:
+**QA engine (current):**
+```bash
+.venv/bin/python -m src.agents.qa_pipeline                 # run all scenarios, print decisions
+.venv/bin/python -m src.agents.qa_pipeline lab_rename_crash  # run one scenario
+.venv/bin/python -m src.eval.evaluate                      # three-approach evaluation -> results/
+.venv/bin/python -m src.core.weights                       # validate weights.yaml
+.venv/bin/python -m src.core.sensitivity                   # which numbers each decision depends on
+.venv/bin/python -m pytest                                 # engine, browser-collector and end-to-end tests
+```
+
+**Proposal PoC (scripted, legacy):** to execute the original POC directly from the terminal:
 
 - **Multi-Step Checkout Suite (ShopFlow App):**
   ```bash

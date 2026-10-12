@@ -1,29 +1,20 @@
 ---
 name: verify
-description: Verify TriageCore changes end-to-end in lieu of a test suite — frontend build + lint, API health, and a headless PoC suite run. Use after changing poc_recovery.py, poc_api/, src/, or frontend/.
+description: Verify TriageCore changes end-to-end — pytest (engine, browser collector, full pipeline), lint, weights validity, frontend build, and a live API run of the QA pipeline. Use after changing src/, poc_api/, tests/, or frontend/.
 ---
 
-The repo has no automated tests, so verify by running the real pieces. Run everything from the repo root. Report each step as pass/fail with the relevant output; don't hide failures.
+Run from the repo root. Report each step as pass or fail with the relevant output; don't hide failures.
 
-0. **Python lint** on changed `.py` files only: `ruff check <files>` (fall back to `uvx ruff` if ruff isn't installed). Existing code has pre-existing findings — only report new ones.
+1. **Python tests:** `.venv/bin/python -m pytest -q` (~2 min; launches headless Chromium). This covers the engine maths (`test_engine.py`), the browser evidence collector on the real dummy pages (`test_runner.py`), and the end-to-end pipeline with real weights and known renames (`test_pipeline.py`: 0 regressions let through).
+2. **Lint changed Python files:** `.venv/bin/ruff check <files>`. Existing code has pre-existing findings; report only new ones.
+3. **Weights:** `.venv/bin/python -m src.core.weights` must print OK. If `weights.yaml` changed, also run `.venv/bin/python -m src.core.sensitivity` and report the decision flips.
+4. **Frontend** (only if `frontend/` changed): `cd frontend && npm run lint && npm run build`.
+5. **Live API:**
+   - Free the port with `fuser -k 8000/tcp`.
+   - Start `.venv/bin/python -m uvicorn poc_api.main:app --port 8000` in the background and poll `curl -s localhost:8000/api/qa/status`.
+   - Run `curl -s -X POST localhost:8000/api/qa/run -H 'Content-Type: application/json' -d '{"scenario_id":"lab_rename_crash"}'`. Expect `recommended_action: escalate`.
+   - If `groq_configured` is false, every renamed step escalates with a relocation error (fail-safe). Say so explicitly; it is not a code bug.
+   - Stop the server afterwards.
+6. **Tests/dummy changes:** confirm that each edited page in `tests/dummy/` matches its copy in `frontend/public/` (`diff`).
 
-1. **Frontend** (skip if nothing under `frontend/` changed):
-   - `cd frontend && npm run lint`
-   - `cd frontend && npm run build`
-
-2. **API** — start it in the background, then check health:
-   - Free the port if needed: `fuser -k 8000/tcp`
-   - `python3 -m uvicorn poc_api.main:app --port 8000` (run in background)
-   - Poll `curl -s http://localhost:8000/health` until it responds (give up after ~20s and show the server log).
-
-3. **PoC suite (headless)** — skip if no change touched `poc_recovery.py`, `poc_api/`, or `tests/dummy/`:
-   - `curl -s -X POST http://localhost:8000/api/poc/run -H 'Content-Type: application/json' -d '{"scenario":"suite"}'`
-   - Needs `GROQ_API_KEY` in `.env`. If it's missing or Groq fails/times out, say so explicitly rather than treating it as a code bug.
-   - Expected shape: steps 1–2 heal, step 3 escalates (step 3 is forced — that's scripted, not a regression).
-   - If `tests/dummy/*.html` changed, confirm the matching `frontend/public/` copy was updated too (`diff` them).
-
-4. **CI triage stub** (only if `poc_api/` changed): POST `{"scenario": "flaky"}`, `"bug"`, `"ambiguous"` to `/api/ci/triage` and confirm each returns 200.
-
-5. Stop the background API server when done.
-
-Do not use `python3 poc_recovery.py` directly — it opens a headed browser.
+Never point the real pipeline at `FixedRelocator`/`KnownRenames`; those are test stand-ins only.
