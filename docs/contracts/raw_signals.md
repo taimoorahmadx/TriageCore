@@ -27,7 +27,7 @@ Errors raised before the action (for example on page load) are not attributed to
 | `relocated_match_count` | int | Number of elements the relocated selector matches | `page.locator(sel).count()`. `0` = relocation failed; `>1` = ambiguous |
 | `action_succeeded` | bool | The click executed without a Playwright error | No timeout or exception from `click()` |
 | `uncaught_page_errors` | int | Uncaught JS exceptions during the window | `page.on("pageerror")` |
-| `console_errors` | int | `console.error` messages during the window | `page.on("console")` where `type == "error"` |
+| `console_errors` | int | `console.error` messages during the window | `page.on("console")` where `type == "error"`, **excluding** the browser's own "Failed to load resource" lines. Those are already counted in `failed_requests`, and counting them twice would double-count one event |
 | `failed_requests` | int | Network failures during the window | `requestfailed` events, plus responses with status ≥ 400 |
 | `expected_state_reached` | bool or null | The step's success marker became visible | `expected_state_selector` visible within the window. `null` if the step defines no marker |
 | `error_state_shown` | bool or null | The step's known error marker became visible | `error_state_selector` visible within the window. `null` if none is defined |
