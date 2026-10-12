@@ -71,6 +71,10 @@ class ConfidenceEngine:
             )
 
     def evaluate(self, evidence: ConfidenceEngineInput) -> ConfidenceEngineOutput:
+        return self.evaluate_detailed(evidence)[0]
+
+    def evaluate_detailed(self, evidence: ConfidenceEngineInput) -> tuple[ConfidenceEngineOutput, dict]:
+        """Same decision as ``evaluate``, plus a structured breakdown for dashboards and reports."""
         spec = self.weights.domain(evidence.source)
         adapter = self.adapters[evidence.source]
 
@@ -93,12 +97,26 @@ class ConfidenceEngine:
 
         decision = self.policy.decide(spec, posterior, risk_tier, blocked)
         classification = posterior.most_probable
-        return ConfidenceEngineOutput(
+        output = ConfidenceEngineOutput(
             classification=classification,  # diagnosis only, never an action
             confidence_score=round(100 * decision.confidence),
             reasoning_trace=build_trace(spec, states, posterior, decision),
             recommended_action=decision.action,  # type: ignore[arg-type]
         )
+        details = {
+            "group_states": states,
+            "contributions": posterior.log_likelihoods,
+            "missing_groups": list(posterior.missing),
+            "posterior": posterior.probs,
+            "fit": posterior.fit,
+            "risk_tier": risk_tier,
+            "expected_loss": decision.expected_loss,
+            "blocked": decision.blocked,
+            "thresholds": {
+                a: implied_threshold(spec, risk_tier, a) for a in spec.autonomous_actions if a not in decision.blocked
+            },
+        }
+        return output, details
 
 
 def build_trace(spec: DomainSpec, states: dict[str, str | None], posterior: Posterior, decision: Decision) -> str:

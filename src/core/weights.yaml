@@ -10,6 +10,8 @@
 #   - a row may be the word `uninformative` if that evidence says nothing about that cause
 #   - costs are non-negative numbers on any consistent scale (e.g. engineer-minutes)
 # Record the reason behind each number in docs/contracts/weights_elicitation.md.
+#
+# Values authored by Abdul Mohaimin on 2026-10-11 (elicitation session); cost unit: 1 = one needless escalation.
 
 qa:
   # Possible causes of a broken test step (must be values of the contract's classification enum).
@@ -17,9 +19,9 @@ qa:
 
   # P(cause) BEFORE looking at any evidence: out of 100 broken steps, how many are each cause?
   priors:
-    stale_selector: null      # harmless UI change: element renamed/moved, app still works
-    likely_regression: null   # real bug: the app itself is broken
-    flaky: null               # timing: element was just slow to appear
+    stale_selector: 0.70      # harmless UI change: element renamed/moved, app still works
+    likely_regression: 0.15   # real bug: the app itself is broken
+    flaky: 0.15               # timing: element was just slow to appear
 
   # Evidence groups. For each cause: "if this cause were true, how often would we see each state?"
   groups:
@@ -27,42 +29,42 @@ qa:
       # How many of {uncaught page error, error banner shown, failed network request} fired after the click.
       states: ["0", "1", "2+"]
       likelihoods:
-        stale_selector:    {"0": null, "1": null, "2+": null}
-        likely_regression: {"0": null, "1": null, "2+": null}
-        flaky:             {"0": null, "1": null, "2+": null}
+        stale_selector:    {"0": 0.90, "1": 0.08, "2+": 0.02}
+        likely_regression: {"0": 0.30, "1": 0.35, "2+": 0.35}
+        flaky:             {"0": 0.90, "1": 0.08, "2+": 0.02}
 
     state_progression:
       # Did the step's expected result (e.g. "cart shows 1 item") appear after the click?
       states: [reached, not_reached]
       likelihoods:
-        stale_selector:    {reached: null, not_reached: null}
-        likely_regression: {reached: null, not_reached: null}
-        flaky:             {reached: null, not_reached: null}
+        stale_selector:    {reached: 0.90, not_reached: 0.10}
+        likely_regression: {reached: 0.10, not_reached: 0.90}
+        flaky:             {reached: 0.85, not_reached: 0.15}
 
     console_noise:
       # Any console.error messages after the click? Third-party scripts often log harmless errors,
       # so this should usually differ only weakly between causes.
       states: [present, absent]
       likelihoods:
-        stale_selector:    {present: null, absent: null}
-        likely_regression: {present: null, absent: null}
-        flaky:             {present: null, absent: null}
+        stale_selector:    {present: 0.15, absent: 0.85}
+        likely_regression: {present: 0.60, absent: 0.40}
+        flaky:             {present: 0.20, absent: 0.80}
 
     action_outcome:
       # Did the click itself execute without a Playwright error?
       states: [succeeded, failed]
       likelihoods:
-        stale_selector:    {succeeded: null, failed: null}
-        likely_regression: {succeeded: null, failed: null}
-        flaky:             {succeeded: null, failed: null}
+        stale_selector:    {succeeded: 0.95, failed: 0.05}
+        likely_regression: {succeeded: 0.75, failed: 0.25}
+        flaky:             {succeeded: 0.90, failed: 0.10}
 
     timing:
       # Before relocating, the ORIGINAL selector is re-tried with backoff. Did it appear after all?
       states: [resolved_after_wait, not_resolved]
       likelihoods:
-        stale_selector:    {resolved_after_wait: null, not_resolved: null}
-        likely_regression: {resolved_after_wait: null, not_resolved: null}
-        flaky:             {resolved_after_wait: null, not_resolved: null}
+        stale_selector:    {resolved_after_wait: 0.02, not_resolved: 0.98}
+        likely_regression: {resolved_after_wait: 0.05, not_resolved: 0.95}
+        flaky:             {resolved_after_wait: 0.90, not_resolved: 0.10}
 
   # Autonomous actions and the causes under which each is the RIGHT thing to do.
   # (`escalate` = hand to a human; always available, so it is not listed here.)
@@ -79,21 +81,21 @@ thresholds:
   qa:
     # If the evidence is improbable under EVERY cause (per-group fit below this), the engine
     # escalates as "unrecognised pattern" instead of forcing the nearest label. (0-1, e.g. small)
-    unknown_pattern_floor: null
+    unknown_pattern_floor: 0.10
 
     # Cost of each action under each true cause, per risk tier of the step.
     # Typical shape: a correct action costs 0; healing a real regression (masking a bug) is the
     # most expensive mistake; escalating a harmless change costs some engineer time.
     loss:
       low:     # reversible step, e.g. add to cart
-        heal:     {stale_selector: null, likely_regression: null, flaky: null}
-        flag:     {stale_selector: null, likely_regression: null, flaky: null}
-        escalate: {stale_selector: null, likely_regression: null, flaky: null}
+        heal:     {stale_selector: 0, likely_regression: 5, flaky: 3}
+        flag:     {stale_selector: 1, likely_regression: 5, flaky: 0}
+        escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
       medium:  # e.g. apply coupon, form submission
-        heal:     {stale_selector: null, likely_regression: null, flaky: null}
-        flag:     {stale_selector: null, likely_regression: null, flaky: null}
-        escalate: {stale_selector: null, likely_regression: null, flaky: null}
+        heal:     {stale_selector: 0, likely_regression: 20, flaky: 3}
+        flag:     {stale_selector: 1, likely_regression: 20, flaky: 0}
+        escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
       high:    # irreversible step, e.g. payment
-        heal:     {stale_selector: null, likely_regression: null, flaky: null}
-        flag:     {stale_selector: null, likely_regression: null, flaky: null}
-        escalate: {stale_selector: null, likely_regression: null, flaky: null}
+        heal:     {stale_selector: 0, likely_regression: 100, flaky: 3}
+        flag:     {stale_selector: 1, likely_regression: 100, flaky: 0}
+        escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
