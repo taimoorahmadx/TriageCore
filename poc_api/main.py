@@ -105,6 +105,11 @@ class CiTriageResponse(BaseModel):
     draft_pr: Optional[dict] = None
     duration_ms: int = 420
 
+from src.api.qa_routes import router as qa_router  # real QA pipeline: browser evidence + ConfidenceEngine
+
+app.include_router(qa_router)
+
+
 @app.get("/health")
 def health_check():
     return {"status": "ok", "service": "triagecore-poc-api"}
