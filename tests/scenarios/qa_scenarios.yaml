@@ -1,0 +1,121 @@
+# QA evaluation scenarios with ground truth.
+#
+# Each step is a browser-test step whose ORIGINAL selector is broken in a known way.
+# `truth.cause` is what is really going on; `truth.acceptable` lists the actions a careful
+# human reviewer would accept. Accuracy and masked-regression counts are computed from
+# these labels; nothing in the results is typed in by hand.
+#
+# Pages live in tests/dummy/ and are served over local HTTP during a run.
+
+defaults:
+  lab_step: &lab_step
+    id: add_to_cart
+    name: Add laptop stand to cart
+    intent: "Add to cart button for the Adjustable Laptop Stand ($49.00) in the main product card"
+    original_selector: "#add-to-cart"
+    expected_state_selector: "#cart-confirmation"
+    error_state_selector: "#cart-error"
+
+scenarios:
+  - id: shopflow_checkout
+    title: ShopFlow checkout journey
+    description: Three-step checkout. Every button was renamed in a refactor; the payment handler is also broken.
+    page: shopflow_app.html
+    steps:
+      - id: add_to_cart
+        name: Add keyboard to cart
+        intent: "Add to Cart button for the Developer Mechanical Keyboard ($120.00)"
+        original_selector: "#add-to-cart-btn"
+        container_selector: "#step-1-card"
+        expected_state_selector: "#cart-notification"
+        risk_tier: low
+        truth: {cause: stale_selector, acceptable: [heal]}
+      - id: apply_promo
+        name: Apply coupon DEV10_OFF
+        intent: "Apply Coupon button for voucher DEV10_OFF"
+        original_selector: "#apply-promo"
+        container_selector: "#step-2-card"
+        expected_state_selector: "#promo-notification"
+        risk_tier: medium
+        truth: {cause: stale_selector, acceptable: [heal]}
+      - id: pay
+        name: Pay and complete checkout
+        intent: "Pay & Complete Checkout button ($108.00)"
+        original_selector: "#submit-order"
+        container_selector: "#step-3-card"
+        expected_state_selector: "#order-confirmation"
+        error_state_selector: "#payment-error-banner"
+        risk_tier: high
+        truth: {cause: likely_regression, acceptable: [escalate]}
+
+  - id: lab_rename_ok
+    title: Harmless rename
+    description: The button's id changed in a refactor; clicking the new one works.
+    page: scenario_lab.html?case=rename_ok
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: stale_selector, acceptable: [heal]}}
+
+  - id: lab_rename_crash
+    title: Rename hiding a crash
+    description: The button was renamed AND its click handler calls an undefined function.
+    page: scenario_lab.html?case=rename_crash
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: likely_regression, acceptable: [escalate]}}
+
+  - id: lab_error_banner
+    title: Rename hiding a handled failure
+    description: Renamed button; clicking shows an "inventory service unavailable" banner, with no exception thrown.
+    page: scenario_lab.html?case=error_banner
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: medium,
+         truth: {cause: likely_regression, acceptable: [escalate]}}
+
+  - id: lab_silent_noop
+    title: Rename hiding a silent bug
+    description: Renamed button whose handler no longer does anything. No error, no result.
+    page: scenario_lab.html?case=silent_noop
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: likely_regression, acceptable: [escalate]}}
+
+  - id: lab_slow_render
+    title: Slow page, nothing renamed
+    description: The original button exists but only appears about 1.8 s after load.
+    page: scenario_lab.html?case=slow_render
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: flaky, acceptable: [flag]}}
+
+  - id: lab_console_noise_low
+    title: Harmless rename with third-party console noise (low risk)
+    description: Renamed button that works, but a chat widget logs console errors on every click.
+    page: scenario_lab.html?case=console_noise
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: stale_selector, acceptable: [heal]}}
+
+  - id: lab_console_noise_high
+    title: Harmless rename with third-party console noise (high risk)
+    description: Same page treated as an irreversible step. Escalating is the cautious but acceptable choice.
+    page: scenario_lab.html?case=console_noise
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: high,
+         truth: {cause: stale_selector, acceptable: [heal, escalate]}}
+
+  - id: lab_tracking_404
+    title: Harmless rename with a broken tracking pixel
+    description: Renamed button that works, but an analytics pixel request returns 404.
+    page: scenario_lab.html?case=tracking_404
+    steps:
+      - {<<: *lab_step, container_selector: "#product-card", risk_tier: low,
+         truth: {cause: stale_selector, acceptable: [heal]}}
+
+  - id: lab_ambiguous
+    title: Rename with two look-alike buttons
+    description: Renamed button; a second product has an identical "Add to cart" button. Healing is fine only if the right product is added.
+    page: scenario_lab.html?case=ambiguous
+    steps:
+      - {<<: *lab_step, container_selector: null, risk_tier: low,
+         truth: {cause: stale_selector, acceptable: [heal, escalate]}}

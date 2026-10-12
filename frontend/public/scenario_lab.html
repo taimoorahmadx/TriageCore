@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northwind Supply — Scenario Lab</title>
+<style>
+  :root { --bg:#0B0F17; --card:#111827; --line:rgba(255,255,255,.1); --text:#F9FAFB; --muted:#9CA3AF; --ok:#34D399; --bad:#F87171; --accent:#60A5FA; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); }
+  header { display:flex; justify-content:space-between; align-items:center; padding:16px 28px; border-bottom:1px solid var(--line); }
+  header strong { letter-spacing:.02em; }
+  #cart-badge { font-size:13px; color:var(--muted); }
+  main { max-width:760px; margin:40px auto; padding:0 20px; display:grid; gap:20px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; }
+  .product { display:flex; gap:20px; align-items:center; }
+  .thumb { width:96px; height:96px; border-radius:10px; background:linear-gradient(135deg,#1f2937,#374151); flex:none; }
+  .price { font-size:20px; font-weight:700; margin:6px 0 0; }
+  .muted { color:var(--muted); font-size:13px; }
+  .btn { margin-top:18px; padding:12px 18px; border-radius:10px; border:0; font-weight:600; font-size:14px; cursor:pointer; background:var(--accent); color:#06121f; }
+  .note { display:none; margin-top:14px; padding:12px 14px; border-radius:10px; font-size:14px; }
+  .note.ok { background:rgba(52,211,153,.1); border:1px solid rgba(52,211,153,.35); color:var(--ok); }
+  .note.bad { background:rgba(248,113,113,.1); border:1px solid rgba(248,113,113,.35); color:var(--bad); }
+  .case-tag { font-family:ui-monospace,monospace; font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<!--
+  Scenario lab for TriageCore QA evaluation. One page, many failure behaviours, chosen with ?case=...
+  The test script always looks for the ORIGINAL selector  #add-to-cart  and expects  #cart-confirmation
+  to become visible. Each case changes the page so that this breaks in a different way.
+
+  rename_ok        button renamed; click works                      -> harmless rename
+  rename_crash     button renamed; click throws ReferenceError      -> real bug (crash)
+  error_banner     button renamed; click shows a decline banner     -> real bug (no exception)
+  silent_noop      button renamed; click does nothing at all        -> real bug (silent)
+  slow_render      original button appears only after ~1.8 s        -> slow page (flaky)
+  console_noise    button renamed; works, but a third-party widget logs console errors -> harmless rename
+  tracking_404     button renamed; works, but a tracking pixel 404s -> harmless rename
+  ambiguous        button renamed; a second product with an identical "Add to cart" button, no ids
+                   -> rename, but the target is ambiguous (clicking the wrong product never shows #cart-confirmation)
+-->
+<header>
+  <strong>Northwind Supply</strong>
+  <span id="cart-badge">Cart: 0 items</span>
+</header>
+<main>
+  <div class="card" id="product-card">
+    <div class="product">
+      <div class="thumb"></div>
+      <div>
+        <div class="muted">Office · Ergonomics</div>
+        <div><strong>Adjustable Laptop Stand</strong></div>
+        <p class="price">$49.00</p>
+      </div>
+    </div>
+    <div id="button-slot"></div>
+    <div class="note ok" id="cart-confirmation">Added to cart: Adjustable Laptop Stand ($49.00)</div>
+    <div class="note bad" id="cart-error">Could not add item: inventory service unavailable. Please try again.</div>
+  </div>
+  <div class="card" id="related-card" style="display:none">
+    <div class="product">
+      <div class="thumb"></div>
+      <div>
+        <div class="muted">Customers also bought</div>
+        <div><strong>Monitor Arm</strong></div>
+        <p class="price">$89.00</p>
+      </div>
+    </div>
+    <div id="related-slot"></div>
+    <div class="note ok" id="related-confirmation">Added to cart: Monitor Arm ($89.00)</div>
+  </div>
+  <p class="case-tag" id="case-tag"></p>
+</main>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  const scenario = params.get("case") || "rename_ok";
+  document.getElementById("case-tag").textContent = "scenario: " + scenario;
+
+  function addToCart() {
+    document.getElementById("cart-badge").textContent = "Cart: 1 item";
+    document.getElementById("cart-confirmation").style.display = "block";
+  }
+
+  function makeButton(id, onClick) {
+    const b = document.createElement("button");
+    b.className = "btn add-btn";
+    b.textContent = "Add to cart";
+    if (id) b.id = id;
+    b.addEventListener("click", onClick);
+    return b;
+  }
+
+  const slot = document.getElementById("button-slot");
+  const handlers = {
+    rename_ok: () => addToCart(),
+    rename_crash: () => { inventoryClient.reserve("SKU-4471"); addToCart(); },   // inventoryClient is undefined
+    error_banner: () => { document.getElementById("cart-error").style.display = "block"; },
+    silent_noop: () => { /* handler was refactored and no longer does anything */ },
+    console_noise: () => { addToCart(); },
+    tracking_404: () => { addToCart(); fetch("pixel/track.gif?evt=add_to_cart").catch(() => {}); },
+    ambiguous: () => addToCart(),
+  };
+
+  if (scenario === "slow_render") {
+    // The original button exists, but the product widget hydrates late.
+    setTimeout(() => slot.appendChild(makeButton("add-to-cart", addToCart)), 1800);
+  } else if (scenario === "ambiguous") {
+    slot.appendChild(makeButton(null, handlers.ambiguous));
+    document.getElementById("related-card").style.display = "block";
+    document.getElementById("related-slot").appendChild(makeButton(null, () => {
+      document.getElementById("cart-badge").textContent = "Cart: 1 item";
+      document.getElementById("related-confirmation").style.display = "block";
+    }));
+  } else {
+    slot.appendChild(makeButton("btn-add-item-primary", handlers[scenario] || handlers.rename_ok));
+  }
+
+  if (scenario === "console_noise") {
+    // A third-party chat widget that logs errors on every interaction, unrelated to the store.
+    document.addEventListener("click", () => console.error("[chat-widget] websocket handshake failed (code 1006)"), true);
+  }
+</script>
+</body>
+</html>
