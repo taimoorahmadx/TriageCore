@@ -8,9 +8,11 @@ import { BenchmarkScreen } from './components/BenchmarkScreen';
 import { EvidenceDrawer } from './components/EvidenceDrawer';
 import { TriageCoreLogo } from './components/TriageCoreLogo';
 import { PipelineSimulator } from './components/PipelineSimulator';
+import { QAEngineScreen } from './qa/QAEngineScreen';
+import { EvaluationScreen } from './qa/EvaluationScreen';
 
 export function App() {
-  const [currentScreen, setCurrentScreen] = useState('simulator');
+  const [currentScreen, setCurrentScreen] = useState('qa-engine');
   
   // Drawer state
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -133,6 +135,10 @@ export function App() {
       <Navbar currentScreen={currentScreen} onNavigate={handleNavigate} />
 
       <main className="flex-1">
+        {currentScreen === 'qa-engine' && <QAEngineScreen />}
+
+        {currentScreen === 'evaluation' && <EvaluationScreen />}
+
         {currentScreen === 'simulator' && (
           <PipelineSimulator
             onNavigate={handleNavigate}
