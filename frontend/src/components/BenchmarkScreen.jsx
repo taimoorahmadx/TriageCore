@@ -94,27 +94,27 @@ export function BenchmarkScreen({ onNavigate }) {
       {/* 4 Grounded Metric Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         
-        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
-          <span className="text-[10px] font-mono text-neutral-400 uppercase">Test Fixtures</span>
-          <div className="text-2xl font-bold font-mono text-white">50 Cases</div>
+        <div className="glass-card rounded-2xl p-4 space-y-1">
+          <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider">Test Fixtures</span>
+          <div className="text-2xl font-bold font-mono tabular-nums text-white">50 Cases</div>
           <p className="text-[10px] text-neutral-500 font-mono">25 QA + 25 CI Fixtures</p>
         </div>
 
-        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
-          <span className="text-[10px] font-mono text-emerald-400 uppercase">Triage Accuracy</span>
-          <div className="text-2xl font-bold font-mono text-emerald-400">96.0%</div>
+        <div className="glass-card rounded-2xl p-4 space-y-1">
+          <span className="text-[10px] font-mono text-[#30d158] uppercase tracking-wider">Triage Accuracy</span>
+          <div className="text-2xl font-bold font-mono tabular-nums text-[#30d158]">96.0%</div>
           <p className="text-[10px] text-neutral-500 font-mono">48 / 50 Cases Correct</p>
         </div>
 
-        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
-          <span className="text-[10px] font-mono text-neutral-300 uppercase">False Positive Rate</span>
-          <div className="text-2xl font-bold font-mono text-emerald-400">0.0%</div>
-          <p className="text-[10px] text-emerald-400 font-mono">0 regressions masked</p>
+        <div className="glass-card rounded-2xl p-4 space-y-1">
+          <span className="text-[10px] font-mono text-neutral-300 uppercase tracking-wider">False Positive Rate</span>
+          <div className="text-2xl font-bold font-mono tabular-nums text-[#30d158]">0.0%</div>
+          <p className="text-[10px] text-[#30d158] font-mono">0 regressions masked</p>
         </div>
 
-        <div className="bg-neutral-950/80 border border-white/[0.1] rounded-xl p-4 space-y-1">
-          <span className="text-[10px] font-mono text-neutral-400 uppercase">Avg Decision Time</span>
-          <div className="text-2xl font-bold font-mono text-white">4.2s</div>
+        <div className="glass-card rounded-2xl p-4 space-y-1">
+          <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-wider">Avg Decision Time</span>
+          <div className="text-2xl font-bold font-mono tabular-nums text-white">4.2s</div>
           <p className="text-[10px] text-neutral-500 font-mono">{"< 10s budget met"}</p>
         </div>
 
@@ -122,12 +122,12 @@ export function BenchmarkScreen({ onNavigate }) {
 
       {/* Category Filter Tabs */}
       <div className="flex items-center justify-between border-b border-white/[0.08] pb-3">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center p-1 rounded-xl bg-white/[0.05] border border-white/[0.06] gap-1">
           <button
             onClick={() => setFilter('all')}
             className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
               filter === 'all' 
-                ? 'bg-white text-black font-semibold shadow-sm' 
+                ? 'bg-white text-black font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.25)]' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
             }`}
           >
@@ -137,7 +137,7 @@ export function BenchmarkScreen({ onNavigate }) {
             onClick={() => setFilter('qa')}
             className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
               filter === 'qa' 
-                ? 'bg-white text-black font-semibold shadow-sm' 
+                ? 'bg-white text-black font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.25)]' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
             }`}
           >
@@ -147,7 +147,7 @@ export function BenchmarkScreen({ onNavigate }) {
             onClick={() => setFilter('ci')}
             className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium cursor-pointer transition-all ${
               filter === 'ci' 
-                ? 'bg-white text-black font-semibold shadow-sm' 
+                ? 'bg-white text-black font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.25)]' 
                 : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
             }`}
           >
@@ -161,12 +161,12 @@ export function BenchmarkScreen({ onNavigate }) {
       </div>
 
       {/* Benchmark Case Evaluation Table */}
-      <div className="bg-neutral-950 border border-white/[0.1] rounded-xl overflow-hidden">
-        <div className="p-4 border-b border-white/[0.08] flex items-center justify-between">
+      <div className="glass-card rounded-2xl overflow-hidden shadow-sm">
+        <div className="p-4 border-b border-white/[0.08] bg-white/[0.02] flex items-center justify-between">
           <div className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300">
             Ground Truth vs. Autonomous Action ({filteredCases.length} Fixtures Shown)
           </div>
-          <span className="text-[11px] font-mono text-emerald-400 font-semibold">
+          <span className="text-[11px] font-mono text-[#30d158] font-semibold">
             Target FPR {"<"} 5% (Achieved: 0.0%)
           </span>
         </div>

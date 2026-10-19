@@ -131,7 +131,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-neutral-100 flex flex-col font-sans bg-dot-grid selection:bg-neutral-800 selection:text-white">
+    <div className="min-h-screen bg-black text-neutral-100 flex flex-col font-sans bg-dot-grid selection:bg-[#0a84ff]/30 selection:text-white">
       <Navbar currentScreen={currentScreen} onNavigate={handleNavigate} />
 
       <main className="flex-1">
@@ -186,7 +186,7 @@ export function App() {
       </main>
 
       {/* Minimalist Editorial Footer */}
-      <footer className="border-t border-white/[0.08] bg-black/90 py-8 px-6 mt-16">
+      <footer className="border-t border-white/[0.06] bg-black/80 backdrop-blur-md py-8 px-6 mt-16">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 font-mono">
           <div className="flex items-center gap-2.5">
             <TriageCoreLogo size={20} />

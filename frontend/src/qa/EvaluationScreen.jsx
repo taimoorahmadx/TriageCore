@@ -6,20 +6,20 @@ import { CAUSE, POLICY, POLICY_ORDER, pct } from './theme';
 
 function Stat({ label, value, sub }) {
   return (
-    <div className="glass-card rounded-xl p-5">
+    <div className="glass-card rounded-2xl p-6">
       <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">{label}</div>
-      <div className="mt-2 text-3xl font-semibold text-white">{value}</div>
-      {sub && <div className="mt-1 text-xs text-neutral-400">{sub}</div>}
+      <div className="mt-2 text-3xl font-semibold tracking-tight text-white font-mono tabular-nums">{value}</div>
+      {sub && <div className="mt-1.5 text-xs text-neutral-400 leading-normal">{sub}</div>}
     </div>
   );
 }
 
 function Panel({ title, hint, children }) {
   return (
-    <div className="glass-card space-y-4 rounded-xl p-5">
+    <div className="glass-card space-y-4 rounded-2xl p-6">
       <div>
-        <h3 className="text-sm font-semibold text-white">{title}</h3>
-        {hint && <p className="text-xs text-neutral-500">{hint}</p>}
+        <h3 className="text-sm font-semibold text-white tracking-tight">{title}</h3>
+        {hint && <p className="text-xs text-neutral-400 mt-0.5">{hint}</p>}
       </div>
       {children}
     </div>
@@ -27,8 +27,8 @@ function Panel({ title, hint, children }) {
 }
 
 const Mark = ({ ok }) => (ok
-  ? <CheckCircle2 className="inline h-3.5 w-3.5 text-[#0ca30c]" aria-label="acceptable" />
-  : <XCircle className="inline h-3.5 w-3.5 text-[#d03b3b]" aria-label="not acceptable" />);
+  ? <CheckCircle2 className="inline h-3.5 w-3.5 text-[#30d158]" aria-label="acceptable" />
+  : <XCircle className="inline h-3.5 w-3.5 text-[#ff453a]" aria-label="not acceptable" />);
 
 export function EvaluationScreen() {
   const [report, setReport] = useState(null);
@@ -56,23 +56,27 @@ export function EvaluationScreen() {
         <div className="space-y-2">
           <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">Evaluation · measured, not typed in</div>
           <h1 className="text-2xl font-semibold tracking-tight text-white">How often does each approach make the right call?</h1>
-          <p className="max-w-3xl text-sm text-neutral-400">
+          <p className="max-w-3xl text-sm text-neutral-400 leading-relaxed">
             Every scenario runs in a real browser once. Three decision approaches then judge the <i>same</i> evidence, and each
             decision is checked against the scenario's ground truth (<code>tests/scenarios/qa_scenarios.yaml</code>).
           </p>
         </div>
-        <button onClick={run} disabled={running} className="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2 text-sm font-semibold text-black disabled:opacity-50">
+        <button
+          onClick={run}
+          disabled={running}
+          className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black transition-all shadow-sm active:scale-[0.98] disabled:opacity-40 cursor-pointer"
+        >
           {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
           {running ? 'Running all scenarios (about 1–2 min)…' : 'Run full evaluation'}
         </button>
       </div>
 
-      {error && <div className="rounded-lg border border-[#d03b3b]/40 bg-[#d03b3b]/10 px-4 py-3 text-sm text-neutral-200">{error}</div>}
-      {!report && !running && <div className="glass-card rounded-xl p-6 text-sm text-neutral-400">No evaluation yet. Run one to generate real results.</div>}
+      {error && <div className="rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 px-4 py-3 text-sm text-neutral-200">{error}</div>}
+      {!report && !running && <div className="glass-card rounded-2xl p-6 text-sm text-neutral-400">No evaluation yet. Run one to generate real results.</div>}
 
       {report && (
         <>
-          <div className="text-xs text-neutral-500">
+          <div className="text-xs text-neutral-500 font-mono">
             Run at {report.generated_at.replace('T', ' ')} · relocation by {report.relocator} · {tc.steps} broken steps across {new Set(report.rows.map((r) => r.scenario)).size} scenarios · small sample, preliminary
           </div>
 
@@ -100,23 +104,23 @@ export function EvaluationScreen() {
               <table className="w-full min-w-[760px] text-left text-xs">
                 <thead className="text-[11px] uppercase tracking-wider text-neutral-500">
                   <tr className="border-b border-white/10">
-                    <th className="py-2 pr-3 font-medium">Scenario · step</th>
-                    <th className="py-2 pr-3 font-medium">Risk</th>
-                    <th className="py-2 pr-3 font-medium">True cause</th>
-                    <th className="py-2 pr-3 text-right font-medium">P(rename)</th>
-                    {POLICY_ORDER.map((p) => <th key={p} className="py-2 pr-3 font-medium">{POLICY[p].label}</th>)}
+                    <th className="py-2.5 pr-3 font-medium">Scenario · step</th>
+                    <th className="py-2.5 pr-3 font-medium">Risk</th>
+                    <th className="py-2.5 pr-3 font-medium">True cause</th>
+                    <th className="py-2.5 pr-3 text-right font-medium">P(rename)</th>
+                    {POLICY_ORDER.map((p) => <th key={p} className="py-2.5 pr-3 font-medium">{POLICY[p].label}</th>)}
                   </tr>
                 </thead>
-                <tbody className="text-neutral-300">
+                <tbody className="text-neutral-300 divide-y divide-white/[0.04]">
                   {report.rows.map((r) => (
-                    <tr key={`${r.scenario}-${r.step}`} className="border-b border-white/[0.04]">
-                      <td className="py-2 pr-3 font-mono">{r.scenario} · {r.step}</td>
-                      <td className="py-2 pr-3">{r.risk_tier}</td>
-                      <td className="py-2 pr-3">{CAUSE[r.truth_cause].label}</td>
-                      <td className="py-2 pr-3 text-right font-mono tabular-nums">{pct(r.p_stale)}</td>
+                    <tr key={`${r.scenario}-${r.step}`} className="hover:bg-white/[0.02] transition-colors">
+                      <td className="py-2.5 pr-3 font-mono">{r.scenario} · {r.step}</td>
+                      <td className="py-2.5 pr-3">{r.risk_tier}</td>
+                      <td className="py-2.5 pr-3">{CAUSE[r.truth_cause].label}</td>
+                      <td className="py-2.5 pr-3 text-right font-mono tabular-nums">{pct(r.p_stale)}</td>
                       {POLICY_ORDER.map((p) => (
-                        <td key={p} className="py-2 pr-3">
-                          <Mark ok={r[`${p}_acceptable`]} /> {r[`${p}_action`]}{r[`${p}_masked`] ? <span className="ml-1 font-semibold text-[#d03b3b]">bug through</span> : null}
+                        <td key={p} className="py-2.5 pr-3">
+                          <Mark ok={r[`${p}_acceptable`]} /> {r[`${p}_action`]}{r[`${p}_masked`] ? <span className="ml-1 font-semibold text-[#ff453a]">bug through</span> : null}
                         </td>
                       ))}
                     </tr>

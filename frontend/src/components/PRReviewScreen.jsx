@@ -128,7 +128,7 @@ export function PRReviewScreen({ onNavigate, prContext = { type: 'QA', score: 68
           <div className="space-y-2.5">
             <button
               onClick={handleApprove}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white text-black hover:bg-neutral-200 rounded-lg text-xs font-semibold tracking-tight transition-all shadow-sm cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white text-black hover:bg-neutral-100 rounded-xl text-xs font-semibold tracking-tight transition-all shadow-sm active:scale-[0.98] cursor-pointer"
             >
               <Check className="w-4 h-4" />
               <span>Authorize &amp; Merge PR</span>
@@ -136,7 +136,7 @@ export function PRReviewScreen({ onNavigate, prContext = { type: 'QA', score: 68
 
             <button
               onClick={handleReject}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white/[0.04] hover:bg-rose-500/[0.1] hover:text-rose-300 border border-white/[0.08] hover:border-rose-500/30 text-neutral-300 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-white/[0.04] hover:bg-[#ff453a]/10 hover:text-[#ff453a] border border-white/[0.08] hover:border-[#ff453a]/30 text-neutral-300 rounded-xl text-xs font-medium transition-all active:scale-[0.98] cursor-pointer"
             >
               <X className="w-4 h-4" />
               <span>Reject (Flag for Manual Fix)</span>

@@ -8,17 +8,17 @@ export function EvidenceDrawer({ isOpen, onClose, agentType = 'QA', reasoningTra
   const isQA = agentType === 'QA' || agentType === 'qa';
 
   const defaultQAFactors = [
-    { name: 'Semantic Selector Similarity', weight: '35%', score: 92, color: 'bg-emerald-400' },
-    { name: 'DOM Structural Matching', weight: '25%', score: 88, color: 'bg-emerald-400' },
-    { name: 'Console Error & Exception Correlation', weight: '25%', score: 20, color: 'bg-rose-400' },
-    { name: 'Historical Selector Stability', weight: '15%', score: 40, color: 'bg-amber-400' }
+    { name: 'Semantic Selector Similarity', weight: '35%', score: 92, color: 'bg-[#30d158]' },
+    { name: 'DOM Structural Matching', weight: '25%', score: 88, color: 'bg-[#30d158]' },
+    { name: 'Console Error & Exception Correlation', weight: '25%', score: 20, color: 'bg-[#ff453a]' },
+    { name: 'Historical Selector Stability', weight: '15%', score: 40, color: 'bg-[#ff9f0a]' }
   ];
 
   const defaultCIFactors = [
-    { name: 'Log Pattern Match', weight: '35%', score: 95, color: 'bg-emerald-400' },
-    { name: 'Dependency Changelog Correlation', weight: '30%', score: 87, color: 'bg-emerald-400' },
-    { name: 'Commit Proximity to Pipeline Failure', weight: '25%', score: 90, color: 'bg-emerald-400' },
-    { name: 'Branch Context & Isolation', weight: '10%', score: 80, color: 'bg-emerald-400' }
+    { name: 'Log Pattern Match', weight: '35%', score: 95, color: 'bg-[#30d158]' },
+    { name: 'Dependency Changelog Correlation', weight: '30%', score: 87, color: 'bg-[#30d158]' },
+    { name: 'Commit Proximity to Pipeline Failure', weight: '25%', score: 90, color: 'bg-[#30d158]' },
+    { name: 'Branch Context & Isolation', weight: '10%', score: 80, color: 'bg-[#30d158]' }
   ];
 
   const displayFactors = factors.length > 0 ? factors : (isQA ? defaultQAFactors : defaultCIFactors);
@@ -27,15 +27,15 @@ export function EvidenceDrawer({ isOpen, onClose, agentType = 'QA', reasoningTra
     <div className="fixed inset-0 z-50 overflow-hidden">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/75 backdrop-blur-md transition-opacity" 
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" 
         onClick={onClose}
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#08080a] border-l border-white/[0.08] shadow-2xl flex flex-col justify-between">
+        <div className="w-screen max-w-md bg-[#161618]/90 backdrop-blur-2xl border-l border-white/[0.08] shadow-2xl flex flex-col justify-between">
           
           {/* Header */}
-          <div className="p-6 border-b border-white/[0.08] space-y-3">
+          <div className="p-6 border-b border-white/[0.08] space-y-3 bg-white/[0.02]">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4 text-neutral-300" />
@@ -43,7 +43,7 @@ export function EvidenceDrawer({ isOpen, onClose, agentType = 'QA', reasoningTra
               </div>
               <button 
                 onClick={onClose}
-                className="p-1 rounded-md text-neutral-400 hover:text-white hover:bg-white/[0.06] transition-colors cursor-pointer"
+                className="p-1.5 rounded-full text-neutral-400 hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
               >
                 <X className="w-4 h-4" />
               </button>

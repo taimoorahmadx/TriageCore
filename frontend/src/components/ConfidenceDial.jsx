@@ -6,18 +6,18 @@ export function ConfidenceDial({ score = 0, size = 160, isLoading = false, label
   const circumference = 2 * Math.PI * radius;
   
   // High-precision status bands
-  let strokeColor = '#10B981'; // emerald
+  let strokeColor = '#30d158'; // Apple System Green
   let bandLabel = 'AUTO-ACT (≥85%)';
-  let bandColorClass = 'text-emerald-400 bg-emerald-500/[0.08] border-emerald-500/20';
+  let bandColorClass = 'text-[#30d158] bg-[#30d158]/10 border-[#30d158]/30';
 
   if (score < 60) {
-    strokeColor = '#F43F5E'; // rose
+    strokeColor = '#ff453a'; // Apple System Red
     bandLabel = 'UNSAFE (<60%)';
-    bandColorClass = 'text-rose-400 bg-rose-500/[0.08] border-rose-500/20';
+    bandColorClass = 'text-[#ff453a] bg-[#ff453a]/10 border-[#ff453a]/30';
   } else if (score < 85) {
-    strokeColor = '#F59E0B'; // amber
+    strokeColor = '#ff9f0a'; // Apple System Orange
     bandLabel = 'ESCALATE (60-84%)';
-    bandColorClass = 'text-amber-400 bg-amber-500/[0.08] border-amber-500/20';
+    bandColorClass = 'text-[#ff9f0a] bg-[#ff9f0a]/10 border-[#ff9f0a]/30';
   }
 
   const offset = circumference - (Math.max(0, Math.min(100, score)) / 100) * circumference;

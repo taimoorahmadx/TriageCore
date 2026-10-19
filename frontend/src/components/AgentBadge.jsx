@@ -6,9 +6,9 @@ export function AgentBadge({ type, size = "md" }) {
   
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded font-mono font-medium tracking-tight bg-white/[0.04] border border-white/[0.08] text-neutral-300 ${sizeClasses}`}
+      className={`inline-flex items-center gap-1.5 rounded-full font-mono font-medium tracking-tight bg-white/[0.05] border border-white/[0.08] text-neutral-300 ${sizeClasses}`}
     >
-      <span className={`w-1.5 h-1.5 rounded-full ${isQA ? 'bg-amber-400' : 'bg-neutral-400'}`} />
+      <span className={`w-1.5 h-1.5 rounded-full ${isQA ? 'bg-[#ff9f0a]' : 'bg-[#0a84ff]'}`} />
       <span>{isQA ? 'QA AGENT' : 'CI AGENT'}</span>
     </span>
   );

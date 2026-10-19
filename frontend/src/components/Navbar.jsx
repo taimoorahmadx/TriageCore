@@ -11,23 +11,23 @@ const TABS = [
 
 export function Navbar({ currentScreen, onNavigate }) {
   return (
-    <header className="sticky top-0 z-40 bg-black/80 backdrop-blur-xl border-b border-white/[0.08]">
+    <header className="sticky top-0 z-40 apple-glass-nav border-b border-white/[0.08] transition-all">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        <div onClick={() => onNavigate('qa-engine')} className="flex items-center gap-2.5 cursor-pointer group">
+        <div onClick={() => onNavigate('qa-engine')} className="flex items-center gap-2.5 cursor-pointer group select-none">
           <TriageCoreLogo size={28} />
           <span className="font-semibold text-sm tracking-tight text-white group-hover:text-neutral-200 transition-colors">
             TriageCore
           </span>
         </div>
 
-        <nav className="flex items-center gap-1.5">
+        <nav className="flex items-center p-1 rounded-xl bg-white/[0.05] border border-white/[0.06] gap-1">
           {TABS.map(({ id, label, icon: Icon }) => (
             <button
               key={id}
               onClick={() => onNavigate(id)}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                 currentScreen === id
-                  ? 'bg-white text-black font-semibold shadow-sm'
+                  ? 'bg-white text-black font-semibold shadow-[0_1px_2px_rgba(0,0,0,0.25)]'
                   : 'text-neutral-400 hover:text-white hover:bg-white/[0.04]'
               }`}
             >

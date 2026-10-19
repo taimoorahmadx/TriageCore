@@ -91,7 +91,7 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
           id="run-live-detection-btn"
           onClick={handleRunLiveDetection}
           disabled={loading}
-          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-white text-black hover:bg-neutral-200 disabled:opacity-60 rounded-lg font-semibold text-xs tracking-tight shadow-sm transition-all cursor-pointer whitespace-nowrap self-start md:self-auto"
+          className="inline-flex items-center justify-center gap-2.5 px-5 py-2.5 bg-white text-black hover:bg-neutral-100 disabled:opacity-40 rounded-xl font-semibold text-xs tracking-tight shadow-sm transition-all active:scale-[0.98] cursor-pointer whitespace-nowrap self-start md:self-auto"
         >
           {loading ? (
             <>
@@ -101,8 +101,8 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
           ) : (
             <>
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#30d158] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#30d158]"></span>
               </span>
               <span>Run Live Detection</span>
             </>
@@ -111,8 +111,8 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
       </div>
 
       {errorMsg && (
-        <div className="p-4 bg-rose-500/[0.08] border border-rose-500/20 text-rose-300 rounded-xl text-xs flex items-center gap-2.5 font-mono">
-          <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+        <div className="p-4 bg-[#ff453a]/10 border border-[#ff453a]/25 text-[#ff453a] rounded-xl text-xs flex items-center gap-2.5 font-mono">
+          <AlertCircle className="w-4 h-4 shrink-0 text-[#ff453a]" />
           <span>{errorMsg}</span>
         </div>
       )}

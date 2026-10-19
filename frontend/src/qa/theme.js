@@ -1,28 +1,28 @@
 // Chart colours: dark-mode steps of the validated reference palette
 // (categorical slots 1-3 pass all-pairs CVD checks on the app's #0d0d10 surface).
 export const CAUSE = {
-  stale_selector: { label: 'Harmless rename', short: 'Rename', color: '#3987e5' },
-  likely_regression: { label: 'Real bug', short: 'Bug', color: '#d95926' },
-  flaky: { label: 'Slow page', short: 'Slow', color: '#199e70' },
+  stale_selector: { label: 'Harmless rename', short: 'Rename', color: '#0a84ff' },
+  likely_regression: { label: 'Real bug', short: 'Bug', color: '#ff453a' },
+  flaky: { label: 'Slow page', short: 'Slow', color: '#30d158' },
 };
 export const CAUSE_ORDER = ['stale_selector', 'likely_regression', 'flaky'];
 
 export const POLICY = {
-  triagecore: { label: 'TriageCore engine', color: '#3987e5' },
-  blind_heal: { label: 'Blind healing', color: '#d95926' },
-  penalty_rule: { label: 'Simple penalty rule', color: '#199e70' },
+  triagecore: { label: 'TriageCore engine', color: '#0a84ff' },
+  blind_heal: { label: 'Blind healing', color: '#ff453a' },
+  penalty_rule: { label: 'Simple penalty rule', color: '#30d158' },
 };
 export const POLICY_ORDER = ['triagecore', 'penalty_rule', 'blind_heal'];
 
 // Diverging pair (blue <-> red) for "this clue points toward rename vs real bug".
-export const TOWARD_RENAME = '#3987e5';
-export const TOWARD_BUG = '#e66767';
+export const TOWARD_RENAME = '#0a84ff';
+export const TOWARD_BUG = '#ff453a';
 
 // Status colours are reserved for decisions and always shipped with an icon + label.
 export const ACTION = {
-  heal: { label: 'Auto-heal', color: '#0ca30c', tone: 'border-[#0ca30c]/40 bg-[#0ca30c]/10' },
-  flag: { label: 'Flag as flaky', color: '#fab219', tone: 'border-[#fab219]/40 bg-[#fab219]/10' },
-  escalate: { label: 'Escalate to human', color: '#ec835a', tone: 'border-[#ec835a]/40 bg-[#ec835a]/10' },
+  heal: { label: 'Auto-heal', color: '#30d158', tone: 'border-[#30d158]/35 bg-[#30d158]/12 text-[#30d158]' },
+  flag: { label: 'Flag as flaky', color: '#ff9f0a', tone: 'border-[#ff9f0a]/35 bg-[#ff9f0a]/12 text-[#ff9f0a]' },
+  escalate: { label: 'Escalate to human', color: '#ff453a', tone: 'border-[#ff453a]/35 bg-[#ff453a]/12 text-[#ff453a]' },
 };
 
 export const GROUP = {

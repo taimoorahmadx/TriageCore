@@ -2,47 +2,91 @@
 @config "../tailwind.config.js";
 
 @layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   body {
     background-color: #000000;
-    color: #f4f4f5;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "SF Pro", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+
+  /* Monospace metrics aligned with SF Mono */
+  code, kbd, samp, pre {
+    font-family: "SF Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "JetBrains Mono", monospace;
+    font-feature-settings: "liga" 0;
   }
 }
 
-/* Subtle Technical Dot Grid Background */
+/* Subtle Technical Ambient Background */
 .bg-dot-grid {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
-/* Hairline Glass Panels */
-.glass-obsidian {
-  background: rgba(9, 9, 11, 0.75);
-  backdrop-filter: blur(12px);
+/* Apple Functional Layer: Liquid Glass (Headers, Toolbars, Floating Sheets) */
+.glass-obsidian,
+.apple-glass-nav {
+  background: rgba(16, 16, 18, 0.72);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Apple Content Layer: Standard Material (Cards, Panels, Lists) */
+/* HIG rule: Don't use Liquid Glass in the content layer; use standard materials */
 .glass-card {
-  background: rgba(13, 13, 16, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(22, 22, 25, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05), 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* Custom Minimalist scrollbar */
+/* Apple HIG Interactive States & Transitions */
+button, a, input, select {
+  touch-action: manipulation;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+/* Accessible High Contrast and Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .glass-card,
+  .glass-obsidian,
+  .apple-glass-nav {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+  }
+}
+
+/* Minimalist macOS-style overlay scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: rgba(255, 255, 255, 0.28);
 }

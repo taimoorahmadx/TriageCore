@@ -63,7 +63,7 @@ export function StepDecisionCard({ step, index, priors }) {
   const [showTrace, setShowTrace] = useState(false);
   if (!step.engine) {
     return (
-      <div className="glass-card rounded-xl p-5 text-sm text-neutral-300">
+      <div className="glass-card rounded-2xl p-5 text-sm text-neutral-300">
         Step {index + 1} · {step.name}: the original selector still works, so there was nothing to triage.
       </div>
     );
@@ -76,27 +76,27 @@ export function StepDecisionCard({ step, index, priors }) {
   const heal = d.thresholds?.heal;
 
   return (
-    <article className="glass-card overflow-hidden rounded-xl">
-      <header className="flex flex-wrap items-start justify-between gap-4 border-b border-white/[0.06] px-5 py-4">
+    <article className="glass-card overflow-hidden rounded-2xl shadow-sm">
+      <header className="flex flex-wrap items-start justify-between gap-4 border-b border-white/[0.06] bg-white/[0.015] px-6 py-4.5">
         <div className="min-w-0">
-          <div className="font-mono text-[11px] text-neutral-500">STEP {index + 1} · {RISK[step.risk_tier]}</div>
-          <h3 className="text-base font-semibold text-white">{step.name}</h3>
-          <div className="mt-1 font-mono text-[11px] text-neutral-500">
-            looked for <code className="text-neutral-300">{step.context.original_selector}</code>
-            {step.context.proposed_selector && <> → found <code className="text-neutral-300">{step.context.proposed_selector}</code></>}
+          <div className="font-mono text-[11px] text-neutral-500 uppercase tracking-wider">STEP {index + 1} · {RISK[step.risk_tier]}</div>
+          <h3 className="text-base font-semibold text-white tracking-tight mt-0.5">{step.name}</h3>
+          <div className="mt-1 font-mono text-[11px] text-neutral-400">
+            looked for <code className="text-neutral-200">{step.context.original_selector}</code>
+            {step.context.proposed_selector && <> → found <code className="text-neutral-200">{step.context.proposed_selector}</code></>}
           </div>
         </div>
         <div className="flex flex-col items-end gap-2">
-          <span className={`inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm font-semibold text-white ${act.tone}`}>
-            <Icon className="h-4 w-4" style={{ color: act.color }} />{act.label}
+          <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${act.tone}`}>
+            <Icon className="h-3.5 w-3.5" style={{ color: act.color }} />{act.label}
           </span>
           <span className="text-[11px] text-neutral-400">
-            Most likely cause: <b className="text-neutral-200">{CAUSE[e.classification].label}</b> ({pct(d.posterior[e.classification])})
+            Most likely cause: <b className="text-neutral-200 font-medium">{CAUSE[e.classification].label}</b> ({pct(d.posterior[e.classification])})
           </span>
         </div>
       </header>
 
-      <div className="grid gap-8 px-5 py-5 lg:grid-cols-2">
+      <div className="grid gap-8 px-6 py-6 lg:grid-cols-2">
         <Section n="1" title="What the browser saw" hint="Collected by Playwright after the click">
           <Observed step={step} />
         </Section>
@@ -122,23 +122,23 @@ export function StepDecisionCard({ step, index, priors }) {
         </Section>
       </div>
 
-      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] px-5 py-3 text-xs">
+      <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] bg-white/[0.01] px-6 py-3.5 text-xs">
         <div className="flex flex-wrap items-center gap-3 text-neutral-400">
           <span className="flex items-center gap-1.5">
-            {sc.action_acceptable ? <CheckCircle2 className="h-3.5 w-3.5 text-[#0ca30c]" /> : <XCircle className="h-3.5 w-3.5 text-[#d03b3b]" />}
+            {sc.action_acceptable ? <CheckCircle2 className="h-3.5 w-3.5 text-[#30d158]" /> : <XCircle className="h-3.5 w-3.5 text-[#ff453a]" />}
             Ground truth: {CAUSE[step.truth.cause].label}; acceptable: {step.truth.acceptable.join(' or ')}
           </span>
-          {sc.masked_regression && <span className="font-semibold text-[#d03b3b]">⚠ real bug let through</span>}
-          <span className="font-mono text-neutral-500">
+          {sc.masked_regression && <span className="font-semibold text-[#ff453a]">⚠ real bug let through</span>}
+          <span className="font-mono text-neutral-500 tabular-nums">
             step {step.timings_ms.total} ms{step.timings_ms.relocation ? ` · Groq ${step.timings_ms.relocation} ms` : ''} · engine {step.timings_ms.engine} ms
           </span>
         </div>
-        <button onClick={() => setShowTrace(!showTrace)} className="flex items-center gap-1 text-neutral-400 hover:text-white">
+        <button onClick={() => setShowTrace(!showTrace)} className="flex items-center gap-1 text-neutral-400 hover:text-white transition-colors cursor-pointer">
           Engine explanation <ChevronDown className={`h-3.5 w-3.5 transition-transform ${showTrace ? 'rotate-180' : ''}`} />
         </button>
       </footer>
       {showTrace && (
-        <pre className="whitespace-pre-wrap border-t border-white/[0.06] bg-black/60 px-5 py-4 font-mono text-[11px] leading-relaxed text-neutral-400">
+        <pre className="whitespace-pre-wrap border-t border-white/[0.06] bg-black/60 px-6 py-4 font-mono text-[11px] leading-relaxed text-neutral-300">
           {e.reasoning_trace.split('. ').join('.\n')}
         </pre>
       )}
