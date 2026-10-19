@@ -6,20 +6,20 @@ import { CAUSE, POLICY, POLICY_ORDER, pct } from './theme';
 
 function Stat({ label, value, sub }) {
   return (
-    <div className="glass-card rounded-2xl p-6">
-      <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">{label}</div>
-      <div className="mt-2 text-3xl font-semibold tracking-tight text-white font-mono tabular-nums">{value}</div>
-      {sub && <div className="mt-1.5 text-xs text-neutral-400 leading-normal">{sub}</div>}
+    <div className="glass-card rounded-2xl p-6 relative overflow-hidden group hover:border-white/20 transition-all duration-200">
+      <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 font-medium">{label}</div>
+      <div className="mt-2.5 text-3xl font-semibold tracking-tight text-white font-mono tabular-nums">{value}</div>
+      {sub && <div className="mt-2 text-xs text-neutral-400 leading-normal">{sub}</div>}
     </div>
   );
 }
 
 function Panel({ title, hint, children }) {
   return (
-    <div className="glass-card space-y-4 rounded-2xl p-6">
-      <div>
+    <div className="glass-card space-y-4 rounded-2xl p-6 transition-all duration-200">
+      <div className="border-b border-white/[0.06] pb-3">
         <h3 className="text-sm font-semibold text-white tracking-tight">{title}</h3>
-        {hint && <p className="text-xs text-neutral-400 mt-0.5">{hint}</p>}
+        {hint && <p className="text-xs text-neutral-400 mt-1 leading-relaxed">{hint}</p>}
       </div>
       {children}
     </div>
@@ -27,8 +27,8 @@ function Panel({ title, hint, children }) {
 }
 
 const Mark = ({ ok }) => (ok
-  ? <CheckCircle2 className="inline h-3.5 w-3.5 text-[#30d158]" aria-label="acceptable" />
-  : <XCircle className="inline h-3.5 w-3.5 text-[#ff453a]" aria-label="not acceptable" />);
+  ? <CheckCircle2 className="inline h-3.5 w-3.5 text-[#30d158] shrink-0" aria-label="acceptable" />
+  : <XCircle className="inline h-3.5 w-3.5 text-[#ff453a] shrink-0" aria-label="not acceptable" />);
 
 export function EvaluationScreen() {
   const [report, setReport] = useState(null);
@@ -76,8 +76,10 @@ export function EvaluationScreen() {
 
       {report && (
         <>
-          <div className="text-xs text-neutral-500 font-mono">
-            Run at {report.generated_at.replace('T', ' ')} · relocation by {report.relocator} · {tc.steps} broken steps across {new Set(report.rows.map((r) => r.scenario)).size} scenarios · small sample, preliminary
+          <div className="rounded-xl border border-white/[0.06] bg-black/30 px-3.5 py-2.5 text-xs text-neutral-400 font-mono flex items-center justify-between flex-wrap gap-2">
+            <span>
+              Run at {report.generated_at.replace('T', ' ')} · relocation by {report.relocator} · {tc.steps} broken steps across {new Set(report.rows.map((r) => r.scenario)).size} scenarios · small sample, preliminary
+            </span>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
@@ -100,27 +102,35 @@ export function EvaluationScreen() {
           </Panel>
 
           <Panel title="Every decision" hint="Same evidence, three approaches. ✓ = acceptable according to ground truth.">
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto rounded-xl border border-white/[0.06]">
               <table className="w-full min-w-[760px] text-left text-xs">
-                <thead className="text-[11px] uppercase tracking-wider text-neutral-500">
-                  <tr className="border-b border-white/10">
-                    <th className="py-2.5 pr-3 font-medium">Scenario · step</th>
-                    <th className="py-2.5 pr-3 font-medium">Risk</th>
-                    <th className="py-2.5 pr-3 font-medium">True cause</th>
-                    <th className="py-2.5 pr-3 text-right font-medium">P(rename)</th>
-                    {POLICY_ORDER.map((p) => <th key={p} className="py-2.5 pr-3 font-medium">{POLICY[p].label}</th>)}
+                <thead className="text-[11px] uppercase tracking-wider text-neutral-400 bg-white/[0.02]">
+                  <tr className="border-b border-white/[0.08]">
+                    <th className="py-3 px-3.5 font-medium">Scenario · step</th>
+                    <th className="py-3 px-3 font-medium">Risk</th>
+                    <th className="py-3 px-3 font-medium">True cause</th>
+                    <th className="py-3 px-3 text-right font-medium">P(rename)</th>
+                    {POLICY_ORDER.map((p) => <th key={p} className="py-3 px-3 font-medium">{POLICY[p].label}</th>)}
                   </tr>
                 </thead>
                 <tbody className="text-neutral-300 divide-y divide-white/[0.04]">
                   {report.rows.map((r) => (
-                    <tr key={`${r.scenario}-${r.step}`} className="hover:bg-white/[0.02] transition-colors">
-                      <td className="py-2.5 pr-3 font-mono">{r.scenario} · {r.step}</td>
-                      <td className="py-2.5 pr-3">{r.risk_tier}</td>
-                      <td className="py-2.5 pr-3">{CAUSE[r.truth_cause].label}</td>
-                      <td className="py-2.5 pr-3 text-right font-mono tabular-nums">{pct(r.p_stale)}</td>
+                    <tr key={`${r.scenario}-${r.step}`} className="hover:bg-white/[0.03] transition-colors">
+                      <td className="py-2.5 px-3.5 font-mono text-neutral-200">{r.scenario} · {r.step}</td>
+                      <td className="py-2.5 px-3">
+                        <span className="font-mono text-[11px] rounded px-1.5 py-0.5 bg-white/[0.04] text-neutral-300 border border-white/[0.06]">
+                          {r.risk_tier}
+                        </span>
+                      </td>
+                      <td className="py-2.5 px-3">{CAUSE[r.truth_cause].label}</td>
+                      <td className="py-2.5 px-3 text-right font-mono tabular-nums text-neutral-200">{pct(r.p_stale)}</td>
                       {POLICY_ORDER.map((p) => (
-                        <td key={p} className="py-2.5 pr-3">
-                          <Mark ok={r[`${p}_acceptable`]} /> {r[`${p}_action`]}{r[`${p}_masked`] ? <span className="ml-1 font-semibold text-[#ff453a]">bug through</span> : null}
+                        <td key={p} className="py-2.5 px-3">
+                          <span className="inline-flex items-center gap-1.5 font-mono text-[11px]">
+                            <Mark ok={r[`${p}_acceptable`]} />
+                            <span className="text-neutral-200">{r[`${p}_action`]}</span>
+                            {r[`${p}_masked`] ? <span className="ml-1 font-semibold text-[#ff453a] bg-[#ff453a]/10 px-1.5 py-0.5 rounded border border-[#ff453a]/20">bug through</span> : null}
+                          </span>
                         </td>
                       ))}
                     </tr>

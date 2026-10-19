@@ -14,8 +14,8 @@ function useTooltip() {
   const hide = () => setTip(null);
   const layer = tip && (
     <div
-      className="pointer-events-none absolute z-20 max-w-[260px] rounded-md border border-white/10 bg-[#141418] px-2.5 py-1.5 text-[11px] leading-snug text-neutral-200 shadow-xl"
-      style={{ left: Math.max(0, Math.min(tip.x + 12, tip.width - 200)), top: tip.y + 12 }}
+      className="pointer-events-none absolute z-30 max-w-[280px] rounded-xl border border-white/10 bg-[#16161a]/95 backdrop-blur-xl px-3.5 py-2.5 text-[11px] leading-snug text-neutral-200 shadow-2xl transition-all font-sans"
+      style={{ left: Math.max(0, Math.min(tip.x + 12, tip.width - 220)), top: tip.y + 12 }}
     >
       {tip.content}
     </div>
@@ -23,25 +23,28 @@ function useTooltip() {
   return { container: setEl, show, hide, layer };
 }
 
-const Swatch = ({ color }) => <span className="inline-block h-2.5 w-2.5 flex-none rounded-[3px]" style={{ background: color }} />;
+const Swatch = ({ color }) => <span className="inline-block h-2.5 w-2.5 flex-none rounded-full" style={{ background: color }} />;
 
 // ---- Diagnosis: probability of each cause ---------------------------------
 export function CauseBars({ posterior }) {
   const { container, show, hide, layer } = useTooltip();
   return (
-    <div ref={container} className="relative space-y-2">
+    <div ref={container} className="relative space-y-2.5">
       {CAUSE_ORDER.map((c) => {
         const p = posterior[c] ?? 0;
         return (
           <div
             key={c}
-            className="grid grid-cols-[112px_1fr_48px] items-center gap-3 py-0.5"
+            className="grid grid-cols-[120px_1fr_48px] items-center gap-3 py-0.5 group cursor-default"
             onMouseMove={(e) => show(e, <><b>{CAUSE[c].label}</b>: {pct(p)} probability after seeing the clues</>)}
             onMouseLeave={hide}
           >
-            <span className="flex items-center gap-2 text-xs text-neutral-300"><Swatch color={CAUSE[c].color} />{CAUSE[c].label}</span>
-            <div className="h-3 rounded-r-[4px] bg-white/[0.04]">
-              <div className="h-3 rounded-r-[4px]" style={{ width: `${Math.max(p * 100, 0.6)}%`, background: CAUSE[c].color }} />
+            <span className="flex items-center gap-2 text-xs text-neutral-300 group-hover:text-white transition-colors">
+              <Swatch color={CAUSE[c].color} />
+              <span>{CAUSE[c].label}</span>
+            </span>
+            <div className="h-2.5 rounded-full bg-white/[0.04] overflow-hidden p-0.5 border border-white/[0.03]">
+              <div className="h-full rounded-full transition-all duration-300" style={{ width: `${Math.max(p * 100, 0.6)}%`, background: CAUSE[c].color }} />
             </div>
             <span className="text-right font-mono text-xs tabular-nums text-neutral-200">{pct(p)}</span>
           </div>
@@ -65,11 +68,11 @@ export function EvidenceBars({ details, priors }) {
   const max = Math.max(2, ...rows.map((r) => Math.abs(r.v)));
   return (
     <div ref={container} className="relative">
-      <div className="mb-2 grid grid-cols-[140px_1fr] gap-3 text-[10px] uppercase tracking-wider text-neutral-500">
+      <div className="mb-2 grid grid-cols-[140px_1fr] gap-3 text-[10px] uppercase tracking-wider text-neutral-500 font-mono">
         <span />
         <div className="flex justify-between whitespace-nowrap"><span>← real bug</span><span>harmless rename →</span></div>
       </div>
-      <div className="space-y-1.5">
+      <div className="space-y-2">
         {rows.map((r) => {
           const w = (Math.abs(r.v) / max) * 50;
           const right = r.v >= 0;
@@ -77,7 +80,7 @@ export function EvidenceBars({ details, priors }) {
           return (
             <div
               key={r.key}
-              className="grid grid-cols-[140px_1fr] items-center gap-3"
+              className="grid grid-cols-[140px_1fr] items-center gap-3 group cursor-default"
               onMouseMove={(e) => show(e, <>
                 <b>{r.label}</b>: {r.state}<br />
                 {factor < 1.05 ? 'Barely changes the odds.' : `Makes "${right ? 'harmless rename' : 'real bug'}" ${factor.toFixed(1)}× more likely than the other.`}
@@ -86,13 +89,13 @@ export function EvidenceBars({ details, priors }) {
               onMouseLeave={hide}
             >
               <div className="min-w-0">
-                <div className="truncate text-xs text-neutral-300">{r.label}</div>
-                <div className="text-[10px] text-neutral-500">{r.state}</div>
+                <div className="truncate text-xs text-neutral-300 group-hover:text-white transition-colors">{r.label}</div>
+                <div className="text-[10px] text-neutral-500 font-mono">{r.state}</div>
               </div>
-              <div className="relative h-3">
-                <div className="absolute left-1/2 top-[-3px] h-[18px] w-px bg-white/15" />
+              <div className="relative h-2.5 rounded-full bg-white/[0.04] p-0.5 border border-white/[0.03]">
+                <div className="absolute left-1/2 top-[-3px] h-[16px] w-px bg-white/20 z-10" />
                 <div
-                  className={`absolute top-0 h-3 ${right ? 'rounded-r-[4px]' : 'rounded-l-[4px]'}`}
+                  className={`absolute top-0.5 bottom-0.5 ${right ? 'rounded-r-full' : 'rounded-l-full'} transition-all duration-300`}
                   style={{ [right ? 'left' : 'right']: '50%', width: `${Math.max(w, 0.4)}%`, background: right ? TOWARD_RENAME : TOWARD_BUG }}
                 />
               </div>
@@ -112,25 +115,27 @@ export function LossBars({ details, chosen }) {
   const max = Math.max(0.5, ...entries.map(([, v]) => v));
   const names = { heal: 'Auto-heal', flag: 'Flag as flaky', escalate: 'Escalate to human' };
   return (
-    <div ref={container} className="relative space-y-2">
+    <div ref={container} className="relative space-y-2.5">
       {entries.map(([a, v]) => (
         <div
           key={a}
-          className="grid grid-cols-[112px_1fr_56px] items-center gap-3"
+          className="grid grid-cols-[120px_1fr_56px] items-center gap-3 group cursor-default"
           onMouseMove={(e) => show(e, <><b>{names[a]}</b>: expected cost {v.toFixed(2)}<br /><span className="text-neutral-500">probability of each cause × what this action costs if that cause is true</span></>)}
           onMouseLeave={hide}
         >
-          <span className={`text-xs ${a === chosen ? 'font-semibold text-white' : 'text-neutral-400'}`}>{names[a]}{a === chosen ? ' ✓' : ''}</span>
-          <div className="h-3 rounded-r-[4px] bg-white/[0.04]">
-            <div className="h-3 rounded-r-[4px]" style={{ width: `${Math.max((v / max) * 100, 0.6)}%`, background: a === chosen ? '#e4e4e7' : '#52525b' }} />
+          <span className={`text-xs ${a === chosen ? 'font-semibold text-white' : 'text-neutral-400 group-hover:text-neutral-300'} transition-colors`}>
+            {names[a]}{a === chosen ? ' ✓' : ''}
+          </span>
+          <div className="h-2.5 rounded-full bg-white/[0.04] overflow-hidden p-0.5 border border-white/[0.03]">
+            <div className="h-full rounded-full transition-all duration-300" style={{ width: `${Math.max((v / max) * 100, 0.6)}%`, background: a === chosen ? '#f4f4f5' : '#52525b' }} />
           </div>
           <span className="text-right font-mono text-xs tabular-nums text-neutral-300">{v.toFixed(2)}</span>
         </div>
       ))}
       {Object.entries(details.blocked || {}).map(([a, why]) => (
-        <div key={a} className="grid grid-cols-[112px_1fr] gap-3 text-xs">
+        <div key={a} className="grid grid-cols-[120px_1fr] gap-3 text-xs">
           <span className="text-neutral-500 line-through">{names[a]}</span>
-          <span className="text-neutral-500">not possible: {why}</span>
+          <span className="text-neutral-500 font-mono text-[11px]">not possible: {why}</span>
         </div>
       ))}
       {layer}
@@ -148,11 +153,14 @@ export function PolicyBars({ summary, metric, total }) {
         const s = summary[p];
         const v = metric(s);
         return (
-          <div key={p} className="grid grid-cols-[150px_1fr_52px] items-center gap-3"
+          <div key={p} className="grid grid-cols-[160px_1fr_52px] items-center gap-3 group cursor-default"
             onMouseMove={(e) => show(e, <><b>{POLICY[p].label}</b>: {v} of {total(s)}</>)} onMouseLeave={hide}>
-            <span className="flex items-center gap-2 text-xs text-neutral-300"><Swatch color={POLICY[p].color} />{POLICY[p].label}</span>
-            <div className="h-4 rounded-r-[4px] bg-white/[0.04]">
-              <div className="h-4 rounded-r-[4px]" style={{ width: `${Math.max((v / max) * 100, v ? 1 : 0.6)}%`, background: POLICY[p].color }} />
+            <span className="flex items-center gap-2 text-xs text-neutral-300 group-hover:text-white transition-colors">
+              <Swatch color={POLICY[p].color} />
+              <span>{POLICY[p].label}</span>
+            </span>
+            <div className="h-3 rounded-full bg-white/[0.04] overflow-hidden p-0.5 border border-white/[0.03]">
+              <div className="h-full rounded-full transition-all duration-300" style={{ width: `${Math.max((v / max) * 100, v ? 1 : 0.6)}%`, background: POLICY[p].color }} />
             </div>
             <span className="text-right font-mono text-xs tabular-nums text-neutral-200">{v}/{total(s)}</span>
           </div>

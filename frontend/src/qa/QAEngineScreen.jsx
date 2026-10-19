@@ -113,26 +113,46 @@ export function QAEngineScreen() {
 
       <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
         <aside className="space-y-2">
+          <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-2 px-1 flex items-center justify-between">
+            <span>Test Scenarios</span>
+            <span className="text-neutral-500 font-mono">{scenarios.length}</span>
+          </div>
           {scenarios.map((s) => (
             <button
               key={s.id}
               onClick={() => { setSelected(s.id); setResult(null); setRunError(null); }}
-              className={`w-full rounded-xl border px-4 py-3.5 text-left transition-all cursor-pointer ${s.id === selected ? 'border-white/20 bg-white/[0.08] shadow-sm' : 'border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05]'}`}
+              className={`group w-full rounded-xl border p-4 text-left transition-all cursor-pointer relative overflow-hidden ${
+                s.id === selected 
+                  ? 'border-white/20 bg-white/[0.07] shadow-sm' 
+                  : 'border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04]'
+              }`}
             >
-              <div className="text-sm font-medium text-white">{s.title}</div>
-              <div className="mt-0.5 text-[11px] text-neutral-400">{s.steps.length} step{s.steps.length > 1 ? 's' : ''} · {[...new Set(s.steps.map((st) => st.risk_tier))].join(', ')} risk</div>
+              {s.id === selected && (
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0a84ff]" />
+              )}
+              <div className="text-sm font-semibold text-white tracking-tight group-hover:text-neutral-100">{s.title}</div>
+              <div className="mt-1.5 flex items-center gap-2 text-[11px] text-neutral-400 font-mono">
+                <span className="bg-white/[0.04] px-2 py-0.5 rounded border border-white/[0.06]">{s.steps.length} step{s.steps.length > 1 ? 's' : ''}</span>
+                <span>·</span>
+                <span className="capitalize">{[...new Set(s.steps.map((st) => st.risk_tier))].join(', ')} risk</span>
+              </div>
             </button>
           ))}
         </aside>
 
         <section className="space-y-5">
           {scenario && (
-            <div className="glass-card space-y-4 rounded-2xl p-6">
-              <div className="flex flex-wrap items-start justify-between gap-4">
+            <div className="glass-card space-y-5 rounded-2xl p-6">
+              <div className="flex flex-wrap items-start justify-between gap-4 border-b border-white/[0.06] pb-5">
                 <div className="max-w-xl">
-                  <h2 className="text-lg font-semibold text-white tracking-tight">{scenario.title}</h2>
-                  <p className="mt-1 text-sm text-neutral-400 leading-relaxed">{scenario.description}</p>
-                  <a href={pageUrl(scenario.page)} target="_blank" rel="noreferrer" className="mt-2.5 inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-[10px] font-mono uppercase tracking-wider bg-white/[0.06] px-2 py-0.5 rounded border border-white/[0.08] text-neutral-300">
+                      {[...new Set(scenario.steps.map((st) => st.risk_tier))].join(', ')} risk
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold text-white tracking-tight">{scenario.title}</h2>
+                  <p className="mt-1.5 text-sm text-neutral-400 leading-relaxed">{scenario.description}</p>
+                  <a href={pageUrl(scenario.page)} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
                     Open the test page <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
@@ -140,7 +160,7 @@ export function QAEngineScreen() {
                   <button
                     onClick={run}
                     disabled={running || apiError}
-                    className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black transition-all shadow-sm active:scale-[0.98] disabled:opacity-40 cursor-pointer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-black transition-all shadow-sm active:scale-[0.98] disabled:opacity-40 cursor-pointer"
                   >
                     {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
                     {running ? `Running… ${(elapsed / 1000).toFixed(1)}s` : 'Run in browser'}
@@ -151,27 +171,43 @@ export function QAEngineScreen() {
                   </label>
                 </div>
               </div>
-              <ol className="space-y-1 text-xs text-neutral-400">
-                {scenario.steps.map((st, i) => (
-                  <li key={st.id} className="font-mono">
-                    {i + 1}. {st.name} · <code>{st.original_selector}</code> · {st.risk_tier} risk
-                  </li>
-                ))}
-              </ol>
+
+              <div>
+                <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-2.5">Execution Sequence</div>
+                <ol className="space-y-2 text-xs text-neutral-400">
+                  {scenario.steps.map((st, i) => (
+                    <li key={st.id} className="flex flex-wrap items-center gap-2 p-2.5 rounded-lg bg-black/40 border border-white/[0.04] font-mono">
+                      <span className="w-5 h-5 rounded-full bg-white/[0.06] border border-white/[0.08] text-neutral-300 flex items-center justify-center text-[10px] font-bold">
+                        {i + 1}
+                      </span>
+                      <span className="font-semibold text-neutral-200">{st.name}</span>
+                      <span>·</span>
+                      <code className="bg-white/[0.04] px-1.5 py-0.5 rounded text-neutral-300 border border-white/[0.06]">{st.original_selector}</code>
+                      <span>·</span>
+                      <span className="text-neutral-500">{st.risk_tier} risk</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </div>
           )}
 
           {runError && <div className="rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 px-4 py-3 text-sm text-neutral-200">{runError}</div>}
 
           {result && (
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-white/[0.08] bg-white/[0.02] px-4 py-3 text-xs text-neutral-300">
-              <span>Finished in <b className="text-white font-mono tabular-nums">{(result.duration_ms / 1000).toFixed(1)} s</b></span>
-              {['heal', 'flag', 'escalate'].map((a) => {
-                const n = decided.filter((s) => s.engine.recommended_action === a).length;
-                return n ? <span key={a} className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full" style={{ background: ACTION[a].color }} />{n} × {ACTION[a].label}</span> : null;
-              })}
-              <span>{decided.filter((s) => s.score.action_acceptable).length}/{decided.length} match ground truth</span>
-              {decided.some((s) => s.score.masked_regression) && <span className="font-semibold text-[#ff453a]">real bug let through</span>}
+            <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-3.5 text-xs text-neutral-300 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="font-medium">Finished in <b className="text-white font-mono tabular-nums">{(result.duration_ms / 1000).toFixed(1)} s</b></span>
+                <span>·</span>
+                <span className="font-medium">{decided.filter((s) => s.score.action_acceptable).length}/{decided.length} match ground truth</span>
+              </div>
+              <div className="flex flex-wrap items-center gap-3">
+                {['heal', 'flag', 'escalate'].map((a) => {
+                  const n = decided.filter((s) => s.engine.recommended_action === a).length;
+                  return n ? <span key={a} className="flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-[11px] font-mono"><span className="h-2 w-2 rounded-full" style={{ background: ACTION[a].color }} />{n} × {ACTION[a].label}</span> : null;
+                })}
+                {decided.some((s) => s.score.masked_regression) && <span className="font-semibold text-[#ff453a] bg-[#ff453a]/10 px-2 py-0.5 rounded-full border border-[#ff453a]/30">real bug let through</span>}
+              </div>
             </div>
           )}
 

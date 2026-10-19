@@ -7,12 +7,17 @@ const ACTION_ICON = { heal: CheckCircle2, flag: Flag, escalate: ShieldAlert };
 
 function Section({ n, title, hint, children }) {
   return (
-    <section className="space-y-3">
-      <div>
-        <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500">{n} · {title}</div>
-        {hint && <div className="text-[11px] text-neutral-500">{hint}</div>}
+    <section className="space-y-3.5 bg-black/25 p-4 rounded-xl border border-white/[0.04]">
+      <div className="flex flex-col gap-0.5 border-b border-white/[0.04] pb-2.5">
+        <div className="flex items-center gap-2">
+          <span className="w-4 h-4 rounded-full bg-white/[0.06] text-neutral-300 text-[10px] font-mono font-bold flex items-center justify-center">{n}</span>
+          <span className="text-xs font-semibold text-white tracking-tight">{title}</span>
+        </div>
+        {hint && <div className="text-[11px] text-neutral-400 pl-6 leading-tight">{hint}</div>}
       </div>
-      {children}
+      <div>
+        {children}
+      </div>
     </section>
   );
 }
@@ -20,39 +25,49 @@ function Section({ n, title, hint, children }) {
 function Observed({ step }) {
   const s = step.raw_signals;
   const o = step.observations || {};
-  const yesNo = (v) => (v == null ? <span className="text-neutral-500">not checked</span> : v ? 'yes' : 'no');
+  const yesNo = (v) => (v == null ? <span className="text-neutral-500 font-mono">not checked</span> : v ? <span className="text-[#30d158] font-mono font-semibold">yes</span> : <span className="text-neutral-400 font-mono">no</span>);
   const rows = [
     ['Original button reappeared after waiting', yesNo(s.original_resolved_after_wait)],
     ['New button proposed by Groq', step.context.proposed_selector
-      ? <code key="v" className="text-neutral-200">{step.context.proposed_selector}</code>
-      : <span key="v" className="text-neutral-500">{s.original_resolved_after_wait ? 'not needed' : 'none'}</span>],
-    ['Elements matching it', s.relocated_match_count ?? <span key="v" className="text-neutral-500">n/a</span>],
+      ? <code key="v" className="text-neutral-200 bg-white/[0.05] px-1.5 py-0.5 rounded border border-white/[0.06] text-[11px]">{step.context.proposed_selector}</code>
+      : <span key="v" className="text-neutral-500 font-mono">{s.original_resolved_after_wait ? 'not needed' : 'none'}</span>],
+    ['Elements matching it', s.relocated_match_count ?? <span key="v" className="text-neutral-500 font-mono">n/a</span>],
     ['Click went through', yesNo(s.action_succeeded)],
     ['Expected result appeared', yesNo(s.expected_state_reached)],
-    ['Error banner shown', yesNo(s.error_state_shown)],
-    ['Page crashes (uncaught errors)', s.uncaught_page_errors ?? '—'],
-    ['Failed network requests', s.failed_requests ?? '—'],
-    ['Console errors', s.console_errors ?? '—'],
+    ['Error banner shown', s.error_state_shown ? <span className="text-[#ff453a] font-mono font-semibold">yes</span> : yesNo(s.error_state_shown)],
+    ['Page crashes (uncaught errors)', s.uncaught_page_errors > 0 ? <span className="text-[#ff453a] font-mono font-semibold">{s.uncaught_page_errors}</span> : (s.uncaught_page_errors ?? '—')],
+    ['Failed network requests', s.failed_requests > 0 ? <span className="text-[#ff453a] font-mono font-semibold">{s.failed_requests}</span> : (s.failed_requests ?? '—')],
+    ['Console errors', s.console_errors > 0 ? <span className="text-[#ff9f0a] font-mono font-semibold">{s.console_errors}</span> : (s.console_errors ?? '—')],
   ];
   const messages = [...(o.page_errors || []).map((m) => ['crash', m]), ...(o.failed_requests || []).map((m) => ['request', m]), ...(o.console_errors || []).map((m) => ['console', m])];
   return (
     <div className="space-y-3">
-      <dl className="grid grid-cols-1 gap-x-6 gap-y-1.5 text-xs sm:grid-cols-2">
+      <dl className="grid grid-cols-1 gap-x-6 gap-y-2 text-xs sm:grid-cols-2">
         {rows.map(([k, v]) => (
-          <div key={k} className="flex justify-between gap-3 border-b border-white/[0.04] pb-1">
-            <dt className="text-neutral-400">{k}</dt><dd className="text-right font-mono text-neutral-200">{v}</dd>
+          <div key={k} className="flex justify-between items-center gap-3 border-b border-white/[0.04] pb-1.5">
+            <dt className="text-neutral-400 text-[11px]">{k}</dt>
+            <dd className="text-right font-mono text-neutral-200">{v}</dd>
           </div>
         ))}
       </dl>
       {step.relocation_error && (
-        <div className="flex items-start gap-2 rounded-md border border-[#fab219]/30 bg-[#fab219]/5 px-3 py-2 text-xs text-neutral-300">
-          <AlertTriangle className="mt-0.5 h-3.5 w-3.5 flex-none text-[#fab219]" />
+        <div className="flex items-start gap-2 rounded-xl border border-[#ff9f0a]/30 bg-[#ff9f0a]/10 px-3.5 py-2.5 text-xs text-neutral-200">
+          <AlertTriangle className="mt-0.5 h-3.5 w-3.5 flex-none text-[#ff9f0a]" />
           <span>Relocation problem: {step.relocation_error}</span>
         </div>
       )}
       {messages.length > 0 && (
-        <div className="max-h-28 overflow-auto rounded-md border border-white/[0.06] bg-black/60 p-2 font-mono text-[11px] text-neutral-400">
-          {messages.map(([kind, m], i) => <div key={i}><span className="text-neutral-600">[{kind}]</span> {m}</div>)}
+        <div className="max-h-28 overflow-auto rounded-xl border border-white/[0.08] bg-black/70 p-3 font-mono text-[11px] text-neutral-300 space-y-1">
+          {messages.map(([kind, m], i) => (
+            <div key={i} className="flex items-start gap-2">
+              <span className={`px-1 py-0.2 rounded text-[10px] uppercase font-bold ${
+                kind === 'crash' ? 'text-[#ff453a] bg-[#ff453a]/15' :
+                kind === 'request' ? 'text-[#ff9f0a] bg-[#ff9f0a]/15' :
+                'text-[#0a84ff] bg-[#0a84ff]/15'
+              }`}>[{kind}]</span>
+              <span className="flex-1 break-all text-neutral-300">{m}</span>
+            </div>
+          ))}
         </div>
       )}
     </div>
