@@ -26,12 +26,6 @@ export function ConfidenceDial({ score = 0, size = 160, isLoading = false, label
     <div className="flex flex-col items-center justify-center relative py-1 select-none">
       <div className="relative" style={{ width: size, height: size }}>
         
-        {/* Subtle radial glow */}
-        <div 
-          className="absolute inset-2 rounded-full blur-2xl transition-all duration-700 opacity-20 pointer-events-none" 
-          style={{ backgroundColor: isLoading ? 'rgba(255, 255, 255, 0.4)' : strokeColor }}
-        />
-
         <svg width={size} height={size} className="transform -rotate-90">
           {/* Background track */}
           <circle

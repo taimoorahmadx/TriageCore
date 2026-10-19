@@ -100,10 +100,7 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
             </>
           ) : (
             <>
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#30d158] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#30d158]"></span>
-              </span>
+              <span className="w-2 h-2 rounded-full bg-[#30d158]"></span>
               <span>Run Live Detection</span>
             </>
           )}
