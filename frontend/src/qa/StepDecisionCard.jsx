@@ -1,19 +1,42 @@
 import React, { useState } from 'react';
-import { AlertTriangle, CheckCircle2, ChevronDown, Flag, ShieldAlert, XCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, ChevronDown, Flag, Info, ShieldAlert, XCircle } from 'lucide-react';
 import { CauseBars, EvidenceBars, LossBars } from './charts';
 import { ACTION, CAUSE, RISK, pct } from './theme';
 
 const ACTION_ICON = { heal: CheckCircle2, flag: Flag, escalate: ShieldAlert };
 
+function InfoTooltip({ text }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="relative inline-block ml-1">
+      <button
+        type="button"
+        onMouseEnter={() => setOpen(true)}
+        onMouseLeave={() => setOpen(false)}
+        onClick={() => setOpen(!open)}
+        className="text-neutral-500 hover:text-neutral-300 transition-colors p-0.5 rounded cursor-help inline-flex items-center"
+        aria-label="Info"
+      >
+        <Info className="h-3.5 w-3.5" />
+      </button>
+      {open && (
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-1.5 z-50 w-64 p-2 text-[11px] leading-normal text-neutral-200 bg-[#16161a] border border-white/10 rounded-lg shadow-xl backdrop-blur-md pointer-events-none">
+          {text}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function Section({ n, title, hint, children }) {
   return (
-    <section className="space-y-3.5 bg-black/25 p-4 rounded-xl border border-white/[0.04]">
-      <div className="flex flex-col gap-0.5 border-b border-white/[0.04] pb-2.5">
+    <section className="space-y-3 bg-black/25 p-4 rounded-xl border border-white/[0.04]">
+      <div className="flex items-center justify-between border-b border-white/[0.04] pb-2">
         <div className="flex items-center gap-2">
           <span className="w-4 h-4 rounded-full bg-white/[0.06] text-neutral-300 text-[10px] font-mono font-bold flex items-center justify-center">{n}</span>
           <span className="text-xs font-semibold text-white tracking-tight">{title}</span>
+          {hint && <InfoTooltip text={hint} />}
         </div>
-        {hint && <div className="text-[11px] text-neutral-400 pl-6 leading-tight">{hint}</div>}
       </div>
       <div>
         {children}
@@ -111,30 +134,44 @@ export function StepDecisionCard({ step, index, priors }) {
         </div>
       </header>
 
-      <div className="grid gap-8 px-6 py-6 lg:grid-cols-2">
+      <div className="grid gap-6 px-6 py-6 lg:grid-cols-2">
         <Section n="1" title="What the browser saw" hint="Collected by Playwright after the click">
           <Observed step={step} />
         </Section>
 
-        <Section n="2" title="Which way each clue points" hint="Bar length = how strongly the clue changes the odds (hover for the factor)">
-          <EvidenceBars details={d} priors={priors} />
-          {d.missing_groups?.length > 0 && (
-            <p className="text-[11px] text-neutral-500">Not observed, so ignored (never assumed fine): {d.missing_groups.join(', ')}</p>
-          )}
-        </Section>
-
-        <Section n="3" title="Most likely cause" hint="Starting guess updated by every clue (Bayes' rule)">
+        <Section n="2" title="Most likely cause" hint="Starting guess updated by every clue (Bayes' rule)">
           <CauseBars posterior={d.posterior} />
         </Section>
 
-        <Section n="4" title="Decision: cheapest action on average" hint="Probability of each cause × cost of a wrong action at this risk level. Lower is better.">
-          <LossBars details={d} chosen={e.recommended_action} />
-          {heal != null && (
-            <p className="text-[11px] text-neutral-400">
-              At {step.risk_tier} risk, auto-heal needs P(harmless rename) ≥ <b className="text-neutral-200">{pct(heal)}</b>; this step: <b className="text-neutral-200">{pct(d.posterior.stale_selector)}</b>.
-            </p>
-          )}
-        </Section>
+        <div className="lg:col-span-2">
+          <details className="rounded-xl border border-white/[0.06] bg-black/20 p-4 transition-all">
+            <summary className="cursor-pointer text-xs font-semibold text-neutral-300 flex items-center justify-between select-none">
+              <span className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded-full bg-white/[0.06] text-neutral-400 text-[10px] font-mono font-bold flex items-center justify-center">3</span>
+                <span>Bayesian evidence weights & decision math</span>
+              </span>
+              <span className="text-[11px] font-mono text-neutral-500 hover:text-neutral-300">Click to expand / collapse</span>
+            </summary>
+            
+            <div className="mt-4 grid gap-6 pt-4 border-t border-white/[0.04] lg:grid-cols-2">
+              <Section n="A" title="Which way each clue points" hint="Bar length = how strongly the clue changes the odds (hover for the factor)">
+                <EvidenceBars details={d} priors={priors} />
+                {d.missing_groups?.length > 0 && (
+                  <p className="text-[11px] text-neutral-500">Not observed, so ignored (never assumed fine): {d.missing_groups.join(', ')}</p>
+                )}
+              </Section>
+
+              <Section n="B" title="Decision: cheapest action on average" hint="Probability of each cause × cost of a wrong action at this risk level. Lower is better.">
+                <LossBars details={d} chosen={e.recommended_action} />
+                {heal != null && (
+                  <p className="text-[11px] text-neutral-400">
+                    At {step.risk_tier} risk, auto-heal needs P(harmless rename) ≥ <b className="text-neutral-200">{pct(heal)}</b>; this step: <b className="text-neutral-200">{pct(d.posterior.stale_selector)}</b>.
+                  </p>
+                )}
+              </Section>
+            </div>
+          </details>
+        </div>
       </div>
 
       <footer className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.06] bg-white/[0.01] px-6 py-3.5 text-xs">

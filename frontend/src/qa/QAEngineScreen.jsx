@@ -74,6 +74,7 @@ export function QAEngineScreen() {
   const [selected, setSelected] = useState(null);
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState(null);
+  const [activeStepTab, setActiveStepTab] = useState(0);
   const [runError, setRunError] = useState(null);
   const [showBrowser, setShowBrowser] = useState(false);
   const elapsed = useElapsed(running);
@@ -87,7 +88,7 @@ export function QAEngineScreen() {
   const scenario = scenarios.find((s) => s.id === selected);
 
   const run = async () => {
-    setRunning(true); setRunError(null); setResult(null);
+    setRunning(true); setRunError(null); setResult(null); setActiveStepTab(0);
     try {
       setResult(await qaApi.run(selected, !showBrowser));
     } catch (err) {
@@ -120,7 +121,7 @@ export function QAEngineScreen() {
           {scenarios.map((s) => (
             <button
               key={s.id}
-              onClick={() => { setSelected(s.id); setResult(null); setRunError(null); }}
+              onClick={() => { setSelected(s.id); setResult(null); setRunError(null); setActiveStepTab(0); }}
               className={`group w-full rounded-xl border p-4 text-left transition-all cursor-pointer relative overflow-hidden ${
                 s.id === selected 
                   ? 'border-white/20 bg-white/[0.07] shadow-sm' 
@@ -195,23 +196,61 @@ export function QAEngineScreen() {
           {runError && <div className="rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 px-4 py-3 text-sm text-neutral-200">{runError}</div>}
 
           {result && (
-            <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-3.5 text-xs text-neutral-300 shadow-sm">
-              <div className="flex items-center gap-3">
-                <span className="font-medium">Finished in <b className="text-white font-mono tabular-nums">{(result.duration_ms / 1000).toFixed(1)} s</b></span>
-                <span>·</span>
-                <span className="font-medium">{decided.filter((s) => s.score.action_acceptable).length}/{decided.length} match ground truth</span>
+            <div className="space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-3.5 text-xs text-neutral-300 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="font-medium">Finished in <b className="text-white font-mono tabular-nums">{(result.duration_ms / 1000).toFixed(1)} s</b></span>
+                  <span>·</span>
+                  <span className="font-medium">{decided.filter((s) => s.score.action_acceptable).length}/{decided.length} match ground truth</span>
+                </div>
+                <div className="flex flex-wrap items-center gap-3">
+                  {['heal', 'flag', 'escalate'].map((a) => {
+                    const n = decided.filter((s) => s.engine.recommended_action === a).length;
+                    return n ? <span key={a} className="flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-[11px] font-mono"><span className="h-2 w-2 rounded-full" style={{ background: ACTION[a].color }} />{n} × {ACTION[a].label}</span> : null;
+                  })}
+                  {decided.some((s) => s.score.masked_regression) && <span className="font-semibold text-[#ff453a] bg-[#ff453a]/10 px-2 py-0.5 rounded-full border border-[#ff453a]/30">real bug let through</span>}
+                </div>
               </div>
-              <div className="flex flex-wrap items-center gap-3">
-                {['heal', 'flag', 'escalate'].map((a) => {
-                  const n = decided.filter((s) => s.engine.recommended_action === a).length;
-                  return n ? <span key={a} className="flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-[11px] font-mono"><span className="h-2 w-2 rounded-full" style={{ background: ACTION[a].color }} />{n} × {ACTION[a].label}</span> : null;
-                })}
-                {decided.some((s) => s.score.masked_regression) && <span className="font-semibold text-[#ff453a] bg-[#ff453a]/10 px-2 py-0.5 rounded-full border border-[#ff453a]/30">real bug let through</span>}
-              </div>
+
+              {result.steps.length > 1 && (
+                <div className="flex items-center gap-2 border-b border-white/[0.08] pb-1 overflow-x-auto">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mr-2 shrink-0">Select Step:</span>
+                  {result.steps.map((st, i) => {
+                    const act = st.engine ? ACTION[st.engine.recommended_action] : null;
+                    return (
+                      <button
+                        key={st.step_id}
+                        type="button"
+                        onClick={() => setActiveStepTab(i)}
+                        className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-mono transition-all cursor-pointer shrink-0 ${
+                          activeStepTab === i
+                            ? 'bg-white/10 text-white border border-white/20 shadow-sm'
+                            : 'text-neutral-400 hover:text-white bg-transparent hover:bg-white/[0.04]'
+                        }`}
+                      >
+                        <span className="w-4 h-4 rounded-full bg-white/[0.08] flex items-center justify-center text-[10px] font-bold">
+                          {i + 1}
+                        </span>
+                        <span>{st.name}</span>
+                        {act && (
+                          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: act.color }} />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
+              {result.steps[activeStepTab] && (
+                <StepDecisionCard
+                  key={result.steps[activeStepTab].step_id}
+                  step={result.steps[activeStepTab]}
+                  index={activeStepTab}
+                  priors={engine?.priors}
+                />
+              )}
             </div>
           )}
-
-          {result?.steps.map((st, i) => <StepDecisionCard key={st.step_id} step={st} index={i} priors={engine?.priors} />)}
 
           <EngineNumbers engine={engine} />
         </section>
