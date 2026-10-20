@@ -75,7 +75,11 @@ class GroqRelocator:
             req = urllib.request.Request(
                 GROQ_URL,
                 data=body,
-                headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.api_key}"},
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {self.api_key}",
+                    "User-Agent": "Mozilla/5.0 (compatible; TriageCore/1.0)",
+                },
             )
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout_s) as resp:
