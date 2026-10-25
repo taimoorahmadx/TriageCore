@@ -48,6 +48,9 @@ results/*
 # Docker
 .docker/
 
+# Local decision database
+data/
+
 # Logs
 *.log
 

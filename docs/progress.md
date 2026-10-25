@@ -6,9 +6,8 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A3 is done: legacy screens live in `frontend/src/legacy/`; `App.jsx` routes the QA Engine,
-  Evaluation and Proposal PoC tabs. Frontend lint/build pass, and the user verified the UI
-  click-through.
+- A5 is done: fresh setup and all 44 tests pass. `make weights` and ruff on the touched Python file
+  pass; the weights diff contains only the requested comment change.
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.

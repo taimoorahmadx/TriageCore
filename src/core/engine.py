@@ -12,7 +12,7 @@ Pipeline (identical for every source):
                 --MinExpectedLossPolicy--> action  --> reasoning trace
 
 The engine is pure computation: no database, network or LLM calls. Persistence
-(Postgres) and queuing (Redis) wrap around it in later milestones.
+(src/db/store.py) wraps around it in later milestones.
 """
 
 from __future__ import annotations
