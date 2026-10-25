@@ -32,7 +32,34 @@ For example, the likely cause may be `likely_regression`, while the recommended 
 
 The user supplies a browser test scenario. In this project, a scenario includes a page to open, an action to take, the original selector used by the test, and a way to check whether the expected result happened. Some steps also specify the risk tier and the part of the page to search for a replacement element.
 
-This is an existing scripted test. TriageCore does **not** currently start with a plain-English request and invent a whole test for the user.
+Here, “test” means a step described in `tests/scenarios/qa_scenarios.yaml` and run by the project's Python Playwright runner. It is **not** currently an ordinary Playwright test file that TriageCore edits. TriageCore also does **not** start with a plain-English request and invent a whole test for the user.
+
+### What is a selector, and what does “heal” change?
+
+A **selector** is a string Playwright uses to find an element on a web page. For example, `#add-to-cart` means “find the element whose HTML `id` is `add-to-cart`.” The `#` is the CSS-selector symbol for an ID. If a developer changes that ID, the old selector no longer finds the button.
+
+If the old selector fails, Playwright reads the current HTML inside the page area named in the scenario, or the whole page body if no area is named. TriageCore sends Groq the old selector, the element's purpose, and at most the **first 6,000 characters** of that HTML. The limit is set by `MAX_HTML_CHARS` in `src/browser/relocator.py`.
+
+That means the browser can read a larger page, but **Groq only sees the portion sent in its prompt**. If the target element is outside the chosen page area, or appears after the first 6,000 characters, Groq may not see it. From the information in the code and project notes, 6,000 is a limit in the current implementation; its reason is not recorded as a reviewed design decision.
+
+Groq is asked for **one** replacement selector. This is not a search that tries many possible selectors. The code may retry the Groq request if the network/API call fails, but it does not ask for more selector guesses because a selector matched the wrong thing. Playwright checks whether the proposed selector matches exactly one element, then clicks it during the current run.
+
+**Exactly one match only proves there is one match. It does not prove that it is the intended element.** For example, a wrong button might be the only button matching a weak selector. The runner observes whether the expected result appears after clicking, but the current code can still send that evidence to the decision engine; a missing expected result is not yet an unconditional block on `heal`.
+
+If Groq cannot see the real target, it may still guess a selector. If that selector matches zero elements, the runner has no element to click and healing is blocked. If it matches several, the runner refuses to choose. If it matches one wrong element, uniqueness alone will not catch the mistake: the runner may click it, then check the observed result. The expected-result hard block is planned in TODO X1 but is not implemented yet. The agent does not keep trying alternative selector guesses.
+
+So `heal` means: **use the replacement selector for this run instead of the old, broken selector.** It does not change the button, write the replacement into `qa_scenarios.yaml`, or permanently repair a Playwright test file. The planned Q1 task adds a suggested patch that a person can review; even that patch is not applied automatically.
+
+### How could we make a wrong replacement safer?
+
+Treat “matches one element” as only the first check, not proof that the replacement is right. Useful safeguards are:
+
+1. **Check what the element is before clicking.** Match the expected role and accessible name/text, and keep the search inside the scenario's specific page section when possible. For example, the target should be the “Add to Cart” button inside the keyboard's product card, not just any unique button on the page.
+2. **Require the expected result after clicking.** If the cart count or order confirmation does not change as expected, the run must fail/escalate; it must not count as healed. This hard block is already listed as TODO X1, but is not implemented yet.
+3. **Do not automatically click a replacement for dangerous actions.** For actions like payment or deleting data, stop for a human unless the project can guarantee a safe test environment and explicit protections. This is a real gap to address: the current runner clicks a unique replacement to collect post-click evidence before the engine makes its decision, so the risk tier currently does not prevent that first click.
+4. **If a check is uncertain, stop after the one proposal.** Do not keep trying guesses until something happens to work; that can click the wrong control and hide the real issue.
+
+The first and third points are safeguards to consider; they are not all implemented or currently listed as completed work. A successful selector check and a successful post-click check reduce risk, but no single check proves correctness in every application.
 
 ### What TriageCore does
 
@@ -49,7 +76,7 @@ For each step, the browser runner:
 
 TriageCore returns a likely cause, an action, a confidence score, and a reasoning trace. Depending on the evidence, the action may be:
 
-- `heal`: use the relocated selector for this run. The planned patch is a suggestion for a person to review; it is not silently written into the test file.
+- `heal`: use the relocated selector for this run. It repairs how this run finds the element; it does not permanently edit the test recipe. The planned patch is only a suggestion for a person to review.
 - `flag`: treat the issue as flaky and report it.
 - `escalate`: stop and ask a human to investigate.
 
@@ -76,6 +103,12 @@ The engine has two reasoning stages:
 
 1. **Estimate causes from evidence.** It uses Bayes' rule to update the probability of each possible cause.
 2. **Compare actions by expected loss.** It estimates the cost of each action under those possible causes and chooses the action with the lowest expected cost. Escalation is always an option.
+
+### An honest note about the engine
+
+The calculations are established methods: Bayesian probability followed by a cost comparison. The engine is not a new learning algorithm, and it does not train itself from test runs. Its value is in how the project applies those methods: gathering browser evidence, grouping related clues, accounting for the risk of a wrong action, and escalating when acting is unsafe.
+
+That application still needs to prove its value. The current QA examples are small and controlled, so they do not yet show that the engine makes better decisions than simpler rules on real applications. A strong evaluation on realistic cases is what can make this a convincing project; the math alone does not.
 
 ### Bayes' rule, with project numbers
 
