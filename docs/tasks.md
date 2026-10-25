@@ -61,7 +61,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] Input and output schemas match the contract. *Evidence: `test_outputs_validate_against_contract`.*
 - [x] Human-authored QA weights (64 values) with reasons. *Evidence: `src/core/weights.yaml`, `docs/contracts/weights_elicitation.md`, `make sensitivity`.*
 - [ ] Correct score and classification on 5 hand-written cases. *28 engine tests pass on synthetic weights; the hand-computed posterior in `test_posterior_matches_hand_calculation` still needs a human check.*
-- [ ] Decisions persisted. → task **S1** (SQLite instead of Postgres, ADR 005).
+- [x] Decisions persisted. *Evidence: `tests/test_store.py`; live `/api/qa/run` created three rows returned by `/api/qa/decisions`.* → task **S1** (SQLite instead of Postgres, ADR 005).
 
 ### M2 · Browser evidence collector · Abdul · done
 - [x] 3+ failing test scripts trigger extraction without crashing. *Evidence: 12 tests in `tests/test_runner.py`.*

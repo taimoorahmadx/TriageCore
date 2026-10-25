@@ -33,7 +33,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 2. `feature/store` · decision database
-- [ ] S1 · SQLite store for every decision, `GET /api/qa/decisions`
+- [x] S1 · SQLite store for every decision, `GET /api/qa/decisions`
 
 → Merge into `main` (needed by C5 and D1).
 
