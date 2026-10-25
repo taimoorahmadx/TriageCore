@@ -91,10 +91,14 @@ class QAAdapter:
         """Actions that cannot be taken at all, regardless of probabilities.
 
         Healing means applying a relocated selector, so it is only possible when
-        exactly one element was relocated. Ambiguity is never resolved silently.
+        exactly one element was relocated and the expected state was reached.
+        Ambiguity is never resolved silently.
         """
         healed = _optional_bool(raw_signals, "selector_healed")
         matches = _optional_count(raw_signals, "relocated_match_count")
+        state_reached = _optional_bool(raw_signals, "expected_state_reached")
+        if state_reached is False:
+            return {"heal": "expected state was not reached"}
         if healed is not True:
             return {"heal": "no relocated selector to apply (original selector was used)"}
         if matches is None:

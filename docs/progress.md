@@ -6,9 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Architecture audit done 2026-10-25: `.agents/tasks/architecture-audit-2026-10-25.md` (read the
-  section a task cites, not the whole file). Its fixes are TODO §0 (X1–X6, branch `fix/audit`),
-  approved by the project owner. Do §0 first. No code has changed yet.
+- Architecture audit fixes are TODO §0 (X1–X6, branch `fix/audit`), approved by the project owner.
+  X1 is complete: QA `heal` is blocked when `expected_state_reached` is false; focused engine tests
+  and changed-file Ruff check pass. Continue with X2.
 - Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; project owner builds all of CI;
   CI evidence = pre-rerun facts, rerun outcome = label; `heal` blocked when expected state not
   reached; project owner writes B1 labels before any run.

@@ -34,6 +34,7 @@ The engine is built from four parts:
    - For a two-way choice this reduces to τ = C_mask / (C_mask + C_escalate). The documents' 85% threshold corresponds to masking being about 5.7 times worse than a needless escalation.
 3. **Hard preconditions.**
    - `heal` requires exactly one relocated element; ambiguity is never resolved silently.
+   - QA `heal` is blocked when `expected_state_reached` is `false`; `null` means unobserved and does not trigger this block.
    - Evidence that fits no known cause (below `unknown_pattern_floor`) escalates as "unrecognised pattern".
 4. **Data, not code.**
    - Causes, groups, actions and costs live in `weights.yaml` and are validated against the contract enums.

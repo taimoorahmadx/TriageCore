@@ -14,7 +14,7 @@ merge it into `main`, then start the next section from an up-to-date `main`:
 ## 0. `fix/audit` · architecture audit fixes (2026-10-25)
 No task files. Steps and file:line evidence are in `.agents/tasks/architecture-audit-2026-10-25.md`
 (section named per line). The project owner approved all of these on 2026-10-25.
-- [ ] X1 · Block `heal` when `expected_state_reached` is false; add tests; update `raw_signals.md`, `engine_io.md` (hard preconditions), ADR 004; add a `docs/log/changes.md` row · audit M4(a)
+- [x] X1 · Block `heal` when `expected_state_reached` is false; add tests; update `raw_signals.md`, `engine_io.md` (hard preconditions), ADR 004; add a `docs/log/changes.md` row · audit M4(a)
 - [ ] X2 · Drop the misleading "Break-even" line from the trace; add a trace-content test (FR-E7); fix `engine_io.md` · audit M5
 - [ ] X3 · Move scripted `/api/poc/run` and `/api/ci/triage` to `/api/legacy/*`; update `frontend/src/legacy/` callers and AGENTS.md · audit M6
 - [ ] X4 · Fix `recommended_action` docstring in `src/core/models.py` (min expected loss, ADR 004) and its 5 ruff findings so `make lint` exits 0 · audit M7

@@ -33,7 +33,7 @@ Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/cont
 | Field | Meaning |
 |---|---|
 | `classification` | The most probable cause under Bayes' rule. A diagnosis only, never an action. |
-| `recommended_action` | The action with the lowest expected loss for the step's risk tier. `escalate` is always available. Hard blocks (e.g. `heal` needs exactly one relocated element) remove actions first. |
+| `recommended_action` | The action with the lowest expected loss for the step's risk tier. `escalate` is always available. Hard blocks remove actions first: QA `heal` requires exactly one relocated element and `expected_state_reached` must not be `false`. |
 | `confidence_score` | `round(100 × P(the best available autonomous action is correct))`. If the decision is to act, it is the probability that the chosen action is right. If the decision is `escalate`, it is how sure the engine would have been had it acted. **It is not compared against a fixed threshold**, so an escalated step can still show a high score (e.g. a high-risk step that needs P ≥ 0.99). |
 | `reasoning_trace` | Exact account: evidence and log-likelihoods, missing groups, posterior, blocked actions, expected losses, break-even probabilities, decision. |
 

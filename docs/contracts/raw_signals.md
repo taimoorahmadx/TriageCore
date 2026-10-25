@@ -66,6 +66,8 @@ The signals are pooled into **evidence groups**. Signals that share a cause coun
 | `timing` | `original_resolved_after_wait` | `resolved_after_wait`, `not_resolved` |
 
 A `null` signal means "not observed". It is left out of the calculation, never treated as "fine".
+As a hard safety precondition, `expected_state_reached: false` blocks `heal`; `null` does not
+trigger that block because the state was not observed.
 
 - **`classification`** is the most probable cause under Bayes' rule (`stale_selector`, `likely_regression` or `flaky`). It is a diagnosis only.
 - **`recommended_action`** is the action with the lowest expected loss for the step's `risk_tier`, with `escalate` always available. Classification never encodes an action.
