@@ -5,13 +5,13 @@ Agent memory across sessions. Read this first in every session. Keep it under ~8
 cost time; move resolved blockers out. History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Last session (2026-10-25): context files restructured (brief, spec, plan, tasks, progress,
-  contracts, ADR 005/006). No code changed.
-- Code state: QA engine, collector, pipeline, evaluation and UI work. 28 engine tests pass.
-  CI side not started. POC still at the repo root (moves in A2).
+- A1 is done: `src/api/app.py` owns the FastAPI app, while `poc_api/main.py` imports it for the
+  legacy POC and CI routes. Both route checks pass; `make test` passes (44 passed) with local
+  socket access. Its route checks use OpenAPI paths plus mounts because FastAPI 0.162.0 includes
+  QA routes as `_IncludedRouter` objects without `.path`.
 
 ## Next (by lane)
-- A (Taimoor): A1 → A2 → A3 → A5 → A6
+- A (Taimoor): A2 → A3 → A5 → A6
 - Q (Abdul): A4, Q1 (independent) · then Q4 → Q3, Q2 after B2
 - B (Taimoor): B2
 - C (Shazil): C2 → C1 (needs Shazil's decisions) · C4 (independent)
@@ -34,3 +34,5 @@ cost time; move resolved blockers out. History lives in git and `docs/log/ai-usa
 - Port 8000 busy: `fuser -k 8000/tcp`.
 - Without `GROQ_API_KEY`, every renamed step escalates (fail-safe), which is expected, not a bug.
 - Playwright sync API needs plain `def` FastAPI handlers (worker thread), not `async def`.
+- FastAPI 0.162: `app.routes` holds `_IncludedRouter` objects without `.path`. List routes with
+  `app.openapi()["paths"]` plus `getattr(r, "path", None)` for mounts.

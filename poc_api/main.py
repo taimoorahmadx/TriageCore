@@ -1,7 +1,6 @@
 import sys
 from pathlib import Path
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import HTTPException
 from pydantic import BaseModel, Field, ValidationError
 from typing import Literal, Optional
 
@@ -11,34 +10,7 @@ if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
 from poc_recovery import run_scenario
-
-app = FastAPI(
-    title="TriageCore POC Live Detection API",
-    description="Throwaway local API wrapping Playwright + Groq LLM detection for live demo defense.",
-    version="0.1.0"
-)
-
-# Enable CORS for frontend running locally on Vite / dev ports
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:8000",
-        "http://127.0.0.1:8000"
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-from fastapi.staticfiles import StaticFiles
-
-dummy_dir = ROOT_DIR / "tests" / "dummy"
-if dummy_dir.exists():
-    app.mount("/tests/dummy", StaticFiles(directory=str(dummy_dir)), name="dummy")
+from src.api.app import app  # noqa: E402
 
 from typing import Literal, Optional, List, Union
 
@@ -104,15 +76,6 @@ class CiTriageResponse(BaseModel):
     failure_signal: str
     draft_pr: Optional[dict] = None
     duration_ms: int = 420
-
-from src.api.qa_routes import router as qa_router  # real QA pipeline: browser evidence + ConfidenceEngine
-
-app.include_router(qa_router)
-
-
-@app.get("/health")
-def health_check():
-    return {"status": "ok", "service": "triagecore-poc-api"}
 
 @app.post("/api/poc/run", response_model=Union[SuiteResponse, ScenarioResponse])
 def run_poc_scenario(payload: ScenarioRequest):

@@ -9,6 +9,11 @@ Rules for every task:
 - Do exactly the **Steps**. Anything not listed is out of scope; note it in `docs/progress.md` instead.
 - **Check** commands must pass with the shown result before the task is `done`. "Looks right" is not a check.
 - **Stop and ask** means: stop, write the question in `docs/progress.md` under Blockers, and tell the user.
+- **If a Check command itself is broken** (fails because of the command or a library version, not
+  because of your code): replace it in the task file with an equivalent command that verifies the
+  *same* condition, run it, note the change in `progress.md`, and continue. Never weaken what a
+  check verifies, and never change code just to satisfy a broken check. Stop and ask only if you
+  cannot find an equivalent.
 - **Status lives only in the task table below** (`todo`, `doing`, `done`, `blocked (<reason>)`).
   Update it when you start and when you finish.
 - When a task completes a milestone criterion, tick it in "Milestone status" and add the evidence.
@@ -95,7 +100,7 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 
 | ID | Title | Owner | Milestone | Depends | Status |
 |---|---|---|---|---|---|
-| [A1](tasks/a1.md) | Single FastAPI app `src/api/app.py` | Taimoor | cleanup | — | todo |
+| [A1](tasks/a1.md) | Single FastAPI app `src/api/app.py` | Taimoor | cleanup | — | done |
 | [A2](tasks/a2.md) | Move the POC into `archive/poc/` | Taimoor | cleanup | A1 | todo |
 | [A3](tasks/a3.md) | Isolate legacy frontend screens | Taimoor | cleanup | A2 | todo |
 | [A4](tasks/a4.md) | Fail-safe: step errors escalate | Abdul | M3 | — | todo |
