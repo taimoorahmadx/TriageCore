@@ -6,14 +6,20 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A6 is done. The human confirmed PR #7 passed CI and merged, and PR #8 caught the deliberate engine
-  test failure. Evidence: [PR #7](https://github.com/taimoorahmadx/TriageCore/pull/7) and
-  [PR #8](https://github.com/taimoorahmadx/TriageCore/pull/8). Local weights, 28 engine tests, and
-  frontend lint/build pass.
+- Architecture audit done 2026-10-25: `.agents/tasks/architecture-audit-2026-10-25.md` (read the
+  section a task cites, not the whole file). Its fixes are TODO §0 (X1–X6, branch `fix/audit`),
+  approved by the project owner. Do §0 first. No code has changed yet.
+- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; project owner builds all of CI;
+  CI evidence = pre-rerun facts, rerun outcome = label; `heal` blocked when expected state not
+  reached; project owner writes B1 labels before any run.
 ## Blockers / questions for the team
+- Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
+- C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
+  draft puts `ambiguous_commit`/`attributed_commit`. Decide in C1 (audit Q1).
+- `docs/tasks.md` still lists Shazil as CI owner; owner change not yet in `docs/log/changes.md`.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
-- C1 groups and C9 weights need Shazil's decisions; agents must not invent them.
+- C1 groups and C9 weights need the project owner's decisions; agents must not invent them.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·
