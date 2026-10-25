@@ -14,11 +14,11 @@ The engine diagnoses the cause (`classification`) and decides act vs escalate
 
 | User types | Do |
 |---|---|
-| `next` | Take the first `[ ]` task in `TODO.md` (top to bottom) whose "after" tasks are all `[x]`, and do it. Don't ask for confirmation. |
+| `next` | Take the first `[ ]` line **with a task ID** in `TODO.md` (top to bottom) whose "after" tasks are all `[x]`, and do it. Don't ask for confirmation. Lines without an ID (section 9) are human work; never do them. If the task is in a new section, first tell the user to merge the previous branch and create the section's branch. |
 | `next <lane>` (e.g. `next C`) | Same, but only tasks whose ID starts with that letter. |
 | `do <id>` (e.g. `do a2`) | Do that task. If an "after" task is not `[x]`, say which and stop. |
 | `finish` | Finish the task marked `[~]` in `TODO.md`: rerun its checks and close it. |
-| `status` | Don't code. Show `[~]` and `[!]` tasks, the next available task per person, and open blockers from `progress.md`. |
+| `status` | Don't code. Show `[~]` and `[!]` tasks, the next available task and its branch, and open blockers from `progress.md`. |
 
 **Task status lives only in `TODO.md`:** `[~]` when you start, `[x]` when the checks pass,
 `[!] <reason>` if blocked. Never write status anywhere else.
