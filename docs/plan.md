@@ -50,7 +50,7 @@ src/
   db/        store.py                                                                           [planned]
   agents/    qa_pipeline.py [built] · ci_pipeline.py [planned]
   eval/      evaluate.py [built] · stats.py evaluate_ci.py [planned]
-  api/       app.py [planned] · qa_routes.py [built] · ci_routes.py [planned]
+  api/       app.py [built] · qa_routes.py [built] · ci_routes.py [planned]
 archive/poc/ poc_recovery.py demo_safe.py demo_trap.py legacy_routes.py   (scripted proposal demo)
 tests/       test_*.py · dummy/ · scenarios/ · fixtures/ · ci_corpus/ [planned]
 frontend/src/ qa/ [built] · ci/ [planned] · legacy/ [planned: moved from components/]

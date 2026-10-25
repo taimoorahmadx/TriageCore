@@ -14,7 +14,8 @@ Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/cont
 }
 ```
 
-- `context.risk_tier` is **required** (`low | medium | high`). It selects the loss table in
+- `context.risk_tier` is **required** and must match the source domain's configured loss tiers. QA
+  uses `low | medium | high`; the synthetic CI fixture uses `default`. It selects the loss table in
   `weights.yaml`. A missing or unknown tier raises `ValueError`.
 - All other `context` fields are for traceability only and are not weighted.
 - `source="ci"` raises `RuntimeError` while `ci: enabled: false` in `weights.yaml`.

@@ -7,16 +7,15 @@ History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
 - Architecture audit fixes are TODO §0 (X1–X6, branch `fix/audit`), approved by the project owner.
-  X1–X5 are complete. `FixedRelocator` now exists only in the test support module; full suite passes
-  (47 tests). Continue with X6.
-- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; project owner builds all of CI;
+  X1–X6 are complete. The Q7 item 9 solo-ownership premise was incorrect; CI ownership remains
+  shared, so no ownership change or change-log entry is needed.
+- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1;
   CI evidence = pre-rerun facts, rerun outcome = label; `heal` blocked when expected state not
   reached; project owner writes B1 labels before any run.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
   draft puts `ambiguous_commit`/`attributed_commit`. Decide in C1 (audit Q1).
-- `docs/tasks.md` still lists Shazil as CI owner; owner change not yet in `docs/log/changes.md`.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
 - C1 groups and C9 weights need the project owner's decisions; agents must not invent them.

@@ -23,8 +23,8 @@ A hand-weighted penalty sum, compared against a fixed threshold, was considered 
 The engine is built from four parts:
 
 1. **Diagnosis by semi-naive Bayes.**
-   - Signals are pooled into evidence groups, so signals that share a cause count once.
-   - Groups are treated as conditionally independent given the cause.
+   - Adapters may pool related signals within a group (for example, the QA runtime-failure indicators).
+   - Separate groups are treated as conditionally independent given the cause, so correlation across groups can still affect the posterior.
    - The posterior over causes is computed from human-authored priors and likelihood tables P(state | cause) in `weights.yaml`.
    - Missing evidence is marginalised out.
    - `classification` is the most probable cause, a diagnosis only.
@@ -67,5 +67,5 @@ The engine is built from four parts:
 - **Claim correction:** a ROC analysis on ~50 cases cannot *guarantee* FPR < 5%, because the sampling uncertainty is wide. FYP-II will either report FPR with a confidence interval or use conformal risk control, which gives a finite-sample bound.
 - **Open item for M5:** CI `flaky` naturally maps to a `rerun` action, which is not in the AGENTS.md action enum. The team must decide whether to add it or map flaky → `flag`.
 - **Deferred to Iteration 2:**
-  - Postgres persistence, via a `DecisionStore` adapter around the pure engine;
+  - `DecisionStore` persistence via SQLite, as decided in ADR 005;
   - CI likelihood tables (`ci: enabled: false` until then).

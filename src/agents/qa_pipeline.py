@@ -6,8 +6,8 @@
       -> ConfidenceEngine.evaluate_detailed()       [src/core/engine.py]
       -> compare with the scenario's ground truth
 
-This is the Iteration-1 orchestration. The LangGraph state machine of Milestone 3
-will wrap the same two calls.
+This is the Iteration-1 orchestration in plain Python. LangGraph was considered
+and not selected; see ADR 005.
 """
 
 from __future__ import annotations

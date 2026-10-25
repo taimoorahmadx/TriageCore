@@ -6,10 +6,9 @@
 2. ``SemiNaiveBayes`` combines the group states into a posterior probability
    over causes using Bayes' rule.
 
-Signals that share a cause (e.g. a page error, an error banner and a failed
-request all produced by one broken click handler) are pooled into a single
-group, so the same underlying fault is counted once rather than three times.
-Groups are treated as conditionally independent given the cause.
+Adapters may pool related signals within one group (for example, the QA
+runtime-failure indicators). The model treats separate groups as conditionally
+independent, so correlation between groups can still affect the posterior.
 """
 
 from __future__ import annotations

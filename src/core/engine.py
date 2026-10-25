@@ -11,8 +11,8 @@ Pipeline (identical for every source):
     raw_signals --adapter--> group states --SemiNaiveBayes--> P(cause | evidence)
                 --MinExpectedLossPolicy--> action  --> reasoning trace
 
-The engine is pure computation: no database, network or LLM calls. Persistence
-(src/db/store.py) wraps around it in later milestones.
+The engine is pure computation: no database, network or LLM calls. A
+DecisionStore adapter backed by SQLite is planned around it (ADR 005).
 """
 
 from __future__ import annotations
