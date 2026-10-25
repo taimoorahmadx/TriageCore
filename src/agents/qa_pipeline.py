@@ -103,8 +103,53 @@ def run_scenario(
     page.goto(url)
     steps_out = []
     try:
-        for spec, truth in scenario.steps:
-            ev = collect_step_evidence(page, spec, relocator, timing)
+        for index, (spec, truth) in enumerate(scenario.steps):
+            try:
+                ev = collect_step_evidence(page, spec, relocator, timing)
+            except Exception as exc:
+                steps_out.append(
+                    {
+                        "step_id": spec.id,
+                        "name": spec.name,
+                        "risk_tier": spec.risk_tier,
+                        "status": "error",
+                        "error": f"{type(exc).__name__}: {exc}",
+                        "fail_safe_action": "escalate",
+                        "raw_signals": None,
+                        "context": None,
+                        "observations": None,
+                        "relocation_error": None,
+                        "timings_ms": None,
+                        "truth": {"cause": truth.cause, "acceptable": list(truth.acceptable)},
+                        "engine": None,
+                        "details": None,
+                        "score": score_step("escalate", "error", truth),
+                    }
+                )
+                for skipped_spec, skipped_truth in scenario.steps[index + 1 :]:
+                    steps_out.append(
+                        {
+                            "step_id": skipped_spec.id,
+                            "name": skipped_spec.name,
+                            "risk_tier": skipped_spec.risk_tier,
+                            "status": "error",
+                            "error": "skipped: an earlier step failed",
+                            "fail_safe_action": "escalate",
+                            "raw_signals": None,
+                            "context": None,
+                            "observations": None,
+                            "relocation_error": None,
+                            "timings_ms": None,
+                            "truth": {
+                                "cause": skipped_truth.cause,
+                                "acceptable": list(skipped_truth.acceptable),
+                            },
+                            "engine": None,
+                            "details": None,
+                            "score": score_step("escalate", "error", skipped_truth),
+                        }
+                    )
+                break
             step: dict[str, Any] = {
                 "step_id": spec.id,
                 "name": spec.name,

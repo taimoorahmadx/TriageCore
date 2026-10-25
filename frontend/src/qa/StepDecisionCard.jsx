@@ -99,6 +99,17 @@ function Observed({ step }) {
 
 export function StepDecisionCard({ step, index, priors }) {
   const [showTrace, setShowTrace] = useState(false);
+  if (step.status === 'error') {
+    return (
+      <div className="glass-card rounded-2xl border border-[#ff453a]/30 p-5 text-sm text-neutral-200">
+        <div className="flex items-center gap-2 font-semibold text-[#ff453a]">
+          <AlertTriangle className="h-4 w-4" />
+          Step {index + 1} · {step.name}: Escalated (fail-safe)
+        </div>
+        <p className="mt-2 break-words font-mono text-xs text-neutral-300">{step.error}</p>
+      </div>
+    );
+  }
   if (!step.engine) {
     return (
       <div className="glass-card rounded-2xl p-5 text-sm text-neutral-300">

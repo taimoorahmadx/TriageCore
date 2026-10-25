@@ -73,7 +73,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] LLM proposes a valid selector for 3+ distinct cases. *Evidence: `results/qa_eval_latest.json` (Groq run, 2026-10-20): a usable selector proposed for all 11 renamed steps.*
 - [x] Evaluation against baselines: 12/12 acceptable, 0/4 regressions let through; blind healing let 4/4 through. *Evidence: `make eval`; small team-built suite, see plan §9.*
 - [x] LangGraph decision: not used (ADR 005).
-- [ ] Step errors escalate instead of failing. → task **A4**.
+- [x] Step errors escalate instead of failing. *Evidence: `test_step_error_escalates`; errors and remaining scenario steps are reported as fail-safe escalations.* → task **A4**.
 - [ ] Suggested patch for healed steps. → task **Q1**.
 - [ ] Heal cycle < 10 s measured as p95. → task **Q2**.
 
