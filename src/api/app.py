@@ -28,7 +28,7 @@ app.add_middleware(
 )
 app.mount("/tests/dummy", StaticFiles(directory=str(REPO_ROOT / "tests" / "dummy")), name="dummy")
 app.include_router(qa_router)
-app.include_router(legacy_router)  # scripted proposal demo (archive/poc), never cite
+app.include_router(legacy_router)  # scripted proposal demo; routes stay under /api/legacy/*
 
 
 @app.get("/health")

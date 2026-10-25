@@ -120,7 +120,7 @@ Interpreter is `.venv/bin/python`; override with `make test PY=python3`. Fronten
 
 - **Real:** `src/` (engine, collector, pipeline, evaluation), `/api/qa/*`, the QA Engine and
   Evaluation screens.
-- **Scripted (proposal demo, hardcoded numbers, never cite or extend):** `archive/poc/`, `/api/poc/run` and `/api/ci/triage` in `archive/poc/legacy_routes.py`,
+- **Scripted (proposal demo, hardcoded numbers, never cite or extend):** `archive/poc/`, `/api/legacy/poc/run` and `/api/legacy/ci/triage` in `archive/poc/legacy_routes.py`,
   `frontend/src/components/` except `Navbar.jsx` and `TriageCoreLogo.jsx`, and
   `tests/dummy/{test_page,page_safe_heal,page_regression_trap}.html`. Task A3 moves the legacy screens to `frontend/src/legacy/`.
 

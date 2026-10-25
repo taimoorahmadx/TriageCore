@@ -140,7 +140,7 @@ AttributeError: 'TenantContext' object has no attribute 'schema_name'
     const t2 = setTimeout(() => setQaStep(3), 5500);
 
     try {
-      const resp = await fetch('http://localhost:8000/api/poc/run', {
+      const resp = await fetch('http://localhost:8000/api/legacy/poc/run', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ scenario: scenarioMode })
@@ -291,7 +291,7 @@ AttributeError: 'TenantContext' object has no attribute 'schema_name'
     setCiStep(2); // Step 2: Isolating stack trace & diffing git commits
 
     try {
-      const resp = await fetch('http://localhost:8000/api/ci/triage', {
+      const resp = await fetch('http://localhost:8000/api/legacy/ci/triage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

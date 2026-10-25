@@ -14,7 +14,7 @@ export function QADetailScreen({ onNavigate, onOpenDrawer, qaState, setQaState }
     setErrorMsg(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/poc/run', {
+      const response = await fetch('http://localhost:8000/api/legacy/poc/run', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
