@@ -9,7 +9,7 @@
 4. Stage the files you changed by name (not `git add .`), then commit with a
    [Conventional Commit](https://www.conventionalcommits.org) message, optional scope:
    `feat(core): ...`, `fix(browser): ...`, `docs: ...`, `test(qa): ...`, `chore: ...`
-5. Push: `git push -u origin <branch>` and open a pull request.
+5. Push: `git push -u origin <branch>` and open a pull request. A pull request must be green before review.
 6. Ask another member to review before merging. The reviewer should be able to explain the change.
 7. After merging: `git checkout main && git pull && git branch -d <branch>`.
 

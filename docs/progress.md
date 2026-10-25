@@ -6,8 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A5 is done: fresh setup and all 44 tests pass. `make weights` and ruff on the touched Python file
-  pass; the weights diff contains only the requested comment change.
+- A6 is in progress: the workflow and contributing note are drafted. Local weights and frontend
+  lint/build pass; full pytest is blocked because this sandbox denies localhost sockets (28 passed,
+  16 setup errors). PR CI and the deliberate failure check remain to be verified on GitHub.
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
@@ -18,6 +19,7 @@ History lives in git and `docs/log/ai-usage-log.md`.
   D4 expected-state marker supplied by the test author · D5 no LangGraph · D6 SQLite · D7 one `flaky` label, per-source meaning.
 
 ## Lessons (gotchas that cost time)
+- `make lint` reports 5 pre-existing findings in `src/core/models.py` (A6, 2026-10-25).
 - Chromium logs "Failed to load resource" for every failed request; it is excluded from
   `console_errors` so one 404 is not counted twice.
 - Tailwind v4: `frontend/src/index.css` must keep `@config "../tailwind.config.js";` or the UI is unstyled.
