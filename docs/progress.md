@@ -6,12 +6,11 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Architecture audit fixes are TODO §0 (X1–X6, branch `fix/audit`), approved by the project owner.
-  X1–X6 are complete. The Q7 item 9 solo-ownership premise was incorrect; CI ownership remains
-  shared, so no ownership change or change-log entry is needed.
-- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1;
-  CI evidence = pre-rerun facts, rerun outcome = label; `heal` blocked when expected state not
-  reached; project owner writes B1 labels before any run.
+- S1 is complete on `feature/store`: SQLite decision and CI job tables, QA run persistence, and
+  `GET /api/qa/decisions`. The focused tests and full suite pass; a live QA run returned three stored rows.
+- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; CI evidence = pre-rerun facts,
+  rerun outcome = label; `heal` blocked when expected state not reached; project owner writes B1 labels
+  before any run.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1

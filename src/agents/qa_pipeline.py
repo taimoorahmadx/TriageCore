@@ -14,8 +14,10 @@ from __future__ import annotations
 
 import time
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from uuid import uuid4
 
 import yaml
 from playwright.sync_api import Browser, sync_playwright
@@ -30,6 +32,7 @@ from src.browser.runner import (
 )
 from src.core.engine import ConfidenceEngine
 from src.core.models import ConfidenceEngineInput
+from src.db.store import DecisionStore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DUMMY_DIR = REPO_ROOT / "tests" / "dummy"
@@ -147,6 +150,7 @@ def run_scenarios(
     relocator: Relocator | None = None,
     headless: bool = True,
     base_url: str | None = None,
+    store: DecisionStore | None = None,
 ) -> list[dict[str, Any]]:
     """Run the given scenarios (all if None) in one browser session."""
     engine = engine or ConfidenceEngine()
@@ -162,7 +166,36 @@ def run_scenarios(
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=headless)
             try:
-                return [run_scenario(s, browser, url, engine, relocator) for s in scenarios]
+                results = [run_scenario(s, browser, url, engine, relocator) for s in scenarios]
+                if store is not None:
+                    for result in results:
+                        run_id = str(uuid4())
+                        for step in result["steps"]:
+                            if step["status"] not in {"triage", "error"}:
+                                continue
+                            output = step["engine"]
+                            store.save_decision(
+                                {
+                                    "created_at": datetime.now(timezone.utc).isoformat(),
+                                    "source": "qa",
+                                    "run_id": run_id,
+                                    "case_id": result["scenario_id"],
+                                    "step_id": step["step_id"],
+                                    "status": step["status"],
+                                    "classification": output.get("classification") if output else None,
+                                    "recommended_action": output.get("recommended_action") if output else None,
+                                    "confidence_score": output.get("confidence_score") if output else None,
+                                    "evidence_json": {
+                                        "raw_signals": step["raw_signals"],
+                                        "context": step["context"],
+                                        "observations": step["observations"],
+                                    },
+                                    "output_json": output,
+                                    "details_json": step["details"],
+                                    "error": step["relocation_error"] if step["status"] == "error" else None,
+                                }
+                            )
+                return results
             finally:
                 browser.close()
 

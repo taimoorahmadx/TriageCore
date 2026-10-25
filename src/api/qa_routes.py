@@ -18,12 +18,13 @@ import os
 from typing import Any
 
 from dotenv import load_dotenv
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
 from src.agents.qa_pipeline import load_scenarios, run_scenarios
 from src.core.engine import ConfidenceEngine
 from src.core.weights import implied_threshold
+from src.db.store import default_store
 from src.eval.evaluate import RESULTS_DIR, evaluate
 
 router = APIRouter(prefix="/api/qa", tags=["qa"])
@@ -106,9 +107,16 @@ class RunRequest(BaseModel):
 @router.post("/run")
 def run(req: RunRequest) -> dict[str, Any]:
     try:
-        return run_scenarios([req.scenario_id], engine=get_engine(), headless=req.headless)[0]
+        return run_scenarios(
+            [req.scenario_id], engine=get_engine(), headless=req.headless, store=default_store()
+        )[0]
     except ValueError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
+
+
+@router.get("/decisions")
+def decisions(limit: int = Query(default=50, ge=1, le=500)) -> list[dict]:
+    return default_store().list_decisions(limit, "qa")
 
 
 @router.post("/evaluate")
