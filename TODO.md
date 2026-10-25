@@ -68,6 +68,10 @@ merge it into `main`, then start the next section from an up-to-date `main`:
 
 → Merge into `main`.
 
+## After FYP-1
+FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
+No tasks yet; they are written at the start of FYP-2.
+
 ## 9. Human work for FYP-1 Final (not for AI)
 - [ ] Record the solo ownership change in `docs/log/changes.md`
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words

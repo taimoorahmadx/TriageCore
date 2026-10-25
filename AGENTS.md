@@ -67,6 +67,7 @@ Any of these runs the session routine below and ends with the **End-of-session r
 | QA evidence keys | `docs/contracts/raw_signals.md` |
 | Weight rationale | `docs/contracts/weights_elicitation.md` |
 | Design decisions | `docs/adr/` |
+| FYP-2 plan (not tasks; don't implement) | `docs/fyp2.md` |
 | Setup problems | `docs/troubleshooting.md` |
 
 ## Do not read unless the user asks
