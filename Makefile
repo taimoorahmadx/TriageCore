@@ -33,7 +33,7 @@ eval:
 	$(PY) -m src.eval.evaluate
 
 api:
-	$(PY) -m uvicorn poc_api.main:app --port 8000
+	$(PY) -m uvicorn src.api.app:app --port 8000
 
 ui:
 	cd frontend && npm run dev

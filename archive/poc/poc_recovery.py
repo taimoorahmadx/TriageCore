@@ -6,10 +6,11 @@ import subprocess
 from pathlib import Path
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from dotenv import load_dotenv
-
 from rich.console import Console
 from rich.panel import Panel
 from rich.text import Text
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 load_dotenv()
 console = Console()
@@ -124,10 +125,10 @@ def run_suite(headless: bool = True) -> dict:
     console.print(f"[bold magenta]🚀 Running Unified QA Test Suite: ShopFlow E-Commerce Checkout (Headless={headless})[/bold magenta]")
     console.print(f"[bold magenta]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/bold magenta]")
     
-    dummy_folder = (Path(__file__).resolve().parent / "tests" / "dummy").resolve()
+    dummy_folder = (REPO_ROOT / "tests" / "dummy").resolve()
     target_file = dummy_folder / "shopflow_app.html"
     if not target_file.exists():
-        target_file = (Path(__file__).resolve().parent / "frontend" / "public" / "shopflow_app.html").resolve()
+        target_file = (REPO_ROOT / "frontend" / "public" / "shopflow_app.html").resolve()
     
     file_uri = target_file.as_uri()
     
@@ -373,7 +374,7 @@ def run_scenario(scenario: str, headless: bool = False) -> dict:
     start_time = time.perf_counter()
     console.print(f"\n[bold magenta]--- Running Scenario: {scenario.upper()} (Headless={headless}) ---[/bold magenta]")
     
-    dummy_folder = (Path(__file__).resolve().parent / "tests" / "dummy").resolve()
+    dummy_folder = (REPO_ROOT / "tests" / "dummy").resolve()
     if scenario == "trap":
         target_file = dummy_folder / "page_regression_trap.html"
     else:

@@ -9,7 +9,7 @@ Task details are in `docs/tasks/<id>.md`; you don't need to read them.
 
 ## Taimoor (lanes A, B, S, D)
 - [x] A1 · Single FastAPI app
-- [ ] A2 · Move the POC into `archive/poc/`
+- [x] A2 · Move the POC into `archive/poc/`
 - [ ] A3 · Isolate legacy frontend screens · after A2
 - [ ] S1 · SQLite decision store
 - [ ] B2 · Confidence intervals in evaluation

@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from archive.poc.legacy_routes import router as legacy_router
 from src.api.qa_routes import router as qa_router
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +28,7 @@ app.add_middleware(
 )
 app.mount("/tests/dummy", StaticFiles(directory=str(REPO_ROOT / "tests" / "dummy")), name="dummy")
 app.include_router(qa_router)
+app.include_router(legacy_router)  # scripted proposal demo (archive/poc), never cite
 
 
 @app.get("/health")

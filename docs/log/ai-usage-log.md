@@ -12,7 +12,8 @@ Some proposal-stage entries describe screens with scripted numbers (96/94/15 sco
 
 One line per non-trivial change, newest at the bottom of its milestone section:
 
-`- *YYYY-MM-DD, member: what the AI produced (files) · what the human decided or changed · how it was verified.*`
+`- *YYYY-MM-DD, <member>: <task ID> · what the AI produced (files) · what the human decided or changed · how it was verified.*`
+(Same format as in `AGENTS.md`; agents append at the end of the file.)
 
 ## Pre-Milestone: Proposal-Stage POC
 
@@ -63,3 +64,4 @@ One line per non-trivial change, newest at the bottom of its milestone section:
 - *2026-10-25, Taimoor Ahmad: AI (Kiro) wrote `docs/brief.md`, `docs/spec.md`, `docs/plan.md`, `docs/tasks.md` (24 tasks with steps and checks), `docs/progress.md`, ADR 006 and the session routine in `AGENTS.md`, after the team chose decisions D1–D7 (AI recommended, team accepted). No code changed. Spec and plan are drafts the team must review; task owners must check their tasks before starting.*
 - *2026-10-25, Taimoor Ahmad: AI (Kiro) split the tasks into `docs/tasks/<id>.md` with `docs/tasks.md` as index, status table and milestone checklist (original ticks restored with evidence), added task A6 (CI workflow), a task template, and `docs/disclosure.md` (tools, AI use, data, risk register; members must complete their rows). No code changed.*
 - *2026-10-25, Taimoor Ahmad: Completed A1 by verifying the shared FastAPI app route checks and `make test` (44 passed); recorded A1 done and updated progress. Route checks use OpenAPI paths plus mounts for compatibility with FastAPI 0.162.0.*
+- *2026-10-25, Taimoor Ahmad: A2 · AI moved the scripted POC (`poc_recovery.py`, demos, legacy routes) into `archive/poc/` and removed `poc_api/`; follow-up fixed the import order in `src/api/app.py` and stale `poc_api` comments · no human decisions · route/import checks, API smoke checks, 44 tests, ruff on `src/api/app.py`.*

@@ -9,10 +9,8 @@ docs/log/
 frontend/node_modules/
 frontend/dist/
 
-# Legacy proposal POC (scripted numbers); moves to archive/poc/ in the code step
-poc_recovery.py
-demo_safe.py
-demo_trap.py
+# Legacy proposal POC (scripted numbers)
+archive/
 tests/dummy/test_page.html
 tests/dummy/page_safe_heal.html
 tests/dummy/page_regression_trap.html

@@ -33,8 +33,12 @@ Any of these runs the session routine below and ends with the **End-of-session r
 2. **Work:** mark the task `[~]` in `TODO.md`. Do only its steps.
 3. **Finish:** run the task's **Check** commands and show the output. Only if they pass: mark it
    `[x]` in `TODO.md`, tick any milestone criterion it completes in `docs/tasks.md`, rewrite "Now"
-   in `docs/progress.md`, append one line to `docs/log/ai-usage-log.md`. If they fail, leave it
-   `[~]` and write what failed in `progress.md`.
+   in `docs/progress.md`, append one line to the end of `docs/log/ai-usage-log.md` (don't read the
+   file; just append) in exactly this format:
+   `- *YYYY-MM-DD, <member>: <task ID> · what the AI produced (files) · what the human decided or changed · how it was verified.*`
+   `<member>` is the task's owner in `TODO.md`. If the human decided nothing, write "no human decisions".
+   The checks include the implicit ones in `docs/tasks.md` (lint touched files, no stale references).
+   If they fail, leave it `[~]` and write what failed in `progress.md`.
 4. **One task per session.** Do not start the next task.
 
 ### End-of-session report (always, in this order)
@@ -115,11 +119,9 @@ Interpreter is `.venv/bin/python`; override with `make test PY=python3`. Fronten
 
 - **Real:** `src/` (engine, collector, pipeline, evaluation), `/api/qa/*`, the QA Engine and
   Evaluation screens.
-- **Scripted (proposal demo, hardcoded numbers, never cite or extend):** `poc_recovery.py`,
-  `demo_safe.py`, `demo_trap.py`, `/api/poc/run` and `/api/ci/triage` in `poc_api/main.py`,
+- **Scripted (proposal demo, hardcoded numbers, never cite or extend):** `archive/poc/`, `/api/poc/run` and `/api/ci/triage` in `archive/poc/legacy_routes.py`,
   `frontend/src/components/` except `Navbar.jsx` and `TriageCoreLogo.jsx`, and
-  `tests/dummy/{test_page,page_safe_heal,page_regression_trap}.html`. Tasks A2/A3 move them to
-  `archive/poc/` and `frontend/src/legacy/`. `poc_api/main.py` also serves the real QA routes until A2.
+  `tests/dummy/{test_page,page_safe_heal,page_regression_trap}.html`. Task A3 moves the legacy screens to `frontend/src/legacy/`.
 
 ## Conventions
 

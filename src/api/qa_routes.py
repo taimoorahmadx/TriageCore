@@ -1,4 +1,4 @@
-"""HTTP routes for the real QA pipeline (engine + browser evidence), mounted into poc_api.
+"""HTTP routes for the real QA pipeline (engine + browser evidence), mounted in src/api/app.py.
 
 GET  /api/qa/status              engine + Groq readiness
 GET  /api/qa/engine              the human-authored numbers the engine reasons with

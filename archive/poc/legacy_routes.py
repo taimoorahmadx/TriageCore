@@ -1,18 +1,11 @@
-import sys
-from pathlib import Path
-from fastapi import HTTPException
+from typing import List, Literal, Optional, Union
+
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field, ValidationError
-from typing import Literal, Optional
 
-# Ensure root workspace is on python path for importing poc_recovery
-ROOT_DIR = Path(__file__).resolve().parent.parent
-if str(ROOT_DIR) not in sys.path:
-    sys.path.insert(0, str(ROOT_DIR))
+from archive.poc.poc_recovery import run_scenario
 
-from poc_recovery import run_scenario
-from src.api.app import app  # noqa: E402
-
-from typing import Literal, Optional, List, Union
+router = APIRouter(tags=["legacy-poc"])
 
 class StepTelemetry(BaseModel):
     console_errors: List[str] = Field(default_factory=list)
@@ -77,7 +70,7 @@ class CiTriageResponse(BaseModel):
     draft_pr: Optional[dict] = None
     duration_ms: int = 420
 
-@app.post("/api/poc/run", response_model=Union[SuiteResponse, ScenarioResponse])
+@router.post("/api/poc/run", response_model=Union[SuiteResponse, ScenarioResponse])
 def run_poc_scenario(payload: ScenarioRequest):
     try:
         # Run headless=True so execution is fast and robust in API context
@@ -91,7 +84,7 @@ def run_poc_scenario(payload: ScenarioRequest):
         raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}")
 
 
-@app.post("/api/ci/triage", response_model=CiTriageResponse)
+@router.post("/api/ci/triage", response_model=CiTriageResponse)
 def run_ci_triage(payload: CiTriageRequest):
     try:
         if payload.scenario == "flaky":
@@ -142,8 +135,4 @@ def run_ci_triage(payload: CiTriageRequest):
             )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"CI triage execution error: {str(e)}")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("poc_api.main:app", host="0.0.0.0", port=8000, reload=True)
 

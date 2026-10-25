@@ -8,6 +8,13 @@ Rules for every task:
   (plus `AGENTS.md`, `docs/progress.md`). Open others only if a step names them.
 - Do exactly the **Steps**. Anything not listed is out of scope; note it in `docs/progress.md` instead.
 - **Check** commands must pass with the shown result before the task is `done`. "Looks right" is not a check.
+- **Every task also has two implicit checks**, even if its Check section doesn't list them:
+  1. **Lint what you touched:** `.venv/bin/ruff check <changed .py files>` must pass (fix with
+     `--fix` if needed); if `frontend/` changed, `cd frontend && npm run lint` must pass.
+  2. **No stale references:** if you renamed, moved or deleted a file, module, route or command,
+     grep the repo (excluding `reference/`, `docs/log/`, `archive/`, `node_modules/`) for the old
+     name and update every remaining mention in code comments, docs and UI text. Files a later task
+     will move or delete may be left; say so in the report.
 - **Stop and ask** means: stop, write the question in `docs/progress.md` under Blockers, and tell the user.
 - **If a Check command itself is broken** (fails because of the command or a library version, not
   because of your code): replace it in the task file with an equivalent command that verifies the
@@ -147,7 +154,10 @@ Spec: <FR/NFR IDs> · Owner: <member> · Depends: <task IDs or —>
 **Check**
 ```bash
 <commands>   # expected result
+.venv/bin/ruff check <changed .py files>   # All checks passed
 ```
+(plus `cd frontend && npm run lint` if the frontend changed; plus the stale-reference grep if
+anything was renamed, moved or deleted)
 
 **Done when:** the observable condition.
 **Stop and ask if:** the situations where the agent must not decide alone.

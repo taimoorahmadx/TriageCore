@@ -6,11 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A1 is done: `src/api/app.py` owns the FastAPI app, while `poc_api/main.py` imports it for the
-  legacy POC and CI routes. Both route checks pass; `make test` passes (44 passed) with local
-  socket access. Its route checks use OpenAPI paths plus mounts because FastAPI 0.162.0 includes
-  QA routes as `_IncludedRouter` objects without `.path`.
-
+- A2 is done: scripted POC code and routes live in `archive/poc/`; `poc_api/` is removed.
+  The API route and demo import checks pass, `make test` passes (44 passed), and QA status plus
+  CI triage smoke checks return 200 responses.
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
