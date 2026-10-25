@@ -6,6 +6,7 @@ The live demo uses GroqRelocator instead; then the LLM's proposals add real-worl
 
 import pytest
 
+from src.agents.qa_pipeline import run_scenarios
 from src.browser.relocator import RelocationRequest
 from src.eval.evaluate import evaluate
 
@@ -52,3 +53,25 @@ def test_every_step_is_triaged_and_decided(report):
     assert len(report["rows"]) == 12
     for row in report["rows"]:
         assert row["triagecore_action"] in {"heal", "flag", "escalate"}
+
+
+def test_step_error_escalates():
+    class Boom:
+        def relocate(self, request: RelocationRequest) -> str:
+            raise ZeroDivisionError("relocation failed")
+
+    results = run_scenarios(["shopflow_checkout"], relocator=Boom())
+    failed_steps = [step for step in results[0]["steps"] if step["status"] == "error"]
+    assert failed_steps
+    assert all(step["fail_safe_action"] == "escalate" for step in failed_steps)
+    assert failed_steps[0]["error"] == "ZeroDivisionError: relocation failed"
+    assert all(
+        step["error"] == "skipped: an earlier step failed"
+        for step in failed_steps[1:]
+    )
+
+    report = evaluate(relocator=Boom(), save=False)
+    error_rows = [row for row in report["rows"] if row["triagecore_cause"] == "error"]
+    assert error_rows
+    assert all(row["triagecore_action"] == "escalate" for row in error_rows)
+    assert all(row["confidence"] is None for row in error_rows)

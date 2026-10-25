@@ -99,6 +99,17 @@ function Observed({ step }) {
 
 export function StepDecisionCard({ step, index, priors }) {
   const [showTrace, setShowTrace] = useState(false);
+  if (step.status === 'error') {
+    return (
+      <div className="glass-card rounded-2xl border border-[#ff453a]/30 p-5 text-sm text-neutral-200">
+        <div className="flex items-center gap-2 font-semibold text-[#ff453a]">
+          <AlertTriangle className="h-4 w-4" />
+          Step {index + 1} · {step.name}: Escalated (fail-safe)
+        </div>
+        <p className="mt-2 break-words font-mono text-xs text-neutral-300">{step.error}</p>
+      </div>
+    );
+  }
   if (!step.engine) {
     return (
       <div className="glass-card rounded-2xl p-5 text-sm text-neutral-300">
@@ -133,6 +144,17 @@ export function StepDecisionCard({ step, index, priors }) {
           </span>
         </div>
       </header>
+
+      {step.suggested_patch && (
+        <details className="border-b border-white/[0.06] px-6 py-4">
+          <summary className="cursor-pointer text-xs font-semibold text-neutral-300">
+            Suggested patch (not applied)
+          </summary>
+          <pre className="mt-3 overflow-x-auto rounded-lg bg-black/50 p-3 font-mono text-[11px] text-neutral-300">
+            {step.suggested_patch}
+          </pre>
+        </details>
+      )}
 
       <div className="grid gap-6 px-6 py-6 lg:grid-cols-2">
         <Section n="1" title="What the browser saw" hint="Collected by Playwright after the click">

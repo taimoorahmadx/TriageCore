@@ -98,7 +98,7 @@ export function QAEngineScreen() {
     }
   };
 
-  const decided = result?.steps.filter((s) => s.engine) || [];
+  const decided = result?.steps.filter((s) => s.engine || s.status === 'error') || [];
 
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-6 py-10">
@@ -205,7 +205,7 @@ export function QAEngineScreen() {
                 </div>
                 <div className="flex flex-wrap items-center gap-3">
                   {['heal', 'flag', 'escalate'].map((a) => {
-                    const n = decided.filter((s) => s.engine.recommended_action === a).length;
+                    const n = decided.filter((s) => (s.engine?.recommended_action || s.fail_safe_action) === a).length;
                     return n ? <span key={a} className="flex items-center gap-1.5 px-2 py-0.5 rounded-full border border-white/[0.08] bg-white/[0.03] text-[11px] font-mono"><span className="h-2 w-2 rounded-full" style={{ background: ACTION[a].color }} />{n} × {ACTION[a].label}</span> : null;
                   })}
                   {decided.some((s) => s.score.masked_regression) && <span className="font-semibold text-[#ff453a] bg-[#ff453a]/10 px-2 py-0.5 rounded-full border border-[#ff453a]/30">real bug let through</span>}
@@ -216,7 +216,8 @@ export function QAEngineScreen() {
                 <div className="flex items-center gap-2 border-b border-white/[0.08] pb-1 overflow-x-auto">
                   <span className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mr-2 shrink-0">Select Step:</span>
                   {result.steps.map((st, i) => {
-                    const act = st.engine ? ACTION[st.engine.recommended_action] : null;
+                    const action = st.engine?.recommended_action || st.fail_safe_action;
+                    const act = action ? ACTION[action] : null;
                     return (
                       <button
                         key={st.step_id}

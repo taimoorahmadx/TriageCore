@@ -22,6 +22,7 @@ from uuid import uuid4
 import yaml
 from playwright.sync_api import Browser, sync_playwright
 
+from src.agents.patch import selector_patch
 from src.browser.relocator import GroqRelocator, Relocator
 from src.browser.runner import (
     DEFAULT_TIMING,
@@ -103,8 +104,55 @@ def run_scenario(
     page.goto(url)
     steps_out = []
     try:
-        for spec, truth in scenario.steps:
-            ev = collect_step_evidence(page, spec, relocator, timing)
+        for index, (spec, truth) in enumerate(scenario.steps):
+            try:
+                ev = collect_step_evidence(page, spec, relocator, timing)
+            except Exception as exc:
+                steps_out.append(
+                    {
+                        "step_id": spec.id,
+                        "name": spec.name,
+                        "risk_tier": spec.risk_tier,
+                        "status": "error",
+                        "error": f"{type(exc).__name__}: {exc}",
+                        "fail_safe_action": "escalate",
+                        "raw_signals": None,
+                        "context": None,
+                        "observations": None,
+                        "relocation_error": None,
+                        "timings_ms": None,
+                        "truth": {"cause": truth.cause, "acceptable": list(truth.acceptable)},
+                        "engine": None,
+                        "details": None,
+                        "score": score_step("escalate", "error", truth),
+                        "suggested_patch": None,
+                    }
+                )
+                for skipped_spec, skipped_truth in scenario.steps[index + 1 :]:
+                    steps_out.append(
+                        {
+                            "step_id": skipped_spec.id,
+                            "name": skipped_spec.name,
+                            "risk_tier": skipped_spec.risk_tier,
+                            "status": "error",
+                            "error": "skipped: an earlier step failed",
+                            "fail_safe_action": "escalate",
+                            "raw_signals": None,
+                            "context": None,
+                            "observations": None,
+                            "relocation_error": None,
+                            "timings_ms": None,
+                            "truth": {
+                                "cause": skipped_truth.cause,
+                                "acceptable": list(skipped_truth.acceptable),
+                            },
+                            "engine": None,
+                            "details": None,
+                            "score": score_step("escalate", "error", skipped_truth),
+                            "suggested_patch": None,
+                        }
+                    )
+                break
             step: dict[str, Any] = {
                 "step_id": spec.id,
                 "name": spec.name,
@@ -119,6 +167,7 @@ def run_scenario(
                 "engine": None,
                 "details": None,
                 "score": None,
+                "suggested_patch": None,
             }
             if ev.status == "triage":
                 t0 = time.perf_counter()
@@ -131,6 +180,10 @@ def run_scenario(
                 step["engine"] = out.model_dump()
                 step["details"] = details
                 step["score"] = score_step(out.recommended_action, out.classification, truth)
+                if out.recommended_action == "heal":
+                    step["suggested_patch"] = selector_patch(
+                        SCENARIOS_FILE, spec.original_selector, ev.context["proposed_selector"]
+                    )
             steps_out.append(step)
     finally:
         context.close()

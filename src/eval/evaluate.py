@@ -74,9 +74,34 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
     rows = []
     for res in results:
         for st in res["steps"]:
-            if st["engine"] is None:
+            if st["status"] == "passed":
                 continue  # original selector worked; nothing to triage
             truth = Truth(st["truth"]["cause"], tuple(st["truth"]["acceptable"]))
+            if st["status"] == "error":
+                row: dict[str, Any] = {
+                    "scenario": res["scenario_id"],
+                    "step": st["step_id"],
+                    "risk_tier": st["risk_tier"],
+                    "truth_cause": truth.cause,
+                    "acceptable": "|".join(truth.acceptable),
+                    "triagecore_cause": "error",
+                    "p_stale": None,
+                    "p_regression": None,
+                    "p_flaky": None,
+                    "confidence": None,
+                    "proposed_selector": None,
+                    "duration_ms": None,
+                }
+                actions = {policy: "escalate" for policy in POLICIES}
+                for policy, action in actions.items():
+                    sc = score_step(action, "error", truth)
+                    row[f"{policy}_action"] = action
+                    row[f"{policy}_acceptable"] = sc["action_acceptable"]
+                    row[f"{policy}_masked"] = sc["masked_regression"]
+                    row[f"{policy}_needless"] = sc["needless_escalation"]
+                row["cause_correct"] = False
+                rows.append(row)
+                continue
             row: dict[str, Any] = {
                 "scenario": res["scenario_id"],
                 "step": st["step_id"],
