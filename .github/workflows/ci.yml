@@ -20,7 +20,7 @@ jobs:
       - run: pip install -e ".[dev]"
       - run: python -m playwright install --with-deps chromium
       - name: Lint changed Python files
-        run: git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref || 'main' }}...HEAD -- '*.py' | xargs -r ruff check
+        run: git diff --name-only --diff-filter=ACMR origin/${{ github.base_ref || 'main' }}...HEAD -- '*.py' | xargs -r ruff check --force-exclude
       - run: python -m src.core.weights
       - run: python -m pytest -q
 

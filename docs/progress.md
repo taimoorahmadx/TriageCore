@@ -8,7 +8,9 @@ History lives in git and `docs/log/ai-usage-log.md`.
 ## Now
 - A6 is in progress: the workflow and contributing note are drafted. Local weights and frontend
   lint/build pass; full pytest is blocked because this sandbox denies localhost sockets (28 passed,
-  16 setup errors). PR CI and the deliberate failure check remain to be verified on GitHub.
+  16 setup errors). The PR lint step initially checked archived POC files because explicit paths
+  bypass Ruff exclusions; adding `--force-exclude` makes the matching local check pass. PR CI and the
+  deliberate failure check remain to be verified on GitHub.
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
