@@ -6,9 +6,8 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A4 is complete on `feature/qa-agent`: collection exceptions and remaining scenario steps are
-  recorded as escalations; evaluation and QA UI handle fail-safe errors. Pipeline tests and frontend
-  lint/build pass.
+- Q1 is complete on `feature/qa-agent`: healed QA steps include a unified selector patch suggestion;
+  the UI labels it as not applied. Patch tests, frontend lint/build, and Python lint pass.
 - Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; CI evidence = pre-rerun facts,
   rerun outcome = label; `heal` blocked when expected state not reached; project owner writes B1 labels
   before any run.

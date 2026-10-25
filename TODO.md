@@ -39,7 +39,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 ## 3. `feature/qa-agent` · QA agent safety
 - [x] A4 · Errors while collecting evidence escalate instead of crashing
-- [ ] Q1 · Healed steps show a suggested selector patch (never applied)
+- [x] Q1 · Healed steps show a suggested selector patch (never applied)
 
 → Merge into `main`.
 

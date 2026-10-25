@@ -145,6 +145,17 @@ export function StepDecisionCard({ step, index, priors }) {
         </div>
       </header>
 
+      {step.suggested_patch && (
+        <details className="border-b border-white/[0.06] px-6 py-4">
+          <summary className="cursor-pointer text-xs font-semibold text-neutral-300">
+            Suggested patch (not applied)
+          </summary>
+          <pre className="mt-3 overflow-x-auto rounded-lg bg-black/50 p-3 font-mono text-[11px] text-neutral-300">
+            {step.suggested_patch}
+          </pre>
+        </details>
+      )}
+
       <div className="grid gap-6 px-6 py-6 lg:grid-cols-2">
         <Section n="1" title="What the browser saw" hint="Collected by Playwright after the click">
           <Observed step={step} />

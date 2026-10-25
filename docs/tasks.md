@@ -74,7 +74,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] Evaluation against baselines: 12/12 acceptable, 0/4 regressions let through; blind healing let 4/4 through. *Evidence: `make eval`; small team-built suite, see plan §9.*
 - [x] LangGraph decision: not used (ADR 005).
 - [x] Step errors escalate instead of failing. *Evidence: `test_step_error_escalates`; errors and remaining scenario steps are reported as fail-safe escalations.* → task **A4**.
-- [ ] Suggested patch for healed steps. → task **Q1**.
+- [x] Suggested patch for healed steps. *Evidence: `test_selector_patch_changes_only_the_matching_line`; QA step card labels the diff "Suggested patch (not applied)".* → task **Q1**.
 - [ ] Heal cycle < 10 s measured as p95. → task **Q2**.
 
 ### M4 · CI ingestion · Shazil · not started (scope: ADR 006)

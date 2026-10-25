@@ -22,6 +22,7 @@ from uuid import uuid4
 import yaml
 from playwright.sync_api import Browser, sync_playwright
 
+from src.agents.patch import selector_patch
 from src.browser.relocator import GroqRelocator, Relocator
 from src.browser.runner import (
     DEFAULT_TIMING,
@@ -124,6 +125,7 @@ def run_scenario(
                         "engine": None,
                         "details": None,
                         "score": score_step("escalate", "error", truth),
+                        "suggested_patch": None,
                     }
                 )
                 for skipped_spec, skipped_truth in scenario.steps[index + 1 :]:
@@ -147,6 +149,7 @@ def run_scenario(
                             "engine": None,
                             "details": None,
                             "score": score_step("escalate", "error", skipped_truth),
+                            "suggested_patch": None,
                         }
                     )
                 break
@@ -164,6 +167,7 @@ def run_scenario(
                 "engine": None,
                 "details": None,
                 "score": None,
+                "suggested_patch": None,
             }
             if ev.status == "triage":
                 t0 = time.perf_counter()
@@ -176,6 +180,10 @@ def run_scenario(
                 step["engine"] = out.model_dump()
                 step["details"] = details
                 step["score"] = score_step(out.recommended_action, out.classification, truth)
+                if out.recommended_action == "heal":
+                    step["suggested_patch"] = selector_patch(
+                        SCENARIOS_FILE, spec.original_selector, ev.context["proposed_selector"]
+                    )
             steps_out.append(step)
     finally:
         context.close()
