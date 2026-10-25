@@ -90,5 +90,6 @@ No tasks yet; they are written at the start of FYP-2.
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Fill in `docs/disclosure.md` §2
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
+- [ ] Tune QA evidence probabilities using labeled cases; compare against current values on held-out cases (keep mistake costs human-set)
 - [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
 - [ ] Report, poster, presentation
