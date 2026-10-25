@@ -14,7 +14,7 @@ merge it into `main`, then start the next section from an up-to-date `main`:
 ## 1. `code-refactor` · cleanup
 - [x] A1 · Single FastAPI app in `src/api/app.py`
 - [x] A2 · Move the scripted POC into `archive/poc/`
-- [ ] A3 · Move the scripted frontend screens into `frontend/src/legacy/`
+- [x] A3 · Move the scripted frontend screens into `frontend/src/legacy/`
 - [ ] A5 · Remove unused dependencies, tidy `.env.example`
 - [ ] A6 · GitHub Actions CI: lint, tests and frontend build on every PR
 

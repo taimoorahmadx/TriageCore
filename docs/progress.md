@@ -6,9 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- A2 is done: scripted POC code and routes live in `archive/poc/`; `poc_api/` is removed.
-  The API route and demo import checks pass, `make test` passes (44 passed), and QA status plus
-  CI triage smoke checks return 200 responses.
+- A3 is done: legacy screens live in `frontend/src/legacy/`; `App.jsx` routes the QA Engine,
+  Evaluation and Proposal PoC tabs. Frontend lint/build pass, and the user verified the UI
+  click-through.
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
