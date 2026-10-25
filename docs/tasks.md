@@ -14,10 +14,10 @@ Rules for every task:
   *same* condition, run it, note the change in `progress.md`, and continue. Never weaken what a
   check verifies, and never change code just to satisfy a broken check. Stop and ask only if you
   cannot find an equivalent.
-- **Status lives only in the task table below** (`todo`, `doing`, `done`, `blocked (<reason>)`).
-  Update it when you start and when you finish.
+- **Status lives only in `TODO.md`** (repo root): `[~]` when you start, `[x]` when the checks pass,
+  `[!]` plus a reason if blocked. Nowhere else holds task status.
 - When a task completes a milestone criterion, tick it in "Milestone status" and add the evidence.
-- To add a task, copy the template at the bottom into a new file and add a row to the table.
+- To add a task, copy the template at the bottom into a new file, add a row to the table below, and a line to `TODO.md` under its owner.
 
 **Task IDs:** `<lane letter><number>`, e.g. `C5`. The letter is the lane; the number is the next
 free number in that lane (never reused, even if a task is deleted). The file name is the ID in
@@ -96,35 +96,35 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ## Task list
 
 Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation · **S** store ·
-**C** CI agent · **D** deployment. Within a lane, take the first `todo` whose dependencies are `done`.
+**C** CI agent · **D** deployment. This table is the reference (owner, dependencies); progress is tracked in `TODO.md`.
 
-| ID | Title | Owner | Milestone | Depends | Status |
-|---|---|---|---|---|---|
-| [A1](tasks/a1.md) | Single FastAPI app `src/api/app.py` | Taimoor | cleanup | — | done |
-| [A2](tasks/a2.md) | Move the POC into `archive/poc/` | Taimoor | cleanup | A1 | todo |
-| [A3](tasks/a3.md) | Isolate legacy frontend screens | Taimoor | cleanup | A2 | todo |
-| [A4](tasks/a4.md) | Fail-safe: step errors escalate | Abdul | M3 | — | todo |
-| [A5](tasks/a5.md) | Clean dependencies and env | Taimoor | cleanup | A2 | todo |
-| [A6](tasks/a6.md) | CI workflow for this repository | Taimoor | cleanup | A5 | todo |
-| [B2](tasks/b2.md) | Confidence intervals in evaluation | Taimoor | M5.5 | — | todo |
-| [Q4](tasks/q4.md) | `simple_rule` baseline | Abdul | M5.5 | B2 | todo |
-| [Q3](tasks/q3.md) | `llm_judge` baseline | Abdul | M5.5 | Q4 | todo |
-| [Q2](tasks/q2.md) | Timing NFRs in evaluation | Abdul | M3 | B2 | todo |
-| [Q1](tasks/q1.md) | Suggested selector patch | Abdul | M3 | — | todo |
-| [S1](tasks/s1.md) | SQLite decision store | Taimoor | M1 | A1 | todo |
-| [C2](tasks/c2.md) | Add `rerun` to the contract | Shazil | M5 | — | todo |
-| [C1](tasks/c1.md) | CI evidence contract | Shazil | M5 | C2 | todo |
-| [C4](tasks/c4.md) | Log truncation | Shazil | M4 | — | todo |
-| [C5](tasks/c5.md) | Webhook endpoint | Shazil | M4 | A1, S1 | todo |
-| [C7](tasks/c7.md) | Commit tracing | Shazil | M5 | C1 | todo |
-| [C3](tasks/c3.md) | CI corpus | Shazil | M5 | C1 | todo |
-| [C6](tasks/c6.md) | Log fact extraction | Shazil | M5 | C1, C4 | todo |
-| [C8](tasks/c8.md) | `CIAdapter` in the engine | Shazil | M5 | C1, C7 | todo |
-| [C9](tasks/c9.md) | CI weights (human) | Shazil | M5 | C8 | todo |
-| [C10](tasks/c10.md) | CI pipeline and evaluation | Shazil | M5 | C3, C6, C9 | todo |
-| [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 | todo |
-| [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 | todo |
-| [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 | todo |
+| ID | Title | Owner | Milestone | Depends |
+|---|---|---|---|---|
+| [A1](tasks/a1.md) | Single FastAPI app `src/api/app.py` | Taimoor | cleanup | — |
+| [A2](tasks/a2.md) | Move the POC into `archive/poc/` | Taimoor | cleanup | A1 |
+| [A3](tasks/a3.md) | Isolate legacy frontend screens | Taimoor | cleanup | A2 |
+| [A4](tasks/a4.md) | Fail-safe: step errors escalate | Abdul | M3 | — |
+| [A5](tasks/a5.md) | Clean dependencies and env | Taimoor | cleanup | A2 |
+| [A6](tasks/a6.md) | CI workflow for this repository | Taimoor | cleanup | A5 |
+| [B2](tasks/b2.md) | Confidence intervals in evaluation | Taimoor | M5.5 | — |
+| [Q4](tasks/q4.md) | `simple_rule` baseline | Abdul | M5.5 | B2 |
+| [Q3](tasks/q3.md) | `llm_judge` baseline | Abdul | M5.5 | Q4 |
+| [Q2](tasks/q2.md) | Timing NFRs in evaluation | Abdul | M3 | B2 |
+| [Q1](tasks/q1.md) | Suggested selector patch | Abdul | M3 | — |
+| [S1](tasks/s1.md) | SQLite decision store | Taimoor | M1 | A1 |
+| [C2](tasks/c2.md) | Add `rerun` to the contract | Shazil | M5 | — |
+| [C1](tasks/c1.md) | CI evidence contract | Shazil | M5 | C2 |
+| [C4](tasks/c4.md) | Log truncation | Shazil | M4 | — |
+| [C5](tasks/c5.md) | Webhook endpoint | Shazil | M4 | A1, S1 |
+| [C7](tasks/c7.md) | Commit tracing | Shazil | M5 | C1 |
+| [C3](tasks/c3.md) | CI corpus | Shazil | M5 | C1 |
+| [C6](tasks/c6.md) | Log fact extraction | Shazil | M5 | C1, C4 |
+| [C8](tasks/c8.md) | `CIAdapter` in the engine | Shazil | M5 | C1, C7 |
+| [C9](tasks/c9.md) | CI weights (human) | Shazil | M5 | C8 |
+| [C10](tasks/c10.md) | CI pipeline and evaluation | Shazil | M5 | C3, C6, C9 |
+| [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 |
+| [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
+| [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |
 
 ## Template for a new task
 

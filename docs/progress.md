@@ -1,21 +1,15 @@
 # Progress
 
 Agent memory across sessions. Read this first in every session. Keep it under ~80 lines:
-**replace** the "Now" and "Next" sections each session; append to "Lessons" only when something
-cost time; move resolved blockers out. History lives in git and `docs/log/ai-usage-log.md`.
+**replace** the "Now" section each session; append to "Lessons" only when something cost time;
+move resolved blockers out. Task status and what's next: `TODO.md` only.
+History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
 - A1 is done: `src/api/app.py` owns the FastAPI app, while `poc_api/main.py` imports it for the
   legacy POC and CI routes. Both route checks pass; `make test` passes (44 passed) with local
   socket access. Its route checks use OpenAPI paths plus mounts because FastAPI 0.162.0 includes
   QA routes as `_IncludedRouter` objects without `.path`.
-
-## Next (by lane)
-- A (Taimoor): A2 → A3 → A5 → A6
-- Q (Abdul): A4, Q1 (independent) · then Q4 → Q3, Q2 after B2
-- B (Taimoor): B2
-- C (Shazil): C2 → C1 (needs Shazil's decisions) · C4 (independent)
-- S (Taimoor): S1 after A1
 
 ## Blockers / questions for the team
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).

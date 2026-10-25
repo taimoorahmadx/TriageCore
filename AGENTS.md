@@ -10,18 +10,42 @@ TriageCore is a final-year project: one **ConfidenceEngine** (`src/core/`) share
 The engine diagnoses the cause (`classification`) and decides act vs escalate
 (`recommended_action`) by semi-naive Bayes + minimum expected loss. The LLM only proposes.
 
+## Short commands (the user may type only this)
+
+| User types | Do |
+|---|---|
+| `next` | Take the first `[ ]` task in `TODO.md` (top to bottom) whose "after" tasks are all `[x]`, and do it. Don't ask for confirmation. |
+| `next <lane>` (e.g. `next C`) | Same, but only tasks whose ID starts with that letter. |
+| `do <id>` (e.g. `do a2`) | Do that task. If an "after" task is not `[x]`, say which and stop. |
+| `finish` | Finish the task marked `[~]` in `TODO.md`: rerun its checks and close it. |
+| `status` | Don't code. Show `[~]` and `[!]` tasks, the next available task per person, and open blockers from `progress.md`. |
+
+**Task status lives only in `TODO.md`:** `[~]` when you start, `[x]` when the checks pass,
+`[!] <reason>` if blocked. Never write status anywhere else.
+
+Any of these runs the session routine below and ends with the **End-of-session report**.
+
 ## Session routine (follow every time)
 
-1. **Start:** read `docs/progress.md`, then the index `docs/tasks.md`, then only your task file
-   `docs/tasks/<id>.md` (lowercase), then only that task's **Read first** files. If the user gave no
-   task, take the first `todo` task in their lane whose dependencies are `done`, and confirm it
-   with the user.
-2. **Work:** set the task's status to `doing` in the `docs/tasks.md` table. Do only its steps.
-3. **Finish:** run the task's **Check** commands and show the output. Only if they pass: set the
-   status to `done`, tick any milestone criterion it completes, rewrite "Now" and "Next" in
-   `docs/progress.md`, append one line to `docs/log/ai-usage-log.md`. If they fail, leave it
-   `doing` and write what failed in `progress.md`.
+1. **Start:** read `TODO.md`, `docs/progress.md`, the index `docs/tasks.md`, then only your task file
+   `docs/tasks/<id>.md` (lowercase), then only that task's **Read first** files. Pick the task as in
+   "Short commands". Before coding, say in one line which task you are doing.
+2. **Work:** mark the task `[~]` in `TODO.md`. Do only its steps.
+3. **Finish:** run the task's **Check** commands and show the output. Only if they pass: mark it
+   `[x]` in `TODO.md`, tick any milestone criterion it completes in `docs/tasks.md`, rewrite "Now"
+   in `docs/progress.md`, append one line to `docs/log/ai-usage-log.md`. If they fail, leave it
+   `[~]` and write what failed in `progress.md`.
 4. **One task per session.** Do not start the next task.
+
+### End-of-session report (always, in this order)
+
+1. **Task:** ID, title, final status (`done` / `doing` / `blocked`).
+2. **Changed:** files created, modified, moved or deleted, one line each.
+3. **Checks:** each check command with its actual result.
+4. **Git:** exact commands to stage only this task's files (by name, never `git add .`), plus a
+   Conventional Commit message (`<type>(<scope>): <summary>` and a short body that names the task
+   ID). Don't run them.
+5. **Next:** the task that `next` would pick now, or the blocker that needs the user.
 
 ## Where things are
 
@@ -30,7 +54,8 @@ The engine diagnoses the cause (`classification`) and decides act vs escalate
 | Why and what, scope, glossary | `docs/brief.md` |
 | Required behaviour and acceptance checks (FR/NFR IDs) | `docs/spec.md` |
 | Architecture, modules, invariants, stack, decisions, risks | `docs/plan.md` |
-| Task index, status, milestone checklist | `docs/tasks.md` |
+| **To-do list and task status** | `TODO.md` |
+| Task index (owner, dependencies), milestone checklist | `docs/tasks.md` |
 | One task's steps and checks | `docs/tasks/<id>.md` |
 | Tools, AI use, data, risks | `docs/disclosure.md` |
 | Current state, next steps, blockers, gotchas | `docs/progress.md` |
@@ -83,6 +108,8 @@ Interpreter is `.venv/bin/python`; override with `make test PY=python3`. Fronten
 9. **Never run `git commit` or `git push`.** Print the commands for the user.
 10. **Stop and ask** when docs and code disagree, a task's steps don't fit the code, or a step needs
     a decision not written down. Write the question under Blockers in `docs/progress.md`.
+    Exception: a broken **Check command** (wrong command or library version, code is fine) is
+    fixed in place with an equivalent check; see the rules at the top of `docs/tasks.md`.
 
 ## Real vs scripted
 
