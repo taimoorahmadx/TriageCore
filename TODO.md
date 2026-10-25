@@ -18,7 +18,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] X2 · Drop the misleading "Break-even" line from the trace; add a trace-content test (FR-E7); fix `engine_io.md` · audit M5
 - [x] X3 · Quarantine scripted API routes under `/api/legacy/*`; update `frontend/src/legacy/` callers and AGENTS.md · audit M6
 - [x] X4 · Fix `recommended_action` docstring in `src/core/models.py` (min expected loss, ADR 004) and its 5 ruff findings so `make lint` exits 0 · audit M7
-- [ ] X5 · Move `FixedRelocator` from `src/browser/relocator.py` into `tests/` · audit S10
+- [x] X5 · Move `FixedRelocator` from `src/browser/relocator.py` into `tests/` · audit S10
 - [ ] X6 · Fix stale doc/code lines (comments and docs only) · audit Q7 items 3–7, 9–12
 
 → Merge into `main`.

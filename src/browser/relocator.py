@@ -90,16 +90,3 @@ class GroqRelocator:
                 if attempt < self.retries:
                     time.sleep(1.5 * (attempt + 1))
         raise RelocationError(f"Groq relocation failed after {self.retries + 1} attempts: {last_error}")
-
-
-class FixedRelocator:
-    """Test double: returns a predetermined selector. For tests of the evidence collector only;
-    never used by the real pipeline (that would be the hardcoded answer the PoC relied on)."""
-
-    def __init__(self, selector: str | None) -> None:
-        self.selector = selector
-
-    def relocate(self, request: RelocationRequest) -> str:
-        if self.selector is None:
-            raise RelocationError("FixedRelocator configured to fail")
-        return self.selector

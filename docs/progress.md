@@ -7,8 +7,8 @@ History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
 - Architecture audit fixes are TODO §0 (X1–X6, branch `fix/audit`), approved by the project owner.
-  X1–X4 are complete. `recommended_action` is documented as minimum expected loss after hard
-  safety blocks, and `make lint` passes. Continue with X5.
+  X1–X5 are complete. `FixedRelocator` now exists only in the test support module; full suite passes
+  (47 tests). Continue with X6.
 - Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; project owner builds all of CI;
   CI evidence = pre-rerun facts, rerun outcome = label; `heal` blocked when expected state not
   reached; project owner writes B1 labels before any run.
