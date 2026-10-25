@@ -1,7 +1,7 @@
 # 1. Initial Architecture and Tech Stack
 
 **Date:** 2026-09-01
-**Status:** Accepted
+**Status:** Accepted; partially superseded by ADR 003 (LLM) and ADR 005 (proposed, stack as built)
 
 ## Context
 We need to establish the foundational technology stack for TriageCore, a shared confidence-scoring engine used by a QA self-healing agent and a CI failure-triage agent. The system must support high-speed web scraping/automation, complex multi-step AI reasoning, asynchronous processing, and relational data storage.

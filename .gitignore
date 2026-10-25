@@ -1,10 +1,20 @@
-# Byte-compiled / optimized / DLL files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Environments
+# Environments and secrets
 .env
+.env.*
+!.env.example
 .venv
 env/
 venv/
@@ -14,6 +24,17 @@ venv.bak/
 
 # Playwright
 test-results/
+playwright-report/
+
+# Evaluation output: only the latest run is tracked (the Evaluation screen reads it)
+results/*
+!results/qa_eval_latest.json
+
+# Personal agent setup (each member installs their own)
+.agents/skills/
+.claude/skills/
+.claude/settings.local.json
+.claude/worktrees/
 
 # Editor/IDE
 .vscode/
@@ -21,17 +42,15 @@ test-results/
 *.swp
 *.swo
 
+# OS
+.DS_Store
+
 # Docker
 .docker/
-
-# Mac
-.DS_Store
 
 # Logs
 *.log
 
-# Local tooling / report drafts (kept out of the code history)
-.claude/worktrees/
-.ruff_cache/
+# Local report drafts and papers (kept out of the code history)
 F26_FYP1_Mid_Report_LaTeX_Complete/
 relevant_papers/

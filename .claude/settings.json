@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./reference/**)",
+      "Read(./results/**)"
+    ]
+  }
+}
