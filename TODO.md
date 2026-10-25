@@ -16,7 +16,7 @@ merge it into `main`, then start the next section from an up-to-date `main`:
 - [x] A2 · Move the scripted POC into `archive/poc/`
 - [x] A3 · Move the scripted frontend screens into `frontend/src/legacy/`
 - [x] A5 · Remove unused dependencies, tidy `.env.example`
-- [~] A6 · GitHub Actions CI: lint, tests and frontend build on every PR
+- [x] A6 · GitHub Actions CI: lint, tests and frontend build on every PR
 
 → Merge into `main`.
 
