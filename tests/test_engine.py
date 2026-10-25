@@ -244,6 +244,13 @@ def test_clean_heal_is_healed(engine):
     assert out.confidence_score >= 90
 
 
+def test_reasoning_trace_shows_expected_losses_without_break_even(engine):
+    out = engine.evaluate(qa_evidence(**CLEAN))
+    assert "expected loss:" in out.reasoning_trace
+    assert "Decision:" in out.reasoning_trace
+    assert "Break-even:" not in out.reasoning_trace
+
+
 def test_no_evidence_escalates(engine):
     out = engine.evaluate(qa_evidence())
     assert out.recommended_action == "escalate"
