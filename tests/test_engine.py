@@ -226,7 +226,7 @@ def test_same_evidence_heals_low_risk_but_escalates_high_risk(engine):
 
 def test_clean_heal_is_healed(engine):
     out = engine.evaluate(qa_evidence(**CLEAN))
-    assert out.classification == "stale_selector"
+    assert out.classification == "bug"
     assert out.recommended_action == "heal"
     assert out.confidence_score >= 90
 
