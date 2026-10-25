@@ -1,7 +1,7 @@
 # 2. Pivot LLM Provider to Google Gemini (Free Tier)
 
 **Date:** 2026-09-02
-**Status:** Accepted
+**Status:** Superseded by ADR 003
 
 ## Context
 TriageCore heavily relies on Large Language Models (LLMs) for DOM semantic matching and CI log analysis. The initial architecture proposed using OpenAI (`langchain-openai`). However, OpenAI does not offer a free tier, only paid API credits. For a multi-semester Final Year Project (FYP) run by students, minimizing recurring cloud costs is a critical constraint.

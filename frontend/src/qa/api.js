@@ -1,4 +1,4 @@
-// Client for the real QA pipeline routes (src/api/qa_routes.py), served by poc_api on :8000.
+// Client for the real QA pipeline routes (src/api/qa_routes.py), served by src/api/app.py on :8000.
 export const API_BASE = 'http://localhost:8000';
 
 async function request(path, options = {}) {

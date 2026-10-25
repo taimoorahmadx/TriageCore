@@ -21,7 +21,7 @@ function StatusBanner({ status, error }) {
     return (
       <div className="flex items-center gap-2 rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 px-4 py-3 text-sm text-neutral-200">
         <AlertTriangle className="h-4 w-4 text-[#ff453a]" />
-        API not reachable on :8000. Start it with <code className="font-mono">python3 -m uvicorn poc_api.main:app --port 8000</code>
+        API not reachable on :8000. Start it with <code className="font-mono">python3 -m uvicorn src.api.app:app --port 8000</code>
       </div>
     );
   }

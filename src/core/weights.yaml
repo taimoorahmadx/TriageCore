@@ -1,6 +1,6 @@
 # TriageCore ConfidenceEngine weights
 # ===================================
-# EVERY number in this file is authored by a human (AGENTS.md / project-constraints.md).
+# EVERY number in this file is authored by a human (AGENTS.md rule 1).
 # `null` = not yet filled in. The engine refuses to start until every value is filled.
 # Check progress with:   .venv/bin/python -m src.core.weights
 #

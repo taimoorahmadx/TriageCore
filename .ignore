@@ -1,0 +1,18 @@
+# Hidden from ripgrep-based agent search (Claude Code, Codex, Antigravity). Git still tracks these.
+# See AGENTS.md "Do not read unless the user asks".
+
+reference/
+results/
+docs/log/
+.agents/skills/
+.claude/skills/
+frontend/node_modules/
+frontend/dist/
+
+# Legacy proposal POC (scripted numbers)
+archive/
+tests/dummy/test_page.html
+tests/dummy/page_safe_heal.html
+tests/dummy/page_regression_trap.html
+frontend/public/page_safe_heal.html
+frontend/public/page_regression_trap.html
