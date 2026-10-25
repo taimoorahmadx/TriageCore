@@ -79,8 +79,9 @@ ci:
 
 thresholds:
   qa:
-    # If the evidence is improbable under EVERY cause (per-group fit below this), the engine
-    # escalates as "unrecognised pattern" instead of forcing the nearest label. (0-1, e.g. small)
+    # If evidence is improbable under every cause, autonomous actions are blocked and the engine
+    # escalates as an unrecognised pattern; classification still reports the most likely cause.
+    # (0-1, e.g. small)
     unknown_pattern_floor: 0.10
 
     # Cost of each action under each true cause, per risk tier of the step.

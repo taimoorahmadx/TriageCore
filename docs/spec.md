@@ -58,13 +58,13 @@ Field and type details live in `docs/contracts/`; this file says what must happe
 
 | ID | Requirement | Check | Status |
 |---|---|---|---|
-| FR-A1 | One FastAPI app `src/api/app.py` serves `/health`, `/api/qa/*`, `/api/ci/*`, the static `/tests/dummy/*` pages, and the legacy scripted routes. | Task A1/A2 route list check | Todo |
+| FR-A1 | One FastAPI app `src/api/app.py` serves `/health`, implemented QA routes, static `/tests/dummy/*` pages, and scripted routes under `/api/legacy/*`. CI routes are added when their CI tasks are implemented. | Task A1/A2 route list check | Done |
 | FR-A2 | `GET /api/qa/decisions?limit=N` lists stored decisions, newest first. | Task S1 | Todo |
 | FR-A3 | When `TRIAGECORE_API_TOKEN` is set, every `POST` except `/api/ci/webhook` requires header `Authorization: Bearer <token>` (401 otherwise). | Task D1 | Todo |
 | FR-U1 | QA Engine screen: run one scenario live and show evidence, posterior, expected losses, decision; error steps show "escalated (fail-safe)" with the error text. | Manual + `npm run build` | Partial (error steps: A4) |
 | FR-U2 | Evaluation screen shows the latest evaluation. | Manual | Done |
 | FR-U3 | A CI screen runs one corpus case and shows facts, tracing, posterior and decision. | Task C11 | Todo |
-| FR-U4 | The legacy "Proposal PoC (scripted)" tab still works, isolated in `frontend/src/legacy/`. | Task A3 | Todo |
+| FR-U4 | The legacy "Proposal PoC (scripted)" tab works, isolated in `frontend/src/legacy/`. | Task A3 | Done |
 
 ## 6. Non-functional
 

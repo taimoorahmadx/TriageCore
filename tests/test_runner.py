@@ -8,8 +8,8 @@ import pytest
 from playwright.sync_api import sync_playwright
 
 from src.agents.qa_pipeline import DUMMY_DIR
-from src.browser.relocator import FixedRelocator
 from src.browser.runner import StepSpec, Timing, collect_step_evidence, serve_directory
+from tests.fakes import FixedRelocator
 
 FAST = Timing(first_try_ms=300, rewait_pauses_ms=(300, 600, 1200), observation_window_ms=800, settle_ms=200)
 RENAMED = "#btn-add-item-primary"

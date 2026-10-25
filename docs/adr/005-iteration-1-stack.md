@@ -21,5 +21,5 @@ Postgres, Redis or Docker, and the documentation still described them as if they
 ## Consequences
 - **Positive:** the documented stack matches the running code; fewer moving parts to explain and
   defend.
-- **Negative:** M4/M5 (webhooks, queue, Postgres) still need these components; the work moves later.
+- **Negative:** M4/M5 webhooks and queued background work remain deferred; persistence uses SQLite as described above.
 - **Follow-up:** remove unused packages from `pyproject.toml` (task A5).

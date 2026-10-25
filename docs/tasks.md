@@ -50,10 +50,10 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] Human alters the button's ID to simulate a break.
 - [x] Control scenario heals the selector and outputs `SAFE_HEAL`.
 - [x] Trap scenario detects the `ReferenceError` and outputs `MASKED_REGRESSION_ESCALATED`.
-- [x] Wrapped in a FastAPI service exposing `POST /api/poc/run`.
+- [x] Wrapped in a FastAPI service exposing `POST /api/legacy/poc/run`.
 - [x] LLM returns `confidence_score` and `reasoning_trace` as JSON.
 - [x] React + Tailwind demo frontend.
-- [x] "Run Live Detection" button wired to `/api/poc/run`.
+- [x] "Run Live Detection" button wired to `/api/legacy/poc/run`.
 - Note: the POC's scores were partly hardcoded (96/94/15, forced step-3 escalation, fallback to the known selector). Replaced by the real engine in M1–M3.
 
 ### M1 · Confidence engine · Taimoor (implemented by Abdul) · mostly done

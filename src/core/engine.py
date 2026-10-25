@@ -11,8 +11,8 @@ Pipeline (identical for every source):
     raw_signals --adapter--> group states --SemiNaiveBayes--> P(cause | evidence)
                 --MinExpectedLossPolicy--> action  --> reasoning trace
 
-The engine is pure computation: no database, network or LLM calls. Persistence
-(src/db/store.py) wraps around it in later milestones.
+The engine is pure computation: no database, network or LLM calls. A
+DecisionStore adapter backed by SQLite is planned around it (ADR 005).
 """
 
 from __future__ import annotations
@@ -137,13 +137,6 @@ def build_trace(spec: DomainSpec, states: dict[str, str | None], posterior: Post
         parts.append("Blocked: " + "; ".join(f"{a} ({why})" for a, why in decision.blocked.items()))
     losses = ", ".join(f"{a} {v:.2f}" for a, v in decision.expected_loss.items())
     parts.append(f"Risk tier '{decision.risk_tier}', expected loss: {losses}")
-    taus = [
-        f"{a} needs P>={tau:.2f}"
-        for a in spec.autonomous_actions
-        if a not in decision.blocked and (tau := implied_threshold(spec, decision.risk_tier, a)) is not None
-    ]
-    if taus:
-        parts.append("Break-even: " + ", ".join(taus))
     verdict = "escalate to a human" if decision.action == REJECT_ACTION else decision.action
     parts.append(f"Decision: {verdict}")
     return ". ".join(parts) + "."

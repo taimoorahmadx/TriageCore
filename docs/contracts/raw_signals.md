@@ -43,7 +43,7 @@ Apart from `risk_tier`, context fields are **not weighted**. They exist for trac
 
 | Key | Type | Meaning |
 |---|---|---|
-| `step_id` | int | Step number within the suite |
+| `step_id` | str | Step identifier within the suite (for example, `add_to_cart`) |
 | `page_url` | str | Page under test |
 | `original_selector` | str | Selector the test was written with |
 | `proposed_selector` | str or null | Selector proposed by the LLM |
@@ -55,7 +55,8 @@ Apart from `risk_tier`, context fields are **not weighted**. They exist for trac
 
 ## How the engine uses these signals
 
-The signals are pooled into **evidence groups**. Signals that share a cause count once:
+The adapter pools related indicators within an evidence group. For QA, the runtime-failure
+indicators are combined in one group; separate groups are treated as conditionally independent.
 
 | Group | From | States |
 |---|---|---|
@@ -66,6 +67,8 @@ The signals are pooled into **evidence groups**. Signals that share a cause coun
 | `timing` | `original_resolved_after_wait` | `resolved_after_wait`, `not_resolved` |
 
 A `null` signal means "not observed". It is left out of the calculation, never treated as "fine".
+As a hard safety precondition, `expected_state_reached: false` blocks `heal`; `null` does not
+trigger that block because the state was not observed.
 
 - **`classification`** is the most probable cause under Bayes' rule (`stale_selector`, `likely_regression` or `flaky`). It is a diagnosis only.
 - **`recommended_action`** is the action with the lowest expected loss for the step's `risk_tier`, with `escalate` always available. Classification never encodes an action.
@@ -75,4 +78,4 @@ A `null` signal means "not observed". It is left out of the calculation, never t
 
 1. **Console errors** form their own weakly weighted group (`console_noise`). Third-party noise therefore cannot on its own outweigh a reached success state.
 2. **Ambiguous relocation** (`relocated_match_count > 1`) is a hard block on `heal`, not a weight.
-3. **Observation window:** still open. The PoC used 500 ms; the scenario suite's slow-handler case will be used to tune it.
+3. **Observation window:** 1500 ms after the action, followed by a 400 ms settle period to catch late errors (`Timing` defaults in `src/browser/runner.py`).

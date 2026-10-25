@@ -121,6 +121,19 @@ def test_unusable_relocation_blocks_heal(engine, matches):
     assert "Blocked: heal" in out.reasoning_trace
 
 
+def test_expected_state_not_reached_blocks_heal(engine):
+    out = engine.evaluate(qa_evidence(**{**CLEAN, "expected_state_reached": False}))
+    assert out.recommended_action != "heal"
+    assert "Blocked: heal (expected state was not reached)" in out.reasoning_trace
+
+
+def test_unknown_expected_state_does_not_trigger_hard_block(engine):
+    blocked = engine.adapters["qa"].blocked_actions(
+        {"selector_healed": True, "relocated_match_count": 1, "expected_state_reached": None}
+    )
+    assert "heal" not in blocked
+
+
 # (g) classification is always a diagnosis, never an action.
 def test_classification_is_never_an_action(engine):
     cases = [CLEAN, {**CLEAN, "uncaught_page_errors": 2}, {**CLEAN, "original_resolved_after_wait": True}]
@@ -229,6 +242,13 @@ def test_clean_heal_is_healed(engine):
     assert out.classification == "stale_selector"
     assert out.recommended_action == "heal"
     assert out.confidence_score >= 90
+
+
+def test_reasoning_trace_shows_expected_losses_without_break_even(engine):
+    out = engine.evaluate(qa_evidence(**CLEAN))
+    assert "expected loss:" in out.reasoning_trace
+    assert "Decision:" in out.reasoning_trace
+    assert "Break-even:" not in out.reasoning_trace
 
 
 def test_no_evidence_escalates(engine):

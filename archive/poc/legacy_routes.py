@@ -1,4 +1,4 @@
-from typing import List, Literal, Optional, Union
+from typing import Literal
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field, ValidationError
@@ -8,8 +8,8 @@ from archive.poc.poc_recovery import run_scenario
 router = APIRouter(tags=["legacy-poc"])
 
 class StepTelemetry(BaseModel):
-    console_errors: List[str] = Field(default_factory=list)
-    target_badge: Optional[str] = None
+    console_errors: list[str] = Field(default_factory=list)
+    target_badge: str | None = None
 
 class StepResult(BaseModel):
     step_index: int
@@ -34,7 +34,7 @@ class SuiteResponse(BaseModel):
     overall_verdict: str
     overall_recommended_action: Literal["heal", "escalate"]
     duration_ms: int
-    steps: List[StepResult]
+    steps: list[StepResult]
 
 class ScenarioRequest(BaseModel):
     scenario: Literal["control", "trap", "suite"] = Field(
@@ -48,15 +48,15 @@ class ScenarioResponse(BaseModel):
     reasoning_trace: str
     recommended_action: Literal["heal", "escalate"]
     duration_ms: int
-    poc_verdict: Optional[Literal["SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"]] = None
+    poc_verdict: Literal["SAFE_HEAL", "MASKED_REGRESSION_ESCALATED"] | None = None
 
 class CiTriageRequest(BaseModel):
     scenario: Literal["flaky", "bug", "ambiguous"] = Field(
         default="bug", description="CI failure scenario to triage: flaky, bug, or ambiguous"
     )
-    repo: Optional[str] = Field(default="taimoorahmadx/TriageCore")
-    workflow: Optional[str] = Field(default="ci.yml")
-    run_id: Optional[str] = Field(default="#1043")
+    repo: str | None = Field(default="taimoorahmadx/TriageCore")
+    workflow: str | None = Field(default="ci.yml")
+    run_id: str | None = Field(default="#1043")
 
 class CiTriageResponse(BaseModel):
     scenario: Literal["flaky", "bug", "ambiguous"]
@@ -64,13 +64,13 @@ class CiTriageResponse(BaseModel):
     confidence_score: int = Field(ge=0, le=100)
     recommended_action: Literal["rerun", "auto-fix", "escalate", "flag"]
     reasoning_trace: str
-    attributed_commit: Optional[str] = None
-    author: Optional[str] = None
+    attributed_commit: str | None = None
+    author: str | None = None
     failure_signal: str
-    draft_pr: Optional[dict] = None
+    draft_pr: dict | None = None
     duration_ms: int = 420
 
-@router.post("/api/poc/run", response_model=Union[SuiteResponse, ScenarioResponse])
+@router.post("/api/legacy/poc/run", response_model=SuiteResponse | ScenarioResponse)
 def run_poc_scenario(payload: ScenarioRequest):
     try:
         # Run headless=True so execution is fast and robust in API context
@@ -79,12 +79,12 @@ def run_poc_scenario(payload: ScenarioRequest):
             return SuiteResponse.model_validate(result)
         return ScenarioResponse.model_validate(result)
     except ValidationError as e:
-        raise HTTPException(status_code=502, detail=f"POC returned invalid payload: {str(e)}")
+        raise HTTPException(status_code=502, detail=f"POC returned invalid payload: {str(e)}") from None
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"POC execution error: {str(e)}") from None
 
 
-@router.post("/api/ci/triage", response_model=CiTriageResponse)
+@router.post("/api/legacy/ci/triage", response_model=CiTriageResponse)
 def run_ci_triage(payload: CiTriageRequest):
     try:
         if payload.scenario == "flaky":
@@ -134,5 +134,5 @@ def run_ci_triage(payload: CiTriageRequest):
                 duration_ms=410
             )
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"CI triage execution error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"CI triage execution error: {str(e)}") from None
 
