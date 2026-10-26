@@ -1,0 +1,43 @@
+repo: pydantic/pydantic
+run_id: 40319557146
+head_sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
+run_attempts:
+- attempt: 1
+  head_sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
+  conclusion: failure
+commits:
+- sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
+  author: Viicos
+  files: []
+- sha: 27f3c351f9c62b22a11c6e6e7dc1a14921467dab
+  author: Viicos
+  files: []
+- sha: 26693b2a9bc361deed440a2b317895f35620eb01
+  author: dependabot[bot]
+  files: []
+- sha: 3ac45cd4d224457748295e607a6c0c832d207b41
+  author: dependabot[bot]
+  files: []
+- sha: 374a11de11d95e014060204bb9dd1354c2fcbbbd
+  author: Viicos
+  files: []
+- sha: 281aee54558e2ae7964d32b6c351951feaaa0650
+  author: Viicos
+  files: []
+- sha: 0a65dd583a05d7131dbf638c31cb7013b7e96cd7
+  author: Viicos
+  files: []
+- sha: 03c7e0fb6a3dda7b21da188d0eb65fc8930b415b
+  author: Viicos
+  files: []
+- sha: ab0ce7da96a1470c0c0d15a9fddc66056653bc72
+  author: Viicos
+  files: []
+- sha: 22b5c7898523a8a3ae14549cd8b6bb5fc10b7f46
+  author: tongwentao
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

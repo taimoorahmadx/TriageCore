@@ -1,0 +1,43 @@
+repo: django/django
+run_id: 40330349774
+head_sha: 7d32f7ee039d6bc2e8408b0f4ee3a32ad390d593
+run_attempts:
+- attempt: 1
+  head_sha: 7d32f7ee039d6bc2e8408b0f4ee3a32ad390d593
+  conclusion: failure
+commits:
+- sha: 7d32f7ee039d6bc2e8408b0f4ee3a32ad390d593
+  author: May2367
+  files: []
+- sha: a2a0b4f2764f7b192bff4bb75ed56ce017931a71
+  author: lyova24
+  files: []
+- sha: 36920bb4766679f5b32445797dcc5d32b8ff5ad2
+  author: jacobtylerwalls
+  files: []
+- sha: 0e128d524d0a7c55a955570d6e5da983ac6ce6c7
+  author: medmunds
+  files: []
+- sha: 1b40abab06d248ee409fa8b7a8dfb6312de6ca08
+  author: carltongibson
+  files: []
+- sha: 512b92a493f8006e149bb924957561acc6714e52
+  author: jrief
+  files: []
+- sha: 816ea69cb8d24df97611935384d380a752c14e0f
+  author: jrief
+  files: []
+- sha: 32a46625c24cbc72adc5a77296b085a49c47ae12
+  author: Gerry Mcbride
+  files: []
+- sha: a26ceb0903189bb534394db62e031403b2b9fa93
+  author: jacobtylerwalls
+  files: []
+- sha: 8e4e95da9b5b751923cd80989d9ece4b6c6fb1a3
+  author: nessita
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

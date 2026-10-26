@@ -20,3 +20,4 @@ what it affects, who decided, approval status.
 | 12 | 2026-10-25 | Planning docs moved to the brief / spec / plan / tasks / progress set; `roadmap.md`, `requirements.md`, `architecture.md` folded in | One predictable place per kind of context for every agent | Documentation only | Team | Not needed (docs) |
 
 | 2026-10-25 | X1 | QA hard precondition: block `heal` when `expected_state_reached` is false (ADR 004). | Project owner approved this audit fix. |
+- 2026-10-26 — C3: Removed `verified_by` from corpus review records and counted cases with a label plus evidence; Shazil requested the field removal.

@@ -1,0 +1,119 @@
+repo: vercel/next.js
+run_id: 40337346242
+head_sha: 56b07938df21e9a336c30b66f5c8cc928710494c
+run_attempts:
+- attempt: 1
+  head_sha: 56b07938df21e9a336c30b66f5c8cc928710494c
+  conclusion: failure
+commits:
+- sha: 56b07938df21e9a336c30b66f5c8cc928710494c
+  author: timneutkens
+  files:
+  - crates/next-api/src/go_route.rs
+  - crates/next-api/src/go_route_adapter_main.go
+  - docs/01-app/03-api-reference/03-file-conventions/route-go.mdx
+  - docs/01-app/03-api-reference/07-adapters/08-invoking-entrypoints.mdx
+  - docs/01-app/03-api-reference/07-adapters/09-output-types.mdx
+  - packages/next/src/build/adapter/build-complete.ts
+  - packages/next/src/server/config.ts
+  - test/e2e/app-dir/native-route-go/capture-adapter.mjs
+  - test/e2e/app-dir/native-route-go/native-route-go.test.ts
+  - test/production/deterministic-build/adapter-content-hashes.test.ts
+- sha: f57796f7dfec21440708aa797f2ad0a4cc170fc4
+  author: timneutkens
+  files:
+  - packages/next/src/server/lib/native-route.ts
+  - packages/next/src/server/next-server.ts
+- sha: ba9f4d657dcd9a86e4e9a95900a0ef40c89b2e8d
+  author: timneutkens
+  files:
+  - Cargo.lock
+  - crates/next-api/Cargo.toml
+  - crates/next-api/src/app.rs
+  - crates/next-api/src/go_route.rs
+  - crates/next-api/src/go_route_main.go
+  - crates/next-api/src/lib.rs
+  - crates/next-api/src/project.rs
+  - crates/next-api/src/route.rs
+  - crates/next-core/src/app_structure.rs
+  - crates/next-core/src/next_config.rs
+  - crates/next-napi-bindings/src/next_api/endpoint.rs
+  - crates/next-napi-bindings/src/next_api/project.rs
+  - docs/01-app/03-api-reference/03-file-conventions/route-go.mdx
+  - packages/next/src/build/analysis/get-page-static-info.ts
+  - packages/next/src/build/route-discovery.ts
+  - packages/next/src/build/swc/types.ts
+  - packages/next/src/build/utils.ts
+  - packages/next/src/server/config-schema.ts
+  - packages/next/src/server/config-shared.ts
+  - packages/next/src/server/config.ts
+  - packages/next/src/server/dev/hot-reloader-turbopack.ts
+  - packages/next/src/server/dev/on-demand-entry-handler.ts
+  - packages/next/src/server/dev/turbopack-utils.ts
+  - packages/next/src/server/lib/find-page-file.ts
+  - packages/next/src/server/lib/native-route.ts
+  - packages/next/src/server/lib/render-server.ts
+  - packages/next/src/server/lib/router-utils/setup-dev-bundler.ts
+  - packages/next/src/server/lib/router-utils/typegen.ts
+  - packages/next/src/server/next-server.ts
+  - test/e2e/app-dir/native-route-go/app/(group)/native/[id]/assets/message.txt
+  - test/e2e/app-dir/native-route-go/app/(group)/native/[id]/helper.go
+  - test/e2e/app-dir/native-route-go/app/(group)/native/[id]/route.go
+  - test/e2e/app-dir/native-route-go/app/catch/[...slug]/route.go
+  - test/e2e/app-dir/native-route-go/app/js/route.ts
+  - test/e2e/app-dir/native-route-go/app/layout.tsx
+  - test/e2e/app-dir/native-route-go/app/page.tsx
+  - test/e2e/app-dir/native-route-go/go.mod
+  - test/e2e/app-dir/native-route-go/internal/deep/message.go
+  - test/e2e/app-dir/native-route-go/internal/message/message.go
+  - test/e2e/app-dir/native-route-go/native-route-go.test.ts
+  - test/e2e/app-dir/native-route-go/next.config.ts
+  - test/e2e/app-dir/native-route-go/pages/legacy.tsx
+  - test/e2e/app-dir/native-route-go/proxy.ts
+  - test/unit/app-dir/native-route-go-discovery/app/native/route.go
+  - test/unit/app-dir/native-route-go-discovery/app/route.go
+  - test/unit/app-dir/native-route-go-discovery/app/route.ts
+  - test/unit/app-dir/native-route-go-discovery/native-route-go-discovery.test.ts
+  - test/unit/app-dir/native-route-go-discovery/tsconfig.json
+  - turbopack/crates/turbopack-go/README.md
+  - turbopack/crates/turbopack-go/src/lib.rs
+  - turbopack/crates/turbopack-go/tests/live.rs
+- sha: bb04dc75b80513f05e4d0ff78ba7c74603852aa0
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-cli/README.md
+- sha: dd02e42ec0f5ece9829831b295a047cae39b07c0
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-cli/README.md
+  - turbopack/crates/turbopack-cli/src/go.rs
+  - turbopack/crates/turbopack-cli/tests/go.rs
+- sha: 5d84886e71f796e002a45757e6313aaeff7b97af
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-cli/README.md
+  - turbopack/crates/turbopack-cli/src/go.rs
+  - turbopack/crates/turbopack-cli/tests/go.rs
+  - turbopack/crates/turbopack-go/tests/live.rs
+- sha: 4660892eb74ac21abd10270e14a714c4dbb5e9ca
+  author: timneutkens
+  files:
+  - Cargo.lock
+  - turbopack/crates/turbo-tasks-fs/Cargo.toml
+- sha: 5c36b6e5befa97c7170c14529dd98284d09d79b5
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-cli/tests/go.rs
+- sha: 9946ff692e4488d3743aff4d6af01623d11e81c2
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-go/src/lib.rs
+- sha: 9c3e8dfcb443545245449e818e10410424753bbd
+  author: timneutkens
+  files:
+  - turbopack/crates/turbopack-go/src/inputs.rs
+  - turbopack/crates/turbopack-go/src/lib.rs
+label: null
+label_source: null
+risk_tier: medium
+suggested_label: infra

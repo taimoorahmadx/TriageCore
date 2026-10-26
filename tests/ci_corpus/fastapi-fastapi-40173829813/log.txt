@@ -1,0 +1,9 @@
+===== smokeshow/system.txt =====
+2026-10-25T07:43:09.9950000Z Evaluating smokeshow.if
+2026-10-25T07:43:09.9950000Z Evaluating: success()
+2026-10-25T07:43:09.9950000Z Result: true
+2026-10-25T07:43:09.9950000Z Requested labels: ubuntu-latest
+2026-10-25T07:43:09.9950000Z Job defined at: fastapi/fastapi/.github/workflows/smokeshow.yml@refs/heads/master
+2026-10-25T07:43:09.9950000Z Waiting for a runner to pick up this job...
+2026-10-25T07:43:10.4240000Z Job is about to start running on the hosted runner: GitHub Actions 1000495183
+2026-10-25T07:43:10.4230000Z Job is waiting for a hosted runner to come online.

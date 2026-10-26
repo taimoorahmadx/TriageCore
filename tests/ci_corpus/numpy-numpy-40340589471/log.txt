@@ -1,0 +1,683 @@
+===== ml_dtypes_compat/19_Post Checkout ml_dtypes.txt =====
+﻿2026-10-26T14:41:23.9994354Z Post job cleanup.
+2026-10-26T14:41:24.0884119Z [command]/usr/bin/git version
+2026-10-26T14:41:24.0923843Z git version 2.55.0
+2026-10-26T14:41:24.0958400Z Temporarily overriding HOME='/home/runner/work/_temp/cd6a9520-f2c9-4aa3-af2e-a8a6a9164dd4' before making global git config changes
+2026-10-26T14:41:24.0959323Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T14:41:24.0963470Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/numpy/numpy/ml_dtypes
+2026-10-26T14:41:24.1000766Z Removing SSH command configuration
+2026-10-26T14:41:24.1008012Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:41:24.1044570Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:41:24.1299833Z Entering 'third_party/eigen'
+2026-10-26T14:41:24.1360551Z Removing HTTP extra header
+2026-10-26T14:41:24.1368581Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:41:24.1414913Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:41:24.1661584Z Entering 'third_party/eigen'
+2026-10-26T14:41:24.1717455Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:41:24.1724826Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.1759568Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:41:24.1991779Z Entering 'third_party/eigen'
+2026-10-26T14:41:24.2012116Z file:/home/runner/work/numpy/numpy/ml_dtypes/.git/modules/third_party/eigen/config	remote.origin.url
+2026-10-26T14:41:24.2046811Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/ml_dtypes/.git/modules/third_party/eigen/config --name-only --get-regexp ^includeIf\.gitdir:
+
+===== ml_dtypes_compat/1_Set up job.txt =====
+﻿2026-10-26T14:39:47.1563456Z Current runner version: '2.338.0'
+2026-10-26T14:39:47.1590567Z ##[group]Runner Image Provisioner
+2026-10-26T14:39:47.1591480Z Hosted Compute Agent
+2026-10-26T14:39:47.1592201Z Version: 20261021.618
+2026-10-26T14:39:47.1592887Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T14:39:47.1593673Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T14:39:47.1594421Z Worker ID: {f8af6c5e-5a0e-4d3c-9b0a-46fc49afb43c}
+2026-10-26T14:39:47.1595180Z Region: westcentralus
+2026-10-26T14:39:47.1596151Z Cloud: Azure
+2026-10-26T14:39:47.1596753Z ##[endgroup]
+2026-10-26T14:39:47.1598209Z ##[group]Operating System
+2026-10-26T14:39:47.1598872Z Ubuntu
+2026-10-26T14:39:47.1599424Z 24.04.5
+2026-10-26T14:39:47.1600017Z LTS
+2026-10-26T14:39:47.1600604Z ##[endgroup]
+2026-10-26T14:39:47.1601169Z ##[group]Runner Image
+2026-10-26T14:39:47.1601863Z Image: ubuntu-24.04
+2026-10-26T14:39:47.1602467Z Version: 20261012.334.1
+2026-10-26T14:39:47.1603665Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-26T14:39:47.1605414Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-26T14:39:47.1607032Z ##[endgroup]
+2026-10-26T14:39:47.1608196Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T14:39:47.1610388Z Contents: read
+2026-10-26T14:39:47.1611016Z Metadata: read
+2026-10-26T14:39:47.1611689Z ##[endgroup]
+2026-10-26T14:39:47.1613861Z Secret source: None
+2026-10-26T14:39:47.1614869Z Cache mode: write
+2026-10-26T14:39:47.1616040Z Prepare workflow directory
+2026-10-26T14:39:47.2037217Z Prepare all required actions
+2026-10-26T14:39:47.2086502Z Getting action download info
+2026-10-26T14:39:47.5193276Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-26T14:39:47.6312859Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-26T14:39:47.8226375Z Complete job name: ml_dtypes_compat
+
+===== ml_dtypes_compat/20_Post Checkout NumPy.txt =====
+﻿2026-10-26T14:41:24.2245986Z Post job cleanup.
+2026-10-26T14:41:24.3175992Z [command]/usr/bin/git version
+2026-10-26T14:41:24.3224652Z git version 2.55.0
+2026-10-26T14:41:24.3259978Z Temporarily overriding HOME='/home/runner/work/_temp/85e592d7-285e-42bd-8541-f1b8027f0621' before making global git config changes
+2026-10-26T14:41:24.3260847Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T14:41:24.3265427Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/numpy/numpy
+2026-10-26T14:41:24.3300500Z Removing SSH command configuration
+2026-10-26T14:41:24.3307336Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:41:24.3343895Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:41:24.3579001Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:41:24.3629885Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:41:24.3680470Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:41:24.3732139Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:41:24.3783888Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:41:24.3834668Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:41:24.3884951Z Entering 'vendored-meson/meson'
+2026-10-26T14:41:24.3960166Z Removing HTTP extra header
+2026-10-26T14:41:24.3967919Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:41:24.4012074Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:41:24.4264428Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:41:24.4312955Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:41:24.4362760Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:41:24.4412329Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:41:24.4464395Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:41:24.4514580Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:41:24.4565038Z Entering 'vendored-meson/meson'
+2026-10-26T14:41:24.4634190Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:41:24.4642735Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.4681672Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:41:24.4934116Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:41:24.4954310Z file:/home/runner/work/numpy/numpy/.git/modules/doc/source/_static/scipy-mathjax/config	remote.origin.url
+2026-10-26T14:41:24.4974392Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:41:24.4995145Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/common/pythoncapi-compat/config	remote.origin.url
+2026-10-26T14:41:24.5016089Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:41:24.5037388Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/highway/config	remote.origin.url
+2026-10-26T14:41:24.5056920Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:41:24.5077483Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/npysort/x86-simd-sort/config	remote.origin.url
+2026-10-26T14:41:24.5097369Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:41:24.5117688Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/umath/svml/config	remote.origin.url
+2026-10-26T14:41:24.5138046Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:41:24.5223895Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/fft/pocketfft/config	remote.origin.url
+2026-10-26T14:41:24.5224768Z Entering 'vendored-meson/meson'
+2026-10-26T14:41:24.5226037Z file:/home/runner/work/numpy/numpy/.git/modules/vendored-meson/meson/config	remote.origin.url
+2026-10-26T14:41:24.5248838Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/doc/source/_static/scipy-mathjax/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5284157Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/common/pythoncapi-compat/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5317270Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/highway/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5348361Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/npysort/x86-simd-sort/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5378330Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/umath/svml/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5407468Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/fft/pocketfft/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:24.5436845Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/vendored-meson/meson/config --name-only --get-regexp ^includeIf\.gitdir:
+
+===== ml_dtypes_compat/21_Complete job.txt =====
+﻿2026-10-26T14:41:24.5619119Z Cleaning up orphan processes
+
+===== ml_dtypes_compat/2_Checkout NumPy.txt =====
+﻿2026-10-26T14:39:47.9117499Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-26T14:39:47.9118539Z with:
+2026-10-26T14:39:47.9118971Z   submodules: recursive
+2026-10-26T14:39:47.9119447Z   fetch-tags: true
+2026-10-26T14:39:47.9119903Z   persist-credentials: false
+2026-10-26T14:39:47.9120419Z   repository: numpy/numpy
+2026-10-26T14:39:47.9124233Z   token: ***
+2026-10-26T14:39:47.9124658Z   ssh-strict: true
+2026-10-26T14:39:47.9125099Z   ssh-user: git
+2026-10-26T14:39:47.9125514Z   clean: true
+2026-10-26T14:39:47.9126356Z   sparse-checkout-cone-mode: true
+2026-10-26T14:39:47.9126880Z   fetch-depth: 1
+2026-10-26T14:39:47.9127317Z   show-progress: true
+2026-10-26T14:39:47.9127760Z   lfs: false
+2026-10-26T14:39:47.9128212Z   set-safe-directory: true
+2026-10-26T14:39:47.9128714Z   allow-unsafe-pr-checkout: false
+2026-10-26T14:39:47.9129519Z env:
+2026-10-26T14:39:47.9129929Z   APT_TIMEOUT_MINUTES: 15
+2026-10-26T14:39:47.9130393Z ##[endgroup]
+2026-10-26T14:39:48.0161158Z Syncing repository: numpy/numpy
+2026-10-26T14:39:48.0163248Z ##[group]Getting Git version info
+2026-10-26T14:39:48.0164018Z Working directory is '/home/runner/work/numpy/numpy'
+2026-10-26T14:39:48.0165160Z [command]/usr/bin/git version
+2026-10-26T14:39:48.0206661Z git version 2.55.0
+2026-10-26T14:39:48.0226565Z ##[endgroup]
+2026-10-26T14:39:48.0238161Z Temporarily overriding HOME='/home/runner/work/_temp/ba4d774c-b0f9-452b-9963-7dbbb3ec898b' before making global git config changes
+2026-10-26T14:39:48.0239557Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T14:39:48.0243702Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/numpy/numpy
+2026-10-26T14:39:48.0291182Z Deleting the contents of '/home/runner/work/numpy/numpy'
+2026-10-26T14:39:48.0294922Z ##[group]Determining repository object format
+2026-10-26T14:39:48.0296900Z ##[endgroup]
+2026-10-26T14:39:48.0298095Z ##[group]Initializing the repository
+2026-10-26T14:39:48.0302254Z [command]/usr/bin/git init /home/runner/work/numpy/numpy
+2026-10-26T14:39:48.0382517Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T14:39:48.0383720Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T14:39:48.0385228Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T14:39:48.0386498Z hint: call:
+2026-10-26T14:39:48.0387133Z hint:
+2026-10-26T14:39:48.0387934Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T14:39:48.0388920Z hint:
+2026-10-26T14:39:48.0389818Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T14:39:48.0391256Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T14:39:48.0392465Z hint:
+2026-10-26T14:39:48.0393097Z hint: 	git branch -m <name>
+2026-10-26T14:39:48.0393830Z hint:
+2026-10-26T14:39:48.0394794Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T14:39:48.0396672Z Initialized empty Git repository in /home/runner/work/numpy/numpy/.git/
+2026-10-26T14:39:48.0399478Z [command]/usr/bin/git remote add origin https://github.com/numpy/numpy
+2026-10-26T14:39:48.0444590Z ##[endgroup]
+2026-10-26T14:39:48.0445465Z ##[group]Disabling automatic garbage collection
+2026-10-26T14:39:48.0448123Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T14:39:48.0481034Z ##[endgroup]
+2026-10-26T14:39:48.0482463Z ##[group]Setting up auth
+2026-10-26T14:39:48.0483026Z Removing SSH command configuration
+2026-10-26T14:39:48.0487526Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:39:48.0521152Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:39:48.0847867Z Removing HTTP extra header
+2026-10-26T14:39:48.0853696Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:39:48.0888577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:39:48.1132637Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:39:48.1139026Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:39:48.1173505Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:39:48.1429414Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T14:39:48.1469478Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/numpy/numpy/.git.path /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:39:48.1501965Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/numpy/numpy/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:39:48.1536404Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:39:48.1568991Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:39:48.1600139Z ##[endgroup]
+2026-10-26T14:39:48.1600956Z ##[group]Fetching the repository
+2026-10-26T14:39:48.1607857Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +refs/tags/*:refs/tags/* +e3f148a147475b8387fb34b343cd41e221daedcb:refs/remotes/pull/33149/merge
+2026-10-26T14:39:51.9116731Z From https://github.com/numpy/numpy
+2026-10-26T14:39:51.9119379Z  * [new tag]           enable_separate_by_default -> enable_separate_by_default
+2026-10-26T14:39:51.9121502Z  * [new tag]           pre-removal-numpybook      -> pre-removal-numpybook
+2026-10-26T14:39:51.9123436Z  * [new tag]           v0.2.0                     -> v0.2.0
+2026-10-26T14:39:51.9125049Z  * [new tag]           v0.2.2                     -> v0.2.2
+2026-10-26T14:39:51.9126900Z  * [new tag]           v0.3.0                     -> v0.3.0
+2026-10-26T14:39:51.9128212Z  * [new tag]           v0.3.2                     -> v0.3.2
+2026-10-26T14:39:51.9129369Z  * [new tag]           v0.4.2b1                   -> v0.4.2b1
+2026-10-26T14:39:51.9130494Z  * [new tag]           v0.6.0                     -> v0.6.0
+2026-10-26T14:39:51.9131703Z  * [new tag]           v0.6.1                     -> v0.6.1
+2026-10-26T14:39:51.9133537Z  * [new tag]           v0.8.4                     -> v0.8.4
+2026-10-26T14:39:51.9215407Z  * [new tag]           v0.9.2                     -> v0.9.2
+2026-10-26T14:39:51.9217723Z  * [new tag]           v0.9.4                     -> v0.9.4
+2026-10-26T14:39:51.9219568Z  * [new tag]           v0.9.5                     -> v0.9.5
+2026-10-26T14:39:51.9221521Z  * [new tag]           v0.9.6                     -> v0.9.6
+2026-10-26T14:39:51.9222798Z  * [new tag]           v0.9.8                     -> v0.9.8
+2026-10-26T14:39:51.9224009Z  * [new tag]           v1.0                       -> v1.0
+2026-10-26T14:39:51.9225402Z  * [new tag]           v1.0.1                     -> v1.0.1
+2026-10-26T14:39:51.9226895Z  * [new tag]           v1.0.2                     -> v1.0.2
+2026-10-26T14:39:51.9228115Z  * [new tag]           v1.0.3                     -> v1.0.3
+2026-10-26T14:39:51.9229322Z  * [new tag]           v1.0.3.1                   -> v1.0.3.1
+2026-10-26T14:39:51.9230724Z  * [new tag]           v1.0.4                     -> v1.0.4
+2026-10-26T14:39:51.9232724Z  * [new tag]           v1.0b1                     -> v1.0b1
+2026-10-26T14:39:51.9234399Z  * [new tag]           v1.0b2                     -> v1.0b2
+2026-10-26T14:39:51.9236476Z  * [new tag]           v1.0b3                     -> v1.0b3
+2026-10-26T14:39:51.9238094Z  * [new tag]           v1.0b4                     -> v1.0b4
+2026-10-26T14:39:51.9239923Z  * [new tag]           v1.0b5                     -> v1.0b5
+2026-10-26T14:39:51.9241640Z  * [new tag]           v1.0rc1                    -> v1.0rc1
+2026-10-26T14:39:51.9243368Z  * [new tag]           v1.0rc2                    -> v1.0rc2
+2026-10-26T14:39:51.9245138Z  * [new tag]           v1.0rc3                    -> v1.0rc3
+2026-10-26T14:39:51.9247352Z  * [new tag]           v1.1.0                     -> v1.1.0
+2026-10-26T14:39:51.9249157Z  * [new tag]           v1.1.0rc1                  -> v1.1.0rc1
+2026-10-26T14:39:51.9251290Z  * [new tag]           v1.1.1                     -> v1.1.1
+[... 91 lines removed by TriageCore ...]
+2026-10-26T14:39:51.9406786Z  * [new tag]           v1.20.1                    -> v1.20.1
+2026-10-26T14:39:51.9408337Z  * [new tag]           v1.20.2                    -> v1.20.2
+2026-10-26T14:39:51.9409881Z  * [new tag]           v1.20.3                    -> v1.20.3
+2026-10-26T14:39:51.9411422Z  * [new tag]           v1.21.0                    -> v1.21.0
+2026-10-26T14:39:51.9413020Z  * [new tag]           v1.21.0.dev0               -> v1.21.0.dev0
+2026-10-26T14:39:51.9414645Z  * [new tag]           v1.21.0rc1                 -> v1.21.0rc1
+2026-10-26T14:39:51.9416349Z  * [new tag]           v1.21.0rc2                 -> v1.21.0rc2
+2026-10-26T14:39:51.9417897Z  * [new tag]           v1.21.1                    -> v1.21.1
+2026-10-26T14:39:51.9419415Z  * [new tag]           v1.21.2                    -> v1.21.2
+2026-10-26T14:39:51.9420942Z  * [new tag]           v1.21.3                    -> v1.21.3
+2026-10-26T14:39:51.9422457Z  * [new tag]           v1.21.4                    -> v1.21.4
+2026-10-26T14:39:51.9423959Z  * [new tag]           v1.21.5                    -> v1.21.5
+2026-10-26T14:39:51.9425719Z  * [new tag]           v1.21.6                    -> v1.21.6
+2026-10-26T14:39:51.9427297Z  * [new tag]           v1.22.0                    -> v1.22.0
+2026-10-26T14:39:51.9428854Z  * [new tag]           v1.22.0.dev0               -> v1.22.0.dev0
+2026-10-26T14:39:51.9430460Z  * [new tag]           v1.22.0rc1                 -> v1.22.0rc1
+2026-10-26T14:39:51.9432047Z  * [new tag]           v1.22.0rc2                 -> v1.22.0rc2
+2026-10-26T14:39:51.9433622Z  * [new tag]           v1.22.0rc3                 -> v1.22.0rc3
+2026-10-26T14:39:51.9435175Z  * [new tag]           v1.22.1                    -> v1.22.1
+2026-10-26T14:39:51.9436870Z  * [new tag]           v1.22.2                    -> v1.22.2
+2026-10-26T14:39:51.9438431Z  * [new tag]           v1.22.3                    -> v1.22.3
+2026-10-26T14:39:51.9439939Z  * [new tag]           v1.22.4                    -> v1.22.4
+2026-10-26T14:39:51.9441456Z  * [new tag]           v1.23.0                    -> v1.23.0
+2026-10-26T14:39:51.9443031Z  * [new tag]           v1.23.0.dev0               -> v1.23.0.dev0
+2026-10-26T14:39:51.9444636Z  * [new tag]           v1.23.0rc1                 -> v1.23.0rc1
+2026-10-26T14:39:51.9446319Z  * [new tag]           v1.23.0rc2                 -> v1.23.0rc2
+2026-10-26T14:39:51.9447907Z  * [new tag]           v1.23.0rc3                 -> v1.23.0rc3
+2026-10-26T14:39:51.9449453Z  * [new tag]           v1.23.1                    -> v1.23.1
+2026-10-26T14:39:51.9451251Z  * [new tag]           v1.23.2                    -> v1.23.2
+2026-10-26T14:39:51.9452751Z  * [new tag]           v1.23.3                    -> v1.23.3
+2026-10-26T14:39:51.9454267Z  * [new tag]           v1.23.4                    -> v1.23.4
+2026-10-26T14:39:51.9455916Z  * [new tag]           v1.23.5                    -> v1.23.5
+2026-10-26T14:39:51.9457460Z  * [new tag]           v1.24.0                    -> v1.24.0
+2026-10-26T14:39:51.9459014Z  * [new tag]           v1.24.0.dev0               -> v1.24.0.dev0
+2026-10-26T14:39:51.9460627Z  * [new tag]           v1.24.0rc1                 -> v1.24.0rc1
+2026-10-26T14:39:51.9462378Z  * [new tag]           v1.24.0rc2                 -> v1.24.0rc2
+2026-10-26T14:39:51.9464477Z  * [new tag]           v1.24.1                    -> v1.24.1
+2026-10-26T14:39:51.9466292Z  * [new tag]           v1.24.2                    -> v1.24.2
+2026-10-26T14:39:51.9467794Z  * [new tag]           v1.24.3                    -> v1.24.3
+2026-10-26T14:39:51.9469284Z  * [new tag]           v1.24.4                    -> v1.24.4
+2026-10-26T14:39:51.9470784Z  * [new tag]           v1.25.0                    -> v1.25.0
+2026-10-26T14:39:51.9472308Z  * [new tag]           v1.25.0.dev0               -> v1.25.0.dev0
+2026-10-26T14:39:51.9473871Z  * [new tag]           v1.25.1                    -> v1.25.1
+2026-10-26T14:39:51.9475395Z  * [new tag]           v1.25.2                    -> v1.25.2
+2026-10-26T14:39:51.9477089Z  * [new tag]           v1.26.0                    -> v1.26.0
+2026-10-26T14:39:51.9478709Z  * [new tag]           v1.26.0.dev0               -> v1.26.0.dev0
+2026-10-26T14:39:51.9480364Z  * [new tag]           v1.26.0b1                  -> v1.26.0b1
+2026-10-26T14:39:51.9481941Z  * [new tag]           v1.26.0rc1                 -> v1.26.0rc1
+2026-10-26T14:39:51.9483554Z  * [new tag]           v1.26.1                    -> v1.26.1
+2026-10-26T14:39:51.9485076Z  * [new tag]           v1.26.2                    -> v1.26.2
+2026-10-26T14:39:51.9486801Z  * [new tag]           v1.26.3                    -> v1.26.3
+2026-10-26T14:39:51.9488348Z  * [new tag]           v1.26.4                    -> v1.26.4
+2026-10-26T14:39:51.9489882Z  * [new tag]           v1.26.5                    -> v1.26.5
+2026-10-26T14:39:51.9491379Z  * [new tag]           v1.3.0                     -> v1.3.0
+2026-10-26T14:39:51.9492901Z  * [new tag]           v1.3.0b1                   -> v1.3.0b1
+2026-10-26T14:39:51.9494470Z  * [new tag]           v1.3.0rc1                  -> v1.3.0rc1
+2026-10-26T14:39:51.9496263Z  * [new tag]           v1.3.0rc2                  -> v1.3.0rc2
+2026-10-26T14:39:51.9498079Z  * [new tag]           v1.4.0                     -> v1.4.0
+2026-10-26T14:39:51.9499610Z  * [new tag]           v1.4.0rc1                  -> v1.4.0rc1
+2026-10-26T14:39:51.9501168Z  * [new tag]           v1.4.0rc2                  -> v1.4.0rc2
+2026-10-26T14:39:51.9502695Z  * [new tag]           v1.4.1                     -> v1.4.1
+2026-10-26T14:39:51.9504221Z  * [new tag]           v1.4.1rc1                  -> v1.4.1rc1
+2026-10-26T14:39:51.9505989Z  * [new tag]           v1.4.1rc2                  -> v1.4.1rc2
+2026-10-26T14:39:51.9507566Z  * [new tag]           v1.4.1rc3                  -> v1.4.1rc3
+2026-10-26T14:39:51.9509083Z  * [new tag]           v1.5.0                     -> v1.5.0
+2026-10-26T14:39:51.9510608Z  * [new tag]           v1.5.0b1                   -> v1.5.0b1
+2026-10-26T14:39:51.9512141Z  * [new tag]           v1.5.0b2                   -> v1.5.0b2
+2026-10-26T14:39:51.9513679Z  * [new tag]           v1.5.0rc1                  -> v1.5.0rc1
+2026-10-26T14:39:51.9515212Z  * [new tag]           v1.5.1                     -> v1.5.1
+2026-10-26T14:39:51.9516861Z  * [new tag]           v1.5.1rc1                  -> v1.5.1rc1
+2026-10-26T14:39:51.9518439Z  * [new tag]           v1.5.1rc2                  -> v1.5.1rc2
+2026-10-26T14:39:51.9520009Z  * [new tag]           v1.6.0                     -> v1.6.0
+2026-10-26T14:39:51.9521534Z  * [new tag]           v1.6.0b1                   -> v1.6.0b1
+2026-10-26T14:39:51.9523077Z  * [new tag]           v1.6.0b2                   -> v1.6.0b2
+2026-10-26T14:39:51.9524631Z  * [new tag]           v1.6.0rc1                  -> v1.6.0rc1
+2026-10-26T14:39:51.9526413Z  * [new tag]           v1.6.0rc2                  -> v1.6.0rc2
+2026-10-26T14:39:51.9527977Z  * [new tag]           v1.6.0rc3                  -> v1.6.0rc3
+2026-10-26T14:39:51.9529507Z  * [new tag]           v1.6.1                     -> v1.6.1
+2026-10-26T14:39:51.9531006Z  * [new tag]           v1.6.1rc1                  -> v1.6.1rc1
+2026-10-26T14:39:51.9532583Z  * [new tag]           v1.6.1rc2                  -> v1.6.1rc2
+2026-10-26T14:39:51.9534313Z  * [new tag]           v1.6.1rc3                  -> v1.6.1rc3
+2026-10-26T14:39:51.9536093Z  * [new tag]           v1.6.2                     -> v1.6.2
+2026-10-26T14:39:51.9537613Z  * [new tag]           v1.6.2rc1                  -> v1.6.2rc1
+2026-10-26T14:39:51.9539115Z  * [new tag]           v1.7.0                     -> v1.7.0
+2026-10-26T14:39:51.9540607Z  * [new tag]           v1.7.0b1                   -> v1.7.0b1
+2026-10-26T14:39:51.9542117Z  * [new tag]           v1.7.0b2                   -> v1.7.0b2
+2026-10-26T14:39:51.9543634Z  * [new tag]           v1.7.0rc1                  -> v1.7.0rc1
+2026-10-26T14:39:51.9545176Z  * [new tag]           v1.7.0rc2                  -> v1.7.0rc2
+2026-10-26T14:39:51.9546879Z  * [new tag]           v1.7.1                     -> v1.7.1
+2026-10-26T14:39:51.9548380Z  * [new tag]           v1.7.1rc1                  -> v1.7.1rc1
+2026-10-26T14:39:51.9549884Z  * [new tag]           v1.7.2                     -> v1.7.2
+2026-10-26T14:39:51.9551402Z  * [new tag]           v1.7.2rc1                  -> v1.7.2rc1
+2026-10-26T14:39:51.9552913Z  * [new tag]           v1.8.0                     -> v1.8.0
+2026-10-26T14:39:51.9554409Z  * [new tag]           v1.8.0b1                   -> v1.8.0b1
+2026-10-26T14:39:51.9556012Z  * [new tag]           v1.8.0b2                   -> v1.8.0b2
+2026-10-26T14:39:51.9557542Z  * [new tag]           v1.8.0rc1                  -> v1.8.0rc1
+2026-10-26T14:39:51.9559078Z  * [new tag]           v1.8.0rc2                  -> v1.8.0rc2
+2026-10-26T14:39:51.9560576Z  * [new tag]           v1.8.1                     -> v1.8.1
+2026-10-26T14:39:51.9562075Z  * [new tag]           v1.8.1rc1                  -> v1.8.1rc1
+2026-10-26T14:39:51.9563568Z  * [new tag]           v1.8.2                     -> v1.8.2
+2026-10-26T14:39:51.9565069Z  * [new tag]           v1.8.2rc1                  -> v1.8.2rc1
+2026-10-26T14:39:51.9566775Z  * [new tag]           v1.9.0                     -> v1.9.0
+2026-10-26T14:39:51.9568472Z  * [new tag]           v1.9.0b1                   -> v1.9.0b1
+2026-10-26T14:39:51.9569976Z  * [new tag]           v1.9.0b2                   -> v1.9.0b2
+2026-10-26T14:39:51.9571505Z  * [new tag]           v1.9.0rc1                  -> v1.9.0rc1
+2026-10-26T14:39:51.9572994Z  * [new tag]           v1.9.1                     -> v1.9.1
+2026-10-26T14:39:51.9574472Z  * [new tag]           v1.9.1rc1                  -> v1.9.1rc1
+2026-10-26T14:39:51.9576208Z  * [new tag]           v1.9.2                     -> v1.9.2
+2026-10-26T14:39:51.9577710Z  * [new tag]           v1.9.2rc1                  -> v1.9.2rc1
+2026-10-26T14:39:51.9579204Z  * [new tag]           v1.9.3                     -> v1.9.3
+2026-10-26T14:39:51.9580664Z  * [new tag]           v2.0.0                     -> v2.0.0
+2026-10-26T14:39:51.9582161Z  * [new tag]           v2.0.0.dev0                -> v2.0.0.dev0
+2026-10-26T14:39:51.9583717Z  * [new tag]           v2.0.0b1                   -> v2.0.0b1
+2026-10-26T14:39:51.9585240Z  * [new tag]           v2.0.0rc1                  -> v2.0.0rc1
+2026-10-26T14:39:51.9586966Z  * [new tag]           v2.0.0rc2                  -> v2.0.0rc2
+2026-10-26T14:39:51.9588455Z  * [new tag]           v2.0.1                     -> v2.0.1
+2026-10-26T14:39:51.9589906Z  * [new tag]           v2.0.2                     -> v2.0.2
+2026-10-26T14:39:51.9591346Z  * [new tag]           v2.1.0                     -> v2.1.0
+2026-10-26T14:39:51.9592844Z  * [new tag]           v2.1.0.dev0                -> v2.1.0.dev0
+2026-10-26T14:39:51.9594360Z  * [new tag]           v2.1.0rc1                  -> v2.1.0rc1
+2026-10-26T14:39:51.9595924Z  * [new tag]           v2.1.1                     -> v2.1.1
+2026-10-26T14:39:51.9597367Z  * [new tag]           v2.1.2                     -> v2.1.2
+2026-10-26T14:39:51.9598814Z  * [new tag]           v2.1.3                     -> v2.1.3
+2026-10-26T14:39:51.9600255Z  * [new tag]           v2.2.0                     -> v2.2.0
+2026-10-26T14:39:51.9601765Z  * [new tag]           v2.2.0.dev0                -> v2.2.0.dev0
+2026-10-26T14:39:51.9603460Z  * [new tag]           v2.2.0rc1                  -> v2.2.0rc1
+2026-10-26T14:39:51.9604926Z  * [new tag]           v2.2.1                     -> v2.2.1
+2026-10-26T14:39:51.9606590Z  * [new tag]           v2.2.2                     -> v2.2.2
+2026-10-26T14:39:51.9608042Z  * [new tag]           v2.2.3                     -> v2.2.3
+2026-10-26T14:39:51.9609488Z  * [new tag]           v2.2.4                     -> v2.2.4
+2026-10-26T14:39:51.9610924Z  * [new tag]           v2.2.5                     -> v2.2.5
+2026-10-26T14:39:51.9612364Z  * [new tag]           v2.2.6                     -> v2.2.6
+2026-10-26T14:39:51.9613792Z  * [new tag]           v2.3.0                     -> v2.3.0
+2026-10-26T14:39:51.9615281Z  * [new tag]           v2.3.0.dev0                -> v2.3.0.dev0
+2026-10-26T14:39:51.9617059Z  * [new tag]           v2.3.0rc1                  -> v2.3.0rc1
+2026-10-26T14:39:51.9618533Z  * [new tag]           v2.3.1                     -> v2.3.1
+2026-10-26T14:39:51.9619990Z  * [new tag]           v2.3.2                     -> v2.3.2
+2026-10-26T14:39:51.9621430Z  * [new tag]           v2.3.3                     -> v2.3.3
+2026-10-26T14:39:51.9622868Z  * [new tag]           v2.3.4                     -> v2.3.4
+2026-10-26T14:39:51.9624300Z  * [new tag]           v2.3.5                     -> v2.3.5
+2026-10-26T14:39:51.9625920Z  * [new tag]           v2.4.0                     -> v2.4.0
+2026-10-26T14:39:51.9627410Z  * [new tag]           v2.4.0.dev0                -> v2.4.0.dev0
+2026-10-26T14:39:51.9628938Z  * [new tag]           v2.4.0rc1                  -> v2.4.0rc1
+2026-10-26T14:39:51.9630397Z  * [new tag]           v2.4.1                     -> v2.4.1
+2026-10-26T14:39:51.9631836Z  * [new tag]           v2.4.2                     -> v2.4.2
+2026-10-26T14:39:51.9633273Z  * [new tag]           v2.4.3                     -> v2.4.3
+2026-10-26T14:39:51.9634727Z  * [new tag]           v2.4.4                     -> v2.4.4
+2026-10-26T14:39:51.9636455Z  * [new tag]           v2.4.5                     -> v2.4.5
+2026-10-26T14:39:51.9637903Z  * [new tag]           v2.4.6                     -> v2.4.6
+2026-10-26T14:39:51.9639326Z  * [new tag]           v2.5.0                     -> v2.5.0
+2026-10-26T14:39:51.9640852Z  * [new tag]           v2.5.0.dev0                -> v2.5.0.dev0
+2026-10-26T14:39:51.9642370Z  * [new tag]           v2.5.0rc1                  -> v2.5.0rc1
+2026-10-26T14:39:51.9643835Z  * [new tag]           v2.5.1                     -> v2.5.1
+2026-10-26T14:39:51.9645255Z  * [new tag]           v2.5.2                     -> v2.5.2
+2026-10-26T14:39:51.9646885Z  * [new tag]           v2.5.3                     -> v2.5.3
+2026-10-26T14:39:51.9648300Z  * [new tag]           v2.5.4                     -> v2.5.4
+2026-10-26T14:39:51.9649767Z  * [new tag]           v2.6.0.dev0                -> v2.6.0.dev0
+2026-10-26T14:39:51.9651350Z  * [new tag]           with_maskna                -> with_maskna
+2026-10-26T14:39:51.9653133Z  * [new ref]           e3f148a147475b8387fb34b343cd41e221daedcb -> pull/33149/merge
+2026-10-26T14:39:51.9657003Z ##[endgroup]
+2026-10-26T14:39:51.9658547Z ##[group]Determining the checkout info
+2026-10-26T14:39:51.9660279Z ##[endgroup]
+2026-10-26T14:39:51.9661290Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T14:39:51.9664140Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T14:39:51.9667808Z ##[group]Checking out the ref
+2026-10-26T14:39:51.9669381Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/33149/merge
+2026-10-26T14:39:52.1652876Z Note: switching to 'refs/remotes/pull/33149/merge'.
+2026-10-26T14:39:52.1654017Z 
+2026-10-26T14:39:52.1654809Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-26T14:39:52.1656257Z changes and commit them, and you can discard any commits you make in this
+2026-10-26T14:39:52.1657485Z state without impacting any branches by switching back to a branch.
+2026-10-26T14:39:52.1658323Z 
+2026-10-26T14:39:52.1658870Z If you want to create a new branch to retain commits you create, you may
+2026-10-26T14:39:52.1660352Z do so (now or later) by using -c with the switch command. Example:
+2026-10-26T14:39:52.1661052Z 
+2026-10-26T14:39:52.1661460Z   git switch -c <new-branch-name>
+2026-10-26T14:39:52.1662009Z 
+2026-10-26T14:39:52.1662416Z Or undo this operation with:
+2026-10-26T14:39:52.1662927Z 
+2026-10-26T14:39:52.1663344Z   git switch -
+2026-10-26T14:39:52.1663796Z 
+2026-10-26T14:39:52.1664337Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-26T14:39:52.1664849Z 
+2026-10-26T14:39:52.1665429Z HEAD is now at e3f148a1 Merge 033498ec137c2c8b35bc125ba0968b487d952f26 into 6e1aca7eda6ea258fe4e97bc2546874bd46e4a3c
+2026-10-26T14:39:52.1674060Z ##[endgroup]
+2026-10-26T14:39:52.1674598Z ##[group]Setting up auth for fetching submodules
+2026-10-26T14:39:52.1680773Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T14:39:52.1724240Z [command]/usr/bin/git config --global include.path /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:39:52.1758334Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-26T14:39:52.1791442Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-26T14:39:52.1831685Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-288276@github.com:
+2026-10-26T14:39:52.1861438Z ##[endgroup]
+2026-10-26T14:39:52.1861951Z ##[group]Fetching submodules
+2026-10-26T14:39:52.1865580Z [command]/usr/bin/git submodule sync --recursive
+2026-10-26T14:39:52.2117396Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2026-10-26T14:39:52.2364463Z Submodule 'doc/source/_static/scipy-mathjax' (https://github.com/scipy/scipy-mathjax.git) registered for path 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:39:52.2369986Z Submodule 'numpy/_core/src/common/pythoncapi-compat' (https://github.com/python/pythoncapi-compat) registered for path 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:39:52.2377539Z Submodule 'numpy/_core/src/highway' (https://github.com/google/highway.git) registered for path 'numpy/_core/src/highway'
+2026-10-26T14:39:52.2384286Z Submodule 'numpy/_core/src/npysort/x86-simd-sort' (https://github.com/intel/x86-simd-sort) registered for path 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:39:52.2391289Z Submodule 'numpy/_core/src/umath/svml' (https://github.com/numpy/SVML.git) registered for path 'numpy/_core/src/umath/svml'
+2026-10-26T14:39:52.2398455Z Submodule 'numpy/fft/pocketfft' (https://github.com/mreineck/pocketfft) registered for path 'numpy/fft/pocketfft'
+2026-10-26T14:39:52.2406310Z Submodule 'vendored-meson/meson' (https://github.com/numpy/meson.git) registered for path 'vendored-meson/meson'
+2026-10-26T14:39:52.2439049Z Cloning into '/home/runner/work/numpy/numpy/doc/source/_static/scipy-mathjax'...
+2026-10-26T14:39:53.0795196Z Cloning into '/home/runner/work/numpy/numpy/numpy/_core/src/common/pythoncapi-compat'...
+2026-10-26T14:39:53.6221481Z Cloning into '/home/runner/work/numpy/numpy/numpy/_core/src/highway'...
+2026-10-26T14:39:54.9937360Z Cloning into '/home/runner/work/numpy/numpy/numpy/_core/src/npysort/x86-simd-sort'...
+2026-10-26T14:39:55.8107692Z Cloning into '/home/runner/work/numpy/numpy/numpy/_core/src/umath/svml'...
+2026-10-26T14:39:56.4852670Z Cloning into '/home/runner/work/numpy/numpy/numpy/fft/pocketfft'...
+2026-10-26T14:39:56.9457789Z Cloning into '/home/runner/work/numpy/numpy/vendored-meson/meson'...
+2026-10-26T14:39:58.0854353Z Submodule path 'doc/source/_static/scipy-mathjax': checked out '36f4c898f2255e0c98eb6949cd67381552d5ffea'
+2026-10-26T14:39:59.1405297Z From https://github.com/python/pythoncapi-compat
+2026-10-26T14:39:59.1406205Z  * branch            8636bccf29adfa23463f810b3c2830f7cff1e933 -> FETCH_HEAD
+2026-10-26T14:39:59.1491738Z Submodule path 'numpy/_core/src/common/pythoncapi-compat': checked out '8636bccf29adfa23463f810b3c2830f7cff1e933'
+2026-10-26T14:40:00.6009398Z From https://github.com/google/highway
+2026-10-26T14:40:00.6009982Z  * branch            ee36c837129310be19c17c9108c6dc3f6ae06942 -> FETCH_HEAD
+2026-10-26T14:40:00.6572574Z Submodule path 'numpy/_core/src/highway': checked out 'ee36c837129310be19c17c9108c6dc3f6ae06942'
+2026-10-26T14:40:01.6865013Z From https://github.com/intel/x86-simd-sort
+2026-10-26T14:40:01.6866127Z  * branch            fa944efbea1a33426b3f8a9a21e23794ab8aa300 -> FETCH_HEAD
+2026-10-26T14:40:01.7007713Z Submodule path 'numpy/_core/src/npysort/x86-simd-sort': checked out 'fa944efbea1a33426b3f8a9a21e23794ab8aa300'
+2026-10-26T14:40:02.8353323Z From https://github.com/numpy/SVML
+2026-10-26T14:40:02.8354139Z  * branch            bd9d46e0c627ab16f3d2641f7cdb1bc15d303ba4 -> FETCH_HEAD
+2026-10-26T14:40:02.8607525Z Submodule path 'numpy/_core/src/umath/svml': checked out 'bd9d46e0c627ab16f3d2641f7cdb1bc15d303ba4'
+2026-10-26T14:40:03.9317310Z From https://github.com/mreineck/pocketfft
+2026-10-26T14:40:03.9317956Z  * branch            33ae5dc94c9cdc7f1c78346504a85de87cadaa12 -> FETCH_HEAD
+2026-10-26T14:40:03.9383173Z Submodule path 'numpy/fft/pocketfft': checked out '33ae5dc94c9cdc7f1c78346504a85de87cadaa12'
+2026-10-26T14:40:04.8246099Z From https://github.com/numpy/meson
+2026-10-26T14:40:04.8246962Z  * branch            11ed55a4f364a81d7eeef740b27d73cfb4d36a05 -> FETCH_HEAD
+2026-10-26T14:40:05.1200362Z Submodule path 'vendored-meson/meson': checked out '11ed55a4f364a81d7eeef740b27d73cfb4d36a05'
+2026-10-26T14:40:05.1252057Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2026-10-26T14:40:05.1498242Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:40:05.1547609Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:40:05.1591502Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:40:05.1634950Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:40:05.1680415Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:40:05.1725211Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:40:05.1768385Z Entering 'vendored-meson/meson'
+2026-10-26T14:40:05.1882812Z ##[endgroup]
+2026-10-26T14:40:05.1903569Z [command]/usr/bin/git log -1 --format=%H
+2026-10-26T14:40:05.1937959Z e3f148a147475b8387fb34b343cd41e221daedcb
+2026-10-26T14:40:05.1949114Z ##[group]Removing auth
+2026-10-26T14:40:05.1949670Z Removing SSH command configuration
+2026-10-26T14:40:05.1954058Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:40:05.1989258Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:40:05.2254943Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:40:05.2303618Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:40:05.2351905Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:40:05.2400547Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:40:05.2448451Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:40:05.2500329Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:40:05.2546819Z Entering 'vendored-meson/meson'
+2026-10-26T14:40:05.2615343Z Removing HTTP extra header
+2026-10-26T14:40:05.2621658Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:40:05.2658114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:40:05.2894550Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:40:05.2942525Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:40:05.2990540Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:40:05.3038506Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:40:05.3086746Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:40:05.3134978Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:40:05.3182278Z Entering 'vendored-meson/meson'
+2026-10-26T14:40:05.3250610Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:40:05.3256225Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.3286515Z includeif.gitdir:/home/runner/work/numpy/numpy/.git.path
+2026-10-26T14:40:05.3287436Z includeif.gitdir:/home/runner/work/numpy/numpy/.git/worktrees/*.path
+2026-10-26T14:40:05.3287857Z includeif.gitdir:/github/workspace/.git.path
+2026-10-26T14:40:05.3288218Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T14:40:05.3299710Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/numpy/numpy/.git.path
+2026-10-26T14:40:05.3325159Z /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:40:05.3335072Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/numpy/numpy/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-2b0879f6\-1634\-44e2\-a109\-c2282b369368\.config
+2026-10-26T14:40:05.3371395Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/numpy/numpy/.git/worktrees/*.path
+2026-10-26T14:40:05.3397183Z /home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:40:05.3407705Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/numpy/numpy/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-2b0879f6\-1634\-44e2\-a109\-c2282b369368\.config
+2026-10-26T14:40:05.3447579Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-26T14:40:05.3472198Z /github/runner_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:40:05.3479820Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-2b0879f6\-1634\-44e2\-a109\-c2282b369368\.config
+2026-10-26T14:40:05.3514352Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T14:40:05.3538848Z /github/runner_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config
+2026-10-26T14:40:05.3546357Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-2b0879f6\-1634\-44e2\-a109\-c2282b369368\.config
+2026-10-26T14:40:05.3605483Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:40:05.3838965Z Entering 'doc/source/_static/scipy-mathjax'
+2026-10-26T14:40:05.3862662Z file:/home/runner/work/numpy/numpy/.git/modules/doc/source/_static/scipy-mathjax/config	remote.origin.url
+2026-10-26T14:40:05.3883657Z Entering 'numpy/_core/src/common/pythoncapi-compat'
+2026-10-26T14:40:05.3905431Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/common/pythoncapi-compat/config	remote.origin.url
+2026-10-26T14:40:05.3926126Z Entering 'numpy/_core/src/highway'
+2026-10-26T14:40:05.3947500Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/highway/config	remote.origin.url
+2026-10-26T14:40:05.3968150Z Entering 'numpy/_core/src/npysort/x86-simd-sort'
+2026-10-26T14:40:05.3989420Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/npysort/x86-simd-sort/config	remote.origin.url
+2026-10-26T14:40:05.4009892Z Entering 'numpy/_core/src/umath/svml'
+2026-10-26T14:40:05.4031499Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/umath/svml/config	remote.origin.url
+2026-10-26T14:40:05.4052060Z Entering 'numpy/fft/pocketfft'
+2026-10-26T14:40:05.4073192Z file:/home/runner/work/numpy/numpy/.git/modules/numpy/fft/pocketfft/config	remote.origin.url
+2026-10-26T14:40:05.4093193Z Entering 'vendored-meson/meson'
+2026-10-26T14:40:05.4114031Z file:/home/runner/work/numpy/numpy/.git/modules/vendored-meson/meson/config	remote.origin.url
+2026-10-26T14:40:05.4160999Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/doc/source/_static/scipy-mathjax/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4194716Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/common/pythoncapi-compat/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4225828Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/highway/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4256348Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/npysort/x86-simd-sort/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4286789Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/_core/src/umath/svml/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4316965Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/numpy/fft/pocketfft/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4347446Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/.git/modules/vendored-meson/meson/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.4373360Z Removing credentials config '/home/runner/work/_temp/git-credentials-2b0879f6-1634-44e2-a109-c2282b369368.config'
+2026-10-26T14:40:05.4383075Z ##[endgroup]
+
+===== ml_dtypes_compat/3_Checkout ml_dtypes.txt =====
+﻿2026-10-26T14:40:05.4639189Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-26T14:40:05.4639582Z with:
+2026-10-26T14:40:05.4639809Z   repository: jax-ml/ml_dtypes
+2026-10-26T14:40:05.4640093Z   ref: b793a6e2864ce20b6680df2fd480a5cd2a75fa82
+2026-10-26T14:40:05.4640383Z   submodules: true
+2026-10-26T14:40:05.4640595Z   path: ml_dtypes
+2026-10-26T14:40:05.4640819Z   persist-credentials: false
+2026-10-26T14:40:05.4644565Z   token: ***
+2026-10-26T14:40:05.4644862Z   ssh-strict: true
+2026-10-26T14:40:05.4645079Z   ssh-user: git
+2026-10-26T14:40:05.4645285Z   clean: true
+2026-10-26T14:40:05.4645508Z   sparse-checkout-cone-mode: true
+2026-10-26T14:40:05.4646088Z   fetch-depth: 1
+2026-10-26T14:40:05.4646410Z   fetch-tags: false
+2026-10-26T14:40:05.4646689Z   show-progress: true
+2026-10-26T14:40:05.4646950Z   lfs: false
+2026-10-26T14:40:05.4647241Z   set-safe-directory: true
+2026-10-26T14:40:05.4647619Z   allow-unsafe-pr-checkout: false
+2026-10-26T14:40:05.4647893Z env:
+2026-10-26T14:40:05.4648100Z   APT_TIMEOUT_MINUTES: 15
+2026-10-26T14:40:05.4648395Z ##[endgroup]
+2026-10-26T14:40:05.5531008Z Syncing repository: jax-ml/ml_dtypes
+2026-10-26T14:40:05.5531830Z ##[group]Getting Git version info
+2026-10-26T14:40:05.5532360Z Working directory is '/home/runner/work/numpy/numpy/ml_dtypes'
+2026-10-26T14:40:05.5555940Z [command]/usr/bin/git version
+2026-10-26T14:40:05.5594863Z git version 2.55.0
+2026-10-26T14:40:05.5626239Z ##[endgroup]
+2026-10-26T14:40:05.5628456Z Temporarily overriding HOME='/home/runner/work/_temp/98bf36eb-9b95-4f65-a3d4-eb07067a2621' before making global git config changes
+2026-10-26T14:40:05.5629452Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T14:40:05.5633957Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/numpy/numpy/ml_dtypes
+2026-10-26T14:40:05.5670063Z ##[group]Determining repository object format
+2026-10-26T14:40:05.5672051Z ##[endgroup]
+2026-10-26T14:40:05.5672625Z ##[group]Initializing the repository
+2026-10-26T14:40:05.5676391Z [command]/usr/bin/git init /home/runner/work/numpy/numpy/ml_dtypes
+2026-10-26T14:40:05.5721399Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T14:40:05.5722221Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T14:40:05.5722728Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T14:40:05.5723150Z hint: call:
+2026-10-26T14:40:05.5723421Z hint:
+2026-10-26T14:40:05.5723812Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T14:40:05.5724310Z hint:
+2026-10-26T14:40:05.5724758Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T14:40:05.5725417Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T14:40:05.5726083Z hint:
+2026-10-26T14:40:05.5726288Z hint: 	git branch -m <name>
+2026-10-26T14:40:05.5726534Z hint:
+2026-10-26T14:40:05.5726904Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T14:40:05.5727821Z Initialized empty Git repository in /home/runner/work/numpy/numpy/ml_dtypes/.git/
+2026-10-26T14:40:05.5733977Z [command]/usr/bin/git remote add origin https://github.com/jax-ml/ml_dtypes
+2026-10-26T14:40:05.5769515Z ##[endgroup]
+2026-10-26T14:40:05.5770158Z ##[group]Disabling automatic garbage collection
+2026-10-26T14:40:05.5774133Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T14:40:05.5806451Z ##[endgroup]
+2026-10-26T14:40:05.5807056Z ##[group]Setting up auth
+2026-10-26T14:40:05.5807481Z Removing SSH command configuration
+2026-10-26T14:40:05.5813131Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:40:05.5846814Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:40:05.6100698Z Removing HTTP extra header
+2026-10-26T14:40:05.6106564Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:40:05.6139718Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:40:05.6384368Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:40:05.6391060Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:40:05.6426600Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:40:05.6672149Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T14:40:05.6713659Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git.path /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:40:05.6747199Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:40:05.6782633Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/ml_dtypes/.git.path /github/runner_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:40:05.6818180Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/ml_dtypes/.git/worktrees/*.path /github/runner_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:40:05.6849423Z ##[endgroup]
+2026-10-26T14:40:05.6850020Z ##[group]Fetching the repository
+2026-10-26T14:40:05.6857140Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin b793a6e2864ce20b6680df2fd480a5cd2a75fa82
+2026-10-26T14:40:06.2391626Z From https://github.com/jax-ml/ml_dtypes
+2026-10-26T14:40:06.2392283Z  * branch            b793a6e2864ce20b6680df2fd480a5cd2a75fa82 -> FETCH_HEAD
+2026-10-26T14:40:06.2405839Z [command]/usr/bin/git rev-parse --verify --quiet b793a6e2864ce20b6680df2fd480a5cd2a75fa82^{object}
+2026-10-26T14:40:06.2435793Z b793a6e2864ce20b6680df2fd480a5cd2a75fa82
+2026-10-26T14:40:06.2448300Z ##[endgroup]
+2026-10-26T14:40:06.2448965Z ##[group]Determining the checkout info
+2026-10-26T14:40:06.2449635Z ##[endgroup]
+2026-10-26T14:40:06.2451960Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T14:40:06.2497778Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T14:40:06.2530187Z ##[group]Checking out the ref
+2026-10-26T14:40:06.2535957Z [command]/usr/bin/git checkout --progress --force b793a6e2864ce20b6680df2fd480a5cd2a75fa82
+2026-10-26T14:40:06.2623990Z Note: switching to 'b793a6e2864ce20b6680df2fd480a5cd2a75fa82'.
+2026-10-26T14:40:06.2624637Z 
+2026-10-26T14:40:06.2625341Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-26T14:40:06.2626553Z changes and commit them, and you can discard any commits you make in this
+2026-10-26T14:40:06.2627359Z state without impacting any branches by switching back to a branch.
+2026-10-26T14:40:06.2627862Z 
+2026-10-26T14:40:06.2628174Z If you want to create a new branch to retain commits you create, you may
+2026-10-26T14:40:06.2628904Z do so (now or later) by using -c with the switch command. Example:
+2026-10-26T14:40:06.2629325Z 
+2026-10-26T14:40:06.2629499Z   git switch -c <new-branch-name>
+2026-10-26T14:40:06.2629770Z 
+2026-10-26T14:40:06.2629937Z Or undo this operation with:
+2026-10-26T14:40:06.2630188Z 
+2026-10-26T14:40:06.2630331Z   git switch -
+2026-10-26T14:40:06.2630518Z 
+2026-10-26T14:40:06.2630877Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-26T14:40:06.2631405Z 
+2026-10-26T14:40:06.2631792Z HEAD is now at b793a6e Remove some code that existed for compatibility with NumPy 1.x.
+2026-10-26T14:40:06.2633992Z ##[endgroup]
+2026-10-26T14:40:06.2634611Z ##[group]Setting up auth for fetching submodules
+2026-10-26T14:40:06.2637332Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T14:40:06.2678132Z [command]/usr/bin/git config --global include.path /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:40:06.2710774Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2026-10-26T14:40:06.2744445Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2026-10-26T14:40:06.2778975Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-288276@github.com:
+2026-10-26T14:40:06.2809690Z ##[endgroup]
+2026-10-26T14:40:06.2810319Z ##[group]Fetching submodules
+2026-10-26T14:40:06.2815016Z [command]/usr/bin/git submodule sync
+2026-10-26T14:40:06.3060219Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1
+2026-10-26T14:40:06.3302166Z Submodule 'third_party/eigen' (https://gitlab.com/libeigen/eigen.git) registered for path 'third_party/eigen'
+2026-10-26T14:40:06.3331464Z Cloning into '/home/runner/work/numpy/numpy/ml_dtypes/third_party/eigen'...
+2026-10-26T14:40:21.5161325Z ##[error]fatal: remote error: GitLab is currently unable to handle this request due to load (ID a50a37337f429b4d-DFW).
+2026-10-26T14:40:21.5171549Z Unable to fetch in submodule path 'third_party/eigen'; trying to directly fetch bc3b39870ecb690a623a3f49149a358b95c5781d:
+2026-10-26T14:41:23.8362068Z ##[error]fatal: remote error: GitLab is currently unable to handle this request due to load (ID a50a3743fe51f731-DFW).
+2026-10-26T14:41:23.8365494Z ##[error]fatal: Fetched in submodule path 'third_party/eigen', but it did not contain bc3b39870ecb690a623a3f49149a358b95c5781d. Direct fetching of that commit failed.
+2026-10-26T14:41:23.8391033Z ##[group]Removing auth
+2026-10-26T14:41:23.8391340Z Removing SSH command configuration
+2026-10-26T14:41:23.8396037Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T14:41:23.8432646Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T14:41:23.8666542Z Entering 'third_party/eigen'
+2026-10-26T14:41:23.8720445Z Removing HTTP extra header
+2026-10-26T14:41:23.8725599Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T14:41:23.8759947Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T14:41:23.8995086Z Entering 'third_party/eigen'
+2026-10-26T14:41:23.9052213Z Removing includeIf entries pointing to credentials config files
+2026-10-26T14:41:23.9056148Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:23.9084028Z includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git.path
+2026-10-26T14:41:23.9084909Z includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git/worktrees/*.path
+2026-10-26T14:41:23.9086137Z includeif.gitdir:/github/workspace/ml_dtypes/.git.path
+2026-10-26T14:41:23.9086837Z includeif.gitdir:/github/workspace/ml_dtypes/.git/worktrees/*.path
+2026-10-26T14:41:23.9095248Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git.path
+2026-10-26T14:41:23.9128886Z /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:41:23.9139133Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-9ee1ce06\-3595\-496c\-a08e\-f83d003d0712\.config
+2026-10-26T14:41:23.9179619Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git/worktrees/*.path
+2026-10-26T14:41:23.9207483Z /home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:41:23.9217384Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/numpy/numpy/ml_dtypes/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-9ee1ce06\-3595\-496c\-a08e\-f83d003d0712\.config
+2026-10-26T14:41:23.9253626Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/ml_dtypes/.git.path
+2026-10-26T14:41:23.9278729Z /github/runner_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:41:23.9291415Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/ml_dtypes/.git.path \/github\/runner_temp\/git\-credentials\-9ee1ce06\-3595\-496c\-a08e\-f83d003d0712\.config
+2026-10-26T14:41:23.9336689Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/ml_dtypes/.git/worktrees/*.path
+2026-10-26T14:41:23.9361404Z /github/runner_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config
+2026-10-26T14:41:23.9372936Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/ml_dtypes/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-9ee1ce06\-3595\-496c\-a08e\-f83d003d0712\.config
+2026-10-26T14:41:23.9409328Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T14:41:23.9636566Z Entering 'third_party/eigen'
+2026-10-26T14:41:23.9658079Z file:/home/runner/work/numpy/numpy/ml_dtypes/.git/modules/third_party/eigen/config	remote.origin.url
+2026-10-26T14:41:23.9691909Z [command]/usr/bin/git config --file /home/runner/work/numpy/numpy/ml_dtypes/.git/modules/third_party/eigen/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T14:41:23.9720813Z Removing credentials config '/home/runner/work/_temp/git-credentials-9ee1ce06-3595-496c-a08e-f83d003d0712.config'
+2026-10-26T14:41:23.9730212Z ##[endgroup]
+2026-10-26T14:41:23.9747699Z ##[error]The process '/usr/bin/git' failed with exit code 128
+
+===== ml_dtypes_compat/system.txt =====
+2026-10-26T14:40:04.4850000Z Requested labels: ubuntu-latest
+2026-10-26T14:40:04.4850000Z Job defined at: numpy/numpy/.github/workflows/linux.yml@refs/pull/33149/merge
+2026-10-26T14:40:04.4850000Z Waiting for a runner to pick up this job...
+2026-10-26T14:40:04.4580000Z Evaluating ml_dtypes_compat.if
+2026-10-26T14:40:04.4580000Z Evaluating: (success() && ((github.event_name != 'push')))
+2026-10-26T14:40:04.4580000Z Expanded: (true && ('pull_request' != 'push'))
+2026-10-26T14:40:04.4580000Z Result: true
+2026-10-26T14:40:05.4300000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:40:05.4300000Z Job is about to start running on the hosted runner: GitHub Actions 1000569420

@@ -1,0 +1,43 @@
+repo: numpy/numpy
+run_id: 40324460929
+head_sha: 46869bd3570d943f64110e39f77a0cb4497c2428
+run_attempts:
+- attempt: 1
+  head_sha: 46869bd3570d943f64110e39f77a0cb4497c2428
+  conclusion: failure
+commits:
+- sha: 46869bd3570d943f64110e39f77a0cb4497c2428
+  author: MaanasArora
+  files: []
+- sha: 14181ce01b93a6542e2e1fae0086d6739a3a38ee
+  author: MaanasArora
+  files: []
+- sha: fc20073f7a0b9d761c1655d74de0c659f4fc42d4
+  author: MaanasArora
+  files: []
+- sha: f9f1772ce010001208475f751d19253469788410
+  author: tylerjereddy
+  files: []
+- sha: a6181062e8b50e4e6ea6bfd866caf28861caf28d
+  author: charris
+  files: []
+- sha: 74f00406e0bd3494e846208040449698240b1d47
+  author: charris
+  files: []
+- sha: c33148c55c0cd182ca37c1d977e4fd801134900a
+  author: charris
+  files: []
+- sha: 81942756347cd500c90e289f69d23fa5435c7908
+  author: Fun-Projects-Learn
+  files: []
+- sha: 69a99356879f6d9157b94fe74ad962a29331e3e0
+  author: dependabot[bot]
+  files: []
+- sha: 5660ab563832647e4d2a09580744cf49190f53ce
+  author: sh4dhub4b4
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

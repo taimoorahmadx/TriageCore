@@ -6,10 +6,16 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- CI commit tracing now checks the 10 most recent commits, reports unique candidates without guessing,
-  flags multiple matches as ambiguous, and detects dependency manifest or lockfile changes. The
-  `tests/test_tracing.py` checks pass (6 tests, 2026-10-26).
+- C3 collector and corpus README generator are in place. The current corpus has 61 case folders;
+  41 are reviewed `infra` cases. Other inspected logs include a missing module, a lint error and a
+  test failure, but they lack enough fix or same-workflow rerun evidence for safe cause labels. The
+  collector's GitHub API access is intermittent. Three saved logs containing signed artifact URLs
+  were sanitized, and the credential-marker scan found zero remaining matches. Shazil is looking
+  for an existing dataset that can support the cause labels before C3 resumes.
 ## Blockers / questions for the team
+- C3 needs a suitable existing dataset or enough real cases with evidence for every cause. The
+  current 61-folder working corpus must be pruned before completion; the accepted task and ADR still
+  require 30–40 reviewed cases with at least five per cause. The task is paused pending dataset review.
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.

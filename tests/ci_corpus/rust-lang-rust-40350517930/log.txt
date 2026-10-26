@@ -1,0 +1,861 @@
+===== PR - test-aarch64-gnu-llvm-22-1/10_collect CPU statistics.txt =====
+﻿2026-10-26T15:35:42.5659068Z ##[group]Run src/ci/scripts/collect-cpu-stats.sh
+2026-10-26T15:35:42.5659912Z [36;1msrc/ci/scripts/collect-cpu-stats.sh[0m
+2026-10-26T15:35:42.5692396Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:42.5693109Z env:
+2026-10-26T15:35:42.5693518Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:42.5693997Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:42.5694314Z   CI_JOB_NAME: test-aarch64-gnu-llvm-22-1
+2026-10-26T15:35:42.5694594Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:42.5694884Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:42.5695166Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:42.5695543Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:42.5695896Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:42.5698855Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:42.5699207Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:42.5699724Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:42.5700067Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:42.5700454Z   DOCKER_SCRIPT: stage_2_test_set1.sh
+2026-10-26T15:35:42.5700810Z   IMAGE: test-aarch64-gnu-llvm-22
+2026-10-26T15:35:42.5701069Z   LLVM_VERSION: 22
+2026-10-26T15:35:42.5701271Z   PR_CI_JOB: 1
+2026-10-26T15:35:42.5701529Z ##[endgroup]
+
+===== PR - test-aarch64-gnu-llvm-22-1/11_show the current environment.txt =====
+﻿2026-10-26T15:35:42.5835867Z ##[group]Run src/ci/scripts/dump-environment.sh
+2026-10-26T15:35:42.5836324Z [36;1msrc/ci/scripts/dump-environment.sh[0m
+2026-10-26T15:35:42.5868959Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:42.5869636Z env:
+2026-10-26T15:35:42.5870052Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:42.5870473Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:42.5870802Z   CI_JOB_NAME: test-aarch64-gnu-llvm-22-1
+2026-10-26T15:35:42.5871120Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:42.5871345Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:42.5871679Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:42.5871991Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:42.5872359Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:42.5875477Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:42.5875751Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:42.5876124Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:42.5876410Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:42.5876822Z   DOCKER_SCRIPT: stage_2_test_set1.sh
+2026-10-26T15:35:42.5877132Z   IMAGE: test-aarch64-gnu-llvm-22
+2026-10-26T15:35:42.5877441Z   LLVM_VERSION: 22
+2026-10-26T15:35:42.5877658Z   PR_CI_JOB: 1
+2026-10-26T15:35:42.5877857Z ##[endgroup]
+2026-10-26T15:35:42.5956598Z environment variables:
+2026-10-26T15:35:42.6064918Z ACCEPT_EULA=Y
+2026-10-26T15:35:42.6065681Z ACTIONS_ORCHESTRATION_ID=f84b1d0c-399b-8e45-b5f7-2a056de53446.job.test-aarch64-gnu-llvm-22-
+2026-10-26T15:35:42.6069626Z ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE=/opt/actionarchivecache
+2026-10-26T15:35:42.6070250Z ACTIONS_RUNNER_RETURN_JOB_RESULT_FOR_HOSTED=1
+2026-10-26T15:35:42.6070582Z AGENT_TOOLSDIRECTORY=/opt/hostedtoolcache
+2026-10-26T15:35:42.6070961Z ANT_HOME=/usr/share/ant
+2026-10-26T15:35:42.6071221Z AZURE_EXTENSION_DIR=/opt/az/azcliextensions
+2026-10-26T15:35:42.6071555Z CACHE_DOMAIN=ci-caches.rust-lang.org
+2026-10-26T15:35:42.6071895Z CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+2026-10-26T15:35:42.6072209Z CI=true
+2026-10-26T15:35:42.6072429Z CI_JOB_DOC_URL=
+2026-10-26T15:35:42.6072660Z CI_JOB_NAME=test-aarch64-gnu-llvm-22-1
+2026-10-26T15:35:42.6072961Z DEBIAN_FRONTEND=noninteractive
+2026-10-26T15:35:42.6073343Z DOCKER_SCRIPT=stage_2_test_set1.sh
+2026-10-26T15:35:42.6076244Z DOCKER_TOKEN=***
+2026-10-26T15:35:42.6076584Z DOTNET_MULTILEVEL_LOOKUP=0
+2026-10-26T15:35:42.6076832Z DOTNET_NOLOGO=1
+2026-10-26T15:35:42.6077130Z DOTNET_SKIP_FIRST_TIME_EXPERIENCE=1
+2026-10-26T15:35:42.6077453Z ENABLE_RUNNER_TRACING=true
+2026-10-26T15:35:42.6077729Z GECKOWEBDRIVER=/usr/local/share/gecko_driver
+2026-10-26T15:35:42.6078045Z GITHUB_ACTION=__run_9
+2026-10-26T15:35:42.6078279Z GITHUB_ACTIONS=true
+2026-10-26T15:35:42.6078520Z GITHUB_ACTION_REF=
+2026-10-26T15:35:42.6078811Z GITHUB_ACTION_REPOSITORY=
+2026-10-26T15:35:42.6079063Z GITHUB_ACTOR=renovate-bot
+2026-10-26T15:35:42.6079332Z GITHUB_ACTOR_ID=25180681
+2026-10-26T15:35:42.6079867Z GITHUB_API_URL=https://api.github.com
+2026-10-26T15:35:42.6080452Z GITHUB_ARTIFACTS=/home/runner/work/_temp/_runner_file_commands/artifacts_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6081256Z GITHUB_ARTIFACTS_LIST=/home/runner/work/_temp/_runner_file_commands/artifacts_list_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6081791Z GITHUB_BASE_REF=main
+2026-10-26T15:35:42.6082196Z GITHUB_ENV=/home/runner/work/_temp/_runner_file_commands/set_env_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6082754Z GITHUB_EVENT_NAME=pull_request
+2026-10-26T15:35:42.6083097Z GITHUB_EVENT_PATH=/home/runner/work/_temp/_github_workflow/event.json
+2026-10-26T15:35:42.6083544Z GITHUB_GRAPHQL_URL=https://api.github.com/graphql
+2026-10-26T15:35:42.6083902Z GITHUB_HEAD_REF=renovate/crate-rand-vulnerability
+2026-10-26T15:35:42.6084208Z GITHUB_JOB=job
+2026-10-26T15:35:42.6084666Z GITHUB_OUTPUT=/home/runner/work/_temp/_runner_file_commands/set_output_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6085391Z GITHUB_PATH=/home/runner/work/_temp/_runner_file_commands/add_path_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6086251Z GITHUB_REF=refs/pull/164759/merge
+2026-10-26T15:35:42.6086544Z GITHUB_REF_NAME=164759/merge
+2026-10-26T15:35:42.6086788Z GITHUB_REF_PROTECTED=false
+2026-10-26T15:35:42.6087091Z GITHUB_REF_TYPE=branch
+2026-10-26T15:35:42.6087334Z GITHUB_REPOSITORY=rust-lang/rust
+2026-10-26T15:35:42.6087624Z GITHUB_REPOSITORY_ID=724712
+2026-10-26T15:35:42.6087890Z GITHUB_REPOSITORY_OWNER=rust-lang
+2026-10-26T15:35:42.6088160Z GITHUB_REPOSITORY_OWNER_ID=5430905
+2026-10-26T15:35:42.6088471Z GITHUB_RETENTION_DAYS=90
+2026-10-26T15:35:42.6088800Z GITHUB_RUN_ATTEMPT=1
+2026-10-26T15:35:42.6089020Z GITHUB_RUN_ID=40350517930
+2026-10-26T15:35:42.6089323Z GITHUB_RUN_NUMBER=236571
+2026-10-26T15:35:42.6092380Z GITHUB_SERVER_URL=https://github.com
+2026-10-26T15:35:42.6093419Z GITHUB_SHA=f0ef2e4e098c7de0e1b62f43fe45ff8e6e9ca047
+2026-10-26T15:35:42.6093958Z GITHUB_STATE=/home/runner/work/_temp/_runner_file_commands/save_state_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6094729Z GITHUB_STEP_SUMMARY=/home/runner/work/_temp/_runner_file_commands/step_summary_21d7bc03-fb17-4b2c-b5d1-ad986c894dff
+2026-10-26T15:35:42.6095301Z GITHUB_TRIGGERING_ACTOR=renovate-bot
+2026-10-26T15:35:42.6095569Z GITHUB_WORKFLOW=CI
+2026-10-26T15:35:42.6095944Z GITHUB_WORKFLOW_REF=rust-lang/rust/.github/workflows/ci.yml@refs/pull/164759/merge
+2026-10-26T15:35:42.6096386Z GITHUB_WORKFLOW_RUN_ID=40350517930
+2026-10-26T15:35:42.6096726Z GITHUB_WORKFLOW_SHA=f0ef2e4e098c7de0e1b62f43fe45ff8e6e9ca047
+2026-10-26T15:35:42.6097137Z GITHUB_WORKSPACE=/home/runner/work/rust/rust
+2026-10-26T15:35:42.6097481Z GOROOT_1_24_AARCH64=/opt/hostedtoolcache/go/1.24.13/arm64
+2026-10-26T15:35:42.6097881Z GOROOT_1_25_AARCH64=/opt/hostedtoolcache/go/1.25.14/arm64
+2026-10-26T15:35:42.6098274Z GOROOT_1_26_AARCH64=/opt/hostedtoolcache/go/1.26.9/arm64
+2026-10-26T15:35:42.6098626Z GRADLE_HOME=/usr/share/gradle-9.8.1
+2026-10-26T15:35:42.6098942Z HCA_CLOUD_PROVIDER=azure
+2026-10-26T15:35:42.6099210Z HEAD_SHA=e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:42.6099702Z HOME=/home/runner
+2026-10-26T15:35:42.6099946Z HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=3650
+2026-10-26T15:35:42.6100254Z HOMEBREW_NO_AUTO_UPDATE=1
+2026-10-26T15:35:42.6100541Z IMAGE=test-aarch64-gnu-llvm-22
+2026-10-26T15:35:42.6100823Z INVOCATION_ID=aa540b3b9f604be0a692c3fce790287d
+2026-10-26T15:35:42.6101114Z ImageOS=ubuntu24-arm64
+2026-10-26T15:35:42.6101390Z ImageVersion=20261023.149.3
+2026-10-26T15:35:42.6101673Z JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-arm64
+2026-10-26T15:35:42.6102016Z JAVA_HOME_11_X64=/usr/lib/jvm/temurin-11-jdk-arm64
+2026-10-26T15:35:42.6102372Z JAVA_HOME_17_X64=/usr/lib/jvm/temurin-17-jdk-arm64
+2026-10-26T15:35:42.6102694Z JAVA_HOME_21_X64=/usr/lib/jvm/temurin-21-jdk-arm64
+2026-10-26T15:35:42.6103067Z JAVA_HOME_25_X64=/usr/lib/jvm/temurin-25-jdk-arm64
+2026-10-26T15:35:42.6103421Z JAVA_HOME_8_X64=/usr/lib/jvm/temurin-8-jdk-arm64
+2026-10-26T15:35:42.6103735Z JOURNAL_STREAM=9:10710
+2026-10-26T15:35:42.6104000Z LANG=C.UTF-8
+2026-10-26T15:35:42.6104208Z LLVM_VERSION=22
+2026-10-26T15:35:42.6104448Z LOGNAME=runner
+2026-10-26T15:35:42.6104868Z MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/system.slice/hosted-compute-agent.service/memory.pressure
+2026-10-26T15:35:42.6105406Z MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=
+2026-10-26T15:35:42.6105826Z MIRRORS_BASE=https://ci-mirrors.rust-lang.org/rustc
+2026-10-26T15:35:42.6106157Z NVM_DIR=/home/runner/.nvm
+2026-10-26T15:35:42.6107043Z PATH=/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+2026-10-26T15:35:42.6107985Z PIPX_BIN_DIR=/opt/pipx_bin
+2026-10-26T15:35:42.6108218Z PIPX_HOME=/opt/pipx
+2026-10-26T15:35:42.6108529Z POWERSHELL_DISTRIBUTION_CHANNEL=GitHub-Actions-Linux
+2026-10-26T15:35:42.6108846Z PR_CI_JOB=1
+2026-10-26T15:35:42.6109691Z PSModulePath=/root/.local/share/powershell/Modules:/usr/local/share/powershell/Modules:/opt/microsoft/powershell/7/Modules:/usr/share/az_15.6.1
+2026-10-26T15:35:42.6110794Z ***
+2026-10-26T15:35:42.6111018Z RUNNER_ARCH=ARM64
+2026-10-26T15:35:42.6111435Z RUNNER_ENVIRONMENT=github-hosted
+2026-10-26T15:35:42.6111716Z RUNNER_NAME=GitHub Actions 1002925912
+2026-10-26T15:35:42.6112009Z RUNNER_OS=Linux
+2026-10-26T15:35:42.6112261Z RUNNER_TEMP=/home/runner/work/_temp
+2026-10-26T15:35:42.6112539Z RUNNER_TOOL_CACHE=/opt/hostedtoolcache
+2026-10-26T15:35:42.6112952Z RUNNER_TRACKING_ID=github_164cfbed-0b2b-4e7a-b0e1-41ae7639ca22
+2026-10-26T15:35:42.6113422Z RUNNER_WORKSPACE=/home/runner/work/rust
+2026-10-26T15:35:42.6113749Z SCCACHE_BUCKET=rust-lang-ci-sccache2
+2026-10-26T15:35:42.6114064Z SCCACHE_REGION=us-west-1
+2026-10-26T15:35:42.6114347Z SELENIUM_JAR_PATH=/usr/share/java/selenium-server.jar
+2026-10-26T15:35:42.6114863Z SGX_AESM_ADDR=1
+2026-10-26T15:35:42.6115069Z SHELL=/bin/bash
+2026-10-26T15:35:42.6115264Z SHLVL=2
+2026-10-26T15:35:42.6115539Z SWIFT_PATH=/usr/share/swift/usr/bin
+2026-10-26T15:35:42.6115805Z SYSTEMD_EXEC_PID=1887
+2026-10-26T15:35:42.6116203Z TOOLSTATE_REPO=https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:42.6116585Z TOOLSTATE_REPO_ACCESS_TOKEN=
+2026-10-26T15:35:42.6116845Z USER=runner
+2026-10-26T15:35:42.6117099Z USE_BAZEL_FALLBACK_VERSION=silent:
+2026-10-26T15:35:42.6117369Z VCPKG_FORCE_SYSTEM_BINARIES=1
+2026-10-26T15:35:42.6117792Z VCPKG_INSTALLATION_ROOT=/usr/local/share/vcpkg
+2026-10-26T15:35:42.6118121Z XDG_CONFIG_HOME=/home/runner/.config
+2026-10-26T15:35:42.6118413Z XDG_RUNTIME_DIR=/run/user/1001
+2026-10-26T15:35:42.6118703Z _=/usr/bin/printenv
+2026-10-26T15:35:42.6118840Z 
+2026-10-26T15:35:42.6118936Z disk usage:
+2026-10-26T15:35:42.6119226Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-26T15:35:42.6119736Z /dev/root       145G   38G  107G  26% /
+2026-10-26T15:35:42.6120056Z tmpfs           7.8G  100K  7.8G   1% /dev/shm
+2026-10-26T15:35:42.6120397Z tmpfs           3.2G 1004K  3.2G   1% /run
+2026-10-26T15:35:42.6120682Z tmpfs           5.0M     0  5.0M   0% /run/lock
+2026-10-26T15:35:42.6120974Z /dev/sda16      891M   63M  766M   8% /boot
+2026-10-26T15:35:42.6121302Z /dev/sda15       98M  6.4M   92M   7% /boot/efi
+2026-10-26T15:35:42.6121649Z tmpfs           1.6G   16K  1.6G   1% /run/user/1001
+2026-10-26T15:35:42.6121838Z 
+2026-10-26T15:35:42.6121990Z biggest files in the working dir:
+2026-10-26T15:35:42.7409749Z 502436	.
+2026-10-26T15:35:42.7410398Z 212664	./tests
+2026-10-26T15:35:42.7410667Z 170828	./tests/ui
+2026-10-26T15:35:42.7410923Z 121360	./src
+2026-10-26T15:35:42.7411198Z 91376	./src/tools
+2026-10-26T15:35:42.7411411Z 62732	./library
+2026-10-26T15:35:42.7411659Z 59728	./.git
+2026-10-26T15:35:42.7411859Z 51956	./.git/objects
+2026-10-26T15:35:42.7412088Z 51948	./.git/objects/pack
+2026-10-26T15:35:42.7412426Z 44312	./compiler
+2026-10-26T15:35:42.7412655Z 36076	./library/stdarch
+2026-10-26T15:35:42.7412913Z 29404	./src/tools/clippy
+2026-10-26T15:35:42.7413151Z 29212	./src/tools/rust-analyzer
+2026-10-26T15:35:42.7413405Z 25896	./src/tools/rust-analyzer/crates
+2026-10-26T15:35:42.7413767Z 24100	./library/stdarch/crates
+2026-10-26T15:35:42.7414029Z 20436	./library/stdarch/crates/core_arch
+2026-10-26T15:35:42.7414435Z 20392	./library/stdarch/crates/core_arch/src
+2026-10-26T15:35:42.7414749Z 20216	./src/tools/clippy/tests
+2026-10-26T15:35:42.7414995Z 17796	./src/doc
+2026-10-26T15:35:42.7415278Z 16568	./src/tools/miri
+2026-10-26T15:35:42.7415505Z 16412	./tests/ui/parser
+2026-10-26T15:35:42.7415769Z 15880	./src/tools/clippy/tests/ui
+2026-10-26T15:35:42.7416039Z 14636	./src/doc/rustc-dev-guide
+2026-10-26T15:35:42.7416296Z 13320	./src/doc/rustc-dev-guide/src
+2026-10-26T15:35:42.7416609Z 12656	./src/tools/rustfmt
+2026-10-26T15:35:42.7416854Z 11528	./library/stdarch/intrinsics_data
+2026-10-26T15:35:42.7417127Z 10560	./src/tools/rustfmt/tests
+2026-10-26T15:35:42.7417427Z 10104	./src/tools/miri/tests
+2026-10-26T15:35:42.7417689Z 9936	./src/doc/rustc-dev-guide/src/queries
+2026-10-26T15:35:42.7418036Z 9236	./tests/run-make
+2026-10-26T15:35:42.7418259Z 8796	./tests/ui/traits
+2026-10-26T15:35:42.7418811Z 8520	./tests/mir-opt
+2026-10-26T15:35:42.7419066Z 8032	./library/std
+2026-10-26T15:35:42.7419278Z 7560	./library/std/src
+2026-10-26T15:35:42.7419868Z 7440	./library/stdarch/crates/core_arch/src/x86
+2026-10-26T15:35:42.7420197Z 7400	./library/core
+2026-10-26T15:35:42.7420416Z 7392	./library/core/src
+2026-10-26T15:35:42.7420680Z 6604	./tests/ui/lint
+2026-10-26T15:35:42.7420923Z 6520	./src/tools/clippy/clippy_lints
+2026-10-26T15:35:42.7421286Z 6508	./src/tools/clippy/clippy_lints/src
+2026-10-26T15:35:42.7421996Z 6016	./tests/ui/const-generics
+2026-10-26T15:35:42.7422399Z 5600	./tests/ui/consts
+2026-10-26T15:35:42.7422654Z 5436	./src/tools/rustfmt/tests/target
+2026-10-26T15:35:42.7422983Z 5392	./library/stdarch/crates/core_arch/src/aarch64
+2026-10-26T15:35:42.7423572Z 5244	./src/tools/rust-analyzer/crates/parser
+2026-10-26T15:35:42.7423917Z 4884	./src/tools/rust-analyzer/crates/parser/test_data
+2026-10-26T15:35:42.7424291Z 4840	./src/tools/miri/tests/fail
+2026-10-26T15:35:42.7424571Z 4756	./tests/rustdoc-html
+2026-10-26T15:35:42.7424859Z 4556	./src/librustdoc
+2026-10-26T15:35:42.7425094Z 4352	./tests/ui/suggestions
+2026-10-26T15:35:42.7425334Z 4236	./tests/codegen-llvm
+2026-10-26T15:35:42.7425613Z 4224	./src/tools/rustfmt/tests/source
+2026-10-26T15:35:42.7425881Z 4028	./tests/ui/borrowck
+2026-10-26T15:35:42.7426232Z 3880	./src/tools/rust-analyzer/crates/parser/test_data/parser
+2026-10-26T15:35:42.7426622Z 3780	./tests/ui/impl-trait
+2026-10-26T15:35:42.7426863Z 3728	./tests/rustdoc-ui
+2026-10-26T15:35:42.7427111Z 3600	./library/std/src/sys
+2026-10-26T15:35:42.7427371Z 3540	./tests/ui/macros
+2026-10-26T15:35:42.7427618Z 3436	./library/compiler-builtins
+2026-10-26T15:35:42.7427900Z 3320	./src/etc
+2026-10-26T15:35:42.7428108Z 3288	./src/librustdoc/html
+2026-10-26T15:35:42.7428378Z 3276	./tests/ui/async-await
+2026-10-26T15:35:42.7428624Z 2944	./tests/ui/pattern
+2026-10-26T15:35:42.7428918Z 2924	./library/stdarch/crates/core_arch/src/arm_shared
+2026-10-26T15:35:42.7429268Z 2888	./compiler/rustc_middle
+2026-10-26T15:35:42.7429788Z 2884	./tests/ui/nll
+2026-10-26T15:35:42.7430071Z 2876	./compiler/rustc_middle/src
+2026-10-26T15:35:42.7430396Z 2864	./library/stdarch/crates/core_arch/src/arm_shared/neon
+2026-10-26T15:35:42.7430779Z 2820	./src/tools/rust-analyzer/crates/ide-assists
+2026-10-26T15:35:42.7431170Z 2812	./src/tools/rust-analyzer/crates/ide-assists/src
+2026-10-26T15:35:42.7431486Z 2784	./tests/ui/feature-gates
+2026-10-26T15:35:42.7431725Z 2764	./src/tools/miri/src
+2026-10-26T15:35:42.7432036Z 2736	./library/stdarch/crates/core_arch/src/aarch64/sve
+2026-10-26T15:35:42.7432397Z 2720	./src/tools/rust-analyzer/crates/hir-ty
+2026-10-26T15:35:42.7432730Z 2712	./src/tools/rust-analyzer/crates/hir-ty/src
+2026-10-26T15:35:42.7433051Z 2668	./library/alloc
+2026-10-26T15:35:42.7433270Z 2660	./library/alloc/src
+2026-10-26T15:35:42.7433534Z 2636	./tests/ui/proc-macro
+2026-10-26T15:35:42.7433881Z 2584	./src/tools/rust-analyzer/crates/parser/test_data/parser/inline
+2026-10-26T15:35:42.7434271Z 2584	./compiler/rustc_codegen_gcc
+2026-10-26T15:35:42.7434614Z 2568	./src/tools/rust-analyzer/crates/ide-assists/src/handlers
+2026-10-26T15:35:42.7434962Z 2556	./src/tools/miri/tests/pass
+2026-10-26T15:35:42.7435256Z 2528	./src/tools/clippy/tests/ui-toml
+2026-10-26T15:35:42.7435548Z 2508	./src/bootstrap
+2026-10-26T15:35:42.7435768Z 2496	./tests/ui/imports
+2026-10-26T15:35:42.7436060Z 2448	./compiler/rustc_target
+2026-10-26T15:35:42.7436317Z 2436	./compiler/rustc_target/src
+2026-10-26T15:35:42.7436601Z 2416	./tests/ui/resolve
+2026-10-26T15:35:42.7436854Z 2356	./tests/ui/closures
+2026-10-26T15:35:42.7437098Z 2312	./compiler/rustc_trait_selection
+2026-10-26T15:35:42.7437438Z 2308	./src/bootstrap/src
+2026-10-26T15:35:42.7437694Z 2304	./compiler/rustc_trait_selection/src
+2026-10-26T15:35:42.7438013Z 2288	./src/librustdoc/html/static
+2026-10-26T15:35:42.7438313Z 2268	./tests/ui/traits/next-solver
+2026-10-26T15:35:42.7438576Z 2268	./tests/ui/rfcs
+2026-10-26T15:35:42.7438868Z 2224	./tests/ui/type-alias-impl-trait
+2026-10-26T15:35:42.7439327Z 2176	./tests/ui/typeck
+2026-10-26T15:35:42.7439877Z 2148	./tests/ui/associated-types
+2026-10-26T15:35:42.7440194Z 2148	./library/coretests
+2026-10-26T15:35:42.7440436Z 2148	./compiler/rustc_hir_typeck
+2026-10-26T15:35:42.7440636Z 
+
+===== PR - test-aarch64-gnu-llvm-22-1/12_install awscli.txt =====
+﻿2026-10-26T15:35:42.7486204Z ##[group]Run src/ci/scripts/install-awscli.sh
+2026-10-26T15:35:42.7486680Z [36;1msrc/ci/scripts/install-awscli.sh[0m
+2026-10-26T15:35:42.7523071Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:42.7523434Z env:
+2026-10-26T15:35:42.7523900Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:42.7524295Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:42.7524612Z   CI_JOB_NAME: test-aarch64-gnu-llvm-22-1
+2026-10-26T15:35:42.7524934Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:42.7525345Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:42.7525679Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:42.7525981Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:42.7526332Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:42.7529276Z   DOCKER_TOKEN: ***
+[... 49047 lines removed by TriageCore ...]
+2026-10-26T15:51:35.0380135Z [1m[92m   Compiling[0m proc-macro2 v1.0.106
+2026-10-26T15:51:35.0380804Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+2026-10-26T15:51:35.0381322Z [1m[92m   Compiling[0m quote v1.0.45
+2026-10-26T15:51:35.0381793Z [1m[92m   Compiling[0m cfg-if v1.0.4
+2026-10-26T15:51:35.0868133Z [RUSTC-TIMING] cfg_if test:false 0.038
+2026-10-26T15:51:35.0869291Z [1m[92m   Compiling[0m libc v0.2.191
+2026-10-26T15:51:35.1725476Z [RUSTC-TIMING] unicode_ident test:false 0.128
+2026-10-26T15:51:35.1734073Z [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+2026-10-26T15:51:35.2450876Z [RUSTC-TIMING] stable_deref_trait test:false 0.065
+2026-10-26T15:51:35.2470784Z [1m[92m   Compiling[0m memchr v2.8.0
+2026-10-26T15:51:35.3055113Z [RUSTC-TIMING] build_script_build test:false 0.260
+2026-10-26T15:51:35.3427360Z [1m[92m   Compiling[0m smallvec v1.15.1
+2026-10-26T15:51:35.4035852Z [RUSTC-TIMING] build_script_build test:false 0.360
+2026-10-26T15:51:35.7789436Z [RUSTC-TIMING] build_script_build test:false 0.685
+2026-10-26T15:51:35.9237046Z [RUSTC-TIMING] smallvec test:false 0.574
+2026-10-26T15:51:35.9250479Z [1m[92m   Compiling[0m thiserror v2.0.17
+2026-10-26T15:51:36.3707933Z [RUSTC-TIMING] build_script_build test:false 0.438
+2026-10-26T15:51:36.3751128Z [1m[92m   Compiling[0m bitflags v2.10.0
+2026-10-26T15:51:36.9683018Z [RUSTC-TIMING] proc_macro2 test:false 1.521
+2026-10-26T15:51:37.2425042Z [RUSTC-TIMING] bitflags test:false 0.860
+2026-10-26T15:51:37.2448653Z [1m[92m   Compiling[0m once_cell v1.21.3
+2026-10-26T15:51:37.5667243Z [RUSTC-TIMING] quote test:false 0.587
+2026-10-26T15:51:37.5686743Z [1m[92m   Compiling[0m syn v2.0.117
+2026-10-26T15:51:37.7705976Z [RUSTC-TIMING] once_cell test:false 0.517
+2026-10-26T15:51:37.7722401Z [1m[92m   Compiling[0m syn v3.0.3
+2026-10-26T15:51:39.3506282Z [RUSTC-TIMING] memchr test:false 4.095
+2026-10-26T15:51:39.3518500Z [1m[92m   Compiling[0m find-msvc-tools v0.1.11
+2026-10-26T15:51:39.8108306Z [RUSTC-TIMING] find_msvc_tools test:false 0.450
+2026-10-26T15:51:39.8120790Z [1m[92m   Compiling[0m equivalent v1.0.2
+2026-10-26T15:51:39.8788591Z [RUSTC-TIMING] equivalent test:false 0.059
+2026-10-26T15:51:39.8800027Z [1m[92m   Compiling[0m version_check v0.9.5
+2026-10-26T15:51:40.4855196Z [RUSTC-TIMING] version_check test:false 0.598
+2026-10-26T15:51:40.4891086Z [1m[92m   Compiling[0m getrandom v0.3.3
+2026-10-26T15:51:40.6068109Z [RUSTC-TIMING] libc test:false 4.785
+2026-10-26T15:51:40.6101525Z [1m[92m   Compiling[0m foldhash v0.2.0
+2026-10-26T15:51:40.9225938Z [RUSTC-TIMING] build_script_build test:false 0.420
+2026-10-26T15:51:40.9252461Z [1m[92m   Compiling[0m allocator-api2 v0.2.21
+2026-10-26T15:51:41.0445642Z [RUSTC-TIMING] foldhash test:false 0.426
+2026-10-26T15:51:41.0541085Z [1m[92m   Compiling[0m generic-array v0.14.7
+2026-10-26T15:51:41.1948111Z [RUSTC-TIMING] build_script_build test:false 0.134
+2026-10-26T15:51:41.1967860Z [1m[92m   Compiling[0m tracing-core v0.1.36
+2026-10-26T15:51:42.0087100Z [RUSTC-TIMING] allocator_api2 test:false 1.074
+2026-10-26T15:51:42.0099544Z [1m[92m   Compiling[0m hashbrown v0.17.1
+2026-10-26T15:51:43.8018397Z [RUSTC-TIMING] tracing_core test:false 2.596
+2026-10-26T15:51:43.8027588Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+2026-10-26T15:51:44.0440096Z [RUSTC-TIMING] build_script_build test:false 0.233
+2026-10-26T15:51:44.4042376Z [RUSTC-TIMING] hashbrown test:false 2.386
+2026-10-26T15:51:44.4059043Z [1m[92m   Compiling[0m indexmap v2.14.0
+2026-10-26T15:51:44.5366448Z [RUSTC-TIMING] getrandom test:false 0.444
+2026-10-26T15:51:44.6296004Z [RUSTC-TIMING] equivalent test:false 0.052
+2026-10-26T15:51:45.5732537Z [RUSTC-TIMING] syn test:false 7.793
+2026-10-26T15:51:45.5756880Z [1m[92m   Compiling[0m zerovec-derive v0.11.5
+2026-10-26T15:51:46.3058293Z [RUSTC-TIMING] hashbrown test:false 1.667
+2026-10-26T15:51:46.3075849Z [1m[92m   Compiling[0m rustc-hash v2.1.1
+2026-10-26T15:51:46.4371905Z [RUSTC-TIMING] rustc_hash test:false 0.122
+2026-10-26T15:51:46.4391562Z [1m[92m   Compiling[0m typenum v1.20.0
+2026-10-26T15:51:47.0184357Z [RUSTC-TIMING] indexmap test:false 2.604
+2026-10-26T15:51:47.0207588Z [1m[92m   Compiling[0m shlex v2.0.1
+2026-10-26T15:51:47.3541468Z [RUSTC-TIMING] shlex test:false 0.326
+2026-10-26T15:51:47.3582200Z [1m[92m   Compiling[0m log v0.4.28
+2026-10-26T15:51:47.8758138Z [RUSTC-TIMING] zerovec_derive test:false 2.292
+2026-10-26T15:51:47.8775693Z [1m[92m   Compiling[0m synstructure v0.13.2
+2026-10-26T15:51:47.8995120Z [RUSTC-TIMING] log test:false 0.534
+2026-10-26T15:51:47.9011899Z [1m[92m   Compiling[0m scopeguard v1.2.0
+2026-10-26T15:51:48.0075355Z [RUSTC-TIMING] scopeguard test:false 0.097
+2026-10-26T15:51:48.0079382Z [1m[92m   Compiling[0m lock_api v0.4.14
+2026-10-26T15:51:48.6510025Z [RUSTC-TIMING] lock_api test:false 0.635
+2026-10-26T15:51:48.6526662Z [1m[92m   Compiling[0m cc v1.4.3
+2026-10-26T15:51:49.3642963Z [RUSTC-TIMING] synstructure test:false 1.479
+2026-10-26T15:51:49.3656954Z [1m[92m   Compiling[0m type-map v0.5.1
+2026-10-26T15:51:49.4927261Z [RUSTC-TIMING] typenum test:false 3.045
+2026-10-26T15:51:49.7914692Z [RUSTC-TIMING] type_map test:false 0.418
+2026-10-26T15:51:50.6908849Z ##[error]The operation was canceled.
+
+===== PR - test-x86_64-gnu-tools/31_print disk usage.txt =====
+﻿2026-10-26T15:51:50.6992413Z ##[group]Run echo "disk usage:"
+2026-10-26T15:51:50.6992990Z [36;1mecho "disk usage:"[0m
+2026-10-26T15:51:50.6993449Z [36;1mdf -h[0m
+2026-10-26T15:51:50.7212627Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:51:50.7213273Z env:
+2026-10-26T15:51:50.7213869Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:51:50.7214592Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:51:50.7215068Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:51:50.7215495Z   CI_JOB_DOC_URL: 
+2026-10-26T15:51:50.7215862Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:51:50.7216563Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:51:50.7217061Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:51:50.7217622Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:51:50.7223003Z   DOCKER_TOKEN: ***
+2026-10-26T15:51:50.7223417Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:51:50.7223900Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:51:50.7224376Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:51:50.7224918Z   CARGO_UNSTABLE_BUILD_DIR_NEW_LAYOUT: true
+2026-10-26T15:51:50.7225385Z   PR_CI_JOB: 1
+2026-10-26T15:51:50.7225723Z   IMAGE: test-x86_64-gnu-tools
+2026-10-26T15:51:50.7226107Z ##[endgroup]
+2026-10-26T15:51:50.7366987Z disk usage:
+2026-10-26T15:51:50.7394399Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-26T15:51:50.7395612Z /dev/root       145G   70G   75G  49% /
+2026-10-26T15:51:50.7396230Z tmpfs           7.9G   84K  7.9G   1% /dev/shm
+2026-10-26T15:51:50.7397203Z tmpfs           3.2G  1.2M  3.2G   1% /run
+2026-10-26T15:51:50.7397768Z tmpfs           5.0M     0  5.0M   0% /run/lock
+2026-10-26T15:51:50.7398412Z efivarfs        128M   26K  128M   1% /sys/firmware/efi/efivars
+2026-10-26T15:51:50.7399059Z /dev/sda16      881M   64M  756M   8% /boot
+2026-10-26T15:51:50.7399614Z /dev/sda15      105M  6.2M   99M   6% /boot/efi
+2026-10-26T15:51:50.7400184Z tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+
+===== PR - test-x86_64-gnu-tools/3_disable git crlf conversion.txt =====
+﻿2026-10-26T15:35:24.4028136Z ##[group]Run git config --global core.autocrlf false
+2026-10-26T15:35:24.4028979Z [36;1mgit config --global core.autocrlf false[0m
+2026-10-26T15:35:24.4324524Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:24.4325627Z env:
+2026-10-26T15:35:24.4326517Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:24.4327340Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:24.4327930Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:24.4328506Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:24.4329036Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:24.4329653Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:24.4330280Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:24.4331008Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:24.4335587Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:24.4336121Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:24.4336819Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:24.4337350Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:24.4337932Z ##[endgroup]
+
+===== PR - test-x86_64-gnu-tools/4_checkout the source code.txt =====
+﻿2026-10-26T15:35:24.4802973Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-26T15:35:24.4803741Z with:
+2026-10-26T15:35:24.4804186Z   fetch-depth: 2
+2026-10-26T15:35:24.4804665Z   repository: rust-lang/rust
+2026-10-26T15:35:24.4808126Z   token: ***
+2026-10-26T15:35:24.4808591Z   ssh-strict: true
+2026-10-26T15:35:24.4809056Z   ssh-user: git
+2026-10-26T15:35:24.4809526Z   persist-credentials: true
+2026-10-26T15:35:24.4810033Z   clean: true
+2026-10-26T15:35:24.4810514Z   sparse-checkout-cone-mode: true
+2026-10-26T15:35:24.4811049Z   fetch-tags: false
+2026-10-26T15:35:24.4811528Z   show-progress: true
+2026-10-26T15:35:24.4811988Z   lfs: false
+2026-10-26T15:35:24.4812672Z   submodules: false
+2026-10-26T15:35:24.4813144Z   set-safe-directory: true
+2026-10-26T15:35:24.4813672Z   allow-unsafe-pr-checkout: false
+2026-10-26T15:35:24.4814262Z env:
+2026-10-26T15:35:24.4814849Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:24.4815542Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:24.4816114Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:24.4816776Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:24.4817256Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:24.4817794Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:24.4818357Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:24.4818978Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:24.4822228Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:24.4822720Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:24.4823267Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:24.4823786Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:24.4824320Z ##[endgroup]
+2026-10-26T15:35:24.5773681Z Syncing repository: rust-lang/rust
+2026-10-26T15:35:24.5775801Z ##[group]Getting Git version info
+2026-10-26T15:35:24.5776817Z Working directory is '/home/runner/work/rust/rust'
+2026-10-26T15:35:24.5777982Z [command]/usr/bin/git version
+2026-10-26T15:35:24.5778905Z git version 2.55.0
+2026-10-26T15:35:24.5790297Z ##[endgroup]
+2026-10-26T15:35:24.5797737Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/f54927a0-4e3f-41b4-b7b3-499d4d908949/.gitconfig'
+2026-10-26T15:35:24.5804650Z Temporarily overriding HOME='/home/runner/work/_temp/f54927a0-4e3f-41b4-b7b3-499d4d908949' before making global git config changes
+2026-10-26T15:35:24.5806857Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:35:24.5810199Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rust/rust
+2026-10-26T15:35:24.5840766Z Deleting the contents of '/home/runner/work/rust/rust'
+2026-10-26T15:35:24.5843930Z ##[group]Determining repository object format
+2026-10-26T15:35:24.5845428Z ##[endgroup]
+2026-10-26T15:35:24.5846574Z ##[group]Initializing the repository
+2026-10-26T15:35:24.5849791Z [command]/usr/bin/git init /home/runner/work/rust/rust
+2026-10-26T15:35:24.5968901Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T15:35:24.5970663Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T15:35:24.5971834Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T15:35:24.5972928Z hint: call:
+2026-10-26T15:35:24.5973447Z hint:
+2026-10-26T15:35:24.5974079Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T15:35:24.5974799Z hint:
+2026-10-26T15:35:24.5975497Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T15:35:24.5977351Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T15:35:24.5978355Z hint:
+2026-10-26T15:35:24.5978897Z hint: 	git branch -m <name>
+2026-10-26T15:35:24.5979391Z hint:
+2026-10-26T15:35:24.5980040Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T15:35:24.5981017Z Initialized empty Git repository in /home/runner/work/rust/rust/.git/
+2026-10-26T15:35:24.5984046Z [command]/usr/bin/git remote add origin https://github.com/rust-lang/rust
+2026-10-26T15:35:24.6031344Z ##[endgroup]
+2026-10-26T15:35:24.6032755Z ##[group]Disabling automatic garbage collection
+2026-10-26T15:35:24.6034526Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T15:35:24.6069263Z ##[endgroup]
+2026-10-26T15:35:24.6071174Z ##[group]Setting up auth
+2026-10-26T15:35:24.6072534Z Removing SSH command configuration
+2026-10-26T15:35:24.6074417Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:35:24.6110807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:35:24.6462502Z Removing HTTP extra header
+2026-10-26T15:35:24.6469234Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:35:24.6509727Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:35:24.6719694Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:35:24.6724571Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:35:24.6756116Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:35:24.6990344Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T15:35:24.7030230Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rust/rust/.git.path /home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:35:24.7063701Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/rust/rust/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:35:24.7097272Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:35:24.7129049Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:35:24.7158774Z ##[endgroup]
+2026-10-26T15:35:24.7159975Z ##[group]Fetching the repository
+2026-10-26T15:35:24.7165267Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=2 origin +f0ef2e4e098c7de0e1b62f43fe45ff8e6e9ca047:refs/remotes/pull/164759/merge
+2026-10-26T15:35:34.4908204Z From https://github.com/rust-lang/rust
+2026-10-26T15:35:34.4909216Z  * [new ref]             f0ef2e4e098c7de0e1b62f43fe45ff8e6e9ca047 -> pull/164759/merge
+2026-10-26T15:35:34.4912499Z ##[endgroup]
+2026-10-26T15:35:34.4913054Z ##[group]Determining the checkout info
+2026-10-26T15:35:34.4913813Z ##[endgroup]
+2026-10-26T15:35:34.4919414Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T15:35:34.4970750Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T15:35:34.5000092Z ##[group]Checking out the ref
+2026-10-26T15:35:34.5004726Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/164759/merge
+2026-10-26T15:35:35.5864208Z Updating files:  23% (14773/63974)
+2026-10-26T15:35:35.6107636Z Updating files:  24% (15354/63974)
+2026-10-26T15:35:35.6516288Z Updating files:  25% (15994/63974)
+2026-10-26T15:35:35.6882240Z Updating files:  26% (16634/63974)
+2026-10-26T15:35:35.7182102Z Updating files:  27% (17273/63974)
+2026-10-26T15:35:35.7451374Z Updating files:  28% (17913/63974)
+2026-10-26T15:35:35.7780293Z Updating files:  29% (18553/63974)
+2026-10-26T15:35:35.8049354Z Updating files:  30% (19193/63974)
+2026-10-26T15:35:35.8304302Z Updating files:  31% (19832/63974)
+2026-10-26T15:35:35.8644518Z Updating files:  32% (20472/63974)
+2026-10-26T15:35:35.8891037Z Updating files:  33% (21112/63974)
+2026-10-26T15:35:35.9146811Z Updating files:  34% (21752/63974)
+2026-10-26T15:35:35.9408398Z Updating files:  35% (22391/63974)
+2026-10-26T15:35:35.9698038Z Updating files:  36% (23031/63974)
+2026-10-26T15:35:35.9995079Z Updating files:  37% (23671/63974)
+2026-10-26T15:35:36.0364264Z Updating files:  38% (24311/63974)
+2026-10-26T15:35:36.0597074Z Updating files:  39% (24950/63974)
+2026-10-26T15:35:36.0855850Z Updating files:  40% (25590/63974)
+2026-10-26T15:35:36.1134639Z Updating files:  41% (26230/63974)
+2026-10-26T15:35:36.1393992Z Updating files:  42% (26870/63974)
+2026-10-26T15:35:36.1645232Z Updating files:  43% (27509/63974)
+2026-10-26T15:35:36.1885450Z Updating files:  44% (28149/63974)
+2026-10-26T15:35:36.2132594Z Updating files:  45% (28789/63974)
+2026-10-26T15:35:36.2380547Z Updating files:  46% (29429/63974)
+2026-10-26T15:35:36.2623097Z Updating files:  47% (30068/63974)
+2026-10-26T15:35:36.2877453Z Updating files:  48% (30708/63974)
+2026-10-26T15:35:36.3125684Z Updating files:  49% (31348/63974)
+2026-10-26T15:35:36.3368786Z Updating files:  50% (31987/63974)
+2026-10-26T15:35:36.3608618Z Updating files:  51% (32627/63974)
+2026-10-26T15:35:36.3842526Z Updating files:  52% (33267/63974)
+2026-10-26T15:35:36.4082935Z Updating files:  53% (33907/63974)
+2026-10-26T15:35:36.4330173Z Updating files:  54% (34546/63974)
+2026-10-26T15:35:36.4582488Z Updating files:  55% (35186/63974)
+2026-10-26T15:35:36.4832258Z Updating files:  56% (35826/63974)
+2026-10-26T15:35:36.5078187Z Updating files:  57% (36466/63974)
+2026-10-26T15:35:36.5327618Z Updating files:  58% (37105/63974)
+2026-10-26T15:35:36.5499896Z Updating files:  59% (37745/63974)
+2026-10-26T15:35:36.5578258Z Updating files:  59% (38172/63974)
+2026-10-26T15:35:36.5833246Z Updating files:  60% (38385/63974)
+2026-10-26T15:35:36.6114418Z Updating files:  61% (39025/63974)
+2026-10-26T15:35:36.6381175Z Updating files:  62% (39664/63974)
+2026-10-26T15:35:36.6624788Z Updating files:  63% (40304/63974)
+2026-10-26T15:35:36.6867925Z Updating files:  64% (40944/63974)
+2026-10-26T15:35:36.7110596Z Updating files:  65% (41584/63974)
+2026-10-26T15:35:36.7357506Z Updating files:  66% (42223/63974)
+2026-10-26T15:35:36.7628969Z Updating files:  67% (42863/63974)
+2026-10-26T15:35:36.7866208Z Updating files:  68% (43503/63974)
+2026-10-26T15:35:36.8101523Z Updating files:  69% (44143/63974)
+2026-10-26T15:35:36.8345486Z Updating files:  70% (44782/63974)
+2026-10-26T15:35:36.8607510Z Updating files:  71% (45422/63974)
+2026-10-26T15:35:36.8849217Z Updating files:  72% (46062/63974)
+2026-10-26T15:35:36.9107759Z Updating files:  73% (46702/63974)
+2026-10-26T15:35:36.9357887Z Updating files:  74% (47341/63974)
+2026-10-26T15:35:36.9606766Z Updating files:  75% (47981/63974)
+2026-10-26T15:35:36.9856622Z Updating files:  76% (48621/63974)
+2026-10-26T15:35:37.0098609Z Updating files:  77% (49260/63974)
+2026-10-26T15:35:37.0341041Z Updating files:  78% (49900/63974)
+2026-10-26T15:35:37.0587022Z Updating files:  79% (50540/63974)
+2026-10-26T15:35:37.1080299Z Updating files:  80% (51180/63974)
+2026-10-26T15:35:37.1337317Z Updating files:  81% (51819/63974)
+2026-10-26T15:35:37.1582708Z Updating files:  82% (52459/63974)
+2026-10-26T15:35:37.1832542Z Updating files:  83% (53099/63974)
+2026-10-26T15:35:37.2071616Z Updating files:  84% (53739/63974)
+2026-10-26T15:35:37.2323776Z Updating files:  85% (54378/63974)
+2026-10-26T15:35:37.2562435Z Updating files:  86% (55018/63974)
+2026-10-26T15:35:37.2797965Z Updating files:  87% (55658/63974)
+2026-10-26T15:35:37.3041219Z Updating files:  88% (56298/63974)
+2026-10-26T15:35:37.3280896Z Updating files:  89% (56937/63974)
+2026-10-26T15:35:37.3540574Z Updating files:  90% (57577/63974)
+2026-10-26T15:35:37.3791743Z Updating files:  91% (58217/63974)
+2026-10-26T15:35:37.4027380Z Updating files:  92% (58857/63974)
+2026-10-26T15:35:37.4273675Z Updating files:  93% (59496/63974)
+2026-10-26T15:35:37.4514442Z Updating files:  94% (60136/63974)
+2026-10-26T15:35:37.4758287Z Updating files:  95% (60776/63974)
+2026-10-26T15:35:37.4999442Z Updating files:  96% (61416/63974)
+2026-10-26T15:35:37.5235434Z Updating files:  97% (62055/63974)
+2026-10-26T15:35:37.5480033Z Updating files:  98% (62695/63974)
+2026-10-26T15:35:37.5498825Z Updating files:  99% (63335/63974)
+2026-10-26T15:35:37.5716966Z Updating files:  99% (63386/63974)
+2026-10-26T15:35:37.5717421Z Updating files: 100% (63974/63974)
+2026-10-26T15:35:37.5717829Z Updating files: 100% (63974/63974), done.
+2026-10-26T15:35:37.6319863Z Note: switching to 'refs/remotes/pull/164759/merge'.
+2026-10-26T15:35:37.6320326Z 
+2026-10-26T15:35:37.6320931Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-26T15:35:37.6321667Z changes and commit them, and you can discard any commits you make in this
+2026-10-26T15:35:37.6322387Z state without impacting any branches by switching back to a branch.
+2026-10-26T15:35:37.6322799Z 
+2026-10-26T15:35:37.6323027Z If you want to create a new branch to retain commits you create, you may
+2026-10-26T15:35:37.6323576Z do so (now or later) by using -c with the switch command. Example:
+2026-10-26T15:35:37.6323880Z 
+2026-10-26T15:35:37.6324007Z   git switch -c <new-branch-name>
+2026-10-26T15:35:37.6324209Z 
+2026-10-26T15:35:37.6324329Z Or undo this operation with:
+2026-10-26T15:35:37.6324520Z 
+2026-10-26T15:35:37.6324616Z   git switch -
+2026-10-26T15:35:37.6324760Z 
+2026-10-26T15:35:37.6325012Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-26T15:35:37.6325395Z 
+2026-10-26T15:35:37.6325823Z HEAD is now at f0ef2e4e0 Merge e321e9f3a12fcfb707a886d30846610e41843a48 into 846e51f66b1e7b49ba9e3988c58ccfe5817ce0a9
+2026-10-26T15:35:37.6362880Z ##[endgroup]
+2026-10-26T15:35:37.6411659Z [command]/usr/bin/git log -1 --format=%H
+2026-10-26T15:35:37.6438623Z f0ef2e4e098c7de0e1b62f43fe45ff8e6e9ca047
+
+===== PR - test-x86_64-gnu-tools/5_free up disk space.txt =====
+﻿2026-10-26T15:35:37.6634719Z ##[group]Run src/ci/scripts/free-disk-space-linux.sh
+2026-10-26T15:35:37.6635175Z [36;1msrc/ci/scripts/free-disk-space-linux.sh[0m
+2026-10-26T15:35:37.6694973Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:37.6695339Z env:
+2026-10-26T15:35:37.6695660Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:37.6696063Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:37.6696569Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:37.6696834Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:37.6697051Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:37.6697323Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:37.6697608Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:37.6697943Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:37.6700708Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:37.6700951Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:37.6701241Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:37.6701492Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:37.6701786Z ##[endgroup]
+2026-10-26T15:35:37.7001805Z ================================================================================
+2026-10-26T15:35:37.7002427Z BEFORE CLEAN-UP:
+2026-10-26T15:35:37.7002682Z 
+2026-10-26T15:35:37.7002819Z $ df -h
+2026-10-26T15:35:37.7002980Z 
+2026-10-26T15:35:37.7015088Z Filesystem      Size  Used Avail Use% Mounted on
+2026-10-26T15:35:37.7015665Z /dev/root       145G   60G   85G  42% /
+2026-10-26T15:35:37.7016118Z tmpfs           7.9G   84K  7.9G   1% /dev/shm
+2026-10-26T15:35:37.7016595Z tmpfs           3.2G 1008K  3.2G   1% /run
+2026-10-26T15:35:37.7016941Z tmpfs           5.0M     0  5.0M   0% /run/lock
+2026-10-26T15:35:37.7017345Z efivarfs        128M   26K  128M   1% /sys/firmware/efi/efivars
+2026-10-26T15:35:37.7017765Z /dev/sda16      881M   64M  756M   8% /boot
+2026-10-26T15:35:37.7018130Z /dev/sda15      105M  6.2M   99M   6% /boot/efi
+2026-10-26T15:35:37.7018503Z tmpfs           1.6G   12K  1.6G   1% /run/user/1001
+2026-10-26T15:35:37.7025054Z ================================================================================
+2026-10-26T15:35:37.7025507Z 
+2026-10-26T15:35:37.7049927Z Sufficient disk space available (89068696KB >= 52428800KB). Skipping cleanup.
+
+===== PR - test-x86_64-gnu-tools/70_Post checkout the source code.txt =====
+﻿2026-10-26T15:51:50.7678355Z Post job cleanup.
+2026-10-26T15:51:50.9216011Z [command]/usr/bin/git version
+2026-10-26T15:51:50.9307267Z git version 2.55.0
+2026-10-26T15:51:50.9371310Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/7b5c6c97-2ea5-4cfc-a99f-0ed6d55efcb7/.gitconfig'
+2026-10-26T15:51:50.9388017Z Temporarily overriding HOME='/home/runner/work/_temp/7b5c6c97-2ea5-4cfc-a99f-0ed6d55efcb7' before making global git config changes
+2026-10-26T15:51:50.9389992Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:51:50.9391392Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rust/rust
+2026-10-26T15:51:50.9436912Z Removing SSH command configuration
+2026-10-26T15:51:50.9445913Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:51:50.9495335Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:51:50.9996725Z Entering 'library/backtrace'
+2026-10-26T15:51:51.0092451Z Entering 'src/doc/book'
+2026-10-26T15:51:51.0200266Z Entering 'src/doc/edition-guide'
+2026-10-26T15:51:51.0272981Z Entering 'src/doc/embedded-book'
+2026-10-26T15:51:51.0341746Z Entering 'src/doc/nomicon'
+2026-10-26T15:51:51.0427175Z Entering 'src/doc/reference'
+2026-10-26T15:51:51.0487177Z Entering 'src/doc/rust-by-example'
+2026-10-26T15:51:51.0597074Z Entering 'src/gcc'
+2026-10-26T15:51:51.0817336Z Entering 'src/llvm-project'
+2026-10-26T15:51:51.1091364Z Entering 'src/tools/cargo'
+2026-10-26T15:51:51.1187072Z Entering 'src/tools/enzyme'
+2026-10-26T15:51:51.1270456Z Entering 'src/tools/rustc-perf'
+2026-10-26T15:51:51.1344799Z Entering 'src/tpde'
+2026-10-26T15:51:51.1477243Z Entering 'src/tpde/deps/args'
+2026-10-26T15:51:51.1536704Z Entering 'src/tpde/deps/disarm'
+2026-10-26T15:51:51.1627366Z Entering 'src/tpde/deps/doxygen-awesome-css'
+2026-10-26T15:51:51.1667182Z Entering 'src/tpde/deps/fadec'
+2026-10-26T15:51:51.1737110Z Entering 'src/tpde/deps/spdlog'
+2026-10-26T15:51:51.4390604Z Removing HTTP extra header
+2026-10-26T15:51:51.4391478Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:51:51.4395244Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:51:51.4397280Z Entering 'library/backtrace'
+2026-10-26T15:51:51.4397732Z Entering 'src/doc/book'
+2026-10-26T15:51:51.4398159Z Entering 'src/doc/edition-guide'
+2026-10-26T15:51:51.4398636Z Entering 'src/doc/embedded-book'
+2026-10-26T15:51:51.4399079Z Entering 'src/doc/nomicon'
+2026-10-26T15:51:51.4399514Z Entering 'src/doc/reference'
+2026-10-26T15:51:51.4401388Z Entering 'src/doc/rust-by-example'
+2026-10-26T15:51:51.4401880Z Entering 'src/gcc'
+2026-10-26T15:51:51.4402286Z Entering 'src/llvm-project'
+2026-10-26T15:51:51.4402842Z Entering 'src/tools/cargo'
+2026-10-26T15:51:51.4403268Z Entering 'src/tools/enzyme'
+2026-10-26T15:51:51.4403708Z Entering 'src/tools/rustc-perf'
+2026-10-26T15:51:51.4404161Z Entering 'src/tpde'
+2026-10-26T15:51:51.4404565Z Entering 'src/tpde/deps/args'
+2026-10-26T15:51:51.4405033Z Entering 'src/tpde/deps/disarm'
+2026-10-26T15:51:51.4405529Z Entering 'src/tpde/deps/doxygen-awesome-css'
+2026-10-26T15:51:51.4439885Z Entering 'src/tpde/deps/fadec'
+2026-10-26T15:51:51.4504369Z Entering 'src/tpde/deps/spdlog'
+2026-10-26T15:51:51.4598532Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:51:51.4601952Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.4716794Z includeif.gitdir:/home/runner/work/rust/rust/.git.path
+2026-10-26T15:51:51.4717679Z includeif.gitdir:/home/runner/work/rust/rust/.git/worktrees/*.path
+2026-10-26T15:51:51.4718535Z includeif.gitdir:/github/workspace/.git.path
+2026-10-26T15:51:51.4719263Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T15:51:51.4731715Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rust/rust/.git.path
+2026-10-26T15:51:51.4765635Z /home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:51:51.4781801Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rust/rust/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-a75f9a41\-6d93\-45c0\-a90c\-5b4f1f83cc6f\.config
+2026-10-26T15:51:51.4847403Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/rust/rust/.git/worktrees/*.path
+2026-10-26T15:51:51.4879929Z /home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:51:51.4893441Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/rust/rust/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-a75f9a41\-6d93\-45c0\-a90c\-5b4f1f83cc6f\.config
+2026-10-26T15:51:51.4979653Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-26T15:51:51.5021804Z /github/runner_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:51:51.5032836Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-a75f9a41\-6d93\-45c0\-a90c\-5b4f1f83cc6f\.config
+2026-10-26T15:51:51.5117261Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T15:51:51.5137357Z /github/runner_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config
+2026-10-26T15:51:51.5182161Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-a75f9a41\-6d93\-45c0\-a90c\-5b4f1f83cc6f\.config
+2026-10-26T15:51:51.5268467Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:51:51.5627564Z Entering 'library/backtrace'
+2026-10-26T15:51:51.5647432Z file:/home/runner/work/rust/rust/.git/modules/library/backtrace/config	remote.origin.url
+2026-10-26T15:51:51.5667028Z Entering 'src/doc/book'
+2026-10-26T15:51:51.5696960Z file:/home/runner/work/rust/rust/.git/modules/src/doc/book/config	remote.origin.url
+2026-10-26T15:51:51.5737064Z Entering 'src/doc/edition-guide'
+2026-10-26T15:51:51.5767421Z file:/home/runner/work/rust/rust/.git/modules/src/doc/edition-guide/config	remote.origin.url
+2026-10-26T15:51:51.5801401Z Entering 'src/doc/embedded-book'
+2026-10-26T15:51:51.5837443Z file:/home/runner/work/rust/rust/.git/modules/src/doc/embedded-book/config	remote.origin.url
+2026-10-26T15:51:51.5853100Z Entering 'src/doc/nomicon'
+2026-10-26T15:51:51.5876355Z file:/home/runner/work/rust/rust/.git/modules/src/doc/nomicon/config	remote.origin.url
+2026-10-26T15:51:51.5906087Z Entering 'src/doc/reference'
+2026-10-26T15:51:51.5937556Z file:/home/runner/work/rust/rust/.git/modules/src/doc/reference/config	remote.origin.url
+2026-10-26T15:51:51.5967014Z Entering 'src/doc/rust-by-example'
+2026-10-26T15:51:51.5997321Z file:/home/runner/work/rust/rust/.git/modules/src/doc/rust-by-example/config	remote.origin.url
+2026-10-26T15:51:51.6025452Z Entering 'src/gcc'
+2026-10-26T15:51:51.6054798Z file:/home/runner/work/rust/rust/.git/modules/src/gcc/config	remote.origin.url
+2026-10-26T15:51:51.6226223Z Entering 'src/llvm-project'
+2026-10-26T15:51:51.6261761Z file:/home/runner/work/rust/rust/.git/modules/src/llvm-project/config	remote.origin.url
+2026-10-26T15:51:51.6483431Z Entering 'src/tools/cargo'
+2026-10-26T15:51:51.6520678Z file:/home/runner/work/rust/rust/.git/modules/src/tools/cargo/config	remote.origin.url
+2026-10-26T15:51:51.6562597Z Entering 'src/tools/enzyme'
+2026-10-26T15:51:51.6593576Z file:/home/runner/work/rust/rust/.git/modules/src/tools/enzyme/config	remote.origin.url
+2026-10-26T15:51:51.6628351Z Entering 'src/tools/rustc-perf'
+2026-10-26T15:51:51.6656624Z file:/home/runner/work/rust/rust/.git/modules/src/tools/rustc-perf/config	remote.origin.url
+2026-10-26T15:51:51.6712833Z Entering 'src/tpde'
+2026-10-26T15:51:51.6738688Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/config	remote.origin.url
+2026-10-26T15:51:51.6764647Z Entering 'src/tpde/deps/args'
+2026-10-26T15:51:51.6790596Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/args/config	remote.origin.url
+2026-10-26T15:51:51.6828310Z Entering 'src/tpde/deps/disarm'
+2026-10-26T15:51:51.6846811Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/disarm/config	remote.origin.url
+2026-10-26T15:51:51.6873297Z Entering 'src/tpde/deps/doxygen-awesome-css'
+2026-10-26T15:51:51.6901499Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/doxygen-awesome-css/config	remote.origin.url
+2026-10-26T15:51:51.6931289Z Entering 'src/tpde/deps/fadec'
+2026-10-26T15:51:51.6959816Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/fadec/config	remote.origin.url
+2026-10-26T15:51:51.6988897Z Entering 'src/tpde/deps/spdlog'
+2026-10-26T15:51:51.7017501Z file:/home/runner/work/rust/rust/.git/modules/src/tpde/modules/tp/spdlog/config	remote.origin.url
+2026-10-26T15:51:51.7073480Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/library/backtrace/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7124843Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/book/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7173229Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/edition-guide/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7217304Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/embedded-book/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7264943Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/nomicon/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7338172Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/reference/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7398171Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/doc/rust-by-example/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7419064Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/gcc/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7464611Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/llvm-project/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7508743Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tools/cargo/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7552058Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tools/enzyme/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7596043Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tools/rustc-perf/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7638771Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7695328Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/args/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7737234Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/disarm/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7783526Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/doxygen-awesome-css/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7826014Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/modules/deps/fadec/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7867032Z [command]/usr/bin/git config --file /home/runner/work/rust/rust/.git/modules/src/tpde/modules/tp/spdlog/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:51:51.7902577Z Removing credentials config '/home/runner/work/_temp/git-credentials-a75f9a41-6d93-45c0-a90c-5b4f1f83cc6f.config'
+
+===== PR - test-x86_64-gnu-tools/71_Complete job.txt =====
+﻿2026-10-26T15:51:51.8142114Z Cleaning up orphan processes
+2026-10-26T15:51:51.8585879Z Terminate orphan process: pid (2339) (python3)
+2026-10-26T15:51:51.8734179Z Terminate orphan process: pid (4492) (run-build-from-ci.sh)
+2026-10-26T15:51:51.8831092Z Terminate orphan process: pid (4506) (bash)
+2026-10-26T15:51:51.8910484Z Terminate orphan process: pid (4890) (docker)
+
+===== PR - test-x86_64-gnu-tools/7_configure the PR in which the error message will be posted.txt =====
+﻿2026-10-26T15:35:37.7108838Z ##[group]Run echo "[CI_PR_NUMBER=$num]"
+2026-10-26T15:35:37.7109189Z [36;1mecho "[CI_PR_NUMBER=$num]"[0m
+2026-10-26T15:35:37.7169932Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:37.7170288Z env:
+2026-10-26T15:35:37.7170637Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:37.7171047Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:37.7171309Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:37.7171799Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:37.7172042Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:37.7172315Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:37.7191400Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:37.7192016Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:37.7197609Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:37.7198076Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:37.7198559Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:37.7199011Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:37.7199524Z   num: 164759
+2026-10-26T15:35:37.7199856Z ##[endgroup]
+2026-10-26T15:35:37.7285327Z [CI_PR_NUMBER=164759]
+
+===== PR - test-x86_64-gnu-tools/8_add extra environment variables.txt =====
+﻿2026-10-26T15:35:37.7350887Z ##[group]Run src/ci/scripts/setup-environment.sh
+2026-10-26T15:35:37.7351372Z [36;1msrc/ci/scripts/setup-environment.sh[0m
+2026-10-26T15:35:37.7409323Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:37.7409674Z env:
+2026-10-26T15:35:37.7409993Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:37.7410421Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:37.7410680Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:37.7410933Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:37.7411154Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:37.7411424Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:37.7411705Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:37.7412031Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:37.7414801Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:37.7415040Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:37.7415325Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:37.7415574Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:37.7416019Z   EXTRA_VARIABLES: {
+  "CARGO_UNSTABLE_BUILD_DIR_NEW_LAYOUT": true,
+  "PR_CI_JOB": 1
+}
+2026-10-26T15:35:37.7416683Z ##[endgroup]
+2026-10-26T15:35:37.7597584Z adding extra environment variable CARGO_UNSTABLE_BUILD_DIR_NEW_LAYOUT
+2026-10-26T15:35:37.7650795Z adding extra environment variable PR_CI_JOB
+2026-10-26T15:35:37.7682540Z linux builder detected, using docker to run the build
+
+===== PR - test-x86_64-gnu-tools/9_ensure the channel matches the target branch.txt =====
+﻿2026-10-26T15:35:37.7726164Z ##[group]Run src/ci/scripts/verify-channel.sh
+2026-10-26T15:35:37.7726841Z [36;1msrc/ci/scripts/verify-channel.sh[0m
+2026-10-26T15:35:37.7784412Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:35:37.7784760Z env:
+2026-10-26T15:35:37.7785075Z   TOOLSTATE_REPO: https://github.com/rust-lang-nursery/rust-toolstate
+2026-10-26T15:35:37.7785485Z   TOOLSTATE_REPO_ACCESS_TOKEN: 
+2026-10-26T15:35:37.7785738Z   CI_JOB_NAME: test-x86_64-gnu-tools
+2026-10-26T15:35:37.7785988Z   CI_JOB_DOC_URL: 
+2026-10-26T15:35:37.7786202Z   GITHUB_WORKFLOW_RUN_ID: 40350517930
+2026-10-26T15:35:37.7786783Z   GITHUB_REPOSITORY: rust-lang/rust
+2026-10-26T15:35:37.7787068Z   CARGO_REGISTRIES_CRATES_IO_PROTOCOL: sparse
+2026-10-26T15:35:37.7787391Z   HEAD_SHA: e321e9f3a12fcfb707a886d30846610e41843a48
+2026-10-26T15:35:37.7790222Z   DOCKER_TOKEN: ***
+2026-10-26T15:35:37.7790475Z   SCCACHE_BUCKET: rust-lang-ci-sccache2
+2026-10-26T15:35:37.7790753Z   SCCACHE_REGION: us-west-1
+2026-10-26T15:35:37.7791009Z   CACHE_DOMAIN: ci-caches.rust-lang.org
+2026-10-26T15:35:37.7791318Z   CARGO_UNSTABLE_BUILD_DIR_NEW_LAYOUT: true
+2026-10-26T15:35:37.7791586Z   PR_CI_JOB: 1
+2026-10-26T15:35:37.7791786Z   IMAGE: test-x86_64-gnu-tools
+2026-10-26T15:35:37.7792017Z ##[endgroup]
+
+===== PR - test-x86_64-gnu-tools/system.txt =====
+2026-10-26T15:37:50.6330000Z Evaluating job.if
+2026-10-26T15:37:50.6330000Z Evaluating: success()
+2026-10-26T15:37:50.6330000Z Result: true
+2026-10-26T15:37:50.6340000Z Requested labels: ubuntu-24.04
+2026-10-26T15:37:50.6340000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/164759/merge
+2026-10-26T15:37:50.6340000Z Waiting for a runner to pick up this job...
+2026-10-26T15:37:50.6800000Z Job is about to start running on the hosted runner: GitHub Actions 1002925909
+2026-10-26T15:37:50.6800000Z Job is waiting for a hosted runner to come online.

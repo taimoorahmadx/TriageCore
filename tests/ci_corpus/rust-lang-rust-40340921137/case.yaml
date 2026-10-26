@@ -1,0 +1,96 @@
+repo: rust-lang/rust
+run_id: 40340921137
+head_sha: 90c45eaa4747f9d65e2b13002503842a92d6720a
+run_attempts:
+- attempt: 1
+  head_sha: 90c45eaa4747f9d65e2b13002503842a92d6720a
+  conclusion: failure
+commits:
+- sha: 90c45eaa4747f9d65e2b13002503842a92d6720a
+  author: levyry
+  files:
+  - compiler/rustc_codegen_llvm/src/debuginfo/metadata/enums/cpp_like.rs
+  - compiler/rustc_codegen_llvm/src/debuginfo/metadata/enums/mod.rs
+  - compiler/rustc_codegen_llvm/src/debuginfo/metadata/enums/native.rs
+  - compiler/rustc_middle/src/ty/mod.rs
+  - compiler/rustc_middle/src/ty/sty.rs
+  - compiler/rustc_mir_transform/src/validate.rs
+  - compiler/rustc_ty_utils/src/layout.rs
+- sha: 54889e9d994c892a02e88f8f5dee4b5e1dae5355
+  author: levyry
+  files:
+  - compiler/rustc_middle/src/mir/query.rs
+- sha: 7f374ffb5a82d6c63280d2764d9c368399367557
+  author: levyry
+  files:
+  - compiler/rustc_hir_analysis/src/check/check.rs
+  - compiler/rustc_middle/src/mir/pretty.rs
+  - compiler/rustc_middle/src/mir/query.rs
+  - compiler/rustc_middle/src/ty/sty.rs
+  - compiler/rustc_mir_transform/src/coroutine/layout.rs
+  - compiler/rustc_mir_transform/src/coroutine/mod.rs
+  - compiler/rustc_mir_transform/src/validate.rs
+  - compiler/rustc_trait_selection/src/error_reporting/traits/suggestions.rs
+  - compiler/rustc_trait_selection/src/traits/query/dropck_outlives.rs
+  - compiler/rustc_traits/src/coroutine_witnesses.rs
+  - compiler/rustc_ty_utils/src/layout.rs
+  - compiler/rustc_ty_utils/src/needs_drop.rs
+  - src/tools/clippy/clippy_lints/src/await_holding_invalid.rs
+- sha: 019b59d8101bb3e141f1b880684747b4217beeb6
+  author: bors
+  files:
+  - .github/workflows/ci.yml
+  - compiler/rustc_ast/src/attr/mod.rs
+  - compiler/rustc_attr_ir/src/attr.rs
+  - compiler/rustc_lint/src/levels.rs
+  - library/alloc/src/collections/linked_list.rs
+  - src/etc/lldb_lookup.py
+  - src/etc/lldb_providers.py
+  - src/librustdoc/visit_ast.rs
+  - src/tools/clippy/clippy_utils/src/attrs.rs
+  - tests/rustdoc-html/impossible-default.rs
+  - tests/rustdoc-html/trait/auxiliary/unstable-trait.rs
+  - tests/rustdoc-html/trait/dyn-compatibility.rs
+  - tests/rustdoc-html/trait/ensure-src-link.rs
+  - tests/rustdoc-html/trait/final-trait-method.rs
+  - tests/rustdoc-html/trait/hide-unstable-trait.rs
+  - tests/rustdoc-html/trait/impossible-default.rs
+- sha: 52024b58faf0fcca01d593802eb16f0050554c11
+  author: JonathanBrouwer
+  files:
+  - .github/workflows/ci.yml
+- sha: 7221b893a218135921e694042763f9d7301731fe
+  author: JonathanBrouwer
+  files:
+  - tests/rustdoc-html/impossible-default.rs
+  - tests/rustdoc-html/trait/auxiliary/unstable-trait.rs
+  - tests/rustdoc-html/trait/dyn-compatibility.rs
+  - tests/rustdoc-html/trait/ensure-src-link.rs
+  - tests/rustdoc-html/trait/final-trait-method.rs
+  - tests/rustdoc-html/trait/hide-unstable-trait.rs
+  - tests/rustdoc-html/trait/impossible-default.rs
+- sha: fb45a70bd8af16fc3a59ee5617210730e807d5c6
+  author: JonathanBrouwer
+  files:
+  - src/etc/lldb_lookup.py
+  - src/etc/lldb_providers.py
+- sha: 16728a11da3f2cc496a22fe26b3b06035f99d1c3
+  author: JonathanBrouwer
+  files:
+  - library/alloc/src/collections/linked_list.rs
+- sha: c193f9bca9fbf0bd00dcbc377e03ea97602df193
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_ast/src/attr/mod.rs
+  - compiler/rustc_attr_ir/src/attr.rs
+  - compiler/rustc_lint/src/levels.rs
+  - src/librustdoc/visit_ast.rs
+  - src/tools/clippy/clippy_utils/src/attrs.rs
+- sha: 7aa7bb9082e023a80e99b91d7a949f23a184a77f
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_lint/src/levels.rs
+label: infra
+label_source: The failed PR job logs end before execution while stating that the hosted runner is waiting to come online.
+risk_tier: medium
+suggested_label: infra

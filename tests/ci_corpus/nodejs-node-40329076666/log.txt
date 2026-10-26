@@ -1,0 +1,20 @@
+===== aarch64-darwin dependencies diff/system.txt =====
+2026-10-26T13:15:54.8590000Z Evaluating diff.if
+2026-10-26T13:15:54.8590000Z Evaluating: (success() && ((github.event.pull_request.draft == false)))
+2026-10-26T13:15:54.8590000Z Expanded: (true && (false == false))
+2026-10-26T13:15:54.8590000Z Result: true
+2026-10-26T13:15:54.8670000Z Requested labels: macos-latest
+2026-10-26T13:15:54.8670000Z Job defined at: nodejs/node/.github/workflows/nix-changes.yml@refs/pull/65794/merge
+2026-10-26T13:15:54.8670000Z Waiting for a runner to pick up this job...
+2026-10-26T13:15:55.4400000Z Job is waiting for a hosted runner to come online.
+2026-10-26T13:15:55.4410000Z Job is about to start running on the hosted runner: GitHub Actions 1001264697
+===== x86_64-darwin dependencies diff/system.txt =====
+2026-10-26T13:15:54.9270000Z Requested labels: macos-15-intel
+2026-10-26T13:15:54.9270000Z Job defined at: nodejs/node/.github/workflows/nix-changes.yml@refs/pull/65794/merge
+2026-10-26T13:15:54.9270000Z Waiting for a runner to pick up this job...
+2026-10-26T13:15:54.8680000Z Evaluating diff.if
+2026-10-26T13:15:54.8680000Z Evaluating: (success() && ((github.event.pull_request.draft == false)))
+2026-10-26T13:15:54.8680000Z Expanded: (true && (false == false))
+2026-10-26T13:15:54.8680000Z Result: true
+2026-10-26T13:15:55.3060000Z Job is waiting for a hosted runner to come online.
+2026-10-26T13:15:55.3070000Z Job is about to start running on the hosted runner: GitHub Actions 1001264694

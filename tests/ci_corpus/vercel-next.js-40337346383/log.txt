@@ -1,0 +1,216 @@
+===== Test new and changed tests when deployed (1_5) _ build/system.txt =====
+2026-10-26T14:22:38.5690000Z Evaluating test-new-tests-deploy.if
+2026-10-26T14:22:38.5690000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:22:38.5690000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:22:38.5690000Z Result: true
+2026-10-26T14:22:38.5690000Z Evaluating test-new-tests-deploy._1_5.build.if
+2026-10-26T14:22:38.5690000Z Evaluating: success()
+2026-10-26T14:22:38.5690000Z Result: true
+2026-10-26T14:22:38.6880000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:22:38.6880000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051205829
+2026-10-26T14:22:38.6250000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:22:38.6250000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:22:38.6250000Z Reusable workflow chain:
+2026-10-26T14:22:38.6250000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:22:38.6250000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:22:38.6250000Z Waiting for a runner to pick up this job...
+===== Test new and changed tests when deployed (cache components) (1_5) _ build/system.txt =====
+2026-10-26T14:22:38.7000000Z Evaluating test-new-tests-deploy-cache-components.if
+2026-10-26T14:22:38.7000000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:22:38.7000000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:22:38.7000000Z Result: true
+2026-10-26T14:22:38.7000000Z Evaluating test-new-tests-deploy-cache-components._1_5.build.if
+2026-10-26T14:22:38.7000000Z Evaluating: success()
+2026-10-26T14:22:38.7000000Z Result: true
+2026-10-26T14:22:38.8490000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:22:38.8490000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051205837
+2026-10-26T14:22:38.7750000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:22:38.7750000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:22:38.7750000Z Reusable workflow chain:
+2026-10-26T14:22:38.7750000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:22:38.7750000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:22:38.7750000Z Waiting for a runner to pick up this job...
+===== ast-grep lint/system.txt =====
+2026-10-26T14:13:38.5850000Z Evaluating ast-grep.if
+2026-10-26T14:13:38.5850000Z Evaluating: success()
+2026-10-26T14:13:38.5850000Z Result: true
+2026-10-26T14:13:38.5910000Z Requested labels: ubuntu-latest
+2026-10-26T14:13:38.5910000Z Job defined at: vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge
+2026-10-26T14:13:38.5910000Z Waiting for a runner to pick up this job...
+2026-10-26T14:13:38.6520000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:13:38.6520000Z Job is about to start running on the hosted runner: GitHub Actions 1051204466
+===== lint _ build/system.txt =====
+2026-10-26T14:13:38.6870000Z Evaluating lint.if
+2026-10-26T14:13:38.6870000Z Evaluating: success()
+2026-10-26T14:13:38.6870000Z Result: true
+2026-10-26T14:13:38.6870000Z Evaluating lint.build.if
+2026-10-26T14:13:38.6870000Z Evaluating: success()
+2026-10-26T14:13:38.6870000Z Result: true
+2026-10-26T14:13:38.9570000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:13:38.9040000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:13:38.9040000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:13:38.9040000Z Reusable workflow chain:
+2026-10-26T14:13:38.9040000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.9040000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.9040000Z Waiting for a runner to pick up this job...
+2026-10-26T14:13:38.9570000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204473
+===== rust check _ build/system.txt =====
+2026-10-26T14:13:38.6450000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:13:38.6450000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:13:38.6450000Z Reusable workflow chain:
+2026-10-26T14:13:38.6450000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.6450000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.6450000Z Waiting for a runner to pick up this job...
+2026-10-26T14:13:38.6260000Z Evaluating rust-check.if
+2026-10-26T14:13:38.6260000Z Evaluating: (success() && ((needs.changes.outputs.docs-only == 'false')))
+2026-10-26T14:13:38.6260000Z Expanded: (true && ('false' == 'false'))
+2026-10-26T14:13:38.6260000Z Result: true
+2026-10-26T14:13:38.6260000Z Evaluating rust-check.build.if
+2026-10-26T14:13:38.6260000Z Evaluating: success()
+2026-10-26T14:13:38.6260000Z Result: true
+2026-10-26T14:13:38.8990000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204470
+2026-10-26T14:13:38.8980000Z Job is waiting for a hosted runner to come online.
+===== test dev (2_10) _ build/system.txt =====
+2026-10-26T14:16:19.0470000Z Evaluating test-dev.if
+2026-10-26T14:16:19.0470000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false') && (needs.changes.outputs.turbopack-only == 'false'))))
+2026-10-26T14:16:19.0470000Z Expanded: (true && (('false' == 'false') && ('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:19.0470000Z Result: true
+2026-10-26T14:16:19.0470000Z Evaluating test-dev._2_10.build.if
+2026-10-26T14:16:19.0470000Z Evaluating: success()
+2026-10-26T14:16:19.0470000Z Result: true
+2026-10-26T14:16:19.2530000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.2530000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.2530000Z Reusable workflow chain:
+2026-10-26T14:16:19.2530000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2530000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2530000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.3370000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204594
+2026-10-26T14:16:19.3380000Z Job is waiting for a hosted runner to come online.
+===== test next-swc wasi _ build/system.txt =====
+2026-10-26T14:13:38.6860000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:13:38.6860000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:13:38.6860000Z Reusable workflow chain:
+2026-10-26T14:13:38.6860000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.6860000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:13:38.6860000Z Waiting for a runner to pick up this job...
+2026-10-26T14:13:38.6840000Z Evaluating test-next-napi-bindings-wasi.if
+2026-10-26T14:13:38.6840000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:13:38.6840000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:13:38.6840000Z Result: true
+2026-10-26T14:13:38.6840000Z Evaluating test-next-napi-bindings-wasi.build.if
+2026-10-26T14:13:38.6840000Z Evaluating: success()
+2026-10-26T14:13:38.6840000Z Result: true
+2026-10-26T14:13:38.9560000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204472
+2026-10-26T14:13:38.9560000Z Job is waiting for a hosted runner to come online.
+===== test prod (1_10) _ build/system.txt =====
+2026-10-26T14:16:19.0410000Z Evaluating test-prod.if
+2026-10-26T14:16:19.0410000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false') && (needs.changes.outputs.turbopack-only == 'false'))))
+2026-10-26T14:16:19.0410000Z Expanded: (true && (('false' == 'false') && ('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:19.0410000Z Result: true
+2026-10-26T14:16:19.0410000Z Evaluating test-prod._1_10.build.if
+2026-10-26T14:16:19.0410000Z Evaluating: success()
+2026-10-26T14:16:19.0410000Z Result: true
+2026-10-26T14:16:19.2160000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.2160000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.2160000Z Reusable workflow chain:
+2026-10-26T14:16:19.2160000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2160000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2160000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.3360000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:16:19.3370000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204592
+===== test prod (3_10) _ build/system.txt =====
+2026-10-26T14:16:18.8730000Z Evaluating test-prod.if
+2026-10-26T14:16:18.8730000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false') && (needs.changes.outputs.turbopack-only == 'false'))))
+2026-10-26T14:16:18.8730000Z Expanded: (true && (('false' == 'false') && ('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:18.8730000Z Result: true
+2026-10-26T14:16:18.8730000Z Evaluating test-prod._3_10.build.if
+2026-10-26T14:16:18.8730000Z Evaluating: success()
+2026-10-26T14:16:18.8730000Z Result: true
+2026-10-26T14:16:18.9190000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:18.9190000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:18.9190000Z Reusable workflow chain:
+2026-10-26T14:16:18.9190000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:18.9190000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:18.9190000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.0890000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204560
+2026-10-26T14:16:19.0890000Z Job is waiting for a hosted runner to come online.
+===== test prod (4_10) _ build/system.txt =====
+2026-10-26T14:16:19.0130000Z Evaluating test-prod.if
+2026-10-26T14:16:19.0130000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false') && (needs.changes.outputs.turbopack-only == 'false'))))
+2026-10-26T14:16:19.0130000Z Expanded: (true && (('false' == 'false') && ('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:19.0130000Z Result: true
+2026-10-26T14:16:19.0130000Z Evaluating test-prod._4_10.build.if
+2026-10-26T14:16:19.0130000Z Evaluating: success()
+2026-10-26T14:16:19.0130000Z Result: true
+2026-10-26T14:16:19.2670000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204586
+2026-10-26T14:16:19.2660000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:16:19.2140000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.2140000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.2140000Z Reusable workflow chain:
+2026-10-26T14:16:19.2140000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2140000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.2140000Z Waiting for a runner to pick up this job...
+===== test prod (6_10) _ build/system.txt =====
+2026-10-26T14:16:18.9590000Z Evaluating test-prod.if
+2026-10-26T14:16:18.9590000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false') && (needs.changes.outputs.turbopack-only == 'false'))))
+2026-10-26T14:16:18.9590000Z Expanded: (true && (('false' == 'false') && ('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:18.9590000Z Result: true
+2026-10-26T14:16:18.9590000Z Evaluating test-prod._6_10.build.if
+2026-10-26T14:16:18.9590000Z Evaluating: success()
+2026-10-26T14:16:18.9590000Z Result: true
+2026-10-26T14:16:19.1300000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.1300000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.1300000Z Reusable workflow chain:
+2026-10-26T14:16:19.1300000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.1300000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.1300000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.2560000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:16:19.2560000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204574
+===== test turbopack production (1_7) _ build/system.txt =====
+2026-10-26T14:16:18.9490000Z Evaluating test-turbopack-production.if
+2026-10-26T14:16:18.9490000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:16:18.9490000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:18.9490000Z Result: true
+2026-10-26T14:16:18.9490000Z Evaluating test-turbopack-production._1_7.build.if
+2026-10-26T14:16:18.9490000Z Evaluating: success()
+2026-10-26T14:16:18.9490000Z Result: true
+2026-10-26T14:16:19.0410000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.0410000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.0410000Z Reusable workflow chain:
+2026-10-26T14:16:19.0410000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.0410000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.0410000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.1310000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:16:19.1320000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204569
+===== test turbopack production (3_7) _ build/system.txt =====
+2026-10-26T14:16:18.9510000Z Evaluating test-turbopack-production.if
+2026-10-26T14:16:18.9510000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:16:18.9510000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:18.9510000Z Result: true
+2026-10-26T14:16:18.9510000Z Evaluating test-turbopack-production._3_7.build.if
+2026-10-26T14:16:18.9510000Z Evaluating: success()
+2026-10-26T14:16:18.9510000Z Result: true
+2026-10-26T14:16:19.0860000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:19.0860000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:19.0860000Z Reusable workflow chain:
+2026-10-26T14:16:19.0860000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.0860000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:19.0860000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:19.1330000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204571
+2026-10-26T14:16:19.1320000Z Job is waiting for a hosted runner to come online.
+===== test turbopack production (5_7) _ build/system.txt =====
+2026-10-26T14:16:18.9550000Z Requested labels: ubuntu-latest-16-core-arm-oss
+2026-10-26T14:16:18.9550000Z Job defined at: vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge
+2026-10-26T14:16:18.9550000Z Reusable workflow chain:
+2026-10-26T14:16:18.9550000Z vercel/next.js/.github/workflows/build_and_test.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:18.9550000Z -> vercel/next.js/.github/workflows/build_reusable.yml@refs/pull/100130/merge (c76f402691ca2dc51d5df2b5eb0e0bc2717e5722)
+2026-10-26T14:16:18.9550000Z Waiting for a runner to pick up this job...
+2026-10-26T14:16:18.8750000Z Evaluating test-turbopack-production.if
+2026-10-26T14:16:18.8750000Z Evaluating: (success() && (((needs.optimize-ci.outputs.skip == 'false') && (needs.changes.outputs.docs-only == 'false'))))
+2026-10-26T14:16:18.8750000Z Expanded: (true && (('false' == 'false') && ('false' == 'false')))
+2026-10-26T14:16:18.8750000Z Result: true
+2026-10-26T14:16:18.8750000Z Evaluating test-turbopack-production._5_7.build.if
+2026-10-26T14:16:18.8750000Z Evaluating: success()
+2026-10-26T14:16:18.8750000Z Result: true
+2026-10-26T14:16:19.0940000Z Job is about to start running on the hosted runner: ubuntu-latest-16-core-arm-oss-1051204565
+2026-10-26T14:16:19.0940000Z Job is waiting for a hosted runner to come online.

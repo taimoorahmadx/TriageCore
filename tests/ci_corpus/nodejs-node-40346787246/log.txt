@@ -1,0 +1,359 @@
+===== Notify on Push on `main` with invalid message/11_Complete job.txt =====
+﻿2026-10-26T15:11:19.5721793Z Cleaning up orphan processes
+
+===== Notify on Push on `main` with invalid message/1_Set up job.txt =====
+﻿2026-10-26T15:11:03.0985431Z Current runner version: '2.338.0'
+2026-10-26T15:11:03.1019327Z ##[group]Runner Image Provisioner
+2026-10-26T15:11:03.1021034Z Hosted Compute Agent
+2026-10-26T15:11:03.1021677Z Version: 20261021.618
+2026-10-26T15:11:03.1022454Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T15:11:03.1023169Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T15:11:03.1023930Z Worker ID: {fcec21eb-3ea3-4896-ac80-b3a3c0f93a4d}
+2026-10-26T15:11:03.1024881Z Region: northcentralus
+2026-10-26T15:11:03.1025466Z Cloud: Azure
+2026-10-26T15:11:03.1026093Z ##[endgroup]
+2026-10-26T15:11:03.1028644Z ##[group]Operating System
+2026-10-26T15:11:03.1029375Z Ubuntu
+2026-10-26T15:11:03.1030122Z 24.04.5
+2026-10-26T15:11:03.1030634Z LTS
+2026-10-26T15:11:03.1031216Z ##[endgroup]
+2026-10-26T15:11:03.1031795Z ##[group]Runner Image
+2026-10-26T15:11:03.1032421Z Image: ubuntu-24.04-arm
+2026-10-26T15:11:03.1033081Z Version: 20261012.149.1
+2026-10-26T15:11:03.1034296Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20261012.149/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+2026-10-26T15:11:03.1036214Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20261012.149
+2026-10-26T15:11:03.1037318Z ##[endgroup]
+2026-10-26T15:11:03.1038835Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T15:11:03.1042274Z Contents: read
+2026-10-26T15:11:03.1042941Z Metadata: read
+2026-10-26T15:11:03.1043533Z ##[endgroup]
+2026-10-26T15:11:03.1046613Z Secret source: Actions
+2026-10-26T15:11:03.1047926Z Cache mode: write
+2026-10-26T15:11:03.1048909Z Prepare workflow directory
+2026-10-26T15:11:03.1529812Z Prepare all required actions
+2026-10-26T15:11:03.1582404Z Getting action download info
+2026-10-26T15:11:03.4115695Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-26T15:11:03.7030608Z Download action repository 'rtCamp/action-slack-notify@33ca3be66c6f378fe1610fd1d5258632dbed5e58' (SHA:33ca3be66c6f378fe1610fd1d5258632dbed5e58)
+2026-10-26T15:11:03.9614204Z Getting action download info
+2026-10-26T15:11:04.0698587Z Download action repository 'LoveToKnow/slackify-markdown-action@698a1d4d0ff1794152a93c03ee8ca5e03a310d4e' (SHA:698a1d4d0ff1794152a93c03ee8ca5e03a310d4e)
+2026-10-26T15:11:04.4502252Z Complete job name: Notify on Push on `main` with invalid message
+
+===== Notify on Push on `main` with invalid message/2_Pull ghcr.io_rtcamp_action-slack-notify@sha25617fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a.txt =====
+﻿2026-10-26T15:11:04.5082307Z ##[group]Pull down action image 'ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a'
+2026-10-26T15:11:04.5142735Z ##[command]/usr/bin/docker pull ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:04.8890281Z ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a: Pulling from rtcamp/action-slack-notify
+2026-10-26T15:11:05.0169633Z d17f077ada11: Pulling fs layer
+2026-10-26T15:11:05.0170849Z 12678edc1440: Pulling fs layer
+2026-10-26T15:11:05.0171608Z fa8c69db2a88: Pulling fs layer
+2026-10-26T15:11:05.0172559Z ec53a49b3cbb: Pulling fs layer
+2026-10-26T15:11:05.0173351Z 5542a34117ea: Pulling fs layer
+2026-10-26T15:11:05.0174128Z e0fe85840eba: Pulling fs layer
+2026-10-26T15:11:05.0174919Z 8d2a849623b6: Pulling fs layer
+2026-10-26T15:11:05.0175644Z 5542a34117ea: Waiting
+2026-10-26T15:11:05.0176338Z e0fe85840eba: Waiting
+2026-10-26T15:11:05.0177150Z 8d2a849623b6: Waiting
+2026-10-26T15:11:05.0178253Z ec53a49b3cbb: Waiting
+2026-10-26T15:11:05.1506409Z 12678edc1440: Verifying Checksum
+2026-10-26T15:11:05.1507660Z 12678edc1440: Download complete
+2026-10-26T15:11:05.1606630Z d17f077ada11: Verifying Checksum
+2026-10-26T15:11:05.1609068Z d17f077ada11: Download complete
+2026-10-26T15:11:05.1905615Z fa8c69db2a88: Verifying Checksum
+2026-10-26T15:11:05.1907982Z fa8c69db2a88: Download complete
+2026-10-26T15:11:05.2456725Z d17f077ada11: Pull complete
+2026-10-26T15:11:05.2757636Z 5542a34117ea: Verifying Checksum
+2026-10-26T15:11:05.2759324Z 5542a34117ea: Download complete
+2026-10-26T15:11:05.3102228Z e0fe85840eba: Download complete
+2026-10-26T15:11:05.3764658Z ec53a49b3cbb: Verifying Checksum
+2026-10-26T15:11:05.3801215Z ec53a49b3cbb: Download complete
+2026-10-26T15:11:05.3802231Z 8d2a849623b6: Verifying Checksum
+2026-10-26T15:11:05.3803180Z 8d2a849623b6: Download complete
+2026-10-26T15:11:07.2936309Z 12678edc1440: Pull complete
+2026-10-26T15:11:08.5869087Z fa8c69db2a88: Pull complete
+2026-10-26T15:11:09.1944735Z ec53a49b3cbb: Pull complete
+2026-10-26T15:11:09.2078041Z 5542a34117ea: Pull complete
+2026-10-26T15:11:09.2165036Z e0fe85840eba: Pull complete
+2026-10-26T15:11:09.2237825Z 8d2a849623b6: Pull complete
+2026-10-26T15:11:09.2274195Z Digest: sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:09.2289535Z Status: Downloaded newer image for ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:09.2300562Z ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:09.2319133Z ##[endgroup]
+
+===== Notify on Push on `main` with invalid message/3_Install Node.js.txt =====
+﻿2026-10-26T15:11:09.2732509Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-10-26T15:11:09.2733924Z with:
+2026-10-26T15:11:09.2734266Z   node-version: lts/*
+2026-10-26T15:11:09.2734773Z   check-latest: false
+2026-10-26T15:11:09.2737952Z   token: ***
+2026-10-26T15:11:09.2738431Z   package-manager-cache: true
+2026-10-26T15:11:09.2739464Z env:
+2026-10-26T15:11:09.2739811Z   NODE_VERSION: lts/*
+2026-10-26T15:11:09.2740225Z ##[endgroup]
+2026-10-26T15:11:09.3885000Z Attempt to resolve LTS alias from manifest...
+2026-10-26T15:11:10.1437128Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/arm64
+2026-10-26T15:11:10.1440681Z ##[group]Environment details
+2026-10-26T15:11:10.4008775Z node: v24.21.0
+2026-10-26T15:11:10.4009375Z npm: 11.19.0
+2026-10-26T15:11:10.4009633Z yarn: 1.22.22
+2026-10-26T15:11:10.4010751Z ##[endgroup]
+
+===== Notify on Push on `main` with invalid message/4_Validate commits.txt =====
+﻿2026-10-26T15:11:10.4300432Z ##[group]Run echo "$COMMITS" | npx -q core-validate-commit -
+2026-10-26T15:11:10.4301306Z [36;1mecho "$COMMITS" | npx -q core-validate-commit -[0m
+2026-10-26T15:11:10.4405846Z shell: /usr/bin/bash -e {0}
+2026-10-26T15:11:10.4406283Z env:
+2026-10-26T15:11:10.4406524Z   NODE_VERSION: lts/*
+2026-10-26T15:11:10.4423380Z   COMMITS: [
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "0991bdb623ea4f6ab7c1803a8430ab3abbe364e8",
+    "message": "Revert \"tools: bump the doc group in /tools/doc with 4 updates\"\n\nThis reverts commit 1bc3cdae3750420b37109e1fc0156392dc1e9916.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:27+01:00",
+    "tree_id": "21eac452c9b0d688be6733be5c60a91bf7a76703",
+    "url": "https://github.com/nodejs/node/commit/0991bdb623ea4f6ab7c1803a8430ab3abbe364e8"
+  },
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "ec8e19d89340f02ac9f2053842c977cb36d9eab9",
+    "message": "Revert \"tools: bump the doc group in /tools/doc with 2 updates\"\n\nThis reverts commit 2192f7f9163643ef72f4761352b48662c93b198f.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:28+01:00",
+    "tree_id": "936447f5430c1aaf52dbcaa1c7d73d765a7fac27",
+    "url": "https://github.com/nodejs/node/commit/ec8e19d89340f02ac9f2053842c977cb36d9eab9"
+  },
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "2f8cf853db24509bfff868beacecf66fc1038069",
+    "message": "Revert \"tools: bump the doc group in /tools/doc with 4 updates\"\n\nThis reverts commit 28194a3037862fbae92ed3c5c9543d6005129fbd.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:29+01:00",
+    "tree_id": "bd5b8b7b4514bd1c7b261eb32f99fe37c31b356b",
+    "url": "https://github.com/nodejs/node/commit/2f8cf853db24509bfff868beacecf66fc1038069"
+  },
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "b0cf162cec7b30b39ba46c1a0673bc237c971bae",
+    "message": "Revert \"tools: bump the doc group in /tools/doc with 4 updates\"\n\nThis reverts commit df775ec2ea6861053995f923fcf7814c06451e72.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:29+01:00",
+    "tree_id": "d2c4adfa354e2b8dfef8d8684e4860aea3ea8a04",
+    "url": "https://github.com/nodejs/node/commit/b0cf162cec7b30b39ba46c1a0673bc237c971bae"
+  },
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "573807b316fe6c7d09fec24af1e49c2f32ed6cc3",
+    "message": "Revert \"build: toggle doc-kit verbosity based on V\"\n\nThis reverts commit 37d5c80f97cd8104b5dafc35f6e1646cc8d39673.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:30+01:00",
+    "tree_id": "c57f5c75ee3aed6b1a8a874b5775bb1b54d0cc94",
+    "url": "https://github.com/nodejs/node/commit/573807b316fe6c7d09fec24af1e49c2f32ed6cc3"
+  },
+  {
+    "author": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "committer": {
+      "email": "duhamelantoine1995@gmail.com",
+      "name": "Antoine du Hamel",
+      "username": "aduh95"
+    },
+    "distinct": true,
+    "id": "1ae40765d68cd4bac5a94d63a695239b84be5426",
+    "message": "Revert \"build, doc: move to redesign\"\n\nThis reverts commit 18a9ba509ad3bb31209264857f8a9b67b760c56b.\n\nPR-URL: https://github.com/nodejs/node/pull/67015\nRefs: https://github.com/nodejs/node/issues/66571\nReviewed-By: Claudio Wunder <cwunder@gnome.org>\nReviewed-By: Filip Skokan <panva.ip@gmail.com>\nReviewed-By: Aviv Keller <me@aviv.sh>",
+    "timestamp": "2026-10-26T16:08:31+01:00",
+    "tree_id": "e2294fdcbfa8f468b7c4d20e80861cfbe93b32ea",
+    "url": "https://github.com/nodejs/node/commit/1ae40765d68cd4bac5a94d63a695239b84be5426"
+  }
+]
+2026-10-26T15:11:10.4441166Z ##[endgroup]
+2026-10-26T15:11:12.3401358Z npm warn exec The following package was not found and will be installed: core-validate-commit@6.0.0
+2026-10-26T15:11:14.1926150Z npm warn deprecated tap@16.3.10: Versions of tap before v18 are no longer maintained. Please upgrade.
+2026-10-26T15:11:15.3956463Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-10-26T15:11:15.7788055Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-26T15:11:15.8798789Z npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+2026-10-26T15:11:16.2806295Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-10-26T15:11:16.3137478Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-10-26T15:11:16.4416131Z npm warn deprecated libtap@1.4.1: This library is no longer used by node-tap, and is unmaintained.
+2026-10-26T15:11:17.5195270Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-10-26T15:11:18.1513225Z   ✖  0991bdb623ea4f6ab7c1803a8430ab3abbe364e8
+2026-10-26T15:11:18.1514563Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.1515326Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.1516063Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.1516786Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.1517644Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.1518386Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.1519035Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.1519753Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.1520370Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.1521481Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.1522228Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.1522855Z      ⚠  0:59     Title should be <= 59 columns.            title-length
+2026-10-26T15:11:18.1600071Z   ✖  ec8e19d89340f02ac9f2053842c977cb36d9eab9
+2026-10-26T15:11:18.1601003Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.1602184Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.1602973Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.1603656Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.1604372Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.1605130Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.1605912Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.1606614Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.1607223Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.1608192Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.1608852Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.1609603Z      ⚠  0:59     Title should be <= 59 columns.            title-length
+2026-10-26T15:11:18.1754289Z   ✖  2f8cf853db24509bfff868beacecf66fc1038069
+2026-10-26T15:11:18.1755179Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.1755890Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.1756631Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.1757663Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.1758921Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.1759714Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.1760540Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.1761191Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.1761853Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.1762444Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.1763060Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.1763680Z      ⚠  0:59     Title should be <= 59 columns.            title-length
+2026-10-26T15:11:18.1911611Z   ✖  b0cf162cec7b30b39ba46c1a0673bc237c971bae
+2026-10-26T15:11:18.1912405Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.1913182Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.1913941Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.1914582Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.1915235Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.1915800Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.1916355Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.1916970Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.1917928Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.1918632Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.1919192Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.1920350Z      ⚠  0:59     Title should be <= 59 columns.            title-length
+2026-10-26T15:11:18.2064041Z   ✖  573807b316fe6c7d09fec24af1e49c2f32ed6cc3
+2026-10-26T15:11:18.2064841Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.2065730Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.2066439Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.2067071Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.2067968Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.2068554Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.2069200Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.2069751Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.2070444Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.2071094Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.2071611Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.2072239Z      ✔  0:0      Title is <= 59 columns.                   title-length
+2026-10-26T15:11:18.2223188Z   ✖  1ae40765d68cd4bac5a94d63a695239b84be5426
+2026-10-26T15:11:18.2224137Z      ✔  0:0      no Assisted-by metadata                   assisted-by-is-trailer
+2026-10-26T15:11:18.2224920Z      ✔  0:0      no Co-authored-by metadata                co-authored-by-is-trailer
+2026-10-26T15:11:18.2225739Z      ✔  0:0      skipping fixes-url                        fixes-url
+2026-10-26T15:11:18.2226398Z      ✔  0:0      blank line after title                    line-after-title
+2026-10-26T15:11:18.2227038Z      ✔  0:0      line-lengths are valid                    line-length
+2026-10-26T15:11:18.2227924Z      ✔  0:0      metadata is at end of message             metadata-end
+2026-10-26T15:11:18.2228999Z      ✔  3:8      PR-URL is valid.                          pr-url
+2026-10-26T15:11:18.2229637Z      ✔  0:0      reviewers are valid                       reviewers
+2026-10-26T15:11:18.2230252Z      ✖  0:0      Commit must have a "Signed-off-by" trailer signed-off-by
+2026-10-26T15:11:18.2230896Z      ✔  0:0      valid subsystems                          subsystem
+2026-10-26T15:11:18.2231504Z      ✔  0:0      Title is formatted correctly.             title-format
+2026-10-26T15:11:18.2232116Z      ✔  0:0      Title is <= 59 columns.                   title-length
+2026-10-26T15:11:18.2618144Z ##[error]Process completed with exit code 6.
+
+===== Notify on Push on `main` with invalid message/5_Slack Notification.txt =====
+﻿2026-10-26T15:11:18.2789201Z ##[group]Run rtCamp/action-slack-notify@33ca3be66c6f378fe1610fd1d5258632dbed5e58
+2026-10-26T15:11:18.2789755Z env:
+2026-10-26T15:11:18.2790100Z   NODE_VERSION: lts/*
+2026-10-26T15:11:18.2790340Z   SLACK_COLOR: #DE512A
+2026-10-26T15:11:18.2790907Z   SLACK_ICON: https://github.com/nodejs.png?size=48
+2026-10-26T15:11:18.2791496Z   SLACK_TITLE: Invalid commit was pushed to refs/heads/main
+2026-10-26T15:11:18.2793111Z   SLACK_MESSAGE: <!here> A commit with an invalid message was pushed to <https://github.com/nodejs/node/tree/main|nodejs/node@main> by <https://github.com/aduh95|aduh95>.
+
+Before: <https://github.com/nodejs/node/commit/ba3c34a93ac3e21eb15560d8ced6be13106ea373|ba3c34a93ac3e21eb15560d8ced6be13106ea373>
+After: <https://github.com/nodejs/node/commit/1ae40765d68cd4bac5a94d63a695239b84be5426|1ae40765d68cd4bac5a94d63a695239b84be5426>
+
+2026-10-26T15:11:18.2794753Z   SLACK_USERNAME: nodejs-bot
+2026-10-26T15:11:18.2795402Z   SLACK_WEBHOOK: ***
+2026-10-26T15:11:18.2795688Z ##[endgroup]
+2026-10-26T15:11:18.2863689Z ##[start-action display=Slack-Markdown Message Conversion;id=__rtCamp_action-slack-notify.slackify_message]
+2026-10-26T15:11:18.2885815Z ##[end-action id=__rtCamp_action-slack-notify.slackify_message;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-26T15:11:18.2889264Z ##[start-action display=Slack-Markdown Success Message Conversion;id=__rtCamp_action-slack-notify.slackify_success_message]
+2026-10-26T15:11:18.2896035Z ##[end-action id=__rtCamp_action-slack-notify.slackify_success_message;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-26T15:11:18.2899435Z ##[start-action display=Slack-Markdown Failure Message Conversion;id=__rtCamp_action-slack-notify.slackify_failure_message]
+2026-10-26T15:11:18.2905233Z ##[end-action id=__rtCamp_action-slack-notify.slackify_failure_message;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-26T15:11:18.2908513Z ##[start-action display=Slack-Markdown Cancel Message Conversion;id=__rtCamp_action-slack-notify.slackify_cancel_message]
+2026-10-26T15:11:18.2914145Z ##[end-action id=__rtCamp_action-slack-notify.slackify_cancel_message;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-26T15:11:18.2924428Z ##[start-action display=Slack Notification (Formatted);id=__rtCamp_action-slack-notify.__ghcr_io_rtcamp_action-slack-notify_sha256_17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408]
+2026-10-26T15:11:18.2930574Z ##[end-action id=__rtCamp_action-slack-notify.__ghcr_io_rtcamp_action-slack-notify_sha256_17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-10-26T15:11:18.2935441Z ##[start-action display=Slack Notification (Unformatted);id=__rtCamp_action-slack-notify.__ghcr_io_rtcamp_action-slack-notify_sha256_17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a4_2]
+2026-10-26T15:11:18.2980100Z ##[group]Run docker://ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:18.2980732Z env:
+2026-10-26T15:11:18.2980945Z   NODE_VERSION: lts/*
+2026-10-26T15:11:18.2981324Z   SLACK_COLOR: #DE512A
+2026-10-26T15:11:18.2981605Z   SLACK_ICON: https://github.com/nodejs.png?size=48
+2026-10-26T15:11:18.2982019Z   SLACK_TITLE: Invalid commit was pushed to refs/heads/main
+2026-10-26T15:11:18.2983635Z   SLACK_MESSAGE: <!here> A commit with an invalid message was pushed to <https://github.com/nodejs/node/tree/main|nodejs/node@main> by <https://github.com/aduh95|aduh95>.
+
+Before: <https://github.com/nodejs/node/commit/ba3c34a93ac3e21eb15560d8ced6be13106ea373|ba3c34a93ac3e21eb15560d8ced6be13106ea373>
+After: <https://github.com/nodejs/node/commit/1ae40765d68cd4bac5a94d63a695239b84be5426|1ae40765d68cd4bac5a94d63a695239b84be5426>
+
+2026-10-26T15:11:18.2985881Z   SLACK_USERNAME: nodejs-bot
+2026-10-26T15:11:18.2986487Z   SLACK_WEBHOOK: ***
+2026-10-26T15:11:18.2986859Z   GITHUB_RUN: https://github.com/nodejs/node/actions/runs/40346787246
+2026-10-26T15:11:18.2987293Z ##[endgroup]
+2026-10-26T15:11:18.3090099Z ##[command]/usr/bin/docker run --name ghcriortcampactionslacknotifysha25617fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a_7e9301 --label 517141 --workdir /github/workspace --rm -e "NODE_VERSION" -e "SLACK_COLOR" -e "SLACK_ICON" -e "SLACK_TITLE" -e "SLACK_MESSAGE" -e "SLACK_USERNAME" -e "SLACK_WEBHOOK" -e "GITHUB_RUN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "GITHUB_ARTIFACTS" -e "GITHUB_ARTIFACTS_LIST" -e "GITHUB_ACTION_PATH" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_CACHE_MODE" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/node/node":"/github/workspace" ghcr.io/rtcamp/action-slack-notify@sha256:17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a408eeee419a
+2026-10-26T15:11:19.5601235Z Successfully sent the message!
+2026-10-26T15:11:19.5623607Z ##[end-action id=__rtCamp_action-slack-notify.__ghcr_io_rtcamp_action-slack-notify_sha256_17fac87b8ea4ffec1f90b8557f88e8fd69ec8568f690f4ea24d5a4_2;outcome=success;conclusion=success;duration_ms=1268]
+
+===== Notify on Push on `main` with invalid message/system.txt =====
+2026-10-26T15:10:59.5510000Z Requested labels: ubuntu-24.04-arm
+2026-10-26T15:10:59.5510000Z Job defined at: nodejs/node/.github/workflows/notify-on-push.yml@refs/heads/main
+2026-10-26T15:10:59.5510000Z Waiting for a runner to pick up this job...
+2026-10-26T15:10:59.5290000Z Evaluating validateCommitMessage.if
+2026-10-26T15:10:59.5290000Z Evaluating: (success() && (github.event.commits[0]))
+2026-10-26T15:10:59.5290000Z Expanded: (true && Object)
+2026-10-26T15:10:59.5290000Z Result: Object
+2026-10-26T15:10:59.8960000Z Job is waiting for a hosted runner to come online.
+2026-10-26T15:10:59.8960000Z Job is about to start running on the hosted runner: GitHub Actions 1001264941

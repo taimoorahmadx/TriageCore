@@ -1,0 +1,43 @@
+repo: pallets/click
+run_id: 35890878719
+head_sha: 9ccb32e9a18fd810a97bcdb5bb9686ed7fce4561
+run_attempts:
+- attempt: 1
+  head_sha: 9ccb32e9a18fd810a97bcdb5bb9686ed7fce4561
+  conclusion: failure
+commits:
+- sha: 9ccb32e9a18fd810a97bcdb5bb9686ed7fce4561
+  author: kdeldycke
+  files: []
+- sha: 06b2a678741131fd577ce170e23e5ca0aeba0309
+  author: Rowlando13
+  files: []
+- sha: b90faad1788bc030bb3320938f07c9189f42d7d0
+  author: kdeldycke
+  files: []
+- sha: a59f7c624fb7272e37d97921047dab8bf3ff0675
+  author: kdeldycke
+  files: []
+- sha: 3cbaa76b6014be7427d1ab06b4af40f01e7c278e
+  author: Rowlando13
+  files: []
+- sha: bb695aaecdef95832d167fc1d508921745aa824e
+  author: Rowlando13
+  files: []
+- sha: 70689853e39c30e36eb0d83d586cc914a74db9d3
+  author: Rowlando13
+  files: []
+- sha: d036881798e34289a49b18a5c550c7cf687e5a7a
+  author: kdeldycke
+  files: []
+- sha: e2bddbc801dabc4efc3c3c1e32b53b3f938d3efc
+  author: kdeldycke
+  files: []
+- sha: f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e
+  author: kdeldycke
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

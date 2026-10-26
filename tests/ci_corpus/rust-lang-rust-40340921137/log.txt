@@ -1,0 +1,99 @@
+===== PR - test-aarch64-gnu-llvm-22-1/system.txt =====
+2026-10-26T14:36:02.6850000Z Requested labels: ubuntu-24.04-arm
+2026-10-26T14:36:02.6850000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.6850000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:03.1060000Z Job is about to start running on the hosted runner: GitHub Actions 1002925506
+2026-10-26T14:36:03.1050000Z Job is waiting for a hosted runner to come online.
+===== PR - test-aarch64-gnu-llvm-22-2/system.txt =====
+2026-10-26T14:36:02.6430000Z Evaluating job.if
+2026-10-26T14:36:02.6430000Z Evaluating: success()
+2026-10-26T14:36:02.6430000Z Result: true
+2026-10-26T14:36:02.8960000Z Requested labels: ubuntu-24.04-arm
+2026-10-26T14:36:02.8960000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8960000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1060000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:36:03.1060000Z Job is about to start running on the hosted runner: GitHub Actions 1002925507
+===== PR - test-pr-check-1/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8970000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8970000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8970000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1500000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:36:03.1500000Z Job is about to start running on the hosted runner: GitHub Actions 1002925511
+===== PR - test-pr-check-2/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8980000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8980000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8980000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1510000Z Job is about to start running on the hosted runner: GitHub Actions 1002925515
+2026-10-26T14:36:03.1500000Z Job is waiting for a hosted runner to come online.
+===== PR - test-tidy/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8640000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8640000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8640000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1490000Z Job is about to start running on the hosted runner: GitHub Actions 1002925509
+2026-10-26T14:36:03.1490000Z Job is waiting for a hosted runner to come online.
+===== PR - test-x86_64-gnu-gcc-core-tests/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8960000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8960000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8960000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1500000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:36:03.1500000Z Job is about to start running on the hosted runner: GitHub Actions 1002925512
+===== PR - test-x86_64-gnu-gcc/system.txt =====
+2026-10-26T14:36:02.6770000Z Evaluating job.if
+2026-10-26T14:36:02.6770000Z Evaluating: success()
+2026-10-26T14:36:02.6770000Z Result: true
+2026-10-26T14:36:02.8990000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8990000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8990000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1520000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:36:03.1510000Z Job is about to start running on the hosted runner: GitHub Actions 1002925516
+===== PR - test-x86_64-gnu-llvm-22/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8960000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8960000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8960000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1500000Z Job is waiting for a hosted runner to come online.
+2026-10-26T14:36:03.1500000Z Job is about to start running on the hosted runner: GitHub Actions 1002925514
+===== PR - test-x86_64-gnu-miri/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.6850000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.6850000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.6850000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1500000Z Job is about to start running on the hosted runner: GitHub Actions 1002925510
+2026-10-26T14:36:03.1490000Z Job is waiting for a hosted runner to come online.
+===== PR - test-x86_64-gnu-next-trait-solver-polonius/system.txt =====
+2026-10-26T14:36:02.6420000Z Evaluating job.if
+2026-10-26T14:36:02.6420000Z Evaluating: success()
+2026-10-26T14:36:02.6420000Z Result: true
+2026-10-26T14:36:02.8960000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.8960000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.8960000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1500000Z Job is about to start running on the hosted runner: GitHub Actions 1002925513
+2026-10-26T14:36:03.1490000Z Job is waiting for a hosted runner to come online.
+===== PR - test-x86_64-gnu-tools/system.txt =====
+2026-10-26T14:36:02.5410000Z Evaluating job.if
+2026-10-26T14:36:02.5410000Z Evaluating: success()
+2026-10-26T14:36:02.5410000Z Result: true
+2026-10-26T14:36:02.6790000Z Requested labels: ubuntu-24.04
+2026-10-26T14:36:02.6790000Z Job defined at: rust-lang/rust/.github/workflows/ci.yml@refs/pull/163152/merge
+2026-10-26T14:36:02.6790000Z Waiting for a runner to pick up this job...
+2026-10-26T14:36:03.1490000Z Job is about to start running on the hosted runner: GitHub Actions 1002925508
+2026-10-26T14:36:03.1480000Z Job is waiting for a hosted runner to come online.

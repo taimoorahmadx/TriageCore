@@ -1,0 +1,84 @@
+repo: nodejs/node
+run_id: 40329076380
+head_sha: 75f32cb7ed53975625e5a8c57b6b0bced739e7d2
+run_attempts:
+- attempt: 1
+  head_sha: 75f32cb7ed53975625e5a8c57b6b0bced739e7d2
+  conclusion: failure
+commits:
+- sha: 75f32cb7ed53975625e5a8c57b6b0bced739e7d2
+  author: aduh95
+  files:
+  - .github/workflows/cross-build-perfetto-tools.yml
+- sha: 6a0d5ab5257f3ac565adb7b24358235296171f46
+  author: aduh95
+  files:
+  - test/common/trace_events.js
+- sha: 5f37b82f02d841dd06cb2bcd5c3b3b73e4917d5b
+  author: aduh95
+  files:
+  - Makefile
+  - configure.py
+  - shell.nix
+  - test/trace_events/README.md
+- sha: dd45cc2765c6bc631faf7f98eb23677f38041321
+  author: aduh95
+  files:
+  - Makefile
+- sha: c2f7d8a1606f23ef69f8e28a45cfcdbf2ecea0c9
+  author: aduh95
+  files:
+  - Makefile
+  - shell.nix
+- sha: d7dd35260be49514408cbd15a86a90f88712cb0d
+  author: aduh95
+  files:
+  - configure.py
+- sha: 887e002ce5394227254b5dac4782e927d7f7b27d
+  author: aduh95
+  files:
+  - .github/workflows/benchmark.yml
+  - .github/workflows/test-linux-perfetto.yml
+  - .github/workflows/test-shared.yml
+  - configure.py
+  - shell.nix
+  - tools/nix/sharedLibDeps.nix
+  - tools/nix/v8.nix
+- sha: f1ae0466bd909cb866341059fc789374f2a3e09f
+  author: aduh95
+  files:
+  - test/trace_events/test-trace-events-all.js
+  - test/trace_events/test-trace-events-api.js
+  - test/trace_events/test-trace-events-async-hooks-worker.js
+  - test/trace_events/test-trace-events-async-hooks.js
+  - test/trace_events/test-trace-events-bootstrap.js
+  - test/trace_events/test-trace-events-environment.js
+  - test/trace_events/test-trace-events-file-pattern.js
+  - test/trace_events/test-trace-events-fs-sync.js
+  - test/trace_events/test-trace-events-http.js
+  - test/trace_events/test-trace-events-net-abstract-socket.js
+  - test/trace_events/test-trace-events-net.js
+  - test/trace_events/test-trace-events-process-exit.js
+  - test/trace_events/test-trace-events-promises.js
+  - test/trace_events/test-trace-events-threadpool.js
+  - test/trace_events/test-trace-events-v8.js
+  - test/trace_events/test-trace-events-vm.js
+- sha: 4a562b6fe5713f4eeba1ab88cb3df6283bb2b402
+  author: aduh95
+  files:
+  - .github/workflows/cross-build-perfetto-tools.yml
+  - .github/workflows/tools.yml
+  - Makefile
+  - tools/dep_updaters/update-nixpkgs-pin.sh
+  - tools/nix/cross-compile-perfetto.nix
+  - tools/perfetto/get_trace_processor.py
+  - tools/perfetto/trace_processor_shell.json
+- sha: 7f8f35972d30aefbfe4b07a10cba3bb8c6c78c75
+  author: aduh95
+  files:
+  - tools/nix/openssl-matrix.nix
+  - tools/nix/pkgs.nix
+label: null
+label_source: null
+risk_tier: medium
+suggested_label: infra

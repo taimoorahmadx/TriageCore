@@ -1,0 +1,634 @@
+===== test-internet/12_Post Set up sccache.txt =====
+﻿2026-10-26T15:14:11.0884283Z Post job cleanup.
+2026-10-26T15:14:11.1605052Z ##[group]Get human-readable stats
+2026-10-26T15:14:11.1621716Z [command]/opt/hostedtoolcache/sccache/0.17.0/arm64/sccache --show-stats
+2026-10-26T15:14:11.1792933Z Compile requests                      0
+2026-10-26T15:14:11.1793244Z Compile requests executed             0
+2026-10-26T15:14:11.1793493Z Cache hits                            0
+2026-10-26T15:14:11.1793734Z Cache misses                          0
+2026-10-26T15:14:11.1793977Z Cache hits rate                       -
+2026-10-26T15:14:11.1794226Z Cache timeouts                        0
+2026-10-26T15:14:11.1794465Z Cache read errors                     0
+2026-10-26T15:14:11.1794710Z Forced recaches                       0
+2026-10-26T15:14:11.1794995Z Cache write errors                    0
+2026-10-26T15:14:11.1795233Z Cache errors                          0
+2026-10-26T15:14:11.1795477Z Compilations                          0
+2026-10-26T15:14:11.1795720Z Compilation failures                  0
+2026-10-26T15:14:11.1796045Z Non-cacheable compilations            0
+2026-10-26T15:14:11.1796300Z Non-cacheable calls                   0
+2026-10-26T15:14:11.1796552Z Non-compilation calls                 0
+2026-10-26T15:14:11.1796806Z Unsupported compiler calls            0
+2026-10-26T15:14:11.1797063Z Average cache write               0.000 s
+2026-10-26T15:14:11.1797322Z Average compiler                  0.000 s
+2026-10-26T15:14:11.1797577Z Average cache read hit            0.000 s
+2026-10-26T15:14:11.1797846Z Failed distributed compilations       0
+2026-10-26T15:14:11.1798579Z Cache location                  ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/
+2026-10-26T15:14:11.1799168Z Base directories                (none)
+2026-10-26T15:14:11.1799425Z Version (client)                0.17.0
+2026-10-26T15:14:11.1813043Z ##[endgroup]
+2026-10-26T15:14:11.1813461Z ##[group]Get JSON stats
+2026-10-26T15:14:11.1815216Z [command]/opt/hostedtoolcache/sccache/0.17.0/arm64/sccache --show-stats --stats-format=json
+2026-10-26T15:14:11.1983151Z {"stats":{"compile_requests":0,"requests_unsupported_compiler":0,"requests_not_compile":0,"requests_not_cacheable":0,"requests_executed":0,"cache_errors":{"counts":{},"adv_counts":{}},"cache_hits":{"counts":{},"adv_counts":{}},"cache_misses":{"counts":{},"adv_counts":{}},"cache_timeouts":0,"cache_read_errors":0,"non_cacheable_compilations":0,"forced_recaches":0,"cache_write_errors":0,"cache_writes":0,"cache_write_duration":{"secs":0,"nanos":0},"cache_read_hit_duration":{"secs":0,"nanos":0},"compilations":0,"compiler_write_duration":{"secs":0,"nanos":0},"compile_fails":0,"not_cached":{},"dist_compiles":{},"dist_errors":0,"multi_level":null},"cache_location":"ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/","cache_size":null,"max_cache_size":null,"use_preprocessor_cache_mode":false,"version":"0.17.0","basedirs":[]}
+2026-10-26T15:14:11.1986703Z ##[endgroup]
+2026-10-26T15:14:11.2001182Z ##[notice]0% - 0 hits, 0 misses, 0 errors
+2026-10-26T15:14:11.2002255Z 
+2026-10-26T15:14:11.2002382Z Full human-readable stats:
+2026-10-26T15:14:11.2002616Z Compile requests                      0
+2026-10-26T15:14:11.2002870Z Compile requests executed             0
+2026-10-26T15:14:11.2003113Z Cache hits                            0
+2026-10-26T15:14:11.2003354Z Cache misses                          0
+2026-10-26T15:14:11.2003598Z Cache hits rate                       -
+2026-10-26T15:14:11.2003852Z Cache timeouts                        0
+2026-10-26T15:14:11.2004094Z Cache read errors                     0
+2026-10-26T15:14:11.2004334Z Forced recaches                       0
+2026-10-26T15:14:11.2004574Z Cache write errors                    0
+2026-10-26T15:14:11.2004831Z Cache errors                          0
+2026-10-26T15:14:11.2005071Z Compilations                          0
+2026-10-26T15:14:11.2005317Z Compilation failures                  0
+2026-10-26T15:14:11.2005571Z Non-cacheable compilations            0
+2026-10-26T15:14:11.2006336Z Non-cacheable calls                   0
+2026-10-26T15:14:11.2006593Z Non-compilation calls                 0
+2026-10-26T15:14:11.2006849Z Unsupported compiler calls            0
+2026-10-26T15:14:11.2007102Z Average cache write               0.000 s
+2026-10-26T15:14:11.2007353Z Average compiler                  0.000 s
+2026-10-26T15:14:11.2007605Z Average cache read hit            0.000 s
+2026-10-26T15:14:11.2007868Z Failed distributed compilations       0
+2026-10-26T15:14:11.2008385Z Cache location                  ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/
+2026-10-26T15:14:11.2008912Z Base directories                (none)
+2026-10-26T15:14:11.2009155Z Version (client)                0.17.0
+2026-10-26T15:14:11.2009332Z 
+
+===== test-internet/14_Post Run actions_checkout@3d3c42e5aac5ba805825da76410c181273ba90b1.txt =====
+﻿2026-10-26T15:14:11.2149361Z Post job cleanup.
+2026-10-26T15:14:11.2900959Z [command]/usr/bin/git version
+2026-10-26T15:14:11.2941682Z git version 2.55.0
+2026-10-26T15:14:11.2978553Z Temporarily overriding HOME='/home/runner/work/_temp/aac8ed59-c85e-4907-acc0-6ca8d358c624' before making global git config changes
+2026-10-26T15:14:11.2979318Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:14:11.2984576Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/node/node
+2026-10-26T15:14:11.3017683Z Removing SSH command configuration
+2026-10-26T15:14:11.3025404Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:14:11.3061502Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:14:11.3339470Z Removing HTTP extra header
+2026-10-26T15:14:11.3345958Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:14:11.3383076Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:14:11.3654000Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:14:11.3660561Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:14:11.3696293Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+===== test-internet/15_Complete job.txt =====
+﻿2026-10-26T15:14:11.4110007Z Cleaning up orphan processes
+
+===== test-internet/1_Set up job.txt =====
+﻿2026-10-26T15:12:45.2490469Z Current runner version: '2.338.0'
+2026-10-26T15:12:45.2522808Z ##[group]Runner Image Provisioner
+2026-10-26T15:12:45.2524014Z Hosted Compute Agent
+2026-10-26T15:12:45.2524710Z Version: 20261021.618
+2026-10-26T15:12:45.2525371Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T15:12:45.2526199Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T15:12:45.2526979Z Worker ID: {dd2564b6-d7b7-484d-8090-852ae8a334e8}
+2026-10-26T15:12:45.2527789Z Region: eastus2
+2026-10-26T15:12:45.2528362Z Cloud: Azure
+2026-10-26T15:12:45.2528932Z ##[endgroup]
+2026-10-26T15:12:45.2530775Z ##[group]Operating System
+2026-10-26T15:12:45.2531764Z Ubuntu
+2026-10-26T15:12:45.2532516Z 24.04.5
+2026-10-26T15:12:45.2533071Z LTS
+2026-10-26T15:12:45.2533662Z ##[endgroup]
+2026-10-26T15:12:45.2534239Z ##[group]Runner Image
+2026-10-26T15:12:45.2534869Z Image: ubuntu-24.04-arm
+2026-10-26T15:12:45.2535577Z Version: 20261012.149.1
+2026-10-26T15:12:45.2536707Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24-arm64/20261012.149/images/ubuntu/Ubuntu2404-Arm64-Readme.md
+2026-10-26T15:12:45.2538606Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24-arm64%2F20261012.149
+2026-10-26T15:12:45.2539571Z ##[endgroup]
+2026-10-26T15:12:45.2541217Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T15:12:45.2544311Z Contents: read
+2026-10-26T15:12:45.2545003Z Metadata: read
+2026-10-26T15:12:45.2545595Z ##[endgroup]
+2026-10-26T15:12:45.2549002Z Secret source: Dependabot
+2026-10-26T15:12:45.2550083Z Cache mode: write
+2026-10-26T15:12:45.2551329Z Prepare workflow directory
+2026-10-26T15:12:45.3184577Z Prepare all required actions
+2026-10-26T15:12:45.3239417Z Getting action download info
+2026-10-26T15:12:45.5544124Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-26T15:12:45.6636868Z Download action repository 'nodejs/node@2a30192a3a2c47d7d3b4950a697423416ee24f9f' (SHA:2a30192a3a2c47d7d3b4950a697423416ee24f9f)
+2026-10-26T15:13:24.0230712Z Download action repository 'actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+2026-10-26T15:13:24.2362475Z Download action repository 'Mozilla-Actions/sccache-action@fc920bf0ec8de6ee65d409111f7ec508035751ba' (SHA:fc920bf0ec8de6ee65d409111f7ec508035751ba)
+2026-10-26T15:13:24.5283228Z Complete job name: test-internet
+
+===== test-internet/2_Run actions_checkout@3d3c42e5aac5ba805825da76410c181273ba90b1.txt =====
+﻿2026-10-26T15:13:24.6130010Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-26T15:13:24.6131501Z with:
+2026-10-26T15:13:24.6131810Z   persist-credentials: false
+2026-10-26T15:13:24.6132088Z   repository: nodejs/node
+2026-10-26T15:13:24.6134756Z   token: ***
+2026-10-26T15:13:24.6134989Z   ssh-strict: true
+2026-10-26T15:13:24.6135209Z   ssh-user: git
+2026-10-26T15:13:24.6135423Z   clean: true
+2026-10-26T15:13:24.6135647Z   sparse-checkout-cone-mode: true
+2026-10-26T15:13:24.6135922Z   fetch-depth: 1
+2026-10-26T15:13:24.6136136Z   fetch-tags: false
+2026-10-26T15:13:24.6136367Z   show-progress: true
+2026-10-26T15:13:24.6136645Z   lfs: false
+2026-10-26T15:13:24.6136858Z   submodules: false
+2026-10-26T15:13:24.6137085Z   set-safe-directory: true
+2026-10-26T15:13:24.6137346Z   allow-unsafe-pr-checkout: false
+2026-10-26T15:13:24.6138246Z env:
+2026-10-26T15:13:24.6138470Z   PYTHON_VERSION: 3.15
+2026-10-26T15:13:24.6138711Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:13:24.6138962Z   CLANG_VERSION: 19
+2026-10-26T15:13:24.6139253Z   CC: sccache clang-19
+2026-10-26T15:13:24.6139489Z   CXX: sccache clang++-19
+2026-10-26T15:13:24.6139737Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:13:24.6139986Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:13:24.6140232Z ##[endgroup]
+2026-10-26T15:13:24.7045372Z Syncing repository: nodejs/node
+2026-10-26T15:13:24.7047226Z ##[group]Getting Git version info
+2026-10-26T15:13:24.7047678Z Working directory is '/home/runner/work/node/node'
+2026-10-26T15:13:24.7048255Z [command]/usr/bin/git version
+2026-10-26T15:13:24.7071019Z git version 2.55.0
+2026-10-26T15:13:24.7088501Z ##[endgroup]
+2026-10-26T15:13:24.7098997Z Temporarily overriding HOME='/home/runner/work/_temp/b9239142-ed6f-4c8e-869f-74b63a94385f' before making global git config changes
+2026-10-26T15:13:24.7100043Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:13:24.7103773Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/node/node
+2026-10-26T15:13:24.7137297Z Deleting the contents of '/home/runner/work/node/node'
+2026-10-26T15:13:24.7141565Z ##[group]Determining repository object format
+2026-10-26T15:13:24.7142990Z ##[endgroup]
+2026-10-26T15:13:24.7143713Z ##[group]Initializing the repository
+2026-10-26T15:13:24.7146982Z [command]/usr/bin/git init /home/runner/work/node/node
+2026-10-26T15:13:24.7224649Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T15:13:24.7225399Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T15:13:24.7225943Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T15:13:24.7226388Z hint: call:
+2026-10-26T15:13:24.7226607Z hint:
+2026-10-26T15:13:24.7226897Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T15:13:24.7227223Z hint:
+2026-10-26T15:13:24.7227526Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T15:13:24.7228024Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T15:13:24.7228445Z hint:
+2026-10-26T15:13:24.7228659Z hint: 	git branch -m <name>
+2026-10-26T15:13:24.7228908Z hint:
+2026-10-26T15:13:24.7229241Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T15:13:24.7230163Z Initialized empty Git repository in /home/runner/work/node/node/.git/
+2026-10-26T15:13:24.7233859Z [command]/usr/bin/git remote add origin https://github.com/nodejs/node
+2026-10-26T15:13:24.7279084Z ##[endgroup]
+2026-10-26T15:13:24.7279616Z ##[group]Disabling automatic garbage collection
+2026-10-26T15:13:24.7283024Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-26T15:13:24.7317233Z ##[endgroup]
+2026-10-26T15:13:24.7317915Z ##[group]Setting up auth
+2026-10-26T15:13:24.7318397Z Removing SSH command configuration
+2026-10-26T15:13:24.7323408Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:13:24.7355816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:13:24.7669178Z Removing HTTP extra header
+2026-10-26T15:13:24.7675695Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:13:24.7708607Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:13:24.7913772Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:13:24.7919063Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:13:24.7952217Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:13:24.8154246Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T15:13:24.8195025Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/node/node/.git.path /home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:24.8226753Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/node/node/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:24.8259417Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:24.8291674Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:24.8322921Z ##[endgroup]
+2026-10-26T15:13:24.8323439Z ##[group]Fetching the repository
+2026-10-26T15:13:24.8329282Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2a30192a3a2c47d7d3b4950a697423416ee24f9f:refs/remotes/pull/67021/merge
+2026-10-26T15:13:41.2218087Z From https://github.com/nodejs/node
+2026-10-26T15:13:41.2220516Z  * [new ref]           2a30192a3a2c47d7d3b4950a697423416ee24f9f -> pull/67021/merge
+2026-10-26T15:13:41.2233000Z ##[endgroup]
+2026-10-26T15:13:41.2233667Z ##[group]Determining the checkout info
+2026-10-26T15:13:41.2234146Z ##[endgroup]
+2026-10-26T15:13:41.2234485Z [command]/usr/bin/git sparse-checkout disable
+2026-10-26T15:13:41.2277650Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T15:13:41.2309611Z ##[group]Checking out the ref
+2026-10-26T15:13:41.2314826Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/67021/merge
+2026-10-26T15:13:42.2691666Z Updating files:  32% (18672/56701)
+2026-10-26T15:13:42.3035596Z Updating files:  33% (18712/56701)
+2026-10-26T15:13:42.3373851Z Updating files:  34% (19279/56701)
+2026-10-26T15:13:42.3668126Z Updating files:  35% (19846/56701)
+2026-10-26T15:13:42.4039548Z Updating files:  36% (20413/56701)
+2026-10-26T15:13:42.4290672Z Updating files:  37% (20980/56701)
+2026-10-26T15:13:42.4418279Z Updating files:  38% (21547/56701)
+2026-10-26T15:13:42.4542747Z Updating files:  39% (22114/56701)
+2026-10-26T15:13:42.4678765Z Updating files:  40% (22681/56701)
+2026-10-26T15:13:42.4772366Z Updating files:  41% (23248/56701)
+2026-10-26T15:13:42.4893039Z Updating files:  42% (23815/56701)
+2026-10-26T15:13:42.5012978Z Updating files:  43% (24382/56701)
+2026-10-26T15:13:42.5125306Z Updating files:  44% (24949/56701)
+2026-10-26T15:13:42.5262691Z Updating files:  45% (25516/56701)
+2026-10-26T15:13:42.5385009Z Updating files:  46% (26083/56701)
+2026-10-26T15:13:42.5506725Z Updating files:  47% (26650/56701)
+2026-10-26T15:13:42.5637830Z Updating files:  48% (27217/56701)
+2026-10-26T15:13:42.5763396Z Updating files:  49% (27784/56701)
+2026-10-26T15:13:42.5876321Z Updating files:  50% (28351/56701)
+2026-10-26T15:13:42.5991528Z Updating files:  51% (28918/56701)
+2026-10-26T15:13:42.6097961Z Updating files:  52% (29485/56701)
+2026-10-26T15:13:42.6204972Z Updating files:  53% (30052/56701)
+2026-10-26T15:13:42.6306020Z Updating files:  54% (30619/56701)
+2026-10-26T15:13:42.7280704Z Updating files:  55% (31186/56701)
+2026-10-26T15:13:42.7406270Z Updating files:  56% (31753/56701)
+2026-10-26T15:13:42.7537064Z Updating files:  57% (32320/56701)
+2026-10-26T15:13:42.7710684Z Updating files:  58% (32887/56701)
+2026-10-26T15:13:42.7963325Z Updating files:  59% (33454/56701)
+2026-10-26T15:13:42.8727013Z Updating files:  60% (34021/56701)
+2026-10-26T15:13:42.8883211Z Updating files:  61% (34588/56701)
+2026-10-26T15:13:42.9021907Z Updating files:  62% (35155/56701)
+2026-10-26T15:13:42.9264972Z Updating files:  63% (35722/56701)
+2026-10-26T15:13:42.9467363Z Updating files:  64% (36289/56701)
+2026-10-26T15:13:42.9684996Z Updating files:  65% (36856/56701)
+2026-10-26T15:13:42.9950174Z Updating files:  66% (37423/56701)
+2026-10-26T15:13:43.0059104Z Updating files:  67% (37990/56701)
+2026-10-26T15:13:43.0158388Z Updating files:  68% (38557/56701)
+2026-10-26T15:13:43.0299375Z Updating files:  69% (39124/56701)
+2026-10-26T15:13:43.0897594Z Updating files:  70% (39691/56701)
+2026-10-26T15:13:43.1126074Z Updating files:  71% (40258/56701)
+2026-10-26T15:13:43.1309793Z Updating files:  72% (40825/56701)
+2026-10-26T15:13:43.1852922Z Updating files:  73% (41392/56701)
+2026-10-26T15:13:43.2288461Z Updating files:  74% (41959/56701)
+2026-10-26T15:13:43.2565379Z Updating files:  75% (42526/56701)
+2026-10-26T15:13:43.2671827Z Updating files:  76% (43093/56701)
+2026-10-26T15:13:43.2685663Z Updating files:  76% (43589/56701)
+2026-10-26T15:13:43.2795228Z Updating files:  77% (43660/56701)
+2026-10-26T15:13:43.2896796Z Updating files:  78% (44227/56701)
+2026-10-26T15:13:43.3008803Z Updating files:  79% (44794/56701)
+2026-10-26T15:13:43.3486744Z Updating files:  80% (45361/56701)
+2026-10-26T15:13:43.3591130Z Updating files:  81% (45928/56701)
+2026-10-26T15:13:43.3720073Z Updating files:  82% (46495/56701)
+2026-10-26T15:13:43.4029109Z Updating files:  83% (47062/56701)
+2026-10-26T15:13:43.4170791Z Updating files:  84% (47629/56701)
+2026-10-26T15:13:43.4295483Z Updating files:  85% (48196/56701)
+2026-10-26T15:13:43.4426077Z Updating files:  86% (48763/56701)
+2026-10-26T15:13:43.4520609Z Updating files:  87% (49330/56701)
+2026-10-26T15:13:43.4648599Z Updating files:  88% (49897/56701)
+2026-10-26T15:13:43.4787748Z Updating files:  89% (50464/56701)
+2026-10-26T15:13:43.4920096Z Updating files:  90% (51031/56701)
+2026-10-26T15:13:43.5047448Z Updating files:  91% (51598/56701)
+2026-10-26T15:13:43.5171233Z Updating files:  92% (52165/56701)
+2026-10-26T15:13:43.5301236Z Updating files:  93% (52732/56701)
+2026-10-26T15:13:43.5434132Z Updating files:  94% (53299/56701)
+2026-10-26T15:13:43.5577075Z Updating files:  95% (53866/56701)
+2026-10-26T15:13:43.5711171Z Updating files:  96% (54433/56701)
+2026-10-26T15:13:43.5851490Z Updating files:  97% (55000/56701)
+2026-10-26T15:13:43.5959657Z Updating files:  98% (55567/56701)
+2026-10-26T15:13:43.6206621Z Updating files:  99% (56134/56701)
+2026-10-26T15:13:43.6207030Z Updating files: 100% (56701/56701)
+2026-10-26T15:13:43.6207396Z Updating files: 100% (56701/56701), done.
+2026-10-26T15:13:43.6726154Z Note: switching to 'refs/remotes/pull/67021/merge'.
+2026-10-26T15:13:43.6726817Z 
+2026-10-26T15:13:43.6727055Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-26T15:13:43.6727500Z changes and commit them, and you can discard any commits you make in this
+2026-10-26T15:13:43.6727977Z state without impacting any branches by switching back to a branch.
+2026-10-26T15:13:43.6728232Z 
+2026-10-26T15:13:43.6728401Z If you want to create a new branch to retain commits you create, you may
+2026-10-26T15:13:43.6728805Z do so (now or later) by using -c with the switch command. Example:
+2026-10-26T15:13:43.6729037Z 
+2026-10-26T15:13:43.6729128Z   git switch -c <new-branch-name>
+2026-10-26T15:13:43.6729730Z 
+2026-10-26T15:13:43.6729826Z Or undo this operation with:
+2026-10-26T15:13:43.6729970Z 
+2026-10-26T15:13:43.6730041Z   git switch -
+2026-10-26T15:13:43.6730145Z 
+2026-10-26T15:13:43.6730331Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-26T15:13:43.6730614Z 
+2026-10-26T15:13:43.6731285Z HEAD is now at 2a30192a Merge 7e9e05aee6a76d42d040e1b41c82a58078f12c98 into 1ae40765d68cd4bac5a94d63a695239b84be5426
+2026-10-26T15:13:43.6798249Z ##[endgroup]
+2026-10-26T15:13:43.6850453Z [command]/usr/bin/git log -1 --format=%H
+2026-10-26T15:13:43.6876666Z 2a30192a3a2c47d7d3b4950a697423416ee24f9f
+2026-10-26T15:13:43.6887273Z ##[group]Removing auth
+2026-10-26T15:13:43.6887551Z Removing SSH command configuration
+2026-10-26T15:13:43.6891762Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:13:43.6923577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:13:43.7182973Z Removing HTTP extra header
+2026-10-26T15:13:43.7186398Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:13:43.7222350Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:13:43.7491571Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:13:43.7496198Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:13:43.7524119Z includeif.gitdir:/home/runner/work/node/node/.git.path
+2026-10-26T15:13:43.7524542Z includeif.gitdir:/home/runner/work/node/node/.git/worktrees/*.path
+2026-10-26T15:13:43.7524913Z includeif.gitdir:/github/workspace/.git.path
+2026-10-26T15:13:43.7525234Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T15:13:43.7534370Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/node/node/.git.path
+2026-10-26T15:13:43.7559687Z /home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:43.7571299Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/node/node/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-310cb693\-d37f\-454b\-be84\-4b2a328f0049\.config
+2026-10-26T15:13:43.7616852Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/node/node/.git/worktrees/*.path
+2026-10-26T15:13:43.7643624Z /home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:43.7652340Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/node/node/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-310cb693\-d37f\-454b\-be84\-4b2a328f0049\.config
+2026-10-26T15:13:43.7690976Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-26T15:13:43.7718236Z /github/runner_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:43.7726644Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-310cb693\-d37f\-454b\-be84\-4b2a328f0049\.config
+2026-10-26T15:13:43.7772168Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-26T15:13:43.7791960Z /github/runner_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config
+2026-10-26T15:13:43.7802293Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-310cb693\-d37f\-454b\-be84\-4b2a328f0049\.config
+2026-10-26T15:13:43.7836315Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:13:43.8090701Z Removing credentials config '/home/runner/work/_temp/git-credentials-310cb693-d37f-454b-be84-4b2a328f0049.config'
+2026-10-26T15:13:43.8102194Z ##[endgroup]
+
+===== test-internet/3_Install Clang 19.txt =====
+﻿2026-10-26T15:13:43.8332611Z ##[group]Run nodejs/node/.github/actions/install-clang@2a30192a3a2c47d7d3b4950a697423416ee24f9f
+2026-10-26T15:13:43.8333121Z with:
+2026-10-26T15:13:43.8333294Z   clang-version: 19
+2026-10-26T15:13:43.8333468Z env:
+2026-10-26T15:13:43.8333628Z   PYTHON_VERSION: 3.15
+2026-10-26T15:13:43.8333828Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:13:43.8334036Z   CLANG_VERSION: 19
+2026-10-26T15:13:43.8334243Z   CC: sccache clang-19
+2026-10-26T15:13:43.8334437Z   CXX: sccache clang++-19
+2026-10-26T15:13:43.8334641Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:13:43.8334854Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:13:43.8335048Z ##[endgroup]
+2026-10-26T15:13:43.8397791Z ##[start-action display=Install Clang;id=__self.__run]
+2026-10-26T15:13:43.8447325Z ##[group]Run sudo apt-get update
+2026-10-26T15:13:43.8447679Z [36;1msudo apt-get update[0m
+2026-10-26T15:13:43.8447924Z [36;1msudo apt-get install -y clang-19[0m
+2026-10-26T15:13:43.8537103Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-26T15:13:43.8537577Z env:
+2026-10-26T15:13:43.8537756Z   PYTHON_VERSION: 3.15
+2026-10-26T15:13:43.8537956Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:13:43.8538166Z   CLANG_VERSION: 19
+2026-10-26T15:13:43.8538350Z   CC: sccache clang-19
+2026-10-26T15:13:43.8538542Z   CXX: sccache clang++-19
+2026-10-26T15:13:43.8538753Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:13:43.8538959Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:13:43.8539616Z ##[endgroup]
+2026-10-26T15:13:43.9705998Z Get:1 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-10-26T15:13:44.1341767Z Get:2 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [661 kB]
+2026-10-26T15:13:44.1393737Z Hit:3 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+2026-10-26T15:13:44.1655805Z Get:4 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [598 kB]
+2026-10-26T15:13:44.1756864Z Get:5 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+2026-10-26T15:13:44.1776191Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble/main armhf Packages [12.4 kB]
+2026-10-26T15:13:44.2624685Z Get:7 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease [126 kB]
+2026-10-26T15:13:44.3021734Z Get:8 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease [126 kB]
+2026-10-26T15:13:44.3294358Z Get:9 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 Packages [1455 kB]
+2026-10-26T15:13:44.4183410Z Get:10 http://ports.ubuntu.com/ubuntu-ports noble-updates/main Translation-en [310 kB]
+2026-10-26T15:13:44.4390534Z Get:11 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 Packages [1748 kB]
+2026-10-26T15:13:44.4819818Z Get:12 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe Translation-en [342 kB]
+2026-10-26T15:13:44.5014322Z Get:13 http://ports.ubuntu.com/ubuntu-ports noble-updates/restricted arm64 Packages [2678 kB]
+2026-10-26T15:13:44.5421248Z Get:14 http://ports.ubuntu.com/ubuntu-ports noble-updates/restricted Translation-en [411 kB]
+2026-10-26T15:13:44.5612250Z Get:15 http://ports.ubuntu.com/ubuntu-ports noble-security/main arm64 Packages [1206 kB]
+2026-10-26T15:13:44.5835813Z Get:16 http://ports.ubuntu.com/ubuntu-ports noble-security/main Translation-en [231 kB]
+2026-10-26T15:13:44.6019948Z Get:17 http://ports.ubuntu.com/ubuntu-ports noble-security/universe arm64 Packages [1298 kB]
+2026-10-26T15:13:44.6245125Z Get:18 http://ports.ubuntu.com/ubuntu-ports noble-security/universe Translation-en [246 kB]
+2026-10-26T15:13:44.7033613Z Get:19 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted arm64 Packages [2573 kB]
+2026-10-26T15:13:44.7281618Z Get:20 http://ports.ubuntu.com/ubuntu-ports noble-security/restricted Translation-en [392 kB]
+2026-10-26T15:13:48.7748662Z Fetched 14.5 MB in 1s (10.1 MB/s)
+2026-10-26T15:13:50.0381497Z Reading package lists...
+2026-10-26T15:13:50.0702707Z Reading package lists...
+2026-10-26T15:13:50.3834030Z Building dependency tree...
+2026-10-26T15:13:50.3841764Z Reading state information...
+2026-10-26T15:13:50.7316396Z The following additional packages will be installed:
+2026-10-26T15:13:50.7322382Z   libclang-common-19-dev libclang-cpp19 libclang-rt-19-dev libclang1-19
+2026-10-26T15:13:50.7325269Z   llvm-19 llvm-19-dev llvm-19-linker-tools llvm-19-runtime llvm-19-tools
+2026-10-26T15:13:50.7335531Z Suggested packages:
+2026-10-26T15:13:50.7335773Z   clang-19-doc wasi-libc llvm-19-doc
+2026-10-26T15:13:50.7621912Z The following NEW packages will be installed:
+2026-10-26T15:13:50.7622834Z   clang-19 libclang-common-19-dev libclang-cpp19 libclang-rt-19-dev
+2026-10-26T15:13:50.7630045Z   libclang1-19 llvm-19 llvm-19-dev llvm-19-linker-tools llvm-19-runtime
+2026-10-26T15:13:50.7633008Z   llvm-19-tools
+2026-10-26T15:13:51.1049121Z 0 upgraded, 10 newly installed, 0 to remove and 100 not upgraded.
+2026-10-26T15:13:51.1049559Z Need to get 89.4 MB of archives.
+2026-10-26T15:13:51.1049864Z After this operation, 583 MB of additional disk space will be used.
+2026-10-26T15:13:51.1050506Z Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 libclang-cpp19 arm64 1:19.1.1-1ubuntu1~24.04.2 [13.9 MB]
+2026-10-26T15:13:52.9892265Z Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 libclang-common-19-dev arm64 1:19.1.1-1ubuntu1~24.04.2 [743 kB]
+2026-10-26T15:13:53.1099889Z Get:3 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 llvm-19-linker-tools arm64 1:19.1.1-1ubuntu1~24.04.2 [1234 kB]
+2026-10-26T15:13:53.2365589Z Get:4 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 libclang1-19 arm64 1:19.1.1-1ubuntu1~24.04.2 [7985 kB]
+2026-10-26T15:13:53.4838590Z Get:5 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 clang-19 arm64 1:19.1.1-1ubuntu1~24.04.2 [77.2 kB]
+2026-10-26T15:13:53.5985964Z Get:6 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 libclang-rt-19-dev arm64 1:19.1.1-1ubuntu1~24.04.2 [2127 kB]
+2026-10-26T15:13:53.7264921Z Get:7 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 llvm-19-runtime arm64 1:19.1.1-1ubuntu1~24.04.2 [532 kB]
+2026-10-26T15:13:53.8439293Z Get:8 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 llvm-19 arm64 1:19.1.1-1ubuntu1~24.04.2 [17.1 MB]
+2026-10-26T15:13:54.1090974Z Get:9 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 llvm-19-tools arm64 1:19.1.1-1ubuntu1~24.04.2 [540 kB]
+2026-10-26T15:13:54.2261511Z Get:10 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 llvm-19-dev arm64 1:19.1.1-1ubuntu1~24.04.2 [45.1 MB]
+2026-10-26T15:13:54.7788190Z Fetched 89.4 MB in 4s (24.1 MB/s)
+2026-10-26T15:13:54.8159492Z Selecting previously unselected package libclang-cpp19.
+2026-10-26T15:13:54.8329108Z (Reading database ... 
+2026-10-26T15:13:54.8329598Z (Reading database ... 5%
+2026-10-26T15:13:54.8329846Z (Reading database ... 10%
+2026-10-26T15:13:54.8330189Z (Reading database ... 15%
+2026-10-26T15:13:54.8330526Z (Reading database ... 20%
+2026-10-26T15:13:54.8331338Z (Reading database ... 25%
+2026-10-26T15:13:54.8331631Z (Reading database ... 30%
+2026-10-26T15:13:54.8331834Z (Reading database ... 35%
+2026-10-26T15:13:54.8332086Z (Reading database ... 40%
+2026-10-26T15:13:54.8332290Z (Reading database ... 45%
+2026-10-26T15:13:54.8332495Z (Reading database ... 50%
+2026-10-26T15:13:54.8435588Z (Reading database ... 55%
+2026-10-26T15:13:54.9501401Z (Reading database ... 60%
+2026-10-26T15:13:55.1093349Z (Reading database ... 65%
+2026-10-26T15:13:55.3022839Z (Reading database ... 70%
+2026-10-26T15:13:55.4676039Z (Reading database ... 75%
+2026-10-26T15:13:55.6002081Z (Reading database ... 80%
+2026-10-26T15:13:55.7770965Z (Reading database ... 85%
+2026-10-26T15:13:55.9063572Z (Reading database ... 90%
+2026-10-26T15:13:56.1150530Z (Reading database ... 95%
+2026-10-26T15:13:56.1151639Z (Reading database ... 100%
+2026-10-26T15:13:56.1152372Z (Reading database ... 203258 files and directories currently installed.)
+2026-10-26T15:13:56.1193797Z Preparing to unpack .../0-libclang-cpp19_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:56.1268870Z Unpacking libclang-cpp19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:56.5553010Z Selecting previously unselected package libclang-common-19-dev:arm64.
+2026-10-26T15:13:56.5763382Z Preparing to unpack .../1-libclang-common-19-dev_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:56.5773905Z Unpacking libclang-common-19-dev:arm64 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:56.6728195Z Selecting previously unselected package llvm-19-linker-tools.
+2026-10-26T15:13:56.6929107Z Preparing to unpack .../2-llvm-19-linker-tools_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:56.6937650Z Unpacking llvm-19-linker-tools (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:56.7395406Z Selecting previously unselected package libclang1-19.
+2026-10-26T15:13:56.7597349Z Preparing to unpack .../3-libclang1-19_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:56.7606349Z Unpacking libclang1-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.0037736Z Selecting previously unselected package clang-19.
+2026-10-26T15:13:57.0213613Z Preparing to unpack .../4-clang-19_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.0223279Z Unpacking clang-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.0475042Z Selecting previously unselected package libclang-rt-19-dev:arm64.
+2026-10-26T15:13:57.0659028Z Preparing to unpack .../5-libclang-rt-19-dev_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.0667722Z Unpacking libclang-rt-19-dev:arm64 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.1962395Z Selecting previously unselected package llvm-19-runtime.
+2026-10-26T15:13:57.2165104Z Preparing to unpack .../6-llvm-19-runtime_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.2173887Z Unpacking llvm-19-runtime (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.2464256Z Selecting previously unselected package llvm-19.
+2026-10-26T15:13:57.2663087Z Preparing to unpack .../7-llvm-19_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.2673138Z Unpacking llvm-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.6733162Z Selecting previously unselected package llvm-19-tools.
+2026-10-26T15:13:57.6915497Z Preparing to unpack .../8-llvm-19-tools_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.6924716Z Unpacking llvm-19-tools (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:57.7596335Z Selecting previously unselected package llvm-19-dev.
+2026-10-26T15:13:57.7808437Z Preparing to unpack .../9-llvm-19-dev_1%3a19.1.1-1ubuntu1~24.04.2_arm64.deb ...
+2026-10-26T15:13:57.7816800Z Unpacking llvm-19-dev (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2712379Z Setting up libclang1-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2732163Z Setting up libclang-common-19-dev:arm64 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2744890Z Setting up libclang-rt-19-dev:arm64 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2759722Z Setting up llvm-19-linker-tools (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2776182Z Setting up llvm-19-runtime (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2806290Z Setting up llvm-19-tools (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.2824513Z Setting up libclang-cpp19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.3188752Z Setting up clang-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.3204938Z Setting up llvm-19 (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.3219442Z Setting up llvm-19-dev (1:19.1.1-1ubuntu1~24.04.2) ...
+2026-10-26T15:13:59.3244611Z Processing triggers for systemd (255.4-1ubuntu8.17) ...
+2026-10-26T15:13:59.3564065Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-10-26T15:13:59.3583491Z Not building database; man-db/auto-update is not 'true'.
+2026-10-26T15:13:59.3596931Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-26T15:14:01.5408801Z 
+2026-10-26T15:14:01.5409473Z Running kernel seems to be up-to-date.
+2026-10-26T15:14:01.5409848Z 
+2026-10-26T15:14:01.5410187Z No services need to be restarted.
+2026-10-26T15:14:01.5410384Z 
+2026-10-26T15:14:01.5410479Z No containers need to be restarted.
+2026-10-26T15:14:01.5411446Z 
+2026-10-26T15:14:01.5411565Z No user sessions are running outdated binaries.
+2026-10-26T15:14:01.5411766Z 
+2026-10-26T15:14:01.5411942Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-10-26T15:14:03.0488915Z ##[end-action id=__self.__run;outcome=success;conclusion=success;duration_ms=19208]
+
+===== test-internet/4_Set up Python 3.15.txt =====
+﻿2026-10-26T15:14:03.0593216Z ##[group]Run actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+2026-10-26T15:14:03.0593641Z with:
+2026-10-26T15:14:03.0593816Z   python-version: 3.15
+2026-10-26T15:14:03.0594020Z   allow-prereleases: true
+2026-10-26T15:14:03.0594224Z   check-latest: false
+2026-10-26T15:14:03.0596685Z   token: ***
+2026-10-26T15:14:03.0596976Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+2026-10-26T15:14:03.0597331Z   update-environment: true
+2026-10-26T15:14:03.0597536Z   freethreaded: false
+2026-10-26T15:14:03.0597722Z env:
+2026-10-26T15:14:03.0597882Z   PYTHON_VERSION: 3.15
+2026-10-26T15:14:03.0598075Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:14:03.0598282Z   CLANG_VERSION: 19
+2026-10-26T15:14:03.0598469Z   CC: sccache clang-19
+2026-10-26T15:14:03.0598661Z   CXX: sccache clang++-19
+2026-10-26T15:14:03.0598865Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:14:03.0599079Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:14:03.0599278Z ##[endgroup]
+2026-10-26T15:14:03.1562315Z ##[group]Installed versions
+2026-10-26T15:14:03.2037040Z Version ~3.15.0-0 was not found in the local cache
+2026-10-26T15:14:03.9541829Z Version ~3.15.0-0 is available for downloading
+2026-10-26T15:14:03.9542531Z Download from "https://github.com/actions/python-versions/releases/download/3.15.1-39619321210/python-3.15.1-linux-24.04-arm64.tar.gz"
+2026-10-26T15:14:04.6305088Z Extract downloaded archive
+2026-10-26T15:14:04.6437371Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/e6661938-6d91-4d33-9a06-07e1e5eb7c62 -f /home/runner/work/_temp/c10995f3-ca7d-4985-abd1-761a87cf3a74
+2026-10-26T15:14:06.4816086Z Execute installation script
+2026-10-26T15:14:06.4915442Z Check if Python hostedtoolcache folder exist...
+2026-10-26T15:14:06.4916002Z Create Python 3.15.1 folder
+2026-10-26T15:14:06.4927097Z Copy Python binaries to hostedtoolcache folder
+2026-10-26T15:14:06.7549004Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-26T15:14:06.7587758Z Upgrading pip...
+2026-10-26T15:14:08.5070558Z Collecting pip
+2026-10-26T15:14:08.5763306Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-26T15:14:08.6196178Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-26T15:14:08.7478202Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 17.1 MB/s  0:00:00
+2026-10-26T15:14:08.7478608Z 
+2026-10-26T15:14:08.8704578Z Installing collected packages: pip
+2026-10-26T15:14:08.8704943Z Attempting uninstall: pip
+2026-10-26T15:14:08.8723284Z Found existing installation: pip 26.2.2
+2026-10-26T15:14:08.8921846Z Uninstalling pip-26.2.2:
+2026-10-26T15:14:08.8966039Z Successfully uninstalled pip-26.2.2
+2026-10-26T15:14:09.8057840Z Successfully installed pip-26.2.2
+2026-10-26T15:14:09.9002521Z Create complete file
+2026-10-26T15:14:09.9044474Z Successfully set up CPython (3.15.1)
+2026-10-26T15:14:09.9045564Z ##[endgroup]
+
+===== test-internet/5_Set up sccache.txt =====
+﻿2026-10-26T15:14:09.9210365Z ##[group]Run Mozilla-Actions/sccache-action@fc920bf0ec8de6ee65d409111f7ec508035751ba
+2026-10-26T15:14:09.9211459Z with:
+2026-10-26T15:14:09.9211647Z   version: v0.17.0
+2026-10-26T15:14:09.9214081Z   token: ***
+2026-10-26T15:14:09.9214266Z   disable_annotations: false
+2026-10-26T15:14:09.9214467Z env:
+2026-10-26T15:14:09.9214628Z   PYTHON_VERSION: 3.15
+2026-10-26T15:14:09.9214826Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:14:09.9215029Z   CLANG_VERSION: 19
+2026-10-26T15:14:09.9215211Z   CC: sccache clang-19
+2026-10-26T15:14:09.9215403Z   CXX: sccache clang++-19
+2026-10-26T15:14:09.9215609Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:14:09.9215815Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:14:09.9216083Z   pythonLocation: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:09.9216494Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:14:09.9216889Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:09.9217240Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:09.9217644Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:09.9218013Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.15.1/arm64/lib
+2026-10-26T15:14:09.9218308Z ##[endgroup]
+2026-10-26T15:14:09.9993688Z try to setup sccache version: v0.17.0
+2026-10-26T15:14:10.0032190Z sccache download from url: https://github.com/mozilla/sccache/releases/download/v0.17.0/sccache-v0.17.0-aarch64-unknown-linux-musl.tar.gz
+2026-10-26T15:14:10.4100038Z Correct checksum: 821a86343191aa1cbab74bd42f9e93c9a63bf85e4742945f40d3ae84193c1c77
+2026-10-26T15:14:10.4206987Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/707f96c4-6af7-4c56-b8fd-9f2418d85cd4 -f /home/runner/work/_temp/1306f090-fa16-42f6-aad7-5d121c537e9e
+2026-10-26T15:14:10.5360512Z sccache extracted to: /home/runner/work/_temp/707f96c4-6af7-4c56-b8fd-9f2418d85cd4
+2026-10-26T15:14:10.5459303Z sccache cached to: /opt/hostedtoolcache/sccache/0.17.0/arm64
+
+===== test-internet/6_Build.txt =====
+﻿2026-10-26T15:14:10.5925459Z ##[group]Run make build-ci -j4 V=1 CONFIG_FLAGS="--error-on-warn"
+2026-10-26T15:14:10.5926260Z [36;1mmake build-ci -j4 V=1 CONFIG_FLAGS="--error-on-warn"[0m
+2026-10-26T15:14:10.5969511Z shell: /usr/bin/bash -e {0}
+2026-10-26T15:14:10.5969775Z env:
+2026-10-26T15:14:10.5969950Z   PYTHON_VERSION: 3.15
+2026-10-26T15:14:10.5970154Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:14:10.5970363Z   CLANG_VERSION: 19
+2026-10-26T15:14:10.5970548Z   CC: sccache clang-19
+2026-10-26T15:14:10.5970743Z   CXX: sccache clang++-19
+2026-10-26T15:14:10.5971349Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:14:10.5971576Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:14:10.5971841Z   pythonLocation: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:10.5972235Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:14:10.5972637Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:10.5972995Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:10.5973402Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:14:10.5973784Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.15.1/arm64/lib
+2026-10-26T15:14:10.5974159Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.17.0/arm64/sccache
+2026-10-26T15:14:10.5974472Z   ACTIONS_CACHE_SERVICE_V2: on
+2026-10-26T15:14:10.5974843Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+2026-10-26T15:14:10.6029937Z   ACTIONS_RUNTIME_TOKEN: ***
+2026-10-26T15:14:10.6030173Z ##[endgroup]
+2026-10-26T15:14:10.7978185Z python3 ./configure --verbose --error-on-warn
+2026-10-26T15:14:11.0352746Z sccache: error: Server startup failed: cache storage failed to read: Unexpected (temporary) at read => ﻿<?xml version="1.0" encoding="utf-8"?><Error><Code>ServerBusy</Code><Message>Egress is over the account limit.
+2026-10-26T15:14:11.0353668Z RequestId:61944cfc-a01e-00df-4d5c-65919b000000
+2026-10-26T15:14:11.0353971Z Time:2026-10-26T15:14:11.0611840Z</Message></Error>
+2026-10-26T15:14:11.0354207Z 
+2026-10-26T15:14:11.0354278Z Context:
+2026-10-26T15:14:11.0355648Z    uri: [REDACTED]
+2026-10-26T15:14:11.0358311Z    response: Parts { status: 503, version: HTTP/1.1, headers: {"content-length": "212", "content-type": "application/xml", "server": "Microsoft-HTTPAPI/2.0", "x-ms-request-id": "61944cfc-a01e-00df-4d5c-65919b000000", "x-ms-error-code": "ServerBusy", "access-control-expose-headers": "x-ms-request-id,x-ms-error-code,Content-Length,Date,Transfer-Encoding", "access-control-allow-origin": "*", "date": "Mon, 26 Oct 2026 15:14:10 GMT"} }
+2026-10-26T15:14:11.0359798Z    service: ghac
+2026-10-26T15:14:11.0359983Z    path: .sccache_check
+2026-10-26T15:14:11.0360179Z    range: 0-
+2026-10-26T15:14:11.0360287Z 
+2026-10-26T15:14:11.0360363Z Backtrace:
+2026-10-26T15:14:11.0360519Z    0: <unknown>
+2026-10-26T15:14:11.0360685Z    1: <unknown>
+2026-10-26T15:14:11.0361112Z    2: <unknown>
+2026-10-26T15:14:11.0361629Z    3: <unknown>
+2026-10-26T15:14:11.0361818Z    4: <unknown>
+2026-10-26T15:14:11.0361987Z    5: <unknown>
+2026-10-26T15:14:11.0362148Z    6: <unknown>
+2026-10-26T15:14:11.0362354Z Node.js configure: Found Python 3.15.1...
+2026-10-26T15:14:11.0362729Z    7: <unknown>
+2026-10-26T15:14:11.0362987Z    8: <unknown>
+2026-10-26T15:14:11.0363329Z    9: <unknown>
+2026-10-26T15:14:11.0363571Z   10: <unknown>
+2026-10-26T15:14:11.0363808Z   11: <unknown>
+2026-10-26T15:14:11.0364047Z   12: <unknown>
+2026-10-26T15:14:11.0364296Z   13: <unknown>
+2026-10-26T15:14:11.0364474Z 
+2026-10-26T15:14:11.0365463Z 
+2026-10-26T15:14:11.0365863Z Run with SCCACHE_LOG=debug SCCACHE_NO_DAEMON=1 to get more information
+2026-10-26T15:14:11.0549578Z Traceback (most recent call last):
+2026-10-26T15:14:11.0561492Z   File "/home/runner/work/node/node/./configure", line 35, in <module>
+2026-10-26T15:14:11.0562495Z     import configure
+2026-10-26T15:14:11.0562882Z   File "/home/runner/work/node/node/configure.py", line 2891, in <module>
+2026-10-26T15:14:11.0563232Z     check_compiler(output)
+2026-10-26T15:14:11.0563435Z     ~~~~~~~~~~~~~~^^^^^^^^
+2026-10-26T15:14:11.0563783Z   File "/home/runner/work/node/node/configure.py", line 1625, in check_compiler
+2026-10-26T15:14:11.0564275Z     ok, is_clang, clang_version, gcc_version, is_apple = try_check_compiler(CXX, 'c++')
+2026-10-26T15:14:11.0564692Z                                                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+2026-10-26T15:14:11.0565134Z   File "/home/runner/work/node/node/configure.py", line 1389, in try_check_compiler
+2026-10-26T15:14:11.0565781Z     raise Exception(f'Could not determine compiler version info. \nstdout:\n{cc_stdout}\nstderr:\n{cc_stderr}')
+2026-10-26T15:14:11.0566293Z Exception: Could not determine compiler version info. 
+2026-10-26T15:14:11.0566592Z stdout:
+2026-10-26T15:14:11.0566682Z 
+2026-10-26T15:14:11.0566752Z stderr:
+2026-10-26T15:14:11.0566837Z 
+2026-10-26T15:14:11.0764584Z make: *** [Makefile:674: build-ci] Error 1
+2026-10-26T15:14:11.0784301Z ##[error]Process completed with exit code 2.
+
+===== test-internet/system.txt =====
+2026-10-26T15:12:56.0480000Z Requested labels: ubuntu-24.04-arm
+2026-10-26T15:12:56.0480000Z Job defined at: nodejs/node/.github/workflows/test-internet.yml@refs/pull/67021/merge
+2026-10-26T15:12:56.0480000Z Waiting for a runner to pick up this job...
+2026-10-26T15:12:56.0290000Z Evaluating test-internet.if
+2026-10-26T15:12:56.0290000Z Evaluating: (success() && (((((github.event_name == 'schedule') && (github.repository == 'nodejs/node'))) || ((github.event.pull_request && (github.event.pull_request.draft == false))))))
+2026-10-26T15:12:56.0290000Z Expanded: (true && ((('pull_request' == 'schedule') && (github.repository == 'nodejs/node')) || (Object && (false == false))))
+2026-10-26T15:12:56.0290000Z Result: true
+2026-10-26T15:12:56.1540000Z Job is about to start running on the hosted runner: GitHub Actions 1001265022
+2026-10-26T15:12:56.1530000Z Job is waiting for a hosted runner to come online.

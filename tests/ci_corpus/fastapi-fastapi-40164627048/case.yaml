@@ -1,0 +1,43 @@
+repo: fastapi/fastapi
+run_id: 40164627048
+head_sha: 128dd9041b82e9a4ad3922cc739e99640fbf8240
+run_attempts:
+- attempt: 1
+  head_sha: 128dd9041b82e9a4ad3922cc739e99640fbf8240
+  conclusion: failure
+commits:
+- sha: 128dd9041b82e9a4ad3922cc739e99640fbf8240
+  author: Nikhil-4404
+  files: []
+- sha: 7a0a3f0b286c6c865cf4398ea0e957a87b8bffa4
+  author: pr-submit[bot]
+  files: []
+- sha: b56f7c6b7592889f844a54cf858ed21407bee427
+  author: latest-changes[bot]
+  files: []
+- sha: f02ef4900bacc28942a051b95b9719c5002a7858
+  author: tiangolo
+  files: []
+- sha: 69ddc2badf9da1123bba4d360225ae6b085985f6
+  author: pr-submit[bot]
+  files: []
+- sha: 0cafa07bd4e4c220169e27425f504af3b737d1f8
+  author: latest-changes[bot]
+  files: []
+- sha: f90d0369380a539c673b1bbbbd86535b8cdee746
+  author: tiangolo
+  files: []
+- sha: 80c8742d141e67beaf747343405c8facf999bc0c
+  author: pr-submit[bot]
+  files: []
+- sha: b105209dbf32d1e25ff7357ab706490dcafc9c44
+  author: latest-changes[bot]
+  files: []
+- sha: e42ac0a13459086f42d96eab13748303bcfa78e7
+  author: tiangolo
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

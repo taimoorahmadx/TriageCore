@@ -1,0 +1,9 @@
+===== black/system.txt =====
+2026-10-26T11:08:56.6410000Z Evaluating black.if
+2026-10-26T11:08:56.6410000Z Evaluating: success()
+2026-10-26T11:08:56.6410000Z Result: true
+2026-10-26T11:08:56.6790000Z Requested labels: ubuntu-latest
+2026-10-26T11:08:56.6790000Z Job defined at: django/django/.github/workflows/linters.yml@refs/pull/22199/merge
+2026-10-26T11:08:56.6790000Z Waiting for a runner to pick up this job...
+2026-10-26T11:08:56.7040000Z Job is waiting for a hosted runner to come online.
+2026-10-26T11:08:56.7040000Z Job is about to start running on the hosted runner: GitHub Actions 1000124933
