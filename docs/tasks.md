@@ -83,7 +83,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] Oversized log truncated in the middle with `truncated=true`. *Evidence: `tests/test_truncate.py`.* → **C4**
 
 ### M5 · CI agent · Shazil · not started
-- [ ] CI evidence contract approved. → **C1**
+- [x] CI evidence contract approved. *Evidence: `docs/contracts/ci_signals.md`, v1 approved by Shazil (2026-10-26).* → **C1**
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
 - [ ] Sets `ambiguous_commit=true` when 2 commits touch the failing file. → **C7**
 - [ ] CI weights authored by a human. → **C9**

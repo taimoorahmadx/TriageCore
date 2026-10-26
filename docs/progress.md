@@ -6,15 +6,14 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C4 is complete on `feature/ci-agent`: long CI logs retain the configured head and tail around a
-  removal marker; `tests/test_truncate.py` passes (4 tests, 2026-10-26).
+- The CI evidence contract records Shazil’s approval of the pre-rerun evidence groups, separate
+  truncation group, canonical `raw_signals.truncated` field, and explicit context argument for
+  hard-block checks (2026-10-26).
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
-- C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
-  draft puts `ambiguous_commit`/`attributed_commit`. Decide in C1 (audit Q1).
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
-- C1 groups and C9 weights need the project owner's decisions; agents must not invent them.
+- C9 weights need the project owner's values; agents must not invent them.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·
