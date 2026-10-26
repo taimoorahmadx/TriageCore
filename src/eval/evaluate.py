@@ -8,6 +8,7 @@ come only from the decision logic:
 - ``penalty_rule``: the proposal's original idea, a fixed 100-point score minus
   hand-picked penalties per failure sign, with heal at >= 85. The penalty sizes are
   illustrative (not project weights); they stand in for "a hand-tuned if-else".
+- ``simple_rule``: an obvious hand rule that heals only clean, confirmed relocations.
 - ``triagecore``: the ConfidenceEngine (Bayesian diagnosis + minimum expected loss).
 
 Usage:  .venv/bin/python -m src.eval.evaluate          (needs GROQ_API_KEY for relocation)
@@ -26,7 +27,7 @@ from src.browser.relocator import Relocator
 from src.eval.stats import wilson_interval
 
 RESULTS_DIR = REPO_ROOT / "results"
-POLICIES = ("blind_heal", "penalty_rule", "triagecore")
+POLICIES = ("blind_heal", "penalty_rule", "simple_rule", "triagecore")
 
 
 def blind_heal(signals: dict[str, Any]) -> str:
@@ -45,6 +46,21 @@ def penalty_rule(signals: dict[str, Any]) -> str:
     score -= 10 if (signals.get("console_errors") or 0) > 0 else 0
     score -= 20 if signals.get("action_succeeded") is False else 0
     return "heal" if score >= 85 else "escalate"
+
+
+def simple_rule(signals: dict[str, Any]) -> str:
+    """Strongest obvious rule: heal only on a clean, confirmed result."""
+    if signals.get("original_resolved_after_wait") is True and signals.get("expected_state_reached") is not False:
+        return "flag"
+    if (
+        signals.get("relocated_match_count") == 1
+        and signals.get("expected_state_reached") is True
+        and signals.get("uncaught_page_errors") == 0
+        and signals.get("error_state_shown") is not True
+        and signals.get("failed_requests") == 0
+    ):
+        return "heal"
+    return "escalate"
 
 
 def summarise(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -125,6 +141,7 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
             actions = {
                 "blind_heal": blind_heal(st["raw_signals"]),
                 "penalty_rule": penalty_rule(st["raw_signals"]),
+                "simple_rule": simple_rule(st["raw_signals"]),
                 "triagecore": st["engine"]["recommended_action"],
             }
             for policy, action in actions.items():

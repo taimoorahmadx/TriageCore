@@ -7,9 +7,8 @@ History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
 - On `feature/eval`, QA evaluation reports Wilson 95% confidence intervals for acceptable actions,
-  masked regressions, and needless escalations. Focused tests, Python lint, frontend lint, and
-  frontend build pass.
-- Next: Q4 (`simple_rule` baseline) or Q2 (evaluation timing NFRs) can start after B2.
+  masked regressions, and needless escalations, with `blind_heal`, `penalty_rule`, and
+  `simple_rule` baselines. Q4 checks pass; Q2 (evaluation timing NFRs) remains available after B2.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1

@@ -49,6 +49,10 @@ def test_triagecore_beats_both_baselines(report):
     assert s["triagecore"]["accuracy"] >= s["penalty_rule"]["accuracy"]
 
 
+def test_simple_rule_is_reported(report):
+    assert "simple_rule" in report["summary"]
+
+
 def test_every_step_is_triaged_and_decided(report):
     assert len(report["rows"]) == 12
     for row in report["rows"]:
