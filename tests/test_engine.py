@@ -35,6 +35,16 @@ def posterior_of(engine, evidence):
     return engine.model.posterior(spec, states)
 
 
+def test_rerun_is_a_valid_action():
+    output = ConfidenceEngineOutput(
+        classification="flaky",
+        confidence_score=90,
+        reasoning_trace="CI failure classified as intermittent.",
+        recommended_action="rerun",
+    )
+    assert output.recommended_action == "rerun"
+
+
 # (a) The engine reproduces a posterior computed by hand.
 def test_posterior_matches_hand_calculation(engine):
     # Evidence: page error + error banner (runtime_failure = "2+"), expected state NOT reached.

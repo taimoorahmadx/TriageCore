@@ -6,9 +6,8 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- On `feature/eval`, Q3 adds the optional `llm_judge` baseline and CLI flag; `.venv/bin/python -m pytest
-  -q tests/test_pipeline.py` passes (7 tests, 2026-10-26). Q2 instrumentation is complete; M2/M3
-  targets still need measured results from a real evaluation run.
+- C2 is complete on `feature/ci-agent`: `rerun` is a valid engine action and appears in the
+  output contract; `make test-engine` passes (32 tests, 2026-10-26).
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1

@@ -13,6 +13,6 @@ class ConfidenceEngineOutput(BaseModel):
     classification: Literal["flaky", "dependency", "bug", "infra", "stale_selector", "likely_regression"] = Field(description="Diagnosis only. Never an action.")
     confidence_score: int = Field(ge=0, le=100, description="Calculated confidence score between 0 and 100.")
     reasoning_trace: str = Field(description="Explanation of how the score was calculated.")
-    recommended_action: Literal["heal", "escalate", "auto-fix", "flag"] = Field(
-        description="The action with the lowest expected loss after hard safety blocks are applied."
+    recommended_action: Literal["heal", "escalate", "auto-fix", "flag", "rerun"] = Field(
+        description="Chosen by minimum expected loss; see docs/contracts/engine_io.md."
     )
