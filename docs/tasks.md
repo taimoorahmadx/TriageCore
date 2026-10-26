@@ -85,7 +85,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ### M5 · CI agent · Shazil · not started
 - [x] CI evidence contract approved. *Evidence: `docs/contracts/ci_signals.md`, v1 approved by Shazil (2026-10-26).* → **C1**
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
-- [ ] Sets `ambiguous_commit=true` when 2 commits touch the failing file. → **C7**
+- [x] Sets `ambiguous_commit=true` when 2 commits touch the failing file. *Evidence: `tests/test_tracing.py::test_two_matching_commits_are_ambiguous`.* → **C7**
 - [ ] CI weights authored by a human. → **C9**
 - [ ] CI evaluation on ≥ 30 labelled real cases. → **C3**, **C10**
 

@@ -55,7 +55,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] C2 · Add `rerun` to the engine's action list
 - [x] C4 · Truncate long CI logs in the middle
 - [x] C1 · CI evidence contract · after C2 · approved 2026-10-26
-- [ ] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
+- [x] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
 - [ ] C3 · Corpus of 30–40 real failed CI runs · after C1 · *needs you: verify every label*
 - [ ] C6 · LLM extracts structured facts from a log · after C1, C4
 - [ ] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7

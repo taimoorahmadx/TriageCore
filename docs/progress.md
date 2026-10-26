@@ -6,9 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- The CI evidence contract records Shazil’s approval of the pre-rerun evidence groups, separate
-  truncation group, canonical `raw_signals.truncated` field, and explicit context argument for
-  hard-block checks (2026-10-26).
+- CI commit tracing now checks the 10 most recent commits, reports unique candidates without guessing,
+  flags multiple matches as ambiguous, and detects dependency manifest or lockfile changes. The
+  `tests/test_tracing.py` checks pass (6 tests, 2026-10-26).
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
