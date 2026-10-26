@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import csv
 import json
+import statistics
 import sys
 from datetime import datetime
 from typing import Any
@@ -87,7 +88,20 @@ def summarise(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "needless_rate_ci": wilson_interval(needless, non_regressions),
         }
     summary["triagecore"]["cause_accuracy"] = sum(1 for r in rows if r["cause_correct"]) / n if n else 0.0
+    summary["timing"] = {
+        "duration_ms": _percentiles([r["duration_ms"] for r in rows if r["duration_ms"] is not None]),
+        "dom_extract_ms": _percentiles([r["dom_extract_ms"] for r in rows if r["dom_extract_ms"] is not None]),
+    }
     return summary
+
+
+def _percentiles(values: list[float]) -> dict[str, float | None]:
+    if not values:
+        return {"p50": None, "p95": None}
+    if len(values) < 2:
+        return {"p50": values[0], "p95": values[0]}
+    quantiles = statistics.quantiles(values, n=20)
+    return {"p50": quantiles[9], "p95": quantiles[18]}
 
 
 def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str, Any]:
@@ -113,6 +127,7 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
                     "confidence": None,
                     "proposed_selector": None,
                     "duration_ms": None,
+                    "dom_extract_ms": None,
                 }
                 actions = {policy: "escalate" for policy in POLICIES}
                 for policy, action in actions.items():
@@ -137,6 +152,7 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
                 "confidence": st["engine"]["confidence_score"],
                 "proposed_selector": st["context"]["proposed_selector"],
                 "duration_ms": st["timings_ms"]["total"],
+                "dom_extract_ms": st["timings_ms"].get("dom_extract"),
             }
             actions = {
                 "blind_heal": blind_heal(st["raw_signals"]),

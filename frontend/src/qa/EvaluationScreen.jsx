@@ -34,6 +34,10 @@ function rateWithInterval(rate, interval) {
   return `${pct(rate)} (95% CI ${pct(interval[0])}–${pct(interval[1])})`;
 }
 
+function timingValue(value, divisor = 1, decimals = 0) {
+  return value == null ? '—' : (value / divisor).toFixed(decimals);
+}
+
 export function EvaluationScreen() {
   const [report, setReport] = useState(null);
   const [engine, setEngine] = useState(null);
@@ -91,6 +95,13 @@ export function EvaluationScreen() {
             <Stat label="Real bugs let through" value={`${tc.masked_regressions}/${tc.regressions_total}`} sub={`blind healing let through ${s.blind_heal.masked_regressions}/${s.blind_heal.regressions_total}`} />
             <Stat label="Needless escalations" value={tc.needless_escalations} sub="harmless changes sent to a human anyway" />
           </div>
+
+          <Panel title="Timing targets" hint="Measured across triaged steps. The heal cycle uses total step duration; DOM extraction measures only the browser HTML read.">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Stat label="Heal cycle · p50 / p95" value={`${timingValue(s.timing?.duration_ms?.p50, 1000, 2)} / ${timingValue(s.timing?.duration_ms?.p95, 1000, 2)} s`} sub="Target: p95 under 10 s" />
+              <Stat label="DOM extraction · p50 / p95" value={`${timingValue(s.timing?.dom_extract_ms?.p50)} / ${timingValue(s.timing?.dom_extract_ms?.p95)} ms`} sub="Target: p95 under 500 ms; relocated steps only" />
+            </div>
+          </Panel>
 
           <Panel title="Outcome rates with 95% confidence intervals" hint="Wilson intervals show the uncertainty caused by the small scenario suite.">
             <div className="overflow-x-auto rounded-xl border border-white/[0.06]">

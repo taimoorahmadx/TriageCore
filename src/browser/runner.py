@@ -133,7 +133,9 @@ def collect_step_evidence(page: Page, step: StepSpec, relocator: Relocator, timi
         target = step.original_selector
     else:
         t0 = time.perf_counter()
+        dom_extract_started = time.perf_counter()
         html = page.inner_html(step.container_selector) if step.container_selector else page.inner_html("body")
+        ev.timings_ms["dom_extract"] = ms(dom_extract_started)
         try:
             proposed = relocator.relocate(RelocationRequest(step.original_selector, step.intent, html))
             match_count, invalid = _count(page, proposed)

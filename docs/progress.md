@@ -6,9 +6,9 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- On `feature/eval`, QA evaluation reports Wilson 95% confidence intervals for acceptable actions,
-  masked regressions, and needless escalations, with `blind_heal`, `penalty_rule`, and
-  `simple_rule` baselines. Q4 checks pass; Q2 (evaluation timing NFRs) remains available after B2.
+- On `feature/eval`, QA evaluation reports Wilson 95% confidence intervals and timing p50/p95
+  for triaged-step duration and DOM extraction. Q2 instrumentation is complete; the M2/M3 target
+  criteria remain unchecked until a real evaluation run supplies measured results.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
