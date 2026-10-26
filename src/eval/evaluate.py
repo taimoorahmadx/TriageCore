@@ -16,6 +16,7 @@ Usage:  .venv/bin/python -m src.eval.evaluate          (needs GROQ_API_KEY for r
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import statistics
@@ -25,6 +26,7 @@ from typing import Any
 
 from src.agents.qa_pipeline import REPO_ROOT, Truth, run_scenarios, score_step
 from src.browser.relocator import Relocator
+from src.eval.llm_judge import GroqJudge, Judge
 from src.eval.stats import wilson_interval
 
 RESULTS_DIR = REPO_ROOT / "results"
@@ -64,12 +66,12 @@ def simple_rule(signals: dict[str, Any]) -> str:
     return "escalate"
 
 
-def summarise(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+def summarise(rows: list[dict[str, Any]], policies: tuple[str, ...] = POLICIES) -> dict[str, dict[str, Any]]:
     summary = {}
     n = len(rows)
     regressions = sum(1 for r in rows if r["truth_cause"] == "likely_regression")
     non_regressions = n - regressions
-    for policy in POLICIES:
+    for policy in policies:
         acceptable = sum(1 for r in rows if r[f"{policy}_acceptable"])
         masked = sum(1 for r in rows if r[f"{policy}_masked"])
         needless = sum(1 for r in rows if r[f"{policy}_needless"])
@@ -104,8 +106,11 @@ def _percentiles(values: list[float]) -> dict[str, float | None]:
     return {"p50": quantiles[9], "p95": quantiles[18]}
 
 
-def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str, Any]:
+def evaluate(
+    relocator: Relocator | None = None, save: bool = True, judge: Judge | None = None
+) -> dict[str, Any]:
     started = datetime.now()
+    policies = POLICIES + (("llm_judge",) if judge is not None else ())
     results = run_scenarios(relocator=relocator)
     rows = []
     for res in results:
@@ -129,7 +134,7 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
                     "duration_ms": None,
                     "dom_extract_ms": None,
                 }
-                actions = {policy: "escalate" for policy in POLICIES}
+                actions = {policy: "escalate" for policy in policies}
                 for policy, action in actions.items():
                     sc = score_step(action, "error", truth)
                     row[f"{policy}_action"] = action
@@ -160,6 +165,12 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
                 "simple_rule": simple_rule(st["raw_signals"]),
                 "triagecore": st["engine"]["recommended_action"],
             }
+            if judge is not None:
+                try:
+                    action = judge.decide(st)
+                except Exception:
+                    action = "escalate"
+                actions["llm_judge"] = action if action in {"heal", "flag", "escalate"} else "escalate"
             for policy, action in actions.items():
                 sc = score_step(action, st["engine"]["classification"], truth)
                 row[f"{policy}_action"] = action
@@ -172,7 +183,7 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
     report = {
         "generated_at": started.isoformat(timespec="seconds"),
         "relocator": type(relocator).__name__ if relocator else "GroqRelocator",
-        "summary": summarise(rows),
+        "summary": summarise(rows, policies),
         "rows": rows,
         "runs": results,
     }
@@ -189,7 +200,10 @@ def evaluate(relocator: Relocator | None = None, save: bool = True) -> dict[str,
 
 
 if __name__ == "__main__":
-    report = evaluate()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--llm-judge", action="store_true", help="include the Groq LLM judge baseline")
+    args = parser.parse_args()
+    report = evaluate(judge=GroqJudge() if args.llm_judge else None)
     print(f"{'policy':14s} {'acceptable':>11s} {'masked bugs':>12s} {'needless esc.':>14s}")
     for policy, s in report["summary"].items():
         print(f"{policy:14s} {s['acceptable_actions']:>5d}/{s['steps']:<5d} "
