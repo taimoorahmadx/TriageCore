@@ -80,7 +80,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ### M4 · CI ingestion · Shazil · not started (scope: ADR 006)
 - [ ] 3 malformed payloads return 400 without crashing. → **C5**
 - [ ] Invalid signature returns 401. → **C5**
-- [ ] Oversized log truncated in the middle with `truncated=true`. → **C4**
+- [x] Oversized log truncated in the middle with `truncated=true`. *Evidence: `tests/test_truncate.py`.* → **C4**
 
 ### M5 · CI agent · Shazil · not started
 - [ ] CI evidence contract approved. → **C1**

@@ -6,8 +6,8 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C2 is complete on `feature/ci-agent`: `rerun` is a valid engine action and appears in the
-  output contract; `make test-engine` passes (32 tests, 2026-10-26).
+- C4 is complete on `feature/ci-agent`: long CI logs retain the configured head and tail around a
+  removal marker; `tests/test_truncate.py` passes (4 tests, 2026-10-26).
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
