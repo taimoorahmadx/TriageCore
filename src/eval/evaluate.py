@@ -23,6 +23,7 @@ from typing import Any
 
 from src.agents.qa_pipeline import REPO_ROOT, Truth, run_scenarios, score_step
 from src.browser.relocator import Relocator
+from src.eval.stats import wilson_interval
 
 RESULTS_DIR = REPO_ROOT / "results"
 POLICIES = ("blind_heal", "penalty_rule", "triagecore")
@@ -50,6 +51,7 @@ def summarise(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     summary = {}
     n = len(rows)
     regressions = sum(1 for r in rows if r["truth_cause"] == "likely_regression")
+    non_regressions = n - regressions
     for policy in POLICIES:
         acceptable = sum(1 for r in rows if r[f"{policy}_acceptable"])
         masked = sum(1 for r in rows if r[f"{policy}_masked"])
@@ -58,11 +60,15 @@ def summarise(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "steps": n,
             "acceptable_actions": acceptable,
             "accuracy": acceptable / n if n else 0.0,
+            "accuracy_ci": wilson_interval(acceptable, n),
             "masked_regressions": masked,
             "regressions_total": regressions,
             # Share of real bugs that were let through without a human: the false-positive rate that matters here.
             "masked_rate": masked / regressions if regressions else 0.0,
+            "masked_rate_ci": wilson_interval(masked, regressions),
             "needless_escalations": needless,
+            "needless_rate": needless / non_regressions if non_regressions else 0.0,
+            "needless_rate_ci": wilson_interval(needless, non_regressions),
         }
     summary["triagecore"]["cause_accuracy"] = sum(1 for r in rows if r["cause_correct"]) / n if n else 0.0
     return summary

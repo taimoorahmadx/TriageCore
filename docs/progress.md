@@ -6,11 +6,10 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Q1 is complete on `feature/qa-agent`: healed QA steps include a unified selector patch suggestion;
-  the UI labels it as not applied. Patch tests, frontend lint/build, and Python lint pass.
-- Owner decisions 2026-10-25: no scope change, all CI stays in FYP-1; CI evidence = pre-rerun facts,
-  rerun outcome = label; `heal` blocked when expected state not reached; project owner writes B1 labels
-  before any run.
+- On `feature/eval`, QA evaluation reports Wilson 95% confidence intervals for acceptable actions,
+  masked regressions, and needless escalations. Focused tests, Python lint, frontend lint, and
+  frontend build pass.
+- Next: Q4 (`simple_rule` baseline) or Q2 (evaluation timing NFRs) can start after B2.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1

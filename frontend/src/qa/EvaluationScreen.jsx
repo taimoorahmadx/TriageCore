@@ -30,6 +30,10 @@ const Mark = ({ ok }) => (ok
   ? <CheckCircle2 className="inline h-3.5 w-3.5 text-[#30d158] shrink-0" aria-label="acceptable" />
   : <XCircle className="inline h-3.5 w-3.5 text-[#ff453a] shrink-0" aria-label="not acceptable" />);
 
+function rateWithInterval(rate, interval) {
+  return `${pct(rate)} (95% CI ${pct(interval[0])}–${pct(interval[1])})`;
+}
+
 export function EvaluationScreen() {
   const [report, setReport] = useState(null);
   const [engine, setEngine] = useState(null);
@@ -87,6 +91,31 @@ export function EvaluationScreen() {
             <Stat label="Real bugs let through" value={`${tc.masked_regressions}/${tc.regressions_total}`} sub={`blind healing let through ${s.blind_heal.masked_regressions}/${s.blind_heal.regressions_total}`} />
             <Stat label="Needless escalations" value={tc.needless_escalations} sub="harmless changes sent to a human anyway" />
           </div>
+
+          <Panel title="Outcome rates with 95% confidence intervals" hint="Wilson intervals show the uncertainty caused by the small scenario suite.">
+            <div className="overflow-x-auto rounded-xl border border-white/[0.06]">
+              <table className="w-full min-w-[680px] text-left text-xs">
+                <thead className="bg-white/[0.02] text-[11px] uppercase tracking-wider text-neutral-400">
+                  <tr className="border-b border-white/[0.08]">
+                    <th className="px-3.5 py-3 font-medium">Approach</th>
+                    <th className="px-3 py-3 font-medium">Acceptable actions</th>
+                    <th className="px-3 py-3 font-medium">Real bugs let through</th>
+                    <th className="px-3 py-3 font-medium">Needless escalations</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/[0.04] text-neutral-200">
+                  {POLICY_ORDER.map((policy) => (
+                    <tr key={policy}>
+                      <td className="px-3.5 py-3 font-medium">{POLICY[policy].label}</td>
+                      <td className="px-3 py-3 font-mono tabular-nums">{rateWithInterval(s[policy].accuracy, s[policy].accuracy_ci)}</td>
+                      <td className="px-3 py-3 font-mono tabular-nums">{rateWithInterval(s[policy].masked_rate, s[policy].masked_rate_ci)}</td>
+                      <td className="px-3 py-3 font-mono tabular-nums">{rateWithInterval(s[policy].needless_rate, s[policy].needless_rate_ci)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Panel>
 
           <div className="grid gap-4 lg:grid-cols-2">
             <Panel title="Real bugs let through without a human" hint="Lower is better. This is the failure TriageCore exists to prevent.">
