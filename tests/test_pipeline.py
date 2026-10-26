@@ -9,6 +9,7 @@ import pytest
 from src.agents.qa_pipeline import run_scenarios
 from src.browser.relocator import RelocationRequest
 from src.eval.evaluate import evaluate
+from src.eval.llm_judge import FixedJudge
 
 
 class KnownRenames:
@@ -47,6 +48,16 @@ def test_triagecore_beats_both_baselines(report):
     s = report["summary"]
     assert s["triagecore"]["accuracy"] > s["blind_heal"]["accuracy"]
     assert s["triagecore"]["accuracy"] >= s["penalty_rule"]["accuracy"]
+
+
+def test_simple_rule_is_reported(report):
+    assert "simple_rule" in report["summary"]
+
+
+def test_llm_judge_baseline_is_reported():
+    report = evaluate(relocator=KnownRenames(), save=False, judge=FixedJudge("heal"))
+    assert "llm_judge" in report["summary"]
+    assert report["summary"]["llm_judge"]["masked_regressions"] == 4
 
 
 def test_every_step_is_triaged_and_decided(report):

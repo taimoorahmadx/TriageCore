@@ -11,8 +11,9 @@ export const POLICY = {
   triagecore: { label: 'TriageCore engine', color: '#0a84ff' },
   blind_heal: { label: 'Blind healing', color: '#ff453a' },
   penalty_rule: { label: 'Simple penalty rule', color: '#30d158' },
+  simple_rule: { label: 'Simple rule', color: '#52525b' },
 };
-export const POLICY_ORDER = ['triagecore', 'penalty_rule', 'blind_heal'];
+export const POLICY_ORDER = ['triagecore', 'simple_rule', 'penalty_rule', 'blind_heal'];
 
 // Diverging pair (blue <-> red) for "this clue points toward rename vs real bug".
 export const TOWARD_RENAME = '#0a84ff';

@@ -44,10 +44,10 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 4. `feature/eval` · stronger evaluation
-- [ ] B2 · 95% confidence intervals in evaluation results
-- [ ] Q4 · `simple_rule` baseline (an obvious hand rule) · after B2
-- [ ] Q2 · Measure heal cycle (< 10 s) and DOM extraction (< 500 ms) · after B2
-- [ ] Q3 · `llm_judge` baseline ("just ask the LLM") · after Q4
+- [x] B2 · 95% confidence intervals in evaluation results
+- [x] Q4 · `simple_rule` baseline (an obvious hand rule) · after B2
+- [x] Q2 · Measure heal cycle (< 10 s) and DOM extraction (< 500 ms) · after B2
+- [x] Q3 · `llm_judge` baseline ("just ask the LLM") · after Q4
 
 → Merge into `main`.
 
