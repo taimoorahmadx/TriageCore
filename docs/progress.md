@@ -6,12 +6,11 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C3 collector and corpus README generator are in place. The current corpus has 61 case folders;
-  41 are reviewed `infra` cases. Other inspected logs include a missing module, a lint error and a
-  test failure, but they lack enough fix or same-workflow rerun evidence for safe cause labels. The
-  collector's GitHub API access is intermittent. Three saved logs containing signed artifact URLs
-  were sanitized, and the credential-marker scan found zero remaining matches. Shazil is looking
-  for an existing dataset that can support the cause labels before C3 resumes.
+- C6 log fact extraction is implemented in `src/ci/facts.py`: Groq output is schema-validated,
+  logs are secret-masked before transmission, invalid responses get one retry, then yield empty
+  facts with the error recorded. The no-network tests pass. C3 remains paused while Shazil looks
+  for a suitable existing dataset; the working corpus needs pruning and sufficient evidence for
+  each cause label before C3 can resume.
 ## Blockers / questions for the team
 - C3 needs a suitable existing dataset or enough real cases with evidence for every cause. The
   current 61-folder working corpus must be pruned before completion; the accepted task and ADR still
