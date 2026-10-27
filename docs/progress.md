@@ -6,30 +6,21 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C9 is complete: `src/core/weights.yaml` now enables CI with provisional, documented priors and
-  likelihoods, plus the single `default` loss tier approved by Shazil on 2026-10-27. These
-  probabilities are assumptions, not corpus measurements; C12 will calibrate them on reviewed
-  labels with a disjoint holdout. `make weights` validates the domain. Full `make test` passed after
-  rerunning with localhost socket permission; sandbox restrictions blocked the initial run.
-  C5 is complete: `/api/ci/webhook` verifies GitHub's HMAC signature over raw bytes before JSON
-  parsing, rejects malformed inputs without 500s, and idempotently stores completed failed runs.
-  Eleven focused tests pass. Starlette `TestClient` hangs even for a minimal FastAPI app with the
-  installed FastAPI 0.162.0 / Starlette 1.7.0 / httpx 0.28.1 combination; tests instead invoke the
-  async handler with equivalent Starlette requests. C8 is complete: CI evidence maps through
-  `CIAdapter`, context enforces the unique-commit `auto-fix` precondition, and synthetic engine
-  tests verify cause mapping, `rerun`, ambiguity blocking and all-null escalation. The
-  `passed_on_rerun` outcome remains a label, not engine input.
-  C3 is scheduled at the end of FYP-1, after the CI implementation branch is merged, while Shazil
-  looks for a suitable existing dataset. It no longer blocks C10/C11. The working corpus needs
-  pruning and sufficient evidence for each cause label before the full benchmark/calibration.
-- C6 log fact extraction is implemented in `src/ci/facts.py`: Groq output is schema-validated,
-  logs are secret-masked before transmission, invalid responses get one retry, then yield empty
-  facts with the error recorded.
-- CI weight policy now allows explicitly tasked, provisional agent proposals; C9 covers initial
-  values and owner-approved costs. C10/C11 use those frozen provisional values for the initial
-  benchmark and screen. C12 is reserved for final end-of-FYP-1 calibration after those results, using
-  reviewed calibration data and a holdout not used by C10. QA calibration is also final-stage human
-  work. C3 and C12 follow C10/C11 at the end of FYP-1.
+- C10 is complete: the CI pipeline runs fixture logs through truncation, secret masking, schema-validated
+  fact extraction, commit attribution, and the ConfidenceEngine; errors fail safe to escalation. The
+  preliminary fixture comparison reports `rerun_all`, `keyword_rule`, and `triagecore` with Wilson
+  intervals and p50/p95 durations. It uses provisional C9 weights without tuning and is explicitly
+  not real-world benchmark evidence; C3 reviewed-corpus evaluation remains deferred until the
+  end-of-FYP-1 follow-up. `make test` passed (91 tests), and the evaluator printed its summary.
+  C9 remains provisional with the default loss tier approved by Shazil on 2026-10-27. C5's webhook
+  verifies signatures before parsing and idempotently stores completed failed runs; tests invoke
+  the async handler directly because the installed Starlette `TestClient` hangs. C8 maps CI evidence
+  through `CIAdapter`, enforces unique-commit auto-fix attribution, and keeps rerun outcome as a
+  label rather than engine evidence. C5/C8 checks passed before this session.
+- C6 fact extraction uses Groq, masks secrets before transmission, validates schemas and yields empty
+  facts after two invalid responses. C3 remains scheduled after C10/C11 and branch merge; the
+  working corpus needs pruning and enough evidence for each cause before full benchmark/calibration.
+
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).

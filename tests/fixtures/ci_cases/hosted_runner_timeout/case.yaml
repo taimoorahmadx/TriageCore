@@ -1,0 +1,7 @@
+id: hosted_runner_timeout
+repo: example/project
+run_id: fixture-infra-1
+risk_tier: default
+label: infra
+commits: []
+log_file: log.txt

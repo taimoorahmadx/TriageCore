@@ -1,0 +1,281 @@
+{
+  "generated_at": "2026-10-27T09:50:36",
+  "evaluation_type": "preliminary_fixture_smoke",
+  "weights": "provisional C9 values; not tuned on fixture cases",
+  "summary": {
+    "rerun_all": {
+      "steps": 2,
+      "acceptable_actions": 0,
+      "accuracy": 0.0,
+      "accuracy_ci": [
+        0.0,
+        0.6576280471103807
+      ],
+      "masked_regressions": 1,
+      "regressions_total": 1,
+      "masked_rate": 1.0,
+      "masked_rate_ci": [
+        0.20654329147389294,
+        1.0
+      ],
+      "needless_escalations": 0,
+      "needless_rate": 0.0,
+      "needless_rate_ci": [
+        0.0,
+        0.7934567085261071
+      ]
+    },
+    "keyword_rule": {
+      "steps": 2,
+      "acceptable_actions": 2,
+      "accuracy": 1.0,
+      "accuracy_ci": [
+        0.3423719528896193,
+        1.0
+      ],
+      "masked_regressions": 0,
+      "regressions_total": 1,
+      "masked_rate": 0.0,
+      "masked_rate_ci": [
+        0.0,
+        0.7934567085261071
+      ],
+      "needless_escalations": 0,
+      "needless_rate": 0.0,
+      "needless_rate_ci": [
+        0.0,
+        0.7934567085261071
+      ]
+    },
+    "triagecore": {
+      "steps": 2,
+      "acceptable_actions": 1,
+      "accuracy": 0.5,
+      "accuracy_ci": [
+        0.09452865480086611,
+        0.905471345199134
+      ],
+      "masked_regressions": 0,
+      "regressions_total": 1,
+      "masked_rate": 0.0,
+      "masked_rate_ci": [
+        0.0,
+        0.7934567085261071
+      ],
+      "needless_escalations": 1,
+      "needless_rate": 1.0,
+      "needless_rate_ci": [
+        0.20654329147389294,
+        1.0
+      ],
+      "cause_accuracy": 0.5
+    },
+    "timing": {
+      "duration_ms": {
+        "p50": 1512.4235,
+        "p95": 1530.0315499999997
+      }
+    }
+  },
+  "rows": [
+    {
+      "case_id": "dependency_failure",
+      "label": "dependency",
+      "status": "ok",
+      "triagecore_cause": "dependency",
+      "triagecore_cause_correct": true,
+      "duration_ms": 1518.945,
+      "failure_kind": null,
+      "confidence_score": 7,
+      "rerun_all_action": "rerun",
+      "rerun_all_action_acceptable": false,
+      "rerun_all_masked": true,
+      "rerun_all_needless": false,
+      "keyword_rule_action": "auto-fix",
+      "keyword_rule_action_acceptable": true,
+      "keyword_rule_masked": false,
+      "keyword_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_action_acceptable": false,
+      "triagecore_masked": false,
+      "triagecore_needless": true
+    },
+    {
+      "case_id": "hosted_runner_timeout",
+      "label": "infra",
+      "status": "ok",
+      "triagecore_cause": "flaky",
+      "triagecore_cause_correct": false,
+      "duration_ms": 1505.902,
+      "failure_kind": null,
+      "confidence_score": 25,
+      "rerun_all_action": "rerun",
+      "rerun_all_action_acceptable": false,
+      "rerun_all_masked": false,
+      "rerun_all_needless": false,
+      "keyword_rule_action": "escalate",
+      "keyword_rule_action_acceptable": true,
+      "keyword_rule_masked": false,
+      "keyword_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_action_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false
+    }
+  ],
+  "runs": [
+    {
+      "case_id": "dependency_failure",
+      "label": "dependency",
+      "status": "ok",
+      "classification": "dependency",
+      "recommended_action": "escalate",
+      "confidence_score": 7,
+      "reasoning_trace": "Evidence: dependency_change=changed [ln P: flaky -2.30, dependency -0.22, bug -1.05, infra -1.61]; log_coverage=complete [ln P: flaky -0.11, dependency -0.11, bug -0.11, infra -0.11]. Not observed (ignored, not assumed fine): failure_kind, code_link. Posterior: flaky 0.069, dependency 0.552, bug 0.241, infra 0.138 -> most probable cause: dependency. Blocked: auto-fix (no uniquely attributed commit). Risk tier 'default', expected loss: rerun 9.31, escalate 1.72. Decision: escalate to a human.",
+      "raw_signals": {
+        "failure_kind": null,
+        "dependency_change": "changed",
+        "code_link": null,
+        "truncated": false
+      },
+      "context": {
+        "risk_tier": "default",
+        "repo": "example/project",
+        "run_id": "fixture-dependency-1",
+        "case_id": "dependency_failure",
+        "ambiguous_commit": false,
+        "attributed_commit": null
+      },
+      "facts": {
+        "failure_kind": null,
+        "failing_files": [],
+        "error_excerpt": null
+      },
+      "details": {
+        "group_states": {
+          "failure_kind": null,
+          "dependency_change": "changed",
+          "code_link": null,
+          "log_coverage": "complete"
+        },
+        "contributions": {
+          "dependency_change": {
+            "flaky": -2.3025850929940455,
+            "dependency": -0.2231435513142097,
+            "bug": -1.0498221244986778,
+            "infra": -1.6094379124341003
+          },
+          "log_coverage": {
+            "flaky": -0.10536051565782628,
+            "dependency": -0.10536051565782628,
+            "bug": -0.10536051565782628,
+            "infra": -0.10536051565782628
+          }
+        },
+        "missing_groups": [
+          "failure_kind",
+          "code_link"
+        ],
+        "posterior": {
+          "flaky": 0.06896551724137934,
+          "dependency": 0.5517241379310345,
+          "bug": 0.24137931034482749,
+          "infra": 0.13793103448275862
+        },
+        "fit": 0.848528137423857,
+        "risk_tier": "default",
+        "expected_loss": {
+          "rerun": 9.310344827586206,
+          "escalate": 1.7241379310344827
+        },
+        "blocked": {
+          "auto-fix": "no uniquely attributed commit"
+        },
+        "thresholds": {
+          "rerun": 0.8
+        }
+      },
+      "score": {
+        "cause_correct": true,
+        "action_acceptable": false,
+        "masked": false,
+        "needless_escalation": true
+      },
+      "duration_ms": 1518.945
+    },
+    {
+      "case_id": "hosted_runner_timeout",
+      "label": "infra",
+      "status": "ok",
+      "classification": "flaky",
+      "recommended_action": "escalate",
+      "confidence_score": 25,
+      "reasoning_trace": "Evidence: log_coverage=complete [ln P: flaky -0.11, dependency -0.11, bug -0.11, infra -0.11]. Not observed (ignored, not assumed fine): failure_kind, dependency_change, code_link. Posterior: flaky 0.250, dependency 0.250, bug 0.250, infra 0.250 -> most probable cause: flaky. Blocked: auto-fix (no uniquely attributed commit). Risk tier 'default', expected loss: rerun 7.50, escalate 1.50. Decision: escalate to a human.",
+      "raw_signals": {
+        "failure_kind": null,
+        "dependency_change": null,
+        "code_link": null,
+        "truncated": false
+      },
+      "context": {
+        "risk_tier": "default",
+        "repo": "example/project",
+        "run_id": "fixture-infra-1",
+        "case_id": "hosted_runner_timeout",
+        "ambiguous_commit": false,
+        "attributed_commit": null
+      },
+      "facts": {
+        "failure_kind": null,
+        "failing_files": [],
+        "error_excerpt": null
+      },
+      "details": {
+        "group_states": {
+          "failure_kind": null,
+          "dependency_change": null,
+          "code_link": null,
+          "log_coverage": "complete"
+        },
+        "contributions": {
+          "log_coverage": {
+            "flaky": -0.10536051565782628,
+            "dependency": -0.10536051565782628,
+            "bug": -0.10536051565782628,
+            "infra": -0.10536051565782628
+          }
+        },
+        "missing_groups": [
+          "failure_kind",
+          "dependency_change",
+          "code_link"
+        ],
+        "posterior": {
+          "flaky": 0.25,
+          "dependency": 0.25,
+          "bug": 0.25,
+          "infra": 0.25
+        },
+        "fit": 0.9,
+        "risk_tier": "default",
+        "expected_loss": {
+          "rerun": 7.5,
+          "escalate": 1.5
+        },
+        "blocked": {
+          "auto-fix": "no uniquely attributed commit"
+        },
+        "thresholds": {
+          "rerun": 0.8
+        }
+      },
+      "score": {
+        "cause_correct": false,
+        "action_acceptable": true,
+        "masked": false,
+        "needless_escalation": false
+      },
+      "duration_ms": 1505.902
+    }
+  ]
+}
