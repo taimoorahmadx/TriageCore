@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 
 from archive.poc.legacy_routes import router as legacy_router
 from src.api.qa_routes import router as qa_router
+from src.ci.webhooks import router as ci_webhook_router
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -28,6 +29,7 @@ app.add_middleware(
 )
 app.mount("/tests/dummy", StaticFiles(directory=str(REPO_ROOT / "tests" / "dummy")), name="dummy")
 app.include_router(qa_router)
+app.include_router(ci_webhook_router)
 app.include_router(legacy_router)  # scripted proposal demo; routes stay under /api/legacy/*
 
 

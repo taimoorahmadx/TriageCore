@@ -6,9 +6,14 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C8 is complete: CI evidence maps through `CIAdapter`, context enforces the unique-commit
-  `auto-fix` precondition, and synthetic engine tests verify cause mapping, `rerun`, ambiguity
-  blocking and all-null escalation. The `passed_on_rerun` outcome remains a label, not engine input.
+- C5 is complete: `/api/ci/webhook` verifies GitHub's HMAC signature over raw bytes before JSON
+  parsing, rejects malformed inputs without 500s, and idempotently stores completed failed runs.
+  Eleven focused tests pass. Starlette `TestClient` hangs even for a minimal FastAPI app with the
+  installed FastAPI 0.162.0 / Starlette 1.7.0 / httpx 0.28.1 combination; tests instead invoke the
+  async handler with equivalent Starlette requests. C8 is complete: CI evidence maps through
+  `CIAdapter`, context enforces the unique-commit `auto-fix` precondition, and synthetic engine
+  tests verify cause mapping, `rerun`, ambiguity blocking and all-null escalation. The
+  `passed_on_rerun` outcome remains a label, not engine input.
   C3 is scheduled at the end of FYP-1, after the CI implementation branch is merged, while Shazil
   looks for a suitable existing dataset. It no longer blocks C10/C11. The working corpus needs
   pruning and sufficient evidence for each cause label before the full benchmark/calibration.

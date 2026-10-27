@@ -78,8 +78,8 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [ ] Heal cycle < 10 s measured as p95. → task **Q2**.
 
 ### M4 · CI ingestion · Shazil · not started (scope: ADR 006)
-- [ ] 3 malformed payloads return 400 without crashing. → **C5**
-- [ ] Invalid signature returns 401. → **C5**
+- [x] 3 malformed payloads return 400 without crashing. *Evidence: `tests/test_webhooks.py` covers signed non-JSON, missing required field and missing event header.* → **C5**
+- [x] Invalid signature returns 401. *Evidence: `tests/test_webhooks.py::test_bad_signature_returns_401` and `::test_missing_signature_returns_401`.* → **C5**
 - [x] Oversized log truncated in the middle with `truncated=true`. *Evidence: `tests/test_truncate.py`.* → **C4**
 
 ### M5 · CI agent · Shazil · not started
