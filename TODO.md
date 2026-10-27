@@ -56,7 +56,6 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] C4 · Truncate long CI logs in the middle
 - [x] C1 · CI evidence contract · after C2 · approved 2026-10-26
 - [x] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
-- [!] C3 · Corpus of 30–40 real failed CI runs — paused while finding an existing dataset that supports the cause labels; resume after reviewing candidate datasets · after C1
 - [x] C6 · LLM extracts structured facts from a log · after C1, C4
 - [x] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7
 
@@ -65,7 +64,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [ ] C5 · GitHub webhook endpoint with signature check · after S1
 - [ ] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
-- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9
+- [ ] C10 · CI pipeline and initial evaluation against baselines · after C6, C9 (fixture cases; real corpus deferred)
 - [ ] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -82,6 +81,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
+- [ ] C3 · Build and human-review the CI corpus · after C1; deferred from FYP-1 pending suitable dataset
 - [ ] C12 · Final dataset calibration of CI probability weights · after C3, C6, C8, C9, C10, C11
 Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
 

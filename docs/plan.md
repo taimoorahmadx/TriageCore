@@ -122,7 +122,7 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 
 | ID | Decision | Record |
 |---|---|---|
-| D1 | FYP-1 CI = offline slice on a labelled corpus + webhook endpoint tested with saved payloads; live GitHub App, queue, fix PRs and live trial move to FYP-2 | ADR 006, `log/changes.md` |
+| D1 | FYP-1 CI = offline vertical slice with fixture-based initial comparison + webhook endpoint tested with saved payloads; reviewed real corpus/full benchmark, live GitHub App, queue, fix PRs and live trial move to FYP-2 | ADR 006, `log/changes.md` |
 | D2 | `heal` returns a suggested patch (unified diff); files are never edited automatically | this plan, FR-Q7 |
 | D3 | `rerun` added to the action enum for CI `flaky` | ADR 006 |
 | D4 | `expected_state_selector` is supplied by the test author; when absent, that evidence is missing (weaker decision); documented as a limitation | this plan |

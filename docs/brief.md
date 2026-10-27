@@ -42,7 +42,7 @@ Small teams without dedicated QA, open-source maintainers with noisy CI, platfor
 | | FYP-1 (now) | FYP-2 |
 |---|---|---|
 | QA | Engine, collector, relocation, pipeline, UI, evaluation with baselines, suggested selector patch (never auto-applied), decision store | Real-app benchmark at scale, calibration, applying patches as PRs |
-| CI | Labelled corpus of real public logs, log truncation, LLM fact extraction, commit tracing, CI weights, CI evaluation, webhook endpoint tested with saved payloads | Live GitHub App, background queue, fix PRs (never merged), live 4-week trial |
+| CI | Log truncation, LLM fact extraction, commit tracing, provisional CI weights, fixture-based initial comparison, webhook endpoint tested with saved payloads | Reviewed real CI corpus and full benchmark, final calibration, live GitHub App, background queue, fix PRs (never merged), live 4-week trial |
 | Platform | One FastAPI app, SQLite decision store, one Docker deployment on a VM | Dashboard of decisions, acceptance testing with real projects |
 
 **Out of scope:** visual (screenshot) matching, providers other than GitHub Actions, multi-repo

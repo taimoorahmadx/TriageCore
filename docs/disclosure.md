@@ -18,7 +18,7 @@ Categories follow the FAST Idea Guide §14: **support** (does not touch the cont
 | PyYAML | Read weights and scenarios | Support | — | Strict validation in `weights.py` | — |
 | React, Vite, Tailwind CSS, lucide-react | User interface | Support | — | Manual check, build | — |
 | pytest, ruff, oxlint | Testing and linting | Support | — | — | — |
-| GitHub REST API (planned, C3) | Download public workflow logs and commit file lists for the CI corpus | Support (data source) | Rate limits; logs may be incomplete | A human verifies every label | Fewer cases; injected failures, clearly marked |
+| GitHub REST API (planned, C3 in FYP-2) | Download public workflow logs and commit file lists for the CI corpus | Support (data source) | Rate limits; logs may be incomplete | A human verifies every label | Fewer cases; injected failures, clearly marked |
 | Public open-source web app (planned, B1) | Real-app QA test cases | Support (test data) | Licence must allow copying | Licence checked and kept with the copy | Team-built pages only |
 
 **Not external:** the ConfidenceEngine (evidence model, decision policy, weights validation),
