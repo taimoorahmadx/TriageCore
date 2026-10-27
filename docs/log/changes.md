@@ -26,3 +26,5 @@ what it affects, who decided, approval status.
 - 2026-10-27 — Move CI weight calibration C12 to the final FYP-2 calibration stage after C10/C11; reserve final QA calibration for the same end stage and keep the initial CI benchmark on provisional weights.
 
 - 2026-10-27 — Defer C3 real CI corpus and full benchmark to FYP-2/M7 so the FYP-1 CI branch can proceed with fixture-based initial evaluation; remove C3 as a C10 prerequisite.
+
+- 2026-10-27 — Correct task sequencing: defer C3 and final QA/CI calibration to the end of FYP-1, after the CI implementation branch merges; keep them out of FYP-2.

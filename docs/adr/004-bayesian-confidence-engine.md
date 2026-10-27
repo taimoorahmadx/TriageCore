@@ -45,7 +45,7 @@ The engine is built from four parts:
 
 ### Weight provenance amendment (2026-10-27)
 
-The original QA values remain human-elicited; final QA calibration is planned after the initial benchmark using reviewed data and a held-out evaluation. For CI, an agent may propose provisional prior and likelihood values in an explicit task, with rationale and source recorded. C10/C11 use those provisional values for the initial pipeline benchmark and screen. C12 runs in the final FYP-2 calibration stage, after those initial results, fitting tables from human-reviewed training labels and evaluating once on a holdout untouched by fitting and initial benchmark tuning. Policy loss costs remain project-owner decisions; an agent may present options but cannot approve them.
+The original QA values remain human-elicited; final QA calibration is planned at the end of FYP-1 after the initial benchmark, using reviewed data and a held-out evaluation. For CI, an agent may propose provisional prior and likelihood values in an explicit task, with rationale and source recorded. C10/C11 use those provisional values for the initial pipeline comparison and screen. C3 and C12 run after the CI implementation branch is merged, at the end of FYP-1; C12 fits tables from human-reviewed training labels and evaluates once on a holdout untouched by fitting. Policy loss costs remain project-owner decisions; an agent may present options but cannot approve them.
 
 ## Alternatives considered
 

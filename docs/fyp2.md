@@ -11,8 +11,8 @@ file replaces its FYP-2 part (M6–M8) and adds the items deferred during FYP-1 
 
 - QA agent and ConfidenceEngine working, evaluated against baselines on team pages and a real app.
 - Offline CI slice: truncation, fact extraction, commit tracing, provisional CI weights, pipeline,
-  fixture-based initial comparison and screen. The reviewed real CI corpus and full benchmark are
-  deferred to M7.
+  fixture-based initial comparison and screen. End-of-FYP-1 work adds the reviewed real CI corpus,
+  full benchmark, and first final calibration pass.
 - SQLite decision store, one Docker deployment on a VM, CI checks on every PR.
 
 ## M6 · Live CI and autonomous actions
@@ -37,9 +37,7 @@ Goal: show, with evidence that is not circular, that the engine's decisions are 
 | Item | Done when |
 |---|---|
 | Larger QA benchmark: mutations of real open-source apps, labels written before runs | ≥ 59 real regression cases (needed for a one-sided 95% bound below 5% with zero misses) plus harmless and flaky cases |
-| C3: larger CI corpus with verified labels | 30–40 real failed runs, at least five per cause, with evidence and enough cases to report per-cause results with intervals |
-| Held-out split: weights/tables are never tuned on the test cases | Split recorded before results; documented in the report |
-| Final QA/CI calibration: learn likelihood tables from reviewed labelled counts (with smoothing) and compare with the provisional/expert tables after the initial benchmarks | Report the frozen candidate on a holdout that was excluded from fitting and all initial benchmark tuning |
+| Follow-up benchmark and calibration | Build on the end-of-FYP-1 CI corpus and calibration baseline; scope and sample size will be set after reviewing those results |
 | Reliability check: predicted probability vs observed frequency; check the group-independence assumption | Reliability plot and a note on over/under-confidence |
 | Masked-rate guarantee: report false positives (masked regressions) with confidence intervals; optionally conformal risk control (ADR 004) | Target: upper bound < 5% (NFR-6), or an honest statement of the bound reached |
 | Baselines: blind heal, penalty rule, simple rule, LLM judge, and optionally a learned classifier (ADR 004 alternative) | Same metrics for every policy, including total cost under the loss table |

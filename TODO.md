@@ -79,17 +79,21 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 → Merge into `main`.
 
+## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
+- [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
+- [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
+
+→ Merge into `main`.
+
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
-- [ ] C3 · Build and human-review the CI corpus · after C1; deferred from FYP-1 pending suitable dataset
-- [ ] C12 · Final dataset calibration of CI probability weights · after C3, C6, C8, C9, C10, C11
 Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
 
-## 9. Human work for FYP-1 Final (not for AI)
+## 10. Human work for FYP-1 Final (not for AI)
 - [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Fill in `docs/disclosure.md` §2
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
-- [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set (keep mistake costs human-set)
+- [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set after the initial QA benchmark (keep mistake costs human-set)
 - [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
 - [ ] Report, poster, presentation
