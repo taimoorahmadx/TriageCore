@@ -15,7 +15,7 @@ maps to an action, since `rerun` was not in the action enum.
    - a labelled corpus of 30–40 real failed GitHub Actions runs from public repositories, each with
      its log, rerun history and the ≤ 10 most recent commits with touched files;
    - middle truncation of long logs, LLM fact extraction into a fixed schema, commit tracing with
-     `ambiguous_commit`, provisional CI weights proposed in C9 and calibrated on reviewed data in C12, the same ConfidenceEngine;
+     `ambiguous_commit`, provisional CI weights proposed in C9 and used for the initial benchmark, then final calibration on reviewed data in C12, the same ConfidenceEngine;
    - evaluation against baselines (`rerun_all`, `keyword_rule`);
    - `POST /api/ci/webhook` with signature verification, tested with saved payloads; accepted jobs
      are stored, not processed live.
@@ -36,6 +36,7 @@ service errors → `infra`. Each label is checked by a human before use.
 
 ## Weight calibration amendment (2026-10-27)
 
-CI probability weights may be agent-proposed with documented provenance, then fitted from human-reviewed
-training cases and evaluated on a holdout fixed before fitting (C12). The project owner approves the
-policy cost matrix; dataset fitting does not change it.
+CI probability weights may be agent-proposed with documented provenance and used provisionally for
+the initial C10 benchmark. Final fitting from human-reviewed training cases and one evaluation on a
+holdout untouched by fitting and the initial benchmark occur later in C12. The project owner approves
+the policy cost matrix; dataset fitting does not change it.

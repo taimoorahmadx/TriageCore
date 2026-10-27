@@ -87,7 +87,6 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
 - [x] Sets `ambiguous_commit=true` when 2 commits touch the failing file. *Evidence: `tests/test_tracing.py::test_two_matching_commits_are_ambiguous`.* → **C7**
 - [ ] CI probability tables have documented provisional values and owner-approved policy costs. → **C9**
-- [ ] CI probability tables calibrated from reviewed training cases and evaluated on untouched holdout cases. → **C12**
 - [ ] CI evaluation on ≥ 30 labelled real cases. → **C3**, **C10**
 
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
@@ -98,7 +97,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 
 ### M6–M8 · FYP-2 · not started
 - [ ] M6: agent opens (never merges) a PR with score and trace in the body; dashboard of stored decisions.
-- [ ] M7: benchmark on real cases with confidence intervals; calibration script.
+- [ ] M7: benchmark on real cases with confidence intervals; final QA/CI weight calibration on reviewed datasets after the initial benchmarks, using a held-out evaluation that is not reused for tuning. → **C12** and human work in `TODO.md`
 - [ ] M8: agents on 2–3 consenting projects for 4 weeks; acceptance CSV and report.
 
 ## Task list
@@ -129,9 +128,9 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [C6](tasks/c6.md) | Log fact extraction | Shazil | M5 | C1, C4 |
 | [C8](tasks/c8.md) | `CIAdapter` in the engine | Shazil | M5 | C1, C7 |
 | [C9](tasks/c9.md) | Initial CI weight proposal | Shazil | M5 | C8 |
-| [C12](tasks/c12.md) | Dataset calibration of CI probability weights | Shazil | M5/M7 | C3, C6, C8, C9 |
-| [C10](tasks/c10.md) | CI pipeline and evaluation | Shazil | M5 | C3, C6, C9, C12 |
+| [C10](tasks/c10.md) | CI pipeline and initial evaluation | Shazil | M5 | C3, C6, C9 |
 | [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 |
+| [C12](tasks/c12.md) | Final dataset calibration of CI probability weights | Shazil | M7 (FYP-2 final calibration) | C3, C6, C8, C9, C10, C11 |
 | [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
 | [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |
 

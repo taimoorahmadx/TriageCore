@@ -65,8 +65,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [ ] C5 · GitHub webhook endpoint with signature check · after S1
 - [ ] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
-- [ ] C12 · Dataset calibration of CI probability weights · after C3, C6, C8, C9
-- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9, C12
+- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9
 - [ ] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -83,13 +82,14 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
-No tasks yet; they are written at the start of FYP-2.
+- [ ] C12 · Final dataset calibration of CI probability weights · after C3, C6, C8, C9, C10, C11
+Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
 
 ## 9. Human work for FYP-1 Final (not for AI)
 - [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Fill in `docs/disclosure.md` §2
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
-- [ ] Tune QA evidence probabilities using labeled cases; compare against current values on held-out cases (keep mistake costs human-set)
+- [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set (keep mistake costs human-set)
 - [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
 - [ ] Report, poster, presentation

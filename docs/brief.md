@@ -24,8 +24,9 @@ One **ConfidenceEngine** (`src/core/`) used by two agents:
 
 The engine computes P(cause | evidence) with semi-naive Bayes and picks the action with the lowest
 expected cost, with `escalate` (hand it to a human) always available. QA weights are human-elicited;
-initial CI probability weights may be agent-proposed and will be calibrated on a reviewed dataset.
-Policy costs require project-owner approval. At runtime, the LLM (Groq) only proposes a replacement
+initial CI probability weights may be agent-proposed and used for the initial benchmark. Final QA/CI
+calibration is planned for the end using reviewed datasets and a held-out evaluation. Policy costs
+require project-owner approval. At runtime, the LLM (Groq) only proposes a replacement
 selector or structured facts; it never makes the decision.
 
 **Contribution:** the decision engine (evidence grouping, cost-aware decision with a reject option,

@@ -38,7 +38,7 @@ Goal: show, with evidence that is not circular, that the engine's decisions are 
 | Larger QA benchmark: mutations of real open-source apps, labels written before runs | ≥ 59 real regression cases (needed for a one-sided 95% bound below 5% with zero misses) plus harmless and flaky cases |
 | Larger CI corpus with verified labels | Enough cases per cause to report per-cause results with intervals |
 | Held-out split: weights/tables are never tuned on the test cases | Split recorded before results; documented in the report |
-| Calibration: learn likelihood tables from labelled counts (with smoothing) and compare with the expert tables | Report expert vs learned on the held-out split |
+| Final QA/CI calibration: learn likelihood tables from reviewed labelled counts (with smoothing) and compare with the provisional/expert tables after the initial benchmarks | Report the frozen candidate on a holdout that was excluded from fitting and all initial benchmark tuning |
 | Reliability check: predicted probability vs observed frequency; check the group-independence assumption | Reliability plot and a note on over/under-confidence |
 | Masked-rate guarantee: report false positives (masked regressions) with confidence intervals; optionally conformal risk control (ADR 004) | Target: upper bound < 5% (NFR-6), or an honest statement of the bound reached |
 | Baselines: blind heal, penalty rule, simple rule, LLM judge, and optionally a learned classifier (ADR 004 alternative) | Same metrics for every policy, including total cost under the loss table |

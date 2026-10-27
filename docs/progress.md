@@ -15,8 +15,10 @@ History lives in git and `docs/log/ai-usage-log.md`.
   logs are secret-masked before transmission, invalid responses get one retry, then yield empty
   facts with the error recorded.
 - CI weight policy now allows explicitly tasked, provisional agent proposals; C9 covers initial
-  values and owner-approved costs, while C12 fits probability tables on reviewed training cases
-  and reserves a holdout for C10. C3's dataset review remains paused.
+  values and owner-approved costs. C10/C11 use those frozen provisional values for the initial
+  benchmark and screen. C12 is reserved for final FYP-2 calibration after those results, using
+  reviewed calibration data and a holdout not used by C10. QA calibration is also final-stage human
+  work. C3's dataset review remains paused.
 ## Blockers / questions for the team
 - C3 needs a suitable existing dataset or enough real cases with evidence for every cause. The
   current 61-folder working corpus must be pruned before completion; the accepted task and ADR still
@@ -25,7 +27,8 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
 - C9 policy costs need project-owner approval. C12 requires reviewed labels and enough cases for a
-  training/holdout split; agents must not invent labels or claim results before evaluation.
+  training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
+  results before evaluation.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·
