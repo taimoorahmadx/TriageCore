@@ -1,0 +1,167 @@
+repo: rust-lang/rust
+run_id: 40350517930
+head_sha: e321e9f3a12fcfb707a886d30846610e41843a48
+run_attempts:
+- attempt: 1
+  head_sha: e321e9f3a12fcfb707a886d30846610e41843a48
+  conclusion: failure
+commits:
+- sha: e321e9f3a12fcfb707a886d30846610e41843a48
+  author: renovate-bot
+  files:
+  - Cargo.lock
+  - library/Cargo.lock
+  - library/alloctests/Cargo.toml
+  - library/coretests/Cargo.toml
+  - library/std/Cargo.toml
+- sha: 846e51f66b1e7b49ba9e3988c58ccfe5817ce0a9
+  author: bors
+  files:
+  - compiler/rustc_errors/src/emitter.rs
+  - compiler/rustc_expand/src/proc_macro_server.rs
+  - compiler/rustc_infer/src/infer/at.rs
+  - compiler/rustc_infer/src/infer/mod.rs
+  - compiler/rustc_infer/src/infer/relate/lattice.rs
+  - compiler/rustc_interface/src/callbacks.rs
+  - compiler/rustc_mir_transform/src/remove_noop_landing_pads.rs
+  - compiler/rustc_next_trait_solver/src/solve/eval_ctxt/solver_region_constraints.rs
+  - compiler/rustc_next_trait_solver/src/solve/mod.rs
+  - compiler/rustc_parse/src/parser/expr.rs
+  - compiler/rustc_parse/src/parser/item.rs
+  - compiler/rustc_resolve/src/lib.rs
+  - compiler/rustc_span/src/lib.rs
+  - compiler/rustc_span/src/source_map.rs
+  - compiler/rustc_trait_selection/src/traits/engine.rs
+  - compiler/rustc_type_ir/src/macros.rs
+  - compiler/rustc_type_ir/src/region_constraint.rs
+  - library/std/src/sys/pal/uefi/helpers.rs
+  - library/std/src/sys/process/uefi.rs
+  - library/std/src/sys/thread_local/guard/key.rs
+  - src/tools/clippy/clippy_lints/src/empty_line_after.rs
+  - src/tools/clippy/clippy_lints/src/matches/mod.rs
+  - src/tools/clippy/clippy_lints/src/needless_parens_on_range_literals.rs
+  - src/tools/clippy/clippy_lints/src/utils/format_args_collector.rs
+  - src/tools/clippy/clippy_utils/src/hir_utils.rs
+  - src/tools/clippy/clippy_utils/src/source.rs
+  - src/tools/rust-analyzer/.github/workflows/update-generated.yml
+  - src/tools/rust-analyzer/Cargo.lock
+  - src/tools/rust-analyzer/crates/hir-def/Cargo.toml
+  - src/tools/rust-analyzer/crates/hir-def/src/macro_expansion_tests/mbe.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/infer/pat.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/target_feature.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/target_feature/generated.rs
+  - src/tools/rust-analyzer/crates/ide-assists/src/handlers/inline_call.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/dot.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/mod_.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/snippet.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/render.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/render/function.rs
+  - src/tools/rust-analyzer/crates/ide-diagnostics/src/handlers/invalid_range_pat_type.rs
+  - src/tools/rust-analyzer/crates/parser/src/grammar/expressions/atom.rs
+  - src/tools/rust-analyzer/crates/parser/src/grammar/items.rs
+  - src/tools/rust-analyzer/crates/parser/test_data/generated/runner.rs
+  - src/tools/rust-analyzer/crates/parser/test_data/parser/inline/err/function_missing_name.rast
+  - src/tools/rust-analyzer/crates/parser/test_data/parser/inline/err/function_missing_name.rs
+  - src/tools/rust-analyzer/crates/project-model/src/cargo_workspace.rs
+  - src/tools/rust-analyzer/crates/project-model/src/workspace.rs
+  - src/tools/rust-analyzer/crates/rust-analyzer/src/main_loop.rs
+  - src/tools/rust-analyzer/crates/rust-analyzer/tests/slow-tests/main.rs
+  - src/tools/rust-analyzer/crates/stdx/src/tempfile.rs
+  - src/tools/rust-analyzer/crates/syntax/Cargo.toml
+  - src/tools/rust-analyzer/crates/toolchain/Cargo.toml
+  - src/tools/rust-analyzer/lib/smol_str/CHANGELOG.md
+  - src/tools/rust-analyzer/lib/smol_str/Cargo.toml
+  - src/tools/rust-analyzer/lib/smol_str/src/lib.rs
+  - src/tools/rust-analyzer/xtask/src/codegen.rs
+  - src/tools/rust-analyzer/xtask/src/codegen/lints.rs
+  - src/tools/rust-analyzer/xtask/src/codegen/target_features.rs
+  - src/tools/rust-analyzer/xtask/src/flags.rs
+  - src/tools/rustfmt/src/parse/session.rs
+- sha: 4923cbcf0572fddb6507ef2e22fdb3b83c94869e
+  author: JonathanBrouwer
+  files:
+  - src/tools/rust-analyzer/.github/workflows/update-generated.yml
+  - src/tools/rust-analyzer/Cargo.lock
+  - src/tools/rust-analyzer/crates/hir-def/Cargo.toml
+  - src/tools/rust-analyzer/crates/hir-def/src/macro_expansion_tests/mbe.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/infer/pat.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/target_feature.rs
+  - src/tools/rust-analyzer/crates/hir-ty/src/target_feature/generated.rs
+  - src/tools/rust-analyzer/crates/ide-assists/src/handlers/inline_call.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/dot.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/mod_.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/completions/snippet.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/render.rs
+  - src/tools/rust-analyzer/crates/ide-completion/src/render/function.rs
+  - src/tools/rust-analyzer/crates/ide-diagnostics/src/handlers/invalid_range_pat_type.rs
+  - src/tools/rust-analyzer/crates/parser/src/grammar/expressions/atom.rs
+  - src/tools/rust-analyzer/crates/parser/src/grammar/items.rs
+  - src/tools/rust-analyzer/crates/parser/test_data/generated/runner.rs
+  - src/tools/rust-analyzer/crates/parser/test_data/parser/inline/err/function_missing_name.rast
+  - src/tools/rust-analyzer/crates/parser/test_data/parser/inline/err/function_missing_name.rs
+  - src/tools/rust-analyzer/crates/project-model/src/cargo_workspace.rs
+  - src/tools/rust-analyzer/crates/project-model/src/workspace.rs
+  - src/tools/rust-analyzer/crates/rust-analyzer/src/main_loop.rs
+  - src/tools/rust-analyzer/crates/rust-analyzer/tests/slow-tests/main.rs
+  - src/tools/rust-analyzer/crates/stdx/src/tempfile.rs
+  - src/tools/rust-analyzer/crates/syntax/Cargo.toml
+  - src/tools/rust-analyzer/crates/toolchain/Cargo.toml
+  - src/tools/rust-analyzer/lib/smol_str/CHANGELOG.md
+  - src/tools/rust-analyzer/lib/smol_str/Cargo.toml
+  - src/tools/rust-analyzer/lib/smol_str/src/lib.rs
+  - src/tools/rust-analyzer/xtask/src/codegen.rs
+  - src/tools/rust-analyzer/xtask/src/codegen/lints.rs
+  - src/tools/rust-analyzer/xtask/src/codegen/target_features.rs
+  - src/tools/rust-analyzer/xtask/src/flags.rs
+- sha: c91fe2795482a6ea70b1f8a0cd5e13e7f01b2459
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_errors/src/emitter.rs
+  - compiler/rustc_expand/src/proc_macro_server.rs
+  - compiler/rustc_interface/src/callbacks.rs
+  - compiler/rustc_parse/src/parser/expr.rs
+  - compiler/rustc_parse/src/parser/item.rs
+  - compiler/rustc_resolve/src/lib.rs
+  - compiler/rustc_span/src/lib.rs
+  - compiler/rustc_span/src/source_map.rs
+  - src/tools/clippy/clippy_lints/src/empty_line_after.rs
+  - src/tools/clippy/clippy_lints/src/matches/mod.rs
+  - src/tools/clippy/clippy_lints/src/needless_parens_on_range_literals.rs
+  - src/tools/clippy/clippy_lints/src/utils/format_args_collector.rs
+  - src/tools/clippy/clippy_utils/src/hir_utils.rs
+  - src/tools/clippy/clippy_utils/src/source.rs
+  - src/tools/rustfmt/src/parse/session.rs
+- sha: c9a9ce29e7111a8bd34619b587a266a5de03eb17
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_mir_transform/src/remove_noop_landing_pads.rs
+- sha: 814563b7828cc55531bed846b5e2104340942d15
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_next_trait_solver/src/solve/eval_ctxt/solver_region_constraints.rs
+  - compiler/rustc_next_trait_solver/src/solve/mod.rs
+  - compiler/rustc_type_ir/src/macros.rs
+  - compiler/rustc_type_ir/src/region_constraint.rs
+- sha: 406d90ce3cd9d0e871ddb1c8042056477f224394
+  author: JonathanBrouwer
+  files:
+  - compiler/rustc_infer/src/infer/at.rs
+  - compiler/rustc_infer/src/infer/mod.rs
+  - compiler/rustc_infer/src/infer/relate/lattice.rs
+  - compiler/rustc_trait_selection/src/traits/engine.rs
+- sha: ee76cb7b4de8b1a924a33479b58fb9a784927769
+  author: JonathanBrouwer
+  files:
+  - library/std/src/sys/thread_local/guard/key.rs
+- sha: 88a5415f822bc1437b513c8d0d90b5dbee356d70
+  author: JonathanBrouwer
+  files:
+  - library/std/src/sys/process/uefi.rs
+- sha: 493f33629a56e306ef0eafb8ce3e94f19d147f74
+  author: JonathanBrouwer
+  files:
+  - library/std/src/sys/pal/uefi/helpers.rs
+label: null
+label_source: null
+risk_tier: medium
+suggested_label: infra

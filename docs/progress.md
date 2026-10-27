@@ -6,16 +6,30 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- On `feature/eval`, Q3 adds the optional `llm_judge` baseline and CLI flag; `.venv/bin/python -m pytest
-  -q tests/test_pipeline.py` passes (7 tests, 2026-10-26). Q2 instrumentation is complete; M2/M3
-  targets still need measured results from a real evaluation run.
+- C8 is complete: CI evidence maps through `CIAdapter`, context enforces the unique-commit
+  `auto-fix` precondition, and synthetic engine tests verify cause mapping, `rerun`, ambiguity
+  blocking and all-null escalation. The `passed_on_rerun` outcome remains a label, not engine input.
+  C3 is scheduled at the end of FYP-1, after the CI implementation branch is merged, while Shazil
+  looks for a suitable existing dataset. It no longer blocks C10/C11. The working corpus needs
+  pruning and sufficient evidence for each cause label before the full benchmark/calibration.
+- C6 log fact extraction is implemented in `src/ci/facts.py`: Groq output is schema-validated,
+  logs are secret-masked before transmission, invalid responses get one retry, then yield empty
+  facts with the error recorded.
+- CI weight policy now allows explicitly tasked, provisional agent proposals; C9 covers initial
+  values and owner-approved costs. C10/C11 use those frozen provisional values for the initial
+  benchmark and screen. C12 is reserved for final end-of-FYP-1 calibration after those results, using
+  reviewed calibration data and a holdout not used by C10. QA calibration is also final-stage human
+  work. C3 and C12 follow C10/C11 at the end of FYP-1.
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
-- C1 design gap: `QAAdapter`-style `blocked_actions(raw_signals)` cannot see `context`, where the C1
-  draft puts `ambiguous_commit`/`attributed_commit`. Decide in C1 (audit Q1).
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
-- C1 groups and C9 weights need the project owner's decisions; agents must not invent them.
+- End-of-FYP-1 C3 needs a suitable dataset or enough real cases with evidence for every cause. The current
+  61-folder working corpus must be pruned before completion; C3 still requires 30–40 reviewed cases
+  with at least five per cause. This does not block the current implementation branch.
+- C9 policy costs need project-owner approval. C12 requires reviewed labels and enough cases for a
+  training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
+  results before evaluation.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·

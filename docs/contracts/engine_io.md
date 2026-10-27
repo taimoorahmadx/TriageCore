@@ -27,7 +27,7 @@ Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/cont
   "classification": "flaky | dependency | bug | infra | stale_selector | likely_regression",
   "confidence_score": "integer 0-100",
   "reasoning_trace": "string",
-  "recommended_action": "heal | escalate | auto-fix | flag"
+  "recommended_action": "heal | escalate | auto-fix | flag | rerun"
 }
 ```
 
@@ -61,6 +61,5 @@ Returns `(output, details)`. `details` is used by the API and UI, and is not par
 
 ## Known gaps
 
-- `rerun` is approved for CI `flaky` (ADR 006) but not yet in the enum; task C2 adds it.
 - `flaky` has a per-source meaning (QA: slow to render; CI: intermittent job), defined in the `docs/brief.md` glossary.
 - The legacy `/api/legacy/ci/triage` route (`archive/poc/legacy_routes.py`) returns `recommended_action="rerun"`, which violates this contract. It is scripted and not used by the engine.

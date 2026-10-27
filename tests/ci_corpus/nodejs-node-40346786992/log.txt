@@ -1,0 +1,666 @@
+===== test-macOS/1_Set up job.txt =====
+﻿2026-10-26T15:11:00.6028840Z Current runner version: '2.338.0'
+2026-10-26T15:11:00.6047270Z ##[group]Runner Image Provisioner
+2026-10-26T15:11:00.6047900Z Hosted Compute Agent
+2026-10-26T15:11:00.6048310Z Version: 20260828.587
+2026-10-26T15:11:00.6048740Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-10-26T15:11:00.6049260Z Build Date: 2026-08-28T16:44:25Z
+2026-10-26T15:11:00.6049720Z Worker ID: {a600f0e6-5424-4b7d-913a-6ca7b57ddace}
+2026-10-26T15:11:00.6050220Z Azure Region: westus
+2026-10-26T15:11:00.6050600Z ##[endgroup]
+2026-10-26T15:11:00.6051650Z ##[group]Operating System
+2026-10-26T15:11:00.6052090Z macOS
+2026-10-26T15:11:00.6052480Z 15.7.9
+2026-10-26T15:11:00.6052870Z 24G830
+2026-10-26T15:11:00.6053250Z ##[endgroup]
+2026-10-26T15:11:00.6053640Z ##[group]Runner Image
+2026-10-26T15:11:00.6054040Z Image: macos-15-arm64
+2026-10-26T15:11:00.6054450Z Version: 20260907.0337.1
+2026-10-26T15:11:00.6055250Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20260907.0337/images/macos/macos-15-arm64-Readme.md
+2026-10-26T15:11:00.6056730Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20260907.0337
+2026-10-26T15:11:00.6057470Z ##[endgroup]
+2026-10-26T15:11:00.6058280Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T15:11:00.6059590Z Contents: read
+2026-10-26T15:11:00.6059990Z Metadata: read
+2026-10-26T15:11:00.6060380Z ##[endgroup]
+2026-10-26T15:11:00.6061920Z Secret source: Actions
+2026-10-26T15:11:00.6062530Z Cache mode: write
+2026-10-26T15:11:00.6063030Z Prepare workflow directory
+2026-10-26T15:11:00.6616430Z Prepare all required actions
+2026-10-26T15:11:00.6669190Z Getting action download info
+2026-10-26T15:11:00.8861500Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-26T15:11:01.2521750Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-26T15:11:01.4163610Z Download action repository 'Mozilla-Actions/sccache-action@fc920bf0ec8de6ee65d409111f7ec508035751ba' (SHA:fc920bf0ec8de6ee65d409111f7ec508035751ba)
+2026-10-26T15:11:02.3524840Z Complete job name: test-macOS
+
+===== test-macOS/22_Post Set up sccache.txt =====
+﻿2026-10-26T15:13:02.4991090Z Post job cleanup.
+2026-10-26T15:13:02.6571320Z ##[group]Get human-readable stats
+2026-10-26T15:13:02.6583010Z [command]/Users/runner/hostedtoolcache/sccache/0.17.0/arm64/sccache --show-stats
+2026-10-26T15:13:02.6738340Z Compile requests                      0
+2026-10-26T15:13:02.6739120Z Compile requests executed             0
+2026-10-26T15:13:02.6739720Z Cache hits                            0
+2026-10-26T15:13:02.6740280Z Cache misses                          0
+2026-10-26T15:13:02.6740880Z Cache hits rate                       -
+2026-10-26T15:13:02.6741480Z Cache timeouts                        0
+2026-10-26T15:13:02.6742040Z Cache read errors                     0
+2026-10-26T15:13:02.6742630Z Forced recaches                       0
+2026-10-26T15:13:02.6743560Z Cache write errors                    0
+2026-10-26T15:13:02.6744150Z Cache errors                          0
+2026-10-26T15:13:02.6744710Z Compilations                          0
+2026-10-26T15:13:02.6745300Z Compilation failures                  0
+2026-10-26T15:13:02.6746170Z Non-cacheable compilations            0
+2026-10-26T15:13:02.6747280Z Non-cacheable calls                   0
+2026-10-26T15:13:02.6747600Z Non-compilation calls                 0
+2026-10-26T15:13:02.6747840Z Unsupported compiler calls            0
+2026-10-26T15:13:02.6748090Z Average cache write               0.000 s
+2026-10-26T15:13:02.6748320Z Average compiler                  0.000 s
+2026-10-26T15:13:02.6748560Z Average cache read hit            0.000 s
+2026-10-26T15:13:02.6748790Z Failed distributed compilations       0
+2026-10-26T15:13:02.6749290Z Cache location                  ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/
+2026-10-26T15:13:02.6749790Z Base directories                (none)
+2026-10-26T15:13:02.6750710Z Version (client)                0.17.0
+2026-10-26T15:13:02.6751190Z ##[endgroup]
+2026-10-26T15:13:02.6751510Z ##[group]Get JSON stats
+2026-10-26T15:13:02.6754190Z [command]/Users/runner/hostedtoolcache/sccache/0.17.0/arm64/sccache --show-stats --stats-format=json
+2026-10-26T15:13:02.6886100Z {"stats":{"compile_requests":0,"requests_unsupported_compiler":0,"requests_not_compile":0,"requests_not_cacheable":0,"requests_executed":0,"cache_errors":{"counts":{},"adv_counts":{}},"cache_hits":{"counts":{},"adv_counts":{}},"cache_misses":{"counts":{},"adv_counts":{}},"cache_timeouts":0,"cache_read_errors":0,"non_cacheable_compilations":0,"forced_recaches":0,"cache_write_errors":0,"cache_writes":0,"cache_write_duration":{"secs":0,"nanos":0},"cache_read_hit_duration":{"secs":0,"nanos":0},"compilations":0,"compiler_write_duration":{"secs":0,"nanos":0},"compile_fails":0,"not_cached":{},"dist_compiles":{},"dist_errors":0,"multi_level":null},"cache_location":"ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/","cache_size":null,"max_cache_size":null,"use_preprocessor_cache_mode":false,"version":"0.17.0","basedirs":[]}
+2026-10-26T15:13:02.6891700Z ##[endgroup]
+2026-10-26T15:13:02.6907170Z ##[notice]0% - 0 hits, 0 misses, 0 errors
+2026-10-26T15:13:02.6908040Z 
+2026-10-26T15:13:02.6908190Z Full human-readable stats:
+2026-10-26T15:13:02.6908410Z Compile requests                      0
+2026-10-26T15:13:02.6908670Z Compile requests executed             0
+2026-10-26T15:13:02.6908920Z Cache hits                            0
+2026-10-26T15:13:02.6909210Z Cache misses                          0
+2026-10-26T15:13:02.6909440Z Cache hits rate                       -
+2026-10-26T15:13:02.6909670Z Cache timeouts                        0
+2026-10-26T15:13:02.6909910Z Cache read errors                     0
+2026-10-26T15:13:02.6910170Z Forced recaches                       0
+2026-10-26T15:13:02.6910430Z Cache write errors                    0
+2026-10-26T15:13:02.6910660Z Cache errors                          0
+2026-10-26T15:13:02.6910890Z Compilations                          0
+2026-10-26T15:13:02.6911100Z Compilation failures                  0
+2026-10-26T15:13:02.6911330Z Non-cacheable compilations            0
+2026-10-26T15:13:02.6912240Z Non-cacheable calls                   0
+2026-10-26T15:13:02.6912470Z Non-compilation calls                 0
+2026-10-26T15:13:02.6912710Z Unsupported compiler calls            0
+2026-10-26T15:13:02.6913050Z Average cache write               0.000 s
+2026-10-26T15:13:02.6913390Z Average compiler                  0.000 s
+2026-10-26T15:13:02.6913610Z Average cache read hit            0.000 s
+2026-10-26T15:13:02.6913850Z Failed distributed compilations       0
+2026-10-26T15:13:02.6914310Z Cache location                  ghac, name: cb1f7e366526abf6ae1eead078b47c23b3cb3bd4371944adbb7fae50b8e89210, prefix: /sccache/
+2026-10-26T15:13:02.6914790Z Base directories                (none)
+2026-10-26T15:13:02.6915030Z Version (client)                0.17.0
+2026-10-26T15:13:02.6915180Z 
+
+===== test-macOS/24_Post Run actions_checkout@3d3c42e5aac5ba805825da76410c181273ba90b1.txt =====
+﻿2026-10-26T15:13:02.7095450Z Post job cleanup.
+2026-10-26T15:13:02.8432570Z [command]/opt/homebrew/bin/git version
+2026-10-26T15:13:02.8744330Z git version 2.55.0
+2026-10-26T15:13:02.8779320Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/ed70bab2-e3f1-45cb-a4f7-eb274a2ad62d/.gitconfig'
+2026-10-26T15:13:02.8791500Z Temporarily overriding HOME='/Users/runner/work/_temp/ed70bab2-e3f1-45cb-a4f7-eb274a2ad62d' before making global git config changes
+2026-10-26T15:13:02.8792390Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:13:02.8796180Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/node/node/node
+2026-10-26T15:13:02.8952900Z Removing SSH command configuration
+2026-10-26T15:13:02.8964770Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:13:02.9066990Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:13:03.0679180Z Removing HTTP extra header
+2026-10-26T15:13:03.0686900Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:13:03.0762300Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:13:03.1752220Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:13:03.1752940Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:13:03.1840320Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+===== test-macOS/25_Complete job.txt =====
+﻿2026-10-26T15:13:03.3136270Z Cleaning up orphan processes
+
+===== test-macOS/2_Run actions_checkout@3d3c42e5aac5ba805825da76410c181273ba90b1.txt =====
+﻿2026-10-26T15:11:02.4534780Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-26T15:11:02.4535800Z with:
+2026-10-26T15:11:02.4536470Z   persist-credentials: false
+2026-10-26T15:11:02.4536920Z   path: node
+2026-10-26T15:11:02.4537280Z   repository: nodejs/node
+2026-10-26T15:11:02.4540510Z   token: ***
+2026-10-26T15:11:02.4540850Z   ssh-strict: true
+2026-10-26T15:11:02.4541200Z   ssh-user: git
+2026-10-26T15:11:02.4541550Z   clean: true
+2026-10-26T15:11:02.4541910Z   sparse-checkout-cone-mode: true
+2026-10-26T15:11:02.4542370Z   fetch-depth: 1
+2026-10-26T15:11:02.4542780Z   fetch-tags: false
+2026-10-26T15:11:02.4543150Z   show-progress: true
+2026-10-26T15:11:02.4543530Z   lfs: false
+2026-10-26T15:11:02.4543930Z   submodules: false
+2026-10-26T15:11:02.4544360Z   set-safe-directory: true
+2026-10-26T15:11:02.4544980Z   allow-unsafe-pr-checkout: false
+2026-10-26T15:11:02.4545760Z env:
+2026-10-26T15:11:02.4546110Z   PYTHON_VERSION: 3.15
+2026-10-26T15:11:02.4546530Z   XCODE_VERSION: 16.4
+2026-10-26T15:11:02.4546910Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:11:02.4547370Z   RUSTC_VERSION: 1.88
+2026-10-26T15:11:02.4547810Z   CC: sccache gcc
+2026-10-26T15:11:02.4548180Z   CXX: sccache g++
+2026-10-26T15:11:02.4548600Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:11:02.4549100Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:11:02.4549550Z ##[endgroup]
+2026-10-26T15:11:02.9932760Z Syncing repository: nodejs/node
+2026-10-26T15:11:02.9934920Z ##[group]Getting Git version info
+2026-10-26T15:11:02.9935730Z Working directory is '/Users/runner/work/node/node/node'
+2026-10-26T15:11:02.9936630Z [command]/opt/homebrew/bin/git version
+2026-10-26T15:11:03.0567630Z git version 2.55.0
+2026-10-26T15:11:03.0607660Z ##[endgroup]
+2026-10-26T15:11:03.0622530Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/03a18931-f366-4b4e-a9b3-1d66bb13519a/.gitconfig'
+2026-10-26T15:11:03.0641900Z Temporarily overriding HOME='/Users/runner/work/_temp/03a18931-f366-4b4e-a9b3-1d66bb13519a' before making global git config changes
+2026-10-26T15:11:03.0645700Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-26T15:11:03.0659580Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/node/node/node
+2026-10-26T15:11:03.0827400Z ##[group]Determining repository object format
+2026-10-26T15:11:03.0830770Z ##[endgroup]
+2026-10-26T15:11:03.0833100Z ##[group]Initializing the repository
+2026-10-26T15:11:03.0838270Z [command]/opt/homebrew/bin/git init /Users/runner/work/node/node/node
+2026-10-26T15:11:03.1216560Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-26T15:11:03.1217740Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-26T15:11:03.1218850Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-26T15:11:03.1219640Z hint: call:
+2026-10-26T15:11:03.1220150Z hint:
+2026-10-26T15:11:03.1220760Z hint: 	git config --global init.defaultBranch <name>
+2026-10-26T15:11:03.1221270Z hint:
+2026-10-26T15:11:03.1223940Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-26T15:11:03.1227390Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-26T15:11:03.1229910Z hint:
+2026-10-26T15:11:03.1231070Z hint: 	git branch -m <name>
+2026-10-26T15:11:03.1232420Z hint:
+2026-10-26T15:11:03.1234160Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-26T15:11:03.1236690Z Initialized empty Git repository in /Users/runner/work/node/node/node/.git/
+2026-10-26T15:11:03.1240790Z [command]/opt/homebrew/bin/git remote add origin https://github.com/nodejs/node
+2026-10-26T15:11:03.1352890Z ##[endgroup]
+2026-10-26T15:11:03.1355240Z ##[group]Disabling automatic garbage collection
+2026-10-26T15:11:03.1357310Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2026-10-26T15:11:03.1444010Z ##[endgroup]
+2026-10-26T15:11:03.1447120Z ##[group]Setting up auth
+2026-10-26T15:11:03.1448970Z Removing SSH command configuration
+2026-10-26T15:11:03.1453470Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:11:03.1581900Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:11:03.3960840Z Removing HTTP extra header
+2026-10-26T15:11:03.3966260Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:11:03.4073080Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:11:03.5280540Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:11:03.5282460Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:11:03.5343750Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:11:03.6387610Z [command]/opt/homebrew/bin/git config --file /Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-26T15:11:03.6466500Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/node/node/node/.git.path /Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:03.6544050Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/Users/runner/work/node/node/node/.git/worktrees/*.path /Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:03.6620790Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/node/.git.path /github/runner_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:03.6707950Z [command]/opt/homebrew/bin/git config --local includeIf.gitdir:/github/workspace/node/.git/worktrees/*.path /github/runner_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:03.6778500Z ##[endgroup]
+2026-10-26T15:11:03.6781060Z ##[group]Fetching the repository
+2026-10-26T15:11:03.6787500Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +1ae40765d68cd4bac5a94d63a695239b84be5426:refs/remotes/origin/main
+2026-10-26T15:11:18.2539500Z From https://github.com/nodejs/node
+2026-10-26T15:11:18.2549990Z  * [new ref]           1ae40765d68cd4bac5a94d63a695239b84be5426 -> origin/main
+2026-10-26T15:11:18.2559730Z [command]/opt/homebrew/bin/git branch --list --remote origin/main
+2026-10-26T15:11:18.2635960Z   origin/main
+2026-10-26T15:11:18.2642070Z [command]/opt/homebrew/bin/git rev-parse refs/remotes/origin/main
+2026-10-26T15:11:18.2700400Z 1ae40765d68cd4bac5a94d63a695239b84be5426
+2026-10-26T15:11:18.2704840Z ##[endgroup]
+2026-10-26T15:11:18.2705640Z ##[group]Determining the checkout info
+2026-10-26T15:11:18.2706350Z ##[endgroup]
+2026-10-26T15:11:18.2710060Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2026-10-26T15:11:18.2819270Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-26T15:11:18.2980750Z ##[group]Checking out the ref
+2026-10-26T15:11:18.2981540Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-26T15:11:19.4336420Z Updating files:  12% (7159/56701)
+2026-10-26T15:11:19.5703150Z Updating files:  13% (7372/56701)
+2026-10-26T15:11:19.6997950Z Updating files:  14% (7939/56701)
+2026-10-26T15:11:19.8032360Z Updating files:  15% (8506/56701)
+2026-10-26T15:11:19.9592140Z Updating files:  16% (9073/56701)
+2026-10-26T15:11:20.1059180Z Updating files:  17% (9640/56701)
+2026-10-26T15:11:20.2526410Z Updating files:  18% (10207/56701)
+2026-10-26T15:11:20.3363670Z Updating files:  19% (10774/56701)
+2026-10-26T15:11:20.3902640Z Updating files:  19% (11104/56701)
+2026-10-26T15:11:20.5088030Z Updating files:  20% (11341/56701)
+2026-10-26T15:11:20.6097330Z Updating files:  21% (11908/56701)
+2026-10-26T15:11:20.7231360Z Updating files:  22% (12475/56701)
+2026-10-26T15:11:20.8228930Z Updating files:  23% (13042/56701)
+2026-10-26T15:11:20.9049530Z Updating files:  24% (13609/56701)
+2026-10-26T15:11:21.0425640Z Updating files:  25% (14176/56701)
+2026-10-26T15:11:21.1768050Z Updating files:  26% (14743/56701)
+2026-10-26T15:11:21.2462720Z Updating files:  27% (15310/56701)
+2026-10-26T15:11:21.3359740Z Updating files:  28% (15877/56701)
+2026-10-26T15:11:21.4629340Z Updating files:  28% (16333/56701)
+2026-10-26T15:11:21.5585750Z Updating files:  29% (16444/56701)
+2026-10-26T15:11:21.6161100Z Updating files:  30% (17011/56701)
+2026-10-26T15:11:21.6909860Z Updating files:  31% (17578/56701)
+2026-10-26T15:11:21.7985890Z Updating files:  32% (18145/56701)
+2026-10-26T15:11:21.8756730Z Updating files:  33% (18712/56701)
+2026-10-26T15:11:21.9793250Z Updating files:  34% (19279/56701)
+2026-10-26T15:11:22.1236050Z Updating files:  35% (19846/56701)
+2026-10-26T15:11:22.2917880Z Updating files:  36% (20413/56701)
+2026-10-26T15:11:22.3370670Z Updating files:  37% (20980/56701)
+2026-10-26T15:11:22.4052170Z Updating files:  37% (21127/56701)
+2026-10-26T15:11:22.4812690Z Updating files:  38% (21547/56701)
+2026-10-26T15:11:22.6061200Z Updating files:  39% (22114/56701)
+2026-10-26T15:11:22.6928530Z Updating files:  40% (22681/56701)
+2026-10-26T15:11:22.7614710Z Updating files:  41% (23248/56701)
+2026-10-26T15:11:22.8309430Z Updating files:  42% (23815/56701)
+2026-10-26T15:11:22.8961570Z Updating files:  43% (24382/56701)
+2026-10-26T15:11:22.9541620Z Updating files:  44% (24949/56701)
+2026-10-26T15:11:23.0123200Z Updating files:  45% (25516/56701)
+2026-10-26T15:11:23.0664630Z Updating files:  46% (26083/56701)
+2026-10-26T15:11:23.1182990Z Updating files:  47% (26650/56701)
+2026-10-26T15:11:23.1697230Z Updating files:  48% (27217/56701)
+2026-10-26T15:11:23.2228040Z Updating files:  49% (27784/56701)
+2026-10-26T15:11:23.2754750Z Updating files:  50% (28351/56701)
+2026-10-26T15:11:23.3268180Z Updating files:  51% (28918/56701)
+2026-10-26T15:11:23.3379420Z Updating files:  52% (29485/56701)
+2026-10-26T15:11:23.3747880Z Updating files:  52% (29592/56701)
+2026-10-26T15:11:23.4258430Z Updating files:  53% (30052/56701)
+2026-10-26T15:11:23.4762580Z Updating files:  54% (30619/56701)
+2026-10-26T15:11:23.5350630Z Updating files:  55% (31186/56701)
+2026-10-26T15:11:23.6258040Z Updating files:  56% (31753/56701)
+2026-10-26T15:11:23.6867330Z Updating files:  57% (32320/56701)
+2026-10-26T15:11:23.7432240Z Updating files:  58% (32887/56701)
+2026-10-26T15:11:23.8173710Z Updating files:  59% (33454/56701)
+2026-10-26T15:11:23.9623270Z Updating files:  60% (34021/56701)
+2026-10-26T15:11:24.0281200Z Updating files:  61% (34588/56701)
+2026-10-26T15:11:24.1247460Z Updating files:  62% (35155/56701)
+2026-10-26T15:11:24.2376970Z Updating files:  63% (35722/56701)
+2026-10-26T15:11:24.3170480Z Updating files:  64% (36289/56701)
+2026-10-26T15:11:24.3378060Z Updating files:  65% (36856/56701)
+2026-10-26T15:11:24.4140220Z Updating files:  65% (36963/56701)
+2026-10-26T15:11:24.5204970Z Updating files:  66% (37423/56701)
+2026-10-26T15:11:24.6228500Z Updating files:  67% (37990/56701)
+2026-10-26T15:11:24.7045630Z Updating files:  68% (38557/56701)
+2026-10-26T15:11:24.8126570Z Updating files:  69% (39124/56701)
+2026-10-26T15:11:24.9672250Z Updating files:  70% (39691/56701)
+2026-10-26T15:11:25.1578610Z Updating files:  71% (40258/56701)
+2026-10-26T15:11:25.2295940Z Updating files:  72% (40825/56701)
+2026-10-26T15:11:25.3413130Z Updating files:  73% (41392/56701)
+2026-10-26T15:11:25.3516830Z Updating files:  73% (41953/56701)
+2026-10-26T15:11:25.4641010Z Updating files:  74% (41959/56701)
+2026-10-26T15:11:25.5695760Z Updating files:  75% (42526/56701)
+2026-10-26T15:11:25.6870810Z Updating files:  76% (43093/56701)
+2026-10-26T15:11:25.8079880Z Updating files:  77% (43660/56701)
+2026-10-26T15:11:25.9512620Z Updating files:  78% (44227/56701)
+2026-10-26T15:11:26.0394450Z Updating files:  79% (44794/56701)
+2026-10-26T15:11:26.2174950Z Updating files:  80% (45361/56701)
+2026-10-26T15:11:26.3103050Z Updating files:  81% (45928/56701)
+2026-10-26T15:11:26.3384460Z Updating files:  82% (46495/56701)
+2026-10-26T15:11:26.4568950Z Updating files:  82% (46531/56701)
+2026-10-26T15:11:26.6219240Z Updating files:  83% (47062/56701)
+2026-10-26T15:11:26.7181160Z Updating files:  84% (47629/56701)
+2026-10-26T15:11:26.8303120Z Updating files:  85% (48196/56701)
+2026-10-26T15:11:26.9674230Z Updating files:  86% (48763/56701)
+2026-10-26T15:11:27.1277660Z Updating files:  87% (49330/56701)
+2026-10-26T15:11:27.2521350Z Updating files:  88% (49897/56701)
+2026-10-26T15:11:27.3396850Z Updating files:  89% (50464/56701)
+2026-10-26T15:11:27.3627600Z Updating files:  89% (50858/56701)
+2026-10-26T15:11:27.4260490Z Updating files:  90% (51031/56701)
+2026-10-26T15:11:27.5467890Z Updating files:  91% (51598/56701)
+2026-10-26T15:11:27.6570350Z Updating files:  92% (52165/56701)
+2026-10-26T15:11:27.7969610Z Updating files:  93% (52732/56701)
+2026-10-26T15:11:27.9229340Z Updating files:  94% (53299/56701)
+2026-10-26T15:11:28.0364690Z Updating files:  95% (53866/56701)
+2026-10-26T15:11:28.1463830Z Updating files:  96% (54433/56701)
+2026-10-26T15:11:28.2309790Z Updating files:  97% (55000/56701)
+2026-10-26T15:11:28.3702340Z Updating files:  98% (55567/56701)
+2026-10-26T15:11:28.4156400Z Updating files:  98% (55953/56701)
+2026-10-26T15:11:28.5518230Z Updating files:  99% (56134/56701)
+2026-10-26T15:11:28.5622460Z Updating files: 100% (56701/56701)
+2026-10-26T15:11:28.5722950Z Updating files: 100% (56701/56701), done.
+2026-10-26T15:11:28.6239910Z Switched to a new branch 'main'
+2026-10-26T15:11:28.6253180Z branch 'main' set up to track 'origin/main'.
+2026-10-26T15:11:28.6329920Z ##[endgroup]
+2026-10-26T15:11:28.6533730Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2026-10-26T15:11:28.6651780Z 1ae40765d68cd4bac5a94d63a695239b84be5426
+2026-10-26T15:11:28.6669150Z ##[group]Removing auth
+2026-10-26T15:11:28.6670390Z Removing SSH command configuration
+2026-10-26T15:11:28.6675780Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-26T15:11:28.6761550Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-26T15:11:28.8605810Z Removing HTTP extra header
+2026-10-26T15:11:28.8617540Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-26T15:11:28.8775620Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-26T15:11:29.0436550Z Removing includeIf entries pointing to credentials config files
+2026-10-26T15:11:29.0468080Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-26T15:11:29.0498650Z includeif.gitdir:/Users/runner/work/node/node/node/.git.path
+2026-10-26T15:11:29.0499570Z includeif.gitdir:/Users/runner/work/node/node/node/.git/worktrees/*.path
+2026-10-26T15:11:29.0500230Z includeif.gitdir:/github/workspace/node/.git.path
+2026-10-26T15:11:29.0500860Z includeif.gitdir:/github/workspace/node/.git/worktrees/*.path
+2026-10-26T15:11:29.0516160Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/node/node/node/.git.path
+2026-10-26T15:11:29.0584900Z /Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:29.0611060Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/node/node/node/.git.path \/Users\/runner\/work\/_temp\/git\-credentials\-c381347b\-53b2\-4e66\-9e2e\-2cb15dc109f2\.config
+2026-10-26T15:11:29.0711880Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/Users/runner/work/node/node/node/.git/worktrees/*.path
+2026-10-26T15:11:29.0830550Z /Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:29.0843330Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/Users/runner/work/node/node/node/.git/worktrees/*.path \/Users\/runner\/work\/_temp\/git\-credentials\-c381347b\-53b2\-4e66\-9e2e\-2cb15dc109f2\.config
+2026-10-26T15:11:29.0977260Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/node/.git.path
+2026-10-26T15:11:29.1072240Z /github/runner_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:29.1077220Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/node/.git.path \/github\/runner_temp\/git\-credentials\-c381347b\-53b2\-4e66\-9e2e\-2cb15dc109f2\.config
+2026-10-26T15:11:29.1206620Z [command]/opt/homebrew/bin/git config --local --get-all includeif.gitdir:/github/workspace/node/.git/worktrees/*.path
+2026-10-26T15:11:29.1267420Z /github/runner_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config
+2026-10-26T15:11:29.1283580Z [command]/opt/homebrew/bin/git config --local --unset includeif.gitdir:/github/workspace/node/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-c381347b\-53b2\-4e66\-9e2e\-2cb15dc109f2\.config
+2026-10-26T15:11:29.1521640Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-26T15:11:29.2636120Z Removing credentials config '/Users/runner/work/_temp/git-credentials-c381347b-53b2-4e66-9e2e-2cb15dc109f2.config'
+2026-10-26T15:11:29.2654310Z ##[endgroup]
+
+===== test-macOS/3_Set up Python 3.15.txt =====
+﻿2026-10-26T15:11:29.3210300Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-26T15:11:29.3211040Z with:
+2026-10-26T15:11:29.3211230Z   python-version: 3.15
+2026-10-26T15:11:29.3211480Z   allow-prereleases: true
+2026-10-26T15:11:29.3211690Z   check-latest: false
+2026-10-26T15:11:29.3213890Z   token: ***
+2026-10-26T15:11:29.3214090Z   update-environment: true
+2026-10-26T15:11:29.3214320Z   freethreaded: false
+2026-10-26T15:11:29.3214480Z env:
+2026-10-26T15:11:29.3214660Z   PYTHON_VERSION: 3.15
+2026-10-26T15:11:29.3214870Z   XCODE_VERSION: 16.4
+2026-10-26T15:11:29.3215080Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:11:29.3215360Z   RUSTC_VERSION: 1.88
+2026-10-26T15:11:29.3215590Z   CC: sccache gcc
+2026-10-26T15:11:29.3215780Z   CXX: sccache g++
+2026-10-26T15:11:29.3216010Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:11:29.3216240Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:11:29.3216480Z ##[endgroup]
+2026-10-26T15:11:29.5257100Z ##[group]Installed versions
+2026-10-26T15:11:29.5309490Z Version ~3.15.0-0 was not found in the local cache
+2026-10-26T15:11:30.7064780Z Version ~3.15.0-0 is available for downloading
+2026-10-26T15:11:30.7066480Z Download from "https://github.com/actions/python-versions/releases/download/3.15.1-39619321210/python-3.15.1-darwin-arm64.tar.gz"
+2026-10-26T15:11:31.8925860Z Extract downloaded archive
+2026-10-26T15:11:31.9120280Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/00d9e63b-b3a8-4ae6-8dd1-155b63c96c26 -f /Users/runner/work/_temp/bf52de3f-a522-477e-a51b-2b992769c02f
+2026-10-26T15:11:32.0413550Z Execute installation script
+2026-10-26T15:11:32.0661180Z Check if Python hostedtoolcache folder exist...
+2026-10-26T15:11:32.0798310Z Install Python binaries from prebuilt package
+2026-10-26T15:12:07.8408740Z installer: Package name is Python
+2026-10-26T15:12:07.8529810Z installer: choices changes file '/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/tmp.mzZwkcFdqf' applied
+2026-10-26T15:12:07.8709340Z installer: Upgrading at base path /
+2026-10-26T15:12:07.8746300Z installer: The upgrade was successful.
+2026-10-26T15:12:07.8749660Z Create hostedtoolcach symlinks (Required for the backward compatibility)
+2026-10-26T15:12:07.8751130Z Create Python 3.15.1 folder
+2026-10-26T15:12:07.8910340Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-26T15:12:07.9174800Z Upgrading pip...
+2026-10-26T15:12:10.2498260Z Collecting pip
+2026-10-26T15:12:10.2835590Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+2026-10-26T15:12:10.3241540Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+2026-10-26T15:12:10.3719630Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 40.9 MB/s  0:00:00
+2026-10-26T15:12:10.3720690Z 
+2026-10-26T15:12:10.4263300Z Installing collected packages: pip
+2026-10-26T15:12:10.4265470Z Attempting uninstall: pip
+2026-10-26T15:12:10.4274600Z Found existing installation: pip 26.2.2
+2026-10-26T15:12:10.4502380Z Uninstalling pip-26.2.2:
+2026-10-26T15:12:10.6646450Z Successfully uninstalled pip-26.2.2
+2026-10-26T15:12:12.7337890Z Successfully installed pip-26.2.2
+2026-10-26T15:12:12.8712600Z Install OpenSSL certificates
+2026-10-26T15:12:14.0347880Z Collecting certifi
+2026-10-26T15:12:14.1252550Z Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-10-26T15:12:14.1722240Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-10-26T15:12:14.2163160Z Installing collected packages: certifi
+2026-10-26T15:12:14.2234990Z Successfully installed certifi-2026.10.23
+2026-10-26T15:12:14.2966700Z -- pip install --upgrade certifi
+2026-10-26T15:12:14.2967380Z  -- removing any existing file or link
+2026-10-26T15:12:14.2967770Z  -- creating symlink to certifi certificate bundle
+2026-10-26T15:12:14.2968080Z  -- setting permissions
+2026-10-26T15:12:14.2968390Z  -- update complete
+2026-10-26T15:12:14.3029490Z Create complete file
+2026-10-26T15:12:14.3153570Z Successfully set up CPython (3.15.1)
+2026-10-26T15:12:14.3155750Z ##[endgroup]
+
+===== test-macOS/4_Set up Xcode 16.4.txt =====
+﻿2026-10-26T15:12:14.3361500Z ##[group]Run sudo xcode-select -s /Applications/Xcode_16.4.app
+2026-10-26T15:12:14.3372730Z [36;1msudo xcode-select -s /Applications/Xcode_16.4.app[0m
+2026-10-26T15:12:14.4585400Z shell: /bin/bash -e {0}
+2026-10-26T15:12:14.4585750Z env:
+2026-10-26T15:12:14.4586060Z   PYTHON_VERSION: 3.15
+2026-10-26T15:12:14.4586330Z   XCODE_VERSION: 16.4
+2026-10-26T15:12:14.4586680Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:12:14.4586920Z   RUSTC_VERSION: 1.88
+2026-10-26T15:12:14.4587230Z   CC: sccache gcc
+2026-10-26T15:12:14.4587530Z   CXX: sccache g++
+2026-10-26T15:12:14.4587760Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:12:14.4588070Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:12:14.4588510Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.4589150Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:12:14.4589580Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.4613630Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.4614600Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.4614990Z ##[endgroup]
+
+===== test-macOS/5_Install Rust 1.88.txt =====
+﻿2026-10-26T15:12:14.5644950Z ##[group]Run rustup override set "$RUSTC_VERSION"
+2026-10-26T15:12:14.5645470Z [36;1mrustup override set "$RUSTC_VERSION"[0m
+2026-10-26T15:12:14.5645740Z [36;1mrustup --version[0m
+2026-10-26T15:12:14.5701980Z shell: /bin/bash -e {0}
+2026-10-26T15:12:14.5702750Z env:
+2026-10-26T15:12:14.5703270Z   PYTHON_VERSION: 3.15
+2026-10-26T15:12:14.5704310Z   XCODE_VERSION: 16.4
+2026-10-26T15:12:14.5704920Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:12:14.5705970Z   RUSTC_VERSION: 1.88
+2026-10-26T15:12:14.5706460Z   CC: sccache gcc
+2026-10-26T15:12:14.5707030Z   CXX: sccache g++
+2026-10-26T15:12:14.5707680Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:12:14.5708260Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:12:14.5709170Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.5710380Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:12:14.5711810Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.5712990Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.5714090Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:14.5714870Z ##[endgroup]
+2026-10-26T15:12:14.6967460Z info: syncing channel updates for 1.88-aarch64-apple-darwin
+2026-10-26T15:12:14.8340280Z info: latest update on 2025-06-26 for version 1.88.0 (6b00bc388 2025-06-23)
+2026-10-26T15:12:14.8349920Z info: downloading 3 components
+2026-10-26T15:12:22.7196680Z 
+2026-10-26T15:12:22.9083170Z   1.88-aarch64-apple-darwin installed - rustc 1.88.0 (6b00bc388 2025-06-23)
+2026-10-26T15:12:22.9086410Z info: override toolchain for /Users/runner/work/node/node set to 1.88-aarch64-apple-darwin
+2026-10-26T15:12:22.9087410Z 
+2026-10-26T15:12:22.9922530Z info: This is the version for the rustup toolchain manager, not the rustc compiler.
+2026-10-26T15:12:22.9927810Z rustup 1.29.0 (2026-03-05)
+2026-10-26T15:12:23.0298340Z info: the currently active `rustc` version is `rustc 1.88.0 (6b00bc388 2025-06-23)`
+
+===== test-macOS/6_Set up sccache.txt =====
+﻿2026-10-26T15:12:23.0544130Z ##[group]Run Mozilla-Actions/sccache-action@fc920bf0ec8de6ee65d409111f7ec508035751ba
+2026-10-26T15:12:23.0544770Z with:
+2026-10-26T15:12:23.0545620Z   version: v0.17.0
+2026-10-26T15:12:23.0550290Z   token: ***
+2026-10-26T15:12:23.0550900Z   disable_annotations: false
+2026-10-26T15:12:23.0551980Z env:
+2026-10-26T15:12:23.0552520Z   PYTHON_VERSION: 3.15
+2026-10-26T15:12:23.0553640Z   XCODE_VERSION: 16.4
+2026-10-26T15:12:23.0554150Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:12:23.0555230Z   RUSTC_VERSION: 1.88
+2026-10-26T15:12:23.0556220Z   CC: sccache gcc
+2026-10-26T15:12:23.0557670Z   CXX: sccache g++
+2026-10-26T15:12:23.0559310Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:12:23.0663680Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:12:23.0664770Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:23.0674100Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:12:23.0675690Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:23.0677120Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:23.0679230Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:23.0680420Z ##[endgroup]
+2026-10-26T15:12:23.3962840Z try to setup sccache version: v0.17.0
+2026-10-26T15:12:23.3991090Z sccache download from url: https://github.com/mozilla/sccache/releases/download/v0.17.0/sccache-v0.17.0-aarch64-apple-darwin.tar.gz
+2026-10-26T15:12:24.2357990Z Correct checksum: 0c560bfba31aef5bdfb4fb3d2677f6e61d71c5c00952f2a83344f47aa31f00f1
+2026-10-26T15:12:24.2611550Z [command]/usr/bin/tar xz -C /Users/runner/work/_temp/de096229-3c24-4472-a7d4-390b956ae7e9 -f /Users/runner/work/_temp/216051ff-7bea-405f-8b28-f735a6c15777
+2026-10-26T15:12:24.3174210Z sccache extracted to: /Users/runner/work/_temp/de096229-3c24-4472-a7d4-390b956ae7e9
+2026-10-26T15:12:24.3536850Z sccache cached to: /Users/runner/hostedtoolcache/sccache/0.17.0/arm64
+
+===== test-macOS/7_tools_doc_node_modules workaround.txt =====
+﻿2026-10-26T15:12:24.3736870Z ##[group]Run make -C node tools/doc/node_modules
+2026-10-26T15:12:24.3737850Z [36;1mmake -C node tools/doc/node_modules[0m
+2026-10-26T15:12:24.3877540Z shell: /bin/bash -e {0}
+2026-10-26T15:12:24.3877870Z env:
+2026-10-26T15:12:24.3878200Z   PYTHON_VERSION: 3.15
+2026-10-26T15:12:24.3878470Z   XCODE_VERSION: 16.4
+2026-10-26T15:12:24.3878750Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:12:24.3878950Z   RUSTC_VERSION: 1.88
+2026-10-26T15:12:24.3879190Z   CC: sccache gcc
+2026-10-26T15:12:24.3879360Z   CXX: sccache g++
+2026-10-26T15:12:24.3879610Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:12:24.3879850Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:12:24.3880180Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:24.3880810Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:12:24.3881320Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:24.3881800Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:24.3882430Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:24.3882910Z   SCCACHE_PATH: /Users/runner/hostedtoolcache/sccache/0.17.0/arm64/sccache
+2026-10-26T15:12:24.3883270Z   ACTIONS_CACHE_SERVICE_V2: on
+2026-10-26T15:12:24.3883680Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+2026-10-26T15:12:24.3925980Z   ACTIONS_RUNTIME_TOKEN: ***
+2026-10-26T15:12:24.3927690Z ##[endgroup]
+2026-10-26T15:12:34.6293140Z 
+2026-10-26T15:12:34.6293940Z added 281 packages, and audited 283 packages in 6s
+2026-10-26T15:12:34.6294270Z 
+2026-10-26T15:12:34.6294440Z 137 packages are looking for funding
+2026-10-26T15:12:34.6294730Z   run `npm fund` for details
+2026-10-26T15:12:34.6333340Z 
+2026-10-26T15:12:34.6334410Z 2 vulnerabilities (1 high, 1 critical)
+2026-10-26T15:12:34.6335690Z 
+2026-10-26T15:12:34.6336150Z To address all issues, run:
+2026-10-26T15:12:34.6336970Z   npm audit fix
+2026-10-26T15:12:34.6337470Z 
+2026-10-26T15:12:34.6338390Z Run `npm audit` for details.
+
+===== test-macOS/8_Cleanup.txt =====
+﻿2026-10-26T15:12:34.7802040Z ##[group]Run echo "::group::Free space before cleanup"
+2026-10-26T15:12:34.7802570Z [36;1mecho "::group::Free space before cleanup"[0m
+2026-10-26T15:12:34.7803000Z [36;1mdf -h[0m
+2026-10-26T15:12:34.7803240Z [36;1mecho "::endgroup::"[0m
+2026-10-26T15:12:34.7803610Z [36;1mecho "::group::Cleaned Files"[0m
+2026-10-26T15:12:34.7803890Z [36;1m[0m
+2026-10-26T15:12:34.7804230Z [36;1msudo rm -rf /Users/runner/Library/Android/sdk[0m
+2026-10-26T15:12:34.7804690Z [36;1m[0m
+2026-10-26T15:12:34.7804960Z [36;1mecho "::endgroup::"[0m
+2026-10-26T15:12:34.7805390Z [36;1mecho "::group::Free space after cleanup"[0m
+2026-10-26T15:12:34.7805680Z [36;1mdf -h[0m
+2026-10-26T15:12:34.7806010Z [36;1mecho "::endgroup::"[0m
+2026-10-26T15:12:34.7862360Z shell: /bin/bash -e {0}
+2026-10-26T15:12:34.7867020Z env:
+2026-10-26T15:12:34.7867240Z   PYTHON_VERSION: 3.15
+2026-10-26T15:12:34.7867540Z   XCODE_VERSION: 16.4
+2026-10-26T15:12:34.7867840Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:12:34.7868180Z   RUSTC_VERSION: 1.88
+2026-10-26T15:12:34.7868590Z   CC: sccache gcc
+2026-10-26T15:12:34.7868740Z   CXX: sccache g++
+2026-10-26T15:12:34.7868910Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:12:34.7869130Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:12:34.7898800Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:34.7899440Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:12:34.7899860Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:34.7900310Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:34.7900690Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:12:34.7901160Z   SCCACHE_PATH: /Users/runner/hostedtoolcache/sccache/0.17.0/arm64/sccache
+2026-10-26T15:12:34.7901710Z   ACTIONS_CACHE_SERVICE_V2: on
+2026-10-26T15:12:34.7902150Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+2026-10-26T15:12:34.7947440Z   ACTIONS_RUNTIME_TOKEN: ***
+2026-10-26T15:12:34.7947770Z ##[endgroup]
+2026-10-26T15:12:34.8612080Z ##[group]Free space before cleanup
+2026-10-26T15:12:34.8684600Z Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+2026-10-26T15:12:34.8686170Z /dev/disk2s1s1   320Gi    10Gi    41Gi    21%    427k  425M    0%   /
+2026-10-26T15:12:34.8687760Z devfs            194Ki   194Ki     0Bi   100%     672     0  100%   /dev
+2026-10-26T15:12:34.8688880Z /dev/disk2s6     320Gi    20Ki    41Gi     1%       0  425M    0%   /System/Volumes/VM
+2026-10-26T15:12:34.8690130Z /dev/disk2s2     320Gi   6.8Gi    41Gi    15%    1.1k  425M    0%   /System/Volumes/Preboot
+2026-10-26T15:12:34.8691380Z /dev/disk2s4     320Gi    40Mi    41Gi     1%      53  425M    0%   /System/Volumes/Update
+2026-10-26T15:12:34.8692680Z /dev/disk1s2     500Mi    20Ki   495Mi     1%       0  5.1M    0%   /System/Volumes/xarts
+2026-10-26T15:12:34.8693910Z /dev/disk1s1     500Mi   132Ki   495Mi     1%      30  5.1M    0%   /System/Volumes/iSCPreboot
+2026-10-26T15:12:34.8695330Z /dev/disk1s3     500Mi   216Ki   495Mi     1%      18  5.1M    0%   /System/Volumes/Hardware
+2026-10-26T15:12:34.8696540Z /dev/disk2s5     320Gi   261Gi    41Gi    87%    2.3M  425M    1%   /System/Volumes/Data
+2026-10-26T15:12:34.8698700Z /dev/disk4s1     4.0Mi   676Ki   3.0Mi    19%      18   31k    0%   /System/Library/AssetsV2/com_apple_MobileAsset_PKITrustStore/purpose_auto/6dd55b0d06633a00de6f57ccb910a66a5ba2409a.asset/.AssetData
+2026-10-26T15:12:34.8701120Z map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+2026-10-26T15:12:34.8702360Z ##[endgroup]
+2026-10-26T15:12:34.8708950Z ##[group]Cleaned Files
+2026-10-26T15:13:00.5466820Z ##[endgroup]
+2026-10-26T15:13:00.5471510Z ##[group]Free space after cleanup
+2026-10-26T15:13:00.5520540Z Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+2026-10-26T15:13:00.5521440Z /dev/disk2s1s1   320Gi    10Gi    55Gi    17%    427k  573M    0%   /
+2026-10-26T15:13:00.5524810Z devfs            194Ki   194Ki     0Bi   100%     672     0  100%   /dev
+2026-10-26T15:13:00.5526420Z /dev/disk2s6     320Gi    20Ki    55Gi     1%       0  573M    0%   /System/Volumes/VM
+2026-10-26T15:13:00.5530390Z /dev/disk2s2     320Gi   6.8Gi    55Gi    12%    1.1k  573M    0%   /System/Volumes/Preboot
+2026-10-26T15:13:00.5532050Z /dev/disk2s4     320Gi    40Mi    55Gi     1%      53  573M    0%   /System/Volumes/Update
+2026-10-26T15:13:00.5532810Z /dev/disk1s2     500Mi    20Ki   495Mi     1%       0  5.1M    0%   /System/Volumes/xarts
+2026-10-26T15:13:00.5533560Z /dev/disk1s1     500Mi   132Ki   495Mi     1%      30  5.1M    0%   /System/Volumes/iSCPreboot
+2026-10-26T15:13:00.5534160Z /dev/disk1s3     500Mi   216Ki   495Mi     1%      18  5.1M    0%   /System/Volumes/Hardware
+2026-10-26T15:13:00.5536210Z /dev/disk2s5     320Gi   246Gi    55Gi    82%    2.0M  573M    0%   /System/Volumes/Data
+2026-10-26T15:13:00.5539880Z /dev/disk4s1     4.0Mi   676Ki   3.0Mi    19%      18   31k    0%   /System/Library/AssetsV2/com_apple_MobileAsset_PKITrustStore/purpose_auto/6dd55b0d06633a00de6f57ccb910a66a5ba2409a.asset/.AssetData
+2026-10-26T15:13:00.5541820Z map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+2026-10-26T15:13:00.5543750Z ##[endgroup]
+
+===== test-macOS/9_Build.txt =====
+﻿2026-10-26T15:13:00.5672720Z ##[group]Run make -C node build-ci -j$(getconf _NPROCESSORS_ONLN) V=1 CONFIG_FLAGS="--error-on-warn --v8-enable-temporal-support"
+2026-10-26T15:13:00.5674020Z [36;1mmake -C node build-ci -j$(getconf _NPROCESSORS_ONLN) V=1 CONFIG_FLAGS="--error-on-warn --v8-enable-temporal-support"[0m
+2026-10-26T15:13:00.5725400Z shell: /bin/bash -e {0}
+2026-10-26T15:13:00.5725720Z env:
+2026-10-26T15:13:00.5726180Z   PYTHON_VERSION: 3.15
+2026-10-26T15:13:00.5726580Z   XCODE_VERSION: 16.4
+2026-10-26T15:13:00.5726990Z   FLAKY_TESTS: keep_retrying
+2026-10-26T15:13:00.5727220Z   RUSTC_VERSION: 1.88
+2026-10-26T15:13:00.5727500Z   CC: sccache gcc
+2026-10-26T15:13:00.5727720Z   CXX: sccache g++
+2026-10-26T15:13:00.5728000Z   SCCACHE_GHA_ENABLED: true
+2026-10-26T15:13:00.5728230Z   SCCACHE_IDLE_TIMEOUT: 0
+2026-10-26T15:13:00.5728660Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:13:00.5729580Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.15.1/arm64/lib/pkgconfig
+2026-10-26T15:13:00.5731080Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:13:00.5732110Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:13:00.5733670Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.15.1/arm64
+2026-10-26T15:13:00.5735430Z   SCCACHE_PATH: /Users/runner/hostedtoolcache/sccache/0.17.0/arm64/sccache
+2026-10-26T15:13:00.5737010Z   ACTIONS_CACHE_SERVICE_V2: on
+2026-10-26T15:13:00.5738320Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+2026-10-26T15:13:00.5789320Z   ACTIONS_RUNTIME_TOKEN: ***
+2026-10-26T15:13:00.5790600Z ##[endgroup]
+2026-10-26T15:13:01.5336370Z python3 ./configure --verbose --error-on-warn --v8-enable-temporal-support
+2026-10-26T15:13:02.4474630Z sccache: error: Server startup failed: cache storage failed to read: Unexpected (temporary) at read => ﻿<?xml version="1.0" encoding="utf-8"?><Error><Code>ServerBusy</Code><Message>Egress is over the account limit.
+2026-10-26T15:13:02.4477680Z RequestId:3a329e97-901e-00eb-315c-65a253000000
+2026-10-26T15:13:02.4478500Z Time:2026-10-26T15:13:02.8514215Z</Message></Error>
+2026-10-26T15:13:02.4478800Z 
+2026-10-26T15:13:02.4478940Z Context:
+2026-10-26T15:13:02.4480230Z    uri: [REDACTED]
+2026-10-26T15:13:02.4482850Z    response: Parts { status: 503, version: HTTP/1.1, headers: {"content-length": "212", "content-type": "application/xml", "server": "Microsoft-HTTPAPI/2.0", "x-ms-request-id": "3a329e97-901e-00eb-315c-65a253000000", "x-ms-error-code": "ServerBusy", "access-control-expose-headers": "x-ms-request-id,x-ms-error-code,Content-Length,Date,Transfer-Encoding", "access-control-allow-origin": "*", "date": "Mon, 26 Oct 2026 15:13:02 GMT"} }
+2026-10-26T15:13:02.4484300Z    service: ghac
+2026-10-26T15:13:02.4484530Z    path: .sccache_check
+2026-10-26T15:13:02.4484810Z    range: 0-
+2026-10-26T15:13:02.4485010Z 
+2026-10-26T15:13:02.4485060Z Backtrace:
+2026-10-26T15:13:02.4485330Z    0: __mh_execute_header
+2026-10-26T15:13:02.4485600Z    1: __mh_execute_header
+2026-10-26T15:13:02.4485970Z    2: __mh_execute_header
+2026-10-26T15:13:02.4486860Z    3: __mh_execute_header
+2026-10-26T15:13:02.4487450Z    4: __mh_execute_header
+2026-10-26T15:13:02.4487980Z    5: __mh_execute_header
+2026-10-26T15:13:02.4488230Z    6: __mh_execute_header
+2026-10-26T15:13:02.4488530Z    7: __mh_execute_header
+2026-10-26T15:13:02.4488770Z    8: __mh_execute_header
+2026-10-26T15:13:02.4489080Z    9: __mh_execute_header
+2026-10-26T15:13:02.4489320Z   10: __mh_execute_header
+2026-10-26T15:13:02.4489650Z   11: __mh_execute_header
+2026-10-26T15:13:02.4489930Z   12: __mh_execute_header
+2026-10-26T15:13:02.4490260Z   13: __mh_execute_header
+2026-10-26T15:13:02.4491160Z   14: __mh_execute_header
+2026-10-26T15:13:02.4491340Z 
+2026-10-26T15:13:02.4491350Z 
+2026-10-26T15:13:02.4491560Z Run with SCCACHE_LOG=debug SCCACHE_NO_DAEMON=1 to get more information
+2026-10-26T15:13:02.4492030Z Node.js configure: Found Python 3.15.1...
+2026-10-26T15:13:02.4627470Z Traceback (most recent call last):
+2026-10-26T15:13:02.4654930Z   File "/Users/runner/work/node/node/node/./configure", line 35, in <module>
+2026-10-26T15:13:02.4656380Z     import configure
+2026-10-26T15:13:02.4656990Z   File "/Users/runner/work/node/node/node/configure.py", line 2891, in <module>
+2026-10-26T15:13:02.4658050Z     check_compiler(output)
+2026-10-26T15:13:02.4659240Z     ~~~~~~~~~~~~~~^^^^^^^^
+2026-10-26T15:13:02.4659810Z   File "/Users/runner/work/node/node/node/configure.py", line 1625, in check_compiler
+2026-10-26T15:13:02.4660670Z     ok, is_clang, clang_version, gcc_version, is_apple = try_check_compiler(CXX, 'c++')
+2026-10-26T15:13:02.4661760Z                                                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+2026-10-26T15:13:02.4663150Z   File "/Users/runner/work/node/node/node/configure.py", line 1389, in try_check_compiler
+2026-10-26T15:13:02.4664420Z     raise Exception(f'Could not determine compiler version info. \nstdout:\n{cc_stdout}\nstderr:\n{cc_stderr}')
+2026-10-26T15:13:02.4665770Z Exception: Could not determine compiler version info. 
+2026-10-26T15:13:02.4667240Z stdout:
+2026-10-26T15:13:02.4667350Z 
+2026-10-26T15:13:02.4667650Z stderr:
+2026-10-26T15:13:02.4667920Z 
+2026-10-26T15:13:02.4804610Z make: *** [build-ci] Error 1
+2026-10-26T15:13:02.4828270Z ##[error]Process completed with exit code 2.
+
+===== test-macOS/system.txt =====
+2026-10-26T15:11:00.2250000Z Requested labels: macos-15
+2026-10-26T15:11:00.2250000Z Job defined at: nodejs/node/.github/workflows/test-macos.yml@refs/heads/main
+2026-10-26T15:11:00.2250000Z Waiting for a runner to pick up this job...
+2026-10-26T15:11:00.1980000Z Evaluating test-macOS.if
+2026-10-26T15:11:00.1980000Z Evaluating: (success() && ((github.event.pull_request.draft == false)))
+2026-10-26T15:11:00.1980000Z Expanded: (true && (null == false))
+2026-10-26T15:11:00.1980000Z Result: true
+2026-10-26T15:11:00.3380000Z Job is waiting for a hosted runner to come online.
+2026-10-26T15:11:00.3380000Z Job is about to start running on the hosted runner: GitHub Actions 1001264931

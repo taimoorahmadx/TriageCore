@@ -82,7 +82,7 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | # | Invariant | Enforced in | Test |
 |---|---|---|---|
 | I1 | `classification` is diagnosis only; only the policy sets `recommended_action` | `engine.py`, enums | `test_classification_is_never_an_action` |
-| I2 | Weights are human-authored; invalid or missing values raise | `weights.py` | `test_incomplete_weights_raise` |
+| I2 | Weight values have documented provenance; agent-proposed probabilities are provisional until evaluated; policy costs need owner approval; invalid or missing values raise | `weights.py` | `test_incomplete_weights_raise` |
 | I3 | Autonomous actions need unambiguous targets: `heal` exactly one relocated element; `auto-fix` exactly one attributed commit | adapters `blocked_actions` | `test_unusable_relocation_blocks_heal`; C8 |
 | I4 | Missing evidence is left out, never treated as fine | `SemiNaiveBayes` | `test_missing_group_leaves_posterior_unchanged` |
 | I5 | Signals from one fault count once (evidence groups) | adapters | `test_correlated_signals_counted_once` |
@@ -115,14 +115,14 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | QA `raw_signals` / `context` | `docs/contracts/raw_signals.md` | built |
 | QA weights rationale | `docs/contracts/weights_elicitation.md` | built |
 | CI facts, groups, context | `docs/contracts/ci_signals.md` | task C1 |
-| CI weights rationale | `docs/contracts/ci_weights_elicitation.md` | task C9 (human) |
+| CI weights rationale | `docs/contracts/ci_weights_elicitation.md` | task C9 (initial proposal), C12 (dataset calibration) |
 | Decision record (store) | `docs/contracts/decision_record.md` | task S1 |
 
 ## 7. Decisions (resolved 2026-10-25)
 
 | ID | Decision | Record |
 |---|---|---|
-| D1 | FYP-1 CI = offline slice on a labelled corpus + webhook endpoint tested with saved payloads; live GitHub App, queue, fix PRs and live trial move to FYP-2 | ADR 006, `log/changes.md` |
+| D1 | FYP-1 CI = offline vertical slice with fixture-based initial comparison + webhook endpoint tested with saved payloads; reviewed real corpus/full benchmark and final calibration follow after the CI implementation branch at the end of FYP-1; live GitHub App, queue, fix PRs and live trial move to FYP-2 | ADR 006, `log/changes.md` |
 | D2 | `heal` returns a suggested patch (unified diff); files are never edited automatically | this plan, FR-Q7 |
 | D3 | `rerun` added to the action enum for CI `flaky` | ADR 006 |
 | D4 | `expected_state_selector` is supplied by the test author; when absent, that evidence is missing (weaker decision); documented as a limitation | this plan |
@@ -130,7 +130,7 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | D6 | SQLite store; Postgres only if FYP-2 needs it | ADR 005 |
 | D7 | One `flaky` label; meaning defined per source in `brief.md` | `brief.md` glossary |
 
-Still open (owner decides inside the task): CI evidence groups (C1), CI weights (C9).
+Still open (owner decides inside the task): CI loss costs (C9). CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 at the end of FYP-1.
 
 ## 8. Security and data
 
@@ -143,14 +143,14 @@ Still open (owner decides inside the task): CI evidence groups (C1), CI weights 
 - QA evaluation: 12 steps on team-built pages and team-written labels. It shows the method works on known cases, not that it generalises. 0 of 4 masked regressions bounds the true rate only below ~53% (one-sided 95%); at least 59 regression cases with 0 misses are needed for < 5%.
 - `container_selector` gives the LLM the right HTML region; HTML is cut at 6000 characters.
 - Fixed observation window (1.5 s + 0.4 s); slow handlers can be misread.
-- Weights are expert judgement until calibrated on data (FYP-2).
+- CI probability weights are provisional until calibrated on reviewed labelled data (C12); held-out cases must not be used during fitting.
 
 ## 10. Risks and fallbacks
 
 | Area | Risk | Fallback |
 |---|---|---|
 | Relocation | LLM relocation fails often | Deterministic locator ladder (role/text/structure) behind the same `Relocator` interface; escalate when unsure |
-| Weights | Expert values are wrong | Sensitivity analysis now; learn tables from labelled counts in FYP-2 |
+| Weights | Elicited or agent-proposed probabilities may be miscalibrated | Sensitivity analysis; fit CI tables on reviewed training cases and evaluate on a separate holdout (C12); owner approves policy costs |
 | Baselines | `simple_rule` matches TriageCore on the QA suite | Report honestly; show where the engine differs (risk tiers, missing evidence, CI reuse) with targeted cases |
 | CI logs | Logs exceed the context window | Middle truncation; then the failing step's output only |
 | Commit tracing | Large PRs make tracing unreliable | Flag the whole PR (ambiguous) instead of one commit |

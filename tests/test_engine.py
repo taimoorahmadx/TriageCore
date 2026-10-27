@@ -35,6 +35,16 @@ def posterior_of(engine, evidence):
     return engine.model.posterior(spec, states)
 
 
+def test_rerun_is_a_valid_action():
+    output = ConfidenceEngineOutput(
+        classification="flaky",
+        confidence_score=90,
+        reasoning_trace="CI failure classified as intermittent.",
+        recommended_action="rerun",
+    )
+    assert output.recommended_action == "rerun"
+
+
 # (a) The engine reproduces a posterior computed by hand.
 def test_posterior_matches_hand_calculation(engine):
     # Evidence: page error + error banner (runtime_failure = "2+"), expected state NOT reached.
@@ -93,25 +103,97 @@ def test_policy_matches_threshold_formula(engine):
     assert decide(tau - 0.001) == "escalate"
 
 
-# (e) The SAME engine handles CI's four causes, proving one shared decision engine.
+# (e) The SAME engine handles CI's four causes using only pre-rerun evidence.
 def test_shared_engine_handles_four_cause_ci_domain(engine):
-    def ci(**signals):
+    def ci(raw_signals, **context):
         return ConfidenceEngineInput(
-            evidence_type="ci_log", source="ci", raw_signals=signals, context={"risk_tier": "default"}
+            evidence_type="ci_log",
+            source="ci",
+            raw_signals=raw_signals,
+            context={"risk_tier": "default", **context},
         )
 
-    dep = engine.evaluate(ci(log_signature="import_error", rerun="failed"))
+    dep = engine.evaluate(
+        ci(
+            {
+                "failure_kind": "import_or_missing_module",
+                "dependency_change": "changed",
+                "code_link": "failing_file_touched",
+                "truncated": False,
+            },
+            attributed_commit="abc123",
+            ambiguous_commit=False,
+        )
+    )
     assert dep.classification == "dependency"
     assert dep.recommended_action == "auto-fix"
 
-    flaky = engine.evaluate(ci(log_signature="timeout", rerun="passed"))
+    flaky = engine.evaluate(
+        ci(
+            {
+                "failure_kind": "network_or_timeout",
+                "dependency_change": "unchanged",
+                "code_link": "not_touched",
+                "truncated": False,
+            },
+            attributed_commit=None,
+            ambiguous_commit=False,
+        )
+    )
     assert flaky.classification == "flaky"
-    assert flaky.recommended_action == "flag"
+    assert flaky.recommended_action == "rerun"
 
-    bug = engine.evaluate(ci(log_signature="assertion", rerun="failed"))
+    bug = engine.evaluate(
+        ci(
+            {
+                "failure_kind": "test_assertion",
+                "dependency_change": "unchanged",
+                "code_link": "failing_file_touched",
+                "truncated": False,
+            },
+            attributed_commit="def456",
+            ambiguous_commit=False,
+        )
+    )
     assert bug.classification == "bug"
-    assert bug.recommended_action == "escalate"
+    assert bug.recommended_action == "auto-fix"
 
+
+def test_ambiguous_commit_blocks_ci_auto_fix(engine):
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log",
+        source="ci",
+        raw_signals={
+            "failure_kind": "import_or_missing_module",
+            "dependency_change": "changed",
+            "code_link": "failing_file_touched",
+            "truncated": False,
+        },
+        context={"risk_tier": "default", "attributed_commit": None, "ambiguous_commit": True},
+    )
+
+    output, details = engine.evaluate_detailed(evidence)
+
+    assert details["blocked"]["auto-fix"] == "multiple commits touch a failing file"
+    assert output.recommended_action != "auto-fix"
+
+
+def test_all_null_ci_facts_escalate(engine):
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log",
+        source="ci",
+        raw_signals={
+            "failure_kind": None,
+            "dependency_change": None,
+            "code_link": None,
+            "truncated": None,
+        },
+        context={"risk_tier": "default", "attributed_commit": None, "ambiguous_commit": False},
+    )
+
+    output = engine.evaluate(evidence)
+
+    assert output.recommended_action == "escalate"
 
 # (f) Gates: no element, or an ambiguous match, makes healing impossible regardless of probability.
 @pytest.mark.parametrize("matches", [0, 2, 5])

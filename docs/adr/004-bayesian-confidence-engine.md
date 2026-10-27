@@ -25,7 +25,7 @@ The engine is built from four parts:
 1. **Diagnosis by semi-naive Bayes.**
    - Adapters may pool related signals within a group (for example, the QA runtime-failure indicators).
    - Separate groups are treated as conditionally independent given the cause, so correlation across groups can still affect the posterior.
-   - The posterior over causes is computed from human-authored priors and likelihood tables P(state | cause) in `weights.yaml`.
+   - The posterior over causes is computed from documented priors and likelihood tables P(state | cause) in `weights.yaml`; values may be human-elicited or explicitly agent-proposed.
    - Missing evidence is marginalised out.
    - `classification` is the most probable cause, a diagnosis only.
 2. **Decision by minimum expected loss, with escalation as the reject option** (Chow's rule).
@@ -39,9 +39,13 @@ The engine is built from four parts:
 4. **Data, not code.**
    - Causes, groups, actions and costs live in `weights.yaml` and are validated against the contract enums.
    - Placeholders or malformed values raise `RuntimeError`.
-   - Every number is human-authored (AGENTS.md).
+   - Missing or malformed values raise; every value records its provenance. Agent-proposed probability tables are provisional until evaluated on held-out labelled data. Policy costs require project-owner approval (AGENTS.md).
 
 **QA causes are extended with `flaky`** (an element that is slow to render), backed by a re-wait of the original selector before relocation. Timing failures were a major E2E failure category in the reviewed literature. This extends AGENTS.md's QA use of the existing enum value; no schema change is needed.
+
+### Weight provenance amendment (2026-10-27)
+
+The original QA values remain human-elicited; final QA calibration is planned at the end of FYP-1 after the initial benchmark, using reviewed data and a held-out evaluation. For CI, an agent may propose provisional prior and likelihood values in an explicit task, with rationale and source recorded. C10/C11 use those provisional values for the initial pipeline comparison and screen. C3 and C12 run after the CI implementation branch is merged, at the end of FYP-1; C12 fits tables from human-reviewed training labels and evaluates once on a holdout untouched by fitting. Policy loss costs remain project-owner decisions; an agent may present options but cannot approve them.
 
 ## Alternatives considered
 
@@ -62,10 +66,10 @@ The engine is built from four parts:
   - Works before data exists, using expert priors.
   - Upgrades fit behind the same interfaces in FYP-II: tables learned from benchmark counts, calibration, ROC thresholds.
 - **Negative/Risk:**
-  - The likelihood values are expert judgements until calibrated. Mitigation: a written justification per value (`docs/contracts/weights_elicitation.md`), and `src/core/sensitivity.py`, which reports which values a decision hinges on.
+- The likelihood values may begin as expert judgements or agent proposals and remain provisional until calibrated. Mitigation: record a written justification and source for each value, use `src/core/sensitivity.py`, and evaluate calibration on held-out labelled data.
   - The independence-between-groups assumption may make the engine overconfident. Mitigation: grouping correlated signals, and checking calibration on the scenario suite.
 - **Claim correction:** a ROC analysis on ~50 cases cannot *guarantee* FPR < 5%, because the sampling uncertainty is wide. FYP-II will either report FPR with a confidence interval or use conformal risk control, which gives a finite-sample bound.
-- **Open item for M5:** CI `flaky` naturally maps to a `rerun` action, which is not in the AGENTS.md action enum. The team must decide whether to add it or map flaky → `flag`.
+- **Resolved by C2:** CI `flaky` maps to the `rerun` action; `rerun` is a recommendation only in FYP-1.
 - **Deferred to Iteration 2:**
   - `DecisionStore` persistence via SQLite, as decided in ADR 005;
-  - CI likelihood tables (`ci: enabled: false` until then).
+  - live CI integration and fix PRs, as scoped in ADR 006.

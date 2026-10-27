@@ -20,3 +20,11 @@ what it affects, who decided, approval status.
 | 12 | 2026-10-25 | Planning docs moved to the brief / spec / plan / tasks / progress set; `roadmap.md`, `requirements.md`, `architecture.md` folded in | One predictable place per kind of context for every agent | Documentation only | Team | Not needed (docs) |
 
 | 2026-10-25 | X1 | QA hard precondition: block `heal` when `expected_state_reached` is false (ADR 004). | Project owner approved this audit fix. |
+- 2026-10-26 — C3: Removed `verified_by` from corpus review records and counted cases with a label plus evidence; Shazil requested the field removal.
+| 2026-10-27 | Allow provisional agent-proposed CI probability weights and add C12 dataset calibration with a predeclared holdout | Requested context change; preserve human-reviewed labels and owner approval of policy costs | Shazil |
+
+- 2026-10-27 — Move CI weight calibration C12 to the final FYP-2 calibration stage after C10/C11; reserve final QA calibration for the same end stage and keep the initial CI benchmark on provisional weights.
+
+- 2026-10-27 — Defer C3 real CI corpus and full benchmark to FYP-2/M7 so the FYP-1 CI branch can proceed with fixture-based initial evaluation; remove C3 as a C10 prerequisite.
+
+- 2026-10-27 — Correct task sequencing: defer C3 and final QA/CI calibration to the end of FYP-1, after the CI implementation branch merges; keep them out of FYP-2.

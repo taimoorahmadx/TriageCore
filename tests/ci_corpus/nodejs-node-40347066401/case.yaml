@@ -1,0 +1,42 @@
+repo: nodejs/node
+run_id: 40347066401
+head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
+run_attempts:
+- attempt: 1
+  head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
+  conclusion: failure
+commits:
+- sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
+  author: dependabot[bot]
+  files: []
+- sha: 1ae40765d68cd4bac5a94d63a695239b84be5426
+  author: aduh95
+  files: []
+- sha: 573807b316fe6c7d09fec24af1e49c2f32ed6cc3
+  author: aduh95
+  files: []
+- sha: b0cf162cec7b30b39ba46c1a0673bc237c971bae
+  author: aduh95
+  files: []
+- sha: 2f8cf853db24509bfff868beacecf66fc1038069
+  author: aduh95
+  files: []
+- sha: ec8e19d89340f02ac9f2053842c977cb36d9eab9
+  author: aduh95
+  files: []
+- sha: 0991bdb623ea4f6ab7c1803a8430ab3abbe364e8
+  author: aduh95
+  files: []
+- sha: ba3c34a93ac3e21eb15560d8ced6be13106ea373
+  author: ravi-arnan
+  files: []
+- sha: 3983092f63284fe57e53006cba91948fbbd84967
+  author: nodejs-github-bot
+  files: []
+- sha: 79239a48f1999c7ffa6b0a37ffb823485587d0b0
+  author: nodejs-github-bot
+  files: []
+label: null
+label_source: null
+risk_tier: medium
+suggested_label: infra

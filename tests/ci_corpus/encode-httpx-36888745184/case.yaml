@@ -1,0 +1,43 @@
+repo: encode/httpx
+run_id: 36888745184
+head_sha: 408943ad645e5497726584691c2020365da3ffb7
+run_attempts:
+- attempt: 1
+  head_sha: 408943ad645e5497726584691c2020365da3ffb7
+  conclusion: failure
+commits:
+- sha: 408943ad645e5497726584691c2020365da3ffb7
+  author: lovelydinosaur
+  files: []
+- sha: b5addb64f0161ff6bfe94c124ef76f6a1fba5254
+  author: musicinmybrain
+  files: []
+- sha: ae1b9f66238f75ced3ced5e4485408435de10768
+  author: thejcannon
+  files: []
+- sha: ca097c96f97d8d2a5da09b8ca736c7e78a2467f6
+  author: xrmx
+  files: []
+- sha: def4778d622e8bf49a9fea4dda78cca4cf666d8a
+  author: Zproger
+  files: []
+- sha: 435e1dac899adeb0c156c00721ecbb1124d75842
+  author: dependabot[bot]
+  files: []
+- sha: 4b23574cf83307ce27d3b14b4a425dc58c57d28d
+  author: lovelydinosaur
+  files: []
+- sha: 652f051feaf1ab2828e1812eb0c48f9046a8b5ce
+  author: tobb10001
+  files: []
+- sha: 3fee27838e9fd0cb528861e41f3ff98164081a4b
+  author: ftnext
+  files: []
+- sha: bc00d2bd9f715b3b848925e0c259887409bceabc
+  author: GlenTiki
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

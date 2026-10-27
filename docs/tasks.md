@@ -80,24 +80,23 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ### M4 · CI ingestion · Shazil · not started (scope: ADR 006)
 - [ ] 3 malformed payloads return 400 without crashing. → **C5**
 - [ ] Invalid signature returns 401. → **C5**
-- [ ] Oversized log truncated in the middle with `truncated=true`. → **C4**
+- [x] Oversized log truncated in the middle with `truncated=true`. *Evidence: `tests/test_truncate.py`.* → **C4**
 
 ### M5 · CI agent · Shazil · not started
-- [ ] CI evidence contract approved. → **C1**
+- [x] CI evidence contract approved. *Evidence: `docs/contracts/ci_signals.md`, v1 approved by Shazil (2026-10-26).* → **C1**
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
-- [ ] Sets `ambiguous_commit=true` when 2 commits touch the failing file. → **C7**
-- [ ] CI weights authored by a human. → **C9**
-- [ ] CI evaluation on ≥ 30 labelled real cases. → **C3**, **C10**
+- [x] Sets `ambiguous_commit=true` when 2 commits touch the failing file. *Evidence: `tests/test_tracing.py::test_two_matching_commits_are_ambiguous`.* → **C7**
+- [ ] CI probability tables have documented provisional values and owner-approved policy costs. → **C9**
 
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
 - [x] QA evaluation script with CSV output. *Evidence: `src/eval/evaluate.py`, `results/`.*
 - [x] Confidence intervals and stronger baselines. *Evidence: B2 confidence intervals; `simple_rule` (Q4) and `llm_judge` (Q3) reported by the evaluation script; pipeline tests pass.*
-- [ ] 10–15 real-world baseline cases. → **B1** (QA), **C3** (CI)
+- [ ] 10–15 real-world baseline cases. → **B1** (QA)
 - [ ] Running on a remote machine, not localhost. → **D1**
 
 ### M6–M8 · FYP-2 · not started
 - [ ] M6: agent opens (never merges) a PR with score and trace in the body; dashboard of stored decisions.
-- [ ] M7: benchmark on real cases with confidence intervals; calibration script.
+- [ ] M7: larger-scale follow-up benchmarks and reliability analysis after the end-of-FYP-1 CI dataset/calibration baseline.
 - [ ] M8: agents on 2–3 consenting projects for 4 weeks; acceptance CSV and report.
 
 ## Task list
@@ -124,12 +123,13 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [C4](tasks/c4.md) | Log truncation | Shazil | M4 | — |
 | [C5](tasks/c5.md) | Webhook endpoint | Shazil | M4 | A1, S1 |
 | [C7](tasks/c7.md) | Commit tracing | Shazil | M5 | C1 |
-| [C3](tasks/c3.md) | CI corpus | Shazil | M5 | C1 |
+| [C3](tasks/c3.md) | CI corpus | Shazil | FYP-1 final dataset work | C1, C10, C11 |
 | [C6](tasks/c6.md) | Log fact extraction | Shazil | M5 | C1, C4 |
 | [C8](tasks/c8.md) | `CIAdapter` in the engine | Shazil | M5 | C1, C7 |
-| [C9](tasks/c9.md) | CI weights (human) | Shazil | M5 | C8 |
-| [C10](tasks/c10.md) | CI pipeline and evaluation | Shazil | M5 | C3, C6, C9 |
+| [C9](tasks/c9.md) | Initial CI weight proposal | Shazil | M5 | C8 |
+| [C10](tasks/c10.md) | CI pipeline and initial evaluation | Shazil | M5 | C6, C9 |
 | [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 |
+| [C12](tasks/c12.md) | Final CI dataset calibration | Shazil | FYP-1 final dataset work | C3, C10, C11 |
 | [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
 | [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |
 
@@ -164,4 +164,6 @@ anything was renamed, moved or deleted)
 ````
 
 Keep a task small enough for one session (about 5 files). Prefer an example input/output over a
-paragraph of description. Never put weight values, labels or results into a task: those are human work.
+paragraph of description. Do not put specific weights, ground-truth labels or measured results into
+task instructions. An explicit task may ask the agent to propose weights with provenance; ground-truth
+labels remain human-authored.

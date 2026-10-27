@@ -94,9 +94,12 @@ Interpreter is `.venv/bin/python`; override with `make test PY=python3`. Fronten
 
 ## Rules (override defaults)
 
-1. **Never write or change a number in `src/core/weights.yaml`** (or any future weights file).
-   Every value is human-authored. You may add `null` placeholders with comments when a task says so.
-   Missing or invalid weights must raise; never default silently.
+1. **Do not change existing weight values unless an explicit task requires it.** An agent may
+   propose or write new prior and likelihood values when a task asks, but must document their source,
+   rationale, and provisional status. Dataset calibration must use human-reviewed labels and keep a
+   held-out set separate from fitting. Loss costs express project policy: an agent may suggest them,
+   but the project owner must approve them before CI weights are enabled. Missing or invalid weights
+   must raise; never default silently.
 2. **`classification` is diagnosis only.** Only the engine's policy sets `recommended_action`. If you
    are about to put an action name into `classification`, stop.
 3. **Never resolve ambiguity silently.** `heal` needs exactly one relocated element; `auto-fix`

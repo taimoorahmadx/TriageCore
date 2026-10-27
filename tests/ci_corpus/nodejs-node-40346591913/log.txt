@@ -1,0 +1,150 @@
+===== lint-commit-message/1_Set up job.txt =====
+﻿2026-10-26T15:09:53.2768471Z Current runner version: '2.338.0'
+2026-10-26T15:09:53.2793127Z ##[group]Runner Image Provisioner
+2026-10-26T15:09:53.2794087Z Hosted Compute Agent
+2026-10-26T15:09:53.2794641Z Version: 20261021.618
+2026-10-26T15:09:53.2795286Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-26T15:09:53.2795958Z Build Date: 2026-10-21T00:45:21Z
+2026-10-26T15:09:53.2796589Z Worker ID: {a79b3486-d6e8-4a30-aeb3-7f199bbb16b6}
+2026-10-26T15:09:53.2797757Z Region: centralus
+2026-10-26T15:09:53.2798299Z Cloud: Azure
+2026-10-26T15:09:53.2798832Z ##[endgroup]
+2026-10-26T15:09:53.2800301Z ##[group]VM Image
+2026-10-26T15:09:53.2800874Z - OS: Linux (x64)
+2026-10-26T15:09:53.2801507Z - Source: Docker
+2026-10-26T15:09:53.2802031Z - Name: ubuntu:24.04
+2026-10-26T15:09:53.2802588Z - Version: 20261021.31.1
+2026-10-26T15:09:53.2803144Z ##[endgroup]
+2026-10-26T15:09:53.2804203Z ##[group]GITHUB_TOKEN Permissions
+2026-10-26T15:09:53.2806026Z Metadata: read
+2026-10-26T15:09:53.2806613Z PullRequests: read
+2026-10-26T15:09:53.2807616Z ##[endgroup]
+2026-10-26T15:09:53.2809936Z Secret source: Actions
+2026-10-26T15:09:53.2810869Z Cache mode: read
+2026-10-26T15:09:53.2811695Z Prepare workflow directory
+2026-10-26T15:09:53.3280999Z Prepare all required actions
+2026-10-26T15:09:53.3332512Z Getting action download info
+2026-10-26T15:09:53.7341899Z Download action repository 'actions/setup-node@820762786026740c76f36085b0efc47a31fe5020' (SHA:820762786026740c76f36085b0efc47a31fe5020)
+2026-10-26T15:09:54.1429119Z Download action repository 'actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3' (SHA:3a2844b7e9c422d3c10d287c895573f7108da1b3)
+2026-10-26T15:09:54.6129562Z Complete job name: lint-commit-message
+
+===== lint-commit-message/2_Install Node.js.txt =====
+﻿2026-10-26T15:09:54.6874655Z ##[group]Run actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+2026-10-26T15:09:54.6875761Z with:
+2026-10-26T15:09:54.6876197Z   node-version: lts/*
+2026-10-26T15:09:54.6876665Z   check-latest: false
+2026-10-26T15:09:54.6880735Z   token: ***
+2026-10-26T15:09:54.6881205Z   package-manager-cache: true
+2026-10-26T15:09:54.6882071Z env:
+2026-10-26T15:09:54.6882505Z   NODE_VERSION: lts/*
+2026-10-26T15:09:54.6882962Z ##[endgroup]
+2026-10-26T15:09:55.0370142Z Attempt to resolve LTS alias from manifest...
+2026-10-26T15:09:56.0288128Z Attempting to download 24...
+2026-10-26T15:09:56.9941386Z Acquiring 24.22.1 - x64 from https://github.com/actions/node-versions/releases/download/24.22.1-39619001896/node-24.22.1-linux-x64.tar.gz
+2026-10-26T15:09:56.9943592Z Extracting ...
+2026-10-26T15:09:56.9945507Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/22de6dae-0e8f-4ad1-9372-c4ffa06376a8 -f /home/runner/work/_temp/90d49000-2743-432d-9aa3-2c6c3c5b63d7
+2026-10-26T15:09:58.6459500Z Adding to the cache ...
+2026-10-26T15:10:02.6503903Z ##[group]Environment details
+2026-10-26T15:10:02.8699446Z node: v24.22.1
+2026-10-26T15:10:02.8700553Z npm: 11.19.1
+2026-10-26T15:10:02.8701321Z yarn: 
+2026-10-26T15:10:02.8702708Z ##[endgroup]
+
+===== lint-commit-message/3_Validate first commit message.txt =====
+﻿2026-10-26T15:10:02.9506421Z ##[group]Run actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3
+2026-10-26T15:10:02.9508998Z with:
+2026-10-26T15:10:02.9515615Z   script: const { data: [commit] } = await github.rest.pulls.listCommits({
+  ...context.repo,
+  pull_number: context.issue.number,
+  per_page: 1,
+});
+if (!commit) {
+  throw new Error('No commits found in pull request');
+}
+const { exitCode, stdout, stderr } = await exec.getExecOutput('npx', [
+  '-q', '--yes', '--ignore-scripts', 'core-validate-commit@6.0.0',
+  '--no-validate-metadata', '--tap', '-',
+], {
+  cwd: process.env.RUNNER_TEMP,
+  input: Buffer.from(JSON.stringify([{
+    id: commit.sha,
+    message: commit.commit.message,
+    author: commit.commit.author,
+  }])),
+  silent: true,
+  ignoreReturnCode: true,
+});
+if (exitCode !== 0) {
+  core.setFailed(stdout + stderr || 'Commit message validation failed');
+} else {
+  core.info('First commit message passes validation');
+}
+
+2026-10-26T15:10:02.9528122Z   github-token: ***
+2026-10-26T15:10:02.9528711Z   debug: false
+2026-10-26T15:10:02.9529276Z   user-agent: actions/github-script
+2026-10-26T15:10:02.9530759Z   result-encoding: json
+2026-10-26T15:10:02.9531275Z   retries: 0
+2026-10-26T15:10:02.9531799Z   retry-exempt-status-codes: 400,401,403,404,422
+2026-10-26T15:10:02.9534263Z env:
+2026-10-26T15:10:02.9534793Z   NODE_VERSION: lts/*
+2026-10-26T15:10:02.9535294Z ##[endgroup]
+2026-10-26T15:10:13.7478703Z ##[error]# 0991bdb623ea4f6ab7c1803a8430ab3abbe364e8
+ok 1 assisted-by-is-trailer: no Assisted-by metadata
+ok 2 co-authored-by-is-trailer: no Co-authored-by metadata
+ok 3 fixes-url: skipping fixes-url # SKIP
+ok 4 line-after-title: blank line after title
+ok 5 line-length: line-lengths are valid
+not ok 6 signed-off-by: Commit must have a "Signed-off-by" trailer ()
+  ---
+    {
+      found: '',
+      compare: '===',
+      wanted: '',
+      at: {
+        line: 0,
+        column: 0,
+        body: [
+          '',
+          'This reverts commit 1bc3cdae3750420b37109e1fc0156392dc1e9916.',
+          '',
+          'PR-URL: https://github.com/nodejs/node/pull/67015',
+          'Refs: https://github.com/nodejs/node/issues/66571',
+          'Reviewed-By: Claudio Wunder <cwunder@gnome.org>',
+          'Reviewed-By: Filip Skokan <panva.ip@gmail.com>',
+          'Reviewed-By: Aviv Keller <me@aviv.sh>'
+        ]
+      }
+    }
+  ...
+ok 7 subsystem: valid subsystems [tools]
+ok 8 title-format: Title is formatted correctly.
+
+0..8
+# tests 8
+# pass  6
+# fail  1
+# Please review the commit message guidelines:
+# https://github.com/nodejs/node/blob/HEAD/doc/contributing/pull-requests.md#commit-message-guidelines
+npm warn deprecated tap@16.3.10: Versions of tap before v18 are no longer maintained. Please upgrade.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated libtap@1.4.1: This library is no longer used by node-tap, and is unmaintained.
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+
+===== lint-commit-message/7_Complete job.txt =====
+﻿2026-10-26T15:10:13.7679075Z Cleaning up orphan processes
+
+===== lint-commit-message/system.txt =====
+2026-10-26T15:09:59.2480000Z Job is waiting for a hosted runner to come online.
+2026-10-26T15:09:59.2170000Z Requested labels: ubuntu-slim
+2026-10-26T15:09:59.2170000Z Job defined at: nodejs/node/.github/workflows/commit-lint.yml@refs/heads/main
+2026-10-26T15:09:59.2170000Z Waiting for a runner to pick up this job...
+2026-10-26T15:09:59.2170000Z Evaluating lint-commit-message.if
+2026-10-26T15:09:59.2170000Z Evaluating: success()
+2026-10-26T15:09:59.2170000Z Result: true
+2026-10-26T15:09:59.2580000Z Job is about to start running on the hosted runner: GitHub Actions 1001264924

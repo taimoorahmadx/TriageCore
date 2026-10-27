@@ -1,0 +1,43 @@
+repo: django/django
+run_id: 40326305433
+head_sha: 6c2ff618bb47b5acbd0ebff9ea0c89b5a37b3983
+run_attempts:
+- attempt: 1
+  head_sha: 6c2ff618bb47b5acbd0ebff9ea0c89b5a37b3983
+  conclusion: failure
+commits:
+- sha: 6c2ff618bb47b5acbd0ebff9ea0c89b5a37b3983
+  author: boxed
+  files: []
+- sha: 8624d2dc056d8bcf29becd344bbc773ad09e198c
+  author: boxed
+  files: []
+- sha: 45fe4636d8d147b87040170a6cee4ab036ed2324
+  author: spokodev
+  files: []
+- sha: a2a0b4f2764f7b192bff4bb75ed56ce017931a71
+  author: lyova24
+  files: []
+- sha: 36920bb4766679f5b32445797dcc5d32b8ff5ad2
+  author: jacobtylerwalls
+  files: []
+- sha: 0e128d524d0a7c55a955570d6e5da983ac6ce6c7
+  author: medmunds
+  files: []
+- sha: 1b40abab06d248ee409fa8b7a8dfb6312de6ca08
+  author: carltongibson
+  files: []
+- sha: 512b92a493f8006e149bb924957561acc6714e52
+  author: jrief
+  files: []
+- sha: 816ea69cb8d24df97611935384d380a752c14e0f
+  author: jrief
+  files: []
+- sha: 32a46625c24cbc72adc5a77296b085a49c47ae12
+  author: Gerry Mcbride
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

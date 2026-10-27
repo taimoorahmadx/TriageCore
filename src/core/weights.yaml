@@ -1,6 +1,7 @@
 # TriageCore ConfidenceEngine weights
 # ===================================
-# EVERY number in this file is authored by a human (AGENTS.md rule 1).
+# Existing QA values were elicited by a human. New CI probability values may be agent-proposed
+# only under an explicit task and must include provenance and provisional status (AGENTS.md rule 1).
 # `null` = not yet filled in. The engine refuses to start until every value is filled.
 # Check progress with:   .venv/bin/python -m src.core.weights
 #
@@ -11,7 +12,8 @@
 #   - costs are non-negative numbers on any consistent scale (e.g. engineer-minutes)
 # Record the reason behind each number in docs/contracts/weights_elicitation.md.
 #
-# Values authored by Abdul Mohaimin on 2026-10-11 (elicitation session); cost unit: 1 = one needless escalation.
+# QA values authored by Abdul Mohaimin on 2026-10-11 (elicitation session); QA cost unit:
+# 1 = one needless escalation. CI values and their provenance are documented separately.
 
 qa:
   # Possible causes of a broken test step (must be values of the contract's classification enum).

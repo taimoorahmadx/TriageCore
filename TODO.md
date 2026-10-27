@@ -52,20 +52,19 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 5. `feature/ci-agent` · CI agent, part 1
-- [ ] C2 · Add `rerun` to the engine's action list
-- [ ] C4 · Truncate long CI logs in the middle
-- [ ] C1 · CI evidence contract · after C2 · *needs you: decide the evidence groups* · decided 2026-10-25: evidence = pre-rerun facts only, rerun outcome is the label (audit M2a); `blocked_actions` cannot see `context` (audit Q1), resolve here
-- [ ] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
-- [ ] C3 · Corpus of 30–40 real failed CI runs · after C1 · *needs you: verify every label*
-- [ ] C6 · LLM extracts structured facts from a log · after C1, C4
-- [ ] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7
+- [x] C2 · Add `rerun` to the engine's action list
+- [x] C4 · Truncate long CI logs in the middle
+- [x] C1 · CI evidence contract · after C2 · approved 2026-10-26
+- [x] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
+- [x] C6 · LLM extracts structured facts from a log · after C1, C4
+- [x] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7
 
 → Merge into `main`.
 
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [ ] C5 · GitHub webhook endpoint with signature check · after S1
-- [ ] C9 · CI weights · after C8 · *needs you: write every number; the agent only adds placeholders*
-- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9
+- [ ] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
+- [ ] C10 · CI pipeline and initial evaluation against baselines · after C6, C9 (fixture cases; real corpus deferred)
 - [ ] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -80,15 +79,21 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 → Merge into `main`.
 
+## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
+- [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
+- [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
+
+→ Merge into `main`.
+
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
-No tasks yet; they are written at the start of FYP-2.
+Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
 
-## 9. Human work for FYP-1 Final (not for AI)
+## 10. Human work for FYP-1 Final (not for AI)
 - [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Fill in `docs/disclosure.md` §2
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
-- [ ] Tune QA evidence probabilities using labeled cases; compare against current values on held-out cases (keep mistake costs human-set)
+- [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set after the initial QA benchmark (keep mistake costs human-set)
 - [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
 - [ ] Report, poster, presentation

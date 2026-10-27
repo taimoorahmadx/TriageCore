@@ -1,0 +1,43 @@
+repo: numpy/numpy
+run_id: 40340589471
+head_sha: 033498ec137c2c8b35bc125ba0968b487d952f26
+run_attempts:
+- attempt: 1
+  head_sha: 033498ec137c2c8b35bc125ba0968b487d952f26
+  conclusion: failure
+commits:
+- sha: 033498ec137c2c8b35bc125ba0968b487d952f26
+  author: luhenry
+  files: []
+- sha: 6e1aca7eda6ea258fe4e97bc2546874bd46e4a3c
+  author: andyfaff
+  files: []
+- sha: 93919977fb6c4b8238fb178d940bdc6ba400cf84
+  author: ganesh-k13
+  files: []
+- sha: 7faa9e5174cb0c28b5ee235767a34fdb035d4405
+  author: ganesh-k13
+  files: []
+- sha: f9f1772ce010001208475f751d19253469788410
+  author: tylerjereddy
+  files: []
+- sha: a6181062e8b50e4e6ea6bfd866caf28861caf28d
+  author: charris
+  files: []
+- sha: 74f00406e0bd3494e846208040449698240b1d47
+  author: charris
+  files: []
+- sha: c33148c55c0cd182ca37c1d977e4fd801134900a
+  author: charris
+  files: []
+- sha: 81942756347cd500c90e289f69d23fa5435c7908
+  author: Fun-Projects-Learn
+  files: []
+- sha: 69a99356879f6d9157b94fe74ad962a29331e3e0
+  author: dependabot[bot]
+  files: []
+label: infra
+label_source: The failed log reports GitLab unavailable due to load while fetching
+  the Eigen submodule; the git fetch exits with code 128.
+risk_tier: medium
+suggested_label: infra

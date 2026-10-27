@@ -1,0 +1,43 @@
+repo: actions/setup-python
+run_id: 40275078541
+head_sha: 6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+run_attempts:
+- attempt: 1
+  head_sha: 6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+  conclusion: failure
+commits:
+- sha: 6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+  author: v-HarithaVattikuti
+  files: []
+- sha: ec52d0af729a7c50ced4261d17a07916f43f5b8e
+  author: dependabot[bot]
+  files: []
+- sha: ff73b2463e2f3baa703f830da214b8dfeeaeccf8
+  author: dependabot[bot]
+  files: []
+- sha: 0e40890053525508c059c61932a6b8614f9e95db
+  author: dependabot[bot]
+  files: []
+- sha: 3892123fbe74688ccc83ec7c465dc688359e5199
+  author: dependabot[bot]
+  files: []
+- sha: 660965736c4aecc62797ea07d351a3c259f14660
+  author: dependabot[bot]
+  files: []
+- sha: e1be392b26fb1917a7b2c455817e4b4dad6544ce
+  author: dependabot[bot]
+  files: []
+- sha: 06da6279cdbca41027908073e81a4544dc79c06b
+  author: dependabot[bot]
+  files: []
+- sha: af9bcc7548695e66d75709de6f29e337624b8de8
+  author: dependabot[bot]
+  files: []
+- sha: 7aeabeba5501120d873c50398519dbfd0657031c
+  author: dependabot[bot]
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

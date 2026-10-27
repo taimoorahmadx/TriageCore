@@ -1,0 +1,43 @@
+repo: pytest-dev/pytest
+run_id: 40300247079
+head_sha: b9022ba04a33bfc76b5c9aefb8974755a80bf5ce
+run_attempts:
+- attempt: 1
+  head_sha: b9022ba04a33bfc76b5c9aefb8974755a80bf5ce
+  conclusion: failure
+commits:
+- sha: b9022ba04a33bfc76b5c9aefb8974755a80bf5ce
+  author: bluetech
+  files: []
+- sha: 16f87a7f364a7362fbfbb204c79a47ad567b4fbd
+  author: Zhang Xiaomin
+  files: []
+- sha: 082ed70e314ee8e1ab117763d17fe801648f7508
+  author: RonnyPfannschmidt
+  files: []
+- sha: ae37a013763e9c4a143245eda1acdc3c27961685
+  author: RonnyPfannschmidt
+  files: []
+- sha: 7d646b595cf6e5e0111bbb41bac5e1f5cdf2881b
+  author: bluetech
+  files: []
+- sha: 6e6c9964d267233f12654bf0d799a40503a22c0e
+  author: HakeemTheEmperor
+  files: []
+- sha: 3fd4ebd022ba09aeb85ceb6804bf5c85e20c8856
+  author: claude
+  files: []
+- sha: 92f29d723af802cff92064f5ca13dfd5bbef717a
+  author: bluetech
+  files: []
+- sha: 4aa7d5d19ce74999624102208ed4522c5587492d
+  author: github-actions[bot]
+  files: []
+- sha: 0f54d41bedf00505bb1ac2c724abf96ba6dcf48d
+  author: RonnyPfannschmidt
+  files: []
+label: infra
+label_source: The failed job log ends while waiting for a hosted runner to come online;
+  no test or build error appears in the captured log.
+risk_tier: medium
+suggested_label: infra

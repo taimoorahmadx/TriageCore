@@ -2,7 +2,7 @@
 
 The file holds every number the engine reasons with: prior probabilities of each
 cause, likelihood tables P(evidence state | cause), and the loss (cost) matrix
-used to choose an action. All numbers are human-authored (see AGENTS.md).
+used to choose an action. Weight provenance and approval rules are in AGENTS.md.
 
 Validation is strict on purpose. Any missing key, unfilled placeholder (``null``),
 or malformed probability raises ``RuntimeError`` listing every problem found.

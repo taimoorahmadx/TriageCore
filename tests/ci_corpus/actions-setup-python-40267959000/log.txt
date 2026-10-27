@@ -1,0 +1,15 @@
+===== Check dist_ _ check-dist/system.txt =====
+2026-10-26T04:13:37.3490000Z Evaluating call-check-dist.if
+2026-10-26T04:13:37.3490000Z Evaluating: success()
+2026-10-26T04:13:37.3490000Z Result: true
+2026-10-26T04:13:37.3490000Z Evaluating call-check-dist.check-dist.if
+2026-10-26T04:13:37.3490000Z Evaluating: success()
+2026-10-26T04:13:37.3490000Z Result: true
+2026-10-26T04:13:37.3500000Z Requested labels: ubuntu-latest
+2026-10-26T04:13:37.3500000Z Job defined at: actions/reusable-workflows/.github/workflows/check-dist.yml@refs/heads/main
+2026-10-26T04:13:37.3500000Z Reusable workflow chain:
+2026-10-26T04:13:37.3500000Z actions/setup-python/.github/workflows/check-dist.yml@refs/pull/1379/merge (6523b67b26e940410f2ad09e2de99d9a2d9e21a4)
+2026-10-26T04:13:37.3500000Z -> actions/reusable-workflows/.github/workflows/check-dist.yml@refs/heads/main (d468c63c53c1184242904d1a3ac74fd1081f36c8)
+2026-10-26T04:13:37.3500000Z Waiting for a runner to pick up this job...
+2026-10-26T04:14:28.6650000Z Job is about to start running on the hosted runner: GitHub Actions 1021922247
+2026-10-26T04:14:28.6650000Z Job is waiting for a hosted runner to come online.

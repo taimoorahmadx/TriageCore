@@ -1,6 +1,6 @@
 # SYNTHETIC TEST VALUES - NOT THE PROJECT'S WEIGHTS.
 # Chosen only so the engine's arithmetic can be checked by hand in tests/test_engine.py.
-# The real, human-authored numbers live in src/core/weights.yaml.
+# The real QA values live in src/core/weights.yaml; future CI values may be provisional proposals.
 
 qa:
   hypotheses: [stale_selector, likely_regression, flaky]
@@ -42,25 +42,39 @@ qa:
 
 ci:
   hypotheses: [flaky, dependency, bug, infra]
-  priors: {flaky: 0.4, dependency: 0.2, bug: 0.3, infra: 0.1}
+  priors: {flaky: 0.25, dependency: 0.25, bug: 0.25, infra: 0.25}
   groups:
-    log_signature:
-      states: [timeout, import_error, assertion, none]
+    failure_kind:
+      states: [test_assertion, compile_or_syntax, import_or_missing_module, dependency_resolution, network_or_timeout, runner_or_resources, other]
       likelihoods:
-        flaky:      {timeout: 0.50, import_error: 0.05, assertion: 0.35, none: 0.10}
-        dependency: {timeout: 0.05, import_error: 0.80, assertion: 0.10, none: 0.05}
-        bug:        {timeout: 0.05, import_error: 0.01, assertion: 0.89, none: 0.05}
-        infra:      {timeout: 0.70, import_error: 0.05, assertion: 0.05, none: 0.20}
-    rerun:
-      states: [passed, failed]
+        flaky:      {test_assertion: 0.03, compile_or_syntax: 0.03, import_or_missing_module: 0.02, dependency_resolution: 0.04, network_or_timeout: 0.80, runner_or_resources: 0.06, other: 0.02}
+        dependency: {test_assertion: 0.03, compile_or_syntax: 0.05, import_or_missing_module: 0.75, dependency_resolution: 0.12, network_or_timeout: 0.01, runner_or_resources: 0.02, other: 0.02}
+        bug:        {test_assertion: 0.75, compile_or_syntax: 0.10, import_or_missing_module: 0.02, dependency_resolution: 0.03, network_or_timeout: 0.02, runner_or_resources: 0.03, other: 0.05}
+        infra:      {test_assertion: 0.05, compile_or_syntax: 0.05, import_or_missing_module: 0.03, dependency_resolution: 0.04, network_or_timeout: 0.10, runner_or_resources: 0.63, other: 0.10}
+    dependency_change:
+      states: [changed, unchanged]
       likelihoods:
-        flaky:      {passed: 0.80, failed: 0.20}
-        dependency: {passed: 0.05, failed: 0.95}
-        bug:        {passed: 0.05, failed: 0.95}
-        infra:      {passed: 0.40, failed: 0.60}
+        flaky:      {changed: 0.10, unchanged: 0.90}
+        dependency: {changed: 0.80, unchanged: 0.20}
+        bug:        {changed: 0.30, unchanged: 0.70}
+        infra:      {changed: 0.20, unchanged: 0.80}
+    code_link:
+      states: [failing_file_touched, not_touched]
+      likelihoods:
+        flaky:      {failing_file_touched: 0.10, not_touched: 0.90}
+        dependency: {failing_file_touched: 0.80, not_touched: 0.20}
+        bug:        {failing_file_touched: 0.90, not_touched: 0.10}
+        infra:      {failing_file_touched: 0.10, not_touched: 0.90}
+    log_coverage:
+      states: [truncated, complete]
+      likelihoods:
+        flaky:      {truncated: 0.10, complete: 0.90}
+        dependency: {truncated: 0.10, complete: 0.90}
+        bug:        {truncated: 0.10, complete: 0.90}
+        infra:      {truncated: 0.60, complete: 0.40}
   actions:
-    auto-fix: [dependency]
-    flag: [flaky]
+    rerun: [flaky]
+    auto-fix: [dependency, bug]
 
 thresholds:
   qa:
@@ -78,6 +92,6 @@ thresholds:
     unknown_pattern_floor: 0.05
     loss:
       default:
-        auto-fix: {flaky: 3, dependency: 0, bug: 20, infra: 5}
-        flag:     {flaky: 0, dependency: 5, bug: 20, infra: 2}
-        escalate: {flaky: 1, dependency: 1, bug: 0, infra: 0}
+        rerun:    {flaky: 0, dependency: 10, bug: 10, infra: 10}
+        auto-fix: {flaky: 10, dependency: 0, bug: 0, infra: 10}
+        escalate: {flaky: 2, dependency: 2, bug: 2, infra: 0}

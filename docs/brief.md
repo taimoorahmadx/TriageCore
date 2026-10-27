@@ -23,9 +23,11 @@ One **ConfidenceEngine** (`src/core/`) used by two agents:
 | CI agent | Facts extracted from a failed GitHub Actions log, rerun history, recent commits | `flaky`, `dependency`, `bug`, `infra` | `rerun`, `auto-fix`, `escalate` |
 
 The engine computes P(cause | evidence) with semi-naive Bayes and picks the action with the lowest
-expected cost, with `escalate` (hand it to a human) always available. All numbers in the engine are
-human-authored. The LLM (Groq) only proposes: a replacement selector, or structured facts from a
-log. It never makes the decision.
+expected cost, with `escalate` (hand it to a human) always available. QA weights are human-elicited;
+initial CI probability weights may be agent-proposed and used for the initial benchmark. Final QA/CI
+calibration is planned for the end of FYP-1 using reviewed datasets and a held-out evaluation. Policy costs
+require project-owner approval. At runtime, the LLM (Groq) only proposes a replacement
+selector or structured facts; it never makes the decision.
 
 **Contribution:** the decision engine (evidence grouping, cost-aware decision with a reject option,
 risk tiers, hard safety preconditions), the post-action evidence collector, the shared taxonomy, and
@@ -40,7 +42,7 @@ Small teams without dedicated QA, open-source maintainers with noisy CI, platfor
 | | FYP-1 (now) | FYP-2 |
 |---|---|---|
 | QA | Engine, collector, relocation, pipeline, UI, evaluation with baselines, suggested selector patch (never auto-applied), decision store | Real-app benchmark at scale, calibration, applying patches as PRs |
-| CI | Labelled corpus of real public logs, log truncation, LLM fact extraction, commit tracing, CI weights, CI evaluation, webhook endpoint tested with saved payloads | Live GitHub App, background queue, fix PRs (never merged), live 4-week trial |
+| CI | Log truncation, LLM fact extraction, commit tracing, provisional CI weights, fixture-based initial comparison, webhook endpoint tested with saved payloads | End-of-FYP-1 reviewed CI corpus, full benchmark and final calibration; live GitHub App, background queue, fix PRs (never merged), live 4-week trial |
 | Platform | One FastAPI app, SQLite decision store, one Docker deployment on a VM | Dashboard of decisions, acceptance testing with real projects |
 
 **Out of scope:** visual (screenshot) matching, providers other than GitHub Actions, multi-repo
