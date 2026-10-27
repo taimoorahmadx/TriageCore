@@ -46,9 +46,10 @@ Any of these runs the session routine below and ends with the **End-of-session r
 1. **Task:** ID, title, final status (`done` / `doing` / `blocked`).
 2. **Changed:** files created, modified, moved or deleted, one line each.
 3. **Checks:** each check command with its actual result.
-4. **Git:** exact commands to stage only this task's files (by name, never `git add .`), plus a
-   Conventional Commit message (`<type>(<scope>): <summary>` and a short body that names the task
-   ID). Don't run them.
+4. **Git:** exact commands to stage only this task's files (by name, never `git add .`), followed
+   by the complete `git commit` command with the Conventional Commit subject and short body naming
+   the task ID. Don't run either command. Use `git commit -m "<type>(<scope>): <summary>" -m
+   "<short body naming the task ID>"` so the commit is ready to copy and run.
 5. **Next:** the task that `next` would pick now, or the blocker that needs the user.
 
 ## Where things are

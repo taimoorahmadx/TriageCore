@@ -1,0 +1,10 @@
+id: dependency_failure
+repo: example/project
+run_id: fixture-dependency-1
+risk_tier: default
+label: dependency
+commits:
+  - sha: dependency-change-1
+    author: fixture
+    files: [requirements.txt]
+log_file: log.txt

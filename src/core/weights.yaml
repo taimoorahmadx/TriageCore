@@ -75,9 +75,45 @@ qa:
     flag: [flaky]             # keep the original selector, report the step as flaky
 
 ci:
-  # Iteration 2 (Milestones 4-5): causes flaky / dependency / bug / infra.
-  # Disabled until its likelihood tables are authored; evaluating CI evidence raises an error.
-  enabled: false
+  # C9 proposal; values are provisional and not calibrated. See ci_weights_elicitation.md.
+  # Shazil approved the single `default` tier loss policy on 2026-10-27.
+  enabled: true
+  hypotheses: [flaky, dependency, bug, infra]
+  # No representative reviewed CI dataset exists yet; equal priors avoid asserting prevalence.
+  priors: {flaky: 0.25, dependency: 0.25, bug: 0.25, infra: 0.25}
+  groups:
+    failure_kind:
+      states: [test_assertion, compile_or_syntax, import_or_missing_module, dependency_resolution, network_or_timeout, runner_or_resources, other]
+      likelihoods:
+        flaky:      {test_assertion: 0.05, compile_or_syntax: 0.02, import_or_missing_module: 0.02, dependency_resolution: 0.03, network_or_timeout: 0.45, runner_or_resources: 0.35, other: 0.08}
+        dependency: {test_assertion: 0.02, compile_or_syntax: 0.03, import_or_missing_module: 0.35, dependency_resolution: 0.45, network_or_timeout: 0.02, runner_or_resources: 0.03, other: 0.10}
+        bug:        {test_assertion: 0.55, compile_or_syntax: 0.20, import_or_missing_module: 0.02, dependency_resolution: 0.02, network_or_timeout: 0.02, runner_or_resources: 0.02, other: 0.17}
+        infra:      {test_assertion: 0.03, compile_or_syntax: 0.02, import_or_missing_module: 0.02, dependency_resolution: 0.03, network_or_timeout: 0.20, runner_or_resources: 0.50, other: 0.20}
+    dependency_change:
+      states: [changed, unchanged]
+      likelihoods:
+        flaky:      {changed: 0.10, unchanged: 0.90}
+        dependency: {changed: 0.80, unchanged: 0.20}
+        bug:        {changed: 0.35, unchanged: 0.65}
+        infra:      {changed: 0.20, unchanged: 0.80}
+    code_link:
+      states: [failing_file_touched, not_touched]
+      likelihoods:
+        flaky:      {failing_file_touched: 0.15, not_touched: 0.85}
+        dependency: {failing_file_touched: 0.45, not_touched: 0.55}
+        bug:        {failing_file_touched: 0.80, not_touched: 0.20}
+        infra:      {failing_file_touched: 0.10, not_touched: 0.90}
+    log_coverage:
+      states: [truncated, complete]
+      likelihoods:
+        # Equal likelihoods make coverage non-discriminating; truncation does not imply a cause.
+        flaky:      {truncated: 0.10, complete: 0.90}
+        dependency: {truncated: 0.10, complete: 0.90}
+        bug:        {truncated: 0.10, complete: 0.90}
+        infra:      {truncated: 0.10, complete: 0.90}
+  actions:
+    rerun: [flaky]
+    auto-fix: [dependency, bug]
 
 thresholds:
   qa:
@@ -102,3 +138,11 @@ thresholds:
         heal:     {stale_selector: 0, likely_regression: 100, flaky: 3}
         flag:     {stale_selector: 1, likely_regression: 100, flaky: 0}
         escalate: {stale_selector: 1, likely_regression: 0, flaky: 1}
+  ci:
+    # A single initial tier, with policy loss points approved by Shazil on 2026-10-27.
+    unknown_pattern_floor: 0.05
+    loss:
+      default:
+        rerun:    {flaky: 0, dependency: 10, bug: 10, infra: 10}
+        auto-fix: {flaky: 10, dependency: 0, bug: 0, infra: 10}
+        escalate: {flaky: 2, dependency: 2, bug: 2, infra: 0}

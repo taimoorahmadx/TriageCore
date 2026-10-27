@@ -24,6 +24,8 @@ export const ACTION = {
   heal: { label: 'Auto-heal', color: '#30d158', tone: 'border-[#30d158]/35 bg-[#30d158]/12 text-[#30d158]' },
   flag: { label: 'Flag as flaky', color: '#ff9f0a', tone: 'border-[#ff9f0a]/35 bg-[#ff9f0a]/12 text-[#ff9f0a]' },
   escalate: { label: 'Escalate to human', color: '#ff453a', tone: 'border-[#ff453a]/35 bg-[#ff453a]/12 text-[#ff453a]' },
+  rerun: { label: 'Rerun CI job', color: '#0a84ff', tone: 'border-[#0a84ff]/35 bg-[#0a84ff]/12 text-[#0a84ff]' },
+  'auto-fix': { label: 'Propose auto-fix', color: '#30d158', tone: 'border-[#30d158]/35 bg-[#30d158]/12 text-[#30d158]' },
 };
 
 export const GROUP = {

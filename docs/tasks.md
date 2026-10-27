@@ -78,15 +78,15 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [ ] Heal cycle < 10 s measured as p95. → task **Q2**.
 
 ### M4 · CI ingestion · Shazil · not started (scope: ADR 006)
-- [ ] 3 malformed payloads return 400 without crashing. → **C5**
-- [ ] Invalid signature returns 401. → **C5**
+- [x] 3 malformed payloads return 400 without crashing. *Evidence: `tests/test_webhooks.py` covers signed non-JSON, missing required field and missing event header.* → **C5**
+- [x] Invalid signature returns 401. *Evidence: `tests/test_webhooks.py::test_bad_signature_returns_401` and `::test_missing_signature_returns_401`.* → **C5**
 - [x] Oversized log truncated in the middle with `truncated=true`. *Evidence: `tests/test_truncate.py`.* → **C4**
 
 ### M5 · CI agent · Shazil · not started
 - [x] CI evidence contract approved. *Evidence: `docs/contracts/ci_signals.md`, v1 approved by Shazil (2026-10-26).* → **C1**
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
 - [x] Sets `ambiguous_commit=true` when 2 commits touch the failing file. *Evidence: `tests/test_tracing.py::test_two_matching_commits_are_ambiguous`.* → **C7**
-- [ ] CI probability tables have documented provisional values and owner-approved policy costs. → **C9**
+- [x] CI probability tables have documented provisional values and owner-approved policy costs. *Evidence: `src/core/weights.yaml`, `docs/contracts/ci_weights_elicitation.md`, Shazil's approval (2026-10-27), and `make weights`.* → **C9**
 
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
 - [x] QA evaluation script with CSV output. *Evidence: `src/eval/evaluate.py`, `results/`.*

@@ -29,6 +29,7 @@ playwright-report/
 # Evaluation output: only the latest run is tracked (the Evaluation screen reads it)
 results/*
 !results/qa_eval_latest.json
+!results/ci_eval_latest.json
 
 # Personal agent setup (each member installs their own)
 .agents/skills/
