@@ -1,9 +1,10 @@
 import React from 'react';
-import { BarChart2, History, Play } from 'lucide-react';
+import { BarChart2, History, Play, Workflow } from 'lucide-react';
 import { TriageCoreLogo } from './TriageCoreLogo';
 
 const TABS = [
   { id: 'qa-engine', label: 'QA Engine (live)', icon: Play },
+  { id: 'ci-engine', label: 'CI Engine', icon: Workflow },
   { id: 'evaluation', label: 'Evaluation', icon: BarChart2 },
   // The proposal-stage demo: its scores and the CI tab are scripted, kept for reference only.
   { id: 'simulator', label: 'Proposal PoC (scripted)', icon: History },

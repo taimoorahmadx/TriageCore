@@ -26,25 +26,25 @@ function useTooltip() {
 const Swatch = ({ color }) => <span className="inline-block h-2.5 w-2.5 flex-none rounded-full" style={{ background: color }} />;
 
 // ---- Diagnosis: probability of each cause ---------------------------------
-export function CauseBars({ posterior }) {
+export function CauseBars({ posterior, order = CAUSE_ORDER, causes = CAUSE }) {
   const { container, show, hide, layer } = useTooltip();
   return (
     <div ref={container} className="relative space-y-2.5">
-      {CAUSE_ORDER.map((c) => {
+      {order.map((c) => {
         const p = posterior[c] ?? 0;
         return (
           <div
             key={c}
             className="grid grid-cols-[120px_1fr_48px] items-center gap-3 py-0.5 group cursor-default"
-            onMouseMove={(e) => show(e, <><b>{CAUSE[c].label}</b>: {pct(p)} probability after seeing the clues</>)}
+            onMouseMove={(e) => show(e, <><b>{causes[c].label}</b>: {pct(p)} probability after seeing the clues</>)}
             onMouseLeave={hide}
           >
             <span className="flex items-center gap-2 text-xs text-neutral-300 group-hover:text-white transition-colors">
-              <Swatch color={CAUSE[c].color} />
-              <span>{CAUSE[c].label}</span>
+              <Swatch color={causes[c].color} />
+              <span>{causes[c].label}</span>
             </span>
             <div className="h-2.5 rounded-full bg-white/[0.04] overflow-hidden p-0.5 border border-white/[0.03]">
-              <div className="h-full rounded-full transition-all duration-300" style={{ width: `${Math.max(p * 100, 0.6)}%`, background: CAUSE[c].color }} />
+              <div className="h-full rounded-full transition-all duration-300" style={{ width: `${Math.max(p * 100, 0.6)}%`, background: causes[c].color }} />
             </div>
             <span className="text-right font-mono text-xs tabular-nums text-neutral-200">{pct(p)}</span>
           </div>
@@ -113,7 +113,7 @@ export function LossBars({ details, chosen }) {
   const { container, show, hide, layer } = useTooltip();
   const entries = Object.entries(details.expected_loss || {});
   const max = Math.max(0.5, ...entries.map(([, v]) => v));
-  const names = { heal: 'Auto-heal', flag: 'Flag as flaky', escalate: 'Escalate to human' };
+  const names = { heal: 'Auto-heal', flag: 'Flag as flaky', escalate: 'Escalate to human', rerun: 'Rerun CI job', 'auto-fix': 'Propose auto-fix' };
   return (
     <div ref={container} className="relative space-y-2.5">
       {entries.map(([a, v]) => (

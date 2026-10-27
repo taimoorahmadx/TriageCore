@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { TriageCoreLogo } from './components/TriageCoreLogo';
 import { QAEngineScreen } from './qa/QAEngineScreen';
 import { EvaluationScreen } from './qa/EvaluationScreen';
+import { CIEngineScreen } from './ci/CIEngineScreen';
 import { LegacyPoc } from './legacy/LegacyPoc';
 
 export function App() {
@@ -20,6 +21,7 @@ export function App() {
       <main className="flex-1">
         {currentScreen === 'qa-engine' && <QAEngineScreen />}
         {currentScreen === 'evaluation' && <EvaluationScreen />}
+        {currentScreen === 'ci-engine' && <CIEngineScreen />}
         {currentScreen === 'simulator' && <LegacyPoc />}
       </main>
 

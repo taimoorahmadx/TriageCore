@@ -6,20 +6,11 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C10 is complete: the CI pipeline runs fixture logs through truncation, secret masking, schema-validated
-  fact extraction, commit attribution, and the ConfidenceEngine; errors fail safe to escalation. The
-  preliminary fixture comparison reports `rerun_all`, `keyword_rule`, and `triagecore` with Wilson
-  intervals and p50/p95 durations. It uses provisional C9 weights without tuning and is explicitly
-  not real-world benchmark evidence; C3 reviewed-corpus evaluation remains deferred until the
-  end-of-FYP-1 follow-up. `make test` passed (91 tests), and the evaluator printed its summary.
-  C9 remains provisional with the default loss tier approved by Shazil on 2026-10-27. C5's webhook
-  verifies signatures before parsing and idempotently stores completed failed runs; tests invoke
-  the async handler directly because the installed Starlette `TestClient` hangs. C8 maps CI evidence
-  through `CIAdapter`, enforces unique-commit auto-fix attribution, and keeps rerun outcome as a
-  label rather than engine evidence. C5/C8 checks passed before this session.
-- C6 fact extraction uses Groq, masks secrets before transmission, validates schemas and yields empty
-  facts after two invalid responses. C3 remains scheduled after C10/C11 and branch merge; the
-  working corpus needs pruning and enough evidence for each cause before full benchmark/calibration.
+- C11 is complete: the CI Engine tab runs fixture cases and shows the masked log excerpt, extracted
+  facts, commit attribution (including ambiguous candidates), posterior, expected losses, decision,
+  and true label. The API response includes a bounded excerpt and explicit trace status. Frontend lint
+  and production build passed; the browser check rendered both `dependency_failure` and
+  `hosted_runner_timeout` with all evidence sections. No C11 blockers remain.
 
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.

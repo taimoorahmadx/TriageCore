@@ -18,6 +18,7 @@ from src.db.store import DecisionStore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CASES_DIR = REPO_ROOT / "tests" / "fixtures" / "ci_cases"
+UI_LOG_EXCERPT_CHARS = 6000
 _CORRECT_ACTION = {"flaky": "rerun", "dependency": "auto-fix", "bug": "auto-fix", "infra": "escalate"}
 
 
@@ -56,6 +57,9 @@ def run_case(
     try:
         truncated = truncate_log(str(case["log"]))
         safe_log = mask_secrets(truncated.text)
+        log_excerpt = safe_log[-UI_LOG_EXCERPT_CHARS:]
+        if len(safe_log) > UI_LOG_EXCERPT_CHARS:
+            log_excerpt = "[Earlier log content omitted from the UI excerpt.]\n" + log_excerpt
         facts = extractor.extract(safe_log)
         commits = [Commit(str(c["sha"]), str(c.get("author", "")), tuple(c.get("files", []))) for c in case.get("commits", [])]
         trace = attribute(facts.failing_files, commits)
@@ -79,6 +83,15 @@ def run_case(
             **base, "classification": output.classification, "recommended_action": output.recommended_action,
             "confidence_score": output.confidence_score, "reasoning_trace": output.reasoning_trace,
             "raw_signals": raw_signals, "context": context, "facts": facts.model_dump(),
+            "log_excerpt": log_excerpt,
+            "trace": {
+                "status": "ambiguous" if trace.ambiguous_commit else (
+                    "attributed" if trace.attributed_commit else "no_match"
+                ),
+                "attributed_commit": trace.attributed_commit,
+                "candidates": list(trace.candidates),
+                "failing_files": facts.failing_files,
+            },
             "details": details, "score": score_case(output.recommended_action, output.classification, label),
             "duration_ms": round((time.perf_counter() - started) * 1000, 3),
         }
