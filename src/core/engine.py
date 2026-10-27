@@ -21,7 +21,7 @@ from pathlib import Path
 
 from src.core.decision import Decision, DecisionPolicy, MinExpectedLossPolicy
 from src.core.evidence import (
-    DirectStateAdapter,
+    CIAdapter,
     EvidenceAdapter,
     EvidenceModel,
     Posterior,
@@ -51,7 +51,7 @@ class ConfidenceEngine:
         self.weights = load_weights(weights_path)  # raises RuntimeError if anything is missing
         self.model = model or SemiNaiveBayes()
         self.policy = policy or MinExpectedLossPolicy()
-        self.adapters = adapters or {"qa": QAAdapter(), "ci": DirectStateAdapter()}
+        self.adapters = adapters or {"qa": QAAdapter(), "ci": CIAdapter()}
         for spec in self.weights.domains.values():
             self._check_adapter_matches(spec)
 
@@ -85,7 +85,7 @@ class ConfidenceEngine:
         states = adapter.group_states(evidence.raw_signals, spec)
         posterior = self.model.posterior(spec, states)
 
-        blocked = dict(adapter.blocked_actions(evidence.raw_signals))
+        blocked = dict(adapter.blocked_actions(evidence.raw_signals, evidence.context))
         if not posterior.observed:
             reason = "no evidence observed"
         elif posterior.fit < spec.unknown_pattern_floor:

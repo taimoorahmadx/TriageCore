@@ -28,7 +28,9 @@ class EvidenceAdapter(Protocol):
 
     def group_states(self, raw_signals: Mapping[str, Any], spec: DomainSpec) -> GroupStates: ...
 
-    def blocked_actions(self, raw_signals: Mapping[str, Any]) -> dict[str, str]: ...
+    def blocked_actions(
+        self, raw_signals: Mapping[str, Any], context: Mapping[str, Any] | None = None
+    ) -> dict[str, str]: ...
 
 
 def _optional_bool(raw: Mapping[str, Any], key: str) -> bool | None:
@@ -86,7 +88,9 @@ class QAAdapter:
             "timing": pick(resolved, "resolved_after_wait", "not_resolved"),
         }
 
-    def blocked_actions(self, raw_signals: Mapping[str, Any]) -> dict[str, str]:
+    def blocked_actions(
+        self, raw_signals: Mapping[str, Any], context: Mapping[str, Any] | None = None
+    ) -> dict[str, str]:
         """Actions that cannot be taken at all, regardless of probabilities.
 
         Healing means applying a relocated selector, so it is only possible when
@@ -112,7 +116,7 @@ class QAAdapter:
 class DirectStateAdapter:
     """For domains whose raw_signals already name a state per group: {group: state | null}.
 
-    Used for CI until the Iteration 2 log-fact adapter exists, and for tests.
+    Used for tests that supply group states directly.
     """
 
     group_states_spec: dict[str, tuple[str, ...]] | None = None
@@ -129,7 +133,56 @@ class DirectStateAdapter:
             states[name] = value
         return states
 
-    def blocked_actions(self, raw_signals: Mapping[str, Any]) -> dict[str, str]:
+    def blocked_actions(
+        self, raw_signals: Mapping[str, Any], context: Mapping[str, Any] | None = None
+    ) -> dict[str, str]:
+        return {}
+
+
+class CIAdapter:
+    """Maps approved pre-rerun CI facts to evidence states and enforces commit safety."""
+
+    group_states_spec: dict[str, tuple[str, ...]] = {
+        "failure_kind": (
+            "test_assertion",
+            "compile_or_syntax",
+            "import_or_missing_module",
+            "dependency_resolution",
+            "network_or_timeout",
+            "runner_or_resources",
+            "other",
+        ),
+        "dependency_change": ("changed", "unchanged"),
+        "code_link": ("failing_file_touched", "not_touched"),
+        "log_coverage": ("truncated", "complete"),
+    }
+
+    def group_states(self, raw_signals: Mapping[str, Any], spec: DomainSpec) -> GroupStates:
+        states: GroupStates = {}
+        for group in ("failure_kind", "dependency_change", "code_link"):
+            value = raw_signals.get(group)
+            if value is not None and value not in self.group_states_spec[group]:
+                raise ValueError(
+                    f"raw_signals.{group}={value!r} is not one of {list(self.group_states_spec[group])}"
+                )
+            states[group] = value
+
+        truncated = _optional_bool(raw_signals, "truncated")
+        states["log_coverage"] = None if truncated is None else ("truncated" if truncated else "complete")
+        return states
+
+    def blocked_actions(
+        self, raw_signals: Mapping[str, Any], context: Mapping[str, Any] | None = None
+    ) -> dict[str, str]:
+        """Block auto-fix unless exactly one commit was attributed without ambiguity."""
+        context = context or {}
+        if context.get("ambiguous_commit") is True:
+            return {"auto-fix": "multiple commits touch a failing file"}
+        if context.get("ambiguous_commit") is not False:
+            return {"auto-fix": "commit ambiguity is unknown"}
+        attributed_commit = context.get("attributed_commit")
+        if not isinstance(attributed_commit, str) or not attributed_commit.strip():
+            return {"auto-fix": "no uniquely attributed commit"}
         return {}
 
 

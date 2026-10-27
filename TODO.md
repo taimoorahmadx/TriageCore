@@ -58,14 +58,15 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] C7 · Trace a failure to a commit, flag ambiguous ones · after C1
 - [!] C3 · Corpus of 30–40 real failed CI runs — paused while finding an existing dataset that supports the cause labels; resume after reviewing candidate datasets · after C1
 - [x] C6 · LLM extracts structured facts from a log · after C1, C4
-- [ ] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7
+- [x] C8 · `CIAdapter`: CI evidence into the engine · after C1, C7
 
 → Merge into `main`.
 
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [ ] C5 · GitHub webhook endpoint with signature check · after S1
-- [ ] C9 · CI weights · after C8 · *needs you: write every number; the agent only adds placeholders*
-- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9
+- [ ] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
+- [ ] C12 · Dataset calibration of CI probability weights · after C3, C6, C8, C9
+- [ ] C10 · CI pipeline and evaluation against baselines · after C3, C6, C9, C12
 - [ ] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.

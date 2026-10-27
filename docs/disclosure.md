@@ -55,7 +55,7 @@ and one example where you caught and fixed an AI mistake.
 | # | Risk | Likelihood | Impact | Mitigation | Owner | Status |
 |---|---|---|---|---|---|---|
 | R1 | Groq unavailable or rate-limited during the demo | Medium | High | Fail-safe escalation; record a backup run; second provider behind the interface | Abdul | Open |
-| R2 | Expert weights are wrong | Medium | High | Sensitivity analysis; calibrate on labelled data in FYP-2 | Abdul (QA), Shazil (CI) | Open |
+| R2 | Elicited or agent-proposed weights may be miscalibrated | Medium | High | Sensitivity analysis; fit CI probabilities on reviewed training cases and evaluate on a separate holdout (C12); keep policy costs owner-approved | Abdul (QA), Shazil (CI) | Open |
 | R3 | Small, team-built evaluation overstates results | High | High | Confidence intervals (B2), stronger baselines (Q3, Q4), real-app cases (B1), honest limitations | Taimoor | Open |
 | R4 | Not enough labelled CI cases per cause | Medium | Medium | More repositories; marked injected failures | Shazil | Open |
 | R5 | A member cannot explain AI-generated code they own | Medium | High | Owners walk through their modules before each evaluation; one task per session keeps changes reviewable | All | Open |

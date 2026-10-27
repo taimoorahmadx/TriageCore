@@ -23,9 +23,10 @@ One **ConfidenceEngine** (`src/core/`) used by two agents:
 | CI agent | Facts extracted from a failed GitHub Actions log, rerun history, recent commits | `flaky`, `dependency`, `bug`, `infra` | `rerun`, `auto-fix`, `escalate` |
 
 The engine computes P(cause | evidence) with semi-naive Bayes and picks the action with the lowest
-expected cost, with `escalate` (hand it to a human) always available. All numbers in the engine are
-human-authored. The LLM (Groq) only proposes: a replacement selector, or structured facts from a
-log. It never makes the decision.
+expected cost, with `escalate` (hand it to a human) always available. QA weights are human-elicited;
+initial CI probability weights may be agent-proposed and will be calibrated on a reviewed dataset.
+Policy costs require project-owner approval. At runtime, the LLM (Groq) only proposes a replacement
+selector or structured facts; it never makes the decision.
 
 **Contribution:** the decision engine (evidence grouping, cost-aware decision with a reject option,
 risk tiers, hard safety preconditions), the post-action evidence collector, the shared taxonomy, and

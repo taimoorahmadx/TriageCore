@@ -6,11 +6,17 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
+- C8 is complete: CI evidence maps through `CIAdapter`, context enforces the unique-commit
+  `auto-fix` precondition, and synthetic engine tests verify cause mapping, `rerun`, ambiguity
+  blocking and all-null escalation. The `passed_on_rerun` outcome remains a label, not engine input.
+  C3 remains paused while Shazil looks for a suitable existing dataset; its working corpus needs
+  pruning and sufficient evidence for each cause label before C3 can resume.
 - C6 log fact extraction is implemented in `src/ci/facts.py`: Groq output is schema-validated,
   logs are secret-masked before transmission, invalid responses get one retry, then yield empty
-  facts with the error recorded. The no-network tests pass. C3 remains paused while Shazil looks
-  for a suitable existing dataset; the working corpus needs pruning and sufficient evidence for
-  each cause label before C3 can resume.
+  facts with the error recorded.
+- CI weight policy now allows explicitly tasked, provisional agent proposals; C9 covers initial
+  values and owner-approved costs, while C12 fits probability tables on reviewed training cases
+  and reserves a holdout for C10. C3's dataset review remains paused.
 ## Blockers / questions for the team
 - C3 needs a suitable existing dataset or enough real cases with evidence for every cause. The
   current 61-folder working corpus must be pruned before completion; the accepted task and ADR still
@@ -18,7 +24,8 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
 - Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
 - Each member completes their rows in `docs/disclosure.md` §2.
-- C9 weights need the project owner's values; agents must not invent them.
+- C9 policy costs need project-owner approval. C12 requires reviewed labels and enough cases for a
+  training/holdout split; agents must not invent labels or claim results before evaluation.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·

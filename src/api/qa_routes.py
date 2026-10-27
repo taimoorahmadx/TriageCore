@@ -1,7 +1,7 @@
 """HTTP routes for the real QA pipeline (engine + browser evidence), mounted in src/api/app.py.
 
 GET  /api/qa/status              engine + Groq readiness
-GET  /api/qa/engine              the human-authored numbers the engine reasons with
+GET  /api/qa/engine              QA weights and decision thresholds
 GET  /api/qa/scenarios           scenario catalogue (pages, steps, ground truth)
 POST /api/qa/run                 run one scenario live in Chromium, decide every step
 POST /api/qa/evaluate            run the whole suite and compare three decision policies

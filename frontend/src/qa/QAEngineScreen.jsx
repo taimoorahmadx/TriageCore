@@ -45,7 +45,7 @@ function EngineNumbers({ engine }) {
   if (!engine) return null;
   return (
     <details className="glass-card rounded-2xl px-5 py-4 text-xs text-neutral-400">
-      <summary className="cursor-pointer text-sm text-neutral-200 font-medium">The human-authored numbers behind every decision</summary>
+      <summary className="cursor-pointer text-sm text-neutral-200 font-medium">The human-elicited QA numbers behind each decision</summary>
       <div className="mt-4 grid gap-6 sm:grid-cols-2">
         <div>
           <div className="mb-2 font-mono text-[11px] uppercase tracking-wider text-neutral-500">Starting guess (of 100 broken steps)</div>

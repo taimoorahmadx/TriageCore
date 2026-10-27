@@ -1,4 +1,4 @@
-"""Sensitivity analysis: which human-authored likelihoods do the decisions actually depend on?
+"""Sensitivity analysis: which likelihood values do the decisions actually depend on?
 
 Each likelihood P(state | cause) is scaled by -50% and +50% (its row is then
 renormalised to sum to 1), and every evidence case is re-decided. A flip means

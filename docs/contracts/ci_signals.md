@@ -50,7 +50,7 @@ Context is for traceability and decision constraints, not evidence likelihoods.
 
 | Key | Type | Meaning |
 |---|---|---|
-| `risk_tier` | str | Required; selects the CI loss table. The CI tier values must match the human-authored CI weights. |
+| `risk_tier` | str | Required; selects the CI loss table. The CI tier values must match the configured CI weights. |
 | `repo` | str | Repository identifier. |
 | `run_id` | str | Workflow run identifier. |
 | `case_id` | str or null | Corpus case identifier, when evaluating a saved case. |

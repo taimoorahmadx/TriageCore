@@ -16,7 +16,7 @@ evidence after the click supports it.
 
 | Part | State |
 |---|---|
-| ConfidenceEngine (`src/core/`) | Built. Bayesian diagnosis over evidence groups + minimum-expected-loss decision, risk-tiered costs, human-authored weights ([ADR 004](docs/adr/004-bayesian-confidence-engine.md)) |
+| ConfidenceEngine (`src/core/`) | Built. Bayesian diagnosis over evidence groups + minimum-expected-loss decision. QA weights are human-elicited; initial CI probability tables may be agent-proposed and are planned for dataset calibration ([ADR 004](docs/adr/004-bayesian-confidence-engine.md)) |
 | QA agent (`src/browser/`, `src/agents/`) | Built. Re-wait, Groq relocation, post-click observation, engine decision |
 | Evaluation (`src/eval/`) | Built. 12 hand-built steps, three policies on the same evidence |
 | CI agent (`src/ci/`) | Not started |
@@ -63,7 +63,7 @@ Other commands: `make test-engine`, `make lint`, `make weights`, `make sensitivi
 | Route | Purpose |
 |---|---|
 | `GET /status` | Engine and Groq readiness |
-| `GET /engine` | The human-authored weights |
+| `GET /engine` | QA weights and their decision thresholds |
 | `GET /scenarios` | Scenarios and ground truth |
 | `POST /run` `{"scenario_id": "shopflow_checkout"}` | Run one scenario live |
 | `POST /evaluate` | Run all scenarios, compare policies |
