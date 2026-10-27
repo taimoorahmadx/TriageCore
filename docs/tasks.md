@@ -86,7 +86,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [x] CI evidence contract approved. *Evidence: `docs/contracts/ci_signals.md`, v1 approved by Shazil (2026-10-26).* → **C1**
 - [ ] Identifies the bad commit in 3 clear cases. → **C7**, **C10**
 - [x] Sets `ambiguous_commit=true` when 2 commits touch the failing file. *Evidence: `tests/test_tracing.py::test_two_matching_commits_are_ambiguous`.* → **C7**
-- [ ] CI probability tables have documented provisional values and owner-approved policy costs. → **C9**
+- [x] CI probability tables have documented provisional values and owner-approved policy costs. *Evidence: `src/core/weights.yaml`, `docs/contracts/ci_weights_elicitation.md`, Shazil's approval (2026-10-27), and `make weights`.* → **C9**
 
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
 - [x] QA evaluation script with CSV output. *Evidence: `src/eval/evaluate.py`, `results/`.*

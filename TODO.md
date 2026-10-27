@@ -63,7 +63,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [x] C5 · GitHub webhook endpoint with signature check · after S1
-- [ ] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
+- [x] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
 - [ ] C10 · CI pipeline and initial evaluation against baselines · after C6, C9 (fixture cases; real corpus deferred)
 - [ ] C11 · CI screen in the UI · after C10
 

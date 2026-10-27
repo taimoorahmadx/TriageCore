@@ -6,7 +6,12 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C5 is complete: `/api/ci/webhook` verifies GitHub's HMAC signature over raw bytes before JSON
+- C9 is complete: `src/core/weights.yaml` now enables CI with provisional, documented priors and
+  likelihoods, plus the single `default` loss tier approved by Shazil on 2026-10-27. These
+  probabilities are assumptions, not corpus measurements; C12 will calibrate them on reviewed
+  labels with a disjoint holdout. `make weights` validates the domain. Full `make test` passed after
+  rerunning with localhost socket permission; sandbox restrictions blocked the initial run.
+  C5 is complete: `/api/ci/webhook` verifies GitHub's HMAC signature over raw bytes before JSON
   parsing, rejects malformed inputs without 500s, and idempotently stores completed failed runs.
   Eleven focused tests pass. Starlette `TestClient` hangs even for a minimal FastAPI app with the
   installed FastAPI 0.162.0 / Starlette 1.7.0 / httpx 0.28.1 combination; tests instead invoke the
@@ -32,7 +37,7 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - End-of-FYP-1 C3 needs a suitable dataset or enough real cases with evidence for every cause. The current
   61-folder working corpus must be pruned before completion; C3 still requires 30–40 reviewed cases
   with at least five per cause. This does not block the current implementation branch.
-- C9 policy costs need project-owner approval. C12 requires reviewed labels and enough cases for a
+- C12 requires reviewed labels and enough cases for a
   training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
   results before evaluation.
 
