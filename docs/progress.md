@@ -6,10 +6,11 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C3 is complete. The corpus has 209 cases: 73 mined, 68 lca, and 68 BUMP. There are 206
-  human-reviewed labels: 69 `bug`, 66 `dependency`, 3 `flaky`, and 68 `infra`. Three cases without
-  `suggested_label` remain unlabelled. One BUMP candidate was skipped because GitHub returned 404
-  for its project repository. Counts by source and label are in `tests/ci_corpus/README.md`.
+- C3 is complete under the owner-approved minimum of 3 reviewed cases per cause (2026-11-02): 209
+  cases, 206 reviewed labels (69 `bug`, 66 `dependency`, 3 `flaky`, 68 `infra`). The three `flaky`
+  cases have same-SHA failed-then-passed run-history evidence. Three cases without `suggested_label`
+  remain unlabelled; one BUMP candidate was skipped because GitHub returned 404 for its project
+  repository. Counts by source and label are in the README.
 - 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Fix diffs and BUMP
   `failureCategory` informed suggestions only; fix-side fields never enter engine evidence. The
   owner reviewed and approved the suggested labels, which are now recorded with one-line evidence.
