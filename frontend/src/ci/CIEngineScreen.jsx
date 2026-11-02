@@ -57,7 +57,7 @@ export function CIEngineScreen() {
   const selectedCase = cases.find((item) => item.id === selected);
   const filteredCases = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return cases.filter((item) => {
+    const filtered = cases.filter((item) => {
       const sourceMatches = sourceFilter === 'all'
         || (sourceFilter === 'historical' && item.source_type === 'historical_github_actions')
         || (sourceFilter === 'fixtures' && item.source_type === 'fixture');
@@ -65,6 +65,7 @@ export function CIEngineScreen() {
         String(value || '').toLowerCase().includes(needle));
       return sourceMatches && textMatches;
     });
+    return filtered.sort((a, b) => Number(Boolean(b.source_url)) - Number(Boolean(a.source_url)));
   }, [cases, query, sourceFilter]);
   const quickStartCases = cases.filter((item) => QUICK_START_IDS.has(item.id));
   const selectCase = (id) => { setSelected(id); setResult(null); setError(null); };
