@@ -115,7 +115,7 @@ export function QAEngineScreen() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
-        <aside className="space-y-2">
+        <aside className="space-y-2 self-start lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-1">
           <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-500 mb-2 px-1 flex items-center justify-between">
             <span>Test Scenarios</span>
             <span className="text-neutral-500 font-mono">{scenarios.length}</span>

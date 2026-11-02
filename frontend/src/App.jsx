@@ -4,7 +4,6 @@ import { TriageCoreLogo } from './components/TriageCoreLogo';
 import { QAEngineScreen } from './qa/QAEngineScreen';
 import { EvaluationScreen } from './qa/EvaluationScreen';
 import { CIEngineScreen } from './ci/CIEngineScreen';
-import { LegacyPoc } from './legacy/LegacyPoc';
 
 export function App() {
   const [currentScreen, setCurrentScreen] = useState('qa-engine');
@@ -22,7 +21,6 @@ export function App() {
         {currentScreen === 'qa-engine' && <QAEngineScreen />}
         {currentScreen === 'evaluation' && <EvaluationScreen />}
         {currentScreen === 'ci-engine' && <CIEngineScreen />}
-        {currentScreen === 'simulator' && <LegacyPoc />}
       </main>
 
       {/* Minimalist Editorial Footer */}
