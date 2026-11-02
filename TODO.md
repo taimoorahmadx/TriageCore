@@ -84,7 +84,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] C3 · Build and human-review the CI corpus · 206 reviewed cases; at least 3 per cause (owner-approved 2026-11-02)
 - [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
 - [x] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
-- [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
+- [x] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
 - [ ] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
 
 → Merge into `main`.

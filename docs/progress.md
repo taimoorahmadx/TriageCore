@@ -14,6 +14,16 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Fix diffs and BUMP
   `failureCategory` informed suggestions only; fix-side fields never enter engine evidence. The
   owner reviewed and approved the suggested labels, which are now recorded with one-line evidence.
+- B3 frozen QA evaluation: `results/frozen/2026-11-02_ef97bea3508c94f6743c74d9eebd47349db00e43.json`
+  and matching CSV. `make eval` ran at 2026-11-02 17:23:15 using source revision
+  `ef97bea3508c94f6743c74d9eebd47349db00e43`; 22 labeled failing steps: 12 team-suite and 10 B1
+  Modern TodoMVC steps (`stale_selector` 9, `likely_regression` 10, `flaky` 3). Enabled policies:
+  `blind_heal`, `penalty_rule`, `simple_rule`, `triagecore`; 95% Wilson intervals are included.
+  `llm_judge` was disabled. QA weights were unchanged (SHA-256
+  `af5ba666d06c67ffaead412fdc1d5880355096f6af78ddf0d23b3729c68f945a`; provenance in
+  `docs/contracts/weights_elicitation.md`). Relocation used Groq model `openai/gpt-oss-20b`.
+  This is a small mixed team-suite/real-app comparison, not a held-out calibration or broad
+  generalisation result; the raw frozen JSON does not embed the source revision or weight hash.
 ## Blockers / questions for the team
 - Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
@@ -21,8 +31,7 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
   human changes, verification, and one caught AI error. CI probability values were AI-proposed; do
   not call every probability human-authored.
-- B3 needs frozen labels/weights and Groq access if `llm_judge` is enabled. Do not fit or tune weights
-  on evaluation or holdout results.
+- Do not fit or tune QA weights on evaluation results; the B3 comparison is frozen.
 - D1 needs a human-created VM, Docker, an API token, and firewall setup.
 - CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
   commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
