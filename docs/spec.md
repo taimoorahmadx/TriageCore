@@ -1,6 +1,5 @@
 # Spec: behaviour and acceptance criteria
 
-**Status:** Draft, AI-written 2026-10-25, to be reviewed and owned by the team.
 Every requirement has an ID that tasks refer to. Status: **Done**, **Partial**, **Todo**, **FYP-2**.
 "Check" is how to prove it: a test name, a command, or an observable result.
 Field and type details live in `docs/contracts/`; this file says what must happen.

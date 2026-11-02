@@ -1,6 +1,5 @@
 # Plan: architecture, stack, contracts
 
-**Status:** Draft, AI-written 2026-10-25, to be reviewed and owned by the team.
 Marked **[built]** or **[planned]**. Planned items are specified as tasks in `docs/tasks/` (index: `docs/tasks.md`).
 
 ## 1. Shape

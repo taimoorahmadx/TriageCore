@@ -95,7 +95,7 @@ Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 re
 - [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
 - [ ] Decide and approve the CI action policy: `bug` should escalate, or a specific proposal-only action; approve any corresponding loss changes before implementation
 - [ ] Decide whether the shared output adds `classification: unknown`, `diagnosis_reliable`, or another explicit no-reliable-diagnosis representation; approve contract semantics before implementation
-- [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
+- [x] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Each member completes their `docs/disclosure.md` §2 row: owned modules, AI-generated parts, human changes, verification, and one caught AI error; correct the weight-provenance description
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
 - [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set after the initial QA benchmark (keep mistake costs human-set)
