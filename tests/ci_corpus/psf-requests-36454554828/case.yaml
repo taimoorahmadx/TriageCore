@@ -1,4 +1,5 @@
 repo: psf/requests
+source: mined
 run_id: 36454554828
 head_sha: 56b943471a2df56657b0a7cce6245c009c256c81
 run_attempts:

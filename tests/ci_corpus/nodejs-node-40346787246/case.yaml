@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40346787246
 head_sha: 1ae40765d68cd4bac5a94d63a695239b84be5426
 run_attempts:
@@ -658,7 +659,7 @@ commits:
   files:
   - src/node_sqlite.cc
   - test/parallel/test-sqlite-backup.mjs
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

@@ -1,0 +1,759 @@
+2023-07-22T15:51:31.4171917Z ##[group]Run actions/setup-java@v3
+2023-07-22T15:51:31.4172146Z with:
+2023-07-22T15:51:31.4172322Z   distribution: zulu
+2023-07-22T15:51:31.4172526Z   java-version: 11
+2023-07-22T15:51:31.4172728Z   java-package: jdk
+2023-07-22T15:51:31.4172927Z   check-latest: false
+2023-07-22T15:51:31.4173128Z   server-id: github
+2023-07-22T15:51:31.4173344Z   server-username: GITHUB_ACTOR
+2023-07-22T15:51:31.4173805Z   server-password: GITHUB_TOKEN
+2023-07-22T15:51:31.4174034Z   overwrite-settings: true
+2023-07-22T15:51:31.4174249Z   job-status: success
+2023-07-22T15:51:31.4174569Z   token: ***
+2023-07-22T15:51:31.4174748Z ##[endgroup]
+2023-07-22T15:51:31.6421862Z ##[group]Installed distributions
+2023-07-22T15:51:31.6464549Z Trying to resolve the latest version from remote
+2023-07-22T15:51:31.7651913Z Resolved latest version as 11.0.20+8
+2023-07-22T15:51:31.7652244Z Trying to download...
+2023-07-22T15:51:31.7655570Z Downloading Java 11.0.20+8 (Zulu) from https://cdn.azul.com/zulu/bin/zulu11.66.15-ca-jdk11.0.20-linux_x64.tar.gz ...
+2023-07-22T15:51:33.0414134Z Extracting Java archive...
+2023-07-22T15:51:33.0530533Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/0ac705e3-8d8e-479a-918d-b8727ef28f23 -f /home/runner/work/_temp/a31a23f4-9a0f-4fe8-9c88-8947ff4358da
+2023-07-22T15:51:36.9935395Z Java 11.0.20+8 was downloaded
+2023-07-22T15:51:36.9936062Z Setting Java 11.0.20+8 as the default
+2023-07-22T15:51:36.9954652Z Creating toolchains.xml for JDK version 11 from zulu
+2023-07-22T15:51:37.0051297Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-22T15:51:37.0052900Z 
+2023-07-22T15:51:37.0053193Z Java configuration:
+2023-07-22T15:51:37.0054154Z   Distribution: zulu
+2023-07-22T15:51:37.0054408Z   Version: 11.0.20+8
+2023-07-22T15:51:37.0055950Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-07-22T15:51:37.0056327Z 
+2023-07-22T15:51:37.0060813Z ##[endgroup]
+2023-07-22T15:51:37.0095318Z Creating settings.xml with server-id: github
+2023-07-22T15:51:37.0113917Z Writing to /home/runner/.m2/settings.xml
+
+2023-07-22T15:51:22.2041390Z Current runner version: '2.306.0'
+2023-07-22T15:51:22.2067457Z ##[group]Operating System
+2023-07-22T15:51:22.2068029Z Ubuntu
+2023-07-22T15:51:22.2068306Z 22.04.2
+2023-07-22T15:51:22.2068531Z LTS
+2023-07-22T15:51:22.2068824Z ##[endgroup]
+2023-07-22T15:51:22.2069196Z ##[group]Runner Image
+2023-07-22T15:51:22.2069494Z Image: ubuntu-22.04
+2023-07-22T15:51:22.2069814Z Version: 20230716.1.0
+2023-07-22T15:51:22.2070314Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230716.1/images/linux/Ubuntu2204-Readme.md
+2023-07-22T15:51:22.2070957Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230716.1
+2023-07-22T15:51:22.2071355Z ##[endgroup]
+2023-07-22T15:51:22.2071684Z ##[group]Runner Image Provisioner
+2023-07-22T15:51:22.2072008Z 2.0.238.1
+2023-07-22T15:51:22.2072255Z ##[endgroup]
+2023-07-22T15:51:22.2072976Z ##[group]GITHUB_TOKEN Permissions
+2023-07-22T15:51:22.2073497Z Actions: read
+2023-07-22T15:51:22.2073794Z Contents: read
+2023-07-22T15:51:22.2074049Z Metadata: read
+2023-07-22T15:51:22.2074670Z SecurityEvents: write
+2023-07-22T15:51:22.2074991Z ##[endgroup]
+2023-07-22T15:51:22.2078526Z Secret source: Dependabot
+2023-07-22T15:51:22.2079031Z Prepare workflow directory
+2023-07-22T15:51:22.2832617Z Prepare all required actions
+2023-07-22T15:51:22.3022952Z Getting action download info
+2023-07-22T15:51:22.5531148Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-07-22T15:51:23.4463836Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-07-22T15:51:24.2902606Z Download action repository 'github/codeql-action@v2' (SHA:1813ca74c3faaa3a2da2070b9b8a0b3e7373a0d8)
+2023-07-22T15:51:29.8405504Z Complete job name: CodeQL-Build
+
+2023-07-22T15:54:47.0861620Z Cleaning up orphan processes
+
+2023-07-22T15:54:37.6900793Z Post job cleanup.
+2023-07-22T15:54:38.0132041Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql version --format=terse
+2023-07-22T15:54:38.5414409Z 2.14.0
+2023-07-22T15:54:39.1397631Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=/home/runner/work/_temp/codeql-intermediate-results.sarif --sarif-include-diagnostics -vvv
+2023-07-22T15:54:39.6335368Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20230722.155439.629.log.
+2023-07-22T15:54:39.8895890Z Interpreting diagnostic messages
+2023-07-22T15:54:39.8911220Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic...
+2023-07-22T15:54:39.8934589Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors...
+2023-07-22T15:54:39.8938572Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java...
+2023-07-22T15:54:39.8942520Z Found diagnostics file /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java/autobuilder.jsonl.
+2023-07-22T15:54:39.9196999Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2023-07-22T15:54:39.9200818Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic/tracer...
+2023-07-22T15:54:39.9215408Z Found 3 raw diagnostic messages.
+2023-07-22T15:54:39.9286296Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2023-07-22T15:54:39.9304498Z Interpreted diagnostic messages. (39ms)
+2023-07-22T15:54:40.0842747Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2023-07-22T15:54:40.0983929Z ##[group]Uploading results
+2023-07-22T15:54:40.0984641Z Processing sarif files: ["../codeql-failed-run.sarif"]
+2023-07-22T15:54:40.1465310Z Uploading results
+2023-07-22T15:54:40.6884027Z Successfully uploaded results
+2023-07-22T15:54:40.6884560Z ##[endgroup]
+2023-07-22T15:54:40.6885877Z ##[group]Waiting for processing to finish
+2023-07-22T15:54:40.9891800Z Analysis upload status is pending.
+2023-07-22T15:54:46.2895866Z Analysis upload status is failed.
+2023-07-22T15:54:46.2900894Z ##[endgroup]
+
+2023-07-22T15:51:37.1876453Z ##[group]Run github/codeql-action/init@v2
+2023-07-22T15:51:37.1876702Z with:
+2023-07-22T15:51:37.1876870Z   languages: java
+2023-07-22T15:51:37.1877199Z   token: ***
+2023-07-22T15:51:37.1877387Z   matrix: null
+2023-07-22T15:51:37.1877614Z   setup-python-dependencies: true
+2023-07-22T15:51:37.1877831Z   debug: false
+2023-07-22T15:51:37.1878015Z env:
+2023-07-22T15:51:37.1878255Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-07-22T15:51:37.1878561Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-07-22T15:51:37.1878829Z ##[endgroup]
+2023-07-22T15:51:39.2647114Z ##[group]Setup CodeQL tools
+2023-07-22T15:51:39.2648331Z Found CodeQL tools version 2.14.0 in the toolcache.
+2023-07-22T15:51:39.2665372Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql version --format=terse
+2023-07-22T15:51:40.0475834Z 2.14.0
+2023-07-22T15:51:40.0664845Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql version --format=json
+2023-07-22T15:51:40.6252520Z {
+2023-07-22T15:51:40.6253107Z   "productName" : "CodeQL",
+2023-07-22T15:51:40.6253430Z   "vendor" : "GitHub",
+2023-07-22T15:51:40.6253916Z   "version" : "2.14.0",
+2023-07-22T15:51:40.6254281Z   "sha" : "651ff5bc5adcae7a13c37ea384a4bd23afc4985f",
+2023-07-22T15:51:40.6254603Z   "branches" : [
+2023-07-22T15:51:40.6255108Z     "codeql-cli-2.14.0"
+2023-07-22T15:51:40.6255383Z   ],
+2023-07-22T15:51:40.6255759Z   "copyright" : "Copyright (C) 2019-2023 GitHub, Inc.",
+2023-07-22T15:51:40.6256179Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql",
+2023-07-22T15:51:40.6256898Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+2023-07-22T15:51:40.6257249Z   "configFileFound" : false
+2023-07-22T15:51:40.6260005Z }
+2023-07-22T15:51:40.6352655Z ##[endgroup]
+2023-07-22T15:51:40.6353578Z ##[group]Load language configuration
+2023-07-22T15:51:40.6354896Z Languages from configuration: java
+2023-07-22T15:51:40.6355708Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql resolve queries java-code-scanning.qls --format=bylanguage
+2023-07-22T15:51:41.5024414Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0.
+2023-07-22T15:51:41.5767927Z Recording pack reference codeql/suite-helpers at /opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/.codeql/libraries/codeql/suite-helpers/0.6.0.
+2023-07-22T15:51:46.1106066Z {
+2023-07-22T15:51:46.1106722Z   "byLanguage" : {
+2023-07-22T15:51:46.1107510Z     "java" : {
+2023-07-22T15:51:46.1108370Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Likely Bugs/Arithmetic/InformationLoss.ql" : { },
+2023-07-22T15:51:46.1109177Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-730/PolynomialReDoS.ql" : { },
+2023-07-22T15:51:46.1110005Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-730/RegexInjection.ql" : { },
+2023-07-22T15:51:46.1110801Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-730/ReDoS.ql" : { },
+2023-07-22T15:51:46.1112416Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-925/ImproperIntentVerification.ql" : { },
+2023-07-22T15:51:46.1113226Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql" : { },
+2023-07-22T15:51:46.1113903Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-312/CleartextStorageCookie.ql" : { },
+2023-07-22T15:51:46.1114496Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-022/ZipSlip.ql" : { },
+2023-07-22T15:51:46.1115070Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-022/TaintedPath.ql" : { },
+2023-07-22T15:51:46.1115680Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-347/MissingJWTSignatureCheck.ql" : { },
+2023-07-22T15:51:46.1116726Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql" : { },
+2023-07-22T15:51:46.1117365Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-829/InsecureDependencyResolution.ql" : { },
+2023-07-22T15:51:46.1118002Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-295/InsecureTrustManager.ql" : { },
+2023-07-22T15:51:46.1118661Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.ql" : { },
+2023-07-22T15:51:46.1119301Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-352/SpringCSRFProtection.ql" : { },
+2023-07-22T15:51:46.1119933Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-1204/StaticInitializationVector.ql" : { },
+2023-07-22T15:51:46.1122391Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-470/FragmentInjection.ql" : { },
+2023-07-22T15:51:46.1123197Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.ql" : { },
+2023-07-22T15:51:46.1124116Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-918/RequestForgery.ql" : { },
+2023-07-22T15:51:46.1124719Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-326/InsufficientKeySize.ql" : { },
+2023-07-22T15:51:46.1125314Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-078/ExecUnescaped.ql" : { },
+2023-07-22T15:51:46.1125890Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-078/ExecTainted.ql" : { },
+2023-07-22T15:51:46.1126497Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-807/TaintedPermissionsCheck.ql" : { },
+2023-07-22T15:51:46.1127116Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/InsecureBeanValidation.ql" : { },
+2023-07-22T15:51:46.1127715Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/GroovyInjection.ql" : { },
+2023-07-22T15:51:46.1128295Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/JexlInjection.ql" : { },
+2023-07-22T15:51:46.1128868Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/TemplateInjection.ql" : { },
+2023-07-22T15:51:46.1129444Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/MvelInjection.ql" : { },
+2023-07-22T15:51:46.1130006Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-094/SpelInjection.ql" : { },
+2023-07-22T15:51:46.1130571Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-090/LdapInjection.ql" : { },
+2023-07-22T15:51:46.1131132Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-335/PredictableSeed.ql" : { },
+2023-07-22T15:51:46.1131716Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-522/InsecureLdapAuth.ql" : { },
+2023-07-22T15:51:46.1132330Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql" : { },
+2023-07-22T15:51:46.1132926Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-614/InsecureCookie.ql" : { },
+2023-07-22T15:51:46.1137884Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql" : { },
+2023-07-22T15:51:46.1138483Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-074/JndiInjection.ql" : { },
+2023-07-22T15:51:46.1139056Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-074/XsltInjection.ql" : { },
+2023-07-22T15:51:46.1139642Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-209/StackTraceExposure.ql" : { },
+2023-07-22T15:51:46.1140273Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-023/PartialPathTraversalFromRemote.ql" : { },
+2023-07-22T15:51:46.1140872Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-601/UrlRedirect.ql" : { },
+2023-07-22T15:51:46.1141461Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-489/WebviewDebuggingEnabled.ql" : { },
+2023-07-22T15:51:46.1142086Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-489/DebuggableAttributeEnabled.ql" : { },
+2023-07-22T15:51:46.1142700Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-297/UnsafeHostnameVerification.ql" : { },
+2023-07-22T15:51:46.1143437Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-441/UnsafeContentUriResolution.ql" : { },
+2023-07-22T15:51:46.1144035Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-020/OverlyLargeRange.ql" : { },
+2023-07-22T15:51:46.1144653Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-266/IntentUriPermissionManipulation.ql" : { },
+2023-07-22T15:51:46.1145267Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-089/SqlTainted.ql" : { },
+2023-07-22T15:51:46.1145852Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-940/AndroidIntentRedirection.ql" : { },
+2023-07-22T15:51:46.1146497Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-134/ExternallyControlledFormatString.ql" : { },
+2023-07-22T15:51:46.1147137Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-113/NettyResponseSplitting.ql" : { },
+2023-07-22T15:51:46.1147729Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-113/ResponseSplitting.ql" : { },
+2023-07-22T15:51:46.1148300Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-780/RsaWithoutOaep.ql" : { },
+2023-07-22T15:51:46.1148901Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-927/ImplicitPendingIntents.ql" : { },
+2023-07-22T15:51:46.1149504Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-502/UnsafeDeserialization.ql" : { },
+2023-07-22T15:51:46.1150068Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-611/XXE.ql" : { },
+2023-07-22T15:51:46.1150676Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.ql" : { },
+2023-07-22T15:51:46.1151300Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-681/NumericCastTainted.ql" : { },
+2023-07-22T15:51:46.1151904Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-643/XPathInjection.ql" : { },
+2023-07-22T15:51:46.1152561Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-079/XSS.ql" : { },
+2023-07-22T15:51:46.1153115Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Security/CWE/CWE-917/OgnlInjection.ql" : { },
+2023-07-22T15:51:46.1153674Z       "/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/qlpacks/codeql/java-queries/0.7.0/Diagnostics/ExtractionWarnings.ql" : { },
+[... 4495 lines removed by TriageCore ...]
+2023-07-22T15:54:37.2064875Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+2023-07-22T15:54:37.2065569Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+2023-07-22T15:54:37.2066214Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+2023-07-22T15:54:37.2066944Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-07-22T15:54:37.2067557Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-07-22T15:54:37.2068158Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-07-22T15:54:37.2068872Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-07-22T15:54:37.2069648Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-07-22T15:54:37.2070479Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-07-22T15:54:37.2071260Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-07-22T15:54:37.2071862Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-07-22T15:54:37.2072394Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-07-22T15:54:37.2072904Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-07-22T15:54:37.2073416Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-07-22T15:54:37.2073914Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-07-22T15:54:37.2074390Z [2023-07-22 15:54:37] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-07-22T15:54:37.2074935Z [2023-07-22 15:54:37] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-07-22T15:54:37.2075573Z [2023-07-22 15:54:37] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-07-22T15:54:37.2076267Z [2023-07-22 15:54:37] [autobuild]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-07-22T15:54:37.2077796Z [2023-07-22 15:54:37] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-07-22T15:54:37.2078423Z [2023-07-22 15:54:37] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-07-22T15:54:37.2079075Z [2023-07-22 15:54:37] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-07-22T15:54:37.2079731Z [2023-07-22 15:54:37] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-07-22T15:54:37.2080358Z [2023-07-22 15:54:37] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-07-22T15:54:37.2080792Z [2023-07-22 15:54:37] [autobuild] [ERROR] 
+2023-07-22T15:54:37.2081214Z [2023-07-22 15:54:37] [autobuild] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-22T15:54:37.2081697Z [2023-07-22 15:54:37] [autobuild] [ERROR] 
+2023-07-22T15:54:37.2082165Z [2023-07-22 15:54:37] [autobuild] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-22T15:54:37.2082752Z [2023-07-22 15:54:37] [autobuild] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-22T15:54:37.2083147Z [2023-07-22 15:54:37] [autobuild] [ERROR] 
+2023-07-22T15:54:37.2083578Z [2023-07-22 15:54:37] [autobuild] [ERROR] After correcting the problems, you can resume the build with the command
+2023-07-22T15:54:37.2084037Z [2023-07-22 15:54:37] [autobuild] [ERROR]   mvn <args> -rf :nem-infrastructure-server
+2023-07-22T15:54:37.2211011Z [2023-07-22 15:54:37] [ERROR] Spawned process exited abnormally (code 1; tried to run: [mvn, clean, package, -f, pom.xml, -B, -V, -e, -Dfindbugs.skip, -Dcheckstyle.skip, -Dpmd.skip=true, -Dspotbugs.skip, -Denforcer.skip, -Dmaven.javadoc.skip, -DskipTests, -Dmaven.test.skip.exec, -Dlicense.skip=true, -Drat.skip=true, -Dspotless.check.skip=true, -t, /home/runner/.m2/toolchains.xml])
+2023-07-22T15:54:37.2920350Z ##[error]We were unable to automatically build your code. Please replace the call to the autobuild action with your custom build steps. Failure invoking /opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/java/tools/autobuild.sh with arguments .
+
+      Exit code 1 and error was:
+
+      Picked up JAVA_TOOL_OPTIONS:  -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false
+
+2023-07-22T15:54:37.6900811Z Post job cleanup.
+2023-07-22T15:54:38.0132073Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql version --format=terse
+2023-07-22T15:54:38.5414448Z 2.14.0
+2023-07-22T15:54:39.1397673Z [command]/opt/hostedtoolcache/CodeQL/2.14.0/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=/home/runner/work/_temp/codeql-intermediate-results.sarif --sarif-include-diagnostics -vvv
+2023-07-22T15:54:39.6335409Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20230722.155439.629.log.
+2023-07-22T15:54:39.8895931Z Interpreting diagnostic messages
+2023-07-22T15:54:39.8911255Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic...
+2023-07-22T15:54:39.8934615Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors...
+2023-07-22T15:54:39.8938669Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java...
+2023-07-22T15:54:39.8942532Z Found diagnostics file /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java/autobuilder.jsonl.
+2023-07-22T15:54:39.9197022Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2023-07-22T15:54:39.9200832Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic/tracer...
+2023-07-22T15:54:39.9215427Z Found 3 raw diagnostic messages.
+2023-07-22T15:54:39.9286316Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2023-07-22T15:54:39.9304516Z Interpreted diagnostic messages. (39ms)
+2023-07-22T15:54:40.0842785Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2023-07-22T15:54:40.0983955Z ##[group]Uploading results
+2023-07-22T15:54:40.0984662Z Processing sarif files: ["../codeql-failed-run.sarif"]
+2023-07-22T15:54:40.1465331Z Uploading results
+2023-07-22T15:54:40.6884061Z Successfully uploaded results
+2023-07-22T15:54:40.6884583Z ##[endgroup]
+2023-07-22T15:54:40.6885882Z ##[group]Waiting for processing to finish
+2023-07-22T15:54:40.9891836Z Analysis upload status is pending.
+2023-07-22T15:54:46.2895900Z Analysis upload status is failed.
+2023-07-22T15:54:46.2900905Z ##[endgroup]
+2023-07-22T15:54:46.6640646Z Post job cleanup.
+2023-07-22T15:54:46.8474429Z Post job cleanup.
+2023-07-22T15:54:46.9506242Z [command]/usr/bin/git version
+2023-07-22T15:54:46.9561971Z git version 2.41.0
+2023-07-22T15:54:46.9621425Z Temporarily overriding HOME='/home/runner/work/_temp/8d7c989a-f847-4e59-8ab7-ca726bd2d7de' before making global git config changes
+2023-07-22T15:54:46.9626550Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-22T15:54:46.9636226Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nem/nem
+2023-07-22T15:54:46.9696324Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-22T15:54:46.9751823Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-22T15:54:47.0170882Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-22T15:54:47.0207497Z http.https://github.com/.extraheader
+2023-07-22T15:54:47.0222430Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-22T15:54:47.0271757Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-22T15:54:47.0861634Z Cleaning up orphan processes
+
+2023-07-22T15:51:29.9326820Z ##[group]Run actions/checkout@v3
+2023-07-22T15:51:29.9327109Z with:
+2023-07-22T15:51:29.9327317Z   repository: NemProject/nem
+2023-07-22T15:51:29.9327680Z   token: ***
+2023-07-22T15:51:29.9327871Z   ssh-strict: true
+2023-07-22T15:51:29.9328105Z   persist-credentials: true
+2023-07-22T15:51:29.9328315Z   clean: true
+2023-07-22T15:51:29.9328539Z   sparse-checkout-cone-mode: true
+2023-07-22T15:51:29.9328771Z   fetch-depth: 1
+2023-07-22T15:51:29.9328970Z   lfs: false
+2023-07-22T15:51:29.9329147Z   submodules: false
+2023-07-22T15:51:29.9329363Z   set-safe-directory: true
+2023-07-22T15:51:29.9329577Z ##[endgroup]
+2023-07-22T15:51:30.1527881Z Syncing repository: NemProject/nem
+2023-07-22T15:51:30.1529663Z ##[group]Getting Git version info
+2023-07-22T15:51:30.1530108Z Working directory is '/home/runner/work/nem/nem'
+2023-07-22T15:51:30.1530585Z [command]/usr/bin/git version
+2023-07-22T15:51:30.1593478Z git version 2.41.0
+2023-07-22T15:51:30.1619413Z ##[endgroup]
+2023-07-22T15:51:30.1637432Z Temporarily overriding HOME='/home/runner/work/_temp/8a71440e-7ddd-4c30-be16-2071822ea568' before making global git config changes
+2023-07-22T15:51:30.1637982Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-22T15:51:30.1641154Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nem/nem
+2023-07-22T15:51:30.1681304Z Deleting the contents of '/home/runner/work/nem/nem'
+2023-07-22T15:51:30.1686692Z ##[group]Initializing the repository
+2023-07-22T15:51:30.1690470Z [command]/usr/bin/git init /home/runner/work/nem/nem
+2023-07-22T15:51:30.1748798Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-22T15:51:30.1749646Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-22T15:51:30.1750443Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-22T15:51:30.1750892Z hint: 
+2023-07-22T15:51:30.1751604Z hint: 	git config --global init.defaultBranch <name>
+2023-07-22T15:51:30.1752046Z hint: 
+2023-07-22T15:51:30.1752763Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-22T15:51:30.1753682Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-22T15:51:30.1754579Z hint: 
+2023-07-22T15:51:30.1755013Z hint: 	git branch -m <name>
+2023-07-22T15:51:30.1758288Z Initialized empty Git repository in /home/runner/work/nem/nem/.git/
+2023-07-22T15:51:30.1767768Z [command]/usr/bin/git remote add origin https://github.com/NemProject/nem
+2023-07-22T15:51:30.1806940Z ##[endgroup]
+2023-07-22T15:51:30.1807560Z ##[group]Disabling automatic garbage collection
+2023-07-22T15:51:30.1810331Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-22T15:51:30.1840585Z ##[endgroup]
+2023-07-22T15:51:30.1841157Z ##[group]Setting up auth
+2023-07-22T15:51:30.1847206Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-22T15:51:30.1878981Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-22T15:51:30.2264463Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-22T15:51:30.2265867Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-22T15:51:30.2459458Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-22T15:51:30.2488919Z ##[endgroup]
+2023-07-22T15:51:30.2489578Z ##[group]Fetching the repository
+2023-07-22T15:51:30.2499438Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +40c052ecbddf74f162bbe8f5794205bfa6fc78aa:refs/remotes/pull/304/merge
+2023-07-22T15:51:30.6395042Z remote: Enumerating objects: 1955, done.        
+2023-07-22T15:51:30.6410232Z remote: Counting objects:   0% (1/1955)        
+2023-07-22T15:51:30.6410625Z remote: Counting objects:   1% (20/1955)        
+2023-07-22T15:51:30.6412173Z remote: Counting objects:   2% (40/1955)        
+2023-07-22T15:51:30.6412628Z remote: Counting objects:   3% (59/1955)        
+2023-07-22T15:51:30.6413236Z remote: Counting objects:   4% (79/1955)        
+2023-07-22T15:51:30.6414052Z remote: Counting objects:   5% (98/1955)        
+2023-07-22T15:51:30.6414814Z remote: Counting objects:   6% (118/1955)        
+2023-07-22T15:51:30.6415421Z remote: Counting objects:   7% (137/1955)        
+2023-07-22T15:51:30.6416082Z remote: Counting objects:   8% (157/1955)        
+2023-07-22T15:51:30.6416762Z remote: Counting objects:   9% (176/1955)        
+2023-07-22T15:51:30.6628985Z remote: Counting objects:  10% (196/1955)        
+2023-07-22T15:51:30.6629276Z remote: Counting objects:  11% (216/1955)        
+2023-07-22T15:51:30.6629533Z remote: Counting objects:  12% (235/1955)        
+2023-07-22T15:51:30.6629801Z remote: Counting objects:  13% (255/1955)        
+2023-07-22T15:51:30.6630043Z remote: Counting objects:  14% (274/1955)        
+2023-07-22T15:51:30.6630281Z remote: Counting objects:  15% (294/1955)        
+2023-07-22T15:51:30.6630522Z remote: Counting objects:  16% (313/1955)        
+2023-07-22T15:51:30.6630757Z remote: Counting objects:  17% (333/1955)        
+2023-07-22T15:51:30.6630994Z remote: Counting objects:  18% (352/1955)        
+2023-07-22T15:51:30.6631217Z remote: Counting objects:  19% (372/1955)        
+2023-07-22T15:51:30.6631461Z remote: Counting objects:  20% (391/1955)        
+2023-07-22T15:51:30.6631697Z remote: Counting objects:  21% (411/1955)        
+2023-07-22T15:51:30.6631928Z remote: Counting objects:  22% (431/1955)        
+2023-07-22T15:51:30.6632155Z remote: Counting objects:  23% (450/1955)        
+2023-07-22T15:51:30.6632389Z remote: Counting objects:  24% (470/1955)        
+2023-07-22T15:51:30.6632624Z remote: Counting objects:  25% (489/1955)        
+2023-07-22T15:51:30.6632856Z remote: Counting objects:  26% (509/1955)        
+2023-07-22T15:51:30.6633091Z remote: Counting objects:  27% (528/1955)        
+2023-07-22T15:51:30.6633331Z remote: Counting objects:  28% (548/1955)        
+2023-07-22T15:51:30.6633771Z remote: Counting objects:  29% (567/1955)        
+2023-07-22T15:51:30.6634010Z remote: Counting objects:  30% (587/1955)        
+2023-07-22T15:51:30.6634247Z remote: Counting objects:  31% (607/1955)        
+2023-07-22T15:51:30.6634472Z remote: Counting objects:  32% (626/1955)        
+2023-07-22T15:51:30.6634722Z remote: Counting objects:  33% (646/1955)        
+2023-07-22T15:51:30.6634959Z remote: Counting objects:  34% (665/1955)        
+2023-07-22T15:51:30.6635194Z remote: Counting objects:  35% (685/1955)        
+2023-07-22T15:51:30.6635423Z remote: Counting objects:  36% (704/1955)        
+2023-07-22T15:51:30.6635666Z remote: Counting objects:  37% (724/1955)        
+2023-07-22T15:51:30.6635899Z remote: Counting objects:  38% (743/1955)        
+2023-07-22T15:51:30.6636132Z remote: Counting objects:  39% (763/1955)        
+2023-07-22T15:51:30.6636368Z remote: Counting objects:  40% (782/1955)        
+2023-07-22T15:51:30.6636600Z remote: Counting objects:  41% (802/1955)        
+2023-07-22T15:51:30.6636837Z remote: Counting objects:  42% (822/1955)        
+2023-07-22T15:51:30.6637060Z remote: Counting objects:  43% (841/1955)        
+2023-07-22T15:51:30.6637290Z remote: Counting objects:  44% (861/1955)        
+2023-07-22T15:51:30.6637523Z remote: Counting objects:  45% (880/1955)        
+2023-07-22T15:51:30.6637746Z remote: Counting objects:  46% (900/1955)        
+2023-07-22T15:51:30.6637984Z remote: Counting objects:  47% (919/1955)        
+2023-07-22T15:51:30.6705529Z remote: Counting objects:  48% (939/1955)        
+2023-07-22T15:51:30.6705785Z remote: Counting objects:  49% (958/1955)        
+2023-07-22T15:51:30.6706017Z remote: Counting objects:  50% (978/1955)        
+2023-07-22T15:51:30.6706254Z remote: Counting objects:  51% (998/1955)        
+2023-07-22T15:51:30.6706655Z remote: Counting objects:  52% (1017/1955)        
+2023-07-22T15:51:30.6706910Z remote: Counting objects:  53% (1037/1955)        
+2023-07-22T15:51:30.6707171Z remote: Counting objects:  54% (1056/1955)        
+2023-07-22T15:51:30.6707439Z remote: Counting objects:  55% (1076/1955)        
+2023-07-22T15:51:30.6707678Z remote: Counting objects:  56% (1095/1955)        
+2023-07-22T15:51:30.6707925Z remote: Counting objects:  57% (1115/1955)        
+2023-07-22T15:51:30.6708173Z remote: Counting objects:  58% (1134/1955)        
+2023-07-22T15:51:30.6708430Z remote: Counting objects:  59% (1154/1955)        
+2023-07-22T15:51:30.6708667Z remote: Counting objects:  60% (1173/1955)        
+2023-07-22T15:51:30.6708907Z remote: Counting objects:  61% (1193/1955)        
+2023-07-22T15:51:30.6709151Z remote: Counting objects:  62% (1213/1955)        
+2023-07-22T15:51:30.6709383Z remote: Counting objects:  63% (1232/1955)        
+2023-07-22T15:51:30.6709637Z remote: Counting objects:  64% (1252/1955)        
+2023-07-22T15:51:30.6709887Z remote: Counting objects:  65% (1271/1955)        
+2023-07-22T15:51:30.6710118Z remote: Counting objects:  66% (1291/1955)        
+2023-07-22T15:51:30.6710354Z remote: Counting objects:  67% (1310/1955)        
+2023-07-22T15:51:30.6710598Z remote: Counting objects:  68% (1330/1955)        
+2023-07-22T15:51:30.6710834Z remote: Counting objects:  69% (1349/1955)        
+2023-07-22T15:51:30.6711060Z remote: Counting objects:  70% (1369/1955)        
+2023-07-22T15:51:30.6711299Z remote: Counting objects:  71% (1389/1955)        
+2023-07-22T15:51:30.6711535Z remote: Counting objects:  72% (1408/1955)        
+2023-07-22T15:51:30.6711767Z remote: Counting objects:  73% (1428/1955)        
+2023-07-22T15:51:30.6712003Z remote: Counting objects:  74% (1447/1955)        
+2023-07-22T15:51:30.6712238Z remote: Counting objects:  75% (1467/1955)        
+2023-07-22T15:51:30.6712468Z remote: Counting objects:  76% (1486/1955)        
+2023-07-22T15:51:30.6712705Z remote: Counting objects:  77% (1506/1955)        
+2023-07-22T15:51:30.6712944Z remote: Counting objects:  78% (1525/1955)        
+2023-07-22T15:51:30.6713185Z remote: Counting objects:  79% (1545/1955)        
+2023-07-22T15:51:30.6713412Z remote: Counting objects:  80% (1564/1955)        
+2023-07-22T15:51:30.6713749Z remote: Counting objects:  81% (1584/1955)        
+2023-07-22T15:51:30.6713987Z remote: Counting objects:  82% (1604/1955)        
+2023-07-22T15:51:30.6714217Z remote: Counting objects:  83% (1623/1955)        
+2023-07-22T15:51:30.6715739Z remote: Counting objects:  84% (1643/1955)        
+2023-07-22T15:51:30.6715985Z remote: Counting objects:  85% (1662/1955)        
+2023-07-22T15:51:30.6716213Z remote: Counting objects:  86% (1682/1955)        
+2023-07-22T15:51:30.6716445Z remote: Counting objects:  87% (1701/1955)        
+2023-07-22T15:51:30.6716678Z remote: Counting objects:  88% (1721/1955)        
+2023-07-22T15:51:30.6716916Z remote: Counting objects:  89% (1740/1955)        
+2023-07-22T15:51:30.6717148Z remote: Counting objects:  90% (1760/1955)        
+2023-07-22T15:51:30.6717398Z remote: Counting objects:  91% (1780/1955)        
+2023-07-22T15:51:30.6717634Z remote: Counting objects:  92% (1799/1955)        
+2023-07-22T15:51:30.6717868Z remote: Counting objects:  93% (1819/1955)        
+2023-07-22T15:51:30.6718105Z remote: Counting objects:  94% (1838/1955)        
+2023-07-22T15:51:30.6718340Z remote: Counting objects:  95% (1858/1955)        
+2023-07-22T15:51:30.6719694Z remote: Counting objects:  96% (1877/1955)        
+2023-07-22T15:51:30.6719948Z remote: Counting objects:  97% (1897/1955)        
+2023-07-22T15:51:30.6720187Z remote: Counting objects:  98% (1916/1955)        
+2023-07-22T15:51:30.6720420Z remote: Counting objects:  99% (1936/1955)        
+2023-07-22T15:51:30.6720660Z remote: Counting objects: 100% (1955/1955)        
+2023-07-22T15:51:30.6720910Z remote: Counting objects: 100% (1955/1955), done.        
+2023-07-22T15:51:30.6721185Z remote: Compressing objects:   0% (1/1679)        
+2023-07-22T15:51:30.6721565Z remote: Compressing objects:   1% (17/1679)        
+2023-07-22T15:51:30.6721823Z remote: Compressing objects:   2% (34/1679)        
+2023-07-22T15:51:30.6722136Z remote: Compressing objects:   3% (51/1679)        
+2023-07-22T15:51:30.6722409Z remote: Compressing objects:   4% (68/1679)        
+2023-07-22T15:51:30.6722655Z remote: Compressing objects:   5% (84/1679)        
+2023-07-22T15:51:30.6724068Z remote: Compressing objects:   6% (101/1679)        
+2023-07-22T15:51:30.6724344Z remote: Compressing objects:   7% (118/1679)        
+2023-07-22T15:51:30.6724611Z remote: Compressing objects:   8% (135/1679)        
+2023-07-22T15:51:30.6730452Z remote: Compressing objects:   9% (152/1679)        
+2023-07-22T15:51:30.6730723Z remote: Compressing objects:  10% (168/1679)        
+2023-07-22T15:51:30.6730995Z remote: Compressing objects:  11% (185/1679)        
+2023-07-22T15:51:30.6735184Z remote: Compressing objects:  12% (202/1679)        
+2023-07-22T15:51:30.6782123Z remote: Compressing objects:  13% (219/1679)        
+2023-07-22T15:51:30.6828119Z remote: Compressing objects:  14% (236/1679)        
+2023-07-22T15:51:30.6853865Z remote: Compressing objects:  15% (252/1679)        
+2023-07-22T15:51:30.6874994Z remote: Compressing objects:  16% (269/1679)        
+2023-07-22T15:51:30.6911297Z remote: Compressing objects:  17% (286/1679)        
+2023-07-22T15:51:30.6951576Z remote: Compressing objects:  18% (303/1679)        
+2023-07-22T15:51:30.7021649Z remote: Compressing objects:  19% (320/1679)        
+2023-07-22T15:51:30.7072482Z remote: Compressing objects:  20% (336/1679)        
+2023-07-22T15:51:30.7130508Z remote: Compressing objects:  21% (353/1679)        
+2023-07-22T15:51:30.7273228Z remote: Compressing objects:  22% (370/1679)        
+2023-07-22T15:51:30.7334031Z remote: Compressing objects:  23% (387/1679)        
+2023-07-22T15:51:30.7365469Z remote: Compressing objects:  24% (403/1679)        
+2023-07-22T15:51:30.7408578Z remote: Compressing objects:  25% (420/1679)        
+2023-07-22T15:51:30.7463456Z remote: Compressing objects:  26% (437/1679)        
+2023-07-22T15:51:30.7528776Z remote: Compressing objects:  27% (454/1679)        
+2023-07-22T15:51:30.7595072Z remote: Compressing objects:  28% (471/1679)        
+2023-07-22T15:51:30.7645578Z remote: Compressing objects:  29% (487/1679)        
+2023-07-22T15:51:30.7765564Z remote: Compressing objects:  30% (504/1679)        
+2023-07-22T15:51:30.7874934Z remote: Compressing objects:  31% (521/1679)        
+2023-07-22T15:51:30.7913238Z remote: Compressing objects:  32% (538/1679)        
+2023-07-22T15:51:30.7952799Z remote: Compressing objects:  33% (555/1679)        
+2023-07-22T15:51:30.7978083Z remote: Compressing objects:  34% (571/1679)        
+2023-07-22T15:51:30.8087114Z remote: Compressing objects:  35% (588/1679)        
+2023-07-22T15:51:30.8113756Z remote: Compressing objects:  36% (605/1679)        
+2023-07-22T15:51:30.8166364Z remote: Compressing objects:  37% (622/1679)        
+2023-07-22T15:51:30.8201410Z remote: Compressing objects:  38% (639/1679)        
+2023-07-22T15:51:30.8255922Z remote: Compressing objects:  39% (655/1679)        
+2023-07-22T15:51:30.8313383Z remote: Compressing objects:  40% (672/1679)        
+2023-07-22T15:51:30.8339726Z remote: Compressing objects:  41% (689/1679)        
+2023-07-22T15:51:30.8363602Z remote: Compressing objects:  42% (706/1679)        
+2023-07-22T15:51:30.8424792Z remote: Compressing objects:  43% (722/1679)        
+2023-07-22T15:51:30.8489724Z remote: Compressing objects:  44% (739/1679)        
+2023-07-22T15:51:30.8528791Z remote: Compressing objects:  45% (756/1679)        
+2023-07-22T15:51:30.8554004Z remote: Compressing objects:  46% (773/1679)        
+2023-07-22T15:51:30.8602366Z remote: Compressing objects:  47% (790/1679)        
+2023-07-22T15:51:30.8616834Z remote: Compressing objects:  48% (806/1679)        
+2023-07-22T15:51:30.8625727Z remote: Compressing objects:  49% (823/1679)        
+2023-07-22T15:51:30.8643451Z remote: Compressing objects:  50% (840/1679)        
+2023-07-22T15:51:30.8658875Z remote: Compressing objects:  51% (857/1679)        
+2023-07-22T15:51:30.8692271Z remote: Compressing objects:  52% (874/1679)        
+2023-07-22T15:51:30.8701606Z remote: Compressing objects:  53% (890/1679)        
+2023-07-22T15:51:30.8725872Z remote: Compressing objects:  54% (907/1679)        
+2023-07-22T15:51:30.8747895Z remote: Compressing objects:  55% (924/1679)        
+2023-07-22T15:51:30.8760344Z remote: Compressing objects:  56% (941/1679)        
+2023-07-22T15:51:30.8767900Z remote: Compressing objects:  57% (958/1679)        
+2023-07-22T15:51:30.8786512Z remote: Compressing objects:  58% (974/1679)        
+2023-07-22T15:51:30.8806500Z remote: Compressing objects:  59% (991/1679)        
+2023-07-22T15:51:30.8823929Z remote: Compressing objects:  60% (1008/1679)        
+2023-07-22T15:51:30.8835646Z remote: Compressing objects:  61% (1025/1679)        
+2023-07-22T15:51:30.8854740Z remote: Compressing objects:  62% (1041/1679)        
+2023-07-22T15:51:30.8868367Z remote: Compressing objects:  63% (1058/1679)        
+2023-07-22T15:51:30.8895339Z remote: Compressing objects:  64% (1075/1679)        
+2023-07-22T15:51:30.8922417Z remote: Compressing objects:  65% (1092/1679)        
+2023-07-22T15:51:30.8940731Z remote: Compressing objects:  66% (1109/1679)        
+2023-07-22T15:51:30.8956479Z remote: Compressing objects:  67% (1125/1679)        
+2023-07-22T15:51:30.8969657Z remote: Compressing objects:  68% (1142/1679)        
+2023-07-22T15:51:30.8973707Z remote: Compressing objects:  69% (1159/1679)        
+2023-07-22T15:51:30.8994552Z remote: Compressing objects:  70% (1176/1679)        
+2023-07-22T15:51:30.9028838Z remote: Compressing objects:  71% (1193/1679)        
+2023-07-22T15:51:30.9038256Z remote: Compressing objects:  72% (1209/1679)        
+2023-07-22T15:51:30.9061468Z remote: Compressing objects:  73% (1226/1679)        
+2023-07-22T15:51:30.9083954Z remote: Compressing objects:  74% (1243/1679)        
+2023-07-22T15:51:30.9089836Z remote: Compressing objects:  75% (1260/1679)        
+2023-07-22T15:51:30.9103513Z remote: Compressing objects:  76% (1277/1679)        
+2023-07-22T15:51:30.9110957Z remote: Compressing objects:  77% (1293/1679)        
+2023-07-22T15:51:30.9122050Z remote: Compressing objects:  78% (1310/1679)        
+2023-07-22T15:51:30.9131545Z remote: Compressing objects:  79% (1327/1679)        
+2023-07-22T15:51:30.9139583Z remote: Compressing objects:  80% (1344/1679)        
+2023-07-22T15:51:30.9178012Z remote: Compressing objects:  81% (1360/1679)        
+2023-07-22T15:51:30.9194207Z remote: Compressing objects:  82% (1377/1679)        
+2023-07-22T15:51:30.9207120Z remote: Compressing objects:  83% (1394/1679)        
+2023-07-22T15:51:30.9221543Z remote: Compressing objects:  84% (1411/1679)        
+2023-07-22T15:51:30.9236469Z remote: Compressing objects:  85% (1428/1679)        
+2023-07-22T15:51:30.9250215Z remote: Compressing objects:  86% (1444/1679)        
+2023-07-22T15:51:30.9267967Z remote: Compressing objects:  87% (1461/1679)        
+2023-07-22T15:51:30.9284010Z remote: Compressing objects:  88% (1478/1679)        
+2023-07-22T15:51:30.9284649Z remote: Compressing objects:  89% (1495/1679)        
+2023-07-22T15:51:30.9287749Z remote: Compressing objects:  90% (1512/1679)        
+2023-07-22T15:51:30.9288689Z remote: Compressing objects:  91% (1528/1679)        
+2023-07-22T15:51:30.9291057Z remote: Compressing objects:  92% (1545/1679)        
+2023-07-22T15:51:30.9293701Z remote: Compressing objects:  93% (1562/1679)        
+2023-07-22T15:51:30.9295766Z remote: Compressing objects:  94% (1579/1679)        
+2023-07-22T15:51:30.9297496Z remote: Compressing objects:  95% (1596/1679)        
+2023-07-22T15:51:30.9303901Z remote: Compressing objects:  96% (1612/1679)        
+2023-07-22T15:51:30.9306803Z remote: Compressing objects:  97% (1629/1679)        
+2023-07-22T15:51:30.9312765Z remote: Compressing objects:  98% (1646/1679)        
+2023-07-22T15:51:30.9314162Z remote: Compressing objects:  99% (1663/1679)        
+2023-07-22T15:51:30.9314652Z remote: Compressing objects: 100% (1679/1679)        
+2023-07-22T15:51:30.9315238Z remote: Compressing objects: 100% (1679/1679), done.        
+2023-07-22T15:51:30.9355743Z Receiving objects:   0% (1/1955)
+2023-07-22T15:51:30.9387743Z Receiving objects:   1% (20/1955)
+2023-07-22T15:51:30.9455353Z Receiving objects:   2% (40/1955)
+2023-07-22T15:51:30.9504219Z Receiving objects:   3% (59/1955)
+2023-07-22T15:51:30.9561946Z Receiving objects:   4% (79/1955)
+2023-07-22T15:51:30.9619004Z Receiving objects:   5% (98/1955)
+2023-07-22T15:51:30.9903194Z Receiving objects:   6% (118/1955)
+2023-07-22T15:51:31.0022368Z Receiving objects:   7% (137/1955)
+2023-07-22T15:51:31.0064076Z Receiving objects:   8% (157/1955)
+2023-07-22T15:51:31.0107520Z Receiving objects:   9% (176/1955)
+2023-07-22T15:51:31.0156142Z Receiving objects:  10% (196/1955)
+2023-07-22T15:51:31.0388850Z Receiving objects:  11% (216/1955)
+2023-07-22T15:51:31.0402482Z Receiving objects:  12% (235/1955)
+2023-07-22T15:51:31.0405680Z Receiving objects:  13% (255/1955)
+2023-07-22T15:51:31.0409615Z Receiving objects:  14% (274/1955)
+2023-07-22T15:51:31.0412469Z Receiving objects:  15% (294/1955)
+2023-07-22T15:51:31.0433707Z Receiving objects:  16% (313/1955)
+2023-07-22T15:51:31.0436931Z Receiving objects:  17% (333/1955)
+2023-07-22T15:51:31.0565548Z Receiving objects:  18% (352/1955)
+2023-07-22T15:51:31.0898137Z Receiving objects:  19% (372/1955)
+2023-07-22T15:51:31.0920029Z Receiving objects:  20% (391/1955)
+2023-07-22T15:51:31.0926354Z Receiving objects:  21% (411/1955)
+2023-07-22T15:51:31.0935189Z Receiving objects:  22% (431/1955)
+2023-07-22T15:51:31.0946297Z Receiving objects:  23% (450/1955)
+2023-07-22T15:51:31.0957550Z Receiving objects:  24% (470/1955)
+2023-07-22T15:51:31.0967004Z Receiving objects:  25% (489/1955)
+2023-07-22T15:51:31.0979402Z Receiving objects:  26% (509/1955)
+2023-07-22T15:51:31.0984682Z Receiving objects:  27% (528/1955)
+2023-07-22T15:51:31.0986577Z Receiving objects:  28% (548/1955)
+2023-07-22T15:51:31.0991392Z Receiving objects:  29% (567/1955)
+2023-07-22T15:51:31.1008119Z Receiving objects:  30% (587/1955)
+2023-07-22T15:51:31.1048354Z Receiving objects:  31% (607/1955)
+2023-07-22T15:51:31.1054261Z Receiving objects:  32% (626/1955)
+2023-07-22T15:51:31.1062325Z Receiving objects:  33% (646/1955)
+2023-07-22T15:51:31.1088044Z Receiving objects:  34% (665/1955)
+2023-07-22T15:51:31.1092335Z Receiving objects:  35% (685/1955)
+2023-07-22T15:51:31.1098465Z Receiving objects:  36% (704/1955)
+2023-07-22T15:51:31.1123690Z Receiving objects:  37% (724/1955)
+2023-07-22T15:51:31.1138856Z Receiving objects:  38% (743/1955)
+2023-07-22T15:51:31.1552438Z Receiving objects:  39% (763/1955)
+2023-07-22T15:51:31.1724977Z Receiving objects:  40% (782/1955)
+2023-07-22T15:51:31.1731873Z Receiving objects:  41% (802/1955)
+2023-07-22T15:51:31.1742213Z Receiving objects:  42% (822/1955)
+2023-07-22T15:51:31.1749460Z Receiving objects:  43% (841/1955)
+2023-07-22T15:51:31.1755446Z Receiving objects:  44% (861/1955)
+2023-07-22T15:51:31.1758719Z Receiving objects:  45% (880/1955)
+2023-07-22T15:51:31.1763796Z Receiving objects:  46% (900/1955)
+2023-07-22T15:51:31.1772687Z Receiving objects:  47% (919/1955)
+2023-07-22T15:51:31.1777023Z Receiving objects:  48% (939/1955)
+2023-07-22T15:51:31.1781155Z Receiving objects:  49% (958/1955)
+2023-07-22T15:51:31.1789741Z Receiving objects:  50% (978/1955)
+2023-07-22T15:51:31.1792683Z Receiving objects:  51% (998/1955)
+2023-07-22T15:51:31.1797619Z Receiving objects:  52% (1017/1955)
+2023-07-22T15:51:31.1801651Z Receiving objects:  53% (1037/1955)
+2023-07-22T15:51:31.1809320Z Receiving objects:  54% (1056/1955)
+2023-07-22T15:51:31.1813933Z Receiving objects:  55% (1076/1955)
+2023-07-22T15:51:31.1816940Z Receiving objects:  56% (1095/1955)
+2023-07-22T15:51:31.1822329Z Receiving objects:  57% (1115/1955)
+2023-07-22T15:51:31.1829282Z Receiving objects:  58% (1134/1955)
+2023-07-22T15:51:31.1833805Z Receiving objects:  59% (1154/1955)
+2023-07-22T15:51:31.1837965Z Receiving objects:  60% (1173/1955)
+2023-07-22T15:51:31.1845029Z Receiving objects:  61% (1193/1955)
+2023-07-22T15:51:31.1849324Z Receiving objects:  62% (1213/1955)
+2023-07-22T15:51:31.1856180Z Receiving objects:  63% (1232/1955)
+2023-07-22T15:51:31.1860053Z Receiving objects:  64% (1252/1955)
+2023-07-22T15:51:31.1966871Z Receiving objects:  65% (1271/1955)
+2023-07-22T15:51:31.1971914Z Receiving objects:  66% (1291/1955)
+2023-07-22T15:51:31.1977749Z Receiving objects:  67% (1310/1955)
+2023-07-22T15:51:31.1985518Z Receiving objects:  68% (1330/1955)
+2023-07-22T15:51:31.1993025Z Receiving objects:  69% (1349/1955)
+2023-07-22T15:51:31.2003970Z Receiving objects:  70% (1369/1955)
+2023-07-22T15:51:31.2012727Z Receiving objects:  71% (1389/1955)
+2023-07-22T15:51:31.2023119Z Receiving objects:  72% (1408/1955)
+2023-07-22T15:51:31.2038991Z Receiving objects:  73% (1428/1955)
+2023-07-22T15:51:31.2044866Z Receiving objects:  74% (1447/1955)
+2023-07-22T15:51:31.2052478Z Receiving objects:  75% (1467/1955)
+2023-07-22T15:51:31.2060777Z Receiving objects:  76% (1486/1955)
+2023-07-22T15:51:31.2067379Z Receiving objects:  77% (1506/1955)
+2023-07-22T15:51:31.2079602Z Receiving objects:  78% (1525/1955)
+2023-07-22T15:51:31.2093064Z Receiving objects:  79% (1545/1955)
+2023-07-22T15:51:31.2099166Z Receiving objects:  80% (1564/1955)
+2023-07-22T15:51:31.2110899Z Receiving objects:  81% (1584/1955)
+2023-07-22T15:51:31.2121217Z Receiving objects:  82% (1604/1955)
+2023-07-22T15:51:31.2130516Z Receiving objects:  83% (1623/1955)
+2023-07-22T15:51:31.2141082Z Receiving objects:  84% (1643/1955)
+2023-07-22T15:51:31.2154548Z Receiving objects:  85% (1662/1955)
+2023-07-22T15:51:31.2163800Z Receiving objects:  86% (1682/1955)
+2023-07-22T15:51:31.2172489Z Receiving objects:  87% (1701/1955)
+2023-07-22T15:51:31.2179613Z Receiving objects:  88% (1721/1955)
+2023-07-22T15:51:31.2186195Z Receiving objects:  89% (1740/1955)
+2023-07-22T15:51:31.2204192Z Receiving objects:  90% (1760/1955)
+2023-07-22T15:51:31.2214857Z Receiving objects:  91% (1780/1955)
+2023-07-22T15:51:31.2217211Z Receiving objects:  92% (1799/1955)
+2023-07-22T15:51:31.2222464Z Receiving objects:  93% (1819/1955)
+2023-07-22T15:51:31.2227728Z Receiving objects:  94% (1838/1955)
+2023-07-22T15:51:31.2228202Z Receiving objects:  95% (1858/1955)
+2023-07-22T15:51:31.2229311Z remote: Total 1955 (delta 345), reused 1017 (delta 212), pack-reused 0        
+2023-07-22T15:51:31.2239045Z Receiving objects:  96% (1877/1955)
+2023-07-22T15:51:31.2245727Z Receiving objects:  97% (1897/1955)
+2023-07-22T15:51:31.2254729Z Receiving objects:  98% (1916/1955)
+2023-07-22T15:51:31.2260395Z Receiving objects:  99% (1936/1955)
+2023-07-22T15:51:31.2260799Z Receiving objects: 100% (1955/1955)
+2023-07-22T15:51:31.2262242Z Receiving objects: 100% (1955/1955), 2.56 MiB | 8.81 MiB/s, done.
+2023-07-22T15:51:31.2264981Z Resolving deltas:   0% (0/345)
+2023-07-22T15:51:31.2266019Z Resolving deltas:   1% (4/345)
+2023-07-22T15:51:31.2269094Z Resolving deltas:   2% (7/345)
+2023-07-22T15:51:31.2271753Z Resolving deltas:   3% (11/345)
+2023-07-22T15:51:31.2273133Z Resolving deltas:   4% (14/345)
+2023-07-22T15:51:31.2274388Z Resolving deltas:   5% (18/345)
+2023-07-22T15:51:31.2276392Z Resolving deltas:   6% (21/345)
+2023-07-22T15:51:31.2276765Z Resolving deltas:   7% (25/345)
+2023-07-22T15:51:31.2280153Z Resolving deltas:   8% (28/345)
+2023-07-22T15:51:31.2280578Z Resolving deltas:   9% (32/345)
+2023-07-22T15:51:31.2281945Z Resolving deltas:  10% (35/345)
+2023-07-22T15:51:31.2284227Z Resolving deltas:  11% (38/345)
+2023-07-22T15:51:31.2285500Z Resolving deltas:  12% (42/345)
+2023-07-22T15:51:31.2286798Z Resolving deltas:  13% (45/345)
+2023-07-22T15:51:31.2287720Z Resolving deltas:  14% (49/345)
+2023-07-22T15:51:31.2288933Z Resolving deltas:  15% (52/345)
+2023-07-22T15:51:31.2289353Z Resolving deltas:  16% (56/345)
+2023-07-22T15:51:31.2292619Z Resolving deltas:  17% (59/345)
+2023-07-22T15:51:31.2293046Z Resolving deltas:  18% (63/345)
+2023-07-22T15:51:31.2295042Z Resolving deltas:  19% (66/345)
+2023-07-22T15:51:31.2299670Z Resolving deltas:  20% (69/345)
+2023-07-22T15:51:31.2300114Z Resolving deltas:  21% (73/345)
+2023-07-22T15:51:31.2303188Z Resolving deltas:  22% (76/345)
+2023-07-22T15:51:31.2306556Z Resolving deltas:  23% (80/345)
+2023-07-22T15:51:31.2310326Z Resolving deltas:  24% (83/345)
+2023-07-22T15:51:31.2312058Z Resolving deltas:  25% (87/345)
+2023-07-22T15:51:31.2315489Z Resolving deltas:  26% (90/345)
+2023-07-22T15:51:31.2318499Z Resolving deltas:  27% (94/345)
+2023-07-22T15:51:31.2320620Z Resolving deltas:  28% (97/345)
+2023-07-22T15:51:31.2323308Z Resolving deltas:  29% (101/345)
+2023-07-22T15:51:31.2326517Z Resolving deltas:  30% (104/345)
+2023-07-22T15:51:31.2328886Z Resolving deltas:  31% (107/345)
+2023-07-22T15:51:31.2329864Z Resolving deltas:  32% (111/345)
+2023-07-22T15:51:31.2331383Z Resolving deltas:  33% (114/345)
+2023-07-22T15:51:31.2331780Z Resolving deltas:  34% (118/345)
+2023-07-22T15:51:31.2333191Z Resolving deltas:  35% (121/345)
+2023-07-22T15:51:31.2335094Z Resolving deltas:  36% (125/345)
+2023-07-22T15:51:31.2336306Z Resolving deltas:  37% (128/345)
+2023-07-22T15:51:31.2336724Z Resolving deltas:  38% (132/345)
+2023-07-22T15:51:31.2337436Z Resolving deltas:  39% (135/345)
+2023-07-22T15:51:31.2339313Z Resolving deltas:  40% (138/345)
+2023-07-22T15:51:31.2340234Z Resolving deltas:  41% (142/345)
+2023-07-22T15:51:31.2342636Z Resolving deltas:  42% (145/345)
+2023-07-22T15:51:31.2345722Z Resolving deltas:  43% (149/345)
+2023-07-22T15:51:31.2348772Z Resolving deltas:  44% (152/345)
+2023-07-22T15:51:31.2354842Z Resolving deltas:  45% (156/345)
+2023-07-22T15:51:31.2359334Z Resolving deltas:  46% (159/345)
+2023-07-22T15:51:31.2362872Z Resolving deltas:  47% (163/345)
+2023-07-22T15:51:31.2378448Z Resolving deltas:  48% (166/345)
+2023-07-22T15:51:31.2382290Z Resolving deltas:  49% (170/345)
+2023-07-22T15:51:31.2385442Z Resolving deltas:  50% (173/345)
+2023-07-22T15:51:31.2389244Z Resolving deltas:  51% (176/345)
+2023-07-22T15:51:31.2392148Z Resolving deltas:  52% (180/345)
+2023-07-22T15:51:31.2395138Z Resolving deltas:  53% (183/345)
+2023-07-22T15:51:31.2398018Z Resolving deltas:  54% (187/345)
+2023-07-22T15:51:31.2401040Z Resolving deltas:  55% (190/345)
+2023-07-22T15:51:31.2402038Z Resolving deltas:  56% (194/345)
+2023-07-22T15:51:31.2403610Z Resolving deltas:  57% (197/345)
+2023-07-22T15:51:31.2404046Z Resolving deltas:  58% (201/345)
+2023-07-22T15:51:31.2405773Z Resolving deltas:  59% (204/345)
+2023-07-22T15:51:31.2409289Z Resolving deltas:  60% (207/345)
+2023-07-22T15:51:31.2409715Z Resolving deltas:  61% (211/345)
+2023-07-22T15:51:31.2411700Z Resolving deltas:  62% (214/345)
+2023-07-22T15:51:31.2412664Z Resolving deltas:  63% (218/345)
+2023-07-22T15:51:31.2415514Z Resolving deltas:  64% (221/345)
+2023-07-22T15:51:31.2422854Z Resolving deltas:  65% (225/345)
+2023-07-22T15:51:31.2423788Z Resolving deltas:  66% (228/345)
+2023-07-22T15:51:31.2424194Z Resolving deltas:  67% (232/345)
+2023-07-22T15:51:31.2424917Z Resolving deltas:  68% (235/345)
+2023-07-22T15:51:31.2425299Z Resolving deltas:  69% (239/345)
+2023-07-22T15:51:31.2426016Z Resolving deltas:  70% (242/345)
+2023-07-22T15:51:31.2428416Z Resolving deltas:  71% (245/345)
+2023-07-22T15:51:31.2431830Z Resolving deltas:  72% (249/345)
+2023-07-22T15:51:31.2437028Z Resolving deltas:  73% (252/345)
+2023-07-22T15:51:31.2437463Z Resolving deltas:  74% (256/345)
+2023-07-22T15:51:31.2439224Z Resolving deltas:  75% (259/345)
+2023-07-22T15:51:31.2441594Z Resolving deltas:  76% (263/345)
+2023-07-22T15:51:31.2444254Z Resolving deltas:  77% (266/345)
+2023-07-22T15:51:31.2445592Z Resolving deltas:  78% (270/345)
+2023-07-22T15:51:31.2446370Z Resolving deltas:  79% (273/345)
+2023-07-22T15:51:31.2447771Z Resolving deltas:  80% (276/345)
+2023-07-22T15:51:31.2448538Z Resolving deltas:  81% (280/345)
+2023-07-22T15:51:31.2450744Z Resolving deltas:  82% (283/345)
+2023-07-22T15:51:31.2454589Z Resolving deltas:  83% (287/345)
+2023-07-22T15:51:31.2457093Z Resolving deltas:  84% (290/345)
+2023-07-22T15:51:31.2459495Z Resolving deltas:  85% (294/345)
+2023-07-22T15:51:31.2461690Z Resolving deltas:  86% (297/345)
+2023-07-22T15:51:31.2461910Z Resolving deltas:  87% (301/345)
+2023-07-22T15:51:31.2464425Z Resolving deltas:  88% (304/345)
+2023-07-22T15:51:31.2466811Z Resolving deltas:  89% (308/345)
+2023-07-22T15:51:31.2469666Z Resolving deltas:  90% (311/345)
+2023-07-22T15:51:31.2472000Z Resolving deltas:  91% (314/345)
+2023-07-22T15:51:31.2474845Z Resolving deltas:  92% (318/345)
+2023-07-22T15:51:31.2478354Z Resolving deltas:  93% (321/345)
+2023-07-22T15:51:31.2479421Z Resolving deltas:  94% (325/345)
+2023-07-22T15:51:31.2482293Z Resolving deltas:  95% (328/345)
+2023-07-22T15:51:31.2485650Z Resolving deltas:  96% (332/345)
+2023-07-22T15:51:31.2489742Z Resolving deltas:  97% (335/345)
+2023-07-22T15:51:31.2492123Z Resolving deltas:  98% (339/345)
+2023-07-22T15:51:31.2494527Z Resolving deltas:  99% (342/345)
+2023-07-22T15:51:31.2503921Z Resolving deltas: 100% (345/345)
+2023-07-22T15:51:31.2504182Z Resolving deltas: 100% (345/345), done.
+2023-07-22T15:51:31.2709731Z From https://github.com/NemProject/nem
+2023-07-22T15:51:31.2710503Z  * [new ref]         40c052ecbddf74f162bbe8f5794205bfa6fc78aa -> pull/304/merge
+2023-07-22T15:51:31.2737084Z ##[endgroup]
+2023-07-22T15:51:31.2737625Z ##[group]Determining the checkout info
+2023-07-22T15:51:31.2739643Z ##[endgroup]
+2023-07-22T15:51:31.2740170Z ##[group]Checking out the ref
+2023-07-22T15:51:31.2744790Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/304/merge
+2023-07-22T15:51:31.3726846Z Note: switching to 'refs/remotes/pull/304/merge'.
+2023-07-22T15:51:31.3727393Z 
+2023-07-22T15:51:31.3728206Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-22T15:51:31.3728619Z changes and commit them, and you can discard any commits you make in this
+2023-07-22T15:51:31.3728971Z state without impacting any branches by switching back to a branch.
+2023-07-22T15:51:31.3729168Z 
+2023-07-22T15:51:31.3729328Z If you want to create a new branch to retain commits you create, you may
+2023-07-22T15:51:31.3729728Z do so (now or later) by using -c with the switch command. Example:
+2023-07-22T15:51:31.3729915Z 
+2023-07-22T15:51:31.3730070Z   git switch -c <new-branch-name>
+2023-07-22T15:51:31.3730247Z 
+2023-07-22T15:51:31.3730345Z Or undo this operation with:
+2023-07-22T15:51:31.3730486Z 
+2023-07-22T15:51:31.3730565Z   git switch -
+2023-07-22T15:51:31.3730682Z 
+2023-07-22T15:51:31.3731222Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-22T15:51:31.3731433Z 
+2023-07-22T15:51:31.3731645Z HEAD is now at 40c052e Merge c3818c076f0c088d1d11b7812b880be579c19ec2 into 43019c209b85e63b3a895fef576ed883cd88ac8c
+2023-07-22T15:51:31.3742304Z ##[endgroup]
+2023-07-22T15:51:31.3784908Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-22T15:51:31.3812141Z '40c052ecbddf74f162bbe8f5794205bfa6fc78aa'

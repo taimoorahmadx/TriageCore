@@ -1,4 +1,5 @@
 repo: encode/httpx
+source: mined
 run_id: 36888745184
 head_sha: 408943ad645e5497726584691c2020365da3ffb7
 run_attempts:

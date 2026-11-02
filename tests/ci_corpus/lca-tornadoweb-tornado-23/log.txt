@@ -1,0 +1,151 @@
+===== Run windows tests/4_Run test suite.txt =====
+##[group]Run py -m tornado.test --fail-if-logs=false
+[36;1mpy -m tornado.test --fail-if-logs=false[0m
+shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+env:
+  pythonLocation: C:\hostedtoolcache\windows\Python\3.11.6\x64
+  PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.11.6\x64/lib/pkgconfig
+  Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.6\x64
+  Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.6\x64
+  Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.11.6\x64
+##[endgroup]
+...............................................................ssssssssssssssssssssssssssssssssssssssssss..................................................................................................................................................s.s..................................................................ss.........................................................[E 231114 03:18:04 base_events:1785] Task was destroyed but it is pending!
+    task: <Task pending name='Task-1330' coro=<SelectorThread.__init__.<locals>.thread_manager_anext() running at D:\a\tornado\tornado\tornado\platform\asyncio.py:462>>
+Exception ignored in: <coroutine object SelectorThread.__init__.<locals>.thread_manager_anext at 0x0000020E04B40A00>
+Traceback (most recent call last):
+  File "C:\hostedtoolcache\windows\Python\3.12.0\x64\Lib\warnings.py", line 552, in _warn_unawaited_coroutine
+.    warn(msg, category=RuntimeWarning, stacklevel=2, source=coro)
+RuntimeWarning: coroutine 'SelectorThread.__init__.<locals>.thread_manager_anext' was never awaited
+..........s..s.s........................................s......................E.........s.............................s......................................ssssssssssssssssssssssssss.......................................................s...s..s.s.......................................sssssssss........................................................................................................................................................................................s....s.ssss...................................s.............s...............ss..........s...................................................................s.............................................................s............................................................................s...................................................
+======================================================================
+ERROR: test_no_match (tornado.test.iostream_test.TestIOStreamCheckHostname.test_no_match)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\a\tornado\tornado\tornado\testing.py", line 102, in __call__
+    result = self.orig_method(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\tornado\tornado\tornado\testing.py", line 619, in post_coroutine
+    return self.io_loop.run_sync(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\tornado\tornado\tornado\ioloop.py", line 539, in run_sync
+    return future_cell[0].result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\tornado\tornado\tornado\test\iostream_test.py", line 1200, in test_no_match
+    with ExpectLog(gen_log, ".*alert bad certificate", level=logging.WARNING):
+  File "D:\a\tornado\tornado\tornado\testing.py", line 758, in __exit__
+    raise Exception("did not get expected log message")
+Exception: did not get expected log message
+
+----------------------------------------------------------------------
+Ran 1208 tests in 48.314s
+
+FAILED (errors=1, skipped=105)
+Some tests were skipped because: SO_REUSEPORT is not supported, at
+least one client should fail connecting for the test to be meaningful,
+flaky on windows, needs fix, no testable future imports, non-posix OS,
+non-unix platform, preexec_fn not available on win32, py312 has its
+own check for test case returns, pycares module not present, pycurl
+module not present, tornado.speedups module not present, twisted
+module not present, unix sockets not supported on this platform
+[E 231114 03:18:43 runtests:199] logged 0 infos, 0 warnings, 1 errors, and 672 bytes to stderr
+Exception ignored in: <socket.socket fd=828, family=2, type=1, proto=0, laddr=('127.0.0.1', 61779), raddr=('127.0.0.1', 61778)>
+ResourceWarning: unclosed <socket.socket fd=828, family=2, type=1, proto=0, laddr=('127.0.0.1', 61779), raddr=('127.0.0.1', 61778)>
+Exception ignored in: <socket.socket fd=832, family=2, type=1, proto=0, laddr=('127.0.0.1', 61778), raddr=('127.0.0.1', 61779)>
+ResourceWarning: unclosed <socket.socket fd=832, family=2, type=1, proto=0, laddr=('127.0.0.1', 61778), raddr=('127.0.0.1', 61779)>
+Exception ignored in: <socket.socket fd=372, family=2, type=1, proto=0, laddr=('127.0.0.1', 61811), raddr=('127.0.0.1', 61810)>
+ResourceWarning: unclosed <socket.socket fd=372, family=2, type=1, proto=0, laddr=('127.0.0.1', 61811), raddr=('127.0.0.1', 61810)>
+Exception ignored in: <socket.socket fd=656, family=2, type=1, proto=0, laddr=('127.0.0.1', 61810), raddr=('127.0.0.1', 61811)>
+ResourceWarning: unclosed <socket.socket fd=656, family=2, type=1, proto=0, laddr=('127.0.0.1', 61810), raddr=('127.0.0.1', 61811)>
+Exception ignored in: <socket.socket fd=408, family=2, type=1, proto=0, laddr=('127.0.0.1', 61815), raddr=('127.0.0.1', 61814)>
+ResourceWarning: unclosed <socket.socket fd=408, family=2, type=1, proto=0, laddr=('127.0.0.1', 61815), raddr=('127.0.0.1', 61814)>
+Exception ignored in: <socket.socket fd=388, family=2, type=1, proto=0, laddr=('127.0.0.1', 61814), raddr=('127.0.0.1', 61815)>
+ResourceWarning: unclosed <socket.socket fd=388, family=2, type=1, proto=0, laddr=('127.0.0.1', 61814), raddr=('127.0.0.1', 61815)>
+Exception ignored in: <socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 61819), raddr=('127.0.0.1', 61818)>
+ResourceWarning: unclosed <socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 61819), raddr=('127.0.0.1', 61818)>
+Exception ignored in: <socket.socket fd=392, family=2, type=1, proto=0, laddr=('127.0.0.1', 61818), raddr=('127.0.0.1', 61819)>
+ResourceWarning: unclosed <socket.socket fd=392, family=2, type=1, proto=0, laddr=('127.0.0.1', 61818), raddr=('127.0.0.1', 61819)>
+Exception ignored in: <socket.socket fd=620, family=2, type=1, proto=0, laddr=('127.0.0.1', 61823), raddr=('127.0.0.1', 61822)>
+ResourceWarning: unclosed <socket.socket fd=620, family=2, type=1, proto=0, laddr=('127.0.0.1', 61823), raddr=('127.0.0.1', 61822)>
+Exception ignored in: <socket.socket fd=652, family=2, type=1, proto=0, laddr=('127.0.0.1', 61822), raddr=('127.0.0.1', 61823)>
+ResourceWarning: unclosed <socket.socket fd=652, family=2, type=1, proto=0, laddr=('127.0.0.1', 61822), raddr=('127.0.0.1', 61823)>
+Exception ignored in: <socket.socket fd=784, family=2, type=1, proto=0, laddr=('127.0.0.1', 61827), raddr=('127.0.0.1', 61826)>
+ResourceWarning: unclosed <socket.socket fd=784, family=2, type=1, proto=0, laddr=('127.0.0.1', 61827), raddr=('127.0.0.1', 61826)>
+Exception ignored in: <socket.socket fd=788, family=2, type=1, proto=0, laddr=('127.0.0.1', 61826), raddr=('127.0.0.1', 61827)>
+ResourceWarning: unclosed <socket.socket fd=788, family=2, type=1, proto=0, laddr=('127.0.0.1', 61826), raddr=('127.0.0.1', 61827)>
+Exception ignored in: <socket.socket fd=624, family=2, type=1, proto=0, laddr=('127.0.0.1', 61831), raddr=('127.0.0.1', 61830)>
+ResourceWarning: unclosed <socket.socket fd=624, family=2, type=1, proto=0, laddr=('127.0.0.1', 61831), raddr=('127.0.0.1', 61830)>
+Exception ignored in: <socket.socket fd=600, family=2, type=1, proto=0, laddr=('127.0.0.1', 61830), raddr=('127.0.0.1', 61831)>
+ResourceWarning: unclosed <socket.socket fd=600, family=2, type=1, proto=0, laddr=('127.0.0.1', 61830), raddr=('127.0.0.1', 61831)>
+Exception ignored in: <socket.socket fd=804, family=2, type=1, proto=0, laddr=('127.0.0.1', 61835), raddr=('127.0.0.1', 61834)>
+ResourceWarning: unclosed <socket.socket fd=804, family=2, type=1, proto=0, laddr=('127.0.0.1', 61835), raddr=('127.0.0.1', 61834)>
+Exception ignored in: <socket.socket fd=820, family=2, type=1, proto=0, laddr=('127.0.0.1', 61834), raddr=('127.0.0.1', 61835)>
+ResourceWarning: unclosed <socket.socket fd=820, family=2, type=1, proto=0, laddr=('127.0.0.1', 61834), raddr=('127.0.0.1', 61835)>
+Exception ignored in: <socket.socket fd=824, family=2, type=1, proto=0, laddr=('127.0.0.1', 61839), raddr=('127.0.0.1', 61838)>
+ResourceWarning: unclosed <socket.socket fd=824, family=2, type=1, proto=0, laddr=('127.0.0.1', 61839), raddr=('127.0.0.1', 61838)>
+Exception ignored in: <socket.socket fd=836, family=2, type=1, proto=0, laddr=('127.0.0.1', 61838), raddr=('127.0.0.1', 61839)>
+ResourceWarning: unclosed <socket.socket fd=836, family=2, type=1, proto=0, laddr=('127.0.0.1', 61838), raddr=('127.0.0.1', 61839)>
+Exception ignored in: <socket.socket fd=844, family=2, type=1, proto=0, laddr=('127.0.0.1', 61843), raddr=('127.0.0.1', 61842)>
+ResourceWarning: unclosed <socket.socket fd=844, family=2, type=1, proto=0, laddr=('127.0.0.1', 61843), raddr=('127.0.0.1', 61842)>
+Exception ignored in: <socket.socket fd=848, family=2, type=1, proto=0, laddr=('127.0.0.1', 61842), raddr=('127.0.0.1', 61843)>
+ResourceWarning: unclosed <socket.socket fd=848, family=2, type=1, proto=0, laddr=('127.0.0.1', 61842), raddr=('127.0.0.1', 61843)>
+Exception ignored in: <socket.socket fd=856, family=2, type=1, proto=0, laddr=('127.0.0.1', 61847), raddr=('127.0.0.1', 61846)>
+ResourceWarning: unclosed <socket.socket fd=856, family=2, type=1, proto=0, laddr=('127.0.0.1', 61847), raddr=('127.0.0.1', 61846)>
+Exception ignored in: <socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 61846), raddr=('127.0.0.1', 61847)>
+ResourceWarning: unclosed <socket.socket fd=860, family=2, type=1, proto=0, laddr=('127.0.0.1', 61846), raddr=('127.0.0.1', 61847)>
+Exception ignored in: <socket.socket fd=900, family=2, type=1, proto=0, laddr=('127.0.0.1', 61897), raddr=('127.0.0.1', 61896)>
+ResourceWarning: unclosed <socket.socket fd=900, family=2, type=1, proto=0, laddr=('127.0.0.1', 61897), raddr=('127.0.0.1', 61896)>
+Exception ignored in: <socket.socket fd=904, family=2, type=1, proto=0, laddr=('127.0.0.1', 61896), raddr=('127.0.0.1', 61897)>
+ResourceWarning: unclosed <socket.socket fd=904, family=2, type=1, proto=0, laddr=('127.0.0.1', 61896), raddr=('127.0.0.1', 61897)>
+Exception ignored in: <socket.socket fd=968, family=2, type=1, proto=0, laddr=('127.0.0.1', 61941), raddr=('127.0.0.1', 61940)>
+ResourceWarning: unclosed <socket.socket fd=968, family=2, type=1, proto=0, laddr=('127.0.0.1', 61941), raddr=('127.0.0.1', 61940)>
+Exception ignored in: <socket.socket fd=952, family=2, type=1, proto=0, laddr=('127.0.0.1', 61940), raddr=('127.0.0.1', 61941)>
+ResourceWarning: unclosed <socket.socket fd=952, family=2, type=1, proto=0, laddr=('127.0.0.1', 61940), raddr=('127.0.0.1', 61941)>
+Exception ignored in: <socket.socket fd=908, family=2, type=1, proto=0, laddr=('127.0.0.1', 61945), raddr=('127.0.0.1', 61944)>
+ResourceWarning: unclosed <socket.socket fd=908, family=2, type=1, proto=0, laddr=('127.0.0.1', 61945), raddr=('127.0.0.1', 61944)>
+Exception ignored in: <socket.socket fd=948, family=2, type=1, proto=0, laddr=('127.0.0.1', 61944), raddr=('127.0.0.1', 61945)>
+ResourceWarning: unclosed <socket.socket fd=948, family=2, type=1, proto=0, laddr=('127.0.0.1', 61944), raddr=('127.0.0.1', 61945)>
+Exception ignored in: <socket.socket fd=936, family=2, type=1, proto=0, laddr=('127.0.0.1', 61949), raddr=('127.0.0.1', 61948)>
+ResourceWarning: unclosed <socket.socket fd=936, family=2, type=1, proto=0, laddr=('127.0.0.1', 61949), raddr=('127.0.0.1', 61948)>
+Exception ignored in: <socket.socket fd=928, family=2, type=1, proto=0, laddr=('127.0.0.1', 61948), raddr=('127.0.0.1', 61949)>
+ResourceWarning: unclosed <socket.socket fd=928, family=2, type=1, proto=0, laddr=('127.0.0.1', 61948), raddr=('127.0.0.1', 61949)>
+Exception ignored in: <socket.socket fd=680, family=2, type=1, proto=0, laddr=('127.0.0.1', 61953), raddr=('127.0.0.1', 61952)>
+ResourceWarning: unclosed <socket.socket fd=680, family=2, type=1, proto=0, laddr=('127.0.0.1', 61953), raddr=('127.0.0.1', 61952)>
+Exception ignored in: <socket.socket fd=888, family=2, type=1, proto=0, laddr=('127.0.0.1', 61952), raddr=('127.0.0.1', 61953)>
+ResourceWarning: unclosed <socket.socket fd=888, family=2, type=1, proto=0, laddr=('127.0.0.1', 61952), raddr=('127.0.0.1', 61953)>
+Exception ignored in: <socket.socket fd=932, family=2, type=1, proto=0, laddr=('127.0.0.1', 61957), raddr=('127.0.0.1', 61956)>
+ResourceWarning: unclosed <socket.socket fd=932, family=2, type=1, proto=0, laddr=('127.0.0.1', 61957), raddr=('127.0.0.1', 61956)>
+Exception ignored in: <socket.socket fd=972, family=2, type=1, proto=0, laddr=('127.0.0.1', 61956), raddr=('127.0.0.1', 61957)>
+ResourceWarning: unclosed <socket.socket fd=972, family=2, type=1, proto=0, laddr=('127.0.0.1', 61956), raddr=('127.0.0.1', 61957)>
+Exception ignored in: <socket.socket fd=980, family=2, type=1, proto=0, laddr=('127.0.0.1', 61961), raddr=('127.0.0.1', 61960)>
+ResourceWarning: unclosed <socket.socket fd=980, family=2, type=1, proto=0, laddr=('127.0.0.1', 61961), raddr=('127.0.0.1', 61960)>
+Exception ignored in: <socket.socket fd=984, family=2, type=1, proto=0, laddr=('127.0.0.1', 61960), raddr=('127.0.0.1', 61961)>
+ResourceWarning: unclosed <socket.socket fd=984, family=2, type=1, proto=0, laddr=('127.0.0.1', 61960), raddr=('127.0.0.1', 61961)>
+Exception ignored in: <socket.socket fd=992, family=2, type=1, proto=0, laddr=('127.0.0.1', 61965), raddr=('127.0.0.1', 61964)>
+ResourceWarning: unclosed <socket.socket fd=992, family=2, type=1, proto=0, laddr=('127.0.0.1', 61965), raddr=('127.0.0.1', 61964)>
+Exception ignored in: <socket.socket fd=996, family=2, type=1, proto=0, laddr=('127.0.0.1', 61964), raddr=('127.0.0.1', 61965)>
+ResourceWarning: unclosed <socket.socket fd=996, family=2, type=1, proto=0, laddr=('127.0.0.1', 61964), raddr=('127.0.0.1', 61965)>
+Exception ignored in: <socket.socket fd=1004, family=2, type=1, proto=0, laddr=('127.0.0.1', 61969), raddr=('127.0.0.1', 61968)>
+ResourceWarning: unclosed <socket.socket fd=1004, family=2, type=1, proto=0, laddr=('127.0.0.1', 61969), raddr=('127.0.0.1', 61968)>
+Exception ignored in: <socket.socket fd=1008, family=2, type=1, proto=0, laddr=('127.0.0.1', 61968), raddr=('127.0.0.1', 61969)>
+ResourceWarning: unclosed <socket.socket fd=1008, family=2, type=1, proto=0, laddr=('127.0.0.1', 61968), raddr=('127.0.0.1', 61969)>
+Exception ignored in: <socket.socket fd=876, family=2, type=1, proto=0, laddr=('127.0.0.1', 61973), raddr=('127.0.0.1', 61972)>
+ResourceWarning: unclosed <socket.socket fd=876, family=2, type=1, proto=0, laddr=('127.0.0.1', 61973), raddr=('127.0.0.1', 61972)>
+Exception ignored in: <socket.socket fd=852, family=2, type=1, proto=0, laddr=('127.0.0.1', 61972), raddr=('127.0.0.1', 61973)>
+ResourceWarning: unclosed <socket.socket fd=852, family=2, type=1, proto=0, laddr=('127.0.0.1', 61972), raddr=('127.0.0.1', 61973)>
+Exception ignored in: <socket.socket fd=336, family=2, type=1, proto=0, laddr=('127.0.0.1', 61977), raddr=('127.0.0.1', 61976)>
+ResourceWarning: unclosed <socket.socket fd=336, family=2, type=1, proto=0, laddr=('127.0.0.1', 61977), raddr=('127.0.0.1', 61976)>
+Exception ignored in: <socket.socket fd=864, family=2, type=1, proto=0, laddr=('127.0.0.1', 61976), raddr=('127.0.0.1', 61977)>
+ResourceWarning: unclosed <socket.socket fd=864, family=2, type=1, proto=0, laddr=('127.0.0.1', 61976), raddr=('127.0.0.1', 61977)>
+Exception ignored in: <socket.socket fd=976, family=2, type=1, proto=0, laddr=('127.0.0.1', 61981), raddr=('127.0.0.1', 61980)>
+ResourceWarning: unclosed <socket.socket fd=976, family=2, type=1, proto=0, laddr=('127.0.0.1', 61981), raddr=('127.0.0.1', 61980)>
+Exception ignored in: <socket.socket fd=1012, family=2, type=1, proto=0, laddr=('127.0.0.1', 61980), raddr=('127.0.0.1', 61981)>
+ResourceWarning: unclosed <socket.socket fd=1012, family=2, type=1, proto=0, laddr=('127.0.0.1', 61980), raddr=('127.0.0.1', 61981)>
+Exception ignored in: <socket.socket fd=1020, family=2, type=1, proto=0, laddr=('127.0.0.1', 61985), raddr=('127.0.0.1', 61984)>
+ResourceWarning: unclosed <socket.socket fd=1020, family=2, type=1, proto=0, laddr=('127.0.0.1', 61985), raddr=('127.0.0.1', 61984)>
+Exception ignored in: <socket.socket fd=1028, family=2, type=1, proto=0, laddr=('127.0.0.1', 61984), raddr=('127.0.0.1', 61985)>
+ResourceWarning: unclosed <socket.socket fd=1028, family=2, type=1, proto=0, laddr=('127.0.0.1', 61984), raddr=('127.0.0.1', 61985)>
+Exception ignored in: <socket.socket fd=2652, family=2, type=1, proto=0, laddr=('127.0.0.1', 63433), raddr=('127.0.0.1', 63432)>
+ResourceWarning: unclosed <socket.socket fd=2652, family=2, type=1, proto=0, laddr=('127.0.0.1', 63433), raddr=('127.0.0.1', 63432)>
+Exception ignored in: <socket.socket fd=2656, family=2, type=1, proto=0, laddr=('127.0.0.1', 63432), raddr=('127.0.0.1', 63433)>
+ResourceWarning: unclosed <socket.socket fd=2656, family=2, type=1, proto=0, laddr=('127.0.0.1', 63432), raddr=('127.0.0.1', 63433)>
+##[error]Process completed with exit code 1.

@@ -1,0 +1,86 @@
+repo: zold-io/java-api
+run_id: 38c9915f0cfdf0c1a2b17c3c6f283c23a0aac0cf
+head_sha: 38c9915f0cfdf0c1a2b17c3c6f283c23a0aac0cf
+run_attempts: []
+commits:
+- sha: 38c9915f0cfdf0c1a2b17c3c6f283c23a0aac0cf
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f8c923389436d3a274fefd9f77b98eed50aa75b4
+  author: davvd
+  files:
+  - .rultor.yml
+- sha: f95b7f8a727470887b9663f3edb0e009d11d0a8f
+  author: davvd
+  files:
+  - .rultor.yml
+- sha: effd0e0df8bd12cf107ee921cdd3c1464b49eadd
+  author: davvd
+  files:
+  - pom.xml
+  - src/test/java/io/zold/api/CopiesTest.java
+  - src/test/java/io/zold/api/CpTransactionTest.java
+  - src/test/java/io/zold/api/NetworkTest.java
+  - src/test/java/io/zold/api/RtTransactionTest.java
+  - src/test/java/io/zold/api/WalletTest.java
+  - src/test/java/io/zold/api/WalletsInTest.java
+- sha: 4995c00ab23e47f638794609bf192fff3c2b7919
+  author: davvd
+  files:
+  - LICENSE.txt
+  - README.md
+  - pom.xml
+  - src/main/java/io/zold/api/Copies.java
+  - src/main/java/io/zold/api/CpTransaction.java
+  - src/main/java/io/zold/api/Network.java
+  - src/main/java/io/zold/api/Remote.java
+  - src/main/java/io/zold/api/RtNetwork.java
+  - src/main/java/io/zold/api/RtScore.java
+  - src/main/java/io/zold/api/RtTransaction.java
+  - src/main/java/io/zold/api/Score.java
+  - src/main/java/io/zold/api/TaxBeneficiaries.java
+  - src/main/java/io/zold/api/Taxes.java
+  - src/main/java/io/zold/api/Transaction.java
+  - src/main/java/io/zold/api/Wallet.java
+  - src/main/java/io/zold/api/Wallets.java
+  - src/main/java/io/zold/api/WalletsIn.java
+  - src/main/java/io/zold/api/package-info.java
+  - src/test/java/io/zold/api/CopiesTest.java
+  - src/test/java/io/zold/api/CpTransactionTest.java
+  - src/test/java/io/zold/api/NetworkTest.java
+  - src/test/java/io/zold/api/RtTransactionTest.java
+  - src/test/java/io/zold/api/ScoreTest.java
+  - src/test/java/io/zold/api/TaxBeneficiariesTest.java
+  - src/test/java/io/zold/api/TaxesTest.java
+  - src/test/java/io/zold/api/WalletTest.java
+  - src/test/java/io/zold/api/WalletsInTest.java
+  - src/test/java/io/zold/api/package-info.java
+- sha: 7caf0501cdce8fb95046f6d8745e0d047e067866
+  author: davvd
+  files:
+  - README.md
+- sha: 79b3380da649ccd2933ef5be5b6a54220a5f1ec1
+  author: davvd
+  files:
+  - .github/workflows/codecov.yml
+  - .github/workflows/mvn.yml
+  - .github/workflows/pdd.yml
+  - .github/workflows/xcop.yml
+- sha: e2bb2f182f051227f74af547ae47aea2e5a93bce
+  author: yegor256
+  files:
+  - renovate.json
+- sha: 59e0755f809098f49eb8c06e5d08e3dff91c14b2
+  author: renovate[bot]
+  files:
+  - renovate.json
+- sha: 5c79bcb8b41f854e2f6efb285668fa56a42071ba
+  author: yegor256
+  files:
+  - .travis.yml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,65 @@
+===== pylint/7_Run pylint checks.txt =====
+##[group]Run . venv/bin/activate
+[36;1m. venv/bin/activate[0m
+[36;1mpip install .[0m
+[36;1mpip list | grep 'astroid\|pylint'[0m
+[36;1mpre-commit run --hook-stage manual pylint-with-spelling --all-files[0m
+shell: /usr/bin/bash -e {0}
+env:
+  CACHE_VERSION: 1
+  KEY_PREFIX: base-venv
+  DEFAULT_PYTHON: 3.11
+  PRE_COMMIT_CACHE: ~/.cache/pre-commit
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
+Processing /home/runner/work/pylint/pylint
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: platformdirs>=2.2.0 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (4.1.0)
+Requirement already satisfied: astroid<=3.1.0-dev0,>=3.0.2 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (3.0.2)
+Requirement already satisfied: isort!=5.13.0,<6,>=4.2.5 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (5.13.1)
+Requirement already satisfied: mccabe<0.8,>=0.6 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (0.7.0)
+Requirement already satisfied: tomlkit>=0.10.1 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (0.11.8)
+Requirement already satisfied: dill>=0.3.6 in ./venv/lib/python3.11/site-packages (from pylint==3.1.0.dev0) (0.3.7)
+Building wheels for collected packages: pylint
+  Building wheel for pylint (pyproject.toml): started
+  Building wheel for pylint (pyproject.toml): finished with status 'done'
+  Created wheel for pylint: filename=pylint-3.1.0.dev0-py3-none-any.whl size=514430 sha256=db7e3c76f36ec30e4e1c43c9ae58874e22c3211dc22bb045beaded567449b492
+  Stored in directory: /tmp/pip-ephem-wheel-cache-libboaxs/wheels/28/6f/a2/f1ddc6eb86131657c068cb2bffe5fc77d929f0c0dfdc66abfb
+Successfully built pylint
+Installing collected packages: pylint
+  Attempting uninstall: pylint
+    Found existing installation: pylint 3.1.0.dev0
+    Uninstalling pylint-3.1.0.dev0:
+      Successfully uninstalled pylint-3.1.0.dev0
+Successfully installed pylint-3.1.0.dev0
+
+[notice] A new release of pip is available: 23.3.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+
+[notice] A new release of pip is available: 23.3.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+astroid                       3.0.2
+pylint                        3.1.0.dev0
+pylint...................................................................Failed
+- hook id: pylint
+- exit code: 16
+
+************* Module pylint.checkers.nested_min_max
+pylint/checkers/nested_min_max.py:70:0: C0401: Wrong spelling of a word 'redunant' in a comment:
+# Meaning, redunant call only if parent max call has more than 1 arg.
+           ^^^^^^^^
+Did you mean: ''redundant' or 'redundancy''? (wrong-spelling-in-comment)
+
+##[error]Process completed with exit code 1.

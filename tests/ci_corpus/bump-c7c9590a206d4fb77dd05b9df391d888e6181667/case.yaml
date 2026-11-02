@@ -1,0 +1,53 @@
+repo: scoverage/scoverage-maven-plugin
+run_id: c7c9590a206d4fb77dd05b9df391d888e6181667
+head_sha: c7c9590a206d4fb77dd05b9df391d888e6181667
+run_attempts: []
+commits:
+- sha: c7c9590a206d4fb77dd05b9df391d888e6181667
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 5a393292599c696b28756396127fa356109b89e8
+  author: ckipp01
+  files:
+  - pom.xml
+- sha: 34f1830ca18d9560f6ff7a56f4de08309bcd4d4d
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 36b5031917f317a85a98cf27900befd9b4a272e0
+  author: ckipp01
+  files:
+  - pom.xml
+- sha: 64a9286bfd560e367ab170330432d96d1cf75f13
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: a11530cb21c6de7d7f9c4025bc6b647905e14c35
+  author: ckipp01
+  files:
+  - pom.xml
+- sha: ec5b7eb6d59efc5b15ddbaeabceb0dc0f6313a74
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: c14debca4f1b3105f7c0d530e95fc0327334181d
+  author: ckipp01
+  files:
+  - pom.xml
+  - src/main/java/org/scoverage/plugin/SCoverageCheckMojo.java
+  - src/main/java/org/scoverage/plugin/SCoveragePreCompileMojo.java
+  - src/main/java/org/scoverage/plugin/SCoverageReportMojo.java
+- sha: 6ec7b6aac079c9cd62cf30c405ecc5987af9acd4
+  author: samantmaharaj
+  files:
+  - src/main/java/org/scoverage/plugin/SCoveragePreCompileMojo.java
+- sha: 034e40ce8d87c43486520899f925eaf4e3edd489
+  author: samantmaharaj
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

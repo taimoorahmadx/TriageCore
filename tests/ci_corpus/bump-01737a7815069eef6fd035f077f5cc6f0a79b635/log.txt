@@ -1,0 +1,625 @@
+2023-06-22T15:04:52.9952500Z Post job cleanup.
+2023-06-22T15:04:53.0969360Z [command]/usr/bin/git version
+2023-06-22T15:04:53.1018225Z git version 2.41.0
+2023-06-22T15:04:53.1072852Z Temporarily overriding HOME='/home/runner/work/_temp/fa5a95d6-4cd0-4200-8599-9adc2795ec0b' before making global git config changes
+2023-06-22T15:04:53.1076864Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-22T15:04:53.1084855Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/java-storage-nio/java-storage-nio
+2023-06-22T15:04:53.1131054Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-22T15:04:53.1171255Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-22T15:04:53.1450743Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-22T15:04:53.1471463Z http.https://github.com/.extraheader
+2023-06-22T15:04:53.1485337Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-22T15:04:53.1524376Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-22T15:03:14.4466064Z ##[section]Starting: Prepare job dependencies
+2023-06-22T15:03:14.4468852Z Evaluating strategy
+2023-06-22T15:03:14.4481741Z Creating job '_8'
+2023-06-22T15:03:14.4486447Z Evaluating timeout
+2023-06-22T15:03:14.4486516Z Evaluating cancel timeout
+2023-06-22T15:03:14.4486563Z Evaluating continue on error
+2023-06-22T15:03:14.4486608Z Evaluating target
+2023-06-22T15:03:14.4487369Z Creating job '_11'
+2023-06-22T15:03:14.4491932Z Evaluating timeout
+2023-06-22T15:03:14.4491976Z Evaluating cancel timeout
+2023-06-22T15:03:14.4492036Z Evaluating continue on error
+2023-06-22T15:03:14.4492081Z Evaluating target
+2023-06-22T15:03:14.4492769Z Creating job '_17'
+2023-06-22T15:03:14.4497425Z Evaluating timeout
+2023-06-22T15:03:14.4497478Z Evaluating cancel timeout
+2023-06-22T15:03:14.4497516Z Evaluating continue on error
+2023-06-22T15:03:14.4497560Z Evaluating target
+2023-06-22T15:03:14.4499731Z ##[section]Finishing: Prepare job dependencies
+
+2023-06-22T15:05:15.7272817Z Cleaning up orphan processes
+
+2023-06-22T15:03:23.0568710Z ##[group]Run actions/checkout@v3
+2023-06-22T15:03:23.0569027Z with:
+2023-06-22T15:03:23.0569270Z   repository: googleapis/java-storage-nio
+2023-06-22T15:03:23.0569722Z   token: ***
+2023-06-22T15:03:23.0569932Z   ssh-strict: true
+2023-06-22T15:03:23.0570164Z   persist-credentials: true
+2023-06-22T15:03:23.0570376Z   clean: true
+2023-06-22T15:03:23.0570613Z   sparse-checkout-cone-mode: true
+2023-06-22T15:03:23.0570855Z   fetch-depth: 1
+2023-06-22T15:03:23.0571037Z   lfs: false
+2023-06-22T15:03:23.0571234Z   submodules: false
+2023-06-22T15:03:23.0571456Z   set-safe-directory: true
+2023-06-22T15:03:23.0571673Z ##[endgroup]
+2023-06-22T15:03:23.2731476Z Syncing repository: googleapis/java-storage-nio
+2023-06-22T15:03:23.2733757Z ##[group]Getting Git version info
+2023-06-22T15:03:23.2734694Z Working directory is '/home/runner/work/java-storage-nio/java-storage-nio'
+2023-06-22T15:03:23.2735710Z [command]/usr/bin/git version
+2023-06-22T15:03:23.2761552Z git version 2.41.0
+2023-06-22T15:03:23.2791216Z ##[endgroup]
+2023-06-22T15:03:23.2809311Z Temporarily overriding HOME='/home/runner/work/_temp/3151c1aa-d84b-4fb2-ab80-8583fd5b328f' before making global git config changes
+2023-06-22T15:03:23.2810101Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-22T15:03:23.2816366Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/java-storage-nio/java-storage-nio
+2023-06-22T15:03:23.2857482Z Deleting the contents of '/home/runner/work/java-storage-nio/java-storage-nio'
+2023-06-22T15:03:23.2864158Z ##[group]Initializing the repository
+2023-06-22T15:03:23.2868848Z [command]/usr/bin/git init /home/runner/work/java-storage-nio/java-storage-nio
+2023-06-22T15:03:23.2929282Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-22T15:03:23.2929820Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-22T15:03:23.2930315Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-22T15:03:23.2930921Z hint: 
+2023-06-22T15:03:23.2931267Z hint: 	git config --global init.defaultBranch <name>
+2023-06-22T15:03:23.2931579Z hint: 
+2023-06-22T15:03:23.2931947Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-22T15:03:23.2932376Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-22T15:03:23.2932645Z hint: 
+2023-06-22T15:03:23.2933017Z hint: 	git branch -m <name>
+2023-06-22T15:03:23.2943790Z Initialized empty Git repository in /home/runner/work/java-storage-nio/java-storage-nio/.git/
+2023-06-22T15:03:23.2954922Z [command]/usr/bin/git remote add origin https://github.com/googleapis/java-storage-nio
+2023-06-22T15:03:23.2992617Z ##[endgroup]
+2023-06-22T15:03:23.2993142Z ##[group]Disabling automatic garbage collection
+2023-06-22T15:03:23.2998342Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-22T15:03:23.3088877Z ##[endgroup]
+2023-06-22T15:03:23.3089284Z ##[group]Setting up auth
+2023-06-22T15:03:23.3089881Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-22T15:03:23.3091030Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-22T15:03:23.3427589Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-22T15:03:23.3528270Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-22T15:03:23.3707572Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-22T15:03:23.3721941Z ##[endgroup]
+2023-06-22T15:03:23.3722918Z ##[group]Fetching the repository
+2023-06-22T15:03:23.3732097Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +a69677143cd3364c020d13523129cd081f8398d6:refs/remotes/pull/1206/merge
+2023-06-22T15:03:23.7687522Z remote: Enumerating objects: 214, done.        
+2023-06-22T15:03:23.7730656Z remote: Counting objects:   0% (1/214)        
+2023-06-22T15:03:23.7730956Z remote: Counting objects:   1% (3/214)        
+2023-06-22T15:03:23.7731197Z remote: Counting objects:   2% (5/214)        
+2023-06-22T15:03:23.7731442Z remote: Counting objects:   3% (7/214)        
+2023-06-22T15:03:23.7731676Z remote: Counting objects:   4% (9/214)        
+2023-06-22T15:03:23.7732101Z remote: Counting objects:   5% (11/214)        
+2023-06-22T15:03:23.7732354Z remote: Counting objects:   6% (13/214)        
+2023-06-22T15:03:23.7732670Z remote: Counting objects:   7% (15/214)        
+2023-06-22T15:03:23.7732921Z remote: Counting objects:   8% (18/214)        
+2023-06-22T15:03:23.7733157Z remote: Counting objects:   9% (20/214)        
+2023-06-22T15:03:23.7733396Z remote: Counting objects:  10% (22/214)        
+2023-06-22T15:03:23.7733667Z remote: Counting objects:  11% (24/214)        
+2023-06-22T15:03:23.7733906Z remote: Counting objects:  12% (26/214)        
+2023-06-22T15:03:23.7734133Z remote: Counting objects:  13% (28/214)        
+2023-06-22T15:03:23.7734371Z remote: Counting objects:  14% (30/214)        
+2023-06-22T15:03:23.7734608Z remote: Counting objects:  15% (33/214)        
+2023-06-22T15:03:23.7734830Z remote: Counting objects:  16% (35/214)        
+2023-06-22T15:03:23.7735066Z remote: Counting objects:  17% (37/214)        
+2023-06-22T15:03:23.7735298Z remote: Counting objects:  18% (39/214)        
+2023-06-22T15:03:23.7735523Z remote: Counting objects:  19% (41/214)        
+2023-06-22T15:03:23.7735757Z remote: Counting objects:  20% (43/214)        
+2023-06-22T15:03:23.7735991Z remote: Counting objects:  21% (45/214)        
+2023-06-22T15:03:23.7736222Z remote: Counting objects:  22% (48/214)        
+2023-06-22T15:03:23.7736504Z remote: Counting objects:  23% (50/214)        
+2023-06-22T15:03:23.7736956Z remote: Counting objects:  24% (52/214)        
+2023-06-22T15:03:23.7737202Z remote: Counting objects:  25% (54/214)        
+2023-06-22T15:03:23.7737437Z remote: Counting objects:  26% (56/214)        
+2023-06-22T15:03:23.7737672Z remote: Counting objects:  27% (58/214)        
+2023-06-22T15:03:23.7737910Z remote: Counting objects:  28% (60/214)        
+2023-06-22T15:03:23.7738136Z remote: Counting objects:  29% (63/214)        
+2023-06-22T15:03:23.7738366Z remote: Counting objects:  30% (65/214)        
+2023-06-22T15:03:23.7738598Z remote: Counting objects:  31% (67/214)        
+2023-06-22T15:03:23.7738820Z remote: Counting objects:  32% (69/214)        
+2023-06-22T15:03:23.7739056Z remote: Counting objects:  33% (71/214)        
+2023-06-22T15:03:23.7739286Z remote: Counting objects:  34% (73/214)        
+2023-06-22T15:03:23.7739515Z remote: Counting objects:  35% (75/214)        
+2023-06-22T15:03:23.7739734Z remote: Counting objects:  36% (78/214)        
+2023-06-22T15:03:23.7739971Z remote: Counting objects:  37% (80/214)        
+2023-06-22T15:03:23.7740322Z remote: Counting objects:  38% (82/214)        
+2023-06-22T15:03:23.7740543Z remote: Counting objects:  39% (84/214)        
+2023-06-22T15:03:23.7740773Z remote: Counting objects:  40% (86/214)        
+2023-06-22T15:03:23.7741007Z remote: Counting objects:  41% (88/214)        
+2023-06-22T15:03:23.7741231Z remote: Counting objects:  42% (90/214)        
+2023-06-22T15:03:23.7741464Z remote: Counting objects:  43% (93/214)        
+2023-06-22T15:03:23.7741694Z remote: Counting objects:  44% (95/214)        
+2023-06-22T15:03:23.7741915Z remote: Counting objects:  45% (97/214)        
+2023-06-22T15:03:23.7742146Z remote: Counting objects:  46% (99/214)        
+2023-06-22T15:03:23.7742384Z remote: Counting objects:  47% (101/214)        
+2023-06-22T15:03:23.7742633Z remote: Counting objects:  48% (103/214)        
+2023-06-22T15:03:23.7742869Z remote: Counting objects:  49% (105/214)        
+2023-06-22T15:03:23.7743107Z remote: Counting objects:  50% (107/214)        
+2023-06-22T15:03:23.7743493Z remote: Counting objects:  51% (110/214)        
+2023-06-22T15:03:23.7743732Z remote: Counting objects:  52% (112/214)        
+2023-06-22T15:03:23.7743971Z remote: Counting objects:  53% (114/214)        
+2023-06-22T15:03:23.7744213Z remote: Counting objects:  54% (116/214)        
+2023-06-22T15:03:23.7744439Z remote: Counting objects:  55% (118/214)        
+2023-06-22T15:03:23.7744672Z remote: Counting objects:  56% (120/214)        
+2023-06-22T15:03:23.7744910Z remote: Counting objects:  57% (122/214)        
+2023-06-22T15:03:23.7745136Z remote: Counting objects:  58% (125/214)        
+2023-06-22T15:03:23.7745371Z remote: Counting objects:  59% (127/214)        
+2023-06-22T15:03:23.7745604Z remote: Counting objects:  60% (129/214)        
+2023-06-22T15:03:23.7745838Z remote: Counting objects:  61% (131/214)        
+2023-06-22T15:03:23.7746062Z remote: Counting objects:  62% (133/214)        
+2023-06-22T15:03:23.7746293Z remote: Counting objects:  63% (135/214)        
+2023-06-22T15:03:23.7746540Z remote: Counting objects:  64% (137/214)        
+2023-06-22T15:03:23.7746783Z remote: Counting objects:  65% (140/214)        
+2023-06-22T15:03:23.7747010Z remote: Counting objects:  66% (142/214)        
+2023-06-22T15:03:23.7747238Z remote: Counting objects:  67% (144/214)        
+2023-06-22T15:03:23.7747476Z remote: Counting objects:  68% (146/214)        
+2023-06-22T15:03:23.7747699Z remote: Counting objects:  69% (148/214)        
+2023-06-22T15:03:23.7747928Z remote: Counting objects:  70% (150/214)        
+2023-06-22T15:03:23.7748163Z remote: Counting objects:  71% (152/214)        
+2023-06-22T15:03:23.7748383Z remote: Counting objects:  72% (155/214)        
+2023-06-22T15:03:23.7748619Z remote: Counting objects:  73% (157/214)        
+2023-06-22T15:03:23.7748849Z remote: Counting objects:  74% (159/214)        
+2023-06-22T15:03:23.7749076Z remote: Counting objects:  75% (161/214)        
+2023-06-22T15:03:23.7749298Z remote: Counting objects:  76% (163/214)        
+2023-06-22T15:03:23.7749638Z remote: Counting objects:  77% (165/214)        
+2023-06-22T15:03:23.7749873Z remote: Counting objects:  78% (167/214)        
+2023-06-22T15:03:23.7750094Z remote: Counting objects:  79% (170/214)        
+2023-06-22T15:03:23.7750322Z remote: Counting objects:  80% (172/214)        
+2023-06-22T15:03:23.7750552Z remote: Counting objects:  81% (174/214)        
+2023-06-22T15:03:23.7750771Z remote: Counting objects:  82% (176/214)        
+2023-06-22T15:03:23.7750998Z remote: Counting objects:  83% (178/214)        
+2023-06-22T15:03:23.7751234Z remote: Counting objects:  84% (180/214)        
+2023-06-22T15:03:23.7751456Z remote: Counting objects:  85% (182/214)        
+2023-06-22T15:03:23.7751687Z remote: Counting objects:  86% (185/214)        
+2023-06-22T15:03:23.7751922Z remote: Counting objects:  87% (187/214)        
+2023-06-22T15:03:23.7752154Z remote: Counting objects:  88% (189/214)        
+2023-06-22T15:03:23.7752381Z remote: Counting objects:  89% (191/214)        
+2023-06-22T15:03:23.7752617Z remote: Counting objects:  90% (193/214)        
+2023-06-22T15:03:23.7752855Z remote: Counting objects:  91% (195/214)        
+2023-06-22T15:03:23.7753079Z remote: Counting objects:  92% (197/214)        
+2023-06-22T15:03:23.7753308Z remote: Counting objects:  93% (200/214)        
+2023-06-22T15:03:23.7753537Z remote: Counting objects:  94% (202/214)        
+2023-06-22T15:03:23.7753755Z remote: Counting objects:  95% (204/214)        
+2023-06-22T15:03:23.7753978Z remote: Counting objects:  96% (206/214)        
+2023-06-22T15:03:23.7754212Z remote: Counting objects:  97% (208/214)        
+2023-06-22T15:03:23.7754430Z remote: Counting objects:  98% (210/214)        
+2023-06-22T15:03:23.7754658Z remote: Counting objects:  99% (212/214)        
+2023-06-22T15:03:23.7754890Z remote: Counting objects: 100% (214/214)        
+2023-06-22T15:03:23.7755146Z remote: Counting objects: 100% (214/214), done.        
+2023-06-22T15:03:23.7755416Z remote: Compressing objects:   0% (1/143)        
+2023-06-22T15:03:23.7755685Z remote: Compressing objects:   1% (2/143)        
+2023-06-22T15:03:23.7756023Z remote: Compressing objects:   2% (3/143)        
+2023-06-22T15:03:23.7756266Z remote: Compressing objects:   3% (5/143)        
+2023-06-22T15:03:23.7756508Z remote: Compressing objects:   4% (6/143)        
+2023-06-22T15:03:23.7756750Z remote: Compressing objects:   5% (8/143)        
+2023-06-22T15:03:23.7756981Z remote: Compressing objects:   6% (9/143)        
+2023-06-22T15:03:23.7757241Z remote: Compressing objects:   7% (11/143)        
+2023-06-22T15:03:23.7757500Z remote: Compressing objects:   8% (12/143)        
+2023-06-22T15:03:23.7757757Z remote: Compressing objects:   9% (13/143)        
+2023-06-22T15:03:23.7758004Z remote: Compressing objects:  10% (15/143)        
+2023-06-22T15:03:23.7758266Z remote: Compressing objects:  11% (16/143)        
+2023-06-22T15:03:23.7758518Z remote: Compressing objects:  12% (18/143)        
+2023-06-22T15:03:23.7758760Z remote: Compressing objects:  13% (19/143)        
+2023-06-22T15:03:23.7759015Z remote: Compressing objects:  14% (21/143)        
+2023-06-22T15:03:23.7759267Z remote: Compressing objects:  15% (22/143)        
+2023-06-22T15:03:23.7759506Z remote: Compressing objects:  16% (23/143)        
+2023-06-22T15:03:23.7759752Z remote: Compressing objects:  17% (25/143)        
+2023-06-22T15:03:23.7760000Z remote: Compressing objects:  18% (26/143)        
+2023-06-22T15:03:23.7760236Z remote: Compressing objects:  19% (28/143)        
+2023-06-22T15:03:23.7760479Z remote: Compressing objects:  20% (29/143)        
+2023-06-22T15:03:23.7760722Z remote: Compressing objects:  21% (31/143)        
+2023-06-22T15:03:23.7760964Z remote: Compressing objects:  22% (32/143)        
+2023-06-22T15:03:23.7761199Z remote: Compressing objects:  23% (33/143)        
+2023-06-22T15:03:23.7843785Z remote: Compressing objects:  24% (35/143)        
+2023-06-22T15:03:23.7844137Z remote: Compressing objects:  25% (36/143)        
+2023-06-22T15:03:23.7844403Z remote: Compressing objects:  26% (38/143)        
+2023-06-22T15:03:23.7844866Z remote: Compressing objects:  27% (39/143)        
+2023-06-22T15:03:23.7845126Z remote: Compressing objects:  28% (41/143)        
+2023-06-22T15:03:23.7845387Z remote: Compressing objects:  29% (42/143)        
+2023-06-22T15:03:23.7845629Z remote: Compressing objects:  30% (43/143)        
+2023-06-22T15:03:23.7845878Z remote: Compressing objects:  31% (45/143)        
+2023-06-22T15:03:23.7846130Z remote: Compressing objects:  32% (46/143)        
+2023-06-22T15:03:23.7846366Z remote: Compressing objects:  33% (48/143)        
+2023-06-22T15:03:23.7846618Z remote: Compressing objects:  34% (49/143)        
+2023-06-22T15:03:23.7846864Z remote: Compressing objects:  35% (51/143)        
+2023-06-22T15:03:23.7847103Z remote: Compressing objects:  36% (52/143)        
+2023-06-22T15:03:23.7847351Z remote: Compressing objects:  37% (53/143)        
+2023-06-22T15:03:23.7847596Z remote: Compressing objects:  38% (55/143)        
+2023-06-22T15:03:23.7847839Z remote: Compressing objects:  39% (56/143)        
+2023-06-22T15:03:23.7848085Z remote: Compressing objects:  40% (58/143)        
+2023-06-22T15:03:23.7848333Z remote: Compressing objects:  41% (59/143)        
+2023-06-22T15:03:23.7848573Z remote: Compressing objects:  42% (61/143)        
+2023-06-22T15:03:23.7848810Z remote: Compressing objects:  43% (62/143)        
+2023-06-22T15:03:23.7849055Z remote: Compressing objects:  44% (63/143)        
+2023-06-22T15:03:23.7849302Z remote: Compressing objects:  45% (65/143)        
+2023-06-22T15:03:23.7849536Z remote: Compressing objects:  46% (66/143)        
+2023-06-22T15:03:23.7849780Z remote: Compressing objects:  47% (68/143)        
+2023-06-22T15:03:23.7850021Z remote: Compressing objects:  48% (69/143)        
+2023-06-22T15:03:23.7850262Z remote: Compressing objects:  49% (71/143)        
+2023-06-22T15:03:23.7850497Z remote: Compressing objects:  50% (72/143)        
+2023-06-22T15:03:23.7850739Z remote: Compressing objects:  51% (73/143)        
+2023-06-22T15:03:23.7850988Z remote: Compressing objects:  52% (75/143)        
+2023-06-22T15:03:23.7851346Z remote: Compressing objects:  53% (76/143)        
+2023-06-22T15:03:23.7851588Z remote: Compressing objects:  54% (78/143)        
+2023-06-22T15:03:23.7851829Z remote: Compressing objects:  55% (79/143)        
+[... 23967 lines removed by TriageCore ...]
+2023-06-22T15:04:31.6107547Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:31.6108339Z [INFO] Reactor Summary for Storage Parent 0.126.18-SNAPSHOT:
+2023-06-22T15:04:31.6108793Z [INFO] 
+2023-06-22T15:04:31.6109588Z [INFO] Storage Parent ..................................... SUCCESS [  9.383 s]
+2023-06-22T15:04:31.6110096Z [INFO] Google Cloud NIO ................................... SUCCESS [ 42.011 s]
+2023-06-22T15:04:31.6110571Z [INFO] Google Cloud NIO Retrofit Example .................. SUCCESS [  4.795 s]
+2023-06-22T15:04:31.6111020Z [INFO] Google Cloud NIO Examples .......................... SUCCESS [  1.138 s]
+2023-06-22T15:04:31.6111618Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:31.6113726Z [INFO] BUILD SUCCESS
+2023-06-22T15:04:31.6114330Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:31.6114834Z [INFO] Total time:  01:02 min (Wall Clock)
+2023-06-22T15:04:31.6115493Z [INFO] Finished at: 2023-06-22T15:04:31Z
+2023-06-22T15:04:31.6116087Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:32.6269407Z [INFO] Scanning for projects...
+2023-06-22T15:04:33.3434491Z [INFO] Inspecting build with total of 4 modules...
+2023-06-22T15:04:33.3442432Z [INFO] Installing Nexus Staging features:
+2023-06-22T15:04:33.3447252Z [INFO]   ... total of 4 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-06-22T15:04:33.3453739Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:33.3456929Z [INFO] Reactor Build Order:
+2023-06-22T15:04:33.3459715Z [INFO] 
+2023-06-22T15:04:33.3472304Z [INFO] Storage Parent                                                     [pom]
+2023-06-22T15:04:33.3475564Z [INFO] Google Cloud NIO                                                   [jar]
+2023-06-22T15:04:33.3478691Z [INFO] Google Cloud NIO Retrofit Example                                  [jar]
+2023-06-22T15:04:33.3481801Z [INFO] Google Cloud NIO Examples                                          [jar]
+2023-06-22T15:04:33.6680284Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.pom
+2023-06-22T15:04:34.0221233Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.pom (20 kB at 55 kB/s)
+2023-06-22T15:04:34.0284670Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom
+2023-06-22T15:04:34.0669805Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom (9.9 kB at 261 kB/s)
+2023-06-22T15:04:34.0726240Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.jar
+2023-06-22T15:04:34.1852707Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.jar (119 kB at 1.1 MB/s)
+2023-06-22T15:04:34.2253583Z [INFO] 
+2023-06-22T15:04:34.2257223Z [INFO] --------------< com.google.cloud:google-cloud-nio-parent >--------------
+2023-06-22T15:04:34.2260856Z [INFO] Building Storage Parent 0.126.18-SNAPSHOT                          [1/4]
+2023-06-22T15:04:34.2268141Z [INFO]   from pom.xml
+2023-06-22T15:04:34.2271443Z [INFO] --------------------------------[ pom ]---------------------------------
+2023-06-22T15:04:34.2369630Z [INFO] 
+2023-06-22T15:04:34.2373600Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-parent >>>
+2023-06-22T15:04:34.2428124Z [INFO] 
+2023-06-22T15:04:34.2431547Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-parent ---
+2023-06-22T15:04:34.4333679Z [INFO] Skipping Rule Enforcement.
+2023-06-22T15:04:34.4337868Z [INFO] 
+2023-06-22T15:04:34.4341419Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-parent ---
+2023-06-22T15:04:34.5419860Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/target/jacoco.exec
+2023-06-22T15:04:34.5420633Z [INFO] 
+2023-06-22T15:04:34.5424378Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-parent ---
+2023-06-22T15:04:34.5756262Z [INFO] 
+2023-06-22T15:04:34.5757327Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-parent <<<
+2023-06-22T15:04:34.5758025Z [INFO] 
+2023-06-22T15:04:34.5765366Z [INFO] 
+2023-06-22T15:04:34.5766110Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-parent ---
+2023-06-22T15:04:34.6893118Z [INFO] Not generating Clirr report as there are no classes generated by the project
+2023-06-22T15:04:34.6894099Z [INFO] 
+2023-06-22T15:04:34.6894893Z [INFO] -----------------< com.google.cloud:google-cloud-nio >------------------
+2023-06-22T15:04:34.6907359Z [INFO] Building Google Cloud NIO 0.126.18-SNAPSHOT                        [2/4]
+2023-06-22T15:04:34.6908049Z [INFO]   from google-cloud-nio/pom.xml
+2023-06-22T15:04:34.6908988Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-22T15:04:34.6990909Z [INFO] 
+2023-06-22T15:04:34.6991831Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio >>>
+2023-06-22T15:04:34.8750074Z [INFO] 
+2023-06-22T15:04:34.8753747Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio ---
+2023-06-22T15:04:34.8841530Z [INFO] Skipping Rule Enforcement.
+2023-06-22T15:04:34.8845314Z [INFO] 
+2023-06-22T15:04:34.8848586Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio ---
+2023-06-22T15:04:34.8873765Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/jacoco.exec
+2023-06-22T15:04:34.8888898Z [INFO] 
+2023-06-22T15:04:34.8894853Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio ---
+2023-06-22T15:04:34.8904317Z [INFO] 
+2023-06-22T15:04:34.8913589Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio ---
+2023-06-22T15:04:34.9548216Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-22T15:04:34.9630137Z [INFO] Copying 2 resources
+2023-06-22T15:04:34.9660534Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/proto
+2023-06-22T15:04:34.9663956Z [INFO] 
+2023-06-22T15:04:34.9697569Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio ---
+2023-06-22T15:04:35.0915115Z [INFO] Nothing to compile - all classes are up to date
+2023-06-22T15:04:35.0919605Z [INFO] 
+2023-06-22T15:04:35.0930099Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio <<<
+2023-06-22T15:04:35.0935304Z [INFO] 
+2023-06-22T15:04:35.1080172Z [INFO] 
+2023-06-22T15:04:35.1099378Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio ---
+2023-06-22T15:04:35.1130592Z [INFO] artifact com.google.cloud:google-cloud-nio: checking for updates from central
+2023-06-22T15:04:35.1789623Z [INFO] Comparing to version: 0.126.17
+2023-06-22T15:04:35.1800166Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.jar
+2023-06-22T15:04:35.2297310Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.jar (111 kB at 2.2 MB/s)
+2023-06-22T15:04:35.2321060Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.pom
+2023-06-22T15:04:35.2635031Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.pom (5.9 kB at 185 kB/s)
+2023-06-22T15:04:35.2652976Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-parent/0.126.17/google-cloud-nio-parent-0.126.17.pom
+2023-06-22T15:04:35.2973715Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-parent/0.126.17/google-cloud-nio-parent-0.126.17.pom (4.2 kB at 132 kB/s)
+2023-06-22T15:04:35.3149184Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.pom
+2023-06-22T15:04:35.3459779Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.pom (11 kB at 354 kB/s)
+2023-06-22T15:04:35.3482976Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.1-jre/guava-parent-31.1-jre.pom
+2023-06-22T15:04:35.3801352Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.1-jre/guava-parent-31.1-jre.pom (15 kB at 475 kB/s)
+2023-06-22T15:04:35.3925203Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client/1.43.1/google-http-client-1.43.1.pom
+2023-06-22T15:04:35.4258636Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client/1.43.1/google-http-client-1.43.1.pom (6.1 kB at 184 kB/s)
+2023-06-22T15:04:35.4273433Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-parent/1.43.1/google-http-client-parent-1.43.1.pom
+2023-06-22T15:04:35.4615396Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-parent/1.43.1/google-http-client-parent-1.43.1.pom (27 kB at 786 kB/s)
+2023-06-22T15:04:35.4662943Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-jackson2/1.43.1/google-http-client-jackson2-1.43.1.pom
+2023-06-22T15:04:35.4974345Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-jackson2/1.43.1/google-http-client-jackson2-1.43.1.pom (2.9 kB at 93 kB/s)
+2023-06-22T15:04:35.5008673Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-gson/1.43.1/google-http-client-gson-1.43.1.pom
+2023-06-22T15:04:35.5411435Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-gson/1.43.1/google-http-client-gson-1.43.1.pom (2.9 kB at 74 kB/s)
+2023-06-22T15:04:35.5666539Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-apache-v2/1.43.1/google-http-client-apache-v2-1.43.1.pom
+2023-06-22T15:04:35.5993040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-apache-v2/1.43.1/google-http-client-apache-v2-1.43.1.pom (3.5 kB at 105 kB/s)
+2023-06-22T15:04:35.6033169Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/apis/google-api-services-storage/v1-rev20230301-2.0.0/google-api-services-storage-v1-rev20230301-2.0.0.pom
+2023-06-22T15:04:35.6362093Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/apis/google-api-services-storage/v1-rev20230301-2.0.0/google-api-services-storage-v1-rev20230301-2.0.0.pom (5.3 kB at 161 kB/s)
+2023-06-22T15:04:35.6442063Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0.pom
+2023-06-22T15:04:35.6828100Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0.pom (3.3 kB at 84 kB/s)
+2023-06-22T15:04:35.6844634Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-parent/2.19.0/google-cloud-core-parent-2.19.0.pom
+2023-06-22T15:04:35.7156654Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-parent/2.19.0/google-cloud-core-parent-2.19.0.pom (3.0 kB at 98 kB/s)
+2023-06-22T15:04:35.7262099Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-http/2.19.0/google-cloud-core-http-2.19.0.pom
+2023-06-22T15:04:35.7580072Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-http/2.19.0/google-cloud-core-http-2.19.0.pom (3.0 kB at 94 kB/s)
+2023-06-22T15:04:35.7633024Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-appengine/1.43.1/google-http-client-appengine-1.43.1.pom
+2023-06-22T15:04:35.7981782Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-appengine/1.43.1/google-http-client-appengine-1.43.1.pom (3.7 kB at 115 kB/s)
+2023-06-22T15:04:35.7983214Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax-httpjson/0.114.0/gax-httpjson-0.114.0.pom
+2023-06-22T15:04:35.8526878Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax-httpjson/0.114.0/gax-httpjson-0.114.0.pom (3.6 kB at 67 kB/s)
+2023-06-22T15:04:35.8540440Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax-parent/2.29.0/gax-parent-2.29.0.pom
+2023-06-22T15:04:35.8850040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax-parent/2.29.0/gax-parent-2.29.0.pom (8.8 kB at 285 kB/s)
+2023-06-22T15:04:35.8922566Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-grpc/2.19.0/google-cloud-core-grpc-2.19.0.pom
+2023-06-22T15:04:35.9238775Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-grpc/2.19.0/google-cloud-core-grpc-2.19.0.pom (2.2 kB at 70 kB/s)
+2023-06-22T15:04:35.9290784Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax/2.29.0/gax-2.29.0.pom
+2023-06-22T15:04:35.9595494Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax/2.29.0/gax-2.29.0.pom (3.1 kB at 102 kB/s)
+2023-06-22T15:04:35.9684410Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax-grpc/2.29.0/gax-grpc-2.29.0.pom
+2023-06-22T15:04:35.9960160Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax-grpc/2.29.0/gax-grpc-2.29.0.pom (3.9 kB at 127 kB/s)
+2023-06-22T15:04:36.0046613Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-credentials/1.17.0/google-auth-library-credentials-1.17.0.pom
+2023-06-22T15:04:36.0390898Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-credentials/1.17.0/google-auth-library-credentials-1.17.0.pom (2.0 kB at 58 kB/s)
+2023-06-22T15:04:36.0405736Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-parent/1.17.0/google-auth-library-parent-1.17.0.pom
+2023-06-22T15:04:36.0765222Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-parent/1.17.0/google-auth-library-parent-1.17.0.pom (18 kB at 504 kB/s)
+2023-06-22T15:04:36.0833675Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-oauth2-http/1.17.0/google-auth-library-oauth2-http-1.17.0.pom
+2023-06-22T15:04:36.1206104Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-oauth2-http/1.17.0/google-auth-library-oauth2-http-1.17.0.pom (7.4 kB at 180 kB/s)
+2023-06-22T15:04:36.1238103Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/api-common/2.12.0/api-common-2.12.0.pom
+2023-06-22T15:04:36.1571961Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/api-common/2.12.0/api-common-2.12.0.pom (4.9 kB at 147 kB/s)
+2023-06-22T15:04:36.1665837Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-iam-v1/1.15.0/proto-google-iam-v1-1.15.0.pom
+2023-06-22T15:04:36.1978763Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-iam-v1/1.15.0/proto-google-iam-v1-1.15.0.pom (3.0 kB at 98 kB/s)
+2023-06-22T15:04:36.2028951Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-common-protos/2.20.0/proto-google-common-protos-2.20.0.pom
+2023-06-22T15:04:36.2341089Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-common-protos/2.20.0/proto-google-common-protos-2.20.0.pom (2.7 kB at 86 kB/s)
+2023-06-22T15:04:36.2587859Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom
+2023-06-22T15:04:36.2735649Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom (0 B at 0 B/s)
+2023-06-22T15:04:36.2809446Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom
+2023-06-22T15:04:36.2965116Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom (0 B at 0 B/s)
+2023-06-22T15:04:36.3153625Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.32.0/checker-qual-3.32.0.pom
+2023-06-22T15:04:36.3467616Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.32.0/checker-qual-3.32.0.pom (2.1 kB at 68 kB/s)
+2023-06-22T15:04:36.3580648Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom
+2023-06-22T15:04:36.3873902Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom (2.1 kB at 70 kB/s)
+2023-06-22T15:04:36.3891108Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom
+2023-06-22T15:04:36.4181397Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom (2.2 kB at 75 kB/s)
+2023-06-22T15:04:36.4195593Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom
+2023-06-22T15:04:36.4614201Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom (11 kB at 256 kB/s)
+2023-06-22T15:04:36.5368987Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.pom
+2023-06-22T15:04:36.5688711Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.pom (12 kB at 382 kB/s)
+2023-06-22T15:04:36.5704692Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/30.1.1-android/guava-parent-30.1.1-android.pom
+2023-06-22T15:04:36.6016460Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/30.1.1-android/guava-parent-30.1.1-android.pom (14 kB at 452 kB/s)
+2023-06-22T15:04:36.6277714Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.pom
+2023-06-22T15:04:36.6622138Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.pom (2.8 kB at 88 kB/s)
+2023-06-22T15:04:36.6695433Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/truth/truth/1.1.4/truth-1.1.4.pom
+2023-06-22T15:04:36.7307203Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/truth/truth/1.1.4/truth-1.1.4.pom (8.9 kB at 142 kB/s)
+2023-06-22T15:04:36.7334944Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/truth/truth-parent/1.1.4/truth-parent-1.1.4.pom
+2023-06-22T15:04:36.7725206Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/truth/truth-parent/1.1.4/truth-parent-1.1.4.pom (14 kB at 368 kB/s)
+2023-06-22T15:04:36.7757290Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.0.0-android/guava-32.0.0-android.pom
+2023-06-22T15:04:36.8079811Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/32.0.0-android/guava-32.0.0-android.pom (11 kB at 355 kB/s)
+2023-06-22T15:04:36.8095661Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/32.0.0-android/guava-parent-32.0.0-android.pom
+2023-06-22T15:04:36.8443772Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/32.0.0-android/guava-parent-32.0.0-android.pom (21 kB at 598 kB/s)
+2023-06-22T15:04:36.8498832Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.19.1/error_prone_annotations-2.19.1.pom
+2023-06-22T15:04:36.8953330Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.19.1/error_prone_annotations-2.19.1.pom (2.2 kB at 47 kB/s)
+2023-06-22T15:04:36.8969243Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.19.1/error_prone_parent-2.19.1.pom
+2023-06-22T15:04:36.9301781Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.19.1/error_prone_parent-2.19.1.pom (12 kB at 358 kB/s)
+2023-06-22T15:04:36.9786644Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar
+2023-06-22T15:04:36.9820904Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client/1.43.1/google-http-client-1.43.1.jar
+2023-06-22T15:04:36.9821759Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-jackson2/1.43.1/google-http-client-jackson2-1.43.1.jar
+2023-06-22T15:04:36.9822542Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-gson/1.43.1/google-http-client-gson-1.43.1.jar
+2023-06-22T15:04:36.9823310Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-apache-v2/1.43.1/google-http-client-apache-v2-1.43.1.jar
+2023-06-22T15:04:37.0547161Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-jackson2/1.43.1/google-http-client-jackson2-1.43.1.jar (8.7 kB at 121 kB/s)
+2023-06-22T15:04:37.0548159Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/apis/google-api-services-storage/v1-rev20230301-2.0.0/google-api-services-storage-v1-rev20230301-2.0.0.jar
+2023-06-22T15:04:37.0569967Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-apache-v2/1.43.1/google-http-client-apache-v2-1.43.1.jar (11 kB at 142 kB/s)
+2023-06-22T15:04:37.0578181Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0.jar
+2023-06-22T15:04:37.0782233Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-gson/1.43.1/google-http-client-gson-1.43.1.jar (12 kB at 126 kB/s)
+2023-06-22T15:04:37.0790539Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-http/2.19.0/google-cloud-core-http-2.19.0.jar
+2023-06-22T15:04:37.1037812Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client/1.43.1/google-http-client-1.43.1.jar (293 kB at 2.4 MB/s)
+2023-06-22T15:04:37.1047472Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-appengine/1.43.1/google-http-client-appengine-1.43.1.jar
+2023-06-22T15:04:37.1131120Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-http/2.19.0/google-cloud-core-http-2.19.0.jar (15 kB at 426 kB/s)
+2023-06-22T15:04:37.1139538Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax-httpjson/0.114.0/gax-httpjson-0.114.0.jar
+2023-06-22T15:04:37.1211156Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0.jar (133 kB at 2.3 MB/s)
+2023-06-22T15:04:37.1211972Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-grpc/2.19.0/google-cloud-core-grpc-2.19.0.jar
+2023-06-22T15:04:37.1212876Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/apis/google-api-services-storage/v1-rev20230301-2.0.0/google-api-services-storage-v1-rev20230301-2.0.0.jar (173 kB at 2.6 MB/s)
+2023-06-22T15:04:37.1213585Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax/2.29.0/gax-2.29.0.jar
+2023-06-22T15:04:37.1567776Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/http-client/google-http-client-appengine/1.43.1/google-http-client-appengine-1.43.1.jar (19 kB at 505 kB/s)
+2023-06-22T15:04:37.1568867Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core-grpc/2.19.0/google-cloud-core-grpc-2.19.0.jar (17 kB at 507 kB/s)
+2023-06-22T15:04:37.1569659Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/gax-grpc/2.29.0/gax-grpc-2.29.0.jar
+2023-06-22T15:04:37.1570707Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-credentials/1.17.0/google-auth-library-credentials-1.17.0.jar
+2023-06-22T15:04:37.1821784Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax-httpjson/0.114.0/gax-httpjson-0.114.0.jar (160 kB at 2.5 MB/s)
+2023-06-22T15:04:37.1823413Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-oauth2-http/1.17.0/google-auth-library-oauth2-http-1.17.0.jar
+2023-06-22T15:04:37.1882823Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-credentials/1.17.0/google-auth-library-credentials-1.17.0.jar (6.0 kB at 192 kB/s)
+2023-06-22T15:04:37.1883642Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/api-common/2.12.0/api-common-2.12.0.jar
+2023-06-22T15:04:37.1908939Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax/2.29.0/gax-2.29.0.jar (377 kB at 5.4 MB/s)
+2023-06-22T15:04:37.1920331Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-iam-v1/1.15.0/proto-google-iam-v1-1.15.0.jar
+2023-06-22T15:04:37.2049917Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/gax-grpc/2.29.0/gax-grpc-2.29.0.jar (145 kB at 3.1 MB/s)
+2023-06-22T15:04:37.2050747Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-common-protos/2.20.0/proto-google-common-protos-2.20.0.jar
+2023-06-22T15:04:37.2219982Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/api-common/2.12.0/api-common-2.12.0.jar (50 kB at 1.6 MB/s)
+2023-06-22T15:04:37.2239354Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.32.0/checker-qual-3.32.0.jar
+2023-06-22T15:04:37.2313901Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/auth/google-auth-library-oauth2-http/1.17.0/google-auth-library-oauth2-http-1.17.0.jar (247 kB at 4.8 MB/s)
+2023-06-22T15:04:37.2341312Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.jar
+2023-06-22T15:04:37.2448892Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-iam-v1/1.15.0/proto-google-iam-v1-1.15.0.jar (172 kB at 3.2 MB/s)
+2023-06-22T15:04:37.2467287Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/truth/truth/1.1.4/truth-1.1.4.jar
+2023-06-22T15:04:37.2750232Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.32.0/checker-qual-3.32.0.jar (224 kB at 4.3 MB/s)
+2023-06-22T15:04:37.2751382Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0-tests.jar
+2023-06-22T15:04:37.3157419Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-core/2.19.0/google-cloud-core-2.19.0-tests.jar (109 kB at 2.9 MB/s)
+2023-06-22T15:04:37.3158651Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/truth/truth/1.1.4/truth-1.1.4.jar (245 kB at 3.6 MB/s)
+2023-06-22T15:04:37.3375565Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-testlib/31.1-jre/guava-testlib-31.1-jre.jar (840 kB at 8.0 MB/s)
+2023-06-22T15:04:37.3419059Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/api/grpc/proto-google-common-protos/2.20.0/proto-google-common-protos-2.20.0.jar (2.0 MB at 14 MB/s)
+2023-06-22T15:04:37.3485669Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar (3.0 MB at 8.0 MB/s)
+2023-06-22T15:04:37.4610420Z [INFO] Succeeded with 0 errors; 0 warnings; and 0 other changes.
+2023-06-22T15:04:37.4612260Z [INFO] 
+2023-06-22T15:04:37.4613075Z [INFO] -------------< com.google.cloud:google-cloud-nio-retrofit >-------------
+2023-06-22T15:04:37.4615709Z [INFO] Building Google Cloud NIO Retrofit Example 0.126.18-SNAPSHOT       [3/4]
+2023-06-22T15:04:37.4616850Z [INFO]   from google-cloud-nio-retrofit/pom.xml
+2023-06-22T15:04:37.4617863Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-22T15:04:37.4679719Z [INFO] 
+2023-06-22T15:04:37.4680738Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-retrofit >>>
+2023-06-22T15:04:37.4699229Z [INFO] 
+2023-06-22T15:04:37.4700039Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.4757438Z [INFO] Skipping Rule Enforcement.
+2023-06-22T15:04:37.4758423Z [INFO] 
+2023-06-22T15:04:37.4759363Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.4781739Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/target/jacoco.exec
+2023-06-22T15:04:37.4782582Z [INFO] 
+2023-06-22T15:04:37.4783448Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.4802590Z [INFO] 
+2023-06-22T15:04:37.4803401Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.4821505Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-22T15:04:37.4822416Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/src/main/resources
+2023-06-22T15:04:37.4823460Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/src/main/proto
+2023-06-22T15:04:37.4823891Z [INFO] 
+2023-06-22T15:04:37.4879953Z [INFO] --- flatten-maven-plugin:1.3.0:flatten (flatten) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.6149986Z [INFO] Generating flattened POM of project com.google.cloud:google-cloud-nio-retrofit:jar:0.126.18-SNAPSHOT...
+2023-06-22T15:04:37.6967160Z [INFO] 
+2023-06-22T15:04:37.6968208Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.7041186Z [INFO] Nothing to compile - all classes are up to date
+2023-06-22T15:04:37.7041692Z [INFO] 
+2023-06-22T15:04:37.7055526Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-retrofit <<<
+2023-06-22T15:04:37.7057403Z [INFO] 
+2023-06-22T15:04:37.7062798Z [INFO] 
+2023-06-22T15:04:37.7064477Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-retrofit ---
+2023-06-22T15:04:37.7103656Z [INFO] artifact com.google.cloud:google-cloud-nio-retrofit: checking for updates from central
+2023-06-22T15:04:37.7504935Z [INFO] Comparing to version: 0.126.17
+2023-06-22T15:04:37.7513735Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.jar
+2023-06-22T15:04:37.7824858Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.jar (3.9 kB at 124 kB/s)
+2023-06-22T15:04:37.7838630Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.pom
+2023-06-22T15:04:37.8163946Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.pom (2.3 kB at 68 kB/s)
+2023-06-22T15:04:37.8207244Z [INFO] Succeeded with 0 errors; 0 warnings; and 0 other changes.
+2023-06-22T15:04:37.8211151Z [INFO] 
+2023-06-22T15:04:37.8214266Z [INFO] -------------< com.google.cloud:google-cloud-nio-examples >-------------
+2023-06-22T15:04:37.8218915Z [INFO] Building Google Cloud NIO Examples 0.126.18-SNAPSHOT               [4/4]
+2023-06-22T15:04:37.8222638Z [INFO]   from google-cloud-nio-examples/pom.xml
+2023-06-22T15:04:37.8225651Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-22T15:04:37.8243662Z [INFO] 
+2023-06-22T15:04:37.8246932Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-examples >>>
+2023-06-22T15:04:37.8336578Z [INFO] 
+2023-06-22T15:04:37.8344427Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8356152Z [INFO] Skipping Rule Enforcement.
+2023-06-22T15:04:37.8359536Z [INFO] 
+2023-06-22T15:04:37.8362760Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8376795Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/target/jacoco.exec
+2023-06-22T15:04:37.8381908Z [INFO] 
+2023-06-22T15:04:37.8385128Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8393777Z [INFO] 
+2023-06-22T15:04:37.8396953Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8405765Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-22T15:04:37.8409133Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/src/main/resources
+2023-06-22T15:04:37.8412374Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/src/main/proto
+2023-06-22T15:04:37.8415871Z [INFO] 
+2023-06-22T15:04:37.8418862Z [INFO] --- flatten-maven-plugin:1.3.0:flatten (flatten) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8454444Z [INFO] Generating flattened POM of project com.google.cloud:google-cloud-nio-examples:jar:0.126.18-SNAPSHOT...
+2023-06-22T15:04:37.8789970Z [INFO] 
+2023-06-22T15:04:37.8793532Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8835007Z [INFO] Nothing to compile - all classes are up to date
+2023-06-22T15:04:37.8840025Z [INFO] 
+2023-06-22T15:04:37.8843456Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-examples <<<
+2023-06-22T15:04:37.8846401Z [INFO] 
+2023-06-22T15:04:37.8882187Z [INFO] 
+2023-06-22T15:04:37.8885425Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-examples ---
+2023-06-22T15:04:37.8895146Z [INFO] Skipping execution
+2023-06-22T15:04:37.8898984Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:37.8902392Z [INFO] Reactor Summary for Storage Parent 0.126.18-SNAPSHOT:
+2023-06-22T15:04:37.8905108Z [INFO] 
+2023-06-22T15:04:37.8909870Z [INFO] Storage Parent ..................................... SUCCESS [  0.465 s]
+2023-06-22T15:04:37.8916812Z [INFO] Google Cloud NIO ................................... SUCCESS [  2.772 s]
+2023-06-22T15:04:37.8920130Z [INFO] Google Cloud NIO Retrofit Example .................. SUCCESS [  0.360 s]
+2023-06-22T15:04:37.8923288Z [INFO] Google Cloud NIO Examples .......................... SUCCESS [  0.068 s]
+2023-06-22T15:04:37.8926311Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:37.8929166Z [INFO] BUILD SUCCESS
+2023-06-22T15:04:37.8932053Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:37.8935535Z [INFO] Total time:  5.289 s
+2023-06-22T15:04:37.8942250Z [INFO] Finished at: 2023-06-22T15:04:37Z
+2023-06-22T15:04:37.8945270Z [INFO] ------------------------------------------------------------------------
+2023-06-22T15:04:37.9284640Z basename: missing operand
+2023-06-22T15:04:37.9288296Z Try 'basename --help' for more information.
+2023-06-22T15:04:37.9295653Z exiting with 0
+
+2023-06-22T15:03:29.6561522Z ##[group]Run java -version
+2023-06-22T15:03:29.6561848Z [36;1mjava -version[0m
+2023-06-22T15:03:29.6623509Z shell: /usr/bin/bash -e {0}
+2023-06-22T15:03:29.6623755Z env:
+2023-06-22T15:03:29.6624027Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-06-22T15:03:29.6624348Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-06-22T15:03:29.6624611Z ##[endgroup]
+2023-06-22T15:03:29.7091826Z openjdk version "17.0.7" 2023-04-18 LTS
+2023-06-22T15:03:29.7094186Z OpenJDK Runtime Environment Zulu17.42+21-CRaC-CA (build 17.0.7+7-LTS)
+2023-06-22T15:03:29.7096151Z OpenJDK 64-Bit Server VM Zulu17.42+21-CRaC-CA (build 17.0.7+7-LTS, mixed mode, sharing)
+
+2023-06-22T15:03:21.2392763Z Current runner version: '2.305.0'
+2023-06-22T15:03:21.2422157Z ##[group]Operating System
+2023-06-22T15:03:21.2422696Z Ubuntu
+2023-06-22T15:03:21.2423074Z 22.04.2
+2023-06-22T15:03:21.2423352Z LTS
+2023-06-22T15:03:21.2423606Z ##[endgroup]
+2023-06-22T15:03:21.2423953Z ##[group]Runner Image
+2023-06-22T15:03:21.2424329Z Image: ubuntu-22.04
+2023-06-22T15:03:21.2424630Z Version: 20230619.1.0
+2023-06-22T15:03:21.2425152Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230619.1.0/images/linux/Ubuntu2204-Readme.md
+2023-06-22T15:03:21.2425799Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230619.1.0
+2023-06-22T15:03:21.2426213Z ##[endgroup]
+2023-06-22T15:03:21.2426580Z ##[group]Runner Image Provisioner
+2023-06-22T15:03:21.2426924Z 2.0.238.1
+2023-06-22T15:03:21.2427166Z ##[endgroup]
+2023-06-22T15:03:21.2428137Z ##[group]GITHUB_TOKEN Permissions
+2023-06-22T15:03:21.2428782Z Actions: read
+2023-06-22T15:03:21.2429093Z Checks: read
+2023-06-22T15:03:21.2429398Z Contents: read
+2023-06-22T15:03:21.2430009Z Deployments: read
+2023-06-22T15:03:21.2430298Z Discussions: read
+2023-06-22T15:03:21.2430621Z Issues: read
+2023-06-22T15:03:21.2430923Z Metadata: read
+2023-06-22T15:03:21.2431192Z Packages: read
+2023-06-22T15:03:21.2431538Z Pages: read
+2023-06-22T15:03:21.2431861Z PullRequests: read
+2023-06-22T15:03:21.2432181Z RepositoryProjects: read
+2023-06-22T15:03:21.2432538Z SecurityEvents: read
+2023-06-22T15:03:21.2432890Z Statuses: read
+2023-06-22T15:03:21.2433207Z ##[endgroup]
+2023-06-22T15:03:21.2436650Z Secret source: None
+2023-06-22T15:03:21.2437151Z Prepare workflow directory
+2023-06-22T15:03:21.3191000Z Prepare all required actions
+2023-06-22T15:03:21.3381216Z Getting action download info
+2023-06-22T15:03:21.6669288Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-22T15:03:22.2196799Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-22T15:03:22.9338520Z Complete job name: clirr
+
+2023-06-22T15:05:40.4666687Z ##[group]Run actions/setup-java@v3
+2023-06-22T15:05:40.4667042Z with:
+2023-06-22T15:05:40.4667272Z   distribution: zulu
+2023-06-22T15:05:40.4667515Z   java-version: 8
+2023-06-22T15:05:40.4667735Z   java-package: jdk
+2023-06-22T15:05:40.4667983Z   check-latest: false
+2023-06-22T15:05:40.4668225Z   server-id: github
+2023-06-22T15:05:40.4668454Z   server-username: GITHUB_ACTOR
+2023-06-22T15:05:40.4668746Z   server-password: GITHUB_TOKEN
+2023-06-22T15:05:40.4669195Z   overwrite-settings: true
+2023-06-22T15:05:40.4669603Z   job-status: success
+2023-06-22T15:05:40.4669990Z   token: ***
+2023-06-22T15:05:40.4670212Z ##[endgroup]
+2023-06-22T15:05:40.8614943Z ##[group]Installed distributions
+2023-06-22T15:05:40.8682226Z Trying to resolve the latest version from remote
+2023-06-22T15:05:41.1775259Z Resolved latest version as 8.0.372+7
+2023-06-22T15:05:41.1799443Z Trying to download...
+2023-06-22T15:05:41.1821827Z Downloading Java 8.0.372+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu8.70.0.23-ca-jdk8.0.372-win_x64.zip ...
+2023-06-22T15:05:42.2802031Z Extracting Java archive...
+2023-06-22T15:05:42.3936813Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\677b62fc-35fb-40d3-829b-57c4bcaea97a', 'D:\a\_temp\38321b0a-6d23-4396-8a1e-28e1fd1804a3')"
+2023-06-22T15:05:46.4230928Z Java 8.0.372+7 was downloaded
+2023-06-22T15:05:46.4231594Z Setting Java 8.0.372+7 as the default
+2023-06-22T15:05:46.4274929Z Creating toolchains.xml for JDK version 8 from zulu
+2023-06-22T15:05:46.4514444Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-06-22T15:05:46.4522502Z 
+2023-06-22T15:05:46.4523107Z Java configuration:
+2023-06-22T15:05:46.4523622Z   Distribution: zulu
+2023-06-22T15:05:46.4524020Z   Version: 8.0.372+7
+2023-06-22T15:05:46.4524895Z   Path: C:\hostedtoolcache\windows\Java_Zulu_jdk\8.0.372-7\x64
+2023-06-22T15:05:46.4525364Z 
+2023-06-22T15:05:46.4526020Z ##[endgroup]
+2023-06-22T15:05:46.4543972Z Creating settings.xml with server-id: github
+2023-06-22T15:05:46.4565638Z Writing to C:\Users\runneradmin\.m2\settings.xml
+
+2023-06-22T15:05:20.1113247Z Cleaning up orphan processes
+
+2023-06-22T15:04:37.9348376Z Post job cleanup.

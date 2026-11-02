@@ -64,7 +64,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [x] C5 · GitHub webhook endpoint with signature check · after S1
 - [x] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
-- [x] C10 · CI pipeline and preliminary 2-fixture smoke comparison · after C6, C9 (not evidence of real-world CI performance; audit 2026-10-27)
+- [x] C10 · CI pipeline and preliminary 2-fixture smoke comparison · after C6, C9 (smoke check only; extraction failures reported separately by C13; not real-world effectiveness evidence; audit 2026-10-27)
 - [x] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -80,28 +80,21 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
-- [ ] Q5 · Surface the Modern TodoMVC real-app scenarios in QA Engine (live), with a working app preview link · after B1
-- [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
-- [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
-- [ ] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
-- [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
-- [ ] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
+- [x] Q5 · Surface the Modern TodoMVC real-app scenarios in QA Engine (live), with a working app preview link · after B1
+- [x] C3 · Build and human-review the CI corpus · 206 reviewed cases; at least 3 per cause (owner-approved 2026-11-02)
+- [!] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11 and after the FYP-1 demo · only 3 reviewed flaky cases; collect and human-review more flaky cases after the demo before starting calibration
+- [x] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
+- [x] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
+- [x] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
 
 → Merge into `main`.
+
+**Merge/demo sequence:** C12 is intentionally deferred. Merge this branch with Q5, C3, C13, B3,
+and C14 complete; C12 does not block that merge. Then finish FYP-1 demo preparation and run the
+demo. After the demo, collect and review more flaky cases. Only when the corpus
+supports a meaningful train/holdout split should C12 change from `[!]` to `[ ]` and be done on a
+follow-up calibration branch from up-to-date `main`.
 
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
 Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
-
-## 10. Human work for FYP-1 Final (not for AI)
-- [x] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) · signed off 2026-11-02
-- [x] Decide and approve the CI action policy: `bug` should escalate, or a specific proposal-only action; approve any corresponding loss changes before implementation · `bug` escalates in FYP-1; loss-table/code alignment needs an implementation task
-- [x] Decide whether the shared output adds `classification: unknown`, `diagnosis_reliable`, or another explicit no-reliable-diagnosis representation; approve contract semantics before implementation · add `diagnosis_reliable`; false for no evidence, uniform posterior, or fit below the unknown-pattern floor
-- [x] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
-- [ ] Each member completes their `docs/disclosure.md` §2 row: owned modules, AI-generated parts, human changes, verification, and one caught AI error; correct the weight-provenance description
-- [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
-- [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set after the initial QA benchmark (keep mistake costs human-set)
-- [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
-- [ ] Report, poster, presentation
-- [ ] CI owner prepares a viva walkthrough of the CI modules and identifies their authored/owned work
-- [ ] Final demo: hide the scripted Proposal PoC tab, and prepare a working-key demo plus a frozen-run fallback

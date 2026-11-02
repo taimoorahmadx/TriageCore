@@ -1,0 +1,51 @@
+repo: beetbox/beets
+run_id: '41'
+head_sha: 454164496177fd8b9d6aad4f106e68e816becb6c
+run_attempts: []
+commits:
+- sha: 454164496177fd8b9d6aad4f106e68e816becb6c
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+  - docs/plugins/listenbrainz.rst
+- sha: e8dc2cb5daa1049d83700664c8756397816843dd
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 4f6689742c23ec124a7169931fa986a5c5f6f7a4
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 7f4da6e02326195145216f2befbaf140c21460a5
+  author: arsaboo
+  files:
+  - docs/changelog.rst
+- sha: b010fb507fa8d80646dc31b8f1144324de42909f
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 75deae5f479738a58eec21ca1cb04be1a8492085
+  author: arsaboo
+  files:
+  - beetsplug/lastimport.py
+- sha: c445e5ee79c5e1e797709d2808d1dffe5e9cfe63
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: d83a07d368fa3b20c4af744647c2e88b02f96bba
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: ec3711f4a90dfe333b8a747a21fbdb6356bd0fb9
+  author: arsaboo
+  files:
+  - beetsplug/lastimport.py
+- sha: 5e4cb20c4ae97e096dae8d929f225da15e0ed81e
+  author: arsaboo
+  files:
+  - beetsplug/lastimport.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,109 @@
+repo: huggingface/diffusers
+run_id: '44'
+head_sha: 68ddb2559e616656301858d441a523ebd64a710f
+run_attempts: []
+commits:
+- sha: 68ddb2559e616656301858d441a523ebd64a710f
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: dab7f014a8a4cae1c6afea990ea302904b909adf
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 2483d516abfa3b535fb95f8524cd16451e7f6cc5
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 480a4b4ae42aecef198a9a30fdc793e059b565fa
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file.py
+  - src/diffusers/loaders/single_file_utils.py
+  - src/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl_img2img.py
+- sha: bb8d317c7ed7a04f7fd35cfd3ee285e60cb873ad
+  author: DN6
+  files:
+  - src/diffusers/loaders/__init__.py
+  - src/diffusers/models/autoencoders/autoencoder_kl_temporal_decoder.py
+- sha: 2fb9baf934629db718f00d4eaeeddd9dac80dfdd
+  author: DN6
+  files:
+  - src/diffusers/loaders/autoencoder.py
+  - src/diffusers/loaders/controlnet.py
+  - src/diffusers/loaders/single_file.py
+  - src/diffusers/loaders/single_file_utils.py
+  - src/diffusers/models/autoencoders/autoencoder_kl.py
+- sha: aee8b5f5d588c2fbec55445e28930596ed2fc20b
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: fd2ec363692f246cc331c6e6ab53dccf772e21cf
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file.py
+  - src/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl_img2img.py
+- sha: ffde1235fce6efbec98fe924659381a7324311ed
+  author: DN6
+  files:
+  - src/diffusers/loaders/autoencoder.py
+- sha: 1ca79f7b83891cb3d1e957ef30d3d9ece482ad32
+  author: DN6
+  files:
+  - .github/workflows/pr_test_peft_backend.yml
+  - docker/diffusers-pytorch-compile-cuda/Dockerfile
+  - docker/diffusers-pytorch-cuda/Dockerfile
+  - docker/diffusers-pytorch-xformers-cuda/Dockerfile
+  - docs/source/en/api/models/autoencoderkl.md
+  - docs/source/en/api/pipelines/animatediff.md
+  - docs/source/en/installation.md
+  - docs/source/en/using-diffusers/controlnet.md
+  - docs/source/en/using-diffusers/loading_adapters.md
+  - docs/source/en/using-diffusers/sdxl.md
+  - docs/source/en/using-diffusers/sdxl_turbo.md
+  - examples/advanced_diffusion_training/train_dreambooth_lora_sdxl_advanced.py
+  - examples/community/README.md
+  - examples/community/ip_adapter_face_id.py
+  - examples/community/pipeline_animatediff_controlnet.py
+  - examples/consistency_distillation/train_lcm_distill_lora_sdxl.py
+  - examples/dreambooth/train_dreambooth_lora.py
+  - examples/dreambooth/train_dreambooth_lora_sdxl.py
+  - examples/instruct_pix2pix/train_instruct_pix2pix.py
+  - examples/instruct_pix2pix/train_instruct_pix2pix_sdxl.py
+  - examples/research_projects/realfill/requirements.txt
+  - examples/t2i_adapter/train_t2i_adapter_sdxl.py
+  - examples/text_to_image/train_text_to_image_lora.py
+  - examples/text_to_image/train_text_to_image_lora_sdxl.py
+  - examples/text_to_image/train_text_to_image_sdxl.py
+  - scripts/conversion_ldm_uncond.py
+  - scripts/convert_gligen_to_diffusers.py
+  - scripts/convert_if.py
+  - scripts/convert_original_audioldm2_to_diffusers.py
+  - scripts/convert_original_audioldm_to_diffusers.py
+  - scripts/convert_original_musicldm_to_diffusers.py
+  - scripts/convert_vae_pt_to_diffusers.py
+  - scripts/convert_vq_diffusion_to_diffusers.py
+  - scripts/convert_zero123_to_diffusers.py
+  - setup.py
+  - src/diffusers/dependency_versions_table.py
+  - src/diffusers/loaders/ip_adapter.py
+  - src/diffusers/loaders/lora.py
+  - src/diffusers/pipelines/animatediff/pipeline_animatediff.py
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet.py
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet_img2img.py
+  - src/diffusers/pipelines/stable_diffusion/convert_from_ckpt.py
+  - src/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl_instruct_pix2pix.py
+  - src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py
+  - src/diffusers/training_utils.py
+  - src/diffusers/utils/__init__.py
+  - src/diffusers/utils/import_utils.py
+  - src/diffusers/utils/testing_utils.py
+  - tests/pipelines/animatediff/test_animatediff.py
+  - tests/pipelines/controlnet/test_controlnet.py
+  - tests/pipelines/stable_diffusion_xl/test_stable_diffusion_xl_k_diffusion.py
+  - tests/pipelines/stable_video_diffusion/test_stable_video_diffusion.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,179 @@
+repo: facebook/facebook-java-business-sdk
+run_id: 83a25390887d8afa7d43b70070d710da3c90a7a6
+head_sha: 83a25390887d8afa7d43b70070d710da3c90a7a6
+run_attempts: []
+commits:
+- sha: 83a25390887d8afa7d43b70070d710da3c90a7a6
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: f8199bba79e28f4ab0c1907c65dfaa04de56b696
+  author: stcheng
+  files:
+  - pom.xml
+  - src/main/java/com/facebook/ads/sdk/APIConfig.java
+- sha: 860530e8cc78840413baca224c112a025a7ef7f4
+  author: stcheng
+  files:
+  - src/main/java/com/facebook/ads/sdk/CatalogItemAppealStatus.java
+- sha: 7fbc938b91c9cf5bfbe09dfc59419dfa3cca7039
+  author: generatedunixname89002005295453
+  files:
+  - CHANGELOG.md
+  - examples/AdAccountAdCreativesPost2CreateAdCreativeLinkAd.java
+  - examples/AdAccountAdCreativesPost2CreateLinkAdCallToActionAppInstall.java
+  - examples/AdAccountAdCreativesPost2CreateLinkAdImageCrop.java
+  - examples/AdAccountAdCreativesPost2CreateMAIDPA.java
+  - examples/AdAccountAdCreativesPost2CreateVideoLeadAd.java
+  - examples/AdAccountAdCreativesPost2CreateVideoPageLikeAd.java
+  - examples/AdAccountAdCreativesPost3CreateAdCreativePageLike.java
+  - examples/AdAccountAdCreativesPost3CreateAssetFeedSpec.java
+  - examples/AdAccountAdCreativesPost3CreateCarouselCallToActionAppInstall.java
+  - examples/AdAccountAdCreativesPost3CreateDynamicAdCustomization.java
+  - examples/AdAccountAdSetsPostAdSetCreateCpa.java
+  - examples/AdAccountAdSetsPostAdSetCreateCpaAppEvents.java
+  - examples/AdAccountAdSetsPostCreateAdSet.java
+  - examples/AdAccountAdSetsPostDailyBudget20.java
+  - examples/AdAccountAdSetsPostLifetimeBudget200Duration10Days.java
+  - examples/AdAccountAdSetsPostOfferClaim.java
+  - examples/AdAccountAdSetsPostOptimizePostEngagement.java
+  - examples/AdAccountAdsPostOfferClaim.java
+  - examples/AdAccountCampaignsPostConversions.java
+  - examples/AdAccountCampaignsPostEventResponses.java
+  - examples/AdAccountCampaignsPostLeadGen.java
+  - examples/AdAccountCampaignsPostLinkClicks.java
+  - examples/AdAccountCampaignsPostLocalAwareness.java
+  - examples/AdAccountCampaignsPostMAIA.java
+  - examples/AdAccountCampaignsPostMAIDPA.java
+  - examples/AdAccountCampaignsPostOfferClaims.java
+  - examples/AdAccountCampaignsPostPageLikes.java
+  - examples/AdAccountCampaignsPostPostEngagement.java
+  - examples/AdAccountCampaignsPostStoreCampaign.java
+  - examples/AdAccountCampaignsPostVideoViews.java
+  - examples/AdCreativeCreativeInsightsEdge.java
+  - examples/AdgroupLeadsEdgeAdgroupLeadsFiltered.java
+  - examples/AdsInsightsEdgeStoreVisitsAdCampaignInsights.java
+  - examples/AdsPixelEventsPost.java
+  - examples/MultiPageFeedCreateThenDelete.java
+  - examples/MultiPromoteYourPage.java
+  - examples/PagePostCommentsEdge.java
+  - pom.xml
+  - src/main/java/com/facebook/ads/sdk/APIConfig.java
+  - src/main/java/com/facebook/ads/sdk/Ad.java
+  - src/main/java/com/facebook/ads/sdk/AdAccount.java
+  - src/main/java/com/facebook/ads/sdk/AdAccountAdVolume.java
+  - src/main/java/com/facebook/ads/sdk/AdAccountBusinessConstraints.java
+  - src/main/java/com/facebook/ads/sdk/AdAccountDeliveryEstimate.java
+  - src/main/java/com/facebook/ads/sdk/AdAccountMatchedSearchApplicationsEdgeData.java
+  - src/main/java/com/facebook/ads/sdk/AdAccountTargetingUnified.java
+  - src/main/java/com/facebook/ads/sdk/AdAssetFeedSpec.java
+  - src/main/java/com/facebook/ads/sdk/AdCampaignDeliveryEstimate.java
+  - src/main/java/com/facebook/ads/sdk/AdCampaignDeliveryStatsUnsupportedReasons.java
+  - src/main/java/com/facebook/ads/sdk/AdCreative.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeBrandedContentAds.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeFacebookBrandedContent.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeInsights.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeInstagramBrandedContent.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeLinkDataCallToAction.java
+  - src/main/java/com/facebook/ads/sdk/AdCreativeLinkDataTemplateVideoSpec.java
+  - src/main/java/com/facebook/ads/sdk/AdLabel.java
+  - src/main/java/com/facebook/ads/sdk/AdPreview.java
+  - src/main/java/com/facebook/ads/sdk/AdPromotedObject.java
+  - src/main/java/com/facebook/ads/sdk/AdReportRun.java
+  - src/main/java/com/facebook/ads/sdk/AdRule.java
+  - src/main/java/com/facebook/ads/sdk/AdSet.java
+  - src/main/java/com/facebook/ads/sdk/AdStudyCell.java
+  - src/main/java/com/facebook/ads/sdk/AdStudyObjective.java
+  - src/main/java/com/facebook/ads/sdk/AdVideo.java
+  - src/main/java/com/facebook/ads/sdk/AdsInsights.java
+  - src/main/java/com/facebook/ads/sdk/AdsOptimalDeliveryGrowthOpportunity.java
+  - src/main/java/com/facebook/ads/sdk/AdsPixel.java
+  - src/main/java/com/facebook/ads/sdk/Application.java
+  - src/main/java/com/facebook/ads/sdk/BrandRequest.java
+  - src/main/java/com/facebook/ads/sdk/Business.java
+  - src/main/java/com/facebook/ads/sdk/BusinessAssetGroup.java
+  - src/main/java/com/facebook/ads/sdk/BusinessUser.java
+  - src/main/java/com/facebook/ads/sdk/CPASBusinessSetupConfig.java
+  - src/main/java/com/facebook/ads/sdk/CPASMerchantConfig.java
+  - src/main/java/com/facebook/ads/sdk/Campaign.java
+  - src/main/java/com/facebook/ads/sdk/Canvas.java
+  - src/main/java/com/facebook/ads/sdk/CatalogItemAppealStatus.java
+  - src/main/java/com/facebook/ads/sdk/CommerceMerchantSettings.java
+  - src/main/java/com/facebook/ads/sdk/CommerceMerchantTOSAcceptance.java
+  - src/main/java/com/facebook/ads/sdk/CustomAudience.java
+  - src/main/java/com/facebook/ads/sdk/CustomAudienceDataSource.java
+  - src/main/java/com/facebook/ads/sdk/CustomAudienceGroup.java
+  - src/main/java/com/facebook/ads/sdk/EventSourceGroup.java
+  - src/main/java/com/facebook/ads/sdk/ExtendedCreditInvoiceGroup.java
+  - src/main/java/com/facebook/ads/sdk/Group.java
+  - src/main/java/com/facebook/ads/sdk/IGUser.java
+  - src/main/java/com/facebook/ads/sdk/InstagramUser.java
+  - src/main/java/com/facebook/ads/sdk/InstantArticlesStats.java
+  - src/main/java/com/facebook/ads/sdk/JobOpening.java
+  - src/main/java/com/facebook/ads/sdk/JobsJob.java
+  - src/main/java/com/facebook/ads/sdk/Lead.java
+  - src/main/java/com/facebook/ads/sdk/LeadgenForm.java
+  - src/main/java/com/facebook/ads/sdk/LiveVideo.java
+  - src/main/java/com/facebook/ads/sdk/OfflineConversionDataSet.java
+  - src/main/java/com/facebook/ads/sdk/OpenBridgeConfiguration.java
+  - src/main/java/com/facebook/ads/sdk/Page.java
+  - src/main/java/com/facebook/ads/sdk/PagePost.java
+  - src/main/java/com/facebook/ads/sdk/PagePostExperiment.java
+  - src/main/java/com/facebook/ads/sdk/Photo.java
+  - src/main/java/com/facebook/ads/sdk/Post.java
+  - src/main/java/com/facebook/ads/sdk/PrivateLiftStudyInstance.java
+  - src/main/java/com/facebook/ads/sdk/ProductCatalog.java
+  - src/main/java/com/facebook/ads/sdk/ProductCatalogCategory.java
+  - src/main/java/com/facebook/ads/sdk/ProductFeed.java
+  - src/main/java/com/facebook/ads/sdk/ProductFeedRule.java
+  - src/main/java/com/facebook/ads/sdk/ProductFeedRuleSuggestion.java
+  - src/main/java/com/facebook/ads/sdk/ProductFeedSchedule.java
+  - src/main/java/com/facebook/ads/sdk/ProductItem.java
+  - src/main/java/com/facebook/ads/sdk/ProductSet.java
+  - src/main/java/com/facebook/ads/sdk/ReachFrequencyEstimatesPlacementBreakdown.java
+  - src/main/java/com/facebook/ads/sdk/ReachFrequencyPrediction.java
+  - src/main/java/com/facebook/ads/sdk/SavedAudience.java
+  - src/main/java/com/facebook/ads/sdk/SplitTestWinner.java
+  - src/main/java/com/facebook/ads/sdk/SystemUser.java
+  - src/main/java/com/facebook/ads/sdk/TargetingGeoLocationElectoralDistrict.java
+  - src/main/java/com/facebook/ads/sdk/URL.java
+  - src/main/java/com/facebook/ads/sdk/UnifiedThread.java
+  - src/main/java/com/facebook/ads/sdk/User.java
+  - src/main/java/com/facebook/ads/sdk/VehicleOffer.java
+  - src/main/java/com/facebook/ads/sdk/WhatsAppBusinessAccount.java
+  - src/main/java/com/facebook/ads/sdk/WhatsAppBusinessPreVerifiedPhoneNumber.java
+- sha: 556907dc5345ead287546f92d66af0ea456f2002
+  author: stcheng
+  files:
+  - README.md
+- sha: eb5241bede82e570cab2e6daa3ec74d8c1edef18
+  author: stcheng
+  files:
+  - src/main/java/com/facebook/ads/sdk/AdAccountDeliveryEstimate.java
+  - src/main/java/com/facebook/ads/sdk/AdCampaignDeliveryEstimate.java
+  - src/main/java/com/facebook/ads/sdk/AdSet.java
+  - src/main/java/com/facebook/ads/sdk/customtype/TargetingOptimizationTuple.java
+- sha: 5c613ed093bf9aec9af033f473a6b2b5af40d7f2
+  author: jtomy22912
+  files:
+  - CHANGELOG.md
+  - src/main/java/com/facebook/ads/sdk/serverside/Event.java
+  - src/test/java/com/facebook/ads/sdk/serverside/EventAmTest.java
+- sha: 44eaf371dfd9310990cb40ee3636ee960755bb5d
+  author: Alan Ho
+  files:
+  - examples/src/main/java/com/facebook/ads/sdk/samples/MPAManagedPartnerOnboardingAsyncExample.java
+- sha: 0af2a3ba881acffdb12c13496a878dff5e4790f3
+  author: Shuotian Cheng
+  files:
+  - README.md
+- sha: 653a9575e5fb9cbf330708c42f2f643d1058495a
+  author: generatedunixname89002005295453
+  files:
+  - pom.xml
+  - src/main/java/com/facebook/ads/sdk/APIConfig.java
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

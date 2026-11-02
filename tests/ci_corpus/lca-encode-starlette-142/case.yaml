@@ -1,0 +1,77 @@
+repo: encode/starlette
+run_id: '142'
+head_sha: e21f666b44b5c2ddf22f9a9d057787811dc92a30
+run_attempts: []
+commits:
+- sha: e21f666b44b5c2ddf22f9a9d057787811dc92a30
+  author: Kludex
+  files:
+  - starlette/_exception_handler.py
+  - starlette/_utils.py
+  - starlette/applications.py
+  - starlette/authentication.py
+  - starlette/background.py
+  - starlette/concurrency.py
+  - starlette/config.py
+  - starlette/datastructures.py
+  - starlette/endpoints.py
+  - starlette/exceptions.py
+  - starlette/formparsers.py
+  - starlette/middleware/__init__.py
+  - starlette/requests.py
+  - starlette/responses.py
+  - starlette/routing.py
+  - starlette/schemas.py
+  - starlette/staticfiles.py
+  - starlette/status.py
+  - starlette/templating.py
+  - starlette/testclient.py
+  - starlette/types.py
+  - starlette/websockets.py
+- sha: 13c66c929428424daeb711b46623f47fb9ca36ee
+  author: mathause
+  files:
+  - starlette/config.py
+  - tests/test_config.py
+- sha: d2d9192966a7719747c04ce992b4a7df098cf82f
+  author: Kludex
+  files:
+  - README.md
+- sha: 363e4fb1940f0eb6e290755fddd7ea6666ce18ae
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 53808c4b26c8111f0fb033ee39bab5e6103158b6
+  author: Kludex
+  files:
+  - .github/dependabot.yml
+- sha: 8d7630bda107ebbc58a4130b605ee6481067100e
+  author: Kludex
+  files:
+  - tests/test_websockets.py
+- sha: c8176050aabc2a5de4d649640983e1ef01de1de7
+  author: Kludex
+  files:
+  - docs/release-notes.md
+  - starlette/__init__.py
+- sha: 6c4ffeee01af51c0a9df4dda2618f79c1eda1f06
+  author: Kludex
+  files:
+  - starlette/applications.py
+  - starlette/middleware/__init__.py
+- sha: 3734e85c187a22e30c5ba3530a4f4506912f8eec
+  author: tiangolo
+  files:
+  - pyproject.toml
+  - starlette/staticfiles.py
+  - tests/test_responses.py
+- sha: 1081520b7575975666477eca2f70af77944652a3
+  author: Kludex
+  files:
+  - docs/release-notes.md
+  - starlette/__init__.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

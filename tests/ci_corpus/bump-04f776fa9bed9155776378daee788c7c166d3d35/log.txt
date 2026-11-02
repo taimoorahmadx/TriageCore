@@ -1,0 +1,664 @@
+2023-06-22T23:39:51.1260204Z ##[group]Run actions/checkout@v1
+2023-06-22T23:39:51.1260655Z with:
+2023-06-22T23:39:51.1260945Z   clean: true
+2023-06-22T23:39:51.1261228Z ##[endgroup]
+2023-06-22T23:39:51.5583858Z Syncing repository: snowflakedb/snowflake-jdbc
+2023-06-22T23:39:51.5662987Z ##[command]git version
+2023-06-22T23:39:51.6216619Z git version 2.41.0
+2023-06-22T23:39:51.6272270Z ##[command]git lfs version
+2023-06-22T23:39:51.7033980Z git-lfs/3.3.0 (GitHub; linux amd64; go 1.19.3)
+2023-06-22T23:39:51.7225131Z ##[command]git init "/home/runner/work/snowflake-jdbc/snowflake-jdbc"
+2023-06-22T23:39:51.7372072Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-22T23:39:51.7415673Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-22T23:39:51.7440898Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-22T23:39:51.7441382Z hint: 
+2023-06-22T23:39:51.7579129Z hint: 	git config --global init.defaultBranch <name>
+2023-06-22T23:39:51.7579766Z hint: 
+2023-06-22T23:39:51.7580317Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-22T23:39:51.7581027Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-22T23:39:51.7581451Z hint: 
+2023-06-22T23:39:51.7581818Z hint: 	git branch -m <name>
+2023-06-22T23:39:51.7582794Z Initialized empty Git repository in /home/runner/work/snowflake-jdbc/snowflake-jdbc/.git/
+2023-06-22T23:39:51.7615946Z ##[command]git remote add origin https://github.com/snowflakedb/snowflake-jdbc
+2023-06-22T23:39:51.7616535Z ##[command]git config gc.auto 0
+2023-06-22T23:39:51.7617103Z ##[command]git config --get-all http.https://github.com/snowflakedb/snowflake-jdbc.extraheader
+2023-06-22T23:39:51.7688296Z ##[command]git -c http.extraheader="AUTHORIZATION: basic ***" fetch --tags --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/pull/1441/merge:refs/remotes/pull/1441/merge
+2023-06-22T23:39:52.3505997Z remote: Enumerating objects: 32347, done.        
+2023-06-22T23:39:52.3523050Z remote: Counting objects:   0% (1/2047)        
+2023-06-22T23:39:52.3531372Z remote: Counting objects:   1% (21/2047)        
+2023-06-22T23:39:52.3536870Z remote: Counting objects:   2% (41/2047)        
+2023-06-22T23:39:52.3541596Z remote: Counting objects:   3% (62/2047)        
+2023-06-22T23:39:52.3546752Z remote: Counting objects:   4% (82/2047)        
+2023-06-22T23:39:52.3552958Z remote: Counting objects:   5% (103/2047)        
+2023-06-22T23:39:52.3557024Z remote: Counting objects:   6% (123/2047)        
+2023-06-22T23:39:52.3562322Z remote: Counting objects:   7% (144/2047)        
+2023-06-22T23:39:52.3566600Z remote: Counting objects:   8% (164/2047)        
+2023-06-22T23:39:52.3571145Z remote: Counting objects:   9% (185/2047)        
+2023-06-22T23:39:52.3576259Z remote: Counting objects:  10% (205/2047)        
+2023-06-22T23:39:52.3581290Z remote: Counting objects:  11% (226/2047)        
+2023-06-22T23:39:52.3586827Z remote: Counting objects:  12% (246/2047)        
+2023-06-22T23:39:52.3591978Z remote: Counting objects:  13% (267/2047)        
+2023-06-22T23:39:52.3598819Z remote: Counting objects:  14% (287/2047)        
+2023-06-22T23:39:52.3606010Z remote: Counting objects:  15% (308/2047)        
+2023-06-22T23:39:52.3611409Z remote: Counting objects:  16% (328/2047)        
+2023-06-22T23:39:52.3616772Z remote: Counting objects:  17% (348/2047)        
+2023-06-22T23:39:52.3622326Z remote: Counting objects:  18% (369/2047)        
+2023-06-22T23:39:52.3627833Z remote: Counting objects:  19% (389/2047)        
+2023-06-22T23:39:52.3633511Z remote: Counting objects:  20% (410/2047)        
+2023-06-22T23:39:52.3639089Z remote: Counting objects:  21% (430/2047)        
+2023-06-22T23:39:52.3644656Z remote: Counting objects:  22% (451/2047)        
+2023-06-22T23:39:52.3648985Z remote: Counting objects:  23% (471/2047)        
+2023-06-22T23:39:52.3654586Z remote: Counting objects:  24% (492/2047)        
+2023-06-22T23:39:52.3659863Z remote: Counting objects:  25% (512/2047)        
+2023-06-22T23:39:52.3665701Z remote: Counting objects:  26% (533/2047)        
+2023-06-22T23:39:52.3672143Z remote: Counting objects:  27% (553/2047)        
+2023-06-22T23:39:52.3679263Z remote: Counting objects:  28% (574/2047)        
+2023-06-22T23:39:52.3685167Z remote: Counting objects:  29% (594/2047)        
+2023-06-22T23:39:52.3690680Z remote: Counting objects:  30% (615/2047)        
+2023-06-22T23:39:52.3696437Z remote: Counting objects:  31% (635/2047)        
+2023-06-22T23:39:52.3704490Z remote: Counting objects:  32% (656/2047)        
+2023-06-22T23:39:52.3705561Z remote: Counting objects:  33% (676/2047)        
+2023-06-22T23:39:52.3706038Z remote: Counting objects:  34% (696/2047)        
+2023-06-22T23:39:52.3714645Z remote: Counting objects:  35% (717/2047)        
+2023-06-22T23:39:52.3721310Z remote: Counting objects:  36% (737/2047)        
+2023-06-22T23:39:52.3721683Z remote: Counting objects:  37% (758/2047)        
+2023-06-22T23:39:52.3722002Z remote: Counting objects:  38% (778/2047)        
+2023-06-22T23:39:52.3722350Z remote: Counting objects:  39% (799/2047)        
+2023-06-22T23:39:52.3722677Z remote: Counting objects:  40% (819/2047)        
+2023-06-22T23:39:52.3725508Z remote: Counting objects:  41% (840/2047)        
+2023-06-22T23:39:52.3749562Z remote: Counting objects:  42% (860/2047)        
+2023-06-22T23:39:52.3749867Z remote: Counting objects:  43% (881/2047)        
+2023-06-22T23:39:52.3750136Z remote: Counting objects:  44% (901/2047)        
+2023-06-22T23:39:52.3750637Z remote: Counting objects:  45% (922/2047)        
+2023-06-22T23:39:52.3751057Z remote: Counting objects:  46% (942/2047)        
+2023-06-22T23:39:52.3751322Z remote: Counting objects:  47% (963/2047)        
+2023-06-22T23:39:52.3751575Z remote: Counting objects:  48% (983/2047)        
+2023-06-22T23:39:52.3751850Z remote: Counting objects:  49% (1004/2047)        
+2023-06-22T23:39:52.3752127Z remote: Counting objects:  50% (1024/2047)        
+2023-06-22T23:39:52.3752403Z remote: Counting objects:  51% (1044/2047)        
+2023-06-22T23:39:52.3774643Z remote: Counting objects:  52% (1065/2047)        
+2023-06-22T23:39:52.3775053Z remote: Counting objects:  53% (1085/2047)        
+2023-06-22T23:39:52.3775399Z remote: Counting objects:  54% (1106/2047)        
+2023-06-22T23:39:52.3775722Z remote: Counting objects:  55% (1126/2047)        
+2023-06-22T23:39:52.3776057Z remote: Counting objects:  56% (1147/2047)        
+2023-06-22T23:39:52.3776394Z remote: Counting objects:  57% (1167/2047)        
+2023-06-22T23:39:52.3777158Z remote: Counting objects:  58% (1188/2047)        
+2023-06-22T23:39:52.3777493Z remote: Counting objects:  59% (1208/2047)        
+2023-06-22T23:39:52.3777821Z remote: Counting objects:  60% (1229/2047)        
+2023-06-22T23:39:52.3778256Z remote: Counting objects:  61% (1249/2047)        
+2023-06-22T23:39:52.3778559Z remote: Counting objects:  62% (1270/2047)        
+2023-06-22T23:39:52.3778870Z remote: Counting objects:  63% (1290/2047)        
+2023-06-22T23:39:52.3779922Z remote: Counting objects:  64% (1311/2047)        
+2023-06-22T23:39:52.3780797Z remote: Counting objects:  65% (1331/2047)        
+2023-06-22T23:39:52.3781728Z remote: Counting objects:  66% (1352/2047)        
+2023-06-22T23:39:52.3782630Z remote: Counting objects:  67% (1372/2047)        
+2023-06-22T23:39:52.3783531Z remote: Counting objects:  68% (1392/2047)        
+2023-06-22T23:39:52.3784425Z remote: Counting objects:  69% (1413/2047)        
+2023-06-22T23:39:52.3785346Z remote: Counting objects:  70% (1433/2047)        
+2023-06-22T23:39:52.3786254Z remote: Counting objects:  71% (1454/2047)        
+2023-06-22T23:39:52.3787170Z remote: Counting objects:  72% (1474/2047)        
+2023-06-22T23:39:52.3788065Z remote: Counting objects:  73% (1495/2047)        
+2023-06-22T23:39:52.3788999Z remote: Counting objects:  74% (1515/2047)        
+2023-06-22T23:39:52.3789916Z remote: Counting objects:  75% (1536/2047)        
+2023-06-22T23:39:52.3790826Z remote: Counting objects:  76% (1556/2047)        
+2023-06-22T23:39:52.3791739Z remote: Counting objects:  77% (1577/2047)        
+2023-06-22T23:39:52.3792637Z remote: Counting objects:  78% (1597/2047)        
+2023-06-22T23:39:52.3793535Z remote: Counting objects:  79% (1618/2047)        
+2023-06-22T23:39:52.3794419Z remote: Counting objects:  80% (1638/2047)        
+2023-06-22T23:39:52.3795348Z remote: Counting objects:  81% (1659/2047)        
+2023-06-22T23:39:52.3795903Z remote: Counting objects:  82% (1679/2047)        
+2023-06-22T23:39:52.3796843Z remote: Counting objects:  83% (1700/2047)        
+2023-06-22T23:39:52.3797555Z remote: Counting objects:  84% (1720/2047)        
+2023-06-22T23:39:52.3798425Z remote: Counting objects:  85% (1740/2047)        
+2023-06-22T23:39:52.3800261Z remote: Counting objects:  86% (1761/2047)        
+2023-06-22T23:39:52.3801063Z remote: Counting objects:  87% (1781/2047)        
+2023-06-22T23:39:52.3801440Z remote: Counting objects:  88% (1802/2047)        
+2023-06-22T23:39:52.3804217Z remote: Counting objects:  89% (1822/2047)        
+2023-06-22T23:39:52.3807458Z remote: Counting objects:  90% (1843/2047)        
+2023-06-22T23:39:52.3810660Z remote: Counting objects:  91% (1863/2047)        
+2023-06-22T23:39:52.3813764Z remote: Counting objects:  92% (1884/2047)        
+2023-06-22T23:39:52.3817743Z remote: Counting objects:  93% (1904/2047)        
+2023-06-22T23:39:52.3820688Z remote: Counting objects:  94% (1925/2047)        
+2023-06-22T23:39:52.3823611Z remote: Counting objects:  95% (1945/2047)        
+2023-06-22T23:39:52.3826453Z remote: Counting objects:  96% (1966/2047)        
+2023-06-22T23:39:52.3828725Z remote: Counting objects:  97% (1986/2047)        
+2023-06-22T23:39:52.3831556Z remote: Counting objects:  98% (2007/2047)        
+2023-06-22T23:39:52.3834075Z remote: Counting objects:  99% (2027/2047)        
+2023-06-22T23:39:52.3836352Z remote: Counting objects: 100% (2047/2047)        
+2023-06-22T23:39:52.3838795Z remote: Counting objects: 100% (2047/2047), done.        
+2023-06-22T23:39:52.3841736Z remote: Compressing objects:   0% (1/1038)        
+2023-06-22T23:39:52.3863869Z remote: Compressing objects:   1% (11/1038)        
+2023-06-22T23:39:52.4257988Z remote: Compressing objects:   2% (21/1038)        
+2023-06-22T23:39:52.4398481Z remote: Compressing objects:   3% (32/1038)        
+2023-06-22T23:39:52.4593366Z remote: Compressing objects:   4% (42/1038)        
+2023-06-22T23:39:52.4868963Z remote: Compressing objects:   5% (52/1038)        
+2023-06-22T23:39:52.5017249Z remote: Compressing objects:   6% (63/1038)        
+2023-06-22T23:39:52.5126167Z remote: Compressing objects:   7% (73/1038)        
+2023-06-22T23:39:52.5223906Z remote: Compressing objects:   8% (84/1038)        
+2023-06-22T23:39:52.5449780Z remote: Compressing objects:   9% (94/1038)        
+2023-06-22T23:39:52.5450463Z remote: Compressing objects:  10% (104/1038)        
+2023-06-22T23:39:52.5476815Z remote: Compressing objects:  11% (115/1038)        
+2023-06-22T23:39:52.5524965Z remote: Compressing objects:  12% (125/1038)        
+2023-06-22T23:39:52.5546419Z remote: Compressing objects:  13% (135/1038)        
+2023-06-22T23:39:52.5584732Z remote: Compressing objects:  14% (146/1038)        
+2023-06-22T23:39:52.5604965Z remote: Compressing objects:  15% (156/1038)        
+2023-06-22T23:39:52.5622493Z remote: Compressing objects:  16% (167/1038)        
+2023-06-22T23:39:52.5633297Z remote: Compressing objects:  17% (177/1038)        
+2023-06-22T23:39:52.5653627Z remote: Compressing objects:  18% (187/1038)        
+2023-06-22T23:39:52.5675028Z remote: Compressing objects:  19% (198/1038)        
+2023-06-22T23:39:52.5676732Z remote: Compressing objects:  20% (208/1038)        
+2023-06-22T23:39:52.5677687Z remote: Compressing objects:  21% (218/1038)        
+2023-06-22T23:39:52.5678372Z remote: Compressing objects:  22% (229/1038)        
+2023-06-22T23:39:52.5678969Z remote: Compressing objects:  23% (239/1038)        
+2023-06-22T23:39:52.5690699Z remote: Compressing objects:  24% (250/1038)        
+2023-06-22T23:39:52.5702844Z remote: Compressing objects:  25% (260/1038)        
+2023-06-22T23:39:52.5719599Z remote: Compressing objects:  26% (270/1038)        
+2023-06-22T23:39:52.5722124Z remote: Compressing objects:  27% (281/1038)        
+2023-06-22T23:39:52.5722751Z remote: Compressing objects:  28% (291/1038)        
+2023-06-22T23:39:52.5724787Z remote: Compressing objects:  29% (302/1038)        
+2023-06-22T23:39:52.5727669Z remote: Compressing objects:  30% (312/1038)        
+2023-06-22T23:39:52.5730858Z remote: Compressing objects:  31% (322/1038)        
+2023-06-22T23:39:52.5732598Z remote: Compressing objects:  32% (333/1038)        
+2023-06-22T23:39:52.5733371Z remote: Compressing objects:  33% (343/1038)        
+2023-06-22T23:39:52.5736369Z remote: Compressing objects:  34% (353/1038)        
+2023-06-22T23:39:52.5737091Z remote: Compressing objects:  35% (364/1038)        
+2023-06-22T23:39:52.5737752Z remote: Compressing objects:  36% (374/1038)        
+2023-06-22T23:39:52.5738472Z remote: Compressing objects:  37% (385/1038)        
+2023-06-22T23:39:52.5739940Z remote: Compressing objects:  38% (395/1038)        
+2023-06-22T23:39:52.5740315Z remote: Compressing objects:  39% (405/1038)        
+2023-06-22T23:39:52.5740665Z remote: Compressing objects:  40% (416/1038)        
+2023-06-22T23:39:52.5741018Z remote: Compressing objects:  41% (426/1038)        
+2023-06-22T23:39:52.5741347Z remote: Compressing objects:  42% (436/1038)        
+2023-06-22T23:39:52.5741696Z remote: Compressing objects:  43% (447/1038)        
+2023-06-22T23:39:52.5742168Z remote: Compressing objects:  44% (457/1038)        
+2023-06-22T23:39:52.5742540Z remote: Compressing objects:  45% (468/1038)        
+2023-06-22T23:39:52.5742871Z remote: Compressing objects:  46% (478/1038)        
+2023-06-22T23:39:52.5743216Z remote: Compressing objects:  47% (488/1038)        
+2023-06-22T23:39:52.5743560Z remote: Compressing objects:  48% (499/1038)        
+2023-06-22T23:39:52.5743886Z remote: Compressing objects:  49% (509/1038)        
+2023-06-22T23:39:52.5744231Z remote: Compressing objects:  50% (519/1038)        
+2023-06-22T23:39:52.5744588Z remote: Compressing objects:  51% (530/1038)        
+2023-06-22T23:39:52.5744919Z remote: Compressing objects:  52% (540/1038)        
+2023-06-22T23:39:52.5745266Z remote: Compressing objects:  53% (551/1038)        
+2023-06-22T23:39:52.5745608Z remote: Compressing objects:  54% (561/1038)        
+2023-06-22T23:39:52.5745936Z remote: Compressing objects:  55% (571/1038)        
+2023-06-22T23:39:52.5746278Z remote: Compressing objects:  56% (582/1038)        
+2023-06-22T23:39:52.5746978Z remote: Compressing objects:  57% (592/1038)        
+2023-06-22T23:39:52.5747323Z remote: Compressing objects:  58% (603/1038)        
+2023-06-22T23:39:52.5747652Z remote: Compressing objects:  59% (613/1038)        
+2023-06-22T23:39:52.5748002Z remote: Compressing objects:  60% (623/1038)        
+2023-06-22T23:39:52.5748342Z remote: Compressing objects:  61% (634/1038)        
+2023-06-22T23:39:52.5748668Z remote: Compressing objects:  62% (644/1038)        
+2023-06-22T23:39:52.5749025Z remote: Compressing objects:  63% (654/1038)        
+2023-06-22T23:39:52.5749371Z remote: Compressing objects:  64% (665/1038)        
+2023-06-22T23:39:52.5749887Z remote: Compressing objects:  65% (675/1038)        
+2023-06-22T23:39:52.5750238Z remote: Compressing objects:  66% (686/1038)        
+2023-06-22T23:39:52.5750581Z remote: Compressing objects:  67% (696/1038)        
+2023-06-22T23:39:52.5750924Z remote: Compressing objects:  68% (706/1038)        
+2023-06-22T23:39:52.5754088Z remote: Compressing objects:  69% (717/1038)        
+2023-06-22T23:39:52.5763536Z remote: Compressing objects:  70% (727/1038)        
+2023-06-22T23:39:52.5764519Z remote: Compressing objects:  71% (737/1038)        
+2023-06-22T23:39:52.5765029Z remote: Compressing objects:  72% (748/1038)        
+2023-06-22T23:39:52.5765734Z remote: Compressing objects:  73% (758/1038)        
+2023-06-22T23:39:52.5766293Z remote: Compressing objects:  74% (769/1038)        
+2023-06-22T23:39:52.5768707Z remote: Compressing objects:  75% (779/1038)        
+2023-06-22T23:39:52.5769636Z remote: Compressing objects:  76% (789/1038)        
+2023-06-22T23:39:52.5770328Z remote: Compressing objects:  77% (800/1038)        
+2023-06-22T23:39:52.5770922Z remote: Compressing objects:  78% (810/1038)        
+2023-06-22T23:39:52.5771485Z remote: Compressing objects:  79% (821/1038)        
+2023-06-22T23:39:52.5771998Z remote: Compressing objects:  80% (831/1038)        
+2023-06-22T23:39:52.5773148Z remote: Compressing objects:  81% (841/1038)        
+2023-06-22T23:39:52.5773631Z remote: Compressing objects:  82% (852/1038)        
+2023-06-22T23:39:52.5774340Z remote: Compressing objects:  83% (862/1038)        
+2023-06-22T23:39:52.5774712Z remote: Compressing objects:  84% (872/1038)        
+2023-06-22T23:39:52.5775075Z remote: Compressing objects:  85% (883/1038)        
+2023-06-22T23:39:52.5775434Z remote: Compressing objects:  86% (893/1038)        
+2023-06-22T23:39:52.5775774Z remote: Compressing objects:  87% (904/1038)        
+2023-06-22T23:39:52.5776330Z remote: Compressing objects:  88% (914/1038)        
+2023-06-22T23:39:52.5776732Z remote: Compressing objects:  89% (924/1038)        
+2023-06-22T23:39:52.5777136Z remote: Compressing objects:  90% (935/1038)        
+2023-06-22T23:39:52.5790809Z remote: Compressing objects:  91% (945/1038)        
+2023-06-22T23:39:52.5890322Z remote: Compressing objects:  92% (955/1038)        
+2023-06-22T23:39:52.5891938Z remote: Compressing objects:  93% (966/1038)        
+2023-06-22T23:39:52.5892922Z remote: Compressing objects:  94% (976/1038)        
+2023-06-22T23:39:52.5893497Z remote: Compressing objects:  95% (987/1038)        
+2023-06-22T23:39:52.5894653Z remote: Compressing objects:  96% (997/1038)        
+2023-06-22T23:39:52.5895236Z remote: Compressing objects:  97% (1007/1038)        
+2023-06-22T23:39:52.5896254Z remote: Compressing objects:  98% (1018/1038)        
+2023-06-22T23:39:52.5896815Z remote: Compressing objects:  99% (1028/1038)        
+2023-06-22T23:39:52.5898328Z remote: Compressing objects: 100% (1038/1038)        
+2023-06-22T23:39:52.5898931Z remote: Compressing objects: 100% (1038/1038), done.        
+2023-06-22T23:39:52.6109679Z Receiving objects:   0% (1/32347)
+2023-06-22T23:39:52.6307635Z Receiving objects:   1% (324/32347)
+2023-06-22T23:39:52.6349103Z Receiving objects:   2% (647/32347)
+2023-06-22T23:39:52.6475328Z Receiving objects:   3% (971/32347)
+2023-06-22T23:39:52.6517609Z Receiving objects:   4% (1294/32347)
+2023-06-22T23:39:52.6550148Z Receiving objects:   5% (1618/32347)
+2023-06-22T23:39:52.6586399Z Receiving objects:   6% (1941/32347)
+2023-06-22T23:39:52.6630868Z Receiving objects:   7% (2265/32347)
+2023-06-22T23:39:52.6697154Z Receiving objects:   8% (2588/32347)
+[... 3683 lines removed by TriageCore ...]
+2023-06-22T23:40:06.0829245Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer-rules/3.0.0-M3/enforcer-rules-3.0.0-M3.pom (4.1 kB at 275 kB/s)
+2023-06-22T23:40:06.0972554Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
+2023-06-22T23:40:06.1164217Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom (1.2 kB at 50 kB/s)
+2023-06-22T23:40:06.1183920Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
+2023-06-22T23:40:06.1364124Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom (1.4 kB at 78 kB/s)
+2023-06-22T23:40:06.1521775Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/tools/linkage-checker-enforcer-rules/1.5.13/linkage-checker-enforcer-rules-1.5.13.jar
+2023-06-22T23:40:06.1543011Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.6.1/bcel-6.6.1.jar
+2023-06-22T23:40:06.1551535Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.6.3/maven-resolver-provider-3.6.3.jar
+2023-06-22T23:40:06.1615538Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/tools/dependencies/1.5.13/dependencies-1.5.13.jar
+2023-06-22T23:40:06.1628288Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-spi/1.4.1/maven-resolver-spi-1.4.1.jar
+2023-06-22T23:40:06.1706307Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-spi/1.4.1/maven-resolver-spi-1.4.1.jar (37 kB at 2.3 MB/s)
+2023-06-22T23:40:06.1711384Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-impl/1.4.1/maven-resolver-impl-1.4.1.jar
+2023-06-22T23:40:06.1803176Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/tools/dependencies/1.5.13/dependencies-1.5.13.jar (151 kB at 5.2 MB/s)
+2023-06-22T23:40:06.1807971Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/tools/linkage-checker-enforcer-rules/1.5.13/linkage-checker-enforcer-rules-1.5.13.jar (13 kB at 437 kB/s)
+2023-06-22T23:40:06.1809388Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar
+2023-06-22T23:40:06.1811918Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.29/slf4j-api-1.7.29.jar
+2023-06-22T23:40:06.1840865Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-impl/1.4.1/maven-resolver-impl-1.4.1.jar (181 kB at 6.5 MB/s)
+2023-06-22T23:40:06.1842183Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-transport-http/1.7.1/maven-resolver-transport-http-1.7.1.jar
+2023-06-22T23:40:06.1846508Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.6.3/maven-resolver-provider-3.6.3.jar (66 kB at 2.1 MB/s)
+2023-06-22T23:40:06.1847585Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar
+2023-06-22T23:40:06.1919854Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar (2.5 kB at 69 kB/s)
+2023-06-22T23:40:06.1925600Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-transport-file/1.7.1/maven-resolver-transport-file-1.7.1.jar
+2023-06-22T23:40:06.1949742Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.29/slf4j-api-1.7.29.jar (41 kB at 1.1 MB/s)
+2023-06-22T23:40:06.1955895Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-connector-basic/1.7.1/maven-resolver-connector-basic-1.7.1.jar
+2023-06-22T23:40:06.1958314Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-transport-http/1.7.1/maven-resolver-transport-http-1.7.1.jar (42 kB at 1.1 MB/s)
+2023-06-22T23:40:06.1959896Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar
+2023-06-22T23:40:06.2143324Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar (328 kB at 5.6 MB/s)
+2023-06-22T23:40:06.2148482Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/relaxng/jing/20181222/jing-20181222.jar
+2023-06-22T23:40:06.2169470Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar (780 kB at 13 MB/s)
+2023-06-22T23:40:06.2170782Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/saxon/Saxon-HE/9.6.0-4/Saxon-HE-9.6.0-4.jar
+2023-06-22T23:40:06.2230531Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-transport-file/1.7.1/maven-resolver-transport-file-1.7.1.jar (16 kB at 234 kB/s)
+2023-06-22T23:40:06.2232213Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar
+2023-06-22T23:40:06.2348831Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-connector-basic/1.7.1/maven-resolver-connector-basic-1.7.1.jar (46 kB at 579 kB/s)
+2023-06-22T23:40:06.2350342Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar
+2023-06-22T23:40:06.2567146Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar (109 kB at 1.1 MB/s)
+2023-06-22T23:40:06.2568729Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/isorelax/isorelax/20030108/isorelax-20030108.jar
+2023-06-22T23:40:06.2682235Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.6.1/bcel-6.6.1.jar (695 kB at 6.1 MB/s)
+2023-06-22T23:40:06.2683547Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+2023-06-22T23:40:06.2748642Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/relaxng/jing/20181222/jing-20181222.jar (764 kB at 6.4 MB/s)
+2023-06-22T23:40:06.2753174Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar
+2023-06-22T23:40:06.2764284Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/isorelax/isorelax/20030108/isorelax-20030108.jar (193 kB at 1.6 MB/s)
+2023-06-22T23:40:06.2776058Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.8.0/checker-qual-3.8.0.jar
+2023-06-22T23:40:06.2801156Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar (54 kB at 434 kB/s)
+2023-06-22T23:40:06.2802444Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.5.1/error_prone_annotations-2.5.1.jar
+2023-06-22T23:40:06.2871184Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.5.1/error_prone_annotations-2.5.1.jar (14 kB at 106 kB/s)
+2023-06-22T23:40:06.2872572Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/extra-enforcer-rules/1.3/extra-enforcer-rules-1.3.jar
+2023-06-22T23:40:06.2987282Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.8.0/checker-qual-3.8.0.jar (231 kB at 1.6 MB/s)
+2023-06-22T23:40:06.2989287Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.jar
+2023-06-22T23:40:06.3040177Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/xerces/xercesImpl/2.9.1/xercesImpl-2.9.1.jar (1.2 MB at 8.3 MB/s)
+2023-06-22T23:40:06.3041731Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar
+2023-06-22T23:40:06.3162780Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/extra-enforcer-rules/1.3/extra-enforcer-rules-1.3.jar (52 kB at 328 kB/s)
+2023-06-22T23:40:06.3164166Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.11/junit-4.11.jar
+2023-06-22T23:40:06.3173917Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar (195 kB at 1.2 MB/s)
+2023-06-22T23:40:06.3186788Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/2.2/maven-dependency-tree-2.2.jar (64 kB at 392 kB/s)
+2023-06-22T23:40:06.3188187Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2023-06-22T23:40:06.3190070Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+2023-06-22T23:40:06.3239928Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar (45 kB at 270 kB/s)
+2023-06-22T23:40:06.3241305Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.12/commons-codec-1.12.jar
+2023-06-22T23:40:06.3299501Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar (38 kB at 217 kB/s)
+2023-06-22T23:40:06.3301897Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.0/maven-common-artifact-filters-3.1.0.jar
+2023-06-22T23:40:06.3312742Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.11/junit-4.11.jar (245 kB at 1.4 MB/s)
+2023-06-22T23:40:06.3315781Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.jar
+2023-06-22T23:40:06.3385887Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.1.0/maven-common-artifact-filters-3.1.0.jar (61 kB at 336 kB/s)
+2023-06-22T23:40:06.3409793Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar
+2023-06-22T23:40:06.3541063Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.5/commons-io-2.5.jar (209 kB at 1.1 MB/s)
+2023-06-22T23:40:06.3548669Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.12/commons-codec-1.12.jar (340 kB at 1.7 MB/s)
+2023-06-22T23:40:06.3550079Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar
+2023-06-22T23:40:06.3557642Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.1.0/maven-shared-utils-3.1.0.jar (164 kB at 823 kB/s)
+2023-06-22T23:40:06.3560599Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar
+2023-06-22T23:40:06.3567089Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar
+2023-06-22T23:40:06.3660072Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar (52 kB at 252 kB/s)
+2023-06-22T23:40:06.3661957Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar
+2023-06-22T23:40:06.3663541Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar (49 kB at 234 kB/s)
+2023-06-22T23:40:06.3664682Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar
+2023-06-22T23:40:06.3672132Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.0/maven-model-3.0.jar (165 kB at 780 kB/s)
+2023-06-22T23:40:06.3675237Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar
+2023-06-22T23:40:06.3825285Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar (202 kB at 893 kB/s)
+2023-06-22T23:40:06.3826654Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.jar
+2023-06-22T23:40:06.4047424Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar (472 kB at 1.9 MB/s)
+2023-06-22T23:40:06.4048936Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar
+2023-06-22T23:40:06.4050113Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar (153 kB at 619 kB/s)
+2023-06-22T23:40:06.4051540Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar
+2023-06-22T23:40:06.4103919Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar (47 kB at 184 kB/s)
+2023-06-22T23:40:06.4105281Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar
+2023-06-22T23:40:06.4167482Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar (30 kB at 116 kB/s)
+2023-06-22T23:40:06.4168839Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar
+2023-06-22T23:40:06.4268132Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar (38 kB at 141 kB/s)
+2023-06-22T23:40:06.4269909Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar
+2023-06-22T23:40:06.4302100Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar (148 kB at 542 kB/s)
+2023-06-22T23:40:06.4303351Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar
+2023-06-22T23:40:06.4325447Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-aether-provider/3.0/maven-aether-provider-3.0.jar (51 kB at 186 kB/s)
+2023-06-22T23:40:06.4326675Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar
+2023-06-22T23:40:06.4356685Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/saxon/Saxon-HE/9.6.0-4/Saxon-HE-9.6.0-4.jar (4.2 MB at 15 MB/s)
+2023-06-22T23:40:06.4358145Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar
+2023-06-22T23:40:06.4394113Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.0/maven-core-3.0.jar (527 kB at 1.9 MB/s)
+2023-06-22T23:40:06.4395389Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar
+2023-06-22T23:40:06.4417608Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-jre/guava-30.1.1-jre.jar (2.9 MB at 10 MB/s)
+2023-06-22T23:40:06.4429999Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar (14 kB at 47 kB/s)
+2023-06-22T23:40:06.4431276Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar
+2023-06-22T23:40:06.4433651Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar
+2023-06-22T23:40:06.4444491Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar (74 kB at 258 kB/s)
+2023-06-22T23:40:06.4447520Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar
+2023-06-22T23:40:06.4462070Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar (108 kB at 372 kB/s)
+2023-06-22T23:40:06.4463425Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+2023-06-22T23:40:06.4500930Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.7.1/plexus-component-annotations-1.7.1.jar (4.3 kB at 15 kB/s)
+2023-06-22T23:40:06.4504573Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+2023-06-22T23:40:06.4517744Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar (29 kB at 97 kB/s)
+2023-06-22T23:40:06.4520720Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar
+2023-06-22T23:40:06.4526829Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar (46 kB at 156 kB/s)
+2023-06-22T23:40:06.4533458Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar (106 kB at 361 kB/s)
+2023-06-22T23:40:06.4535881Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer-api/3.0.0-M3/enforcer-api-3.0.0-M3.jar
+2023-06-22T23:40:06.4537387Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar (61 kB at 208 kB/s)
+2023-06-22T23:40:06.4539536Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer-rules/3.0.0-M3/enforcer-rules-3.0.0-M3.jar
+2023-06-22T23:40:06.4545747Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar
+2023-06-22T23:40:06.4647165Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar (263 kB at 855 kB/s)
+2023-06-22T23:40:06.4650013Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
+2023-06-22T23:40:06.4673190Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar (13 kB at 44 kB/s)
+2023-06-22T23:40:06.4676894Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.4.1/maven-resolver-util-1.4.1.jar
+2023-06-22T23:40:06.4746386Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer-api/3.0.0-M3/enforcer-api-3.0.0-M3.jar (12 kB at 37 kB/s)
+2023-06-22T23:40:06.4747756Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.4.1/maven-resolver-api-1.4.1.jar
+2023-06-22T23:40:06.4840959Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar (502 kB at 1.5 MB/s)
+2023-06-22T23:40:06.4843968Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-compat/3.0/maven-compat-3.0.jar
+2023-06-22T23:40:06.4864846Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.4.1/maven-resolver-util-1.4.1.jar (168 kB at 508 kB/s)
+2023-06-22T23:40:06.4867922Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar
+2023-06-22T23:40:06.4888913Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar (282 kB at 848 kB/s)
+2023-06-22T23:40:06.4950747Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.4.1/maven-resolver-api-1.4.1.jar (149 kB at 441 kB/s)
+2023-06-22T23:40:06.4952211Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer-rules/3.0.0-M3/enforcer-rules-3.0.0-M3.jar (107 kB at 317 kB/s)
+2023-06-22T23:40:06.4953852Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-beta-6/wagon-provider-api-1.0-beta-6.jar (53 kB at 157 kB/s)
+2023-06-22T23:40:06.5014657Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-compat/3.0/maven-compat-3.0.jar (285 kB at 828 kB/s)
+2023-06-22T23:40:07.6399280Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom
+2023-06-22T23:40:07.7050556Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom (5.6 kB at 84 kB/s)
+2023-06-22T23:40:07.7378196Z [INFO] Adding ignore: module-info
+2023-06-22T23:40:07.7378978Z [INFO] Adding ignore: META-INF/versions/*/module-info
+2023-06-22T23:40:07.7379634Z [INFO] Adding ignorable dependency: null:arrow-memory-unsafe:null
+2023-06-22T23:40:07.7380298Z [INFO]   Adding ignore: org.apache.arrow.memory.DefaultAllocationManagerFactory
+2023-06-22T23:40:07.8946546Z [WARNING] 
+2023-06-22T23:40:07.8947631Z Dependency convergence error for com.google.api:api-common:2.13.0 paths to dependency are:
+2023-06-22T23:40:07.8948250Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8948740Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8949239Z     +-com.google.api:api-common:2.13.0
+2023-06-22T23:40:07.8949595Z and
+2023-06-22T23:40:07.8950003Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8950527Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.8951030Z     +-com.google.api:api-common:2.1.5
+2023-06-22T23:40:07.8951366Z and
+2023-06-22T23:40:07.8951790Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8952584Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.8953093Z     +-com.google.api:api-common:2.1.5
+2023-06-22T23:40:07.8953446Z 
+2023-06-22T23:40:07.8953619Z [WARNING] 
+2023-06-22T23:40:07.8954386Z Dependency convergence error for com.google.auth:google-auth-library-oauth2-http:1.18.0 paths to dependency are:
+2023-06-22T23:40:07.8955014Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8955450Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8955966Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.8956358Z and
+2023-06-22T23:40:07.8957178Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8957646Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.8958399Z     +-com.google.auth:google-auth-library-oauth2-http:1.6.0
+2023-06-22T23:40:07.8958824Z and
+2023-06-22T23:40:07.8959247Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8959762Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.8960372Z     +-com.google.auth:google-auth-library-oauth2-http:1.6.0
+2023-06-22T23:40:07.8960711Z 
+2023-06-22T23:40:07.8960877Z [WARNING] 
+2023-06-22T23:40:07.8961552Z Dependency convergence error for com.google.auto.value:auto-value-annotations:1.10.1 paths to dependency are:
+2023-06-22T23:40:07.8962174Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8962644Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8963112Z     +-com.google.api:api-common:2.13.0
+2023-06-22T23:40:07.8963660Z       +-com.google.auto.value:auto-value-annotations:1.10.1
+2023-06-22T23:40:07.8964065Z and
+2023-06-22T23:40:07.8964489Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8964950Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8965525Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.8966153Z       +-com.google.auto.value:auto-value-annotations:1.10.1
+2023-06-22T23:40:07.8966556Z and
+2023-06-22T23:40:07.8966961Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8967477Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.8968047Z     +-com.google.auto.value:auto-value-annotations:1.9
+2023-06-22T23:40:07.8968446Z and
+2023-06-22T23:40:07.8968847Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8969378Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.8969985Z     +-com.google.auto.value:auto-value-annotations:1.9
+2023-06-22T23:40:07.8970308Z 
+2023-06-22T23:40:07.8970475Z [WARNING] 
+2023-06-22T23:40:07.8970915Z Dependency convergence error for com.google.api:gax:2.30.0 paths to dependency are:
+2023-06-22T23:40:07.8971483Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8972384Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8973321Z and
+2023-06-22T23:40:07.8973657Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8974257Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.8974659Z     +-com.google.api:gax:2.16.0
+2023-06-22T23:40:07.8974905Z and
+2023-06-22T23:40:07.8975245Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8975695Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.8976087Z     +-com.google.api:gax:2.16.0
+2023-06-22T23:40:07.8976271Z 
+2023-06-22T23:40:07.8976366Z [WARNING] 
+2023-06-22T23:40:07.8976978Z Dependency convergence error for com.google.auth:google-auth-library-credentials:1.18.0 paths to dependency are:
+2023-06-22T23:40:07.8977797Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8978179Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8978662Z     +-com.google.auth:google-auth-library-credentials:1.18.0
+2023-06-22T23:40:07.8978984Z and
+2023-06-22T23:40:07.8979332Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8979712Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.8980175Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.8980738Z       +-com.google.auth:google-auth-library-credentials:1.18.0
+2023-06-22T23:40:07.8981079Z and
+2023-06-22T23:40:07.8981415Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8981832Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.8982344Z     +-com.google.auth:google-auth-library-credentials:1.6.0
+2023-06-22T23:40:07.8982681Z and
+2023-06-22T23:40:07.8982999Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.8983443Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.8983966Z     +-com.google.auth:google-auth-library-credentials:1.6.0
+2023-06-22T23:40:07.8984227Z 
+2023-06-22T23:40:07.9073007Z [WARNING] Rule 3: org.apache.maven.plugins.enforcer.DependencyConvergence failed with message:
+2023-06-22T23:40:07.9074047Z Failed while enforcing releasability. See above detailed error message.
+2023-06-22T23:40:07.9075163Z [WARNING] Rule 4: org.apache.maven.plugins.enforcer.RequireUpperBoundDeps failed with message:
+2023-06-22T23:40:07.9075838Z Failed while enforcing RequireUpperBoundDeps. The error(s) are [
+2023-06-22T23:40:07.9077035Z Require upper bound dependencies error for com.google.guava:guava:31.1-jre paths to dependency are:
+2023-06-22T23:40:07.9077539Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9077881Z   +-com.google.guava:guava:31.1-jre
+2023-06-22T23:40:07.9078110Z and
+2023-06-22T23:40:07.9078376Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9078693Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9079146Z     +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:29.0-android
+2023-06-22T23:40:07.9079424Z and
+2023-06-22T23:40:07.9079703Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9080058Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9080733Z     +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:31.0.1-android
+2023-06-22T23:40:07.9081062Z and
+2023-06-22T23:40:07.9081379Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9081785Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9082317Z     +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:29.0-android
+2023-06-22T23:40:07.9082637Z and
+2023-06-22T23:40:07.9083000Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9083442Z   +-com.google.http-client:google-http-client:1.41.7
+2023-06-22T23:40:07.9083989Z     +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:30.1.1-android
+2023-06-22T23:40:07.9084326Z and
+2023-06-22T23:40:07.9084630Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9084981Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9085337Z     +-com.google.api:api-common:2.13.0
+2023-06-22T23:40:07.9085826Z       +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:32.0.1-jre
+2023-06-22T23:40:07.9086163Z and
+2023-06-22T23:40:07.9086478Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9086813Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9087269Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.9087844Z       +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:31.0.1-android
+2023-06-22T23:40:07.9088160Z and
+2023-06-22T23:40:07.9088477Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9088878Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9089479Z     +-com.google.protobuf:protobuf-java-util:3.19.6 (managed) <-- com.google.protobuf:protobuf-java-util:3.19.4
+2023-06-22T23:40:07.9090459Z       +-com.google.guava:guava:31.1-jre (managed) <-- com.google.guava:guava:30.1.1-android
+2023-06-22T23:40:07.9091080Z , 
+2023-06-22T23:40:07.9091667Z Require upper bound dependencies error for com.google.auto.value:auto-value-annotations:1.9 paths to dependency are:
+2023-06-22T23:40:07.9092282Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9092776Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9093311Z     +-com.google.auto.value:auto-value-annotations:1.9
+2023-06-22T23:40:07.9093692Z and
+2023-06-22T23:40:07.9094963Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9095414Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9095878Z     +-com.google.auto.value:auto-value-annotations:1.9
+2023-06-22T23:40:07.9096162Z and
+2023-06-22T23:40:07.9096478Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9096832Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9097178Z     +-com.google.api:api-common:2.13.0
+2023-06-22T23:40:07.9097631Z       +-com.google.auto.value:auto-value-annotations:1.10.1
+2023-06-22T23:40:07.9097939Z and
+2023-06-22T23:40:07.9098254Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9098592Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9099042Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.9099869Z       +-com.google.auto.value:auto-value-annotations:1.10.1
+2023-06-22T23:40:07.9100119Z , 
+2023-06-22T23:40:07.9100629Z Require upper bound dependencies error for com.google.api.grpc:proto-google-common-protos:2.8.4 paths to dependency are:
+2023-06-22T23:40:07.9101109Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9101407Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9102010Z     +-com.google.api.grpc:proto-google-common-protos:2.8.4 (managed) <-- com.google.api.grpc:proto-google-common-protos:2.21.0
+2023-06-22T23:40:07.9102396Z and
+2023-06-22T23:40:07.9102680Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9103020Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9103612Z     +-com.google.api.grpc:proto-google-common-protos:2.8.4 (managed) <-- com.google.api.grpc:proto-google-common-protos:2.8.3
+2023-06-22T23:40:07.9103989Z and
+2023-06-22T23:40:07.9104254Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9104618Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9105208Z     +-com.google.api.grpc:proto-google-common-protos:2.8.4 (managed) <-- com.google.api.grpc:proto-google-common-protos:2.8.0
+2023-06-22T23:40:07.9105590Z and
+2023-06-22T23:40:07.9105853Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9106415Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9106859Z     +-com.google.api.grpc:proto-google-iam-v1:1.3.1
+2023-06-22T23:40:07.9107540Z       +-com.google.api.grpc:proto-google-common-protos:2.8.4 (managed) <-- com.google.api.grpc:proto-google-common-protos:2.8.0
+2023-06-22T23:40:07.9107978Z , 
+2023-06-22T23:40:07.9108506Z Require upper bound dependencies error for com.google.protobuf:protobuf-java:3.19.6 paths to dependency are:
+2023-06-22T23:40:07.9108996Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9109360Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9109753Z     +-com.google.protobuf:protobuf-java:3.19.6
+2023-06-22T23:40:07.9110033Z and
+2023-06-22T23:40:07.9110341Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9110747Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9111326Z     +-com.google.protobuf:protobuf-java:3.19.6 (managed) <-- com.google.protobuf:protobuf-java:3.19.4
+2023-06-22T23:40:07.9111681Z and
+2023-06-22T23:40:07.9111999Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9112413Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9113201Z     +-com.google.protobuf:protobuf-java:3.19.6 (managed) <-- com.google.protobuf:protobuf-java:3.19.4
+2023-06-22T23:40:07.9113589Z and
+2023-06-22T23:40:07.9113927Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9114291Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9115142Z     +-com.google.api.grpc:proto-google-common-protos:2.8.4 (managed) <-- com.google.api.grpc:proto-google-common-protos:2.21.0
+2023-06-22T23:40:07.9115944Z       +-com.google.protobuf:protobuf-java:3.19.6 (managed) <-- com.google.protobuf:protobuf-java:3.23.2
+2023-06-22T23:40:07.9116352Z and
+2023-06-22T23:40:07.9116678Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9117117Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9117777Z     +-com.google.protobuf:protobuf-java-util:3.19.6 (managed) <-- com.google.protobuf:protobuf-java-util:3.19.4
+2023-06-22T23:40:07.9118508Z       +-com.google.protobuf:protobuf-java:3.19.6 (managed) <-- com.google.protobuf:protobuf-java:3.23.2
+2023-06-22T23:40:07.9118903Z and
+2023-06-22T23:40:07.9119246Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9119666Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9120140Z     +-com.google.api.grpc:proto-google-iam-v1:1.3.1
+2023-06-22T23:40:07.9120791Z       +-com.google.protobuf:protobuf-java:3.19.6 (managed) <-- com.google.protobuf:protobuf-java:3.19.4
+2023-06-22T23:40:07.9121169Z , 
+2023-06-22T23:40:07.9121559Z Require upper bound dependencies error for org.threeten:threetenbp:1.6.0 paths to dependency are:
+2023-06-22T23:40:07.9122185Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9122568Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9123069Z     +-org.threeten:threetenbp:1.6.0 (managed) <-- org.threeten:threetenbp:1.6.8
+2023-06-22T23:40:07.9123414Z and
+2023-06-22T23:40:07.9123750Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9124172Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9124711Z     +-org.threeten:threetenbp:1.6.0 (managed) <-- org.threeten:threetenbp:1.6.8
+2023-06-22T23:40:07.9125061Z and
+2023-06-22T23:40:07.9125386Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9125837Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9126386Z     +-org.threeten:threetenbp:1.6.0 (managed) <-- org.threeten:threetenbp:1.6.8
+2023-06-22T23:40:07.9126723Z , 
+2023-06-22T23:40:07.9127270Z Require upper bound dependencies error for io.opencensus:opencensus-api:0.31.0 paths to dependency are:
+2023-06-22T23:40:07.9127789Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9128163Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9128710Z     +-io.opencensus:opencensus-api:0.31.0 (managed) <-- io.opencensus:opencensus-api:0.31.1
+2023-06-22T23:40:07.9129078Z and
+2023-06-22T23:40:07.9129418Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9129848Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9130432Z     +-io.opencensus:opencensus-api:0.31.0 (managed) <-- io.opencensus:opencensus-api:0.31.1
+2023-06-22T23:40:07.9130800Z and
+2023-06-22T23:40:07.9131120Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9131594Z   +-com.google.http-client:google-http-client:1.41.7
+2023-06-22T23:40:07.9132205Z     +-io.opencensus:opencensus-api:0.31.0 (managed) <-- io.opencensus:opencensus-api:0.31.1
+2023-06-22T23:40:07.9132567Z , 
+2023-06-22T23:40:07.9133165Z Require upper bound dependencies error for com.google.http-client:google-http-client:1.41.7 paths to dependency are:
+2023-06-22T23:40:07.9133724Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9135469Z   +-com.google.http-client:google-http-client:1.41.7
+2023-06-22T23:40:07.9135794Z and
+2023-06-22T23:40:07.9136133Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9136571Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9137244Z     +-com.google.http-client:google-http-client:1.41.7 (managed) <-- com.google.http-client:google-http-client:1.42.3
+2023-06-22T23:40:07.9137684Z and
+2023-06-22T23:40:07.9138025Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9138459Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9139150Z     +-com.google.http-client:google-http-client:1.41.7 (managed) <-- com.google.http-client:google-http-client:1.42.3
+2023-06-22T23:40:07.9139756Z and
+2023-06-22T23:40:07.9140088Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9140468Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9140957Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.9141683Z       +-com.google.http-client:google-http-client:1.41.7 (managed) <-- com.google.http-client:google-http-client:1.42.3
+2023-06-22T23:40:07.9142132Z and
+2023-06-22T23:40:07.9142476Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9142926Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9143438Z     +-com.google.http-client:google-http-client-gson:1.41.7
+2023-06-22T23:40:07.9144174Z       +-com.google.http-client:google-http-client:1.41.7 (managed) <-- com.google.http-client:google-http-client:1.42.3
+2023-06-22T23:40:07.9144616Z , 
+2023-06-22T23:40:07.9145209Z Require upper bound dependencies error for com.google.http-client:google-http-client-gson:1.41.7 paths to dependency are:
+2023-06-22T23:40:07.9145794Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9146225Z   +-com.google.cloud:google-cloud-core:2.6.0
+2023-06-22T23:40:07.9146719Z     +-com.google.http-client:google-http-client-gson:1.41.7
+2023-06-22T23:40:07.9147050Z and
+2023-06-22T23:40:07.9147389Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9147974Z   +-com.google.cloud:google-cloud-storage:2.6.2
+2023-06-22T23:40:07.9148703Z     +-com.google.http-client:google-http-client-gson:1.41.7 (managed) <-- com.google.http-client:google-http-client-gson:1.42.3
+2023-06-22T23:40:07.9149167Z and
+2023-06-22T23:40:07.9149507Z +-net.snowflake:snowflake-jdbc:3.13.33
+2023-06-22T23:40:07.9149870Z   +-com.google.api:gax:2.30.0
+2023-06-22T23:40:07.9150355Z     +-com.google.auth:google-auth-library-oauth2-http:1.18.0
+2023-06-22T23:40:07.9151126Z       +-com.google.http-client:google-http-client-gson:1.41.7 (managed) <-- com.google.http-client:google-http-client-gson:1.42.3
+2023-06-22T23:40:07.9151575Z ]
+2023-06-22T23:40:07.9178433Z [INFO] ------------------------------------------------------------------------
+2023-06-22T23:40:07.9178887Z [INFO] BUILD FAILURE
+2023-06-22T23:40:07.9179366Z [INFO] ------------------------------------------------------------------------
+2023-06-22T23:40:07.9179752Z [INFO] Total time:  11.934 s
+2023-06-22T23:40:07.9180162Z [INFO] Finished at: 2023-06-22T23:40:07Z
+2023-06-22T23:40:07.9180669Z [INFO] ------------------------------------------------------------------------
+2023-06-22T23:40:07.9244437Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-enforcer-plugin:3.0.0-M3:enforce (enforce-best-practices) on project snowflake-jdbc: Some Enforcer rules have failed. Look above for specific messages explaining why the rule failed. -> [Help 1]
+2023-06-22T23:40:07.9246416Z [ERROR] 
+2023-06-22T23:40:07.9250309Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-22T23:40:07.9251866Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-22T23:40:07.9255377Z [ERROR] 
+2023-06-22T23:40:07.9256295Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-22T23:40:07.9258321Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2023-06-22T23:40:07.9667423Z ##[error]Process completed with exit code 1.
+
+2023-06-22T23:40:07.9869201Z Cleaning up orphan processes
+
+2023-06-22T23:39:49.9738463Z Current runner version: '2.305.0'
+2023-06-22T23:39:49.9769604Z ##[group]Operating System
+2023-06-22T23:39:49.9770198Z Ubuntu
+2023-06-22T23:39:49.9770526Z 20.04.6
+2023-06-22T23:39:49.9770806Z LTS
+2023-06-22T23:39:49.9771274Z ##[endgroup]
+2023-06-22T23:39:49.9771591Z ##[group]Runner Image
+2023-06-22T23:39:49.9771999Z Image: ubuntu-20.04
+2023-06-22T23:39:49.9772400Z Version: 20230619.1.0
+2023-06-22T23:39:49.9772940Z Included Software: https://github.com/actions/runner-images/blob/ubuntu20/20230619.1.0/images/linux/Ubuntu2004-Readme.md
+2023-06-22T23:39:49.9773696Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu20%2F20230619.1.0
+2023-06-22T23:39:49.9774508Z ##[endgroup]
+2023-06-22T23:39:49.9774905Z ##[group]Runner Image Provisioner
+2023-06-22T23:39:49.9775333Z 2.0.238.1
+2023-06-22T23:39:49.9775660Z ##[endgroup]
+2023-06-22T23:39:49.9776397Z ##[group]GITHUB_TOKEN Permissions
+2023-06-22T23:39:49.9777213Z Contents: read
+2023-06-22T23:39:49.9777644Z Metadata: read
+2023-06-22T23:39:49.9778381Z Packages: read
+2023-06-22T23:39:49.9778775Z ##[endgroup]
+2023-06-22T23:39:49.9783026Z Secret source: Actions
+2023-06-22T23:39:49.9783582Z Prepare workflow directory
+2023-06-22T23:39:50.0665957Z Prepare all required actions
+2023-06-22T23:39:50.0897456Z Getting action download info
+2023-06-22T23:39:50.3658064Z Download action repository 'actions/checkout@v1' (SHA:50fbc622fc4ef5163becd7fab6573eac35f8462e)
+2023-06-22T23:39:51.0014943Z Complete job name: Check Style

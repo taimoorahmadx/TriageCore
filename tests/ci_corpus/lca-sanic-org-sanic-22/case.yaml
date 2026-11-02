@@ -1,0 +1,144 @@
+repo: sanic-org/sanic
+run_id: '22'
+head_sha: 2e41e783672597e2e0c7b2842b5934d879374028
+run_attempts: []
+commits:
+- sha: 2e41e783672597e2e0c7b2842b5934d879374028
+  author: iAndriy
+  files:
+  - .github/workflows/tests.yml
+  - sanic/compat.py
+  - tox.ini
+- sha: d0bbcf55d540e8d4c9d8bb1108384d8545355fcb
+  author: prryplatypus
+  files:
+  - .github/workflows/publish-release.yml
+- sha: 25212fcda824823204e9b9a8cf3fefb87ff39f7d
+  author: ahopkins
+  files:
+  - Makefile
+  - guide/content/en/guide/running/development.md
+  - guide/public/assets/images/repl.png
+  - sanic/__version__.py
+  - sanic/cli/app.py
+  - sanic/cli/arguments.py
+  - sanic/cli/console.py
+  - sanic/models/server_types.py
+  - sanic/response/types.py
+  - tests/test_cli.py
+  - tests/test_ext_integration.py
+  - tests/test_request_data.py
+  - tests/test_requests.py
+  - tests/test_response.py
+  - tests/test_static.py
+  - tests/test_tls.py
+  - tests/typing/samples/app_custom_config.py
+  - tests/typing/samples/app_custom_ctx.py
+  - tests/typing/samples/app_fully_custom.py
+  - tox.ini
+- sha: 6d28dc285a6c3097a54c617cebb32205438243d2
+  author: iAndriy
+  files:
+  - Makefile
+  - tests/conftest.py
+  - tests/performance/sanic/http_response.py
+  - tests/performance/sanic/varied_server.py
+  - tests/test_asgi.py
+  - tests/test_blueprint_copy.py
+  - tests/test_blueprint_group.py
+  - tests/test_cancellederror.py
+  - tests/test_cookies.py
+  - tests/test_errorpages.py
+  - tests/test_exceptions_handler.py
+  - tests/test_ext_integration.py
+  - tests/test_headers.py
+  - tests/test_multiprocessing.py
+  - tests/test_reloader.py
+  - tests/test_request_data.py
+  - tests/test_request_stream.py
+  - tests/test_requests.py
+  - tests/test_response.py
+  - tests/test_response_timeout.py
+  - tests/test_routes.py
+  - tests/test_server_events.py
+  - tests/test_signals.py
+  - tests/test_static.py
+  - tests/test_tls.py
+  - tests/test_url_building.py
+  - tests/test_ws_handlers.py
+  - tests/typing/samples/app_custom_config.py
+  - tests/typing/samples/app_custom_ctx.py
+  - tests/typing/samples/app_default.py
+  - tests/typing/samples/app_fully_custom.py
+  - tests/typing/samples/request_custom_ctx.py
+  - tests/typing/samples/request_custom_sanic.py
+  - tests/typing/samples/request_fully_custom.py
+  - tests/typing/test_typing.py
+  - tests/worker/test_runner.py
+  - tests/worker/test_startup.py
+- sha: 78c44ed5e4947833df3f5a73fa966881bcdebd9f
+  author: ChihweiLHBird
+  files:
+  - sanic/server/protocols/websocket_protocol.py
+  - tests/test_ws_handlers.py
+- sha: 0663f11d2096db133c1c963c66fd070f2ada1fea
+  author: ahopkins
+  files:
+  - guide/content/en/guide/running/manager.md
+  - guide/webapp/endpoint/search.py
+  - guide/webapp/worker/factory.py
+  - sanic/mixins/startup.py
+  - tests/worker/test_startup.py
+- sha: 82bf46bea3b55e6b1371107cccda280add8e70eb
+  author: ahopkins
+  files:
+  - guide/content/en/guide/basics/handlers.md
+  - guide/content/en/guide/basics/listeners.md
+  - guide/public/assets/style.css
+  - guide/style/general.scss
+  - guide/webapp/display/markdown.py
+  - guide/webapp/display/page/docobject.py
+  - guide/webapp/display/plugins/inline_directive.py
+  - sanic/app.py
+  - sanic/blueprints.py
+  - sanic/mixins/listeners.py
+  - sanic/mixins/signals.py
+  - sanic/models/futures.py
+  - sanic/router.py
+  - sanic/signals.py
+  - setup.py
+  - tests/test_server_events.py
+- sha: 160ec7ae19ade25bbc8d2417ffd66f78c03b8de5
+  author: Tronic
+  files:
+  - sanic/app.py
+  - sanic/request/types.py
+  - tests/test_ws_handlers.py
+- sha: 5f0787b8804ae5a72b4265a1aba29ef515330334
+  author: talljosh
+  files:
+  - sanic/app.py
+  - sanic/blueprints.py
+  - sanic/mixins/signals.py
+  - sanic/signals.py
+  - tests/test_signals.py
+- sha: 4499d2c47e0ff54c36def0636226e7a2159e2386
+  author: ahopkins
+  files:
+  - sanic/app.py
+  - sanic/mixins/startup.py
+  - sanic/server/goodbye.py
+  - sanic/server/runners.py
+  - sanic/worker/manager.py
+  - sanic/worker/multiplexer.py
+  - sanic/worker/process.py
+  - tests/test_headers.py
+  - tests/test_static.py
+  - tests/typing/samples/request_custom_sanic.py
+  - tests/worker/test_reloader.py
+  - tests/worker/test_runner.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

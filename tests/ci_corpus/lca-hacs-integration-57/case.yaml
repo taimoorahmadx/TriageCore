@@ -1,0 +1,111 @@
+repo: hacs/integration
+run_id: '57'
+head_sha: 5b9b7a0f0f73cc0257f1b41b4904dc9056e9baa1
+run_attempts: []
+commits:
+- sha: 5b9b7a0f0f73cc0257f1b41b4904dc9056e9baa1
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/conftest.py
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/branches/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/contents/hacs.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/git/trees/1.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/git/trees/2.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/git/trees/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/theme-basic/releases.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/theme-basic/1.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/theme-basic/1.0.0/themes/example.yaml
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/theme-basic/2.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/theme-basic/2.0.0/themes/example.yaml
+  - tests/output/proxy_calls.json
+  - tests/repositories/test_download_repository.py
+  - tests/repositories/test_update_repository.py
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_websocket.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_download_repository.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_update_repository_websocket.json
+  - tests/snapshots/hacs-test-org/template-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/template-basic/test_update_repository_websocket.json
+  - tests/snapshots/hacs-test-org/theme-basic/test_download_repository.json
+  - tests/snapshots/hacs-test-org/theme-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/theme-basic/test_update_repository_websocket.json
+- sha: 86d6ea97a0d2fa9c8148b9816934e2a3dfb8b068
+  author: ludeeus
+  files:
+  - tests/common.py
+- sha: bde7e41d82532e1fcecb733cfe9b1f0c2bd9ac1e
+  author: ludeeus
+  files:
+  - tests/repositories/test_download_repository.py
+  - tests/repositories/test_register_repository.py
+- sha: 153b08c16f5c0b041902f55029f81e4b1ce564cd
+  author: ludeeus
+  files:
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/branches/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/contents/hacs.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/git/trees/1.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/git/trees/2.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/git/trees/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-basic/releases.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/branches/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/contents/hacs.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/git/trees/1.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/git/trees/2.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/git/trees/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/plugin-custom-dist/releases.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/plugin-basic/1.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/plugin-basic/1.0.0/plugin-basic.js
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/plugin-basic/2.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/plugin-basic/2.0.0/plugin-basic.js
+  - tests/output/proxy_calls.json
+  - tests/repositories/test_download_repository.py
+  - tests/repositories/test_register_repository.py
+  - tests/repositories/test_update_repository.py
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_websocket.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_download_repository.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/plugin-basic/test_update_repository_websocket.json
+  - tests/snapshots/hacs-test-org/plugin-custom-dist/test_register_repository.json
+  - tests/snapshots/hacs-test-org/template-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/template-basic/test_update_repository_websocket.json
+- sha: 74340d631d4b95c64bfbb1245bac7cbda9b346de
+  author: ludeeus
+  files:
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/integration-basic/contents/custom_components/example/manifest.json
+  - tests/repositories/test_integration_class.py
+  - tests/snapshots/hacs-test-org/integration-basic/test_download_repository.json
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/integration-basic/test_update_repository_websocket.json
+- sha: 9c40f9d8643e2be406fc0235a7b3c1306a84204e
+  author: ludeeus
+  files:
+  - action/Dockerfile
+  - custom_components/hacs/config_flow.py
+  - requirements_base.txt
+- sha: cf674b6399d10762d2c25a80a3e933149a63841a
+  author: ludeeus
+  files:
+  - action/Dockerfile
+- sha: 0ce29342301690d9352f202442edf7739ee2e7a3
+  author: ludeeus
+  files:
+  - custom_components/hacs/config_flow.py
+- sha: b92ea24f1deff8218d3e98dbd5f603dce936627a
+  author: ludeeus
+  files:
+  - requirements_base.txt
+- sha: 375eb74a8573c0445ec97b2b81b8d6fb54a923a7
+  author: ludeeus
+  files:
+  - tests/conftest.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

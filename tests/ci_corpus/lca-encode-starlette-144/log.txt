@@ -1,0 +1,141 @@
+===== Python 3.9/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.9.18, pytest-7.4.4, pluggy-1.3.0
+rootdir: /home/runner/work/starlette/starlette
+configfile: pyproject.toml
+plugins: anyio-4.2.0
+collected 783 items
+
+tests/test__utils.py ......                                              [  0%]
+tests/test_applications.py ............................................. [  6%]
+...                                                                      [  6%]
+tests/test_authentication.py ...........                                 [  8%]
+tests/test_background.py ........                                        [  9%]
+tests/test_concurrency.py ......                                         [ 10%]
+tests/test_config.py .....                                               [ 10%]
+tests/test_convertors.py ......                                          [ 11%]
+tests/test_datastructures.py ..............................              [ 15%]
+tests/test_endpoints.py ....................                             [ 17%]
+tests/test_exceptions.py .....................                           [ 20%]
+tests/test_formparsers.py .............................................. [ 26%]
+......................                                                   [ 29%]
+tests/test_requests.py ................................................. [ 35%]
+..............................                                           [ 39%]
+tests/test_responses.py ...................F............................ [ 45%]
+.....F..............                                                     [ 48%]
+tests/test_routing.py .................................................. [ 54%]
+.......................................                                  [ 59%]
+tests/test_schemas.py ...                                                [ 59%]
+tests/test_staticfiles.py .............................................. [ 65%]
+......                                                                   [ 66%]
+tests/test_status.py ..                                                  [ 66%]
+tests/test_templates.py .......................                          [ 69%]
+tests/test_testclient.py ...........x..................x........         [ 74%]
+tests/test_websockets.py ............................................... [ 80%]
+....................                                                     [ 83%]
+tests/middleware/test_base.py .....x......................x............. [ 88%]
+.....                                                                    [ 89%]
+tests/middleware/test_cors.py ..............................             [ 92%]
+tests/middleware/test_errors.py ............                             [ 94%]
+tests/middleware/test_gzip.py ..........                                 [ 95%]
+tests/middleware/test_https_redirect.py ..                               [ 96%]
+tests/middleware/test_middleware.py ..                                   [ 96%]
+tests/middleware/test_session.py ..............                          [ 98%]
+tests/middleware/test_trusted_host.py .....                              [ 98%]
+tests/middleware/test_wsgi.py ..........                                 [100%]
+
+=================================== FAILURES ===================================
+__________________ test_file_response_with_pathsend[asyncio] ___________________
+
+tmpdir = local('/tmp/pytest-of-runner/pytest-0/test_file_response_with_pathse0')
+
+    @pytest.mark.anyio
+    async def test_file_response_with_pathsend(tmpdir: Path):
+        path = os.path.join(tmpdir, "xyz")
+        content = b"<file content>" * 1000
+        with open(path, "wb") as file:
+            file.write(content)
+    
+        app = FileResponse(path=path, filename="example.png")
+    
+        async def receive() -> Message:  # type: ignore[empty-body]
+            ...  # pragma: no cover
+    
+        async def send(message: Message) -> None:
+            if message["type"] == "http.response.start":
+                assert message["status"] == status.HTTP_200_OK
+                headers = Headers(raw=message["headers"])
+                assert headers["content-type"] == "image/png"
+                assert "content-length" in headers
+                assert "content-disposition" in headers
+                assert "last-modified" in headers
+                assert "etag" in headers
+            elif message["type"] == "http.response.pathsend":
+                assert message["path"] == str(path)
+    
+        # Since the TestClient doesn't support `pathsend`, we need to test this directly.
+        await app(
+>           {"type": "http", "method": "get", "extensions": {"http.response.pathsend", {}}},
+            receive,
+            send,
+        )
+E       TypeError: unhashable type: 'dict'
+
+tests/test_responses.py:358: TypeError
+____________________ test_file_response_with_pathsend[trio] ____________________
+
+tmpdir = local('/tmp/pytest-of-runner/pytest-0/test_file_response_with_pathse1')
+
+    @pytest.mark.anyio
+    async def test_file_response_with_pathsend(tmpdir: Path):
+        path = os.path.join(tmpdir, "xyz")
+        content = b"<file content>" * 1000
+        with open(path, "wb") as file:
+            file.write(content)
+    
+        app = FileResponse(path=path, filename="example.png")
+    
+        async def receive() -> Message:  # type: ignore[empty-body]
+            ...  # pragma: no cover
+    
+        async def send(message: Message) -> None:
+            if message["type"] == "http.response.start":
+                assert message["status"] == status.HTTP_200_OK
+                headers = Headers(raw=message["headers"])
+                assert headers["content-type"] == "image/png"
+                assert "content-length" in headers
+                assert "content-disposition" in headers
+                assert "last-modified" in headers
+                assert "etag" in headers
+            elif message["type"] == "http.response.pathsend":
+                assert message["path"] == str(path)
+    
+        # Since the TestClient doesn't support `pathsend`, we need to test this directly.
+        await app(
+>           {"type": "http", "method": "get", "extensions": {"http.response.pathsend", {}}},
+            receive,
+            send,
+        )
+E       TypeError: unhashable type: 'dict'
+
+tests/test_responses.py:358: TypeError
+=========================== short test summary info ============================
+XFAIL tests/test_testclient.py::test_domain_restricted_cookies[asyncio-testserver-True] - Fails due to domain handling in http.cookiejar module (see #2152)
+XFAIL tests/test_testclient.py::test_domain_restricted_cookies[trio-testserver-True] - Fails due to domain handling in http.cookiejar module (see #2152)
+XFAIL tests/middleware/test_base.py::test_contextvars[asyncio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+XFAIL tests/middleware/test_base.py::test_contextvars[trio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+================== 2 failed, 777 passed, 4 xfailed in 12.71s ===================
+##[error]Process completed with exit code 1.

@@ -1,0 +1,109 @@
+repo: huggingface/diffusers
+run_id: '4'
+head_sha: 2c06ffa4c9d2c37846c60ad75899b4d72f214ff9
+run_attempts: []
+commits:
+- sha: 2c06ffa4c9d2c37846c60ad75899b4d72f214ff9
+  author: fabiorigano
+  files:
+  - .github/ISSUE_TEMPLATE/config.yml
+  - .github/PULL_REQUEST_TEMPLATE.md
+  - docs/source/en/_toctree.yml
+  - docs/source/en/api/loaders/peft.md
+  - docs/source/en/api/pipelines/stable_diffusion/k_diffusion.md
+  - docs/source/en/tutorials/fast_diffusion.md
+  - docs/source/en/using-diffusers/callback.md
+  - docs/source/en/using-diffusers/inpaint.md
+  - docs/source/en/using-diffusers/svd.md
+  - docs/source/ja/_toctree.yml
+  - docs/source/ja/index.md
+  - docs/source/ja/tutorials/tutorial_overview.md
+  - examples/community/README.md
+  - examples/community/rerender_a_video.py
+  - examples/dreambooth/train_dreambooth_lora_sdxl.py
+  - examples/research_projects/instructpix2pix_lora/README.md
+  - examples/research_projects/instructpix2pix_lora/train_instruct_pix2pix_lora.py
+  - examples/textual_inversion/README.md
+  - examples/textual_inversion/README_sdxl.md
+  - examples/textual_inversion/test_textual_inversion_sdxl.py
+  - examples/textual_inversion/textual_inversion_sdxl.py
+  - src/diffusers/__init__.py
+  - src/diffusers/loaders/peft.py
+  - src/diffusers/models/resnet.py
+  - src/diffusers/models/unet_2d_blocks.py
+  - src/diffusers/pipelines/__init__.py
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet_sd_xl_img2img.py
+  - src/diffusers/pipelines/deprecated/versatile_diffusion/modeling_text_unet.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/pipeline_stable_diffusion_k_diffusion.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/pipeline_stable_diffusion_xl_k_diffusion.py
+  - src/diffusers/pipelines/stable_diffusion_sag/pipeline_stable_diffusion_sag.py
+  - src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py
+  - src/diffusers/utils/dummy_torch_and_transformers_and_k_diffusion_objects.py
+  - tests/pipelines/controlnet/test_controlnet_sdxl_img2img.py
+  - tests/pipelines/stable_diffusion/test_stable_diffusion_sag.py
+  - tests/pipelines/stable_diffusion_xl/test_stable_diffusion_xl_k_diffusion.py
+- sha: 529e968d7206413ff477ea42dc13624a68c52b9f
+  author: fabiorigano
+  files:
+  - docs/source/en/using-diffusers/loading_adapters.md
+  - examples/community/README.md
+  - examples/community/ip_adapter_face_id.py
+  - src/diffusers/loaders/ip_adapter.py
+  - src/diffusers/loaders/unet.py
+  - src/diffusers/models/attention_processor.py
+  - src/diffusers/models/embeddings.py
+  - src/diffusers/models/unet_2d_condition.py
+  - src/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion.py
+  - src/diffusers/utils/constants.py
+  - tests/pipelines/ip_adapters/test_ip_adapter_stable_diffusion.py
+- sha: a551ddf928f02419432263f39dc0109b74f004f7
+  author: stevhliu
+  files:
+  - docs/source/en/using-diffusers/inpaint.md
+- sha: 1d57892980d55e8a939bd2d3c4a6844fd47c0b36
+  author: stevhliu
+  files:
+  - docs/source/en/using-diffusers/callback.md
+- sha: 3e8b63216e502a0dd7424c0fef4134187802b93f
+  author: antoine-scenario
+  files:
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet_sd_xl_img2img.py
+  - tests/pipelines/controlnet/test_controlnet_sdxl_img2img.py
+- sha: dd4459ad795230ee6d70dc270484bb9b523db9d4
+  author: yiyixuxu
+  files:
+  - src/diffusers/models/resnet.py
+  - src/diffusers/models/unet_2d_blocks.py
+  - src/diffusers/pipelines/deprecated/versatile_diffusion/modeling_text_unet.py
+- sha: 6313645b6b1cf4c02c8e7de7fb7f03df04b6b6cd
+  author: yiyixuxu
+  files:
+  - docs/source/en/_toctree.yml
+  - docs/source/en/api/pipelines/stable_diffusion/k_diffusion.md
+  - src/diffusers/__init__.py
+  - src/diffusers/pipelines/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/pipeline_stable_diffusion_k_diffusion.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/pipeline_stable_diffusion_xl_k_diffusion.py
+  - src/diffusers/utils/dummy_torch_and_transformers_and_k_diffusion_objects.py
+  - tests/pipelines/stable_diffusion_xl/test_stable_diffusion_xl_k_diffusion.py
+- sha: 2d1f2182cca9b0500be236de99a60c9bde473c22
+  author: Aiden-Frost
+  files:
+  - examples/research_projects/instructpix2pix_lora/README.md
+  - examples/research_projects/instructpix2pix_lora/train_instruct_pix2pix_lora.py
+- sha: 3be7c96e28495d2e45af5a5f8488a9bb41d66ccb
+  author: stevhliu
+  files:
+  - docs/source/en/using-diffusers/svd.md
+- sha: 3c79dd9dbefda94df32c6947589fd3416b74b80a
+  author: stevhliu
+  files:
+  - docs/source/en/api/loaders/peft.md
+  - src/diffusers/loaders/peft.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

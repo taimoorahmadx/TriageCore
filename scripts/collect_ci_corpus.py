@@ -14,6 +14,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import zipfile
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
 
@@ -24,6 +25,7 @@ from src.ci.truncate import truncate_log
 API_ROOT = "https://api.github.com"
 CORPUS_DIR = Path("tests/ci_corpus")
 LABELS = ("flaky", "dependency", "bug", "infra")
+SOURCES = ("mined", "lca", "bump", "injected")
 SECRET_PATTERNS = (
     re.compile(
         r"https?://[^\s\]\)\"']*(?:\?|&)(?:[^#\s\]\)\"']*&)?"
@@ -212,19 +214,18 @@ def _commits(owner: str, repo: str, head_sha: str) -> list[dict[str, Any]]:
         f"/repos/{owner}/{repo}/commits",
         {"sha": head_sha, "per_page": 10},
     )
-    result = []
-    for listed_commit in response[:10]:
+    def commit_record(listed_commit: dict[str, Any]) -> dict[str, Any]:
         commit = _get_json(f"/repos/{owner}/{repo}/commits/{listed_commit['sha']}")
         author = commit.get("author") or {}
         commit_data = commit.get("commit") or {}
-        result.append(
-            {
-                "sha": commit["sha"],
-                "author": author.get("login") or (commit_data.get("author") or {}).get("name", "unknown"),
-                "files": [item["filename"] for item in commit.get("files", [])],
-            }
-        )
-    return result
+        return {
+            "sha": commit["sha"],
+            "author": author.get("login") or (commit_data.get("author") or {}).get("name", "unknown"),
+            "files": [item["filename"] for item in commit.get("files", [])],
+        }
+
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        return list(executor.map(commit_record, response[:10]))
 
 
 def _is_dependency_path(path: str) -> bool:
@@ -314,6 +315,7 @@ def _collect_case(owner: str, repo: str, run: dict[str, Any], suggest: bool) -> 
     truncated = truncate_log(masked_log)
     case = {
         "repo": f"{owner}/{repo}",
+        "source": "mined",
         "run_id": int(run["id"]),
         "head_sha": run["head_sha"],
         "run_attempts": attempts,
@@ -349,16 +351,49 @@ def _verified_case(case_file: Path) -> dict[str, Any] | None:
 
 def _write_readme() -> None:
     case_files = sorted(CORPUS_DIR.glob("*/case.yaml"))
-    verified = [case for path in case_files if (case := _verified_case(path)) is not None]
-    counts = {label: sum(case.get("label") == label for case in verified) for label in LABELS}
-    repos = set()
+    for path in case_files:
+        text = path.read_text(encoding="utf-8")
+        if not re.search(r"^source:", text, re.MULTILINE):
+            text = re.sub(r"^(repo:.*)$", r"\1\nsource: mined", text, count=1, flags=re.MULTILINE)
+            path.write_text(text, encoding="utf-8")
+    all_cases = []
     for path in case_files:
         try:
             case = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         except (OSError, yaml.YAMLError):
             continue
+        all_cases.append(case)
+    verified = [case for path in case_files if (case := _verified_case(path)) is not None]
+    counts = {label: sum(case.get("label") == label for case in verified) for label in LABELS}
+    source_counts = {
+        source: {
+            "cases": sum(case.get("source", "mined") == source for case in all_cases),
+            "reviewed": sum(
+                case.get("source", "mined") == source and case in verified for case in all_cases
+            ),
+            **{
+                label: sum(
+                    case.get("source", "mined") == source and case.get("label") == label
+                    and case in verified for case in all_cases
+                )
+                for label in LABELS
+            },
+        }
+        for source in SOURCES
+    }
+    repos = set()
+    for case in all_cases:
         if case.get("repo"):
             repos.add(str(case["repo"]))
+    source_rows = "\n".join(
+        "| `{}` | {} | {} | {} | {} | {} | {} |".format(
+            source,
+            source_counts[source]["cases"],
+            source_counts[source]["reviewed"],
+            *(source_counts[source][label] for label in LABELS),
+        )
+        for source in SOURCES
+    )
     repos = sorted(repos)
     source_list = "\n".join(f"- `{repo}`" for repo in repos) or "- No labeled cases yet."
     label_counts = "\n".join(f"| `{label}` | {counts[label]} |" for label in LABELS)
@@ -388,6 +423,12 @@ excluded from evaluation.
 |---|---:|
 {label_counts}
 | **Total verified** | **{len(verified)}** |
+
+## Cases by source
+
+| Source | Cases | Reviewed | flaky | dependency | bug | infra |
+|---|---:|---:|---:|---:|---:|---:|
+{source_rows}
 
 Counts are regenerated whenever the collector runs and include only cases with both a reviewed
 label and its evidence source.

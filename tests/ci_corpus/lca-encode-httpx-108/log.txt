@@ -1,0 +1,94 @@
+===== Python 3.8/8_Enforce coverage.txt =====
+##[group]Run scripts/coverage
+[36;1mscripts/coverage[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
++ coverage report --show-missing --skip-covered --fail-under=100
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+httpx/_config.py     133      1    99%   139
+------------------------------------------------
+TOTAL               7570      1    99%
+
+58 files skipped due to complete coverage.
+Coverage failure: total of 99 is less than fail-under=100
+##[error]Process completed with exit code 2.
+
+
+===== Python 3.9/8_Enforce coverage.txt =====
+##[group]Run scripts/coverage
+[36;1mscripts/coverage[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ coverage report --show-missing --skip-covered --fail-under=100
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+httpx/_config.py     133      1    99%   139
+------------------------------------------------
+TOTAL               7570      1    99%
+
+58 files skipped due to complete coverage.
+Coverage failure: total of 99 is less than fail-under=100
+##[error]Process completed with exit code 2.
+
+
+===== Python 3.10/8_Enforce coverage.txt =====
+##[group]Run scripts/coverage
+[36;1mscripts/coverage[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
++ coverage report --show-missing --skip-covered --fail-under=100
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+httpx/_config.py     133      1    99%   139
+------------------------------------------------
+TOTAL               7577      1    99%
+
+58 files skipped due to complete coverage.
+Coverage failure: total of 99 is less than fail-under=100
+##[error]Process completed with exit code 2.
+
+
+===== Python 3.11/8_Enforce coverage.txt =====
+##[group]Run scripts/coverage
+[36;1mscripts/coverage[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ coverage report --show-missing --skip-covered --fail-under=100
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+httpx/_config.py     133      1    99%   139
+------------------------------------------------
+TOTAL               7577      1    99%
+
+58 files skipped due to complete coverage.
+Coverage failure: total of 99 is less than fail-under=100
+##[error]Process completed with exit code 2.

@@ -1,0 +1,68 @@
+repo: tornadoweb/tornado
+run_id: '23'
+head_sha: d1b0280fb92d0d8590cf403ca46af3550507d4d2
+run_attempts: []
+commits:
+- sha: d1b0280fb92d0d8590cf403ca46af3550507d4d2
+  author: bdarnell
+  files:
+  - tornado/test/iostream_test.py
+- sha: 06e1a651823934710f23a138f4bbfb344ca002b0
+  author: bdarnell
+  files:
+  - tornado/test/iostream_test.py
+  - tornado/test/test.crt
+  - tornado/test/test.key
+  - tornado/testing.py
+- sha: a6dfd70d7a6398b2187021df63ca77daa5781e5e
+  author: bdarnell
+  files:
+  - demos/blog/templates/feed.xml
+  - demos/s3server/s3server.py
+  - tornado/test/web_test.py
+  - tornado/web.py
+- sha: c60d80cbfc992b3cbaf303ae2e5f4f4c49fe028d
+  author: bdarnell
+  files:
+  - demos/blog/templates/feed.xml
+  - demos/s3server/s3server.py
+  - tornado/test/web_test.py
+  - tornado/web.py
+- sha: 55db80ef4b2fd96b9b0d6bb429b1718a185aea0f
+  author: bdarnell
+  files:
+  - requirements.txt
+- sha: ec59fa0e5f1408aa936001f698827ede915c979b
+  author: bdarnell
+  files:
+  - tornado/platform/asyncio.py
+  - tornado/test/circlerefs_test.py
+- sha: dcc6e59c3e92d54cb6366187f6d69d2700f25688
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 3340c3971f7663fb8a1a04c676f4a7cf734d1f0f
+  author: bdarnell
+  files:
+  - tornado/test/circlerefs_test.py
+- sha: dbbd42ebe4d554bdf2c36fad5790efe94188b5f2
+  author: bdarnell
+  files:
+  - tornado/platform/asyncio.py
+- sha: f5df43f26bb4d00759176f7cbec8bdce69f2f4f4
+  author: bdarnell
+  files:
+  - docs/releases/v3.0.1.rst
+  - docs/releases/v5.0.0.rst
+  - tornado/concurrent.py
+  - tornado/httpserver.py
+  - tornado/iostream.py
+  - tornado/netutil.py
+  - tornado/tcpserver.py
+  - tornado/testing.py
+  - tox.ini
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

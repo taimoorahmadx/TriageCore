@@ -1,0 +1,50 @@
+repo: jcabi/jcabi-http
+run_id: bd46a7fe95a386f4def45dcc8c6c18ba2d9a5920
+head_sha: bd46a7fe95a386f4def45dcc8c6c18ba2d9a5920
+run_attempts: []
+commits:
+- sha: bd46a7fe95a386f4def45dcc8c6c18ba2d9a5920
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 846661ce0488deedef02a00748749ffe4baa8d85
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 16d97c6561831a175fd6f03ce76ed058fe46abe4
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: ddd42271521c1f4076ada1f4f06d3fc5722c85e0
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 0279a21a74bcf293f234c0571882c9ae7bb6f08e
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 394f854dd41dc61997ebab0cecb049ab42b8c2f6
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 7e9b449194ff6904b64f4f647288a748756ac5ee
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 75c552cc6873d61e024b81fdc2468e63c4173e88
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 396b96142254890bbba3b4d27361ef40aa925774
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f9c08ec35be1e5371331a0cbedc6f0389c82446a
+  author: rultor
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory TEST_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

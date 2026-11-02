@@ -1,0 +1,50 @@
+repo: 1and1/snmpman
+run_id: 9461431622cf39efe60cf1eb03a94083780c5720
+head_sha: 9461431622cf39efe60cf1eb03a94083780c5720
+run_attempts: []
+commits:
+- sha: 9461431622cf39efe60cf1eb03a94083780c5720
+  author: dependabot[bot]
+  files:
+  - snmpman/pom.xml
+- sha: 5caf4882da9cf551ac9df23c90ecb53f2d07b95c
+  author: Stephan Fuhrmann
+  files:
+  - Dockerfile
+- sha: 15207ac548866605dab1cd6f1eca1ce178d3b8f8
+  author: Stephan Fuhrmann
+  files:
+  - Dockerfile
+- sha: 4383aac68be5e8fab49744bcd8ba15cfd3d33f7f
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: 044c00480646a02672816e3c45505af24137f483
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 910ebbf7d0339bf886c0b01ca0f9abfd3b591773
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: c217cd46280197a4fc00456ed28c8bc0d759aaa5
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: 4b50ae2bb0373d7eb891364ab678d298654d1dc7
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: 98f37f19b4c57da75a5613168e7faf7366d04848
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: fe387d3acd56e50787d8936c5511422275b82b9f
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

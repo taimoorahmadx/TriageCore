@@ -1,0 +1,131 @@
+repo: wandb/wandb
+run_id: '119'
+head_sha: c99ead9542bde331497f2456537fdbb0e37706d0
+run_attempts: []
+commits:
+- sha: c99ead9542bde331497f2456537fdbb0e37706d0
+  author: mova
+  files:
+  - wandb/sdk/data_types/image.py
+- sha: 96f89603c4aa35e78142d7bda7aa9dac134a3901
+  author: dmitryduev
+  files:
+  - .vscode/settings.json
+  - nexus/pkg/gowandb/mailbox.go
+  - nexus/pkg/server/files.go
+  - nexus/pkg/server/tokenizer.go
+  - nexus/scripts/generate-proto.sh
+  - tests/functional_tests/t0_main/cohere/t2_cohere_chat.py
+  - tests/functional_tests/t0_main/cohere/t3_cohere_chat_with_history.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_sweep.py
+- sha: cbc81fc97e37b53e1d7e3fbc52899bb826fbb84e
+  author: kptkin
+  files:
+  - nexus/pkg/server/handler.go
+  - nexus/pkg/server/history.go
+- sha: 61ebc2568c267f31e24ae79dfb065d139030deff
+  author: ibindlish
+  files:
+  - tests/pytest_tests/unit_tests/test_lib/test_filesystem.py
+  - wandb/sdk/artifacts/artifacts_cache.py
+  - wandb/sdk/lib/filesystem.py
+- sha: e7ec02bb65d84850203a148bc1dc3e641ab8f6d9
+  author: bcsherma
+  files:
+  - pyproject.toml
+  - requirements_test.txt
+  - tests/pytest_tests/system_tests/test_launch/test_job_status_tracker.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_add.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_cli.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_kubernetes.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_local_container.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_sagemaker.py
+  - tests/pytest_tests/system_tests/test_launch/test_launch_vertex.py
+  - tests/pytest_tests/system_tests/test_sweep/test_sweep_scheduler.py
+  - tests/pytest_tests/unit_tests/test_launch/test_agent/test_agent.py
+  - tests/pytest_tests/unit_tests/test_launch/test_builder/test_kaniko.py
+  - tests/pytest_tests/unit_tests/test_launch/test_environment/test_aws.py
+  - tests/pytest_tests/unit_tests/test_launch/test_environment/test_azure.py
+  - tests/pytest_tests/unit_tests/test_launch/test_environment/test_gcp.py
+  - tests/pytest_tests/unit_tests/test_launch/test_registry/test_acr.py
+  - tests/pytest_tests/unit_tests/test_launch/test_registry/test_ecr.py
+  - tests/pytest_tests/unit_tests/test_launch/test_registry/test_gcp_artifact_registry.py
+  - tests/pytest_tests/unit_tests/test_launch/test_runner/test_kubernetes.py
+  - tests/pytest_tests/unit_tests/test_launch/test_runner/test_safe_watch.py
+  - tests/pytest_tests/unit_tests/test_launch/test_runner/test_vertex.py
+  - tests/pytest_tests/unit_tests_old/tests_launch/test_kaniko_build.py
+  - tests/pytest_tests/unit_tests_old/tests_launch/test_launch.py
+  - tests/pytest_tests/unit_tests_old/tests_launch/test_launch_aws.py
+  - tests/pytest_tests/unit_tests_old/tests_launch/test_launch_cli.py
+  - wandb/cli/cli.py
+  - wandb/sdk/launch/_launch.py
+  - wandb/sdk/launch/_launch_add.py
+  - wandb/sdk/launch/agent/agent.py
+  - wandb/sdk/launch/agent/job_status_tracker.py
+  - wandb/sdk/launch/builder/abstract.py
+  - wandb/sdk/launch/builder/build.py
+  - wandb/sdk/launch/builder/docker_builder.py
+  - wandb/sdk/launch/builder/kaniko_builder.py
+  - wandb/sdk/launch/builder/noop.py
+  - wandb/sdk/launch/environment/abstract.py
+  - wandb/sdk/launch/environment/aws_environment.py
+  - wandb/sdk/launch/environment/azure_environment.py
+  - wandb/sdk/launch/environment/gcp_environment.py
+  - wandb/sdk/launch/environment/local_environment.py
+  - wandb/sdk/launch/loader.py
+  - wandb/sdk/launch/registry/abstract.py
+  - wandb/sdk/launch/registry/azure_container_registry.py
+  - wandb/sdk/launch/registry/elastic_container_registry.py
+  - wandb/sdk/launch/registry/google_artifact_registry.py
+  - wandb/sdk/launch/registry/local_registry.py
+  - wandb/sdk/launch/runner/abstract.py
+  - wandb/sdk/launch/runner/kubernetes_monitor.py
+  - wandb/sdk/launch/runner/kubernetes_runner.py
+  - wandb/sdk/launch/runner/local_container.py
+  - wandb/sdk/launch/runner/local_process.py
+  - wandb/sdk/launch/runner/sagemaker_runner.py
+  - wandb/sdk/launch/runner/vertex_runner.py
+  - wandb/sdk/launch/utils.py
+- sha: 7254f2259a2ba8ffac54d7ecba5a87ea2a3bc147
+  author: hojland
+  files:
+  - tests/pytest_tests/system_tests/test_launch/test_launch_vertex.py
+  - wandb/sdk/launch/runner/vertex_runner.py
+- sha: 747ee4c078313b6ca85e4566eddff727424832fa
+  author: harupy
+  files:
+  - wandb/data_types.py
+- sha: fe935d0911f2024320515bf4aeedc8f28d8c1132
+  author: bcsherma
+  files:
+  - wandb/data_types.py
+  - wandb/integration/sacred/__init__.py
+  - wandb/sdk/data_types/_dtypes.py
+  - wandb/sdk/internal/internal_api.py
+  - wandb/sdk/verify/verify.py
+  - wandb/sync/sync.py
+  - wandb/util.py
+- sha: 98e882a615574cbd38e54ef10531539f2008952e
+  author: dmitryduev
+  files:
+  - .github/pull_request_template.md
+  - nexus/README.md
+  - nexus/internal/version/version.go
+  - nexus/setup.py
+  - nexus/wandb_core/__init__.py
+  - noxfile.py
+  - pyproject.toml
+  - wandb/__init__.py
+- sha: 15cbd537b2bbac8370a3f438ce96205a152ff2b9
+  author: gtarpenning
+  files:
+  - tests/pytest_tests/unit_tests/test_job_builder.py
+  - tests/pytest_tests/unit_tests_old/conftest.py
+  - tests/pytest_tests/unit_tests_old/test_tb_watcher.py
+  - wandb/sdk/internal/job_builder.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

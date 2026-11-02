@@ -1,10 +1,14 @@
 repo: nodejs/node
+source: mined
 run_id: 40347066441
 head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
 run_attempts:
 - attempt: 1
   head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
   conclusion: failure
+- attempt: 2
+  head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
+  conclusion: success
 commits:
 - sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
   author: dependabot[bot]
@@ -669,7 +673,7 @@ commits:
   - deps/openssl/openssl/crypto/bn/asm/vis3-mont.pl
   - deps/openssl/openssl/crypto/bn/asm/x86-gf2m.pl
   - deps/openssl/openssl/crypto/bn/asm/x86-mont.pl
-label: null
-label_source: null
+label: flaky
+label_source: GitHub run history confirms attempt 1 failed and attempt 2 passed on the same head SHA.
 risk_tier: medium
 suggested_label: infra

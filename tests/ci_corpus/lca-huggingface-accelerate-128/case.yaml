@@ -1,0 +1,57 @@
+repo: huggingface/accelerate
+run_id: '128'
+head_sha: 3dd8e4404a0ce2e29db4911dc2cd7e94755be631
+run_attempts: []
+commits:
+- sha: 3dd8e4404a0ce2e29db4911dc2cd7e94755be631
+  author: ji-huazhong
+  files:
+  - tests/deepspeed/test_deepspeed.py
+- sha: 3d6a2a8fb2ee5a2210bc1d15605aa2436377f69f
+  author: ji-huazhong
+  files:
+  - tests/fsdp/test_fsdp.py
+- sha: aa0598c6f3e45f75cc6be837646750792de4c07e
+  author: ji-huazhong
+  files:
+  - tests/deepspeed/test_deepspeed.py
+- sha: 9964f90fd7d50577998a22f3dba8590e644d255b
+  author: ji-huazhong
+  files:
+  - src/accelerate/big_modeling.py
+  - src/accelerate/utils/modeling.py
+  - src/accelerate/utils/operations.py
+- sha: f86876d56d0b82df1e8d03f69c2ec5c5292357cf
+  author: muellerzr
+  files:
+  - src/accelerate/utils/modeling.py
+- sha: 0a37e2042e7abae5834f5951ec4b1af1bd462adb
+  author: ji-huazhong
+  files:
+  - src/accelerate/test_utils/__init__.py
+  - src/accelerate/test_utils/scripts/external_deps/test_metrics.py
+  - src/accelerate/test_utils/testing.py
+  - tests/test_metrics.py
+- sha: 54d670be4188d995775c492933814b5d31bf621a
+  author: SunMarc
+  files:
+  - docs/source/concept_guides/big_model_inference.md
+  - docs/source/package_reference/big_modeling.md
+- sha: 339854a9a4673c7d9cd718caa0847b812f0e9def
+  author: RMSnow
+  files:
+  - README.md
+  - docs/source/usage_guides/training_zoo.md
+- sha: 5296419df422b6ee73b4336004a40885c63089a4
+  author: stas00
+  files:
+  - src/accelerate/data_loader.py
+- sha: 6a4857fec2bbae83880014cfd834d8a3e22de68b
+  author: kashif
+  files:
+  - src/accelerate/utils/tqdm.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

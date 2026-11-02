@@ -1,0 +1,210 @@
+repo: arextest/arex-agent-java
+run_id: dc9a40fde9a9fee5aaec3f60695385ba539406d4
+head_sha: dc9a40fde9a9fee5aaec3f60695385ba539406d4
+run_attempts: []
+commits:
+- sha: dc9a40fde9a9fee5aaec3f60695385ba539406d4
+  author: dependabot[bot]
+  files:
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/pom.xml
+- sha: cd678880626888916fb7c5a115bc3eced3c06559
+  author: lucas-myx
+  files:
+  - README.md
+  - arex-agent-bootstrap/pom.xml
+  - arex-agent-bootstrap/src/main/java/io/arex/agent/bootstrap/cache/LoadedModuleCache.java
+  - arex-agent-bootstrap/src/main/java/io/arex/agent/bootstrap/util/NumberUtil.java
+  - arex-agent-bootstrap/src/main/java/io/arex/agent/bootstrap/util/StringUtil.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/cache/LoadedModuleCacheTest.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/util/NumberUtilTest.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/util/StringUtilTest.java
+  - arex-agent/pom.xml
+  - arex-instrumentation-api/src/main/java/io/arex/inst/extension/matcher/ModuleVersionMatcher.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/context/ResourceManager.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/model/ArexConstants.java
+  - arex-instrumentation-api/src/test/java/io/arex/inst/extension/matcher/ModuleVersionMatcherTest.java
+  - arex-instrumentation-foundation/pom.xml
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/config/ConfigManager.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/serializer/GsonSerializer.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/serializer/JacksonSerializer.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/util/AsyncHttpClientUtil.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/pom.xml
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboAdapter.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboCodecExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboCodecInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboConsumerExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboConsumerInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboFilterExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboFilterInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboModuleInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboProviderExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/main/java/io/arex/inst/dubbo/alibaba/DubboProviderInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboCodecExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboCodecInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboConsumerExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboConsumerInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboFilterExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboFilterInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboModuleInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboProviderExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-alibaba/src/test/java/io/arex/inst/dubbo/alibaba/DubboProviderInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/pom.xml
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboAdapter.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboModuleInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboProviderExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboProviderInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboConsumerInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboModuleInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboProviderExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/test/java/io/arex/inst/dubbo/apache/v2/DubboProviderInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/pom.xml
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboAdapter.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboConsumerExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboConsumerInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboModuleInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboProviderExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/DubboProviderInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamAdapter.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamCache.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamConsumerExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamConsumerInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamProviderExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamProviderInstrumentation.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/main/java/io/arex/inst/dubbo/apache/v3/stream/StreamModel.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboConsumerExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboConsumerInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboModuleInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboProviderExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/DubboProviderInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamCacheTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamConsumerExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamConsumerInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamProviderExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-apache-v3/src/test/java/io/arex/inst/dubbo/apache/v3/stream/DubboStreamProviderInstrumentationTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-common/pom.xml
+  - arex-instrumentation/dubbo/arex-dubbo-common/src/main/java/io/arex/inst/dubbo/common/AbstractAdapter.java
+  - arex-instrumentation/dubbo/arex-dubbo-common/src/main/java/io/arex/inst/dubbo/common/DubboExtractor.java
+  - arex-instrumentation/dubbo/arex-dubbo-common/src/test/java/io/arex/inst/dubbo/common/AbstractAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-common/src/test/java/io/arex/inst/dubbo/common/DubboAdapterTest.java
+  - arex-instrumentation/dubbo/arex-dubbo-common/src/test/java/io/arex/inst/dubbo/common/DubboExtractorTest.java
+  - arex-instrumentation/dubbo/arex-dubbo/src/main/java/io/arex/inst/dubbo/DubboProviderExtractor.java
+  - arex-instrumentation/pom.xml
+  - arex-third-party/pom.xml
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/CharSequenceUtils.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/DateFormatUtils.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/DateParser.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/DatePrinter.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/FastDateFormat.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/FastDateParser.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/FastDatePrinter.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/FastTimeZone.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/FormatCache.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/GmtTimeZone.java
+  - arex-third-party/src/main/java/io/arex/agent/thirdparty/util/time/TimeZones.java
+  - pom.xml
+- sha: 14d038fb040030d36936254fd4580b5570ae91d2
+  author: mr3
+  files:
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/InstrumentationInstaller.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/main/java/io/arex/inst/dynamic/DynamicClassModuleInstrumentation.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/test/java/io/arex/inst/dynamic/DynamicClassModuleInstrumentationTest.java
+- sha: 19406707a67eb7e0d64a3315760329628118b163
+  author: mr3
+  files:
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/BaseAgentInstaller.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/services/ConfigService.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/services/ConfigServiceTest.java
+- sha: fc09f15ca8bbb63f0bd8ab735fb06d43fc6b7b07
+  author: YongwuHe
+  files:
+  - arex-agent-bootstrap/src/main/java/io/arex/agent/bootstrap/util/StringUtil.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/AgentInitializerTest.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/ctx/ArexThreadLocalTest.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/util/CollectionUtilTest.java
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/util/StringUtilTest.java
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/BaseAgentInstaller.java
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/InstrumentationInstaller.java
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/TransformListener.java
+  - arex-agent-core/src/test/java/io/arex/agent/instrumentation/BaseAgentInstallerTest.java
+  - arex-agent-core/src/test/java/io/arex/agent/instrumentation/InstrumentationInstallerTest.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/config/Config.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/config/ConfigBuilder.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/config/listener/ConfigListener.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/config/listener/SerializeSkipInfoListener.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/model/DynamicClassEntity.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/runtime/model/DynamicClassStatusEnum.java
+  - arex-instrumentation-api/src/test/java/io/arex/inst/runtime/config/ConfigTest.java
+  - arex-instrumentation-api/src/test/java/io/arex/inst/runtime/config/listener/SerializeSkipInfoListenerTest.java
+  - arex-instrumentation-api/src/test/java/io/arex/inst/runtime/model/DynamicClassEntityTest.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/config/ConfigConstants.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/config/ConfigManager.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/services/ConfigService.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/config/ConfigManagerTest.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/services/ConfigServiceTest.java
+  - arex-instrumentation/dynamic/arex-dynamic-common/src/main/java/io/arex/inst/dynamic/common/DynamicClassExtractor.java
+  - arex-instrumentation/dynamic/arex-dynamic-common/src/test/java/io/arex/inst/dynamic/common/DynamicClassExtractorTest.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/main/java/io/arex/inst/dynamic/DynamicClassInstrumentation.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/main/java/io/arex/inst/dynamic/DynamicClassModuleInstrumentation.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/test/java/io/arex/inst/dynamic/DynamicClassInstrumentationTest.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/test/java/io/arex/inst/dynamic/DynamicClassModuleInstrumentationTest.java
+- sha: 4f546654ca29fda777e9059de4db288dd573a0b0
+  author: YongwuHe
+  files:
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/ctx/ArexThreadLocalTest.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/main/java/io/arex/inst/dynamic/ReplaceMethodHelper.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/test/java/io/arex/inst/dynamic/ReplaceMethodHelperTest.java
+- sha: a715501aeedc841ebc6205a27104d51007f9fae2
+  author: YongwuHe
+  files:
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/serializer/GsonSerializer.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/serializer/GsonSerializerTest.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/serializer/JacksonSerializerTest.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/serializer/TimeTestInfo.java
+- sha: 2328a0e5b11f69b580f5e57bb3bce73e398105da
+  author: mr3
+  files:
+  - arex-agent-bootstrap/src/test/java/io/arex/agent/bootstrap/util/ConcurrentCacheTest.java
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/BaseAgentInstaller.java
+  - arex-agent-core/src/main/java/io/arex/agent/instrumentation/InstrumentationInstaller.java
+  - arex-agent-core/src/test/java/io/arex/agent/instrumentation/BaseAgentInstallerTest.java
+  - arex-agent-core/src/test/java/io/arex/agent/instrumentation/InstrumentationInstallerTest.java
+  - arex-agent/pom.xml
+  - arex-agent/src/main/java/io/arex/agent/ArexJavaAgent.java
+  - arex-agent/src/test/java/io/arex/agent/ArexJavaAgentTest.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/extension/matcher/IgnoreClassloaderMatcher.java
+  - arex-instrumentation-api/src/main/java/io/arex/inst/extension/matcher/IgnoredTypesMatcher.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/config/ConfigManager.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/internal/MockEntityBuffer.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/services/ConfigService.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/util/PropertyUtil.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/util/SPIUtil.java
+  - arex-instrumentation-foundation/src/main/resources/arex-instrumentation-foundation.properties
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/services/ConfigServiceTest.java
+  - arex-instrumentation/dynamic/arex-dynamic/src/main/java/io/arex/inst/dynamic/DynamicClassInstrumentation.java
+  - arex-instrumentation/httpclient/arex-httpclient-common/src/main/java/io/arex/inst/httpclient/common/HttpClientExtractor.java
+  - arex-instrumentation/redis/arex-redis-common/src/main/java/io/arex/inst/redis/common/RedisExtractor.java
+  - pom.xml
+- sha: 0b756f0f264fd6aa54dd7159a227b7d767b90ca7
+  author: mr3
+  files:
+  - arex-instrumentation/servlet/arex-httpservlet/src/main/java/io/arex/inst/httpservlet/ServletExtractor.java
+- sha: 8340d3a9b6d79ce5b21c1ba56c174cf1ad744239
+  author: YongwuHe
+  files:
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/serializer/GsonSerializer.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/serializer/JacksonSerializer.java
+  - arex-instrumentation-foundation/src/main/java/io/arex/foundation/util/AsyncHttpClientUtil.java
+  - arex-instrumentation-foundation/src/test/java/io/arex/foundation/util/AsyncHttpClientUtilTest.java
+  - arex-instrumentation/dynamic/arex-dynamic-common/src/main/java/io/arex/inst/dynamic/common/DynamicClassExtractor.java
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,697 @@
+2023-06-13T03:26:04.0405991Z Post job cleanup.
+2023-06-13T03:26:04.1428950Z [command]/usr/bin/git version
+2023-06-13T03:26:04.1474542Z git version 2.40.1
+2023-06-13T03:26:04.1525983Z Temporarily overriding HOME='/home/runner/work/_temp/227d4997-568e-4e60-8058-da78807906ff' before making global git config changes
+2023-06-13T03:26:04.1529568Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-13T03:26:04.1537151Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/arex-agent-java/arex-agent-java
+2023-06-13T03:26:04.1578575Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-13T03:26:04.1620626Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-13T03:26:04.1854964Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-13T03:26:04.1870976Z http.https://github.com/.extraheader
+2023-06-13T03:26:04.1885488Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-13T03:26:04.1922569Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-13T03:25:17.7348618Z Current runner version: '2.304.0'
+2023-06-13T03:25:17.7377498Z ##[group]Operating System
+2023-06-13T03:25:17.7378022Z Ubuntu
+2023-06-13T03:25:17.7378333Z 22.04.2
+2023-06-13T03:25:17.7378708Z LTS
+2023-06-13T03:25:17.7379087Z ##[endgroup]
+2023-06-13T03:25:17.7379394Z ##[group]Runner Image
+2023-06-13T03:25:17.7379713Z Image: ubuntu-22.04
+2023-06-13T03:25:17.7379960Z Version: 20230517.1
+2023-06-13T03:25:17.7380444Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230517.1/images/linux/Ubuntu2204-Readme.md
+2023-06-13T03:25:17.7381012Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230517.1
+2023-06-13T03:25:17.7381406Z ##[endgroup]
+2023-06-13T03:25:17.7381679Z ##[group]Runner Image Provisioner
+2023-06-13T03:25:17.7382006Z 2.0.226.1
+2023-06-13T03:25:17.7382266Z ##[endgroup]
+2023-06-13T03:25:17.7382898Z ##[group]GITHUB_TOKEN Permissions
+2023-06-13T03:25:17.7383397Z Contents: read
+2023-06-13T03:25:17.7383712Z Metadata: read
+2023-06-13T03:25:17.7383956Z Packages: read
+2023-06-13T03:25:17.7384506Z ##[endgroup]
+2023-06-13T03:25:17.7387560Z Secret source: Dependabot
+2023-06-13T03:25:17.7388028Z Prepare workflow directory
+2023-06-13T03:25:17.8047543Z Prepare all required actions
+2023-06-13T03:25:17.8221054Z Getting action download info
+2023-06-13T03:25:18.0344724Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-13T03:25:18.7203434Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-13T03:25:19.4575974Z Complete job name: build-source (8)
+
+2023-06-13T03:25:11.6640097Z ##[section]Starting: Prepare job build-source
+2023-06-13T03:25:11.6643046Z Evaluating strategy
+2023-06-13T03:25:11.6652800Z Creating job '_8'
+2023-06-13T03:25:11.6656144Z Evaluating timeout
+2023-06-13T03:25:11.6656202Z Evaluating cancel timeout
+2023-06-13T03:25:11.6656234Z Evaluating continue on error
+2023-06-13T03:25:11.6656266Z Evaluating target
+2023-06-13T03:25:11.6656820Z Creating job '_11'
+2023-06-13T03:25:11.6659974Z Evaluating timeout
+2023-06-13T03:25:11.6660010Z Evaluating cancel timeout
+2023-06-13T03:25:11.6660037Z Evaluating continue on error
+2023-06-13T03:25:11.6660067Z Evaluating target
+2023-06-13T03:25:11.6661583Z ##[section]Finishing: Prepare job build-source
+
+2023-06-13T03:26:03.8590718Z Post job cleanup.
+
+2023-06-13T03:25:11.8826175Z Requested labels: ubuntu-latest
+2023-06-13T03:25:11.8826492Z Job defined at: arextest/arex-agent-java/.github/workflows/build.yml@refs/pull/194/merge
+2023-06-13T03:25:11.8826610Z Waiting for a runner to pick up this job...
+2023-06-13T03:25:12.1797510Z Job is waiting for a hosted runner to come online.
+2023-06-13T03:25:15.2952272Z Job is about to start running on the hosted runner: GitHub Actions 11 (hosted)
+2023-06-13T03:25:17.7349001Z Current runner version: '2.304.0'
+2023-06-13T03:25:17.7377528Z ##[group]Operating System
+2023-06-13T03:25:17.7378027Z Ubuntu
+2023-06-13T03:25:17.7378337Z 22.04.2
+2023-06-13T03:25:17.7378717Z LTS
+2023-06-13T03:25:17.7379092Z ##[endgroup]
+2023-06-13T03:25:17.7379398Z ##[group]Runner Image
+2023-06-13T03:25:17.7379717Z Image: ubuntu-22.04
+2023-06-13T03:25:17.7379963Z Version: 20230517.1
+2023-06-13T03:25:17.7380449Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230517.1/images/linux/Ubuntu2204-Readme.md
+2023-06-13T03:25:17.7381016Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230517.1
+2023-06-13T03:25:17.7381410Z ##[endgroup]
+2023-06-13T03:25:17.7381682Z ##[group]Runner Image Provisioner
+2023-06-13T03:25:17.7382010Z 2.0.226.1
+2023-06-13T03:25:17.7382280Z ##[endgroup]
+2023-06-13T03:25:17.7382902Z ##[group]GITHUB_TOKEN Permissions
+2023-06-13T03:25:17.7383402Z Contents: read
+2023-06-13T03:25:17.7383717Z Metadata: read
+2023-06-13T03:25:17.7384163Z Packages: read
+2023-06-13T03:25:17.7384510Z ##[endgroup]
+2023-06-13T03:25:17.7387583Z Secret source: Dependabot
+2023-06-13T03:25:17.7388033Z Prepare workflow directory
+2023-06-13T03:25:17.8047561Z Prepare all required actions
+2023-06-13T03:25:17.8221084Z Getting action download info
+2023-06-13T03:25:18.0344760Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-13T03:25:18.7203460Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-13T03:25:19.4575996Z Complete job name: build-source (8)
+2023-06-13T03:25:19.5352449Z ##[group]Run actions/checkout@v3
+2023-06-13T03:25:19.5352702Z with:
+2023-06-13T03:25:19.5352916Z   repository: arextest/arex-agent-java
+2023-06-13T03:25:19.5353302Z   token: ***
+2023-06-13T03:25:19.5353482Z   ssh-strict: true
+2023-06-13T03:25:19.5353671Z   persist-credentials: true
+2023-06-13T03:25:19.5353868Z   clean: true
+2023-06-13T03:25:19.5354070Z   sparse-checkout-cone-mode: true
+2023-06-13T03:25:19.5354284Z   fetch-depth: 1
+2023-06-13T03:25:19.5354457Z   lfs: false
+2023-06-13T03:25:19.5354626Z   submodules: false
+2023-06-13T03:25:19.5354818Z   set-safe-directory: true
+2023-06-13T03:25:19.5355011Z ##[endgroup]
+2023-06-13T03:25:19.8358174Z Syncing repository: arextest/arex-agent-java
+2023-06-13T03:25:19.8360259Z ##[group]Getting Git version info
+2023-06-13T03:25:19.8360863Z Working directory is '/home/runner/work/arex-agent-java/arex-agent-java'
+2023-06-13T03:25:19.8362636Z [command]/usr/bin/git version
+2023-06-13T03:25:19.8451218Z git version 2.40.1
+2023-06-13T03:25:19.8474919Z ##[endgroup]
+2023-06-13T03:25:19.8490408Z Temporarily overriding HOME='/home/runner/work/_temp/471ca8ba-fe88-4344-a526-9b5f9f7e67d6' before making global git config changes
+2023-06-13T03:25:19.8490895Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-13T03:25:19.8494312Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/arex-agent-java/arex-agent-java
+2023-06-13T03:25:19.8534146Z Deleting the contents of '/home/runner/work/arex-agent-java/arex-agent-java'
+2023-06-13T03:25:19.8538834Z ##[group]Initializing the repository
+2023-06-13T03:25:19.8541831Z [command]/usr/bin/git init /home/runner/work/arex-agent-java/arex-agent-java
+2023-06-13T03:25:19.8621560Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-13T03:25:19.8622488Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-13T03:25:19.8623661Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-13T03:25:19.8624290Z hint: 
+2023-06-13T03:25:19.8625248Z hint: 	git config --global init.defaultBranch <name>
+2023-06-13T03:25:19.8625783Z hint: 
+2023-06-13T03:25:19.8626672Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-13T03:25:19.8627432Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-13T03:25:19.8628219Z hint: 
+2023-06-13T03:25:19.8629279Z hint: 	git branch -m <name>
+2023-06-13T03:25:19.8636171Z Initialized empty Git repository in /home/runner/work/arex-agent-java/arex-agent-java/.git/
+2023-06-13T03:25:19.8645675Z [command]/usr/bin/git remote add origin https://github.com/arextest/arex-agent-java
+2023-06-13T03:25:19.8697700Z ##[endgroup]
+2023-06-13T03:25:19.8698347Z ##[group]Disabling automatic garbage collection
+2023-06-13T03:25:19.8700655Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-13T03:25:19.8735642Z ##[endgroup]
+2023-06-13T03:25:19.8736305Z ##[group]Setting up auth
+2023-06-13T03:25:19.8742073Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-13T03:25:19.8770439Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-13T03:25:19.9182168Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-13T03:25:19.9213011Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-13T03:25:19.9420285Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-13T03:25:19.9460889Z ##[endgroup]
+2023-06-13T03:25:19.9461802Z ##[group]Fetching the repository
+2023-06-13T03:25:19.9471349Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +772cd0564ecd2d49c31e469efde853ce8ba3b200:refs/remotes/pull/194/merge
+2023-06-13T03:25:20.3242327Z remote: Enumerating objects: 1156, done.        
+2023-06-13T03:25:20.3242701Z remote: Counting objects:   0% (1/1156)        
+2023-06-13T03:25:20.3243018Z remote: Counting objects:   1% (12/1156)        
+2023-06-13T03:25:20.3243320Z remote: Counting objects:   2% (24/1156)        
+2023-06-13T03:25:20.3243623Z remote: Counting objects:   3% (35/1156)        
+2023-06-13T03:25:20.3243913Z remote: Counting objects:   4% (47/1156)        
+2023-06-13T03:25:20.3244205Z remote: Counting objects:   5% (58/1156)        
+2023-06-13T03:25:20.3244486Z remote: Counting objects:   6% (70/1156)        
+2023-06-13T03:25:20.3244773Z remote: Counting objects:   7% (81/1156)        
+2023-06-13T03:25:20.3245062Z remote: Counting objects:   8% (93/1156)        
+2023-06-13T03:25:20.3245341Z remote: Counting objects:   9% (105/1156)        
+2023-06-13T03:25:20.3245652Z remote: Counting objects:  10% (116/1156)        
+2023-06-13T03:25:20.3245947Z remote: Counting objects:  11% (128/1156)        
+2023-06-13T03:25:20.3246229Z remote: Counting objects:  12% (139/1156)        
+2023-06-13T03:25:20.3246521Z remote: Counting objects:  13% (151/1156)        
+2023-06-13T03:25:20.3246809Z remote: Counting objects:  14% (162/1156)        
+2023-06-13T03:25:20.3247095Z remote: Counting objects:  15% (174/1156)        
+2023-06-13T03:25:20.3247376Z remote: Counting objects:  16% (185/1156)        
+2023-06-13T03:25:20.3247662Z remote: Counting objects:  17% (197/1156)        
+2023-06-13T03:25:20.3248243Z remote: Counting objects:  18% (209/1156)        
+2023-06-13T03:25:20.3248524Z remote: Counting objects:  19% (220/1156)        
+2023-06-13T03:25:20.3248812Z remote: Counting objects:  20% (232/1156)        
+2023-06-13T03:25:20.3249097Z remote: Counting objects:  21% (243/1156)        
+2023-06-13T03:25:20.3249370Z remote: Counting objects:  22% (255/1156)        
+2023-06-13T03:25:20.3249668Z remote: Counting objects:  23% (266/1156)        
+2023-06-13T03:25:20.3249952Z remote: Counting objects:  24% (278/1156)        
+2023-06-13T03:25:20.3250238Z remote: Counting objects:  25% (289/1156)        
+2023-06-13T03:25:20.3250514Z remote: Counting objects:  26% (301/1156)        
+2023-06-13T03:25:20.3250799Z remote: Counting objects:  27% (313/1156)        
+2023-06-13T03:25:20.3251095Z remote: Counting objects:  28% (324/1156)        
+2023-06-13T03:25:20.3251715Z remote: Counting objects:  29% (336/1156)        
+2023-06-13T03:25:20.3252002Z remote: Counting objects:  30% (347/1156)        
+2023-06-13T03:25:20.3252288Z remote: Counting objects:  31% (359/1156)        
+2023-06-13T03:25:20.3252567Z remote: Counting objects:  32% (370/1156)        
+2023-06-13T03:25:20.3252856Z remote: Counting objects:  33% (382/1156)        
+2023-06-13T03:25:20.3253146Z remote: Counting objects:  34% (394/1156)        
+2023-06-13T03:25:20.3253419Z remote: Counting objects:  35% (405/1156)        
+2023-06-13T03:25:20.3253717Z remote: Counting objects:  36% (417/1156)        
+2023-06-13T03:25:20.3254006Z remote: Counting objects:  37% (428/1156)        
+2023-06-13T03:25:20.3254293Z remote: Counting objects:  38% (440/1156)        
+2023-06-13T03:25:20.3254565Z remote: Counting objects:  39% (451/1156)        
+2023-06-13T03:25:20.3254950Z remote: Counting objects:  40% (463/1156)        
+2023-06-13T03:25:20.3255201Z remote: Counting objects:  41% (474/1156)        
+2023-06-13T03:25:20.3255443Z remote: Counting objects:  42% (486/1156)        
+2023-06-13T03:25:20.3255694Z remote: Counting objects:  43% (498/1156)        
+2023-06-13T03:25:20.3255947Z remote: Counting objects:  44% (509/1156)        
+2023-06-13T03:25:20.3256183Z remote: Counting objects:  45% (521/1156)        
+2023-06-13T03:25:20.3256434Z remote: Counting objects:  46% (532/1156)        
+2023-06-13T03:25:20.3256688Z remote: Counting objects:  47% (544/1156)        
+2023-06-13T03:25:20.3256936Z remote: Counting objects:  48% (555/1156)        
+2023-06-13T03:25:20.3257293Z remote: Counting objects:  49% (567/1156)        
+2023-06-13T03:25:20.3257547Z remote: Counting objects:  50% (578/1156)        
+2023-06-13T03:25:20.3257800Z remote: Counting objects:  51% (590/1156)        
+2023-06-13T03:25:20.3258037Z remote: Counting objects:  52% (602/1156)        
+2023-06-13T03:25:20.3258287Z remote: Counting objects:  53% (613/1156)        
+2023-06-13T03:25:20.3258539Z remote: Counting objects:  54% (625/1156)        
+2023-06-13T03:25:20.3258782Z remote: Counting objects:  55% (636/1156)        
+2023-06-13T03:25:20.3259031Z remote: Counting objects:  56% (648/1156)        
+2023-06-13T03:25:20.3259280Z remote: Counting objects:  57% (659/1156)        
+2023-06-13T03:25:20.3259519Z remote: Counting objects:  58% (671/1156)        
+2023-06-13T03:25:20.3259780Z remote: Counting objects:  59% (683/1156)        
+2023-06-13T03:25:20.3260032Z remote: Counting objects:  60% (694/1156)        
+2023-06-13T03:25:20.3260286Z remote: Counting objects:  61% (706/1156)        
+2023-06-13T03:25:20.3260549Z remote: Counting objects:  62% (717/1156)        
+2023-06-13T03:25:20.3260788Z remote: Counting objects:  63% (729/1156)        
+2023-06-13T03:25:20.3261041Z remote: Counting objects:  64% (740/1156)        
+2023-06-13T03:25:20.3261294Z remote: Counting objects:  65% (752/1156)        
+2023-06-13T03:25:20.3261530Z remote: Counting objects:  66% (763/1156)        
+2023-06-13T03:25:20.3261779Z remote: Counting objects:  67% (775/1156)        
+2023-06-13T03:25:20.3262034Z remote: Counting objects:  68% (787/1156)        
+2023-06-13T03:25:20.3262273Z remote: Counting objects:  69% (798/1156)        
+2023-06-13T03:25:20.3262521Z remote: Counting objects:  70% (810/1156)        
+2023-06-13T03:25:20.3262771Z remote: Counting objects:  71% (821/1156)        
+2023-06-13T03:25:20.3263022Z remote: Counting objects:  72% (833/1156)        
+2023-06-13T03:25:20.3263260Z remote: Counting objects:  73% (844/1156)        
+2023-06-13T03:25:20.3263509Z remote: Counting objects:  74% (856/1156)        
+2023-06-13T03:25:20.3263763Z remote: Counting objects:  75% (867/1156)        
+2023-06-13T03:25:20.3264001Z remote: Counting objects:  76% (879/1156)        
+2023-06-13T03:25:20.3264249Z remote: Counting objects:  77% (891/1156)        
+2023-06-13T03:25:20.3264497Z remote: Counting objects:  78% (902/1156)        
+2023-06-13T03:25:20.3264733Z remote: Counting objects:  79% (914/1156)        
+2023-06-13T03:25:20.3264980Z remote: Counting objects:  80% (925/1156)        
+2023-06-13T03:25:20.3265349Z remote: Counting objects:  81% (937/1156)        
+2023-06-13T03:25:20.3265591Z remote: Counting objects:  82% (948/1156)        
+2023-06-13T03:25:20.3265847Z remote: Counting objects:  83% (960/1156)        
+2023-06-13T03:25:20.3266099Z remote: Counting objects:  84% (972/1156)        
+2023-06-13T03:25:20.3266494Z remote: Counting objects:  85% (983/1156)        
+2023-06-13T03:25:20.3266859Z remote: Counting objects:  86% (995/1156)        
+2023-06-13T03:25:20.3267340Z remote: Counting objects:  87% (1006/1156)        
+2023-06-13T03:25:20.3267613Z remote: Counting objects:  88% (1018/1156)        
+2023-06-13T03:25:20.3267864Z remote: Counting objects:  89% (1029/1156)        
+2023-06-13T03:25:20.3268128Z remote: Counting objects:  90% (1041/1156)        
+2023-06-13T03:25:20.3268389Z remote: Counting objects:  91% (1052/1156)        
+2023-06-13T03:25:20.3268633Z remote: Counting objects:  92% (1064/1156)        
+2023-06-13T03:25:20.3268892Z remote: Counting objects:  93% (1076/1156)        
+2023-06-13T03:25:20.3290560Z remote: Counting objects:  94% (1087/1156)        
+2023-06-13T03:25:20.3295931Z remote: Counting objects:  95% (1099/1156)        
+2023-06-13T03:25:20.3296281Z remote: Counting objects:  96% (1110/1156)        
+2023-06-13T03:25:20.3296630Z remote: Counting objects:  97% (1122/1156)        
+2023-06-13T03:25:20.3296939Z remote: Counting objects:  98% (1133/1156)        
+2023-06-13T03:25:20.3297256Z remote: Counting objects:  99% (1145/1156)        
+2023-06-13T03:25:20.3297570Z remote: Counting objects: 100% (1156/1156)        
+2023-06-13T03:25:20.3298156Z remote: Counting objects: 100% (1156/1156), done.        
+2023-06-13T03:25:20.3298511Z remote: Compressing objects:   0% (1/614)        
+2023-06-13T03:25:20.3298842Z remote: Compressing objects:   1% (7/614)        
+2023-06-13T03:25:20.3299170Z remote: Compressing objects:   2% (13/614)        
+2023-06-13T03:25:20.3299481Z remote: Compressing objects:   3% (19/614)        
+2023-06-13T03:25:20.3299808Z remote: Compressing objects:   4% (25/614)        
+2023-06-13T03:25:20.3300146Z remote: Compressing objects:   5% (31/614)        
+2023-06-13T03:25:20.3300550Z remote: Compressing objects:   6% (37/614)        
+2023-06-13T03:25:20.3300850Z remote: Compressing objects:   7% (43/614)        
+2023-06-13T03:25:20.3301149Z remote: Compressing objects:   8% (50/614)        
+2023-06-13T03:25:20.3301435Z remote: Compressing objects:   9% (56/614)        
+2023-06-13T03:25:20.3301735Z remote: Compressing objects:  10% (62/614)        
+[... 6933 lines removed by TriageCore ...]
+2023-06-13T03:25:56.9497984Z [INFO] 
+2023-06-13T03:25:56.9501007Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-dynamic-common ---
+2023-06-13T03:25:56.9508699Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:56.9512014Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic-common/src/main/resources
+2023-06-13T03:25:56.9515295Z [INFO] 
+2023-06-13T03:25:56.9518253Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-dynamic-common ---
+2023-06-13T03:25:56.9525997Z [INFO] Generating flattened POM of project io.arex:arex-dynamic-common:jar:0.3.4...
+2023-06-13T03:25:56.9555348Z [INFO] 
+2023-06-13T03:25:56.9558551Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-dynamic-common ---
+2023-06-13T03:25:56.9576858Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:56.9583492Z [INFO] Compiling 6 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic-common/target/classes
+2023-06-13T03:25:57.0347230Z [INFO] 
+2023-06-13T03:25:57.0348298Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-dynamic-common ---
+2023-06-13T03:25:57.0352549Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:57.0353330Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic-common/src/test/resources
+2023-06-13T03:25:57.0354022Z [INFO] 
+2023-06-13T03:25:57.0355077Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-dynamic-common ---
+2023-06-13T03:25:57.0368102Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:57.0369674Z [INFO] Compiling 4 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic-common/target/test-classes
+2023-06-13T03:25:57.1674213Z [INFO] 
+2023-06-13T03:25:57.1675003Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-dynamic-common ---
+2023-06-13T03:25:57.1693909Z [INFO] Tests are skipped.
+2023-06-13T03:25:57.1695618Z [INFO] 
+2023-06-13T03:25:57.1696104Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-dynamic-common ---
+2023-06-13T03:25:57.1703563Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:25:57.1747846Z [INFO] 
+2023-06-13T03:25:57.1748405Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-dynamic-common ---
+2023-06-13T03:25:57.1749151Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic-common/target/arex-dynamic-common-0.3.4.jar
+2023-06-13T03:25:57.1779388Z [INFO] 
+2023-06-13T03:25:57.1779962Z [INFO] ------------------------< io.arex:arex-dynamic >------------------------
+2023-06-13T03:25:57.1780484Z [INFO] Building arex-dynamic 0.3.4                                      [22/43]
+2023-06-13T03:25:57.1783137Z [INFO]   from arex-instrumentation/dynamic/arex-dynamic/pom.xml
+2023-06-13T03:25:57.1784081Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:25:58.2338745Z [INFO] 
+2023-06-13T03:25:58.2340808Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-dynamic ---
+2023-06-13T03:25:58.2347458Z [INFO] 
+2023-06-13T03:25:58.2349150Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-dynamic ---
+2023-06-13T03:25:58.2352954Z [INFO] 
+2023-06-13T03:25:58.2354541Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-dynamic ---
+2023-06-13T03:25:58.2360313Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/target/jacoco.exec
+2023-06-13T03:25:58.2362302Z [INFO] 
+2023-06-13T03:25:58.2363837Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-dynamic ---
+2023-06-13T03:25:58.2371149Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:58.2372979Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/src/main/resources
+2023-06-13T03:25:58.2374815Z [INFO] 
+2023-06-13T03:25:58.2376294Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-dynamic ---
+2023-06-13T03:25:58.2387705Z [INFO] Generating flattened POM of project io.arex:arex-dynamic:jar:0.3.4...
+2023-06-13T03:25:58.2415041Z [INFO] 
+2023-06-13T03:25:58.2416749Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-dynamic ---
+2023-06-13T03:25:58.2434757Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:58.2440300Z [INFO] Compiling 4 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/target/classes
+2023-06-13T03:25:58.5506069Z [INFO] 
+2023-06-13T03:25:58.5508234Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-dynamic ---
+2023-06-13T03:25:58.5520484Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:58.5522497Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/src/test/resources
+2023-06-13T03:25:58.5524554Z [INFO] 
+2023-06-13T03:25:58.5526229Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-dynamic ---
+2023-06-13T03:25:58.5541924Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:58.5545689Z [INFO] Compiling 7 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/target/test-classes
+2023-06-13T03:25:58.9972446Z [INFO] 
+2023-06-13T03:25:58.9976154Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-dynamic ---
+2023-06-13T03:25:59.0002627Z [INFO] Tests are skipped.
+2023-06-13T03:25:59.0006037Z [INFO] 
+2023-06-13T03:25:59.0009182Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-dynamic ---
+2023-06-13T03:25:59.0017954Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:25:59.0021410Z [INFO] 
+2023-06-13T03:25:59.0024508Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-dynamic ---
+2023-06-13T03:25:59.0053701Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-dynamic/target/arex-dynamic-0.3.4.jar
+2023-06-13T03:25:59.0093978Z [INFO] 
+2023-06-13T03:25:59.0097460Z [INFO] -------------------------< io.arex:arex-cache >-------------------------
+2023-06-13T03:25:59.0100500Z [INFO] Building arex-cache 0.3.4                                        [23/43]
+2023-06-13T03:25:59.0103824Z [INFO]   from arex-instrumentation/dynamic/arex-cache/pom.xml
+2023-06-13T03:25:59.0106825Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:25:59.0157497Z [INFO] 
+2023-06-13T03:25:59.0164868Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-cache ---
+2023-06-13T03:25:59.0172725Z [INFO] 
+2023-06-13T03:25:59.0176144Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-cache ---
+2023-06-13T03:25:59.0184390Z [INFO] 
+2023-06-13T03:25:59.0187529Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-cache ---
+2023-06-13T03:25:59.0194701Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/target/jacoco.exec
+2023-06-13T03:25:59.0198174Z [INFO] 
+2023-06-13T03:25:59.0201240Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-cache ---
+2023-06-13T03:25:59.0209199Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:59.0212521Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/src/main/resources
+2023-06-13T03:25:59.0215841Z [INFO] 
+2023-06-13T03:25:59.0218796Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-cache ---
+2023-06-13T03:25:59.0230052Z [INFO] Generating flattened POM of project io.arex:arex-cache:jar:0.3.4...
+2023-06-13T03:25:59.0282773Z [INFO] 
+2023-06-13T03:25:59.0286033Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-cache ---
+2023-06-13T03:25:59.0304934Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:59.0311566Z [INFO] Compiling 4 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/target/classes
+2023-06-13T03:25:59.3053642Z [INFO] 
+2023-06-13T03:25:59.3057237Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-cache ---
+2023-06-13T03:25:59.3071490Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:59.3074915Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/src/test/resources
+2023-06-13T03:25:59.3078547Z [INFO] 
+2023-06-13T03:25:59.3081676Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-cache ---
+2023-06-13T03:25:59.3098124Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:59.3103486Z [INFO] Compiling 5 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/target/test-classes
+2023-06-13T03:25:59.5627060Z [INFO] 
+2023-06-13T03:25:59.5630653Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-cache ---
+2023-06-13T03:25:59.5655761Z [INFO] Tests are skipped.
+2023-06-13T03:25:59.5659135Z [INFO] 
+2023-06-13T03:25:59.5662558Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-cache ---
+2023-06-13T03:25:59.5670869Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:25:59.5674162Z [INFO] 
+2023-06-13T03:25:59.5677294Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-cache ---
+2023-06-13T03:25:59.5712885Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dynamic/arex-cache/target/arex-cache-0.3.4.jar
+2023-06-13T03:25:59.5745960Z [INFO] 
+2023-06-13T03:25:59.5749432Z [INFO] ---------------------< io.arex:arex-time-machine >----------------------
+2023-06-13T03:25:59.5752497Z [INFO] Building arex-time-machine 0.3.4                                 [24/43]
+2023-06-13T03:25:59.5755653Z [INFO]   from arex-instrumentation/time-machine/arex-time-machine/pom.xml
+2023-06-13T03:25:59.5758649Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:25:59.5788753Z [INFO] 
+2023-06-13T03:25:59.5791984Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-time-machine ---
+2023-06-13T03:25:59.5799751Z [INFO] 
+2023-06-13T03:25:59.5819206Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-time-machine ---
+2023-06-13T03:25:59.5825231Z [INFO] 
+2023-06-13T03:25:59.5828632Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-time-machine ---
+2023-06-13T03:25:59.5836003Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/target/jacoco.exec
+2023-06-13T03:25:59.5839507Z [INFO] 
+2023-06-13T03:25:59.5842563Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-time-machine ---
+2023-06-13T03:25:59.5850005Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:59.5853392Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/src/main/resources
+2023-06-13T03:25:59.5859832Z [INFO] 
+2023-06-13T03:25:59.5863207Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-time-machine ---
+2023-06-13T03:25:59.5875998Z [INFO] Generating flattened POM of project io.arex:arex-time-machine:jar:0.3.4...
+2023-06-13T03:25:59.5970597Z [INFO] 
+2023-06-13T03:25:59.5973895Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-time-machine ---
+2023-06-13T03:25:59.5998253Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:59.6005035Z [INFO] Compiling 4 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/target/classes
+2023-06-13T03:25:59.7562901Z [INFO] 
+2023-06-13T03:25:59.7566511Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-time-machine ---
+2023-06-13T03:25:59.7579057Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:25:59.7582912Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/src/test/resources
+2023-06-13T03:25:59.7586766Z [INFO] 
+2023-06-13T03:25:59.7589877Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-time-machine ---
+2023-06-13T03:25:59.7608363Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:25:59.7613505Z [INFO] Compiling 2 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/target/test-classes
+2023-06-13T03:25:59.8497104Z [INFO] 
+2023-06-13T03:25:59.8500681Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-time-machine ---
+2023-06-13T03:25:59.8518973Z [INFO] Tests are skipped.
+2023-06-13T03:25:59.8522333Z [INFO] 
+2023-06-13T03:25:59.8525463Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-time-machine ---
+2023-06-13T03:25:59.8540509Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:25:59.8544124Z [INFO] 
+2023-06-13T03:25:59.8547159Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-time-machine ---
+2023-06-13T03:25:59.8580390Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/time-machine/arex-time-machine/target/arex-time-machine-0.3.4.jar
+2023-06-13T03:25:59.8631104Z [INFO] 
+2023-06-13T03:25:59.8634594Z [INFO] -----------------< io.arex:arex-httpclient-okhttp-v3 >------------------
+2023-06-13T03:25:59.8637670Z [INFO] Building arex-httpclient-okhttp-v3 0.3.4                         [25/43]
+2023-06-13T03:25:59.8640820Z [INFO]   from arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/pom.xml
+2023-06-13T03:25:59.8643796Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:26:00.1633987Z [INFO] 
+2023-06-13T03:26:00.1634981Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1653763Z [INFO] 
+2023-06-13T03:26:00.1654588Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1655147Z [INFO] 
+2023-06-13T03:26:00.1656756Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1657749Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/target/jacoco.exec
+2023-06-13T03:26:00.1658899Z [INFO] 
+2023-06-13T03:26:00.1659497Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1659959Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:00.1660580Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/src/main/resources
+2023-06-13T03:26:00.1660977Z [INFO] 
+2023-06-13T03:26:00.1661611Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1702254Z [INFO] Generating flattened POM of project io.arex:arex-httpclient-okhttp-v3:jar:0.3.4...
+2023-06-13T03:26:00.1702895Z [INFO] 
+2023-06-13T03:26:00.1703702Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.1740451Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:00.1748459Z [INFO] Compiling 4 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/target/classes
+2023-06-13T03:26:00.3245476Z [INFO] 
+2023-06-13T03:26:00.3246203Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.3257110Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:00.3258107Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/src/test/resources
+2023-06-13T03:26:00.3258978Z [INFO] 
+2023-06-13T03:26:00.3259836Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.3282805Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:00.3284490Z [INFO] Compiling 3 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/target/test-classes
+2023-06-13T03:26:00.4280242Z [INFO] 
+2023-06-13T03:26:00.4281497Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.4296017Z [INFO] Tests are skipped.
+2023-06-13T03:26:00.4296526Z [INFO] 
+2023-06-13T03:26:00.4297475Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.4326750Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:26:00.4327342Z [INFO] 
+2023-06-13T03:26:00.4328094Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-httpclient-okhttp-v3 ---
+2023-06-13T03:26:00.4356468Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/httpclient/arex-httpclient-okhttp-v3/target/arex-httpclient-okhttp-v3-0.3.4.jar
+2023-06-13T03:26:00.4387391Z [INFO] 
+2023-06-13T03:26:00.4388183Z [INFO] -----------------------< io.arex:arex-netty-v4 >------------------------
+2023-06-13T03:26:00.4389434Z [INFO] Building arex-netty-v4 0.3.4                                     [26/43]
+2023-06-13T03:26:00.4389890Z [INFO]   from arex-instrumentation/netty/arex-netty-v4/pom.xml
+2023-06-13T03:26:00.4390311Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:26:02.0745602Z [INFO] 
+2023-06-13T03:26:02.0746479Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0750169Z [INFO] 
+2023-06-13T03:26:02.0753254Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0753651Z [INFO] 
+2023-06-13T03:26:02.0754117Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0756220Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/target/jacoco.exec
+2023-06-13T03:26:02.0757118Z [INFO] 
+2023-06-13T03:26:02.0757583Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0760366Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.0761049Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/main/resources
+2023-06-13T03:26:02.0761498Z [INFO] 
+2023-06-13T03:26:02.0761933Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0771099Z [INFO] Generating flattened POM of project io.arex:arex-netty-v4:jar:0.3.4...
+2023-06-13T03:26:02.0807083Z [INFO] 
+2023-06-13T03:26:02.0807746Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-netty-v4 ---
+2023-06-13T03:26:02.0814665Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.0817891Z [INFO] Compiling 7 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/target/classes
+2023-06-13T03:26:02.2324364Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/main/java/io/arex/inst/netty/v4/server/ResponseTracingHandler.java: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/main/java/io/arex/inst/netty/v4/server/ResponseTracingHandler.java uses or overrides a deprecated API.
+2023-06-13T03:26:02.2325763Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/main/java/io/arex/inst/netty/v4/server/ResponseTracingHandler.java: Recompile with -Xlint:deprecation for details.
+2023-06-13T03:26:02.2326599Z [INFO] 
+2023-06-13T03:26:02.2327101Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-netty-v4 ---
+2023-06-13T03:26:02.2332379Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.2333074Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/test/resources
+2023-06-13T03:26:02.2333509Z [INFO] 
+2023-06-13T03:26:02.2333991Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-netty-v4 ---
+2023-06-13T03:26:02.2345431Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.2346890Z [INFO] Compiling 1 source file to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/target/test-classes
+2023-06-13T03:26:02.3138425Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/test/java/io/arex/inst/netty/v4/server/RequestTracingHandlerTest.java: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/test/java/io/arex/inst/netty/v4/server/RequestTracingHandlerTest.java uses unchecked or unsafe operations.
+2023-06-13T03:26:02.3139876Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/src/test/java/io/arex/inst/netty/v4/server/RequestTracingHandlerTest.java: Recompile with -Xlint:unchecked for details.
+2023-06-13T03:26:02.3140416Z [INFO] 
+2023-06-13T03:26:02.3140865Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-netty-v4 ---
+2023-06-13T03:26:02.3152751Z [INFO] Tests are skipped.
+2023-06-13T03:26:02.3153120Z [INFO] 
+2023-06-13T03:26:02.3153671Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-netty-v4 ---
+2023-06-13T03:26:02.3158061Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:26:02.3158428Z [INFO] 
+2023-06-13T03:26:02.3158869Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-netty-v4 ---
+2023-06-13T03:26:02.3188510Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/netty/arex-netty-v4/target/arex-netty-v4-0.3.4.jar
+2023-06-13T03:26:02.3222180Z [INFO] 
+2023-06-13T03:26:02.3223128Z [INFO] --------------------------< io.arex:arex-jwt >--------------------------
+2023-06-13T03:26:02.3223777Z [INFO] Building arex-jwt 0.3.4                                          [27/43]
+2023-06-13T03:26:02.3224315Z [INFO]   from arex-instrumentation/authentication/arex-jwt/pom.xml
+2023-06-13T03:26:02.3304046Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:26:02.3304399Z [INFO] 
+2023-06-13T03:26:02.3304779Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-jwt ---
+2023-06-13T03:26:02.3305040Z [INFO] 
+2023-06-13T03:26:02.3305377Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-jwt ---
+2023-06-13T03:26:02.3305649Z [INFO] 
+2023-06-13T03:26:02.3305994Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-jwt ---
+2023-06-13T03:26:02.3306786Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/target/jacoco.exec
+2023-06-13T03:26:02.3307298Z [INFO] 
+2023-06-13T03:26:02.3307652Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-jwt ---
+2023-06-13T03:26:02.3330439Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.3331137Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/src/main/resources
+2023-06-13T03:26:02.3331580Z [INFO] 
+2023-06-13T03:26:02.3331950Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-jwt ---
+2023-06-13T03:26:02.3332409Z [INFO] Generating flattened POM of project io.arex:arex-jwt:jar:0.3.4...
+2023-06-13T03:26:02.3358417Z [INFO] 
+2023-06-13T03:26:02.3359235Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-jwt ---
+2023-06-13T03:26:02.3372398Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.3377173Z [INFO] Compiling 2 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/target/classes
+2023-06-13T03:26:02.4197910Z [INFO] 
+2023-06-13T03:26:02.4198637Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-jwt ---
+2023-06-13T03:26:02.4205897Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.4206890Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/src/test/resources
+2023-06-13T03:26:02.4207580Z [INFO] 
+2023-06-13T03:26:02.4208134Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-jwt ---
+2023-06-13T03:26:02.4219325Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.4220804Z [INFO] Compiling 2 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/target/test-classes
+2023-06-13T03:26:02.4929609Z [INFO] 
+2023-06-13T03:26:02.4930604Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-jwt ---
+2023-06-13T03:26:02.4942534Z [INFO] Tests are skipped.
+2023-06-13T03:26:02.4943101Z [INFO] 
+2023-06-13T03:26:02.4943931Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-jwt ---
+2023-06-13T03:26:02.4950060Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:26:02.4950586Z [INFO] 
+2023-06-13T03:26:02.4951237Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-jwt ---
+2023-06-13T03:26:02.4973298Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/authentication/arex-jwt/target/arex-jwt-0.3.4.jar
+2023-06-13T03:26:02.4994550Z [INFO] 
+2023-06-13T03:26:02.4995342Z [INFO] ---------------------< io.arex:arex-dubbo-common >----------------------
+2023-06-13T03:26:02.4996574Z [INFO] Building arex-dubbo-common 0.3.4                                 [28/43]
+2023-06-13T03:26:02.4997264Z [INFO]   from arex-instrumentation/dubbo/arex-dubbo-common/pom.xml
+2023-06-13T03:26:02.5020268Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:26:02.5020572Z [INFO] 
+2023-06-13T03:26:02.5021402Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5023904Z [INFO] 
+2023-06-13T03:26:02.5024465Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5026814Z [INFO] 
+2023-06-13T03:26:02.5027348Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5031585Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/target/jacoco.exec
+2023-06-13T03:26:02.5032343Z [INFO] 
+2023-06-13T03:26:02.5033145Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5038988Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.5039808Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/src/main/resources
+2023-06-13T03:26:02.5040389Z [INFO] 
+2023-06-13T03:26:02.5040922Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5049070Z [INFO] Generating flattened POM of project io.arex:arex-dubbo-common:jar:0.3.4...
+2023-06-13T03:26:02.5072497Z [INFO] 
+2023-06-13T03:26:02.5073257Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5084526Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.5087502Z [INFO] Compiling 2 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/target/classes
+2023-06-13T03:26:02.5710517Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/src/main/java/io/arex/inst/dubbo/common/AbstractAdapter.java: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/src/main/java/io/arex/inst/dubbo/common/AbstractAdapter.java uses unchecked or unsafe operations.
+2023-06-13T03:26:02.5714558Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/src/main/java/io/arex/inst/dubbo/common/AbstractAdapter.java: Recompile with -Xlint:unchecked for details.
+2023-06-13T03:26:02.5718365Z [INFO] 
+2023-06-13T03:26:02.5721479Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5730316Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:02.5733761Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/src/test/resources
+2023-06-13T03:26:02.5737103Z [INFO] 
+2023-06-13T03:26:02.5740119Z [INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ arex-dubbo-common ---
+2023-06-13T03:26:02.5753847Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:02.5758813Z [INFO] Compiling 3 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/target/test-classes
+2023-06-13T03:26:02.6537856Z [INFO] 
+2023-06-13T03:26:02.6541609Z [INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ arex-dubbo-common ---
+2023-06-13T03:26:02.6557444Z [INFO] Tests are skipped.
+2023-06-13T03:26:02.6560692Z [INFO] 
+2023-06-13T03:26:02.6563789Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ arex-dubbo-common ---
+2023-06-13T03:26:02.6571953Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-13T03:26:02.6575190Z [INFO] 
+2023-06-13T03:26:02.6578200Z [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ arex-dubbo-common ---
+2023-06-13T03:26:02.6601625Z [INFO] Building jar: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-common/target/arex-dubbo-common-0.3.4.jar
+2023-06-13T03:26:02.6624706Z [INFO] 
+2023-06-13T03:26:02.6627890Z [INFO] --------------------< io.arex:arex-dubbo-apache-v2 >--------------------
+2023-06-13T03:26:02.6630917Z [INFO] Building arex-dubbo-apache-v2 0.3.4                              [29/43]
+2023-06-13T03:26:02.6634010Z [INFO]   from arex-instrumentation/dubbo/arex-dubbo-apache-v2/pom.xml
+2023-06-13T03:26:02.6636981Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-13T03:26:03.6662429Z [INFO] 
+2023-06-13T03:26:03.6663421Z [INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6664007Z [INFO] 
+2023-06-13T03:26:03.6664975Z [INFO] --- flatten-maven-plugin:1.4.1:clean (flatten.clean) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6665356Z [INFO] 
+2023-06-13T03:26:03.6665740Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6666626Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/target/jacoco.exec
+2023-06-13T03:26:03.6667231Z [INFO] 
+2023-06-13T03:26:03.6667617Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6668039Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-13T03:26:03.6668601Z [INFO] skip non existing resourceDirectory /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/resources
+2023-06-13T03:26:03.6668969Z [INFO] 
+2023-06-13T03:26:03.6669698Z [INFO] --- flatten-maven-plugin:1.4.1:flatten (flatten) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6670160Z [INFO] Generating flattened POM of project io.arex:arex-dubbo-apache-v2:jar:0.3.4...
+2023-06-13T03:26:03.6670446Z [INFO] 
+2023-06-13T03:26:03.6670817Z [INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ arex-dubbo-apache-v2 ---
+2023-06-13T03:26:03.6677391Z [INFO] Changes detected - recompiling the module!
+2023-06-13T03:26:03.6683701Z [INFO] Compiling 6 source files to /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/target/classes
+2023-06-13T03:26:03.8036063Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboProviderExtractor.java: /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboProviderExtractor.java uses or overrides a deprecated API.
+2023-06-13T03:26:03.8040049Z [INFO] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboProviderExtractor.java: Recompile with -Xlint:deprecation for details.
+2023-06-13T03:26:03.8043236Z [INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+2023-06-13T03:26:03.8046259Z [INFO] -------------------------------------------------------------
+2023-06-13T03:26:03.8049714Z [ERROR] COMPILATION ERROR : 
+2023-06-13T03:26:03.8052551Z [INFO] -------------------------------------------------------------
+2023-06-13T03:26:03.8055975Z [ERROR] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractor.java:[43,47] incompatible types: org.apache.dubbo.rpc.AsyncRpcResult cannot be converted to java.util.concurrent.CompletableFuture<?>
+2023-06-13T03:26:03.8059713Z [ERROR] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractor.java:[45,60] incompatible types: org.apache.dubbo.rpc.AsyncRpcResult cannot be converted to java.util.concurrent.CompletableFuture<?>
+2023-06-13T03:26:03.8063406Z [INFO] 2 errors 
+2023-06-13T03:26:03.8066213Z [INFO] -------------------------------------------------------------
+2023-06-13T03:26:03.8074362Z [INFO] ------------------------------------------------------------------------
+2023-06-13T03:26:03.8077474Z [INFO] Reactor Summary for arex-agent-java 0.3.4:
+2023-06-13T03:26:03.8080176Z [INFO] 
+2023-06-13T03:26:03.8084946Z [INFO] arex-agent-java .................................... SUCCESS [  5.477 s]
+2023-06-13T03:26:03.8088196Z [INFO] arex-third-party ................................... SUCCESS [  7.908 s]
+2023-06-13T03:26:03.8091306Z [INFO] arex-agent-bootstrap ............................... SUCCESS [  3.785 s]
+2023-06-13T03:26:03.8094397Z [INFO] arex-instrumentation-api ........................... SUCCESS [  1.553 s]
+2023-06-13T03:26:03.8098050Z [INFO] arex-instrumentation-foundation .................... SUCCESS [  4.693 s]
+2023-06-13T03:26:03.8101825Z [INFO] arex-agent-core .................................... SUCCESS [  0.295 s]
+2023-06-13T03:26:03.8105565Z [INFO] arex-instrumentation-parent ........................ SUCCESS [  0.015 s]
+2023-06-13T03:26:03.8109054Z [INFO] arex-executors ..................................... SUCCESS [  0.288 s]
+2023-06-13T03:26:03.8112505Z [INFO] arex-loader ........................................ SUCCESS [  0.212 s]
+2023-06-13T03:26:03.8115904Z [INFO] arex-httpservlet ................................... SUCCESS [  1.334 s]
+2023-06-13T03:26:03.8119270Z [INFO] arex-httpclient-common ............................. SUCCESS [  0.187 s]
+2023-06-13T03:26:03.8122728Z [INFO] arex-httpclient-apache-v4 .......................... SUCCESS [  0.322 s]
+2023-06-13T03:26:03.8126499Z [INFO] arex-database-common ............................... SUCCESS [  2.044 s]
+2023-06-13T03:26:03.8130238Z [INFO] arex-database-hibernate ............................ SUCCESS [  0.349 s]
+2023-06-13T03:26:03.8133758Z [INFO] arex-database-mybatis3 ............................. SUCCESS [  0.280 s]
+2023-06-13T03:26:03.8137143Z [INFO] arex-redis-common .................................. SUCCESS [  0.185 s]
+2023-06-13T03:26:03.8140504Z [INFO] arex-jedis-v4 ...................................... SUCCESS [  0.807 s]
+2023-06-13T03:26:03.8144133Z [INFO] arex-lettuce-v6 .................................... SUCCESS [  1.534 s]
+2023-06-13T03:26:03.8147640Z [INFO] arex-redission-v3 .................................. SUCCESS [  2.078 s]
+2023-06-13T03:26:03.8149815Z [INFO] arex-serializer .................................... SUCCESS [  0.459 s]
+2023-06-13T03:26:03.8152249Z [INFO] arex-dynamic-common ................................ SUCCESS [  0.235 s]
+2023-06-13T03:26:03.8154665Z [INFO] arex-dynamic ....................................... SUCCESS [  1.832 s]
+2023-06-13T03:26:03.8157163Z [INFO] arex-cache ......................................... SUCCESS [  0.565 s]
+2023-06-13T03:26:03.8159587Z [INFO] arex-time-machine .................................. SUCCESS [  0.289 s]
+2023-06-13T03:26:03.8162030Z [INFO] arex-httpclient-okhttp-v3 .......................... SUCCESS [  0.575 s]
+2023-06-13T03:26:03.8164359Z [INFO] arex-netty-v4 ...................................... SUCCESS [  1.884 s]
+2023-06-13T03:26:03.8166779Z [INFO] arex-jwt ........................................... SUCCESS [  0.177 s]
+2023-06-13T03:26:03.8169280Z [INFO] arex-dubbo-common .................................. SUCCESS [  0.163 s]
+2023-06-13T03:26:03.8171950Z [INFO] arex-dubbo-apache-v2 ............................... FAILURE [  1.145 s]
+2023-06-13T03:26:03.8174248Z [INFO] arex-dubbo-apache-v3 ............................... SKIPPED
+2023-06-13T03:26:03.8176580Z [INFO] arex-dubbo-alibaba ................................. SKIPPED
+2023-06-13T03:26:03.8178797Z [INFO] arex-spring-security ............................... SKIPPED
+2023-06-13T03:26:03.8181087Z [INFO] arex-httpclient-webclient-v5 ....................... SKIPPED
+2023-06-13T03:26:03.8183401Z [INFO] arex-shiro ......................................... SKIPPED
+2023-06-13T03:26:03.8185537Z [INFO] arex-jcasbin ....................................... SKIPPED
+2023-06-13T03:26:03.8187834Z [INFO] arex-agent ......................................... SKIPPED
+2023-06-13T03:26:03.8190167Z [INFO] arex-jedis-v2 ...................................... SKIPPED
+2023-06-13T03:26:03.8192487Z [INFO] arex-attacher ...................................... SKIPPED
+2023-06-13T03:26:03.8194921Z [INFO] arex-integration-tests ............................. SKIPPED
+2023-06-13T03:26:03.8197169Z [INFO] arex-common-integration-test ....................... SKIPPED
+2023-06-13T03:26:03.8199420Z [INFO] arex-main-integration-test ......................... SKIPPED
+2023-06-13T03:26:03.8201699Z [INFO] arex-dynamic-integration-test ...................... SKIPPED
+2023-06-13T03:26:03.8203970Z [INFO] arex-jedis-v4-integration-test ..................... SKIPPED
+2023-06-13T03:26:03.8206265Z [INFO] ------------------------------------------------------------------------
+2023-06-13T03:26:03.8208368Z [INFO] BUILD FAILURE
+2023-06-13T03:26:03.8211170Z [INFO] ------------------------------------------------------------------------
+2023-06-13T03:26:03.8214296Z [INFO] Total time:  41.092 s
+2023-06-13T03:26:03.8217934Z [INFO] Finished at: 2023-06-13T03:26:03Z
+2023-06-13T03:26:03.8220128Z [INFO] ------------------------------------------------------------------------
+2023-06-13T03:26:03.8230133Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project arex-dubbo-apache-v2: Compilation failure: Compilation failure: 
+2023-06-13T03:26:03.8232948Z [ERROR] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractor.java:[43,47] incompatible types: org.apache.dubbo.rpc.AsyncRpcResult cannot be converted to java.util.concurrent.CompletableFuture<?>
+2023-06-13T03:26:03.8235414Z [ERROR] /home/runner/work/arex-agent-java/arex-agent-java/arex-instrumentation/dubbo/arex-dubbo-apache-v2/src/main/java/io/arex/inst/dubbo/apache/v2/DubboConsumerExtractor.java:[45,60] incompatible types: org.apache.dubbo.rpc.AsyncRpcResult cannot be converted to java.util.concurrent.CompletableFuture<?>
+2023-06-13T03:26:03.8236764Z [ERROR] -> [Help 1]
+2023-06-13T03:26:03.8237653Z [ERROR] 
+2023-06-13T03:26:03.8238733Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-13T03:26:03.8239834Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-13T03:26:03.8240752Z [ERROR] 
+2023-06-13T03:26:03.8241654Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-13T03:26:03.8242979Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-13T03:26:03.8244051Z [ERROR] 
+2023-06-13T03:26:03.8244929Z [ERROR] After correcting the problems, you can resume the build with the command
+2023-06-13T03:26:03.8246154Z [ERROR]   mvn <args> -rf :arex-dubbo-apache-v2
+2023-06-13T03:26:03.8526752Z ##[error]Process completed with exit code 1.
+
+2023-06-13T03:25:20.5701251Z ##[group]Run actions/setup-java@v3
+2023-06-13T03:25:20.5701495Z with:
+2023-06-13T03:25:20.5701764Z   java-version: 8
+2023-06-13T03:25:20.5702007Z   distribution: temurin
+2023-06-13T03:25:20.5702203Z   cache: maven
+2023-06-13T03:25:20.5702452Z   java-package: jdk
+2023-06-13T03:25:20.5702717Z   check-latest: false
+2023-06-13T03:25:20.5702916Z   server-id: github
+2023-06-13T03:25:20.5703166Z   server-username: GITHUB_ACTOR
+2023-06-13T03:25:20.5703455Z   server-password: GITHUB_TOKEN
+2023-06-13T03:25:20.5703681Z   overwrite-settings: true
+2023-06-13T03:25:20.5703970Z   job-status: success
+2023-06-13T03:25:20.5704357Z   token: ***
+2023-06-13T03:25:20.5704544Z ##[endgroup]
+2023-06-13T03:25:20.7902252Z ##[group]Installed distributions
+2023-06-13T03:25:20.7987025Z Resolved Java 8.0.372+7 from tool-cache
+2023-06-13T03:25:20.7988989Z Setting Java 8.0.372+7 as the default
+2023-06-13T03:25:20.8010742Z Creating toolchains.xml for JDK version 8 from temurin
+2023-06-13T03:25:20.8114349Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-13T03:25:20.8117245Z 
+2023-06-13T03:25:20.8118786Z Java configuration:
+2023-06-13T03:25:20.8119890Z   Distribution: temurin
+2023-06-13T03:25:20.8122134Z   Version: 8.0.372+7
+2023-06-13T03:25:20.8123858Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-13T03:25:20.8125278Z 
+2023-06-13T03:25:20.8269994Z ##[endgroup]
+2023-06-13T03:25:20.8359163Z Creating settings.xml with server-id: github
+2023-06-13T03:25:20.8359477Z Writing to /home/runner/.m2/settings.xml
+2023-06-13T03:25:21.1521216Z maven cache is not found

@@ -1,0 +1,3561 @@
+{
+  "generated_at": "2026-11-02T17:23:15",
+  "relocator": "GroqRelocator",
+  "summary": {
+    "blind_heal": {
+      "steps": 22,
+      "acceptable_actions": 9,
+      "accuracy": 0.4090909090909091,
+      "accuracy_ci": [
+        0.23255559668820378,
+        0.6126552261710619
+      ],
+      "masked_regressions": 10,
+      "regressions_total": 10,
+      "masked_rate": 1.0,
+      "masked_rate_ci": [
+        0.7224598312333834,
+        1.0
+      ],
+      "needless_escalations": 0,
+      "needless_rate": 0.0,
+      "needless_rate_ci": [
+        0.0,
+        0.2425007574992425
+      ]
+    },
+    "penalty_rule": {
+      "steps": 22,
+      "acceptable_actions": 19,
+      "accuracy": 0.8636363636363636,
+      "accuracy_ci": [
+        0.6666458812053,
+        0.9525108273576373
+      ],
+      "masked_regressions": 0,
+      "regressions_total": 10,
+      "masked_rate": 0.0,
+      "masked_rate_ci": [
+        0.0,
+        0.2775401687666165
+      ],
+      "needless_escalations": 0,
+      "needless_rate": 0.0,
+      "needless_rate_ci": [
+        0.0,
+        0.2425007574992425
+      ]
+    },
+    "simple_rule": {
+      "steps": 22,
+      "acceptable_actions": 21,
+      "accuracy": 0.9545454545454546,
+      "accuracy_ci": [
+        0.7820151050048196,
+        0.9919307806988523
+      ],
+      "masked_regressions": 0,
+      "regressions_total": 10,
+      "masked_rate": 0.0,
+      "masked_rate_ci": [
+        0.0,
+        0.2775401687666165
+      ],
+      "needless_escalations": 1,
+      "needless_rate": 0.08333333333333333,
+      "needless_rate_ci": [
+        0.014864709450773488,
+        0.35388592179859524
+      ]
+    },
+    "triagecore": {
+      "steps": 22,
+      "acceptable_actions": 22,
+      "accuracy": 1.0,
+      "accuracy_ci": [
+        0.8513404742740388,
+        1.0000000000000002
+      ],
+      "masked_regressions": 0,
+      "regressions_total": 10,
+      "masked_rate": 0.0,
+      "masked_rate_ci": [
+        0.0,
+        0.2775401687666165
+      ],
+      "needless_escalations": 0,
+      "needless_rate": 0.0,
+      "needless_rate_ci": [
+        0.0,
+        0.2425007574992425
+      ],
+      "cause_accuracy": 0.8636363636363636
+    },
+    "timing": {
+      "duration_ms": {
+        "p50": 6700.5,
+        "p95": 8598.55
+      },
+      "dom_extract_ms": {
+        "p50": 11.0,
+        "p95": 15.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "scenario": "shopflow_checkout",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "#btn-add-cart-primary",
+      "duration_ms": 7641,
+      "dom_extract_ms": 15,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "shopflow_checkout",
+      "step": "apply_promo",
+      "risk_tier": "medium",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "#btn-apply-coupon",
+      "duration_ms": 5477,
+      "dom_extract_ms": 8,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "shopflow_checkout",
+      "step": "pay",
+      "risk_tier": "high",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.0096,
+      "p_regression": 0.99,
+      "p_flaky": 0.0004,
+      "confidence": 0,
+      "proposed_selector": "#btn-checkout-pay",
+      "duration_ms": 7084,
+      "dom_extract_ms": 8,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_rename_ok",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 5563,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_rename_crash",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.2458,
+      "p_regression": 0.747,
+      "p_flaky": 0.0072,
+      "confidence": 1,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 7135,
+      "dom_extract_ms": 10,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_error_banner",
+      "step": "add_to_cart",
+      "risk_tier": "medium",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.2458,
+      "p_regression": 0.747,
+      "p_flaky": 0.0072,
+      "confidence": 1,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 7479,
+      "dom_extract_ms": 9,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_silent_noop",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.7932,
+      "p_regression": 0.1836,
+      "p_flaky": 0.0232,
+      "confidence": 2,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 7195,
+      "dom_extract_ms": 9,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": false
+    },
+    {
+      "scenario": "lab_slow_render",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "flaky",
+      "acceptable": "flag",
+      "triagecore_cause": "flaky",
+      "p_stale": 0.1096,
+      "p_regression": 0.0008,
+      "p_flaky": 0.8896,
+      "confidence": 89,
+      "proposed_selector": null,
+      "duration_ms": 3022,
+      "dom_extract_ms": null,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": false,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "flag",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "flag",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_console_noise_low",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.952,
+      "p_regression": 0.0231,
+      "p_flaky": 0.0248,
+      "confidence": 95,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 5830,
+      "dom_extract_ms": 10,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_console_noise_high",
+      "step": "add_to_cart",
+      "risk_tier": "high",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal|escalate",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.952,
+      "p_regression": 0.0231,
+      "p_flaky": 0.0248,
+      "confidence": 95,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 5581,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_tracking_404",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.947,
+      "p_regression": 0.0355,
+      "p_flaky": 0.0174,
+      "confidence": 95,
+      "proposed_selector": "#btn-add-item-primary",
+      "duration_ms": 6032,
+      "dom_extract_ms": 10,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": false,
+      "simple_rule_masked": false,
+      "simple_rule_needless": true,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "lab_ambiguous",
+      "step": "add_to_cart",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal|escalate",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "#button-slot button",
+      "duration_ms": 6145,
+      "dom_extract_ms": 13,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_rename_delete",
+      "step": "delete_item",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
+      "duration_ms": 5953,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_rename_toggle",
+      "step": "complete_item",
+      "risk_tier": "low",
+      "truth_cause": "stale_selector",
+      "acceptable": "heal",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.9792,
+      "p_regression": 0.0028,
+      "p_flaky": 0.018,
+      "confidence": 98,
+      "proposed_selector": "input[data-todo=\"toggle\"]",
+      "duration_ms": 6317,
+      "dom_extract_ms": 10,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": true,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "heal",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "heal",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_throw_delete",
+      "step": "delete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.2458,
+      "p_regression": 0.747,
+      "p_flaky": 0.0072,
+      "confidence": 1,
+      "proposed_selector": "button[data-todo=\"destroy\"]",
+      "duration_ms": 7303,
+      "dom_extract_ms": 12,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_throw_toggle",
+      "step": "complete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.2458,
+      "p_regression": 0.747,
+      "p_flaky": 0.0072,
+      "confidence": 1,
+      "proposed_selector": "input[data-todo=\"toggle\"]",
+      "duration_ms": 7310,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_noop_delete",
+      "step": "delete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.7932,
+      "p_regression": 0.1836,
+      "p_flaky": 0.0232,
+      "confidence": 2,
+      "proposed_selector": "button.delete-control-renamed",
+      "duration_ms": 8767,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": false
+    },
+    {
+      "scenario": "b1_noop_toggle",
+      "step": "complete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "stale_selector",
+      "p_stale": 0.7932,
+      "p_regression": 0.1836,
+      "p_flaky": 0.0232,
+      "confidence": 2,
+      "proposed_selector": "input[data-todo=\"toggle\"]",
+      "duration_ms": 7510,
+      "dom_extract_ms": 12,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": false
+    },
+    {
+      "scenario": "b1_request_delete",
+      "step": "delete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.0758,
+      "p_regression": 0.9219,
+      "p_flaky": 0.0022,
+      "confidence": 0,
+      "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
+      "duration_ms": 7387,
+      "dom_extract_ms": 11,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_request_toggle",
+      "step": "complete_item",
+      "risk_tier": "low",
+      "truth_cause": "likely_regression",
+      "acceptable": "escalate",
+      "triagecore_cause": "likely_regression",
+      "p_stale": 0.0758,
+      "p_regression": 0.9219,
+      "p_flaky": 0.0022,
+      "confidence": 0,
+      "proposed_selector": "input.toggle-control-renamed",
+      "duration_ms": 7644,
+      "dom_extract_ms": 10,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": true,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "escalate",
+      "penalty_rule_acceptable": true,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "escalate",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "escalate",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_slow_delete",
+      "step": "delete_item",
+      "risk_tier": "low",
+      "truth_cause": "flaky",
+      "acceptable": "flag",
+      "triagecore_cause": "flaky",
+      "p_stale": 0.1096,
+      "p_regression": 0.0008,
+      "p_flaky": 0.8896,
+      "confidence": 89,
+      "proposed_selector": null,
+      "duration_ms": 3029,
+      "dom_extract_ms": null,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": false,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "flag",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "flag",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    },
+    {
+      "scenario": "b1_slow_toggle",
+      "step": "complete_item",
+      "risk_tier": "low",
+      "truth_cause": "flaky",
+      "acceptable": "flag",
+      "triagecore_cause": "flaky",
+      "p_stale": 0.1096,
+      "p_regression": 0.0008,
+      "p_flaky": 0.8896,
+      "confidence": 89,
+      "proposed_selector": null,
+      "duration_ms": 3006,
+      "dom_extract_ms": null,
+      "blind_heal_action": "heal",
+      "blind_heal_acceptable": false,
+      "blind_heal_masked": false,
+      "blind_heal_needless": false,
+      "penalty_rule_action": "heal",
+      "penalty_rule_acceptable": false,
+      "penalty_rule_masked": false,
+      "penalty_rule_needless": false,
+      "simple_rule_action": "flag",
+      "simple_rule_acceptable": true,
+      "simple_rule_masked": false,
+      "simple_rule_needless": false,
+      "triagecore_action": "flag",
+      "triagecore_acceptable": true,
+      "triagecore_masked": false,
+      "triagecore_needless": false,
+      "cause_correct": true
+    }
+  ],
+  "runs": [
+    {
+      "scenario_id": "shopflow_checkout",
+      "title": "ShopFlow checkout journey",
+      "description": "Three-step checkout. Every button was renamed in a refactor; the payment handler is also broken.",
+      "page": "shopflow_app.html",
+      "duration_ms": 20621,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add keyboard to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/shopflow_app.html",
+            "original_selector": "#add-to-cart-btn",
+            "proposed_selector": "#btn-add-cart-primary",
+            "expected_state_selector": "#cart-notification",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 2537,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1006,
+            "rewait": 3542,
+            "dom_extract": 15,
+            "relocation": 2537,
+            "observation": 547,
+            "total": 7641,
+            "engine": 0.79
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.07, flag 0.99, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.06808332621370095,
+              "flag": 0.9931651528855133,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -25,7 +25,7 @@\n       - id: add_to_cart\n         name: Add keyboard to cart\n         intent: \"Add to Cart button for the Developer Mechanical Keyboard ($120.00)\"\n-        original_selector: \"#add-to-cart-btn\"\n+        original_selector: \"#btn-add-cart-primary\"\n         container_selector: \"#step-1-card\"\n         expected_state_selector: \"#cart-notification\"\n         risk_tier: low\n"
+        },
+        {
+          "step_id": "apply_promo",
+          "name": "Apply coupon DEV10_OFF",
+          "risk_tier": "medium",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "apply_promo",
+            "page_url": "http://127.0.0.1:35365/shopflow_app.html",
+            "original_selector": "#apply-promo",
+            "proposed_selector": "#btn-apply-coupon",
+            "expected_state_selector": "#promo-notification",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 461,
+            "risk_tier": "medium"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1004,
+            "rewait": 3531,
+            "dom_extract": 8,
+            "relocation": 461,
+            "observation": 477,
+            "total": 5477,
+            "engine": 1.494
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'medium', expected loss: heal 0.11, flag 1.04, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "medium",
+            "expected_loss": {
+              "heal": 0.1100646069815607,
+              "flag": 1.035146433653373,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.9523809523809523,
+              "flag": 0.9523809523809523
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -33,7 +33,7 @@\n       - id: apply_promo\n         name: Apply coupon DEV10_OFF\n         intent: \"Apply Coupon button for voucher DEV10_OFF\"\n-        original_selector: \"#apply-promo\"\n+        original_selector: \"#btn-apply-coupon\"\n         container_selector: \"#step-2-card\"\n         expected_state_selector: \"#promo-notification\"\n         risk_tier: medium\n"
+        },
+        {
+          "step_id": "pay",
+          "name": "Pay and complete checkout",
+          "risk_tier": "high",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 1,
+            "console_errors": 1,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": true
+          },
+          "context": {
+            "step_id": "pay",
+            "page_url": "http://127.0.0.1:35365/shopflow_app.html",
+            "original_selector": "#submit-order",
+            "proposed_selector": "#btn-checkout-pay",
+            "expected_state_selector": "#order-confirmation",
+            "error_state_selector": "#payment-error-banner",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 568,
+            "risk_tier": "high"
+          },
+          "observations": {
+            "page_errors": [
+              "processPayment is not defined"
+            ],
+            "console_errors": [
+              "Uncaught Client Error: Uncaught ReferenceError: processPayment is not defined at line 376"
+            ],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1004,
+            "rewait": 3528,
+            "dom_extract": 8,
+            "relocation": 568,
+            "observation": 1979,
+            "total": 7084,
+            "engine": 0.465
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 0,
+            "reasoning_trace": "Evidence: runtime_failure=2+ [ln P: stale_selector -3.91, likely_regression -1.05, flaky -3.91]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=present [ln P: stale_selector -1.90, likely_regression -0.51, flaky -1.61]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.010, likely_regression 0.990, flaky 0.000 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'high', expected loss: flag 99.01, escalate 0.01. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "2+",
+              "state_progression": "not_reached",
+              "console_noise": "present",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -3.912023005428146
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -1.8971199848858813,
+                "likely_regression": -0.5108256237659907,
+                "flaky": -1.6094379124341003
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.009582421395692852,
+              "likely_regression": 0.990020577871326,
+              "flaky": 0.00039700073298098326
+            },
+            "fit": 0.6696522533737916,
+            "risk_tier": "high",
+            "expected_loss": {
+              "flag": 99.01164020852829,
+              "escalate": 0.009979422128673835
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.9900990099009901
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_rename_ok",
+      "title": "Harmless rename",
+      "description": "The button's id changed in a refactor; clicking the new one works.",
+      "page": "scenario_lab.html?case=rename_ok",
+      "duration_ms": 5691,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=rename_ok",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 512,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3532,
+            "dom_extract": 11,
+            "relocation": 512,
+            "observation": 511,
+            "total": 5563,
+            "engine": 0.483
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.07, flag 0.99, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.06808332621370095,
+              "flag": 0.9931651528855133,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -12,7 +12,7 @@\n     id: add_to_cart\n     name: Add laptop stand to cart\n     intent: \"Add to cart button for the Adjustable Laptop Stand ($49.00) in the main product card\"\n-    original_selector: \"#add-to-cart\"\n+    original_selector: \"#btn-add-item-primary\"\n     expected_state_selector: \"#cart-confirmation\"\n     error_state_selector: \"#cart-error\"\n \n"
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_rename_crash",
+      "title": "Rename hiding a crash",
+      "description": "The button was renamed AND its click handler calls an undefined function.",
+      "page": "scenario_lab.html?case=rename_crash",
+      "duration_ms": 7258,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 1,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=rename_crash",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 619,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [
+              "inventoryClient is not defined"
+            ],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1003,
+            "rewait": 3536,
+            "dom_extract": 10,
+            "relocation": 619,
+            "observation": 1973,
+            "total": 7135,
+            "engine": 0.539
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 1,
+            "reasoning_trace": "Evidence: runtime_failure=1 [ln P: stale_selector -2.53, likely_regression -1.05, flaky -2.53]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.246, likely_regression 0.747, flaky 0.007 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 3.98, escalate 0.25. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "1",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -2.5257286443082556,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -2.5257286443082556
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.245823443301062,
+              "likely_regression": 0.7469875040285875,
+              "flaky": 0.0071890526703503235
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 3.9807609634439998,
+              "escalate": 0.25301249597141234
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_error_banner",
+      "title": "Rename hiding a handled failure",
+      "description": "Renamed button; clicking shows an \"inventory service unavailable\" banner, with no exception thrown.",
+      "page": "scenario_lab.html?case=error_banner",
+      "duration_ms": 7608,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "medium",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": true
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=error_banner",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 973,
+            "risk_tier": "medium"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3534,
+            "dom_extract": 9,
+            "relocation": 973,
+            "observation": 1964,
+            "total": 7479,
+            "engine": 0.37
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 1,
+            "reasoning_trace": "Evidence: runtime_failure=1 [ln P: stale_selector -2.53, likely_regression -1.05, flaky -2.53]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.246, likely_regression 0.747, flaky 0.007 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'medium', expected loss: flag 15.19, escalate 0.25. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "1",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -2.5257286443082556,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -2.5257286443082556
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.245823443301062,
+              "likely_regression": 0.7469875040285875,
+              "flaky": 0.0071890526703503235
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "medium",
+            "expected_loss": {
+              "flag": 15.185573523872812,
+              "escalate": 0.25301249597141234
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.9523809523809523
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_silent_noop",
+      "title": "Rename hiding a silent bug",
+      "description": "Renamed button whose handler no longer does anything. No error, no result.",
+      "page": "scenario_lab.html?case=silent_noop",
+      "duration_ms": 7317,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=silent_noop",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 691,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1003,
+            "rewait": 3530,
+            "dom_extract": 9,
+            "relocation": 691,
+            "observation": 1966,
+            "total": 7195,
+            "engine": 0.623
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 2,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.793, likely_regression 0.184, flaky 0.023 -> most probable cause: stale_selector. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 1.71, escalate 0.82. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.7931686223412251,
+              "likely_regression": 0.18363533530451984,
+              "flaky": 0.02319604235425513
+            },
+            "fit": 0.5987447588753295,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 1.7113452988638242,
+              "escalate": 0.8163646646954802
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": false,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_slow_render",
+      "title": "Slow page, nothing renamed",
+      "description": "The original button exists but only appears about 1.8 s after load.",
+      "page": "scenario_lab.html?case=slow_render",
+      "duration_ms": 3170,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": false,
+            "relocated_match_count": null,
+            "original_resolved_after_wait": true,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=slow_render",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": null,
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": null,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 1528,
+            "observation": 487,
+            "total": 3022,
+            "engine": 0.478
+          },
+          "truth": {
+            "cause": "flaky",
+            "acceptable": [
+              "flag"
+            ]
+          },
+          "engine": {
+            "classification": "flaky",
+            "confidence_score": 89,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=resolved_after_wait [ln P: stale_selector -3.91, likely_regression -3.00, flaky -0.11]. Posterior: stale_selector 0.110, likely_regression 0.001, flaky 0.890 -> most probable cause: flaky. Blocked: heal (no relocated selector to apply (original selector was used)). Risk tier 'low', expected loss: flag 0.11, escalate 1.00. Decision: flag.",
+            "recommended_action": "flag"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "resolved_after_wait"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -2.995732273553991,
+                "flaky": -0.10536051565782628
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.10955695895853859,
+              "likely_regression": 0.0008075848367871058,
+              "flaky": 0.8896354562046743
+            },
+            "fit": 0.8690550512944185,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 0.11359488314247412,
+              "escalate": 0.9991924151632129
+            },
+            "blocked": {
+              "heal": "no relocated selector to apply (original selector was used)"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_console_noise_low",
+      "title": "Harmless rename with third-party console noise (low risk)",
+      "description": "Renamed button that works, but a chat widget logs console errors on every click.",
+      "page": "scenario_lab.html?case=console_noise",
+      "duration_ms": 5968,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 1,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=console_noise",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 771,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [
+              "[chat-widget] websocket handshake failed (code 1006)"
+            ],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3561,
+            "dom_extract": 10,
+            "relocation": 771,
+            "observation": 489,
+            "total": 5830,
+            "engine": 0.651
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 95,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=present [ln P: stale_selector -1.90, likely_regression -0.51, flaky -1.61]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.952, likely_regression 0.023, flaky 0.025 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.19, flag 1.07, escalate 0.98. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "present",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -1.8971199848858813,
+                "likely_regression": -0.5108256237659907,
+                "flaky": -1.6094379124341003
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9520354499415659,
+              "likely_regression": 0.02313011297234129,
+              "flaky": 0.024834437086092724
+            },
+            "fit": 0.6467034708147595,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.1901538761199846,
+              "flag": 1.0676860148032723,
+              "escalate": 0.9768698870276585
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -12,7 +12,7 @@\n     id: add_to_cart\n     name: Add laptop stand to cart\n     intent: \"Add to cart button for the Adjustable Laptop Stand ($49.00) in the main product card\"\n-    original_selector: \"#add-to-cart\"\n+    original_selector: \"#btn-add-item-primary\"\n     expected_state_selector: \"#cart-confirmation\"\n     error_state_selector: \"#cart-error\"\n \n"
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_console_noise_high",
+      "title": "Harmless rename with third-party console noise (high risk)",
+      "description": "Same page treated as an irreversible step. Escalating is the cautious but acceptable choice.",
+      "page": "scenario_lab.html?case=console_noise",
+      "duration_ms": 5710,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "high",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 1,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=console_noise",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 560,
+            "risk_tier": "high"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [
+              "[chat-widget] websocket handshake failed (code 1006)"
+            ],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3535,
+            "dom_extract": 11,
+            "relocation": 560,
+            "observation": 479,
+            "total": 5581,
+            "engine": 0.515
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal",
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 95,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=present [ln P: stale_selector -1.90, likely_regression -0.51, flaky -1.61]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.952, likely_regression 0.023, flaky 0.025 -> most probable cause: stale_selector. Risk tier 'high', expected loss: heal 2.39, flag 3.27, escalate 0.98. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "present",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -1.8971199848858813,
+                "likely_regression": -0.5108256237659907,
+                "flaky": -1.6094379124341003
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9520354499415659,
+              "likely_regression": 0.02313011297234129,
+              "flaky": 0.024834437086092724
+            },
+            "fit": 0.6467034708147595,
+            "risk_tier": "high",
+            "expected_loss": {
+              "heal": 2.387514608492407,
+              "flag": 3.2650467471756945,
+              "escalate": 0.9768698870276585
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.9900990099009901,
+              "flag": 0.9900990099009901
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_tracking_404",
+      "title": "Harmless rename with a broken tracking pixel",
+      "description": "Renamed button that works, but an analytics pixel request returns 404.",
+      "page": "scenario_lab.html?case=tracking_404",
+      "duration_ms": 6157,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 1,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=tracking_404",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#btn-add-item-primary",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 998,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": [
+              "http://127.0.0.1:35365/pixel/track.gif?evt=add_to_cart (HTTP 404)"
+            ]
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3533,
+            "dom_extract": 10,
+            "relocation": 998,
+            "observation": 494,
+            "total": 6032,
+            "engine": 0.343
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 95,
+            "reasoning_trace": "Evidence: runtime_failure=1 [ln P: stale_selector -2.53, likely_regression -1.05, flaky -2.53]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.947, likely_regression 0.036, flaky 0.017 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.23, flag 1.12, escalate 0.96. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "1",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -2.5257286443082556,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -2.5257286443082556
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.947033920943025,
+              "likely_regression": 0.03552798322865492,
+              "flaky": 0.01743809582832026
+            },
+            "fit": 0.563819666853138,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.22995420362823538,
+              "flag": 1.1246738370862996,
+              "escalate": 0.9644720167713452
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -12,7 +12,7 @@\n     id: add_to_cart\n     name: Add laptop stand to cart\n     intent: \"Add to cart button for the Adjustable Laptop Stand ($49.00) in the main product card\"\n-    original_selector: \"#add-to-cart\"\n+    original_selector: \"#btn-add-item-primary\"\n     expected_state_selector: \"#cart-confirmation\"\n     error_state_selector: \"#cart-error\"\n \n"
+        }
+      ]
+    },
+    {
+      "scenario_id": "lab_ambiguous",
+      "title": "Rename with two look-alike buttons",
+      "description": "Renamed button; a second product has an identical \"Add to cart\" button. Healing is fine only if the right product is added.",
+      "page": "scenario_lab.html?case=ambiguous",
+      "duration_ms": 6270,
+      "steps": [
+        {
+          "step_id": "add_to_cart",
+          "name": "Add laptop stand to cart",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": false
+          },
+          "context": {
+            "step_id": "add_to_cart",
+            "page_url": "http://127.0.0.1:35365/scenario_lab.html?case=ambiguous",
+            "original_selector": "#add-to-cart",
+            "proposed_selector": "#button-slot button",
+            "expected_state_selector": "#cart-confirmation",
+            "error_state_selector": "#cart-error",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 1115,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1001,
+            "rewait": 3529,
+            "dom_extract": 13,
+            "relocation": 1115,
+            "observation": 495,
+            "total": 6145,
+            "engine": 0.385
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal",
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.07, flag 0.99, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.06808332621370095,
+              "flag": 0.9931651528855133,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": "--- tests/scenarios/qa_scenarios.yaml\n+++ tests/scenarios/qa_scenarios.yaml\n@@ -12,7 +12,7 @@\n     id: add_to_cart\n     name: Add laptop stand to cart\n     intent: \"Add to cart button for the Adjustable Laptop Stand ($49.00) in the main product card\"\n-    original_selector: \"#add-to-cart\"\n+    original_selector: \"#button-slot button\"\n     expected_state_selector: \"#cart-confirmation\"\n     error_state_selector: \"#cart-error\"\n \n"
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_rename_delete",
+      "title": "Renamed delete control works",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation renames the delete control, and deleting the seeded completed item succeeds.",
+      "page": "apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete",
+      "duration_ms": 6108,
+      "steps": [
+        {
+          "step_id": "delete_item",
+          "name": "Delete the seeded completed todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "delete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete",
+            "original_selector": "button.destroy",
+            "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 940,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3528,
+            "dom_extract": 11,
+            "relocation": 940,
+            "observation": 477,
+            "total": 5953,
+            "engine": 0.66
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.07, flag 0.99, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.06808332621370095,
+              "flag": 0.9931651528855133,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_rename_toggle",
+      "title": "Renamed completion control works",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation renames the completion control, and completing the seeded active item succeeds.",
+      "page": "apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle",
+      "duration_ms": 6496,
+      "steps": [
+        {
+          "step_id": "complete_item",
+          "name": "Complete the seeded active todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "complete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle",
+            "original_selector": "input.toggle",
+            "proposed_selector": "input[data-todo=\"toggle\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 1308,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1003,
+            "rewait": 3529,
+            "dom_extract": 10,
+            "relocation": 1308,
+            "observation": 471,
+            "total": 6317,
+            "engine": 0.586
+          },
+          "truth": {
+            "cause": "stale_selector",
+            "acceptable": [
+              "heal"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 98,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.979, likely_regression 0.003, flaky 0.018 -> most probable cause: stale_selector. Risk tier 'low', expected loss: heal 0.07, flag 0.99, escalate 1.00. Decision: heal.",
+            "recommended_action": "heal"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.9791713926295601,
+              "likely_regression": 0.0027987520511906505,
+              "flaky": 0.01802985531924923
+            },
+            "fit": 0.9148938855543002,
+            "risk_tier": "low",
+            "expected_loss": {
+              "heal": 0.06808332621370095,
+              "flag": 0.9931651528855133,
+              "escalate": 0.9972012479488094
+            },
+            "blocked": {},
+            "thresholds": {
+              "heal": 0.8333333333333334,
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_throw_delete",
+      "title": "Renamed delete control throws",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation injects an error that blocks deletion of the seeded item.",
+      "page": "apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete",
+      "duration_ms": 7469,
+      "steps": [
+        {
+          "step_id": "delete_item",
+          "name": "Delete the seeded completed todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 1,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "delete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete",
+            "original_selector": "button.destroy",
+            "proposed_selector": "button[data-todo=\"destroy\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 806,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [
+              "B1 injected handler failure"
+            ],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3533,
+            "dom_extract": 12,
+            "relocation": 806,
+            "observation": 1956,
+            "total": 7303,
+            "engine": 0.511
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 1,
+            "reasoning_trace": "Evidence: runtime_failure=1 [ln P: stale_selector -2.53, likely_regression -1.05, flaky -2.53]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.246, likely_regression 0.747, flaky 0.007 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 3.98, escalate 0.25. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "1",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -2.5257286443082556,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -2.5257286443082556
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.245823443301062,
+              "likely_regression": 0.7469875040285875,
+              "flaky": 0.0071890526703503235
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 3.9807609634439998,
+              "escalate": 0.25301249597141234
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_throw_toggle",
+      "title": "Renamed completion control throws",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation injects an error that blocks completion of the seeded item.",
+      "page": "apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle",
+      "duration_ms": 7474,
+      "steps": [
+        {
+          "step_id": "complete_item",
+          "name": "Complete the seeded active todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 1,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "complete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle",
+            "original_selector": "input.toggle",
+            "proposed_selector": "input[data-todo=\"toggle\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 810,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [
+              "B1 injected handler failure"
+            ],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1003,
+            "rewait": 3537,
+            "dom_extract": 11,
+            "relocation": 810,
+            "observation": 1955,
+            "total": 7310,
+            "engine": 0.661
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 1,
+            "reasoning_trace": "Evidence: runtime_failure=1 [ln P: stale_selector -2.53, likely_regression -1.05, flaky -2.53]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.246, likely_regression 0.747, flaky 0.007 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 3.98, escalate 0.25. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "1",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -2.5257286443082556,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -2.5257286443082556
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.245823443301062,
+              "likely_regression": 0.7469875040285875,
+              "flaky": 0.0071890526703503235
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 3.9807609634439998,
+              "escalate": 0.25301249597141234
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_noop_delete",
+      "title": "Renamed delete control does nothing",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation makes deletion a no-op without throwing.",
+      "page": "apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete",
+      "duration_ms": 8915,
+      "steps": [
+        {
+          "step_id": "delete_item",
+          "name": "Delete the seeded completed todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "delete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete",
+            "original_selector": "button.destroy",
+            "proposed_selector": "button.delete-control-renamed",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 2271,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3534,
+            "dom_extract": 11,
+            "relocation": 2271,
+            "observation": 1955,
+            "total": 8767,
+            "engine": 0.491
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 2,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.793, likely_regression 0.184, flaky 0.023 -> most probable cause: stale_selector. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 1.71, escalate 0.82. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.7931686223412251,
+              "likely_regression": 0.18363533530451984,
+              "flaky": 0.02319604235425513
+            },
+            "fit": 0.5987447588753295,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 1.7113452988638242,
+              "escalate": 0.8163646646954802
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": false,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_noop_toggle",
+      "title": "Renamed completion control does nothing",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation makes completion a no-op without throwing.",
+      "page": "apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle",
+      "duration_ms": 7672,
+      "steps": [
+        {
+          "step_id": "complete_item",
+          "name": "Complete the seeded active todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": false,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "complete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle",
+            "original_selector": "input.toggle",
+            "proposed_selector": "input[data-todo=\"toggle\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 1012,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3534,
+            "dom_extract": 12,
+            "relocation": 1012,
+            "observation": 1956,
+            "total": 7510,
+            "engine": 0.441
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "stale_selector",
+            "confidence_score": 2,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.793, likely_regression 0.184, flaky 0.023 -> most probable cause: stale_selector. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 1.71, escalate 0.82. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.7931686223412251,
+              "likely_regression": 0.18363533530451984,
+              "flaky": 0.02319604235425513
+            },
+            "fit": 0.5987447588753295,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 1.7113452988638242,
+              "escalate": 0.8163646646954802
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": false,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_request_delete",
+      "title": "Delete request fails",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation returns a local HTTP 404 and blocks the delete handler.",
+      "page": "apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete",
+      "duration_ms": 7545,
+      "steps": [
+        {
+          "step_id": "delete_item",
+          "name": "Delete the seeded completed todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 1,
+            "expected_state_reached": false,
+            "error_state_shown": true
+          },
+          "context": {
+            "step_id": "delete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete",
+            "original_selector": "button.destroy",
+            "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": "[data-b1-state=\"error\"]",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 836,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": [
+              "http://127.0.0.1:35365/__b1_missing_resource__?case=b1_request_delete (HTTP 404)"
+            ]
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3528,
+            "dom_extract": 11,
+            "relocation": 836,
+            "observation": 2014,
+            "total": 7387,
+            "engine": 0.684
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 0,
+            "reasoning_trace": "Evidence: runtime_failure=2+ [ln P: stale_selector -3.91, likely_regression -1.05, flaky -3.91]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.076, likely_regression 0.922, flaky 0.002 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 4.69, escalate 0.08. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "2+",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -3.912023005428146
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.07584890056098167,
+              "likely_regression": 0.9219329149819189,
+              "flaky": 0.0022181844570993555
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 4.685513475470576,
+              "escalate": 0.07806708501808103
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_request_toggle",
+      "title": "Completion request fails",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation returns a local HTTP 404 and blocks the completion handler.",
+      "page": "apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle",
+      "duration_ms": 7818,
+      "steps": [
+        {
+          "step_id": "complete_item",
+          "name": "Complete the seeded active todo",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": true,
+            "relocated_match_count": 1,
+            "original_resolved_after_wait": false,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 1,
+            "expected_state_reached": false,
+            "error_state_shown": true
+          },
+          "context": {
+            "step_id": "complete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle",
+            "original_selector": "input.toggle",
+            "proposed_selector": "input.toggle-control-renamed",
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": "[data-b1-state=\"error\"]",
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": 1138,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": [
+              "http://127.0.0.1:35365/__b1_missing_resource__?case=b1_request_toggle (HTTP 404)"
+            ]
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1002,
+            "rewait": 3532,
+            "dom_extract": 10,
+            "relocation": 1138,
+            "observation": 1968,
+            "total": 7644,
+            "engine": 0.512
+          },
+          "truth": {
+            "cause": "likely_regression",
+            "acceptable": [
+              "escalate"
+            ]
+          },
+          "engine": {
+            "classification": "likely_regression",
+            "confidence_score": 0,
+            "reasoning_trace": "Evidence: runtime_failure=2+ [ln P: stale_selector -3.91, likely_regression -1.05, flaky -3.91]; state_progression=not_reached [ln P: stale_selector -2.30, likely_regression -0.11, flaky -1.90]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=not_resolved [ln P: stale_selector -0.02, likely_regression -0.05, flaky -2.30]. Posterior: stale_selector 0.076, likely_regression 0.922, flaky 0.002 -> most probable cause: likely_regression. Blocked: heal (expected state was not reached). Risk tier 'low', expected loss: flag 4.69, escalate 0.08. Decision: escalate to a human.",
+            "recommended_action": "escalate"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "2+",
+              "state_progression": "not_reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "not_resolved"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -1.0498221244986778,
+                "flaky": -3.912023005428146
+              },
+              "state_progression": {
+                "stale_selector": -2.3025850929940455,
+                "likely_regression": -0.10536051565782628,
+                "flaky": -1.8971199848858813
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -0.020202707317519466,
+                "likely_regression": -0.05129329438755058,
+                "flaky": -2.3025850929940455
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.07584890056098167,
+              "likely_regression": 0.9219329149819189,
+              "flaky": 0.0022181844570993555
+            },
+            "fit": 0.6174916407775398,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 4.685513475470576,
+              "escalate": 0.07806708501808103
+            },
+            "blocked": {
+              "heal": "expected state was not reached"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_slow_delete",
+      "title": "Delete control renders slowly",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation delays the app module and seeded item by 1.8 seconds without changing the selector.",
+      "page": "apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete",
+      "duration_ms": 3233,
+      "steps": [
+        {
+          "step_id": "delete_item",
+          "name": "Delete the seeded completed todo after it renders",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": false,
+            "relocated_match_count": null,
+            "original_resolved_after_wait": true,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "delete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete",
+            "original_selector": "button.destroy",
+            "proposed_selector": null,
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": null,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1001,
+            "rewait": 1532,
+            "observation": 490,
+            "total": 3029,
+            "engine": 0.455
+          },
+          "truth": {
+            "cause": "flaky",
+            "acceptable": [
+              "flag"
+            ]
+          },
+          "engine": {
+            "classification": "flaky",
+            "confidence_score": 89,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=resolved_after_wait [ln P: stale_selector -3.91, likely_regression -3.00, flaky -0.11]. Posterior: stale_selector 0.110, likely_regression 0.001, flaky 0.890 -> most probable cause: flaky. Blocked: heal (no relocated selector to apply (original selector was used)). Risk tier 'low', expected loss: flag 0.11, escalate 1.00. Decision: flag.",
+            "recommended_action": "flag"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "resolved_after_wait"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -2.995732273553991,
+                "flaky": -0.10536051565782628
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.10955695895853859,
+              "likely_regression": 0.0008075848367871058,
+              "flaky": 0.8896354562046743
+            },
+            "fit": 0.8690550512944185,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 0.11359488314247412,
+              "escalate": 0.9991924151632129
+            },
+            "blocked": {
+              "heal": "no relocated selector to apply (original selector was used)"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    },
+    {
+      "scenario_id": "b1_slow_toggle",
+      "title": "Completion control renders slowly",
+      "description": "Real Modern TodoMVC code; a deterministic test mutation delays the app module and seeded item by 1.8 seconds without changing the selector.",
+      "page": "apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle",
+      "duration_ms": 3196,
+      "steps": [
+        {
+          "step_id": "complete_item",
+          "name": "Complete the seeded active todo after it renders",
+          "risk_tier": "low",
+          "status": "triage",
+          "raw_signals": {
+            "selector_healed": false,
+            "relocated_match_count": null,
+            "original_resolved_after_wait": true,
+            "action_succeeded": true,
+            "uncaught_page_errors": 0,
+            "console_errors": 0,
+            "failed_requests": 0,
+            "expected_state_reached": true,
+            "error_state_shown": null
+          },
+          "context": {
+            "step_id": "complete_item",
+            "page_url": "http://127.0.0.1:35365/apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle",
+            "original_selector": "input.toggle",
+            "proposed_selector": null,
+            "expected_state_selector": "[data-b1-state=\"success\"]",
+            "error_state_selector": null,
+            "observation_window_ms": 1500,
+            "relocation_latency_ms": null,
+            "risk_tier": "low"
+          },
+          "observations": {
+            "page_errors": [],
+            "console_errors": [],
+            "failed_requests": []
+          },
+          "relocation_error": null,
+          "timings_ms": {
+            "first_try": 1003,
+            "rewait": 1530,
+            "observation": 468,
+            "total": 3006,
+            "engine": 0.531
+          },
+          "truth": {
+            "cause": "flaky",
+            "acceptable": [
+              "flag"
+            ]
+          },
+          "engine": {
+            "classification": "flaky",
+            "confidence_score": 89,
+            "reasoning_trace": "Evidence: runtime_failure=0 [ln P: stale_selector -0.11, likely_regression -1.20, flaky -0.11]; state_progression=reached [ln P: stale_selector -0.11, likely_regression -2.30, flaky -0.16]; console_noise=absent [ln P: stale_selector -0.16, likely_regression -0.92, flaky -0.22]; action_outcome=succeeded [ln P: stale_selector -0.05, likely_regression -0.29, flaky -0.11]; timing=resolved_after_wait [ln P: stale_selector -3.91, likely_regression -3.00, flaky -0.11]. Posterior: stale_selector 0.110, likely_regression 0.001, flaky 0.890 -> most probable cause: flaky. Blocked: heal (no relocated selector to apply (original selector was used)). Risk tier 'low', expected loss: flag 0.11, escalate 1.00. Decision: flag.",
+            "recommended_action": "flag"
+          },
+          "details": {
+            "group_states": {
+              "runtime_failure": "0",
+              "state_progression": "reached",
+              "console_noise": "absent",
+              "action_outcome": "succeeded",
+              "timing": "resolved_after_wait"
+            },
+            "contributions": {
+              "runtime_failure": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -1.2039728043259361,
+                "flaky": -0.10536051565782628
+              },
+              "state_progression": {
+                "stale_selector": -0.10536051565782628,
+                "likely_regression": -2.3025850929940455,
+                "flaky": -0.16251892949777494
+              },
+              "console_noise": {
+                "stale_selector": -0.16251892949777494,
+                "likely_regression": -0.916290731874155,
+                "flaky": -0.2231435513142097
+              },
+              "action_outcome": {
+                "stale_selector": -0.05129329438755058,
+                "likely_regression": -0.2876820724517809,
+                "flaky": -0.10536051565782628
+              },
+              "timing": {
+                "stale_selector": -3.912023005428146,
+                "likely_regression": -2.995732273553991,
+                "flaky": -0.10536051565782628
+              }
+            },
+            "missing_groups": [],
+            "posterior": {
+              "stale_selector": 0.10955695895853859,
+              "likely_regression": 0.0008075848367871058,
+              "flaky": 0.8896354562046743
+            },
+            "fit": 0.8690550512944185,
+            "risk_tier": "low",
+            "expected_loss": {
+              "flag": 0.11359488314247412,
+              "escalate": 0.9991924151632129
+            },
+            "blocked": {
+              "heal": "no relocated selector to apply (original selector was used)"
+            },
+            "thresholds": {
+              "flag": 0.8333333333333334
+            }
+          },
+          "score": {
+            "cause_correct": true,
+            "action_acceptable": true,
+            "masked_regression": false,
+            "needless_escalation": false
+          },
+          "suggested_patch": null
+        }
+      ]
+    }
+  ]
+}

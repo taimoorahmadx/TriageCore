@@ -1,0 +1,310 @@
+===== accuracy_checker (ubuntu-20.04, 3.8)/6_Pip install and run pylint.txt =====
+##[group]Run python -m pip install pylint==2.10.2
+[36;1mpython -m pip install pylint==2.10.2[0m
+[36;1mPYTHONPATH=. python -m pylint --rcfile=.pylintrc `find -wholename '?*/**/*.py' -not -path "./tests/*" -not -path "./build/*"`[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+Collecting pylint==2.10.2
+  Downloading pylint-2.10.2-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.6/392.6 kB 19.2 MB/s eta 0:00:00
+Collecting platformdirs>=2.2.0 (from pylint==2.10.2)
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting astroid<2.8,>=2.7.2 (from pylint==2.10.2)
+  Downloading astroid-2.7.3-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 64.6 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5 (from pylint==2.10.2)
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 25.6 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6 (from pylint==2.10.2)
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1 (from pylint==2.10.2)
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading lazy_object_proxy-1.9.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.4/61.4 kB 20.7 MB/s eta 0:00:00
+Collecting wrapt<1.13,>=1.11 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools>=20.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from astroid<2.8,>=2.7.2->pylint==2.10.2) (56.0.0)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp38-cp38-linux_x86_64.whl size=81817 sha256=0d2f7ce2acfe89647417e5b6d46431bdd5fe4f7785c9c4c66088cee9a215b16b
+  Stored in directory: /home/runner/.cache/pip/wheels/5f/fd/9e/b6cf5890494cb8ef0b5eaff72e5d55a70fb56316007d6dfe73
+Successfully built wrapt
+Installing collected packages: wrapt, mccabe, toml, platformdirs, lazy-object-proxy, isort, astroid, pylint
+Successfully installed astroid-2.7.3 isort-5.12.0 lazy-object-proxy-1.9.0 mccabe-0.6.1 platformdirs-4.0.0 pylint-2.10.2 toml-0.10.2 wrapt-1.12.1
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+************* Module openvino.tools.accuracy_checker.annotation_converters.amazon
+openvino/tools/accuracy_checker/annotation_converters/amazon.py:42:0: C0301: Line too long (125/120) (line-too-long)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.
+
+
+===== accuracy_checker (ubuntu-20.04, 3.9)/6_Pip install and run pylint.txt =====
+##[group]Run python -m pip install pylint==2.10.2
+[36;1mpython -m pip install pylint==2.10.2[0m
+[36;1mPYTHONPATH=. python -m pylint --rcfile=.pylintrc `find -wholename '?*/**/*.py' -not -path "./tests/*" -not -path "./build/*"`[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
+Collecting pylint==2.10.2
+  Downloading pylint-2.10.2-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.6/392.6 kB 13.6 MB/s eta 0:00:00
+Collecting platformdirs>=2.2.0 (from pylint==2.10.2)
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting astroid<2.8,>=2.7.2 (from pylint==2.10.2)
+  Downloading astroid-2.7.3-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 53.7 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5 (from pylint==2.10.2)
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 31.0 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6 (from pylint==2.10.2)
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1 (from pylint==2.10.2)
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading lazy_object_proxy-1.9.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 17.7 MB/s eta 0:00:00
+Collecting wrapt<1.13,>=1.11 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools>=20.0 in /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages (from astroid<2.8,>=2.7.2->pylint==2.10.2) (58.1.0)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp39-cp39-linux_x86_64.whl size=78685 sha256=2bfe17643bf743288c878c4d98ddc17e5aa38ef087a954791dd50071914a215c
+  Stored in directory: /home/runner/.cache/pip/wheels/98/23/68/efe259aaca055e93b08e74fbe512819c69a2155c11ba3c0f10
+Successfully built wrapt
+Installing collected packages: wrapt, mccabe, toml, platformdirs, lazy-object-proxy, isort, astroid, pylint
+Successfully installed astroid-2.7.3 isort-5.12.0 lazy-object-proxy-1.9.0 mccabe-0.6.1 platformdirs-4.0.0 pylint-2.10.2 toml-0.10.2 wrapt-1.12.1
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+************* Module openvino.tools.accuracy_checker.annotation_converters.amazon
+openvino/tools/accuracy_checker/annotation_converters/amazon.py:42:0: C0301: Line too long (125/120) (line-too-long)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.
+
+
+===== accuracy_checker (ubuntu-20.04, 3.10)/6_Pip install and run pylint.txt =====
+##[group]Run python -m pip install pylint==2.10.2
+[36;1mpython -m pip install pylint==2.10.2[0m
+[36;1mPYTHONPATH=. python -m pylint --rcfile=.pylintrc `find -wholename '?*/**/*.py' -not -path "./tests/*" -not -path "./build/*"`[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
+Collecting pylint==2.10.2
+  Downloading pylint-2.10.2-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.6/392.6 kB 6.0 MB/s eta 0:00:00
+Collecting platformdirs>=2.2.0 (from pylint==2.10.2)
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting astroid<2.8,>=2.7.2 (from pylint==2.10.2)
+  Downloading astroid-2.7.3-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 42.6 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5 (from pylint==2.10.2)
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 25.8 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6 (from pylint==2.10.2)
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1 (from pylint==2.10.2)
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading lazy_object_proxy-1.9.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 kB 21.4 MB/s eta 0:00:00
+Collecting wrapt<1.13,>=1.11 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools>=20.0 in /opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages (from astroid<2.8,>=2.7.2->pylint==2.10.2) (65.5.0)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp310-cp310-linux_x86_64.whl size=78857 sha256=6d1ed27e1330265aa7da4a45e80bc83767554d3f44d0aa976d0a0f99603aa77a
+  Stored in directory: /home/runner/.cache/pip/wheels/8e/61/d3/d9e7053100177668fa43216a8082868c55015f8706abd974f2
+Successfully built wrapt
+Installing collected packages: wrapt, mccabe, toml, platformdirs, lazy-object-proxy, isort, astroid, pylint
+Successfully installed astroid-2.7.3 isort-5.12.0 lazy-object-proxy-1.9.0 mccabe-0.6.1 platformdirs-4.0.0 pylint-2.10.2 toml-0.10.2 wrapt-1.12.1
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+************* Module openvino.tools.accuracy_checker.annotation_converters.amazon
+openvino/tools/accuracy_checker/annotation_converters/amazon.py:42:0: C0301: Line too long (125/120) (line-too-long)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.
+
+
+===== accuracy_checker (ubuntu-22.04, 3.8)/6_Pip install and run pylint.txt =====
+##[group]Run python -m pip install pylint==2.10.2
+[36;1mpython -m pip install pylint==2.10.2[0m
+[36;1mPYTHONPATH=. python -m pylint --rcfile=.pylintrc `find -wholename '?*/**/*.py' -not -path "./tests/*" -not -path "./build/*"`[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+Collecting pylint==2.10.2
+  Downloading pylint-2.10.2-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.6/392.6 kB 8.3 MB/s eta 0:00:00
+Collecting platformdirs>=2.2.0 (from pylint==2.10.2)
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting astroid<2.8,>=2.7.2 (from pylint==2.10.2)
+  Downloading astroid-2.7.3-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 13.5 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5 (from pylint==2.10.2)
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 11.9 MB/s eta 0:00:00
+Collecting mccabe<0.7,>=0.6 (from pylint==2.10.2)
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1 (from pylint==2.10.2)
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading lazy_object_proxy-1.9.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.4/61.4 kB 13.7 MB/s eta 0:00:00
+Collecting wrapt<1.13,>=1.11 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools>=20.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from astroid<2.8,>=2.7.2->pylint==2.10.2) (56.0.0)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp38-cp38-linux_x86_64.whl size=75906 sha256=7dfdf5a8e2ec3763741d076db7b39e8ebc0c169daceb562404ec7f01eb211625
+  Stored in directory: /home/runner/.cache/pip/wheels/5f/fd/9e/b6cf5890494cb8ef0b5eaff72e5d55a70fb56316007d6dfe73
+Successfully built wrapt
+Installing collected packages: wrapt, mccabe, toml, platformdirs, lazy-object-proxy, isort, astroid, pylint
+Successfully installed astroid-2.7.3 isort-5.12.0 lazy-object-proxy-1.9.0 mccabe-0.6.1 platformdirs-4.0.0 pylint-2.10.2 toml-0.10.2 wrapt-1.12.1
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+************* Module openvino.tools.accuracy_checker.annotation_converters.amazon
+openvino/tools/accuracy_checker/annotation_converters/amazon.py:42:0: C0301: Line too long (125/120) (line-too-long)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.

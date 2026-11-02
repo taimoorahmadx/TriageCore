@@ -1,0 +1,124 @@
+===== main/4_Run pre-commitaction@v3.0.0.txt =====
+##[group]Run pre-commit/action@v3.0.0
+with:
+  extra_args: --all-files
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+##[group]Run python -m pip install pre-commit
+[36;1mpython -m pip install pre-commit[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+Collecting pre-commit
+  Downloading pre_commit-3.5.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting cfgv>=2.0.0 (from pre-commit)
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit)
+  Downloading identify-2.5.32-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit)
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
+Collecting pyyaml>=5.1 (from pre-commit)
+  Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit)
+  Downloading virtualenv-20.24.7-py3-none-any.whl.metadata (4.5 kB)
+Collecting setuptools (from nodeenv>=0.11.1->pre-commit)
+  Downloading setuptools-69.0.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit)
+  Downloading distlib-0.3.7-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit)
+  Downloading filelock-3.13.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit)
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Downloading pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.7/203.7 kB 15.8 MB/s eta 0:00:00
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading identify-2.5.32-py2.py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 32.6 MB/s eta 0:00:00
+Downloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (724 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 725.0/725.0 kB 49.7 MB/s eta 0:00:00
+Downloading virtualenv-20.24.7-py3-none-any.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 124.4 MB/s eta 0:00:00
+Downloading distlib-0.3.7-py2.py3-none-any.whl (468 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 84.7 MB/s eta 0:00:00
+Downloading filelock-3.13.1-py3-none-any.whl (11 kB)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Downloading setuptools-69.0.2-py3-none-any.whl (819 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.5/819.5 kB 99.2 MB/s eta 0:00:00
+Installing collected packages: distlib, setuptools, pyyaml, platformdirs, identify, filelock, cfgv, virtualenv, nodeenv, pre-commit
+Successfully installed cfgv-3.4.0 distlib-0.3.7 filelock-3.13.1 identify-2.5.32 nodeenv-1.8.0 platformdirs-4.0.0 pre-commit-3.5.0 pyyaml-6.0.1 setuptools-69.0.2 virtualenv-20.24.7
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+##[group]Run python -m pip freeze --local
+[36;1mpython -m pip freeze --local[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+cfgv==3.4.0
+distlib==0.3.7
+filelock==3.13.1
+identify==2.5.32
+nodeenv==1.8.0
+platformdirs==4.0.0
+pre-commit==3.5.0
+PyYAML==6.0.1
+setuptools==69.0.2
+virtualenv==20.24.7
+##[group]Run actions/cache@v3
+with:
+  path: ~/.cache/pre-commit
+  key: pre-commit-3|/opt/hostedtoolcache/Python/3.12.0/x64|78083b3309c934e46e7d0a952b7a4c6dc6df8860edaa74474d06dd8c36e1b0a2
+  enableCrossOsArchive: false
+  fail-on-cache-miss: false
+  lookup-only: false
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+Cache Size: ~15 MB (15834028 B)
+[command]/usr/bin/tar -xf /home/runner/work/_temp/98029e33-8cfe-40ab-80a4-dbe66e8ec82f/cache.tzst -P -C /home/runner/work/django-import-export/django-import-export --use-compress-program unzstd
+Cache restored successfully
+Cache restored from key: pre-commit-3|/opt/hostedtoolcache/Python/3.12.0/x64|78083b3309c934e46e7d0a952b7a4c6dc6df8860edaa74474d06dd8c36e1b0a2
+##[group]Run pre-commit run --show-diff-on-failure --color=always --all-files
+[36;1mpre-commit run --show-diff-on-failure --color=always --all-files[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+black....................................................................[42mPassed[m
+isort....................................................................[42mPassed[m
+flake8...................................................................[41mFailed[m
+[2m- hook id: flake8[m
+[2m- exit code: 1[m
+
+[1mimport_export/resources.py[m[36m:[m1360[36m:[m89[36m:[m [1m[31mE501[m line too long (101 > 88 characters)
+
+##[error]Process completed with exit code 1.

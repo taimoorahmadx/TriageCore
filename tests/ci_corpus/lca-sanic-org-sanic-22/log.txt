@@ -1,0 +1,1069 @@
+===== Linux  Python 3.12  tox -e py312/2_Run tests.txt =====
+##[group]Run sanic-org/simple-tox-action@v1
+with:
+  python-version: 3.12
+  tox-env: py312
+  max-attempts: 3
+  ignore-errors: false
+  timeout-minutes: 10
+  warning-on-retry: false
+##[endgroup]
+##[group]Run actions/checkout@v3
+with:
+  repository: sanic-org/sanic
+  token: ***
+  ssh-strict: true
+  persist-credentials: true
+  clean: true
+  sparse-checkout-cone-mode: true
+  fetch-depth: 1
+  fetch-tags: false
+  lfs: false
+  submodules: false
+  set-safe-directory: true
+##[endgroup]
+Syncing repository: sanic-org/sanic
+##[group]Getting Git version info
+Working directory is '/home/runner/work/sanic/sanic'
+[command]/usr/bin/git version
+git version 2.43.0
+##[endgroup]
+Temporarily overriding HOME='/home/runner/work/_temp/4ed65391-2ae4-459e-9e2a-279a317c6c7d' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+[command]/usr/bin/git config --global --add safe.directory /home/runner/work/sanic/sanic
+Deleting the contents of '/home/runner/work/sanic/sanic'
+##[group]Initializing the repository
+[command]/usr/bin/git init /home/runner/work/sanic/sanic
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/runner/work/sanic/sanic/.git/
+[command]/usr/bin/git remote add origin https://github.com/sanic-org/sanic
+##[endgroup]
+##[group]Disabling automatic garbage collection
+[command]/usr/bin/git config --local gc.auto 0
+##[endgroup]
+##[group]Setting up auth
+[command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+[command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+[command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+[command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+##[endgroup]
+##[group]Fetching the repository
+[command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c70813b35243c936909c498015f2d60e376efb7f:refs/remotes/pull/2870/merge
+remote: Enumerating objects: 713, done.        
+remote: Counting objects:   0% (1/713)        
+remote: Counting objects:   1% (8/713)        
+remote: Counting objects:   2% (15/713)        
+remote: Counting objects:   3% (22/713)        
+remote: Counting objects:   4% (29/713)        
+remote: Counting objects:   5% (36/713)        
+remote: Counting objects:   6% (43/713)        
+remote: Counting objects:   7% (50/713)        
+remote: Counting objects:   8% (58/713)        
+remote: Counting objects:   9% (65/713)        
+remote: Counting objects:  10% (72/713)        
+remote: Counting objects:  11% (79/713)        
+remote: Counting objects:  12% (86/713)        
+remote: Counting objects:  13% (93/713)        
+remote: Counting objects:  14% (100/713)        
+remote: Counting objects:  15% (107/713)        
+remote: Counting objects:  16% (115/713)        
+remote: Counting objects:  17% (122/713)        
+remote: Counting objects:  18% (129/713)        
+remote: Counting objects:  19% (136/713)        
+remote: Counting objects:  20% (143/713)        
+remote: Counting objects:  21% (150/713)        
+remote: Counting objects:  22% (157/713)        
+remote: Counting objects:  23% (164/713)        
+remote: Counting objects:  24% (172/713)        
+remote: Counting objects:  25% (179/713)        
+remote: Counting objects:  26% (186/713)        
+remote: Counting objects:  27% (193/713)        
+remote: Counting objects:  28% (200/713)        
+remote: Counting objects:  29% (207/713)        
+remote: Counting objects:  30% (214/713)        
+remote: Counting objects:  31% (222/713)        
+remote: Counting objects:  32% (229/713)        
+remote: Counting objects:  33% (236/713)        
+remote: Counting objects:  34% (243/713)        
+remote: Counting objects:  35% (250/713)        
+remote: Counting objects:  36% (257/713)        
+remote: Counting objects:  37% (264/713)        
+remote: Counting objects:  38% (271/713)        
+remote: Counting objects:  39% (279/713)        
+remote: Counting objects:  40% (286/713)        
+remote: Counting objects:  41% (293/713)        
+remote: Counting objects:  42% (300/713)        
+remote: Counting objects:  43% (307/713)        
+remote: Counting objects:  44% (314/713)        
+remote: Counting objects:  45% (321/713)        
+remote: Counting objects:  46% (328/713)        
+remote: Counting objects:  47% (336/713)        
+remote: Counting objects:  48% (343/713)        
+remote: Counting objects:  49% (350/713)        
+remote: Counting objects:  50% (357/713)        
+remote: Counting objects:  51% (364/713)        
+remote: Counting objects:  52% (371/713)        
+remote: Counting objects:  53% (378/713)        
+remote: Counting objects:  54% (386/713)        
+remote: Counting objects:  55% (393/713)        
+remote: Counting objects:  56% (400/713)        
+remote: Counting objects:  57% (407/713)        
+remote: Counting objects:  58% (414/713)        
+remote: Counting objects:  59% (421/713)        
+remote: Counting objects:  60% (428/713)        
+remote: Counting objects:  61% (435/713)        
+remote: Counting objects:  62% (443/713)        
+remote: Counting objects:  63% (450/713)        
+remote: Counting objects:  64% (457/713)        
+remote: Counting objects:  65% (464/713)        
+remote: Counting objects:  66% (471/713)        
+remote: Counting objects:  67% (478/713)        
+remote: Counting objects:  68% (485/713)        
+remote: Counting objects:  69% (492/713)        
+remote: Counting objects:  70% (500/713)        
+remote: Counting objects:  71% (507/713)        
+remote: Counting objects:  72% (514/713)        
+remote: Counting objects:  73% (521/713)        
+remote: Counting objects:  74% (528/713)        
+remote: Counting objects:  75% (535/713)        
+remote: Counting objects:  76% (542/713)        
+remote: Counting objects:  77% (550/713)        
+remote: Counting objects:  78% (557/713)        
+remote: Counting objects:  79% (564/713)        
+remote: Counting objects:  80% (571/713)        
+remote: Counting objects:  81% (578/713)        
+remote: Counting objects:  82% (585/713)        
+remote: Counting objects:  83% (592/713)        
+remote: Counting objects:  84% (599/713)        
+remote: Counting objects:  85% (607/713)        
+remote: Counting objects:  86% (614/713)        
+remote: Counting objects:  87% (621/713)        
+remote: Counting objects:  88% (628/713)        
+remote: Counting objects:  89% (635/713)        
+remote: Counting objects:  90% (642/713)        
+remote: Counting objects:  91% (649/713)        
+remote: Counting objects:  92% (656/713)        
+remote: Counting objects:  93% (664/713)        
+remote: Counting objects:  94% (671/713)        
+remote: Counting objects:  95% (678/713)        
+remote: Counting objects:  96% (685/713)        
+remote: Counting objects:  97% (692/713)        
+remote: Counting objects:  98% (699/713)        
+remote: Counting objects:  99% (706/713)        
+remote: Counting objects: 100% (713/713)        
+remote: Counting objects: 100% (713/713), done.        
+remote: Compressing objects:   0% (1/658)        
+remote: Compressing objects:   1% (7/658)        
+remote: Compressing objects:   2% (14/658)        
+remote: Compressing objects:   3% (20/658)        
+remote: Compressing objects:   4% (27/658)        
+remote: Compressing objects:   5% (33/658)        
+remote: Compressing objects:   6% (40/658)        
+remote: Compressing objects:   7% (47/658)        
+remote: Compressing objects:   8% (53/658)        
+remote: Compressing objects:   9% (60/658)        
+remote: Compressing objects:  10% (66/658)        
+remote: Compressing objects:  11% (73/658)        
+remote: Compressing objects:  12% (79/658)        
+remote: Compressing objects:  13% (86/658)        
+remote: Compressing objects:  14% (93/658)        
+remote: Compressing objects:  15% (99/658)        
+remote: Compressing objects:  16% (106/658)        
+remote: Compressing objects:  17% (112/658)        
+remote: Compressing objects:  18% (119/658)        
+remote: Compressing objects:  19% (126/658)        
+remote: Compressing objects:  20% (132/658)        
+remote: Compressing objects:  21% (139/658)        
+remote: Compressing objects:  22% (145/658)        
+remote: Compressing objects:  23% (152/658)        
+remote: Compressing objects:  24% (158/658)        
+remote: Compressing objects:  25% (165/658)        
+remote: Compressing objects:  26% (172/658)        
+remote: Compressing objects:  27% (178/658)        
+remote: Compressing objects:  28% (185/658)        
+remote: Compressing objects:  29% (191/658)        
+remote: Compressing objects:  30% (198/658)        
+remote: Compressing objects:  31% (204/658)        
+remote: Compressing objects:  32% (211/658)        
+remote: Compressing objects:  33% (218/658)        
+remote: Compressing objects:  34% (224/658)        
+remote: Compressing objects:  35% (231/658)        
+remote: Compressing objects:  36% (237/658)        
+remote: Compressing objects:  37% (244/658)        
+remote: Compressing objects:  38% (251/658)        
+remote: Compressing objects:  39% (257/658)        
+remote: Compressing objects:  40% (264/658)        
+remote: Compressing objects:  41% (270/658)        
+remote: Compressing objects:  42% (277/658)        
+remote: Compressing objects:  43% (283/658)        
+remote: Compressing objects:  44% (290/658)        
+remote: Compressing objects:  45% (297/658)        
+remote: Compressing objects:  46% (303/658)        
+remote: Compressing objects:  47% (310/658)        
+remote: Compressing objects:  48% (316/658)        
+remote: Compressing objects:  49% (323/658)        
+remote: Compressing objects:  50% (329/658)        
+remote: Compressing objects:  51% (336/658)        
+remote: Compressing objects:  52% (343/658)        
+remote: Compressing objects:  53% (349/658)        
+remote: Compressing objects:  54% (356/658)        
+remote: Compressing objects:  55% (362/658)        
+remote: Compressing objects:  56% (369/658)        
+remote: Compressing objects:  57% (376/658)        
+remote: Compressing objects:  58% (382/658)        
+remote: Compressing objects:  59% (389/658)        
+remote: Compressing objects:  60% (395/658)        
+remote: Compressing objects:  61% (402/658)        
+remote: Compressing objects:  62% (408/658)        
+remote: Compressing objects:  63% (415/658)        
+remote: Compressing objects:  64% (422/658)        
+remote: Compressing objects:  65% (428/658)        
+remote: Compressing objects:  66% (435/658)        
+remote: Compressing objects:  67% (441/658)        
+remote: Compressing objects:  68% (448/658)        
+remote: Compressing objects:  69% (455/658)        
+remote: Compressing objects:  70% (461/658)        
+remote: Compressing objects:  71% (468/658)        
+remote: Compressing objects:  72% (474/658)        
+remote: Compressing objects:  73% (481/658)        
+remote: Compressing objects:  74% (487/658)        
+remote: Compressing objects:  75% (494/658)        
+remote: Compressing objects:  76% (501/658)        
+remote: Compressing objects:  77% (507/658)        
+remote: Compressing objects:  78% (514/658)        
+remote: Compressing objects:  79% (520/658)        
+remote: Compressing objects:  80% (527/658)        
+remote: Compressing objects:  81% (533/658)        
+remote: Compressing objects:  82% (540/658)        
+remote: Compressing objects:  83% (547/658)        
+remote: Compressing objects:  84% (553/658)        
+remote: Compressing objects:  85% (560/658)        
+remote: Compressing objects:  86% (566/658)        
+remote: Compressing objects:  87% (573/658)        
+remote: Compressing objects:  88% (580/658)        
+remote: Compressing objects:  89% (586/658)        
+remote: Compressing objects:  90% (593/658)        
+remote: Compressing objects:  91% (599/658)        
+remote: Compressing objects:  92% (606/658)        
+remote: Compressing objects:  93% (612/658)        
+remote: Compressing objects:  94% (619/658)        
+remote: Compressing objects:  95% (626/658)        
+remote: Compressing objects:  96% (632/658)        
+remote: Compressing objects:  97% (639/658)        
+remote: Compressing objects:  98% (645/658)        
+remote: Compressing objects:  99% (652/658)        
+remote: Compressing objects: 100% (658/658)        
+remote: Compressing objects: 100% (658/658), done.        
+Receiving objects:   0% (1/713)
+Receiving objects:   1% (8/713)
+Receiving objects:   2% (15/713)
+Receiving objects:   3% (22/713)
+Receiving objects:   4% (29/713)
+Receiving objects:   5% (36/713)
+Receiving objects:   6% (43/713)
+Receiving objects:   7% (50/713)
+Receiving objects:   8% (58/713)
+Receiving objects:   9% (65/713)
+Receiving objects:  10% (72/713)
+Receiving objects:  11% (79/713)
+Receiving objects:  12% (86/713)
+Receiving objects:  13% (93/713)
+Receiving objects:  14% (100/713)
+Receiving objects:  15% (107/713)
+Receiving objects:  16% (115/713)
+Receiving objects:  17% (122/713)
+Receiving objects:  18% (129/713)
+Receiving objects:  19% (136/713)
+Receiving objects:  20% (143/713)
+Receiving objects:  21% (150/713)
+Receiving objects:  22% (157/713)
+Receiving objects:  23% (164/713)
+Receiving objects:  24% (172/713)
+Receiving objects:  25% (179/713)
+Receiving objects:  26% (186/713)
+Receiving objects:  27% (193/713)
+Receiving objects:  28% (200/713)
+Receiving objects:  29% (207/713)
+Receiving objects:  30% (214/713)
+Receiving objects:  31% (222/713)
+Receiving objects:  32% (229/713)
+Receiving objects:  33% (236/713)
+Receiving objects:  34% (243/713)
+Receiving objects:  35% (250/713)
+Receiving objects:  36% (257/713)
+Receiving objects:  37% (264/713)
+Receiving objects:  38% (271/713)
+Receiving objects:  39% (279/713)
+Receiving objects:  40% (286/713)
+Receiving objects:  41% (293/713)
+Receiving objects:  42% (300/713)
+Receiving objects:  43% (307/713)
+Receiving objects:  44% (314/713)
+Receiving objects:  45% (321/713)
+Receiving objects:  46% (328/713)
+Receiving objects:  47% (336/713)
+Receiving objects:  48% (343/713)
+Receiving objects:  49% (350/713)
+Receiving objects:  50% (357/713)
+Receiving objects:  51% (364/713)
+Receiving objects:  52% (371/713)
+Receiving objects:  53% (378/713)
+Receiving objects:  54% (386/713)
+Receiving objects:  55% (393/713)
+Receiving objects:  56% (400/713)
+Receiving objects:  57% (407/713)
+Receiving objects:  58% (414/713)
+Receiving objects:  59% (421/713)
+Receiving objects:  60% (428/713)
+Receiving objects:  61% (435/713)
+Receiving objects:  62% (443/713)
+Receiving objects:  63% (450/713)
+Receiving objects:  64% (457/713)
+Receiving objects:  65% (464/713)
+Receiving objects:  66% (471/713)
+Receiving objects:  67% (478/713)
+Receiving objects:  68% (485/713)
+Receiving objects:  69% (492/713)
+Receiving objects:  70% (500/713)
+Receiving objects:  71% (507/713)
+Receiving objects:  72% (514/713)
+Receiving objects:  73% (521/713)
+Receiving objects:  74% (528/713)
+Receiving objects:  75% (535/713)
+Receiving objects:  76% (542/713)
+Receiving objects:  77% (550/713)
+Receiving objects:  78% (557/713)
+Receiving objects:  79% (564/713)
+Receiving objects:  80% (571/713)
+Receiving objects:  81% (578/713)
+Receiving objects:  82% (585/713)
+Receiving objects:  83% (592/713)
+Receiving objects:  84% (599/713)
+Receiving objects:  85% (607/713)
+Receiving objects:  86% (614/713)
+Receiving objects:  87% (621/713)
+Receiving objects:  88% (628/713)
+Receiving objects:  89% (635/713)
+Receiving objects:  90% (642/713)
+Receiving objects:  91% (649/713)
+remote: Total 713 (delta 28), reused 441 (delta 23), pack-reused 0        
+Receiving objects:  92% (656/713)
+Receiving objects:  93% (664/713)
+Receiving objects:  94% (671/713)
+Receiving objects:  95% (678/713)
+Receiving objects:  96% (685/713)
+Receiving objects:  97% (692/713)
+Receiving objects:  98% (699/713)
+Receiving objects:  99% (706/713)
+Receiving objects: 100% (713/713)
+Receiving objects: 100% (713/713), 3.74 MiB | 40.79 MiB/s, done.
+Resolving deltas:   0% (0/28)
+Resolving deltas:   3% (1/28)
+Resolving deltas:   7% (2/28)
+Resolving deltas:  10% (3/28)
+Resolving deltas:  14% (4/28)
+Resolving deltas:  17% (5/28)
+Resolving deltas:  21% (6/28)
+Resolving deltas:  25% (7/28)
+Resolving deltas:  28% (8/28)
+Resolving deltas:  32% (9/28)
+Resolving deltas:  35% (10/28)
+Resolving deltas:  39% (11/28)
+Resolving deltas:  42% (12/28)
+Resolving deltas:  46% (13/28)
+Resolving deltas:  50% (14/28)
+Resolving deltas:  53% (15/28)
+Resolving deltas:  57% (16/28)
+Resolving deltas:  60% (17/28)
+Resolving deltas:  64% (18/28)
+Resolving deltas:  67% (19/28)
+Resolving deltas:  71% (20/28)
+Resolving deltas:  75% (21/28)
+Resolving deltas:  78% (22/28)
+Resolving deltas:  82% (23/28)
+Resolving deltas:  85% (24/28)
+Resolving deltas:  89% (25/28)
+Resolving deltas:  92% (26/28)
+Resolving deltas:  96% (27/28)
+Resolving deltas: 100% (28/28)
+Resolving deltas: 100% (28/28), done.
+From https://github.com/sanic-org/sanic
+ * [new ref]         c70813b35243c936909c498015f2d60e376efb7f -> pull/2870/merge
+##[endgroup]
+##[group]Determining the checkout info
+##[endgroup]
+##[group]Checking out the ref
+[command]/usr/bin/git checkout --progress --force refs/remotes/pull/2870/merge
+Note: switching to 'refs/remotes/pull/2870/merge'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at c70813b Merge 2e41e783672597e2e0c7b2842b5934d879374028 into d0bbcf55d540e8d4c9d8bb1108384d8545355fcb
+##[endgroup]
+[command]/usr/bin/git log -1 --format='%H'
+'c70813b35243c936909c498015f2d60e376efb7f'
+##[group]Run actions/setup-python@v4
+with:
+  python-version: 3.12
+  check-latest: false
+  token: ***
+  update-environment: true
+  allow-prereleases: false
+##[endgroup]
+##[group]Installed versions
+Successfully set up CPython (3.12.1)
+##[endgroup]
+##[group]Run python -m pip install --upgrade pip
+[36;1mpython -m pip install --upgrade pip[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+[... 1158 lines removed by TriageCore ...]
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=8050) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+tests/test_static.py::test_static_file_specified_host[test.file]
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:52: RuntimeWarning: coroutine 'Loop.create_server' was never awaited
+    return compile(source, filename, mode, flags,
+
+tests/test_tasks.py::test_purge_tasks
+  /home/runner/work/sanic/sanic/.tox/py312/lib/python3.12/site-packages/pytest_sanic/plugin.py:76: RuntimeWarning: coroutine 'dummy' was never awaited
+    loop.run_until_complete(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_timeout_logic.py::test_check_timeouts_request_timeout
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:434: RuntimeWarning: coroutine 'HttpProtocol.connection_task' was never awaited
+    new = type(cls.__name__, bases, {'__doc__': cls.__doc__})
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_tls.py::test_url_attributes_with_ssl_context[/moo/boo-arg1=val1-https://{}:{}/moo/boo?arg1=val1]
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:52: RuntimeWarning: coroutine 'HttpProtocol.connection_task' was never awaited
+    return compile(source, filename, mode, flags,
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_tls.py::test_sanic_ssl_context_create
+  /home/runner/work/sanic/sanic/tests/test_tls.py:678: DeprecationWarning: ssl.SSLContext() without protocol argument is deprecated.
+    context = ssl.SSLContext()
+
+tests/test_tls.py::test_sanic_ssl_context_create
+  /home/runner/work/sanic/sanic/tests/test_tls.py:678: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+    context = ssl.SSLContext()
+
+tests/test_views.py::test_methods[GET]
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:1789: RuntimeWarning: coroutine 'HttpProtocol.connection_task' was never awaited
+    unparser = _Unparser()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_websockets.py::test_ws_frame_put_fetched[0]
+tests/test_websockets.py::test_ws_frame_put_fetched[1]
+tests/test_websockets.py::test_ws_frame_put_fetched[2]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[0]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[1]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[2]
+  /home/runner/work/sanic/sanic/sanic/server/websockets/frame.py:291: RuntimeWarning: coroutine 'AsyncMockMixin._execute_mock_call' was never awaited
+    self.message_fetched.clear()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_send_headers
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:52: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    return compile(source, filename, mode, flags,
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_request_stream_id
+tests/http3/test_http_receiver.py::test_request_conn_info
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:406: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    visitor = getattr(self, method, self.generic_visit)
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_request_header_encoding
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/ast.py:257: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    def iter_fields(node):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------------------------------------------------------------------------------------------------- benchmark: 2 tests ----------------------------------------------------------------------------------------------------
+Name (time in ns)                              Min                    Max                  Mean              StdDev                Median                IQR            Outliers  OPS (Kops/s)            Rounds  Iterations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_resolve_route_with_typed_args        940.0830 (1.0)      11,328.7800 (1.0)      1,018.3106 (1.0)      326.7959 (1.0)      1,007.4380 (1.00)     16.8465 (1.36)         1;19      982.0186 (1.0)        1000        1000
+test_resolve_route_no_arg_string_path     979.7060 (1.04)     22,414.2740 (1.98)     1,031.2724 (1.01)     677.4905 (2.07)     1,006.1510 (1.0)      12.3480 (1.0)          1;41      969.6759 (0.99)       1000        1000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[0] - At...
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[1] - At...
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[2] - At...
+= 3 failed, 1638 passed, 9 skipped, 11 xfailed, 1891 warnings in 210.94s (0:03:30) =
+py312: exit 1 (214.50 seconds) /home/runner/work/sanic/sanic> coverage run --source ./sanic -m pytest tests pid=8050
+.pkg: _exit> python /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/pyproject_api/_backend.py True setuptools.build_meta
+  py312: FAIL code 1 (216.13=setup[1.63]+cmd[214.50] seconds)
+  evaluation failed :( (216.28 seconds)
+Attempt 2 failed. Reason: Child_process exited with error code 1
+.pkg: _optional_hooks> python /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/pyproject_api/_backend.py True setuptools.build_meta
+.pkg: get_requires_for_build_editable> python /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/pyproject_api/_backend.py True setuptools.build_meta
+.pkg: freeze> python -m pip freeze --all
+.pkg: pip==23.3.1,setuptools==69.0.2,wheel==0.42.0
+.pkg: build_editable> python /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/pyproject_api/_backend.py True setuptools.build_meta
+py312: install_package> python -I -m pip install --force-reinstall --no-deps /home/runner/work/sanic/sanic/.tox/.tmp/package/3/sanic-23.12.0-0.editable-py3-none-any.whl
+py312: freeze> python -m pip freeze --all
+py312: aiofiles==23.2.1,aioquic==0.9.24,anyio==4.2.0,asgiref==3.7.2,async-generator==1.10,attrs==23.1.0,bandit==1.7.6,beautifulsoup4==4.12.2,certifi==2023.11.17,cffi==1.16.0,chardet==3.0.4,click==8.1.7,coverage==7.3.3,cryptography==41.0.7,docutils==0.20.1,gitdb==4.0.11,GitPython==3.1.40,h11==0.14.0,html5tagger==1.3.0,httpcore==1.0.2,httptools==0.6.1,httpx==0.25.2,idna==3.6,iniconfig==2.0.0,markdown-it-py==3.0.0,mdurl==0.1.2,multidict==6.0.4,mypy==1.7.1,mypy-extensions==1.0.0,packaging==23.2,pbr==6.0.0,pip==23.3.1,pluggy==1.3.0,py==1.11.0,py-cpuinfo==9.0.0,pyasn1==0.5.1,pyasn1-modules==0.3.0,pycparser==2.21,Pygments==2.17.2,pylsqpack==0.3.18,pyOpenSSL==23.3.0,pytest==7.1.3,pytest-benchmark==4.0.0,pytest-sanic==1.9.1,PyYAML==6.0.1,rich==13.7.0,ruff==0.1.8,sanic @ file:///home/runner/work/sanic/sanic/.tox/.tmp/package/3/sanic-23.12.0-0.editable-py3-none-any.whl#sha256=ab2a8fd4976dd590181074cd5462b3885d77bdd37b409090053b533f8f000cc9,sanic-routing @ git+https://github.com/sanic-org/sanic-routing.git@0f9405d6a7381ec11b30dafb2577e4b2d2318e45,sanic-testing==23.6.0,service-identity==23.1.0,setuptools==69.0.2,slotscheck==0.17.1,smmap==5.0.1,sniffio==1.3.0,soupsieve==2.5,stevedore==5.1.0,tomli==2.0.1,tracerite==1.1.1,types-ujson==5.9.0.0,typing_extensions==4.9.0,ujson==5.9.0,uvicorn==0.14.0,uvloop==0.19.0,websockets==10.4
+py312: commands[0]> coverage run --source ./sanic -m pytest tests
+collected 1661 items
+
+tests/test_app.py ...................................................... [  3%]
+.                                                                        [  3%]
+tests/test_asgi.py ........................                              [  4%]
+tests/test_bad_request.py .                                              [  4%]
+tests/test_base.py .....................                                 [  6%]
+tests/test_blueprint_copy.py ...                                         [  6%]
+tests/test_blueprint_group.py ..........                                 [  6%]
+tests/test_blueprints.py ............................................    [  9%]
+tests/test_cancellederror.py .                                           [  9%]
+tests/test_cli.py ...................................................... [ 12%]
+                                                                         [ 12%]
+tests/test_coffee.py ....                                                [ 13%]
+tests/test_config.py .........................................           [ 15%]
+tests/test_constants.py ......                                           [ 15%]
+tests/test_cookies.py ...................................                [ 18%]
+tests/test_create_task.py .....                                          [ 18%]
+tests/test_custom_request.py .                                           [ 18%]
+tests/test_deprecation.py ....                                           [ 18%]
+tests/test_dynamic_routes.py ....                                        [ 18%]
+tests/test_errorpages.py ............................................... [ 21%]
+.......                                                                  [ 22%]
+tests/test_exceptions.py .....................                           [ 23%]
+tests/test_exceptions_handler.py .............                           [ 24%]
+tests/test_ext_integration.py .......                                    [ 24%]
+tests/test_graceful_shutdown.py x.                                       [ 24%]
+tests/test_handler.py .                                                  [ 24%]
+tests/test_handler_annotations.py ....                                   [ 24%]
+tests/test_headers.py .................................................. [ 27%]
+......................                                                   [ 29%]
+tests/test_helpers.py .......                                            [ 29%]
+tests/test_http.py ...                                                   [ 29%]
+tests/test_http_alt_svc.py .                                             [ 29%]
+tests/test_init.py .............                                         [ 30%]
+tests/test_json_decoding.py ...                                          [ 30%]
+tests/test_json_encoding.py ...s                                         [ 31%]
+tests/test_keep_alive_timeout.py ....                                    [ 31%]
+tests/test_late_adds.py ...                                              [ 31%]
+tests/test_logging.py ...................                                [ 32%]
+tests/test_logo.py .....                                                 [ 33%]
+tests/test_middleware.py ...............                                 [ 33%]
+tests/test_middleware_priority.py ...................................... [ 36%]
+..............                                                           [ 37%]
+tests/test_motd.py .....                                                 [ 37%]
+tests/test_multiprocessing.py .........                                  [ 37%]
+tests/test_named_routes.py ..........................                    [ 39%]
+tests/test_payload_too_large.py ...                                      [ 39%]
+tests/test_pipelining.py ....                                            [ 39%]
+tests/test_prepare.py .....                                              [ 40%]
+tests/test_redirect.py .........                                         [ 40%]
+tests/test_reloader.py xxxxxx.                                           [ 41%]
+tests/test_request.py ..........................................         [ 43%]
+tests/test_request_cancel.py ..                                          [ 43%]
+tests/test_request_data.py ..                                            [ 43%]
+tests/test_request_stream.py .........                                   [ 44%]
+tests/test_requests.py ................................................. [ 47%]
+........................................................................ [ 51%]
+...........                                                              [ 52%]
+tests/test_response.py ................................................. [ 55%]
+..........                                                               [ 55%]
+tests/test_response_file.py ......                                       [ 56%]
+tests/test_response_json.py ................                             [ 57%]
+tests/test_response_timeout.py ....                                      [ 57%]
+tests/test_routes.py ................................................... [ 60%]
+........................................................................ [ 64%]
+......................................                                   [ 67%]
+tests/test_server_events.py ....................                         [ 68%]
+tests/test_server_loop.py ss..                                           [ 68%]
+tests/test_signal_handlers.py ......                                     [ 69%]
+tests/test_signals.py .................................................  [ 72%]
+tests/test_static.py ..........sssss.................................... [ 75%]
+.......................................s                                 [ 77%]
+tests/test_static_directory.py .......                                   [ 77%]
+tests/test_tasks.py ......                                               [ 78%]
+tests/test_test_client_port.py ..                                        [ 78%]
+tests/test_timeout_logic.py .....                                        [ 78%]
+tests/test_tls.py ........xxx...................................         [ 81%]
+tests/test_touchup.py .........                                          [ 81%]
+tests/test_unix_socket.py x........                                      [ 82%]
+tests/test_url_building.py ...........................                   [ 84%]
+tests/test_url_for.py .........                                          [ 84%]
+tests/test_url_for_static.py .....................                       [ 85%]
+tests/test_utf8.py ...                                                   [ 86%]
+tests/test_utils.py ......                                               [ 86%]
+tests/test_versioning.py ..............                                  [ 87%]
+tests/test_vhosts.py ...                                                 [ 87%]
+tests/test_views.py ...................                                  [ 88%]
+tests/test_websockets.py ......................FFF......                 [ 90%]
+tests/test_ws_handlers.py ........                                       [ 91%]
+tests/benchmark/test_route_resolution_benchmark.py ..                    [ 91%]
+tests/http3/test_http_receiver.py ............                           [ 91%]
+tests/http3/test_server.py ....                                          [ 92%]
+tests/http3/test_session_ticket_store.py .                               [ 92%]
+tests/typing/test_typing.py .......                                      [ 92%]
+tests/worker/test_inspector.py .........                                 [ 93%]
+tests/worker/test_loader.py ............                                 [ 93%]
+tests/worker/test_manager.py ................                            [ 94%]
+tests/worker/test_multiplexer.py .................                       [ 95%]
+tests/worker/test_reloader.py ..........                                 [ 96%]
+tests/worker/test_runner.py ....                                         [ 96%]
+tests/worker/test_shared_ctx.py ...............                          [ 97%]
+tests/worker/test_socket.py ..                                           [ 97%]
+tests/worker/test_startup.py .........                                   [ 98%]
+tests/worker/test_state.py ....................                          [ 99%]
+tests/worker/test_worker_serve.py .........                              [100%]
+
+=================================== FAILURES ===================================
+___________________ test_ws_frame_put_message_into_queue[0] ____________________
+
+opcode = <Opcode.CONT: 0>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("opcode", DATA_OPCODES)
+    async def test_ws_frame_put_message_into_queue(opcode):
+        assembler = WebsocketFrameAssembler(Mock())
+        assembler.chunks_queue = AsyncMock(spec=Queue)
+        assembler.message_fetched = AsyncMock()
+        assembler.message_fetched.is_set = Mock(return_value=False)
+    
+        await assembler.put(Frame(opcode, b"foo"))
+    
+>       assembler.chunks_queue.put.has_calls(
+            call(b"foo"),
+            call(None),
+        )
+
+/home/runner/work/sanic/sanic/tests/test_websockets.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <AsyncMock name='mock.put' id='140154738813136'>, name = 'has_calls'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+            raise AttributeError(name)
+        if not self._mock_unsafe and (not self._mock_methods or name not in self._mock_methods):
+            if name.startswith(('assert', 'assret', 'asert', 'aseert', 'assrt')) or name in _ATTRIB_DENY_LIST:
+>               raise AttributeError(
+                    f"{name!r} is not a valid assertion. Use a spec "
+                    f"for the mock if {name!r} is meant to be an attribute.")
+E               AttributeError: 'has_calls' is not a valid assertion. Use a spec for the mock if 'has_calls' is meant to be an attribute.
+
+/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:663: AttributeError
+___________________ test_ws_frame_put_message_into_queue[1] ____________________
+
+opcode = <Opcode.TEXT: 1>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("opcode", DATA_OPCODES)
+    async def test_ws_frame_put_message_into_queue(opcode):
+        assembler = WebsocketFrameAssembler(Mock())
+        assembler.chunks_queue = AsyncMock(spec=Queue)
+        assembler.message_fetched = AsyncMock()
+        assembler.message_fetched.is_set = Mock(return_value=False)
+    
+        await assembler.put(Frame(opcode, b"foo"))
+    
+>       assembler.chunks_queue.put.has_calls(
+            call(b"foo"),
+            call(None),
+        )
+
+/home/runner/work/sanic/sanic/tests/test_websockets.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <AsyncMock name='mock.put' id='140154738678896'>, name = 'has_calls'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+            raise AttributeError(name)
+        if not self._mock_unsafe and (not self._mock_methods or name not in self._mock_methods):
+            if name.startswith(('assert', 'assret', 'asert', 'aseert', 'assrt')) or name in _ATTRIB_DENY_LIST:
+>               raise AttributeError(
+                    f"{name!r} is not a valid assertion. Use a spec "
+                    f"for the mock if {name!r} is meant to be an attribute.")
+E               AttributeError: 'has_calls' is not a valid assertion. Use a spec for the mock if 'has_calls' is meant to be an attribute.
+
+/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:663: AttributeError
+___________________ test_ws_frame_put_message_into_queue[2] ____________________
+
+opcode = <Opcode.BINARY: 2>
+
+    @pytest.mark.asyncio
+    @pytest.mark.parametrize("opcode", DATA_OPCODES)
+    async def test_ws_frame_put_message_into_queue(opcode):
+        assembler = WebsocketFrameAssembler(Mock())
+        assembler.chunks_queue = AsyncMock(spec=Queue)
+        assembler.message_fetched = AsyncMock()
+        assembler.message_fetched.is_set = Mock(return_value=False)
+    
+        await assembler.put(Frame(opcode, b"foo"))
+    
+>       assembler.chunks_queue.put.has_calls(
+            call(b"foo"),
+            call(None),
+        )
+
+/home/runner/work/sanic/sanic/tests/test_websockets.py:220: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <AsyncMock name='mock.put' id='140154738612448'>, name = 'has_calls'
+
+    def __getattr__(self, name):
+        if name in {'_mock_methods', '_mock_unsafe'}:
+            raise AttributeError(name)
+        elif self._mock_methods is not None:
+            if name not in self._mock_methods or name in _all_magics:
+                raise AttributeError("Mock object has no attribute %r" % name)
+        elif _is_magic(name):
+            raise AttributeError(name)
+        if not self._mock_unsafe and (not self._mock_methods or name not in self._mock_methods):
+            if name.startswith(('assert', 'assret', 'asert', 'aseert', 'assrt')) or name in _ATTRIB_DENY_LIST:
+>               raise AttributeError(
+                    f"{name!r} is not a valid assertion. Use a spec "
+                    f"for the mock if {name!r} is meant to be an attribute.")
+E               AttributeError: 'has_calls' is not a valid assertion. Use a spec for the mock if 'has_calls' is meant to be an attribute.
+
+/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:663: AttributeError
+=============================== warnings summary ===============================
+tests/test_app.py: 9 warnings
+tests/test_asgi.py: 14 warnings
+tests/test_bad_request.py: 1 warning
+tests/test_blueprint_copy.py: 2 warnings
+tests/test_blueprint_group.py: 3 warnings
+tests/test_blueprints.py: 39 warnings
+tests/test_cancellederror.py: 1 warning
+tests/test_cli.py: 22 warnings
+tests/test_coffee.py: 1 warning
+tests/test_config.py: 2 warnings
+tests/test_constants.py: 1 warning
+tests/test_cookies.py: 19 warnings
+tests/test_create_task.py: 4 warnings
+tests/test_custom_request.py: 1 warning
+tests/test_dynamic_routes.py: 3 warnings
+tests/test_errorpages.py: 18 warnings
+tests/test_exceptions.py: 341 warnings
+tests/test_exceptions_handler.py: 9 warnings
+tests/test_ext_integration.py: 4 warnings
+tests/test_graceful_shutdown.py: 2 warnings
+tests/test_handler.py: 1 warning
+tests/test_handler_annotations.py: 4 warnings
+tests/test_headers.py: 3 warnings
+tests/test_http.py: 3 warnings
+tests/test_http_alt_svc.py: 1 warning
+tests/test_json_decoding.py: 1 warning
+tests/test_keep_alive_timeout.py: 84 warnings
+tests/test_logging.py: 14 warnings
+tests/test_middleware.py: 15 warnings
+tests/test_middleware_priority.py: 46 warnings
+tests/test_multiprocessing.py: 6 warnings
+tests/test_named_routes.py: 1 warning
+tests/test_payload_too_large.py: 3 warnings
+tests/test_pipelining.py: 4 warnings
+tests/test_redirect.py: 9 warnings
+tests/test_request.py: 13 warnings
+tests/test_request_cancel.py: 2 warnings
+tests/test_request_data.py: 2 warnings
+tests/test_request_stream.py: 9 warnings
+tests/test_requests.py: 128 warnings
+tests/test_response.py: 58 warnings
+tests/test_response_json.py: 16 warnings
+tests/test_response_timeout.py: 4 warnings
+tests/test_routes.py: 69 warnings
+tests/test_server_events.py: 15 warnings
+tests/test_signal_handlers.py: 3 warnings
+tests/test_signals.py: 5 warnings
+tests/test_static.py: 79 warnings
+tests/test_static_directory.py: 6 warnings
+tests/test_tasks.py: 1 warning
+tests/test_test_client_port.py: 2 warnings
+tests/test_tls.py: 13 warnings
+tests/test_touchup.py: 6 warnings
+tests/test_unix_socket.py: 4 warnings
+tests/test_url_building.py: 11 warnings
+tests/test_url_for.py: 3 warnings
+tests/test_url_for_static.py: 21 warnings
+tests/test_utf8.py: 3 warnings
+tests/test_versioning.py: 14 warnings
+tests/test_vhosts.py: 3 warnings
+tests/test_views.py: 19 warnings
+tests/test_ws_handlers.py: 8 warnings
+tests/http3/test_server.py: 3 warnings
+tests/worker/test_inspector.py: 6 warnings
+tests/worker/test_multiplexer.py: 1 warning
+  /home/runner/work/sanic/sanic/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    if hasattr(event, "s"):
+
+tests/test_asgi.py: 1 warning
+tests/test_cookies.py: 18 warnings
+tests/test_response.py: 1 warning
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION] Setting cookie values using the dict pattern has been deprecated. You should instead use the cookies.add_cookie method. To learn more, please see: https://sanic.dev/en/guide/release-notes/v23.3.html#response-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_asgi.py: 1 warning
+tests/test_cookies.py: 19 warnings
+tests/test_response.py: 1 warning
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION] Accessing cookies from the CookieJar by dict key is deprecated. You should instead use the cookies.get_cookie method. To learn more, please see: https://sanic.dev/en/guide/release-notes/v23.3.html#response-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_asgi.py::test_cookie_customization
+tests/test_cookies.py::test_false_cookies_encoded[False-False]
+tests/test_cookies.py::test_false_cookies_encoded[True-True]
+tests/test_cookies.py::test_false_cookies[False-False]
+tests/test_cookies.py::test_false_cookies[True-True]
+tests/test_cookies.py::test_cookie_options
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.httponly=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cli.py: 2 warnings
+tests/test_tls.py: 9 warnings
+  /home/runner/work/sanic/sanic/sanic/http/tls/context.py:191: DeprecationWarning: ssl.SSLContext() without protocol argument is deprecated.
+    return super().__new__(cls)
+
+tests/test_cli.py: 2 warnings
+tests/test_tls.py: 9 warnings
+  /home/runner/work/sanic/sanic/sanic/http/tls/context.py:191: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+    return super().__new__(cls)
+
+tests/test_cli.py: 21 warnings
+tests/test_exceptions.py: 336 warnings
+tests/test_keep_alive_timeout.py: 84 warnings
+  /home/runner/work/sanic/sanic/sanic/touchup/schemes/ode.py:71: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+    event_name = getattr(event, "value", event.s)
+
+tests/test_cookies.py::test_cookies
+tests/test_cookies.py::test_cookies_asgi
+tests/test_cookies.py::test_http2_cookies
+tests/test_requests.py::test_request_cookies
+tests/test_requests.py::test_request_cookies_asgi
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] You are accessing cookie key 'test', which is currently in compat mode returning a single cookie value. Starting in v24.3 accessing a cookie value like this will return a list of values. To avoid this behavior and continue accessing a single value, please upgrade from request.cookies['test'] to request.cookies.get('test'). See more details: https://sanic.dev/en/guide/release-notes/v23.3.html#request-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py: 12 warnings
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Direct encoding of a Cookie object has been deprecated and will be removed in v24.3.
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_options
+tests/test_cookies.py::test_cookie_expires[expires0]
+tests/test_cookies.py::test_cookie_expires_illegal_instance_type[Fri, 21-Dec-2018 15:30:00 GMT]
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.expires=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_deletion
+tests/test_cookies.py::test_cookie_jar_old_school_delete_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION] Deleting cookie values using the dict pattern has been deprecated. You should instead use the cookies.delete_cookie method. To learn more, please see: https://sanic.dev/en/guide/release-notes/v23.3.html#response-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_set_unknown_property
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.invalid=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_max_age[0]
+tests/test_cookies.py::test_cookie_max_age[300]
+tests/test_cookies.py::test_cookie_max_age[301]
+tests/test_cookies.py::test_cookie_bad_max_age[30.0]
+tests/test_cookies.py::test_cookie_bad_max_age[30.1]
+tests/test_cookies.py::test_cookie_bad_max_age[test]
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.max-age=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_max_age[300]
+tests/test_cookies.py::test_cookie_max_age[301]
+  /home/runner/work/sanic/sanic/tests/test_cookies.py:210: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+    cookie_expires = datetime.utcfromtimestamp(
+
+tests/test_cookies.py::test_cookie_max_age[300]
+tests/test_cookies.py::test_cookie_max_age[301]
+  /home/runner/work/sanic/sanic/tests/test_cookies.py:217: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires = datetime.utcnow().replace(microsecond=0) + timedelta(
+
+tests/test_cookies.py::test_cookie_expires[expires0]
+  /home/runner/work/sanic/sanic/tests/test_cookies.py:249: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expires_time = datetime.utcnow().replace(microsecond=0) + expires
+
+tests/test_cookies.py::test_cookie_expires[expires0]
+  /home/runner/work/sanic/sanic/tests/test_cookies.py:263: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+    cookie_expires = datetime.utcfromtimestamp(
+
+tests/test_cookies.py::test_request_with_duplicate_cookie_key[foo=one; foo=two]
+tests/test_cookies.py::test_request_with_duplicate_cookie_key[foo=one;foo=two]
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] You are accessing cookie key 'foo', which is currently in compat mode returning a single cookie value. Starting in v24.3 accessing a cookie value like this will return a list of values. To avoid this behavior and continue accessing a single value, please upgrade from request.cookies['foo'] to request.cookies.get('foo'). See more details: https://sanic.dev/en/guide/release-notes/v23.3.html#request-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.domain=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.path=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.secure=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_jar_old_school_cookie_encode
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Setting values on a Cookie object as a dict has been deprecated. This feature will be removed in v24.3. You should instead set values on cookies as object properties: cookie.samesite=... 
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_accessors
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] You are accessing cookie key 'one', which is currently in compat mode returning a single cookie value. Starting in v24.3 accessing a cookie value like this will return a list of values. To avoid this behavior and continue accessing a single value, please upgrade from request.cookies['one'] to request.cookies.get('one'). See more details: https://sanic.dev/en/guide/release-notes/v23.3.html#request-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_accessors
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] You are accessing cookie key 'two', which is currently in compat mode returning a single cookie value. Starting in v24.3 accessing a cookie value like this will return a list of values. To avoid this behavior and continue accessing a single value, please upgrade from request.cookies['two'] to request.cookies.get('two'). See more details: https://sanic.dev/en/guide/release-notes/v23.3.html#request-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_cookies.py::test_cookie_accessors
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] You are accessing cookie key 'three', which is currently in compat mode returning a single cookie value. Starting in v24.3 accessing a cookie value like this will return a list of values. To avoid this behavior and continue accessing a single value, please upgrade from request.cookies['three'] to request.cookies.get('three'). See more details: https://sanic.dev/en/guide/release-notes/v23.3.html#request-cookies
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_custom_request.py: 1 warning
+tests/test_payload_too_large.py: 1 warning
+tests/test_pipelining.py: 2 warnings
+tests/test_request_stream.py: 28 warnings
+tests/test_requests.py: 41 warnings
+tests/test_utf8.py: 1 warning
+  /home/runner/work/sanic/sanic/.tox/py312/lib/python3.12/site-packages/httpx/_content.py:204: DeprecationWarning: Use 'content=<...>' to upload raw bytes/text content.
+    warnings.warn(message, DeprecationWarning)
+
+tests/test_errorpages.py::test_guess_mime_logging[-auto-*/*-The client accepts */*, using 'json' from request.json]
+  /home/runner/work/sanic/sanic/sanic/log.py:152: DeprecationWarning: [DEPRECATION v24.3] Response type was determined by the JSON content of the request. This behavior is deprecated and will be removed in v24.3. Please specify the format either by
+    error_format="json" on route fakeroute, by
+    FALLBACK_ERROR_FORMAT = "json", or by adding header
+    accept: application/json to your requests.
+    warn(version_info + message, DeprecationWarning)
+
+tests/test_multiprocessing.py: 16 warnings
+tests/test_tls.py: 4 warnings
+tests/test_unix_socket.py: 3 warnings
+tests/worker/test_multiplexer.py: 2 warnings
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=13875) is multi-threaded, use of fork() may lead to deadlocks in the child.
+    self.pid = os.fork()
+
+tests/test_signals.py::test_add_signal_method_handler
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:2185: RuntimeWarning: coroutine 'Loop.create_server' was never awaited
+    def __init__(self, name, parent):
+
+tests/test_tasks.py::test_purge_tasks
+  /home/runner/work/sanic/sanic/.tox/py312/lib/python3.12/site-packages/pytest_sanic/plugin.py:76: RuntimeWarning: coroutine 'dummy' was never awaited
+    loop.run_until_complete(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_tls.py::test_url_attributes_with_ssl_context[/foo--https://{}:{}/foo]
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/logging/__init__.py:234: RuntimeWarning: coroutine 'HttpProtocol.connection_task' was never awaited
+    def _acquireLock():
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/test_tls.py::test_sanic_ssl_context_create
+  /home/runner/work/sanic/sanic/tests/test_tls.py:678: DeprecationWarning: ssl.SSLContext() without protocol argument is deprecated.
+    context = ssl.SSLContext()
+
+tests/test_tls.py::test_sanic_ssl_context_create
+  /home/runner/work/sanic/sanic/tests/test_tls.py:678: DeprecationWarning: ssl.PROTOCOL_TLS is deprecated
+    context = ssl.SSLContext()
+
+tests/test_websockets.py::test_ws_frame_put_fetched[0]
+tests/test_websockets.py::test_ws_frame_put_fetched[1]
+tests/test_websockets.py::test_ws_frame_put_fetched[2]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[0]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[1]
+tests/test_websockets.py::test_ws_frame_put_message_into_queue[2]
+  /home/runner/work/sanic/sanic/sanic/server/websockets/frame.py:291: RuntimeWarning: coroutine 'AsyncMockMixin._execute_mock_call' was never awaited
+    self.message_fetched.clear()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_send_headers
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/unittest/mock.py:2185: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    def __init__(self, name, parent):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_request_stream_id
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/logging/__init__.py:452: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    if not self.validation_pattern.search(self._fmt):
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_request_conn_info
+  /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/weakref.py:117: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    self._iterating = set()
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+tests/http3/test_http_receiver.py::test_request_header_encoding
+  /home/runner/work/sanic/sanic/sanic/mixins/routes.py:42: RuntimeWarning: coroutine 'HTTPReceiver.run' was never awaited
+    def route(
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------------------------------------------------------------------------------------------------- benchmark: 2 tests ----------------------------------------------------------------------------------------------------
+Name (time in ns)                              Min                    Max                  Mean              StdDev                Median                IQR            Outliers  OPS (Kops/s)            Rounds  Iterations
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+test_resolve_route_no_arg_string_path     984.4250 (1.0)      22,370.3520 (1.93)     1,050.0664 (1.02)     684.2489 (2.04)     1,015.0820 (1.0)      14.0510 (1.38)        12;48      952.3207 (0.98)       1000        1000
+test_resolve_route_with_typed_args        991.6080 (1.01)     11,604.6940 (1.0)      1,030.1549 (1.0)      334.9181 (1.0)      1,019.3110 (1.00)     10.2095 (1.0)          1;26      970.7278 (1.0)        1000        1000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Legend:
+  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (InterQuartile Range) from 1st Quartile and 3rd Quartile.
+  OPS: Operations Per Second, computed as 1 / Mean
+=========================== short test summary info ============================
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[0] - At...
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[1] - At...
+FAILED tests/test_websockets.py::test_ws_frame_put_message_into_queue[2] - At...
+= 3 failed, 1638 passed, 9 skipped, 11 xfailed, 1889 warnings in 214.41s (0:03:34) =
+py312: exit 1 (218.00 seconds) /home/runner/work/sanic/sanic> coverage run --source ./sanic -m pytest tests pid=13875
+.pkg: _exit> python /opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/site-packages/pyproject_api/_backend.py True setuptools.build_meta
+  py312: FAIL code 1 (219.63=setup[1.63]+cmd[218.00] seconds)
+  evaluation failed :( (219.78 seconds)
+##[error]Final attempt failed. Child_process exited with error code 1

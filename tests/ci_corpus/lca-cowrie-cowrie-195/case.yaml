@@ -1,0 +1,51 @@
+repo: cowrie/cowrie
+run_id: '195'
+head_sha: 55f8e6684499eb6abe5b1c1dba01ca4c90d2c949
+run_attempts: []
+commits:
+- sha: 55f8e6684499eb6abe5b1c1dba01ca4c90d2c949
+  author: mamorett
+  files:
+  - etc/cowrie.cfg.dist
+- sha: 16fa30f9a82ba1587be45cec24c184bc192697cc
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: 2e1b47e1512b39c6e6a7e6a13cd20faf7584d4af
+  author: mamorett
+  files:
+  - etc/cowrie.cfg.dist
+- sha: 3bd6d2d9dbc7a8a4e67036ba0c38d887a9267a02
+  author: mamorett
+  files:
+  - etc/cowrie.cfg.dist
+  - src/cowrie/output/oraclecloud.py
+- sha: bcd47a76e4b82cd25b813790957556957b2fb1bf
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: d0d21576442033caf3141d586c635a5307bd6023
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: 03e31535387d0d24552e65061c02c696335009fe
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: 4e9e77dda1e53b6d0c37263582e3868c8266a27c
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: 82c6252a88c9e394f3ba154874be9c5c4c63e6de
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+- sha: 6e94eea70632dfa5e06118819137aa96024eff66
+  author: mamorett
+  files:
+  - src/cowrie/output/oraclecloud.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

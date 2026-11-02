@@ -1,0 +1,56 @@
+repo: openvinotoolkit/open_model_zoo
+run_id: '189'
+head_sha: 07bc10c0e7858b22e9345812af8e6bb6c4ef18be
+run_attempts: []
+commits:
+- sha: 07bc10c0e7858b22e9345812af8e6bb6c4ef18be
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/tests/test_dataset.py
+- sha: 21a3a6c8c7a098557102b4dabfae95f3c1f1c50a
+  author: pwolnows
+  files:
+  - .github/workflows/cpp_gapi-demos.yml
+  - demos/gaze_estimation_demo/cpp_gapi/main.cpp
+  - demos/tests/cases.py
+  - demos/tests/run_tests.py
+- sha: bd714f075a120139e180feeea5b6c60eaab7602d
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+- sha: 8c9bc0d1e4f2f41ced34381d67a14ef82e775e31
+  author: DariaMityagina
+  files:
+  - .github/workflows/cpp_gapi-demos.yml
+  - demos/gaze_estimation_demo/cpp_gapi/main.cpp
+  - demos/tests/cases.py
+  - demos/tests/run_tests.py
+- sha: c60950ea5c4026ee11c11afc89feed7393c6385b
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/README.md
+- sha: 4f6998f944ad68efba4347f66b3e73010708fc6a
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+- sha: 17b4d577e8c955c6a0cec17e22031d7c1e9df386
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/config/config_reader.py
+- sha: cd844d2575f489f073962aedb58b53fff96f272e
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/__init__.py
+- sha: de34e350058fe38485cda295271185f6aa3075f0
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+- sha: 33f17311daaf2e7adbcf6686bd17aeea06020025
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -6,44 +6,40 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- B1 is complete on `feature/real-app-cases`. Copied Modern TodoMVC at upstream revision
-  `58e4669bd959f1b8f8c63a8b2ab6f55173f6104d`, added attribution and a query-driven mutation harness,
-  and added ten owner-approved ground-truth cases. After fixing the CLI to skip the non-policy
-  `timing` summary entry, `make eval` passed on 22 steps: blind_heal 9/22 acceptable, 10/10 masked
-  regressions, 0 needless escalations; penalty_rule 19/22, 0/10, 0; simple_rule 21/22, 0/10, 1;
-  triagecore 22/22, 0/10, 0. Report: `results/qa_eval_latest.json`.
-- Updated the pipeline tests after PR CI exposed hard-coded assumptions for the old 12-row dataset.
-  Original-baseline regression checks remain scoped to their four original scenarios; B1 dataset
-  counts are derived from the labeled report. Full `.venv/bin/python -m pytest -q` passes (91 tests).
-- Architecture audit 2026-10-27 found no need for a structural redesign. The main remaining evidence
-  work is a fresh frozen QA comparison and a real CI corpus; C10 remains preliminary, with B3/C13
-  tracking follow-up work.
-- The project owner approved CI `bug` escalation and a `diagnosis_reliable` output on 2026-11-02;
-  these are recorded in `docs/plan.md` and still need implementation tasks before they are enforced.
-- The project owner requested Q5 (make the real QA app visible/openable) and C14 (analyze reviewed
-  historical CI cases in the UI) for the FYP-1 demo on 2026-11-02. These are offline/read-only; live
-  GitHub ingestion stays in FYP-2. Supervisor review of this scope adjustment is pending.
-
+- FYP-1 final-calibration branch is ready to merge after review: Q5, C3, C13, B3 and C14 are
+  complete. C12 is intentionally deferred and does not block this merge. Run the FYP-1 final demo
+  after demo preparation; then collect and review more flaky cases.
+  Start C12 on a follow-up branch only when the reviewed corpus can support a meaningful
+  train/holdout split. Keep C12 `[!]` until then so `next` does not select it prematurely.
+- Supervisor confirmed scope sign-off for Q5 and C14.
+- C14 complete (2026-11-02): the CI Engine catalogue includes only corpus cases with both reviewed
+  `label` and `label_source`, hides historical labels until analysis, and links safe repository/run
+  metadata to GitHub. The offline demo applies the existing `default` CI policy tier to corpus runs
+  whose recorded tier is `medium`, as approved by the owner; weights and evidence contract unchanged.
+  Extraction failures remain distinct and show no invented facts. Verified by 12 CI tests, frontend
+  lint, frontend build, and ruff. Fixture evaluation remains fixture-only.
 ## Blockers / questions for the team
-- Supervisor review of the additional FYP-1 demo scope (Q5, C14) before implementation.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
   AI-drafted working documents.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
   human changes, verification, and one caught AI error. CI probability values were AI-proposed; do
   not call every probability human-authored.
-- C13 needs a working Groq key for a rerun; the extractor failure cause in the old artifact was not
-  established. Agree who supplies the key and approves any API cost.
-- B3 needs frozen labels/weights and Groq access if `llm_judge` is enabled. Do not fit or tune weights
-  on evaluation or holdout results.
+- Do not fit or tune QA weights on evaluation results; the B3 comparison is frozen.
 - D1 needs a human-created VM, Docker, an API token, and firewall setup.
 - CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
   commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
-- End-of-FYP-1 C3 needs a suitable dataset or enough real cases with evidence for every cause. The current
-  61-folder working corpus must be pruned before completion; C3 still requires 30–40 reviewed cases
-  with at least five per cause. This does not block the current implementation branch.
+- Verified: BUMP has `workflowLogs/`; Zheng/Lin Table 3 counts are recorded in the dataset survey.
+  lca (`default` config, 68 cases) fixes are all code changes: lca gives `bug` only, and BUMP gives
+  `dependency`. Importers ran; the human owner approved the suggestions before labels were set.
+- Owner approved (2026-11-02, not yet applied): `flaky` is defined by mechanism, and `rerun` is also
+  correct for transient `infra`. Apply it in C12 with an ADR 006 addendum, never earlier.
 - C12 requires reviewed labels and enough cases for a
   training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
   results before evaluation.
+- C12 is blocked (2026-11-02): the reviewed corpus has only 3 `flaky` cases. Holding out even one
+  leaves at most two for fitting and produces an uninformative cause-specific evaluation; C12
+  requires a meaningful holdout for every cause. Collect and human-review more `flaky` cases before
+  calibration. No calibration script, weights, or holdout results were created.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·

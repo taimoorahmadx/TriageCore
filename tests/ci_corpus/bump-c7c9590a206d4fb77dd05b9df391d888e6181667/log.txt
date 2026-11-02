@@ -1,0 +1,850 @@
+2023-07-18T06:52:13.4442815Z ##[group]Run java -version
+2023-07-18T06:52:13.4443362Z [36;1mjava -version[0m
+2023-07-18T06:52:13.6292921Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2023-07-18T06:52:13.6293348Z env:
+2023-07-18T06:52:13.6293685Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-07-18T06:52:13.6294180Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-07-18T06:52:13.6294580Z ##[endgroup]
+2023-07-18T06:52:16.7704205Z ##[error]The operation was canceled.
+
+2023-07-18T06:51:58.5895274Z ##[group]Run actions/checkout@v3
+2023-07-18T06:51:58.5895623Z with:
+2023-07-18T06:51:58.5895905Z   repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.5896417Z   token: ***
+2023-07-18T06:51:58.5896692Z   ssh-strict: true
+2023-07-18T06:51:58.5896941Z   persist-credentials: true
+2023-07-18T06:51:58.5897178Z   clean: true
+2023-07-18T06:51:58.5897415Z   sparse-checkout-cone-mode: true
+2023-07-18T06:51:58.5897675Z   fetch-depth: 1
+2023-07-18T06:51:58.5897884Z   lfs: false
+2023-07-18T06:51:58.5898083Z   submodules: false
+2023-07-18T06:51:58.5898333Z   set-safe-directory: true
+2023-07-18T06:51:58.5898592Z ##[endgroup]
+2023-07-18T06:51:58.8702266Z Syncing repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.8704029Z ##[group]Getting Git version info
+2023-07-18T06:51:58.8704641Z Working directory is '/home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin'
+2023-07-18T06:51:58.8705268Z [command]/usr/bin/git version
+2023-07-18T06:51:58.8800433Z git version 2.41.0
+2023-07-18T06:51:58.8830082Z ##[endgroup]
+2023-07-18T06:51:58.8847870Z Temporarily overriding HOME='/home/runner/work/_temp/0bc3c2f7-0714-41f5-81e2-0a390885e72b' before making global git config changes
+2023-07-18T06:51:58.8848610Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:51:58.8889918Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:51:58.8912365Z Deleting the contents of '/home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin'
+2023-07-18T06:51:58.8918020Z ##[group]Initializing the repository
+2023-07-18T06:51:58.8922188Z [command]/usr/bin/git init /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:51:58.9004064Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-18T06:51:58.9005082Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-18T06:51:58.9005967Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-18T06:51:58.9006463Z hint: 
+2023-07-18T06:51:58.9006929Z hint: 	git config --global init.defaultBranch <name>
+2023-07-18T06:51:58.9007194Z hint: 
+2023-07-18T06:51:58.9007565Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-18T06:51:58.9008025Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-18T06:51:58.9008325Z hint: 
+2023-07-18T06:51:58.9009191Z hint: 	git branch -m <name>
+2023-07-18T06:51:58.9019304Z Initialized empty Git repository in /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/.git/
+2023-07-18T06:51:58.9031140Z [command]/usr/bin/git remote add origin https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.9074399Z ##[endgroup]
+2023-07-18T06:51:58.9075051Z ##[group]Disabling automatic garbage collection
+2023-07-18T06:51:58.9078003Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-18T06:51:58.9110791Z ##[endgroup]
+2023-07-18T06:51:58.9111425Z ##[group]Setting up auth
+2023-07-18T06:51:58.9117542Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:51:58.9150757Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-18T06:51:58.9546111Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:51:58.9575956Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-18T06:51:58.9809394Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-18T06:51:58.9846369Z ##[endgroup]
+2023-07-18T06:51:58.9856485Z ##[group]Fetching the repository
+2023-07-18T06:51:58.9857369Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +06a2b84237f51659de8a4289685cea28ba28b229:refs/remotes/pull/117/merge
+2023-07-18T06:51:59.4223529Z remote: Enumerating objects: 45, done.        
+2023-07-18T06:51:59.4224514Z remote: Counting objects:   2% (1/45)        
+2023-07-18T06:51:59.4225290Z remote: Counting objects:   4% (2/45)        
+2023-07-18T06:51:59.4225652Z remote: Counting objects:   6% (3/45)        
+2023-07-18T06:51:59.4226761Z remote: Counting objects:   8% (4/45)        
+2023-07-18T06:51:59.4227267Z remote: Counting objects:  11% (5/45)        
+2023-07-18T06:51:59.4235111Z remote: Counting objects:  13% (6/45)        
+2023-07-18T06:51:59.4235617Z remote: Counting objects:  15% (7/45)        
+2023-07-18T06:51:59.4238848Z remote: Counting objects:  17% (8/45)        
+2023-07-18T06:51:59.4239720Z remote: Counting objects:  20% (9/45)        
+2023-07-18T06:51:59.4240035Z remote: Counting objects:  22% (10/45)        
+2023-07-18T06:51:59.4240344Z remote: Counting objects:  24% (11/45)        
+2023-07-18T06:51:59.4240657Z remote: Counting objects:  26% (12/45)        
+2023-07-18T06:51:59.4240919Z remote: Counting objects:  28% (13/45)        
+2023-07-18T06:51:59.4241186Z remote: Counting objects:  31% (14/45)        
+2023-07-18T06:51:59.4241457Z remote: Counting objects:  33% (15/45)        
+2023-07-18T06:51:59.4241712Z remote: Counting objects:  35% (16/45)        
+2023-07-18T06:51:59.4241976Z remote: Counting objects:  37% (17/45)        
+2023-07-18T06:51:59.4242244Z remote: Counting objects:  40% (18/45)        
+2023-07-18T06:51:59.4242497Z remote: Counting objects:  42% (19/45)        
+2023-07-18T06:51:59.4242780Z remote: Counting objects:  44% (20/45)        
+2023-07-18T06:51:59.4243047Z remote: Counting objects:  46% (21/45)        
+2023-07-18T06:51:59.4243317Z remote: Counting objects:  48% (22/45)        
+2023-07-18T06:51:59.4243568Z remote: Counting objects:  51% (23/45)        
+2023-07-18T06:51:59.4244165Z remote: Counting objects:  53% (24/45)        
+2023-07-18T06:51:59.4244447Z remote: Counting objects:  55% (25/45)        
+2023-07-18T06:51:59.4244702Z remote: Counting objects:  57% (26/45)        
+2023-07-18T06:51:59.4244970Z remote: Counting objects:  60% (27/45)        
+2023-07-18T06:51:59.4245237Z remote: Counting objects:  62% (28/45)        
+2023-07-18T06:51:59.4245500Z remote: Counting objects:  64% (29/45)        
+2023-07-18T06:51:59.4245770Z remote: Counting objects:  66% (30/45)        
+2023-07-18T06:51:59.4246033Z remote: Counting objects:  68% (31/45)        
+2023-07-18T06:51:59.4246300Z remote: Counting objects:  71% (32/45)        
+2023-07-18T06:51:59.4246554Z remote: Counting objects:  73% (33/45)        
+2023-07-18T06:51:59.4246818Z remote: Counting objects:  75% (34/45)        
+2023-07-18T06:51:59.4247085Z remote: Counting objects:  77% (35/45)        
+2023-07-18T06:51:59.4247337Z remote: Counting objects:  80% (36/45)        
+2023-07-18T06:51:59.4247600Z remote: Counting objects:  82% (37/45)        
+2023-07-18T06:51:59.4247872Z remote: Counting objects:  84% (38/45)        
+2023-07-18T06:51:59.4248135Z remote: Counting objects:  86% (39/45)        
+2023-07-18T06:51:59.4248402Z remote: Counting objects:  88% (40/45)        
+2023-07-18T06:51:59.4248870Z remote: Counting objects:  91% (41/45)        
+2023-07-18T06:51:59.4249135Z remote: Counting objects:  93% (42/45)        
+2023-07-18T06:51:59.4249394Z remote: Counting objects:  95% (43/45)        
+2023-07-18T06:51:59.4249668Z remote: Counting objects:  97% (44/45)        
+2023-07-18T06:51:59.4249935Z remote: Counting objects: 100% (45/45)        
+2023-07-18T06:51:59.4250203Z remote: Counting objects: 100% (45/45), done.        
+2023-07-18T06:51:59.4250508Z remote: Compressing objects:   3% (1/30)        
+2023-07-18T06:51:59.4250805Z remote: Compressing objects:   6% (2/30)        
+2023-07-18T06:51:59.4251075Z remote: Compressing objects:  10% (3/30)        
+2023-07-18T06:51:59.4251354Z remote: Compressing objects:  13% (4/30)        
+2023-07-18T06:51:59.4251650Z remote: Compressing objects:  16% (5/30)        
+2023-07-18T06:51:59.4325010Z remote: Compressing objects:  20% (6/30)        
+2023-07-18T06:51:59.4325342Z remote: Compressing objects:  23% (7/30)        
+2023-07-18T06:51:59.4325632Z remote: Compressing objects:  26% (8/30)        
+2023-07-18T06:51:59.4325922Z remote: Compressing objects:  30% (9/30)        
+2023-07-18T06:51:59.4326203Z remote: Compressing objects:  33% (10/30)        
+2023-07-18T06:51:59.4326495Z remote: Compressing objects:  36% (11/30)        
+2023-07-18T06:51:59.4326785Z remote: Compressing objects:  40% (12/30)        
+2023-07-18T06:51:59.4327059Z remote: Compressing objects:  43% (13/30)        
+2023-07-18T06:51:59.4327340Z remote: Compressing objects:  46% (14/30)        
+2023-07-18T06:51:59.4327624Z remote: Compressing objects:  50% (15/30)        
+2023-07-18T06:51:59.4327891Z remote: Compressing objects:  53% (16/30)        
+2023-07-18T06:51:59.4328181Z remote: Compressing objects:  56% (17/30)        
+2023-07-18T06:51:59.4328671Z remote: Compressing objects:  60% (18/30)        
+2023-07-18T06:51:59.4329005Z remote: Compressing objects:  63% (19/30)        
+2023-07-18T06:51:59.4329439Z remote: Compressing objects:  66% (20/30)        
+2023-07-18T06:51:59.4329780Z remote: Compressing objects:  70% (21/30)        
+2023-07-18T06:51:59.4330060Z remote: Compressing objects:  73% (22/30)        
+2023-07-18T06:51:59.4330341Z remote: Compressing objects:  76% (23/30)        
+2023-07-18T06:51:59.4330606Z remote: Compressing objects:  80% (24/30)        
+2023-07-18T06:51:59.4330883Z remote: Compressing objects:  83% (25/30)        
+2023-07-18T06:51:59.4331163Z remote: Compressing objects:  86% (26/30)        
+2023-07-18T06:51:59.4331427Z remote: Compressing objects:  90% (27/30)        
+2023-07-18T06:51:59.4331707Z remote: Compressing objects:  93% (28/30)        
+2023-07-18T06:51:59.4331983Z remote: Compressing objects:  96% (29/30)        
+2023-07-18T06:51:59.4332258Z remote: Compressing objects: 100% (30/30)        
+2023-07-18T06:51:59.4332814Z remote: Compressing objects: 100% (30/30), done.        
+2023-07-18T06:51:59.4695672Z remote: Total 45 (delta 11), reused 27 (delta 5), pack-reused 0        
+2023-07-18T06:51:59.4757760Z From https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:51:59.4758293Z  * [new ref]         06a2b84237f51659de8a4289685cea28ba28b229 -> pull/117/merge
+2023-07-18T06:51:59.4777974Z ##[endgroup]
+2023-07-18T06:51:59.4779244Z ##[group]Determining the checkout info
+2023-07-18T06:51:59.4781509Z ##[endgroup]
+2023-07-18T06:51:59.4781893Z ##[group]Checking out the ref
+2023-07-18T06:51:59.4787031Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/117/merge
+2023-07-18T06:51:59.4867166Z Note: switching to 'refs/remotes/pull/117/merge'.
+2023-07-18T06:51:59.4867797Z 
+2023-07-18T06:51:59.4868651Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-18T06:51:59.4869746Z changes and commit them, and you can discard any commits you make in this
+2023-07-18T06:51:59.4870438Z state without impacting any branches by switching back to a branch.
+2023-07-18T06:51:59.4870764Z 
+2023-07-18T06:51:59.4871050Z If you want to create a new branch to retain commits you create, you may
+2023-07-18T06:51:59.4871532Z do so (now or later) by using -c with the switch command. Example:
+2023-07-18T06:51:59.4871739Z 
+2023-07-18T06:51:59.4871997Z   git switch -c <new-branch-name>
+2023-07-18T06:51:59.4872438Z 
+2023-07-18T06:51:59.4872627Z Or undo this operation with:
+2023-07-18T06:51:59.4872793Z 
+2023-07-18T06:51:59.4872959Z   git switch -
+2023-07-18T06:51:59.4873447Z 
+2023-07-18T06:51:59.4873746Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-18T06:51:59.4873979Z 
+2023-07-18T06:51:59.4874274Z HEAD is now at 06a2b84 Merge c7c9590a206d4fb77dd05b9df391d888e6181667 into 5a393292599c696b28756396127fa356109b89e8
+2023-07-18T06:51:59.4880714Z ##[endgroup]
+2023-07-18T06:51:59.4924967Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-18T06:51:59.4954435Z '06a2b84237f51659de8a4289685cea28ba28b229'
+
+2023-07-18T06:52:01.3383877Z ##[group]Run actions/checkout@v3
+2023-07-18T06:52:01.3384398Z with:
+2023-07-18T06:52:01.3384755Z   repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:52:01.3385402Z   token: ***
+2023-07-18T06:52:01.3385644Z   ssh-strict: true
+2023-07-18T06:52:01.3385944Z   persist-credentials: true
+2023-07-18T06:52:01.3386229Z   clean: true
+2023-07-18T06:52:01.3386516Z   sparse-checkout-cone-mode: true
+2023-07-18T06:52:01.3386829Z   fetch-depth: 1
+2023-07-18T06:52:01.3387076Z   lfs: false
+2023-07-18T06:52:01.3387325Z   submodules: false
+2023-07-18T06:52:01.3387601Z   set-safe-directory: true
+2023-07-18T06:52:01.3387896Z ##[endgroup]
+2023-07-18T06:52:03.1322233Z Syncing repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:52:03.1327634Z ##[group]Getting Git version info
+2023-07-18T06:52:03.1328576Z Working directory is 'D:\a\scoverage-maven-plugin\scoverage-maven-plugin'
+2023-07-18T06:52:03.1329547Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-07-18T06:52:03.1329964Z git version 2.41.0.windows.1
+2023-07-18T06:52:03.1332208Z ##[endgroup]
+2023-07-18T06:52:03.1347894Z Temporarily overriding HOME='D:\a\_temp\76c65fd0-d18c-4866-9cc8-a5c37be80563' before making global git config changes
+2023-07-18T06:52:03.1348648Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:52:03.1349555Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\scoverage-maven-plugin\scoverage-maven-plugin
+2023-07-18T06:52:03.1351008Z Deleting the contents of 'D:\a\scoverage-maven-plugin\scoverage-maven-plugin'
+2023-07-18T06:52:03.1351740Z ##[group]Initializing the repository
+2023-07-18T06:52:03.1352545Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\scoverage-maven-plugin\scoverage-maven-plugin
+2023-07-18T06:52:03.1353388Z Initialized empty Git repository in D:/a/scoverage-maven-plugin/scoverage-maven-plugin/.git/
+2023-07-18T06:52:03.1357250Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:52:03.1358639Z ##[endgroup]
+2023-07-18T06:52:03.1359252Z ##[group]Disabling automatic garbage collection
+2023-07-18T06:52:03.1359860Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2023-07-18T06:52:03.1360881Z ##[endgroup]
+2023-07-18T06:52:03.1361322Z ##[group]Setting up auth
+2023-07-18T06:52:03.1361990Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:52:03.1363579Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-07-18T06:52:04.2415212Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:52:04.2702756Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-07-18T06:52:04.8539018Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2023-07-18T06:52:04.8865560Z ##[endgroup]
+2023-07-18T06:52:04.8876810Z ##[group]Fetching the repository
+2023-07-18T06:52:04.8878175Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +06a2b84237f51659de8a4289685cea28ba28b229:refs/remotes/pull/117/merge
+2023-07-18T06:52:06.2042408Z remote: Enumerating objects: 45, done.        
+2023-07-18T06:52:06.2043040Z remote: Counting objects:   2% (1/45)        
+2023-07-18T06:52:06.2043424Z remote: Counting objects:   4% (2/45)        
+2023-07-18T06:52:06.2043781Z remote: Counting objects:   6% (3/45)        
+2023-07-18T06:52:06.2044170Z remote: Counting objects:   8% (4/45)        
+2023-07-18T06:52:06.2047546Z remote: Counting objects:  11% (5/45)        
+2023-07-18T06:52:06.2047896Z remote: Counting objects:  13% (6/45)        
+2023-07-18T06:52:06.2048193Z remote: Counting objects:  15% (7/45)        
+2023-07-18T06:52:06.2048506Z remote: Counting objects:  17% (8/45)        
+2023-07-18T06:52:06.2048816Z remote: Counting objects:  20% (9/45)        
+2023-07-18T06:52:06.2049108Z remote: Counting objects:  22% (10/45)        
+2023-07-18T06:52:06.2049439Z remote: Counting objects:  24% (11/45)        
+2023-07-18T06:52:06.2049746Z remote: Counting objects:  26% (12/45)        
+2023-07-18T06:52:06.2050051Z remote: Counting objects:  28% (13/45)        
+2023-07-18T06:52:06.2050386Z remote: Counting objects:  31% (14/45)        
+2023-07-18T06:52:06.2050683Z remote: Counting objects:  33% (15/45)        
+2023-07-18T06:52:06.2050986Z remote: Counting objects:  35% (16/45)        
+2023-07-18T06:52:06.2051286Z remote: Counting objects:  37% (17/45)        
+2023-07-18T06:52:06.2051583Z remote: Counting objects:  40% (18/45)        
+2023-07-18T06:52:06.2051892Z remote: Counting objects:  42% (19/45)        
+2023-07-18T06:52:06.2052174Z remote: Counting objects:  44% (20/45)        
+2023-07-18T06:52:06.2052468Z remote: Counting objects:  46% (21/45)        
+2023-07-18T06:52:06.2052766Z remote: Counting objects:  48% (22/45)        
+2023-07-18T06:52:06.2053047Z remote: Counting objects:  51% (23/45)        
+2023-07-18T06:52:06.2053346Z remote: Counting objects:  53% (24/45)        
+2023-07-18T06:52:06.2053660Z remote: Counting objects:  55% (25/45)        
+2023-07-18T06:52:06.2053959Z remote: Counting objects:  57% (26/45)        
+2023-07-18T06:52:06.2054241Z remote: Counting objects:  60% (27/45)        
+2023-07-18T06:52:06.2054538Z remote: Counting objects:  62% (28/45)        
+2023-07-18T06:52:06.2054832Z remote: Counting objects:  64% (29/45)        
+2023-07-18T06:52:06.2055950Z remote: Counting objects:  66% (30/45)        
+2023-07-18T06:52:06.2056249Z remote: Counting objects:  68% (31/45)        
+2023-07-18T06:52:06.2056554Z remote: Counting objects:  71% (32/45)        
+2023-07-18T06:52:06.2056834Z remote: Counting objects:  73% (33/45)        
+[... 1458 lines removed by TriageCore ...]
+2023-07-18T06:52:06.2053051Z remote: Counting objects:  51% (23/45)        
+2023-07-18T06:52:06.2053349Z remote: Counting objects:  53% (24/45)        
+2023-07-18T06:52:06.2053663Z remote: Counting objects:  55% (25/45)        
+2023-07-18T06:52:06.2053962Z remote: Counting objects:  57% (26/45)        
+2023-07-18T06:52:06.2054244Z remote: Counting objects:  60% (27/45)        
+2023-07-18T06:52:06.2054541Z remote: Counting objects:  62% (28/45)        
+2023-07-18T06:52:06.2054835Z remote: Counting objects:  64% (29/45)        
+2023-07-18T06:52:06.2055954Z remote: Counting objects:  66% (30/45)        
+2023-07-18T06:52:06.2056260Z remote: Counting objects:  68% (31/45)        
+2023-07-18T06:52:06.2056558Z remote: Counting objects:  71% (32/45)        
+2023-07-18T06:52:06.2056838Z remote: Counting objects:  73% (33/45)        
+2023-07-18T06:52:06.2057136Z remote: Counting objects:  75% (34/45)        
+2023-07-18T06:52:06.2057434Z remote: Counting objects:  77% (35/45)        
+2023-07-18T06:52:06.2057715Z remote: Counting objects:  80% (36/45)        
+2023-07-18T06:52:06.2058019Z remote: Counting objects:  82% (37/45)        
+2023-07-18T06:52:06.2058315Z remote: Counting objects:  84% (38/45)        
+2023-07-18T06:52:06.2058611Z remote: Counting objects:  86% (39/45)        
+2023-07-18T06:52:06.2058893Z remote: Counting objects:  88% (40/45)        
+2023-07-18T06:52:06.2059189Z remote: Counting objects:  91% (41/45)        
+2023-07-18T06:52:06.2059489Z remote: Counting objects:  93% (42/45)        
+2023-07-18T06:52:06.2059769Z remote: Counting objects:  95% (43/45)        
+2023-07-18T06:52:06.2060077Z remote: Counting objects:  97% (44/45)        
+2023-07-18T06:52:06.2060376Z remote: Counting objects: 100% (45/45)        
+2023-07-18T06:52:06.2060678Z remote: Counting objects: 100% (45/45), done.        
+2023-07-18T06:52:06.2061027Z remote: Compressing objects:   3% (1/30)        
+2023-07-18T06:52:06.2061361Z remote: Compressing objects:   6% (2/30)        
+2023-07-18T06:52:06.2061692Z remote: Compressing objects:  10% (3/30)        
+2023-07-18T06:52:06.2061998Z remote: Compressing objects:  13% (4/30)        
+2023-07-18T06:52:06.2062317Z remote: Compressing objects:  16% (5/30)        
+2023-07-18T06:52:06.2062637Z remote: Compressing objects:  20% (6/30)        
+2023-07-18T06:52:06.2062936Z remote: Compressing objects:  23% (7/30)        
+2023-07-18T06:52:06.2063251Z remote: Compressing objects:  26% (8/30)        
+2023-07-18T06:52:06.2063574Z remote: Compressing objects:  30% (9/30)        
+2023-07-18T06:52:06.2063889Z remote: Compressing objects:  33% (10/30)        
+2023-07-18T06:52:06.2064778Z remote: Compressing objects:  36% (11/30)        
+2023-07-18T06:52:06.2065120Z remote: Compressing objects:  40% (12/30)        
+2023-07-18T06:52:06.2205656Z remote: Compressing objects:  43% (13/30)        
+2023-07-18T06:52:06.2205976Z remote: Compressing objects:  46% (14/30)        
+2023-07-18T06:52:06.2206265Z remote: Compressing objects:  50% (15/30)        
+2023-07-18T06:52:06.2206552Z remote: Compressing objects:  53% (16/30)        
+2023-07-18T06:52:06.2206822Z remote: Compressing objects:  56% (17/30)        
+2023-07-18T06:52:06.2207103Z remote: Compressing objects:  60% (18/30)        
+2023-07-18T06:52:06.2207425Z remote: Compressing objects:  63% (19/30)        
+2023-07-18T06:52:06.2207708Z remote: Compressing objects:  66% (20/30)        
+2023-07-18T06:52:06.2207978Z remote: Compressing objects:  70% (21/30)        
+2023-07-18T06:52:06.2208256Z remote: Compressing objects:  73% (22/30)        
+2023-07-18T06:52:06.2208553Z remote: Compressing objects:  76% (23/30)        
+2023-07-18T06:52:06.2208830Z remote: Compressing objects:  80% (24/30)        
+2023-07-18T06:52:06.2209110Z remote: Compressing objects:  83% (25/30)        
+2023-07-18T06:52:06.2209387Z remote: Compressing objects:  86% (26/30)        
+2023-07-18T06:52:06.2209664Z remote: Compressing objects:  90% (27/30)        
+2023-07-18T06:52:06.2209925Z remote: Compressing objects:  93% (28/30)        
+2023-07-18T06:52:06.2210449Z remote: Compressing objects:  96% (29/30)        
+2023-07-18T06:52:06.2210740Z remote: Compressing objects: 100% (30/30)        
+2023-07-18T06:52:06.2211018Z remote: Compressing objects: 100% (30/30), done.        
+2023-07-18T06:52:06.2817473Z remote: Total 45 (delta 11), reused 27 (delta 5), pack-reused 0        
+2023-07-18T06:52:06.3713421Z From https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:52:06.3714246Z  * [new ref]         06a2b84237f51659de8a4289685cea28ba28b229 -> pull/117/merge
+2023-07-18T06:52:06.4239114Z ##[endgroup]
+2023-07-18T06:52:06.4239746Z ##[group]Determining the checkout info
+2023-07-18T06:52:06.4242028Z ##[endgroup]
+2023-07-18T06:52:06.4242592Z ##[group]Checking out the ref
+2023-07-18T06:52:06.4253379Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/117/merge
+2023-07-18T06:52:06.4854391Z Note: switching to 'refs/remotes/pull/117/merge'.
+2023-07-18T06:52:06.4854743Z 
+2023-07-18T06:52:06.4855240Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-18T06:52:06.4855686Z changes and commit them, and you can discard any commits you make in this
+2023-07-18T06:52:06.4856122Z state without impacting any branches by switching back to a branch.
+2023-07-18T06:52:06.4856365Z 
+2023-07-18T06:52:06.4856562Z If you want to create a new branch to retain commits you create, you may
+2023-07-18T06:52:06.4857060Z do so (now or later) by using -c with the switch command. Example:
+2023-07-18T06:52:06.4857291Z 
+2023-07-18T06:52:06.4857512Z   git switch -c <new-branch-name>
+2023-07-18T06:52:06.4857699Z 
+2023-07-18T06:52:06.4857836Z Or undo this operation with:
+2023-07-18T06:52:06.4858013Z 
+2023-07-18T06:52:06.4858108Z   git switch -
+2023-07-18T06:52:06.4858256Z 
+2023-07-18T06:52:06.4858461Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-18T06:52:06.4858721Z 
+2023-07-18T06:52:06.4858970Z HEAD is now at 06a2b84 Merge c7c9590a206d4fb77dd05b9df391d888e6181667 into 5a393292599c696b28756396127fa356109b89e8
+2023-07-18T06:52:06.4886630Z ##[endgroup]
+2023-07-18T06:52:06.5213838Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format='%H'
+2023-07-18T06:52:06.5487621Z '06a2b84237f51659de8a4289685cea28ba28b229'
+2023-07-18T06:52:06.6016866Z ##[group]Run actions/setup-java@v3
+2023-07-18T06:52:06.6017199Z with:
+2023-07-18T06:52:06.6017406Z   distribution: temurin
+2023-07-18T06:52:06.6017615Z   java-version: 8
+2023-07-18T06:52:06.6017836Z   java-package: jdk
+2023-07-18T06:52:06.6018085Z   check-latest: false
+2023-07-18T06:52:06.6018288Z   server-id: github
+2023-07-18T06:52:06.6018525Z   server-username: GITHUB_ACTOR
+2023-07-18T06:52:06.6018804Z   server-password: GITHUB_TOKEN
+2023-07-18T06:52:06.6019050Z   overwrite-settings: true
+2023-07-18T06:52:06.6019283Z   job-status: success
+2023-07-18T06:52:06.6019731Z   token: ***
+2023-07-18T06:52:06.6019932Z ##[endgroup]
+2023-07-18T06:52:06.8923496Z ##[group]Installed distributions
+2023-07-18T06:52:06.9809448Z Resolved Java 8.0.372+7 from tool-cache
+2023-07-18T06:52:06.9809993Z Setting Java 8.0.372+7 as the default
+2023-07-18T06:52:06.9855187Z Creating toolchains.xml for JDK version 8 from temurin
+2023-07-18T06:52:06.9989530Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-07-18T06:52:06.9993249Z 
+2023-07-18T06:52:06.9993500Z Java configuration:
+2023-07-18T06:52:06.9993807Z   Distribution: temurin
+2023-07-18T06:52:06.9994880Z   Version: 8.0.372+7
+2023-07-18T06:52:06.9995675Z   Path: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\8.0.372-7\x64
+2023-07-18T06:52:06.9995995Z 
+2023-07-18T06:52:06.9996476Z ##[endgroup]
+2023-07-18T06:52:07.0022183Z Creating settings.xml with server-id: github
+2023-07-18T06:52:07.0025992Z Writing to C:\Users\runneradmin\.m2\settings.xml
+2023-07-18T06:52:07.0344408Z ##[group]Run java -version
+2023-07-18T06:52:07.0344892Z [36;1mjava -version[0m
+2023-07-18T06:52:07.0390793Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2023-07-18T06:52:07.0391154Z env:
+2023-07-18T06:52:07.0391562Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\8.0.372-7\x64
+2023-07-18T06:52:07.0392052Z   JAVA_HOME_8_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\8.0.372-7\x64
+2023-07-18T06:52:07.0392381Z ##[endgroup]
+2023-07-18T06:52:15.5656774Z openjdk version "1.8.0_372"
+2023-07-18T06:52:15.5657943Z OpenJDK Runtime Environment (Temurin)(build 1.8.0_372-b07)
+2023-07-18T06:52:15.5658793Z OpenJDK 64-Bit Server VM (Temurin)(build 25.372-b07, mixed mode)
+2023-07-18T06:52:16.6799934Z ##[error]The operation was canceled.
+2023-07-18T06:52:16.7650343Z Post job cleanup.
+2023-07-18T06:52:17.1499520Z Post job cleanup.
+2023-07-18T06:52:17.4051150Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-07-18T06:52:17.4344423Z git version 2.41.0.windows.1
+2023-07-18T06:52:17.4413291Z Temporarily overriding HOME='D:\a\_temp\205ff3d3-479e-49e4-a9d0-10a1f4d8053c' before making global git config changes
+2023-07-18T06:52:17.4414000Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:52:17.4424499Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\scoverage-maven-plugin\scoverage-maven-plugin
+2023-07-18T06:52:17.4743001Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:52:17.5057703Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-07-18T06:52:17.9987435Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:52:18.0255873Z http.https://github.com/.extraheader
+2023-07-18T06:52:18.0349435Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-07-18T06:52:18.0609759Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-07-18T06:52:18.5763441Z Cleaning up orphan processes
+
+2023-07-18T06:52:12.5216721Z Post job cleanup.
+
+2023-07-18T06:51:51.1870140Z Requested labels: ubuntu-latest
+2023-07-18T06:51:51.1870494Z Job defined at: scoverage/scoverage-maven-plugin/.github/workflows/ci.yml@refs/pull/117/merge
+2023-07-18T06:51:51.1870652Z Waiting for a runner to pick up this job...
+2023-07-18T06:51:51.3838462Z Job is waiting for a hosted runner to come online.
+2023-07-18T06:51:54.6580178Z Job is about to start running on the hosted runner: GitHub Actions 2 (hosted)
+2023-07-18T06:51:57.4026374Z Current runner version: '2.306.0'
+2023-07-18T06:51:57.4053927Z ##[group]Operating System
+2023-07-18T06:51:57.4054511Z Ubuntu
+2023-07-18T06:51:57.4054904Z 22.04.2
+2023-07-18T06:51:57.4055168Z LTS
+2023-07-18T06:51:57.4055509Z ##[endgroup]
+2023-07-18T06:51:57.4055804Z ##[group]Runner Image
+2023-07-18T06:51:57.4056192Z Image: ubuntu-22.04
+2023-07-18T06:51:57.4056574Z Version: 20230710.1.0
+2023-07-18T06:51:57.4057115Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230710.1/images/linux/Ubuntu2204-Readme.md
+2023-07-18T06:51:57.4057736Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230710.1
+2023-07-18T06:51:57.4058220Z ##[endgroup]
+2023-07-18T06:51:57.4058579Z ##[group]Runner Image Provisioner
+2023-07-18T06:51:57.4058927Z 2.0.238.1
+2023-07-18T06:51:57.4059248Z ##[endgroup]
+2023-07-18T06:51:57.4060275Z ##[group]GITHUB_TOKEN Permissions
+2023-07-18T06:51:57.4060922Z Actions: read
+2023-07-18T06:51:57.4061252Z Checks: read
+2023-07-18T06:51:57.4061826Z Contents: read
+2023-07-18T06:51:57.4062210Z Deployments: read
+2023-07-18T06:51:57.4062593Z Discussions: read
+2023-07-18T06:51:57.4062973Z Issues: read
+2023-07-18T06:51:57.4063258Z Metadata: read
+2023-07-18T06:51:57.4063591Z Packages: read
+2023-07-18T06:51:57.4063951Z Pages: read
+2023-07-18T06:51:57.4064245Z PullRequests: read
+2023-07-18T06:51:57.4064631Z RepositoryProjects: read
+2023-07-18T06:51:57.4065012Z SecurityEvents: read
+2023-07-18T06:51:57.4065312Z Statuses: read
+2023-07-18T06:51:57.4065669Z ##[endgroup]
+2023-07-18T06:51:57.4069457Z Secret source: Dependabot
+2023-07-18T06:51:57.4069938Z Prepare workflow directory
+2023-07-18T06:51:57.4815579Z Prepare all required actions
+2023-07-18T06:51:57.5007505Z Getting action download info
+2023-07-18T06:51:57.6741110Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-07-18T06:51:58.0071295Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-07-18T06:51:58.3833047Z Complete job name: build (8, ubuntu-latest)
+2023-07-18T06:51:58.4903445Z ##[group]Run actions/checkout@v3
+2023-07-18T06:51:58.4903802Z with:
+2023-07-18T06:51:58.4904151Z   repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.4904745Z   token: ***
+2023-07-18T06:51:58.4904996Z   ssh-strict: true
+2023-07-18T06:51:58.4905301Z   persist-credentials: true
+2023-07-18T06:51:58.4905594Z   clean: true
+2023-07-18T06:51:58.4905893Z   sparse-checkout-cone-mode: true
+2023-07-18T06:51:58.4906214Z   fetch-depth: 1
+2023-07-18T06:51:58.4906466Z   lfs: false
+2023-07-18T06:51:58.4906708Z   submodules: false
+2023-07-18T06:51:58.4907001Z   set-safe-directory: true
+2023-07-18T06:51:58.4907285Z ##[endgroup]
+2023-07-18T06:51:58.7191392Z Syncing repository: scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.7193339Z ##[group]Getting Git version info
+2023-07-18T06:51:58.7194076Z Working directory is '/home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin'
+2023-07-18T06:51:58.7195901Z [command]/usr/bin/git version
+2023-07-18T06:51:58.7248352Z git version 2.41.0
+2023-07-18T06:51:58.7275741Z ##[endgroup]
+2023-07-18T06:51:58.7293445Z Temporarily overriding HOME='/home/runner/work/_temp/bc6b6501-d9e1-473c-a792-db3ed74a4650' before making global git config changes
+2023-07-18T06:51:58.7294096Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:51:58.7298555Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:51:58.7340556Z Deleting the contents of '/home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin'
+2023-07-18T06:51:58.7345976Z ##[group]Initializing the repository
+2023-07-18T06:51:58.7349854Z [command]/usr/bin/git init /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:51:58.7415837Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-18T06:51:58.7416509Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-18T06:51:58.7417498Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-18T06:51:58.7417979Z hint: 
+2023-07-18T06:51:58.7418558Z hint: 	git config --global init.defaultBranch <name>
+2023-07-18T06:51:58.7418954Z hint: 
+2023-07-18T06:51:58.7419490Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-18T06:51:58.7420137Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-18T06:51:58.7420571Z hint: 
+2023-07-18T06:51:58.7420972Z hint: 	git branch -m <name>
+2023-07-18T06:51:58.7428798Z Initialized empty Git repository in /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/.git/
+2023-07-18T06:51:58.7437873Z [command]/usr/bin/git remote add origin https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:51:58.7481897Z ##[endgroup]
+2023-07-18T06:51:58.7482593Z ##[group]Disabling automatic garbage collection
+2023-07-18T06:51:58.7483375Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-18T06:51:58.7513311Z ##[endgroup]
+2023-07-18T06:51:58.7513951Z ##[group]Setting up auth
+2023-07-18T06:51:58.7520000Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:51:58.7553356Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-18T06:51:58.7878114Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:51:58.7909869Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-18T06:51:58.8130794Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-18T06:51:58.8169157Z ##[endgroup]
+2023-07-18T06:51:58.8169888Z ##[group]Fetching the repository
+2023-07-18T06:51:58.8178624Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +06a2b84237f51659de8a4289685cea28ba28b229:refs/remotes/pull/117/merge
+2023-07-18T06:51:59.0810182Z remote: Enumerating objects: 45, done.        
+2023-07-18T06:51:59.0811614Z remote: Counting objects:   2% (1/45)        
+2023-07-18T06:51:59.0812293Z remote: Counting objects:   4% (2/45)        
+2023-07-18T06:51:59.0813215Z remote: Counting objects:   6% (3/45)        
+2023-07-18T06:51:59.0813718Z remote: Counting objects:   8% (4/45)        
+2023-07-18T06:51:59.0814597Z remote: Counting objects:  11% (5/45)        
+2023-07-18T06:51:59.0815612Z remote: Counting objects:  13% (6/45)        
+2023-07-18T06:51:59.0816359Z remote: Counting objects:  15% (7/45)        
+2023-07-18T06:51:59.0816852Z remote: Counting objects:  17% (8/45)        
+2023-07-18T06:51:59.0817327Z remote: Counting objects:  20% (9/45)        
+2023-07-18T06:51:59.0817808Z remote: Counting objects:  22% (10/45)        
+2023-07-18T06:51:59.0818325Z remote: Counting objects:  24% (11/45)        
+2023-07-18T06:51:59.0818801Z remote: Counting objects:  26% (12/45)        
+2023-07-18T06:51:59.0819278Z remote: Counting objects:  28% (13/45)        
+2023-07-18T06:51:59.0819753Z remote: Counting objects:  31% (14/45)        
+2023-07-18T06:51:59.0820217Z remote: Counting objects:  33% (15/45)        
+2023-07-18T06:51:59.0820688Z remote: Counting objects:  35% (16/45)        
+2023-07-18T06:51:59.0821154Z remote: Counting objects:  37% (17/45)        
+2023-07-18T06:51:59.0821612Z remote: Counting objects:  40% (18/45)        
+2023-07-18T06:51:59.0822081Z remote: Counting objects:  42% (19/45)        
+2023-07-18T06:51:59.0822547Z remote: Counting objects:  44% (20/45)        
+2023-07-18T06:51:59.0823018Z remote: Counting objects:  46% (21/45)        
+2023-07-18T06:51:59.0823477Z remote: Counting objects:  48% (22/45)        
+2023-07-18T06:51:59.0823941Z remote: Counting objects:  51% (23/45)        
+2023-07-18T06:51:59.0824816Z remote: Counting objects:  53% (24/45)        
+2023-07-18T06:51:59.0825364Z remote: Counting objects:  55% (25/45)        
+2023-07-18T06:51:59.0825825Z remote: Counting objects:  57% (26/45)        
+2023-07-18T06:51:59.0826295Z remote: Counting objects:  60% (27/45)        
+2023-07-18T06:51:59.0826763Z remote: Counting objects:  62% (28/45)        
+2023-07-18T06:51:59.0827335Z remote: Counting objects:  64% (29/45)        
+2023-07-18T06:51:59.0827809Z remote: Counting objects:  66% (30/45)        
+2023-07-18T06:51:59.0828277Z remote: Counting objects:  68% (31/45)        
+2023-07-18T06:51:59.0828745Z remote: Counting objects:  71% (32/45)        
+2023-07-18T06:51:59.0829204Z remote: Counting objects:  73% (33/45)        
+2023-07-18T06:51:59.0829673Z remote: Counting objects:  75% (34/45)        
+2023-07-18T06:51:59.0830143Z remote: Counting objects:  77% (35/45)        
+2023-07-18T06:51:59.0830611Z remote: Counting objects:  80% (36/45)        
+2023-07-18T06:51:59.0831125Z remote: Counting objects:  82% (37/45)        
+2023-07-18T06:51:59.0831609Z remote: Counting objects:  84% (38/45)        
+2023-07-18T06:51:59.0832073Z remote: Counting objects:  86% (39/45)        
+2023-07-18T06:51:59.0832545Z remote: Counting objects:  88% (40/45)        
+2023-07-18T06:51:59.0833001Z remote: Counting objects:  91% (41/45)        
+2023-07-18T06:51:59.0833504Z remote: Counting objects:  93% (42/45)        
+2023-07-18T06:51:59.0833978Z remote: Counting objects:  95% (43/45)        
+2023-07-18T06:51:59.0834430Z remote: Counting objects:  97% (44/45)        
+2023-07-18T06:51:59.0834895Z remote: Counting objects: 100% (45/45)        
+2023-07-18T06:51:59.0835387Z remote: Counting objects: 100% (45/45), done.        
+2023-07-18T06:51:59.0835909Z remote: Compressing objects:   3% (1/30)        
+2023-07-18T06:51:59.0836395Z remote: Compressing objects:   6% (2/30)        
+2023-07-18T06:51:59.0836917Z remote: Compressing objects:  10% (3/30)        
+2023-07-18T06:51:59.0837419Z remote: Compressing objects:  13% (4/30)        
+2023-07-18T06:51:59.0838171Z remote: Compressing objects:  16% (5/30)        
+2023-07-18T06:51:59.0839082Z remote: Compressing objects:  20% (6/30)        
+2023-07-18T06:51:59.0839513Z remote: Compressing objects:  23% (7/30)        
+2023-07-18T06:51:59.0839903Z remote: Compressing objects:  26% (8/30)        
+2023-07-18T06:51:59.0840373Z remote: Compressing objects:  30% (9/30)        
+2023-07-18T06:51:59.0840958Z remote: Compressing objects:  33% (10/30)        
+2023-07-18T06:51:59.0868607Z remote: Compressing objects:  36% (11/30)        
+2023-07-18T06:51:59.0869083Z remote: Compressing objects:  40% (12/30)        
+2023-07-18T06:51:59.0869844Z remote: Compressing objects:  43% (13/30)        
+2023-07-18T06:51:59.0870552Z remote: Compressing objects:  46% (14/30)        
+2023-07-18T06:51:59.0870946Z remote: Compressing objects:  50% (15/30)        
+2023-07-18T06:51:59.0871326Z remote: Compressing objects:  53% (16/30)        
+2023-07-18T06:51:59.0872343Z remote: Compressing objects:  56% (17/30)        
+2023-07-18T06:51:59.0872772Z remote: Compressing objects:  60% (18/30)        
+2023-07-18T06:51:59.0873417Z remote: Compressing objects:  63% (19/30)        
+2023-07-18T06:51:59.0873810Z remote: Compressing objects:  66% (20/30)        
+2023-07-18T06:51:59.0874546Z remote: Compressing objects:  70% (21/30)        
+2023-07-18T06:51:59.0875236Z remote: Compressing objects:  73% (22/30)        
+2023-07-18T06:51:59.0876311Z remote: Compressing objects:  76% (23/30)        
+2023-07-18T06:51:59.0876696Z remote: Compressing objects:  80% (24/30)        
+2023-07-18T06:51:59.0877762Z remote: Compressing objects:  83% (25/30)        
+2023-07-18T06:51:59.0878180Z remote: Compressing objects:  86% (26/30)        
+2023-07-18T06:51:59.0879031Z remote: Compressing objects:  90% (27/30)        
+2023-07-18T06:51:59.0879428Z remote: Compressing objects:  93% (28/30)        
+2023-07-18T06:51:59.0879815Z remote: Compressing objects:  96% (29/30)        
+2023-07-18T06:51:59.0880203Z remote: Compressing objects: 100% (30/30)        
+2023-07-18T06:51:59.0881067Z remote: Compressing objects: 100% (30/30), done.        
+2023-07-18T06:51:59.0948132Z remote: Total 45 (delta 11), reused 27 (delta 5), pack-reused 0        
+2023-07-18T06:51:59.1061006Z From https://github.com/scoverage/scoverage-maven-plugin
+2023-07-18T06:51:59.1061633Z  * [new ref]         06a2b84237f51659de8a4289685cea28ba28b229 -> pull/117/merge
+2023-07-18T06:51:59.1094174Z ##[endgroup]
+2023-07-18T06:51:59.1094699Z ##[group]Determining the checkout info
+2023-07-18T06:51:59.1095971Z ##[endgroup]
+2023-07-18T06:51:59.1096455Z ##[group]Checking out the ref
+2023-07-18T06:51:59.1102007Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/117/merge
+2023-07-18T06:51:59.1171129Z Note: switching to 'refs/remotes/pull/117/merge'.
+2023-07-18T06:51:59.1171530Z 
+2023-07-18T06:51:59.1171923Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-18T06:51:59.1172499Z changes and commit them, and you can discard any commits you make in this
+2023-07-18T06:51:59.1173094Z state without impacting any branches by switching back to a branch.
+2023-07-18T06:51:59.1173437Z 
+2023-07-18T06:51:59.1173725Z If you want to create a new branch to retain commits you create, you may
+2023-07-18T06:51:59.1174320Z do so (now or later) by using -c with the switch command. Example:
+2023-07-18T06:51:59.1174651Z 
+2023-07-18T06:51:59.1174923Z   git switch -c <new-branch-name>
+2023-07-18T06:51:59.1175208Z 
+2023-07-18T06:51:59.1175419Z Or undo this operation with:
+2023-07-18T06:51:59.1175686Z 
+2023-07-18T06:51:59.1175868Z   git switch -
+2023-07-18T06:51:59.1176107Z 
+2023-07-18T06:51:59.1176419Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-18T06:51:59.1176762Z 
+2023-07-18T06:51:59.1177163Z HEAD is now at 06a2b84 Merge c7c9590a206d4fb77dd05b9df391d888e6181667 into 5a393292599c696b28756396127fa356109b89e8
+2023-07-18T06:51:59.1183887Z ##[endgroup]
+2023-07-18T06:51:59.1223045Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-18T06:51:59.1251515Z '06a2b84237f51659de8a4289685cea28ba28b229'
+2023-07-18T06:51:59.1645062Z ##[group]Run actions/setup-java@v3
+2023-07-18T06:51:59.1645361Z with:
+2023-07-18T06:51:59.1645611Z   distribution: temurin
+2023-07-18T06:51:59.1645883Z   java-version: 8
+2023-07-18T06:51:59.1646136Z   java-package: jdk
+2023-07-18T06:51:59.1646412Z   check-latest: false
+2023-07-18T06:51:59.1646677Z   server-id: github
+2023-07-18T06:51:59.1646947Z   server-username: GITHUB_ACTOR
+2023-07-18T06:51:59.1647280Z   server-password: GITHUB_TOKEN
+2023-07-18T06:51:59.1647597Z   overwrite-settings: true
+2023-07-18T06:51:59.1647868Z   job-status: success
+2023-07-18T06:51:59.1648329Z   token: ***
+2023-07-18T06:51:59.1648568Z ##[endgroup]
+2023-07-18T06:51:59.3880214Z ##[group]Installed distributions
+2023-07-18T06:51:59.3939461Z Resolved Java 8.0.372+7 from tool-cache
+2023-07-18T06:51:59.3939840Z Setting Java 8.0.372+7 as the default
+2023-07-18T06:51:59.3961234Z Creating toolchains.xml for JDK version 8 from temurin
+2023-07-18T06:51:59.4064973Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-18T06:51:59.4065826Z 
+2023-07-18T06:51:59.4066252Z Java configuration:
+2023-07-18T06:51:59.4066542Z   Distribution: temurin
+2023-07-18T06:51:59.4068461Z   Version: 8.0.372+7
+2023-07-18T06:51:59.4069093Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4069607Z 
+2023-07-18T06:51:59.4070754Z ##[endgroup]
+2023-07-18T06:51:59.4094741Z Creating settings.xml with server-id: github
+2023-07-18T06:51:59.4112745Z Writing to /home/runner/.m2/settings.xml
+2023-07-18T06:51:59.4288466Z ##[group]Run java -version
+2023-07-18T06:51:59.4288923Z [36;1mjava -version[0m
+2023-07-18T06:51:59.4347270Z shell: /usr/bin/bash -e {0}
+2023-07-18T06:51:59.4347727Z env:
+2023-07-18T06:51:59.4348164Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4348682Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4349109Z ##[endgroup]
+2023-07-18T06:51:59.5802528Z openjdk version "1.8.0_372"
+2023-07-18T06:51:59.5803901Z OpenJDK Runtime Environment (Temurin)(build 1.8.0_372-b07)
+2023-07-18T06:51:59.5811017Z OpenJDK 64-Bit Server VM (Temurin)(build 25.372-b07, mixed mode)
+2023-07-18T06:51:59.5882892Z ##[group]Run mvn --no-transfer-progress -B clean verify animal-sniffer:check
+2023-07-18T06:51:59.5883534Z [36;1mmvn --no-transfer-progress -B clean verify animal-sniffer:check[0m
+2023-07-18T06:51:59.5937671Z shell: /usr/bin/bash -e {0}
+2023-07-18T06:51:59.5938028Z env:
+2023-07-18T06:51:59.5938475Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.5939138Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.5939520Z ##[endgroup]
+2023-07-18T06:52:01.1160537Z [INFO] Scanning for projects...
+2023-07-18T06:52:04.1022726Z [INFO] 
+2023-07-18T06:52:04.1024472Z [INFO] ----------------< org.scoverage:scoverage-maven-plugin >----------------
+2023-07-18T06:52:04.1025363Z [INFO] Building SCoverage Maven Plugin 1.4.12-SNAPSHOT
+2023-07-18T06:52:04.1026074Z [INFO]   from pom.xml
+2023-07-18T06:52:04.1026815Z [INFO] ----------------------------[ maven-plugin ]----------------------------
+2023-07-18T06:52:06.5269082Z [INFO] 
+2023-07-18T06:52:06.5272233Z [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ scoverage-maven-plugin ---
+2023-07-18T06:52:06.9297236Z [INFO] 
+2023-07-18T06:52:06.9301081Z [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven) @ scoverage-maven-plugin ---
+2023-07-18T06:52:08.1812593Z [INFO] 
+2023-07-18T06:52:08.1815317Z [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-java) @ scoverage-maven-plugin ---
+2023-07-18T06:52:08.1868518Z [INFO] 
+2023-07-18T06:52:08.1870565Z [INFO] --- maven-plugin-plugin:3.6.0:helpmojo (help-goal) @ scoverage-maven-plugin ---
+2023-07-18T06:52:10.3180455Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-07-18T06:52:10.8506678Z [INFO] java-annotations mojo extractor found 0 mojo descriptor.
+2023-07-18T06:52:10.8830683Z [INFO] 
+2023-07-18T06:52:10.8831660Z [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ scoverage-maven-plugin ---
+2023-07-18T06:52:11.2158766Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-07-18T06:52:11.2197654Z [INFO] Copying 2 resources
+2023-07-18T06:52:11.2288675Z [INFO] 
+2023-07-18T06:52:11.2290770Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ scoverage-maven-plugin ---
+2023-07-18T06:52:11.5962447Z [INFO] Changes detected - recompiling the module! :dependency
+2023-07-18T06:52:11.5994662Z [INFO] Compiling 13 source files with javac [debug target 1.8] to target/classes
+2023-07-18T06:52:12.4844869Z [INFO] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoveragePreCompileMojo.java: /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoveragePreCompileMojo.java uses unchecked or unsafe operations.
+2023-07-18T06:52:12.4846383Z [INFO] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoveragePreCompileMojo.java: Recompile with -Xlint:unchecked for details.
+2023-07-18T06:52:12.4847294Z [INFO] -------------------------------------------------------------
+2023-07-18T06:52:12.4848086Z [ERROR] COMPILATION ERROR : 
+2023-07-18T06:52:12.4848724Z [INFO] -------------------------------------------------------------
+2023-07-18T06:52:12.4849667Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[32,61] package org.apache.maven.doxia.module.xhtml.decoration.render does not exist
+2023-07-18T06:52:12.4850687Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[385,13] cannot find symbol
+2023-07-18T06:52:12.4851157Z   symbol:   class RenderingContext
+2023-07-18T06:52:12.4851511Z   location: class org.scoverage.plugin.SCoverageReportMojo
+2023-07-18T06:52:12.4852229Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[385,44] cannot find symbol
+2023-07-18T06:52:12.4853292Z   symbol:   class RenderingContext
+2023-07-18T06:52:12.4853634Z   location: class org.scoverage.plugin.SCoverageReportMojo
+2023-07-18T06:52:12.4853950Z [INFO] 3 errors 
+2023-07-18T06:52:12.4854332Z [INFO] -------------------------------------------------------------
+2023-07-18T06:52:12.4862035Z [INFO] ------------------------------------------------------------------------
+2023-07-18T06:52:12.4873634Z [INFO] BUILD FAILURE
+2023-07-18T06:52:12.4874155Z [INFO] ------------------------------------------------------------------------
+2023-07-18T06:52:12.4880889Z [INFO] Total time:  11.410 s
+2023-07-18T06:52:12.4882258Z [INFO] Finished at: 2023-07-18T06:52:12Z
+2023-07-18T06:52:12.4882881Z [INFO] ------------------------------------------------------------------------
+2023-07-18T06:52:12.4892491Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project scoverage-maven-plugin: Compilation failure: Compilation failure: 
+2023-07-18T06:52:12.4894890Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[32,61] package org.apache.maven.doxia.module.xhtml.decoration.render does not exist
+2023-07-18T06:52:12.4897122Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[385,13] cannot find symbol
+2023-07-18T06:52:12.4898708Z [ERROR]   symbol:   class RenderingContext
+2023-07-18T06:52:12.4900177Z [ERROR]   location: class org.scoverage.plugin.SCoverageReportMojo
+2023-07-18T06:52:12.4902069Z [ERROR] /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin/src/main/java/org/scoverage/plugin/SCoverageReportMojo.java:[385,44] cannot find symbol
+2023-07-18T06:52:12.4903596Z [ERROR]   symbol:   class RenderingContext
+2023-07-18T06:52:12.4905073Z [ERROR]   location: class org.scoverage.plugin.SCoverageReportMojo
+2023-07-18T06:52:12.4906675Z [ERROR] -> [Help 1]
+2023-07-18T06:52:12.4908105Z [ERROR] 
+2023-07-18T06:52:12.4909832Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-07-18T06:52:12.4911525Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-18T06:52:12.4912958Z [ERROR] 
+2023-07-18T06:52:12.4914367Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-18T06:52:12.4916441Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-18T06:52:12.5138202Z ##[error]Process completed with exit code 1.
+2023-07-18T06:52:12.5216733Z Post job cleanup.
+2023-07-18T06:52:12.7008294Z Post job cleanup.
+2023-07-18T06:52:12.8057908Z [command]/usr/bin/git version
+2023-07-18T06:52:12.8104724Z git version 2.41.0
+2023-07-18T06:52:12.8147731Z Temporarily overriding HOME='/home/runner/work/_temp/3bea5a9f-598c-42c7-81d8-04c53b8c25c6' before making global git config changes
+2023-07-18T06:52:12.8148831Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:52:12.8154627Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:52:12.8196424Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:52:12.8232821Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-18T06:52:12.8473561Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:52:12.8491892Z http.https://github.com/.extraheader
+2023-07-18T06:52:12.8511784Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-18T06:52:12.8557636Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-18T06:52:12.9004206Z Cleaning up orphan processes
+
+2023-07-18T06:52:18.8265987Z Cleaning up orphan processes
+
+2023-07-18T06:52:12.9495345Z Post job cleanup.
+
+2023-07-18T06:51:50.9589085Z ##[section]Starting: Prepare job build
+2023-07-18T06:51:50.9592695Z Evaluating strategy
+2023-07-18T06:51:50.9605552Z Creating job '_8_ubuntu-latest'
+2023-07-18T06:51:50.9609984Z Evaluating timeout
+2023-07-18T06:51:50.9610067Z Evaluating cancel timeout
+2023-07-18T06:51:50.9610096Z Evaluating continue on error
+2023-07-18T06:51:50.9610121Z Evaluating target
+2023-07-18T06:51:50.9611448Z Evaluating: matrix.os
+2023-07-18T06:51:50.9611548Z ##[debug]Evaluating Index:
+2023-07-18T06:51:50.9611596Z ##[debug]..Evaluating matrix:
+2023-07-18T06:51:50.9611639Z ##[debug]..=> Object
+2023-07-18T06:51:50.9611672Z ##[debug]..Evaluating String:
+2023-07-18T06:51:50.9611704Z ##[debug]..=> 'os'
+2023-07-18T06:51:50.9611756Z ##[debug]=> 'ubuntu-latest'
+2023-07-18T06:51:50.9611788Z Result: 'ubuntu-latest'
+2023-07-18T06:51:50.9612157Z Creating job '_8_windows-latest'
+2023-07-18T06:51:50.9617840Z Evaluating timeout
+2023-07-18T06:51:50.9617938Z Evaluating cancel timeout
+2023-07-18T06:51:50.9617982Z Evaluating continue on error
+2023-07-18T06:51:50.9618030Z Evaluating target
+2023-07-18T06:51:50.9618864Z Evaluating: matrix.os
+2023-07-18T06:51:50.9618926Z ##[debug]Evaluating Index:
+2023-07-18T06:51:50.9618994Z ##[debug]..Evaluating matrix:
+2023-07-18T06:51:50.9619052Z ##[debug]..=> Object
+2023-07-18T06:51:50.9619096Z ##[debug]..Evaluating String:
+2023-07-18T06:51:50.9619321Z ##[debug]..=> 'os'
+2023-07-18T06:51:50.9619379Z ##[debug]=> 'windows-latest'
+2023-07-18T06:51:50.9619422Z Result: 'windows-latest'
+2023-07-18T06:51:50.9620426Z Creating job '_17_ubuntu-latest'
+2023-07-18T06:51:50.9626226Z Evaluating timeout
+2023-07-18T06:51:50.9626307Z Evaluating cancel timeout
+2023-07-18T06:51:50.9626344Z Evaluating continue on error
+2023-07-18T06:51:50.9626389Z Evaluating target
+2023-07-18T06:51:50.9627104Z Evaluating: matrix.os
+2023-07-18T06:51:50.9627150Z ##[debug]Evaluating Index:
+2023-07-18T06:51:50.9627191Z ##[debug]..Evaluating matrix:
+2023-07-18T06:51:50.9627248Z ##[debug]..=> Object
+2023-07-18T06:51:50.9627291Z ##[debug]..Evaluating String:
+2023-07-18T06:51:50.9627338Z ##[debug]..=> 'os'
+2023-07-18T06:51:50.9627412Z ##[debug]=> 'ubuntu-latest'
+2023-07-18T06:51:50.9627459Z Result: 'ubuntu-latest'
+2023-07-18T06:51:50.9628187Z Creating job '_17_windows-latest'
+2023-07-18T06:51:50.9636082Z Evaluating timeout
+2023-07-18T06:51:50.9636183Z Evaluating cancel timeout
+2023-07-18T06:51:50.9636230Z Evaluating continue on error
+2023-07-18T06:51:50.9636277Z Evaluating target
+2023-07-18T06:51:50.9637056Z Evaluating: matrix.os
+2023-07-18T06:51:50.9637110Z ##[debug]Evaluating Index:
+2023-07-18T06:51:50.9637316Z ##[debug]..Evaluating matrix:
+2023-07-18T06:51:50.9637376Z ##[debug]..=> Object
+2023-07-18T06:51:50.9637468Z ##[debug]..Evaluating String:
+2023-07-18T06:51:50.9637519Z ##[debug]..=> 'os'
+2023-07-18T06:51:50.9637573Z ##[debug]=> 'windows-latest'
+2023-07-18T06:51:50.9637624Z Result: 'windows-latest'
+2023-07-18T06:51:50.9640350Z ##[section]Finishing: Prepare job build
+
+2023-07-18T06:51:57.4025777Z Current runner version: '2.306.0'
+2023-07-18T06:51:57.4053898Z ##[group]Operating System
+2023-07-18T06:51:57.4054504Z Ubuntu
+2023-07-18T06:51:57.4054765Z 22.04.2
+2023-07-18T06:51:57.4055163Z LTS
+2023-07-18T06:51:57.4055504Z ##[endgroup]
+2023-07-18T06:51:57.4055799Z ##[group]Runner Image
+2023-07-18T06:51:57.4056186Z Image: ubuntu-22.04
+2023-07-18T06:51:57.4056569Z Version: 20230710.1.0
+2023-07-18T06:51:57.4057109Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230710.1/images/linux/Ubuntu2204-Readme.md
+2023-07-18T06:51:57.4057729Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230710.1
+2023-07-18T06:51:57.4058215Z ##[endgroup]
+2023-07-18T06:51:57.4058574Z ##[group]Runner Image Provisioner
+2023-07-18T06:51:57.4058914Z 2.0.238.1
+2023-07-18T06:51:57.4059243Z ##[endgroup]
+2023-07-18T06:51:57.4060270Z ##[group]GITHUB_TOKEN Permissions
+2023-07-18T06:51:57.4060916Z Actions: read
+2023-07-18T06:51:57.4061247Z Checks: read
+2023-07-18T06:51:57.4061579Z Contents: read
+2023-07-18T06:51:57.4062205Z Deployments: read
+2023-07-18T06:51:57.4062588Z Discussions: read
+2023-07-18T06:51:57.4062968Z Issues: read
+2023-07-18T06:51:57.4063255Z Metadata: read
+2023-07-18T06:51:57.4063586Z Packages: read
+2023-07-18T06:51:57.4063946Z Pages: read
+2023-07-18T06:51:57.4064240Z PullRequests: read
+2023-07-18T06:51:57.4064627Z RepositoryProjects: read
+2023-07-18T06:51:57.4065007Z SecurityEvents: read
+2023-07-18T06:51:57.4065307Z Statuses: read
+2023-07-18T06:51:57.4065664Z ##[endgroup]
+2023-07-18T06:51:57.4069437Z Secret source: Dependabot
+2023-07-18T06:51:57.4069932Z Prepare workflow directory
+2023-07-18T06:51:57.4815551Z Prepare all required actions
+2023-07-18T06:51:57.5007435Z Getting action download info
+2023-07-18T06:51:57.6741072Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-07-18T06:51:58.0071269Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-07-18T06:51:58.3833000Z Complete job name: build (8, ubuntu-latest)
+
+2023-07-18T06:51:59.4288443Z ##[group]Run java -version
+2023-07-18T06:51:59.4288918Z [36;1mjava -version[0m
+2023-07-18T06:51:59.4347252Z shell: /usr/bin/bash -e {0}
+2023-07-18T06:51:59.4347721Z env:
+2023-07-18T06:51:59.4348158Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4348676Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4349104Z ##[endgroup]
+2023-07-18T06:51:59.5802465Z openjdk version "1.8.0_372"
+2023-07-18T06:51:59.5803891Z OpenJDK Runtime Environment (Temurin)(build 1.8.0_372-b07)
+2023-07-18T06:51:59.5810980Z OpenJDK 64-Bit Server VM (Temurin)(build 25.372-b07, mixed mode)
+
+2023-07-18T06:51:59.1645045Z ##[group]Run actions/setup-java@v3
+2023-07-18T06:51:59.1645357Z with:
+2023-07-18T06:51:59.1645606Z   distribution: temurin
+2023-07-18T06:51:59.1645879Z   java-version: 8
+2023-07-18T06:51:59.1646132Z   java-package: jdk
+2023-07-18T06:51:59.1646408Z   check-latest: false
+2023-07-18T06:51:59.1646674Z   server-id: github
+2023-07-18T06:51:59.1646944Z   server-username: GITHUB_ACTOR
+2023-07-18T06:51:59.1647276Z   server-password: GITHUB_TOKEN
+2023-07-18T06:51:59.1647593Z   overwrite-settings: true
+2023-07-18T06:51:59.1647864Z   job-status: success
+2023-07-18T06:51:59.1648324Z   token: ***
+2023-07-18T06:51:59.1648564Z ##[endgroup]
+2023-07-18T06:51:59.3880163Z ##[group]Installed distributions
+2023-07-18T06:51:59.3939436Z Resolved Java 8.0.372+7 from tool-cache
+2023-07-18T06:51:59.3939835Z Setting Java 8.0.372+7 as the default
+2023-07-18T06:51:59.3961223Z Creating toolchains.xml for JDK version 8 from temurin
+2023-07-18T06:51:59.4064952Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-18T06:51:59.4065727Z 
+2023-07-18T06:51:59.4066246Z Java configuration:
+2023-07-18T06:51:59.4066537Z   Distribution: temurin
+2023-07-18T06:51:59.4068457Z   Version: 8.0.372+7
+2023-07-18T06:51:59.4069088Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-07-18T06:51:59.4069602Z 
+2023-07-18T06:51:59.4070747Z ##[endgroup]
+2023-07-18T06:51:59.4094715Z Creating settings.xml with server-id: github
+2023-07-18T06:51:59.4112725Z Writing to /home/runner/.m2/settings.xml
+
+2023-07-18T06:52:12.7008279Z Post job cleanup.
+2023-07-18T06:52:12.8057872Z [command]/usr/bin/git version
+2023-07-18T06:52:12.8104698Z git version 2.41.0
+2023-07-18T06:52:12.8147712Z Temporarily overriding HOME='/home/runner/work/_temp/3bea5a9f-598c-42c7-81d8-04c53b8c25c6' before making global git config changes
+2023-07-18T06:52:12.8148825Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-18T06:52:12.8154620Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/scoverage-maven-plugin/scoverage-maven-plugin
+2023-07-18T06:52:12.8196405Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-18T06:52:12.8232805Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-18T06:52:12.8473441Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-18T06:52:12.8491871Z http.https://github.com/.extraheader
+2023-07-18T06:52:12.8511763Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-18T06:52:12.8557588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-07-18T06:52:16.7650304Z Post job cleanup.

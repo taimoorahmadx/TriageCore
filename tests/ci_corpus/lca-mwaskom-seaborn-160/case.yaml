@@ -1,0 +1,74 @@
+repo: mwaskom/seaborn
+run_id: '160'
+head_sha: 785242b646b54a33547ff1298cb945a05c24aa4c
+run_attempts: []
+commits:
+- sha: 785242b646b54a33547ff1298cb945a05c24aa4c
+  author: mwaskom
+  files:
+  - seaborn/relational.py
+  - tests/test_relational.py
+- sha: 595dba7e3a6c9e38768ea2f516b60311a8a1ac8c
+  author: mwaskom
+  files:
+  - seaborn/categorical.py
+  - seaborn/relational.py
+  - tests/test_categorical.py
+  - tests/test_relational.py
+- sha: c4854df4e1533ecb64dbaf09069507a7286220ba
+  author: mwaskom
+  files:
+  - seaborn/_statistics.py
+  - seaborn/_stats/aggregation.py
+  - seaborn/categorical.py
+  - seaborn/relational.py
+  - tests/test_categorical.py
+  - tests/test_relational.py
+  - tests/test_statistics.py
+- sha: 2bb945c01ad0c18f4c9faa516f0a75e7b89043ec
+  author: mwaskom
+  files:
+  - doc/_docstrings/objects.Est.ipynb
+  - seaborn/_statistics.py
+  - seaborn/_stats/aggregation.py
+  - tests/_stats/test_aggregation.py
+  - tests/test_statistics.py
+- sha: f0136337211854b2e63e5d26bee8b12ab60e0f42
+  author: neuronflow
+  files:
+  - README.md
+- sha: 908ca95137c0e73bb6ac9ce9a8051577b6453138
+  author: eliotfinch
+  files:
+  - doc/_docstrings/histplot.ipynb
+- sha: e9b5baa9e7e09665207efaf24405f0d417ef5649
+  author: yvonnefroehlich
+  files:
+  - doc/_docstrings/barplot.ipynb
+- sha: 7e3da70b6b332673aa5f74cc8e03658d0ff990b0
+  author: MaozGelbart
+  files:
+  - pyproject.toml
+  - seaborn/_compat.py
+  - seaborn/_core/plot.py
+  - seaborn/_core/scales.py
+  - seaborn/_core/subplots.py
+  - seaborn/_marks/bar.py
+  - tests/_core/test_plot.py
+  - tests/_core/test_properties.py
+  - tests/_core/test_scales.py
+  - tests/test_regression.py
+- sha: 9a2196d42a53272e135809f1b042130d0875739a
+  author: nokoshu
+  files:
+  - seaborn/_base.py
+  - tests/test_relational.py
+- sha: d4b8de81f74a153bb3c15af760d956d32aad980b
+  author: mwaskom
+  files:
+  - .github/CONTRIBUTING.md
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

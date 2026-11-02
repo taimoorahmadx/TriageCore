@@ -1,0 +1,9 @@
+===== Clang (ASAN_LSAN)/system.txt =====
+2026-11-02T04:59:48.2150000Z Evaluating Linux-LSan.if
+2026-11-02T04:59:48.2150000Z Evaluating: success()
+2026-11-02T04:59:48.2150000Z Result: true
+2026-11-02T04:59:48.4980000Z Job is waiting for a hosted runner to come online.
+2026-11-02T04:59:48.4980000Z Job is about to start running on the hosted runner: GitHub Actions 1001134455
+2026-11-02T04:59:48.4500000Z Requested labels: ubuntu-24.04
+2026-11-02T04:59:48.4500000Z Job defined at: pandas-dev/pandas/.github/workflows/unit-tests.yml@refs/pull/71823/merge
+2026-11-02T04:59:48.4500000Z Waiting for a runner to pick up this job...

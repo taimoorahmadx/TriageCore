@@ -1,0 +1,19 @@
+===== Run codespell/5_🏃 Run the check (codespell).txt =====
+##[group]Run pre-commit run --hook-stage manual codespell --all-files --config .github/pre-commit-config.yaml
+[36;1mpre-commit run --hook-stage manual codespell --all-files --config .github/pre-commit-config.yaml[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
+codespell................................................................Failed
+- hook id: codespell
+- exit code: 65
+
+tests/repositories/test_remove_repository.py:23: instad ==> instead
+
+##[error]Process completed with exit code 1.

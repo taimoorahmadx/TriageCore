@@ -1,0 +1,809 @@
+2023-08-07T20:10:19.5261473Z Post job cleanup.
+2023-08-07T20:10:19.8077553Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-08-07T20:10:19.8374959Z git version 2.41.0.windows.3
+2023-08-07T20:10:19.8453884Z Temporarily overriding HOME='D:\a\_temp\97176579-f102-4439-8ef5-918bd5674df8' before making global git config changes
+2023-08-07T20:10:19.8454656Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:19.8464834Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-ssh\jcabi-ssh
+2023-08-07T20:10:19.8777780Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:19.9070023Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-08-07T20:10:20.4003157Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:20.4267277Z http.https://github.com/.extraheader
+2023-08-07T20:10:20.4303970Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T20:10:20.4611847Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+
+2023-08-07T20:09:57.1931950Z Current runner version: '2.307.1'
+2023-08-07T20:09:57.1959423Z ##[group]Operating System
+2023-08-07T20:09:57.1959939Z Ubuntu
+2023-08-07T20:09:57.1960215Z 20.04.6
+2023-08-07T20:09:57.1960501Z LTS
+2023-08-07T20:09:57.1960791Z ##[endgroup]
+2023-08-07T20:09:57.1961097Z ##[group]Runner Image
+2023-08-07T20:09:57.1961441Z Image: ubuntu-20.04
+2023-08-07T20:09:57.1961719Z Version: 20230728.3.0
+2023-08-07T20:09:57.1962237Z Included Software: https://github.com/actions/runner-images/blob/ubuntu20/20230728.3/images/linux/Ubuntu2004-Readme.md
+2023-08-07T20:09:57.1962887Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu20%2F20230728.3
+2023-08-07T20:09:57.1963265Z ##[endgroup]
+2023-08-07T20:09:57.1963599Z ##[group]Runner Image Provisioner
+2023-08-07T20:09:57.1963935Z 2.0.264.1
+2023-08-07T20:09:57.1964250Z ##[endgroup]
+2023-08-07T20:09:57.1965150Z ##[group]GITHUB_TOKEN Permissions
+2023-08-07T20:09:57.1965737Z Actions: write
+2023-08-07T20:09:57.1966037Z Checks: write
+2023-08-07T20:09:57.1966363Z Contents: write
+2023-08-07T20:09:57.1966911Z Deployments: write
+2023-08-07T20:09:57.1967230Z Discussions: write
+2023-08-07T20:09:57.1967535Z Issues: write
+2023-08-07T20:09:57.1967830Z Metadata: read
+2023-08-07T20:09:57.1968143Z Packages: write
+2023-08-07T20:09:57.1968398Z Pages: write
+2023-08-07T20:09:57.1968725Z PullRequests: write
+2023-08-07T20:09:57.1969092Z RepositoryProjects: write
+2023-08-07T20:09:57.1969396Z SecurityEvents: write
+2023-08-07T20:09:57.1969725Z Statuses: write
+2023-08-07T20:09:57.1970022Z ##[endgroup]
+2023-08-07T20:09:57.1973510Z Secret source: Actions
+2023-08-07T20:09:57.1974079Z Prepare workflow directory
+2023-08-07T20:09:57.2731410Z Prepare all required actions
+2023-08-07T20:09:57.2921759Z Getting action download info
+2023-08-07T20:09:57.7177517Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-07T20:09:58.6136528Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-07T20:09:59.4579425Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-07T20:10:00.4819740Z Complete job name: mvn (ubuntu-20.04, 17)
+
+2023-08-07T20:10:20.9674934Z Cleaning up orphan processes
+
+2023-08-07T20:09:51.1622988Z Requested labels: windows-2022
+2023-08-07T20:09:51.1623337Z Job defined at: jcabi/jcabi-ssh/.github/workflows/mvn.yml@refs/pull/144/merge
+2023-08-07T20:09:51.1623475Z Waiting for a runner to pick up this job...
+2023-08-07T20:09:53.9970153Z Job is waiting for a hosted runner to come online.
+2023-08-07T20:10:17.1183473Z Job is cancelled before starting.
+
+2023-08-07T20:10:14.3884291Z Post job cleanup.
+
+2023-08-07T20:10:00.4587190Z Current runner version: '2.307.1'
+2023-08-07T20:10:00.4820780Z ##[group]Operating System
+2023-08-07T20:10:00.4821550Z macOS
+2023-08-07T20:10:00.4821800Z 12.6.7
+2023-08-07T20:10:00.4822030Z 21G651
+2023-08-07T20:10:00.4822280Z ##[endgroup]
+2023-08-07T20:10:00.4822540Z ##[group]Runner Image
+2023-08-07T20:10:00.4822850Z Image: macos-12
+2023-08-07T20:10:00.4823130Z Version: 20230709.1
+2023-08-07T20:10:00.4823610Z Included Software: https://github.com/actions/runner-images/blob/macOS-12/20230709.1/images/macos/macos-12-Readme.md
+2023-08-07T20:10:00.4824210Z Image Release: https://github.com/actions/runner-images/releases/tag/macOS-12%2F20230709.1
+2023-08-07T20:10:00.4824610Z ##[endgroup]
+2023-08-07T20:10:00.4845030Z ##[group]Runner Image Provisioner
+2023-08-07T20:10:00.4845420Z 2.0.264.1
+2023-08-07T20:10:00.4845670Z ##[endgroup]
+2023-08-07T20:10:00.4846740Z ##[group]GITHUB_TOKEN Permissions
+2023-08-07T20:10:00.4847550Z Actions: write
+2023-08-07T20:10:00.4847820Z Checks: write
+2023-08-07T20:10:00.4848090Z Contents: write
+2023-08-07T20:10:00.4848750Z Deployments: write
+2023-08-07T20:10:00.4849060Z Discussions: write
+2023-08-07T20:10:00.4849330Z Issues: write
+2023-08-07T20:10:00.4850240Z Metadata: read
+2023-08-07T20:10:00.4850580Z Packages: write
+2023-08-07T20:10:00.4852680Z Pages: write
+2023-08-07T20:10:00.4853000Z PullRequests: write
+2023-08-07T20:10:00.4853770Z RepositoryProjects: write
+2023-08-07T20:10:00.4854130Z SecurityEvents: write
+2023-08-07T20:10:00.4855150Z Statuses: write
+2023-08-07T20:10:00.4855860Z ##[endgroup]
+2023-08-07T20:10:00.4863600Z Secret source: Actions
+2023-08-07T20:10:00.4864700Z Prepare workflow directory
+2023-08-07T20:10:00.8534100Z Prepare all required actions
+2023-08-07T20:10:00.8794250Z Getting action download info
+2023-08-07T20:10:01.1366640Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-07T20:10:03.5826150Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-07T20:10:05.2474560Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-07T20:10:07.0083130Z Complete job name: mvn (macos-12, 17)
+
+2023-08-07T20:10:18.2786390Z Post job cleanup.
+
+2023-08-07T20:10:07.8754670Z ##[group]Run java -version
+2023-08-07T20:10:07.8755202Z [36;1mjava -version[0m
+2023-08-07T20:10:07.8824478Z shell: /usr/bin/bash -e {0}
+2023-08-07T20:10:07.8824909Z env:
+2023-08-07T20:10:07.8825335Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-07T20:10:07.8826053Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-07T20:10:07.8826581Z ##[endgroup]
+2023-08-07T20:10:08.1320098Z openjdk version "11.0.19" 2023-04-18
+2023-08-07T20:10:08.1325125Z OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+2023-08-07T20:10:08.1329496Z OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+
+2023-08-07T20:10:02.4752350Z Current runner version: '2.307.1'
+2023-08-07T20:10:02.4800020Z ##[group]Operating System
+2023-08-07T20:10:02.4800870Z macOS
+2023-08-07T20:10:02.4801100Z 12.6.7
+2023-08-07T20:10:02.4801290Z 21G651
+2023-08-07T20:10:02.4801510Z ##[endgroup]
+2023-08-07T20:10:02.4801750Z ##[group]Runner Image
+2023-08-07T20:10:02.4802010Z Image: macos-12
+2023-08-07T20:10:02.4802250Z Version: 20230709.1
+2023-08-07T20:10:02.4802680Z Included Software: https://github.com/actions/runner-images/blob/macOS-12/20230709.1/images/macos/macos-12-Readme.md
+2023-08-07T20:10:02.4803220Z Image Release: https://github.com/actions/runner-images/releases/tag/macOS-12%2F20230709.1
+2023-08-07T20:10:02.4803590Z ##[endgroup]
+2023-08-07T20:10:02.4803860Z ##[group]Runner Image Provisioner
+2023-08-07T20:10:02.4804120Z 2.0.264.1
+2023-08-07T20:10:02.4804320Z ##[endgroup]
+2023-08-07T20:10:02.4805210Z ##[group]GITHUB_TOKEN Permissions
+2023-08-07T20:10:02.4805830Z Actions: write
+2023-08-07T20:10:02.4806080Z Checks: write
+2023-08-07T20:10:02.4806310Z Contents: write
+2023-08-07T20:10:02.4806800Z Deployments: write
+2023-08-07T20:10:02.4807050Z Discussions: write
+2023-08-07T20:10:02.4807280Z Issues: write
+2023-08-07T20:10:02.4807510Z Metadata: read
+2023-08-07T20:10:02.4807750Z Packages: write
+2023-08-07T20:10:02.4808500Z Pages: write
+2023-08-07T20:10:02.4808800Z PullRequests: write
+2023-08-07T20:10:02.4809090Z RepositoryProjects: write
+2023-08-07T20:10:02.4809360Z SecurityEvents: write
+2023-08-07T20:10:02.4809610Z Statuses: write
+2023-08-07T20:10:02.4810090Z ##[endgroup]
+2023-08-07T20:10:02.4816140Z Secret source: Actions
+2023-08-07T20:10:02.4816640Z Prepare workflow directory
+2023-08-07T20:10:02.6492100Z Prepare all required actions
+2023-08-07T20:10:02.7229920Z Getting action download info
+2023-08-07T20:10:03.0636200Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-07T20:10:04.3505740Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-07T20:10:05.6624430Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-07T20:10:06.8571200Z Complete job name: mvn (macos-12, 11)
+
+2023-08-07T20:10:19.5940180Z Cleaning up orphan processes
+
+2023-08-07T20:10:03.0676972Z ##[group]Run actions/cache@v3
+2023-08-07T20:10:03.0677279Z with:
+2023-08-07T20:10:03.0677516Z   path: ~/.m2/repository
+2023-08-07T20:10:03.0677916Z   key: Linux-jdk-11-maven-057706c2caacc34b4c3bcf4297a5560210323452d74c67c3b8b14050d54bae07
+2023-08-07T20:10:03.0678347Z   restore-keys: Linux-jdk-11-maven-
+
+2023-08-07T20:10:03.0678647Z   enableCrossOsArchive: false
+2023-08-07T20:10:03.0678912Z   fail-on-cache-miss: false
+2023-08-07T20:10:03.0679199Z   lookup-only: false
+2023-08-07T20:10:03.0679444Z env:
+2023-08-07T20:10:03.0679740Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-07T20:10:03.0680158Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-07T20:10:03.0680479Z ##[endgroup]
+2023-08-07T20:10:04.9754234Z Received 0 of 123348631 (0.0%), 0.0 MBs/sec
+2023-08-07T20:10:05.9772868Z Received 46137344 of 123348631 (37.4%), 22.0 MBs/sec
+2023-08-07T20:10:06.9867018Z Received 109051904 of 123348631 (88.4%), 34.5 MBs/sec
+2023-08-07T20:10:07.3104855Z Received 123348631 of 123348631 (100.0%), 35.3 MBs/sec
+2023-08-07T20:10:07.3109633Z Cache Size: ~118 MB (123348631 B)
+2023-08-07T20:10:07.3178268Z [command]/usr/bin/tar -xf /home/runner/work/_temp/fef224c2-01a3-4b40-a9b9-2fb7b95081ef/cache.tzst -P -C /home/runner/work/jcabi-ssh/jcabi-ssh --use-compress-program unzstd
+2023-08-07T20:10:07.7908184Z Cache restored successfully
+2023-08-07T20:10:07.8550386Z Cache restored from key: Linux-jdk-11-maven-cbb5151572868b9c740e99a1e7edf247272f3ec89a2bc8b6989bd1f28e0d49cb
+
+2023-08-07T20:10:13.8795883Z ##[group]Run actions/setup-java@v3
+2023-08-07T20:10:13.8796431Z with:
+2023-08-07T20:10:13.8796743Z   distribution: temurin
+2023-08-07T20:10:13.8797022Z   java-version: 17
+2023-08-07T20:10:13.8797575Z   java-package: jdk
+2023-08-07T20:10:13.8797936Z   check-latest: false
+2023-08-07T20:10:13.8798206Z   server-id: github
+2023-08-07T20:10:13.8798540Z   server-username: GITHUB_ACTOR
+2023-08-07T20:10:13.8798942Z   server-password: GITHUB_TOKEN
+2023-08-07T20:10:13.8799263Z   overwrite-settings: true
+2023-08-07T20:10:13.8799614Z   job-status: success
+2023-08-07T20:10:13.8800221Z   token: ***
+2023-08-07T20:10:13.8800465Z ##[endgroup]
+2023-08-07T20:10:14.1958780Z ##[group]Installed distributions
+2023-08-07T20:10:14.2396299Z Resolved Java 17.0.8+7 from tool-cache
+2023-08-07T20:10:14.2397029Z Setting Java 17.0.8+7 as the default
+2023-08-07T20:10:14.2434148Z Creating toolchains.xml for JDK version 17 from temurin
+2023-08-07T20:10:14.2565895Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-08-07T20:10:14.2570502Z 
+2023-08-07T20:10:14.2570796Z Java configuration:
+2023-08-07T20:10:14.2571383Z   Distribution: temurin
+2023-08-07T20:10:14.2571975Z   Version: 17.0.8+7
+2023-08-07T20:10:14.2572843Z   Path: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.8-7\x64
+2023-08-07T20:10:14.2573201Z 
+2023-08-07T20:10:14.2573841Z ##[endgroup]
+2023-08-07T20:10:14.2629852Z Creating settings.xml with server-id: github
+2023-08-07T20:10:14.2630606Z Writing to C:\Users\runneradmin\.m2\settings.xml
+
+2023-08-07T20:10:19.1595202Z Post job cleanup.
+
+2023-08-07T20:10:18.9138140Z Post job cleanup.
+2023-08-07T20:10:19.1180950Z [command]/usr/local/bin/git version
+2023-08-07T20:10:19.1306270Z git version 2.41.0
+2023-08-07T20:10:19.1651850Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/eae8da12-d792-4d1a-b859-c8f0f0cb9aa1/.gitconfig'
+2023-08-07T20:10:19.1750580Z Temporarily overriding HOME='/Users/runner/work/_temp/eae8da12-d792-4d1a-b859-c8f0f0cb9aa1' before making global git config changes
+2023-08-07T20:10:19.1761500Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:19.1767050Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:19.1775900Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:19.1779400Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:19.3468480Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:19.3570070Z http.https://github.com/.extraheader
+2023-08-07T20:10:19.3875570Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T20:10:19.4122730Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-07T20:10:01.0825914Z ##[group]Run actions/checkout@v3
+2023-08-07T20:10:01.0826397Z with:
+2023-08-07T20:10:01.0826693Z   repository: jcabi/jcabi-ssh
+2023-08-07T20:10:01.0827513Z   token: ***
+2023-08-07T20:10:01.0827769Z   ssh-strict: true
+2023-08-07T20:10:01.0828079Z   persist-credentials: true
+2023-08-07T20:10:01.0828379Z   clean: true
+2023-08-07T20:10:01.0828698Z   sparse-checkout-cone-mode: true
+2023-08-07T20:10:01.0829025Z   fetch-depth: 1
+2023-08-07T20:10:01.0829285Z   lfs: false
+2023-08-07T20:10:01.0829539Z   submodules: false
+2023-08-07T20:10:01.0829842Z   set-safe-directory: true
+2023-08-07T20:10:01.0830141Z ##[endgroup]
+2023-08-07T20:10:01.5794109Z Syncing repository: jcabi/jcabi-ssh
+2023-08-07T20:10:01.5796262Z ##[group]Getting Git version info
+2023-08-07T20:10:01.5796832Z Working directory is '/home/runner/work/jcabi-ssh/jcabi-ssh'
+2023-08-07T20:10:01.5798861Z [command]/usr/bin/git version
+2023-08-07T20:10:01.6005281Z git version 2.41.0
+2023-08-07T20:10:01.6103373Z ##[endgroup]
+2023-08-07T20:10:01.6121033Z Temporarily overriding HOME='/home/runner/work/_temp/65f82805-e3b5-4ae1-9e92-9185d2d7854c' before making global git config changes
+2023-08-07T20:10:01.6121661Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:01.6122249Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:01.6143529Z Deleting the contents of '/home/runner/work/jcabi-ssh/jcabi-ssh'
+2023-08-07T20:10:01.6150999Z ##[group]Initializing the repository
+2023-08-07T20:10:01.6156076Z [command]/usr/bin/git init /home/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:01.6301982Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-07T20:10:01.6309096Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-07T20:10:01.6310463Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-07T20:10:01.6311369Z hint: 
+2023-08-07T20:10:01.6312344Z hint: 	git config --global init.defaultBranch <name>
+2023-08-07T20:10:01.6313268Z hint: 
+2023-08-07T20:10:01.6313992Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-07T20:10:01.6315085Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-07T20:10:01.6315891Z hint: 
+2023-08-07T20:10:01.6316736Z hint: 	git branch -m <name>
+2023-08-07T20:10:01.6317655Z Initialized empty Git repository in /home/runner/work/jcabi-ssh/jcabi-ssh/.git/
+2023-08-07T20:10:01.6331489Z [command]/usr/bin/git remote add origin https://github.com/jcabi/jcabi-ssh
+2023-08-07T20:10:01.6382427Z ##[endgroup]
+2023-08-07T20:10:01.6383851Z ##[group]Disabling automatic garbage collection
+2023-08-07T20:10:01.6387332Z [command]/usr/bin/git config --local gc.auto 0
+2023-08-07T20:10:01.6427645Z ##[endgroup]
+2023-08-07T20:10:01.6428493Z ##[group]Setting up auth
+2023-08-07T20:10:01.6436740Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:01.6474652Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:01.7052767Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:01.7098599Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-07T20:10:01.7397556Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-07T20:10:01.7452171Z ##[endgroup]
+2023-08-07T20:10:01.7453032Z ##[group]Fetching the repository
+2023-08-07T20:10:01.7464541Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1d662e1c73dafbde66b20bfc7c24fde04a465546:refs/remotes/pull/144/merge
+2023-08-07T20:10:02.4111144Z remote: Enumerating objects: 60, done.        
+2023-08-07T20:10:02.4119042Z remote: Counting objects:   1% (1/60)        
+2023-08-07T20:10:02.4119636Z remote: Counting objects:   3% (2/60)        
+2023-08-07T20:10:02.4121512Z remote: Counting objects:   5% (3/60)        
+2023-08-07T20:10:02.4121892Z remote: Counting objects:   6% (4/60)        
+2023-08-07T20:10:02.4127734Z remote: Counting objects:   8% (5/60)        
+2023-08-07T20:10:02.4128954Z remote: Counting objects:  10% (6/60)        
+2023-08-07T20:10:02.4129267Z remote: Counting objects:  11% (7/60)        
+2023-08-07T20:10:02.4129546Z remote: Counting objects:  13% (8/60)        
+[... 3856 lines removed by TriageCore ...]
+2023-08-07T20:10:21.5685881Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-07T20:10:21.5686703Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-08-07T20:10:21.5687480Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-08-07T20:10:21.5688088Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+2023-08-07T20:10:21.5688954Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-08-07T20:10:21.5691284Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-08-07T20:10:21.5692146Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-07T20:10:21.5693025Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-08-07T20:10:21.5693925Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-08-07T20:10:21.5694809Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-08-07T20:10:21.5695608Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-07T20:10:21.5696456Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-08-07T20:10:21.5697237Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-08-07T20:10:21.5697844Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+2023-08-07T20:10:21.5698693Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-08-07T20:10:21.5700153Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-08-07T20:10:21.5700977Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-07T20:10:21.5701992Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-08-07T20:10:21.5703312Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-08-07T20:10:21.5705044Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-08-07T20:10:21.5705966Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-07T20:10:21.5706730Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-08-07T20:10:21.5707454Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-08-07T20:10:21.5708351Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+2023-08-07T20:10:21.5709310Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+2023-08-07T20:10:21.5710128Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+2023-08-07T20:10:21.5710915Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+2023-08-07T20:10:21.5711660Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+2023-08-07T20:10:21.5712412Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+2023-08-07T20:10:21.5713359Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+2023-08-07T20:10:21.5714426Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+2023-08-07T20:10:21.5715247Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+2023-08-07T20:10:21.5715903Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+2023-08-07T20:10:21.5716493Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+2023-08-07T20:10:21.5717159Z 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+2023-08-07T20:10:21.5717824Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+2023-08-07T20:10:21.5718502Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+2023-08-07T20:10:21.5719285Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+2023-08-07T20:10:21.5720055Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+2023-08-07T20:10:21.5720924Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-07T20:10:21.5721877Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-07T20:10:21.5722439Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-07T20:10:21.5722997Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-07T20:10:21.5723555Z Caused by: com.jcraft.jsch.JSchException: Session.connect: java.io.IOException: End of IO Stream Read
+2023-08-07T20:10:21.5727682Z 	at com.jcraft.jsch.Session.connect(Session.java:548)
+2023-08-07T20:10:21.5728406Z 	at com.jcabi.ssh.SshByPassword.session(SshByPassword.java:101)
+2023-08-07T20:10:21.5728744Z 	... 75 more
+2023-08-07T20:10:21.5729051Z Caused by: java.io.IOException: End of IO Stream Read
+2023-08-07T20:10:21.5729407Z 	at com.jcraft.jsch.IO.getByte(IO.java:95)
+2023-08-07T20:10:21.5729772Z 	at com.jcraft.jsch.Session.read(Session.java:1123)
+2023-08-07T20:10:21.5730165Z 	at com.jcraft.jsch.Session.connect(Session.java:323)
+2023-08-07T20:10:21.5730458Z 	... 76 more
+2023-08-07T20:10:21.5733820Z 
+2023-08-07T20:10:21.9425176Z [INFO] 
+2023-08-07T20:10:21.9425637Z [INFO] Results:
+2023-08-07T20:10:21.9426032Z [INFO] 
+2023-08-07T20:10:21.9426512Z [ERROR] Errors: 
+2023-08-07T20:10:21.9428509Z [ERROR]   SshByPasswordTest.executesCommand:70 » IO com.jcraft.jsch.JSchException: Session.connect: java.io.IOException: End of IO Stream Read
+2023-08-07T20:10:21.9429521Z [ERROR]   SshTest.executeCommandOnServer:90 » NoClassDefFound org/apache/sshd/common/future/CancelOption
+2023-08-07T20:10:21.9430409Z [ERROR]   SshTest.executeCommandOnServerWithPrivateKey:124 » NoClassDefFound org/apache/sshd/common/future/CancelOption
+2023-08-07T20:10:21.9431094Z [INFO] 
+2023-08-07T20:10:21.9431409Z [ERROR] Tests run: 5, Failures: 0, Errors: 3, Skipped: 0
+2023-08-07T20:10:21.9431779Z [INFO] 
+2023-08-07T20:10:21.9486529Z [INFO] ------------------------------------------------------------------------
+2023-08-07T20:10:21.9490555Z [INFO] BUILD FAILURE
+2023-08-07T20:10:21.9491791Z [INFO] ------------------------------------------------------------------------
+2023-08-07T20:10:21.9494147Z [INFO] Total time:  11.412 s
+2023-08-07T20:10:21.9494823Z [INFO] Finished at: 2023-08-07T20:10:21Z
+2023-08-07T20:10:21.9495674Z [INFO] ------------------------------------------------------------------------
+2023-08-07T20:10:21.9496956Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project jcabi-ssh: 
+2023-08-07T20:10:21.9497598Z [ERROR] 
+2023-08-07T20:10:21.9498870Z [ERROR] Please refer to /home/runner/work/jcabi-ssh/jcabi-ssh/target/surefire-reports for the individual test results.
+2023-08-07T20:10:21.9499878Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-08-07T20:10:21.9500456Z [ERROR] -> [Help 1]
+2023-08-07T20:10:21.9594013Z org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project jcabi-ssh: 
+2023-08-07T20:10:21.9594604Z 
+2023-08-07T20:10:21.9595021Z Please refer to /home/runner/work/jcabi-ssh/jcabi-ssh/target/surefire-reports for the individual test results.
+2023-08-07T20:10:21.9595667Z Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-08-07T20:10:21.9596390Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:375)
+2023-08-07T20:10:21.9597017Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+2023-08-07T20:10:21.9597652Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-08-07T20:10:21.9598258Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-08-07T20:10:21.9599556Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-08-07T20:10:21.9600273Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-08-07T20:10:21.9601047Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-08-07T20:10:21.9601920Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-08-07T20:10:21.9602710Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-08-07T20:10:21.9603280Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-08-07T20:10:21.9604404Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-08-07T20:10:21.9604882Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-08-07T20:10:21.9605341Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-08-07T20:10:21.9605769Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-08-07T20:10:21.9606248Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-08-07T20:10:21.9606755Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-08-07T20:10:21.9607506Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-08-07T20:10:21.9608397Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-08-07T20:10:21.9608953Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-08-07T20:10:21.9609456Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-08-07T20:10:21.9610068Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-08-07T20:10:21.9610676Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-08-07T20:10:21.9611270Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-08-07T20:10:21.9611772Z Caused by: org.apache.maven.plugin.MojoFailureException: 
+2023-08-07T20:10:21.9612026Z 
+2023-08-07T20:10:21.9612489Z Please refer to /home/runner/work/jcabi-ssh/jcabi-ssh/target/surefire-reports for the individual test results.
+2023-08-07T20:10:21.9613127Z Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-08-07T20:10:21.9613682Z     at org.apache.maven.plugin.surefire.SurefireHelper.throwException (SurefireHelper.java:283)
+2023-08-07T20:10:21.9614334Z     at org.apache.maven.plugin.surefire.SurefireHelper.reportExecution (SurefireHelper.java:171)
+2023-08-07T20:10:21.9614980Z     at org.apache.maven.plugin.surefire.SurefirePlugin.handleSummary (SurefirePlugin.java:546)
+2023-08-07T20:10:21.9615752Z     at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked (AbstractSurefireMojo.java:1183)
+2023-08-07T20:10:21.9616531Z     at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute (AbstractSurefireMojo.java:931)
+2023-08-07T20:10:21.9617213Z     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+2023-08-07T20:10:21.9617860Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+2023-08-07T20:10:21.9618449Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+2023-08-07T20:10:21.9619036Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-08-07T20:10:21.9619627Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-08-07T20:10:21.9620206Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-08-07T20:10:21.9620880Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-08-07T20:10:21.9621639Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-08-07T20:10:21.9622457Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-08-07T20:10:21.9623463Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-08-07T20:10:21.9624019Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-08-07T20:10:21.9624482Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-08-07T20:10:21.9624940Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-08-07T20:10:21.9625382Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-08-07T20:10:21.9626173Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-08-07T20:10:21.9626561Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-08-07T20:10:21.9627022Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-08-07T20:10:21.9627584Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-08-07T20:10:21.9628594Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-08-07T20:10:21.9629837Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-08-07T20:10:21.9630667Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-08-07T20:10:21.9631308Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-08-07T20:10:21.9631942Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-08-07T20:10:21.9632575Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-08-07T20:10:21.9633150Z [ERROR] 
+2023-08-07T20:10:21.9633956Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-07T20:10:21.9634263Z [ERROR] 
+2023-08-07T20:10:21.9634612Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-07T20:10:21.9635133Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-07T20:10:22.0002529Z ##[error]The operation was canceled.
+2023-08-07T20:10:22.0092934Z Post job cleanup.
+2023-08-07T20:10:22.2446817Z Post job cleanup.
+2023-08-07T20:10:22.3958636Z [command]/usr/bin/git version
+2023-08-07T20:10:22.4021447Z git version 2.41.0
+2023-08-07T20:10:22.4086673Z Temporarily overriding HOME='/home/runner/work/_temp/aeb756e7-772b-4c29-88fb-298dab990f66' before making global git config changes
+2023-08-07T20:10:22.4088071Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:22.4096484Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:22.4148139Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:22.4192017Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:22.4527951Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:22.4585617Z http.https://github.com/.extraheader
+2023-08-07T20:10:22.4588185Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T20:10:22.4633351Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-07T20:10:22.5303462Z Cleaning up orphan processes
+
+2023-08-07T20:09:50.9058349Z Requested labels: macos-12
+2023-08-07T20:09:50.9058781Z Job defined at: jcabi/jcabi-ssh/.github/workflows/mvn.yml@refs/pull/144/merge
+2023-08-07T20:09:50.9058952Z Waiting for a runner to pick up this job...
+2023-08-07T20:09:53.9972505Z Job is waiting for a hosted runner to come online.
+2023-08-07T20:09:58.4769475Z Job is about to start running on the hosted runner: GitHub Actions 11 (hosted)
+2023-08-07T20:10:00.4589530Z Current runner version: '2.307.1'
+2023-08-07T20:10:00.4820840Z ##[group]Operating System
+2023-08-07T20:10:00.4821570Z macOS
+2023-08-07T20:10:00.4821800Z 12.6.7
+2023-08-07T20:10:00.4822040Z 21G651
+2023-08-07T20:10:00.4822290Z ##[endgroup]
+2023-08-07T20:10:00.4822550Z ##[group]Runner Image
+2023-08-07T20:10:00.4822870Z Image: macos-12
+2023-08-07T20:10:00.4823140Z Version: 20230709.1
+2023-08-07T20:10:00.4823620Z Included Software: https://github.com/actions/runner-images/blob/macOS-12/20230709.1/images/macos/macos-12-Readme.md
+2023-08-07T20:10:00.4824220Z Image Release: https://github.com/actions/runner-images/releases/tag/macOS-12%2F20230709.1
+2023-08-07T20:10:00.4824620Z ##[endgroup]
+2023-08-07T20:10:00.4845070Z ##[group]Runner Image Provisioner
+2023-08-07T20:10:00.4845430Z 2.0.264.1
+2023-08-07T20:10:00.4845700Z ##[endgroup]
+2023-08-07T20:10:00.4846750Z ##[group]GITHUB_TOKEN Permissions
+2023-08-07T20:10:00.4847560Z Actions: write
+2023-08-07T20:10:00.4847830Z Checks: write
+2023-08-07T20:10:00.4848320Z Contents: write
+2023-08-07T20:10:00.4848760Z Deployments: write
+2023-08-07T20:10:00.4849070Z Discussions: write
+2023-08-07T20:10:00.4849330Z Issues: write
+2023-08-07T20:10:00.4850260Z Metadata: read
+2023-08-07T20:10:00.4850590Z Packages: write
+2023-08-07T20:10:00.4852710Z Pages: write
+2023-08-07T20:10:00.4853010Z PullRequests: write
+2023-08-07T20:10:00.4853780Z RepositoryProjects: write
+2023-08-07T20:10:00.4854140Z SecurityEvents: write
+2023-08-07T20:10:00.4855470Z Statuses: write
+2023-08-07T20:10:00.4855870Z ##[endgroup]
+2023-08-07T20:10:00.4863640Z Secret source: Actions
+2023-08-07T20:10:00.4864720Z Prepare workflow directory
+2023-08-07T20:10:00.8534140Z Prepare all required actions
+2023-08-07T20:10:00.8794330Z Getting action download info
+2023-08-07T20:10:01.1366670Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-07T20:10:03.5826340Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-07T20:10:05.2474600Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-07T20:10:07.0083270Z Complete job name: mvn (macos-12, 17)
+2023-08-07T20:10:07.2497080Z ##[group]Run actions/checkout@v3
+2023-08-07T20:10:07.2497460Z with:
+2023-08-07T20:10:07.2497770Z   repository: jcabi/jcabi-ssh
+2023-08-07T20:10:07.2498320Z   token: ***
+2023-08-07T20:10:07.2498530Z   ssh-strict: true
+2023-08-07T20:10:07.2498750Z   persist-credentials: true
+2023-08-07T20:10:07.2498960Z   clean: true
+2023-08-07T20:10:07.2499180Z   sparse-checkout-cone-mode: true
+2023-08-07T20:10:07.2499420Z   fetch-depth: 1
+2023-08-07T20:10:07.2499620Z   lfs: false
+2023-08-07T20:10:07.2499800Z   submodules: false
+2023-08-07T20:10:07.2500000Z   set-safe-directory: true
+2023-08-07T20:10:07.2500220Z ##[endgroup]
+2023-08-07T20:10:09.0905150Z Syncing repository: jcabi/jcabi-ssh
+2023-08-07T20:10:09.0907680Z ##[group]Getting Git version info
+2023-08-07T20:10:09.0908330Z Working directory is '/Users/runner/work/jcabi-ssh/jcabi-ssh'
+2023-08-07T20:10:09.0909430Z [command]/usr/local/bin/git version
+2023-08-07T20:10:09.2458620Z git version 2.41.0
+2023-08-07T20:10:09.2596820Z ##[endgroup]
+2023-08-07T20:10:09.2648440Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/e401fb7f-1bbd-4464-8cf8-7a3ca687d352/.gitconfig'
+2023-08-07T20:10:09.2654580Z Temporarily overriding HOME='/Users/runner/work/_temp/e401fb7f-1bbd-4464-8cf8-7a3ca687d352' before making global git config changes
+2023-08-07T20:10:09.2677660Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:09.2693450Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:09.2948120Z Deleting the contents of '/Users/runner/work/jcabi-ssh/jcabi-ssh'
+2023-08-07T20:10:09.2968280Z ##[group]Initializing the repository
+2023-08-07T20:10:09.2976050Z [command]/usr/local/bin/git init /Users/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:09.3124770Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-07T20:10:09.3132390Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-07T20:10:09.3141960Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-07T20:10:09.3142810Z hint: 
+2023-08-07T20:10:09.3143760Z hint: 	git config --global init.defaultBranch <name>
+2023-08-07T20:10:09.3144500Z hint: 
+2023-08-07T20:10:09.3145480Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-07T20:10:09.3146490Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-07T20:10:09.3147220Z hint: 
+2023-08-07T20:10:09.3147990Z hint: 	git branch -m <name>
+2023-08-07T20:10:09.3167380Z Initialized empty Git repository in /Users/runner/work/jcabi-ssh/jcabi-ssh/.git/
+2023-08-07T20:10:09.3178480Z [command]/usr/local/bin/git remote add origin https://github.com/jcabi/jcabi-ssh
+2023-08-07T20:10:09.3346140Z ##[endgroup]
+2023-08-07T20:10:09.3347320Z ##[group]Disabling automatic garbage collection
+2023-08-07T20:10:09.3448900Z [command]/usr/local/bin/git config --local gc.auto 0
+2023-08-07T20:10:09.3610290Z ##[endgroup]
+2023-08-07T20:10:09.3611280Z ##[group]Setting up auth
+2023-08-07T20:10:09.3612430Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:09.3631370Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:09.5951650Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:09.6055180Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-07T20:10:09.7746220Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-07T20:10:09.7872670Z ##[endgroup]
+2023-08-07T20:10:09.7888120Z ##[group]Fetching the repository
+2023-08-07T20:10:09.7924630Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1d662e1c73dafbde66b20bfc7c24fde04a465546:refs/remotes/pull/144/merge
+2023-08-07T20:10:10.3846640Z remote: Enumerating objects: 60, done.        
+2023-08-07T20:10:10.3880240Z remote: Counting objects:   1% (1/60)        
+2023-08-07T20:10:10.3952880Z remote: Counting objects:   3% (2/60)        
+2023-08-07T20:10:10.3974170Z remote: Counting objects:   5% (3/60)        
+2023-08-07T20:10:10.3993200Z remote: Counting objects:   6% (4/60)        
+2023-08-07T20:10:10.3995210Z remote: Counting objects:   8% (5/60)        
+2023-08-07T20:10:10.4009580Z remote: Counting objects:  10% (6/60)        
+2023-08-07T20:10:10.4023370Z remote: Counting objects:  11% (7/60)        
+2023-08-07T20:10:10.4042740Z remote: Counting objects:  13% (8/60)        
+2023-08-07T20:10:10.4043740Z remote: Counting objects:  15% (9/60)        
+2023-08-07T20:10:10.4044560Z remote: Counting objects:  16% (10/60)        
+2023-08-07T20:10:10.4044910Z remote: Counting objects:  18% (11/60)        
+2023-08-07T20:10:10.4045220Z remote: Counting objects:  20% (12/60)        
+2023-08-07T20:10:10.4045590Z remote: Counting objects:  21% (13/60)        
+2023-08-07T20:10:10.4046060Z remote: Counting objects:  23% (14/60)        
+2023-08-07T20:10:10.4046360Z remote: Counting objects:  25% (15/60)        
+2023-08-07T20:10:10.4046680Z remote: Counting objects:  26% (16/60)        
+2023-08-07T20:10:10.4046980Z remote: Counting objects:  28% (17/60)        
+2023-08-07T20:10:10.4047280Z remote: Counting objects:  30% (18/60)        
+2023-08-07T20:10:10.4047690Z remote: Counting objects:  31% (19/60)        
+2023-08-07T20:10:10.4048020Z remote: Counting objects:  33% (20/60)        
+2023-08-07T20:10:10.4048320Z remote: Counting objects:  35% (21/60)        
+2023-08-07T20:10:10.4049670Z remote: Counting objects:  36% (22/60)        
+2023-08-07T20:10:10.4049970Z remote: Counting objects:  38% (23/60)        
+2023-08-07T20:10:10.4050480Z remote: Counting objects:  40% (24/60)        
+2023-08-07T20:10:10.4050770Z remote: Counting objects:  41% (25/60)        
+2023-08-07T20:10:10.4051070Z remote: Counting objects:  43% (26/60)        
+2023-08-07T20:10:10.4051370Z remote: Counting objects:  45% (27/60)        
+2023-08-07T20:10:10.4051630Z remote: Counting objects:  46% (28/60)        
+2023-08-07T20:10:10.4052100Z remote: Counting objects:  48% (29/60)        
+2023-08-07T20:10:10.4052400Z remote: Counting objects:  50% (30/60)        
+2023-08-07T20:10:10.4052700Z remote: Counting objects:  51% (31/60)        
+2023-08-07T20:10:10.4052970Z remote: Counting objects:  53% (32/60)        
+2023-08-07T20:10:10.4053450Z remote: Counting objects:  55% (33/60)        
+2023-08-07T20:10:10.4053780Z remote: Counting objects:  56% (34/60)        
+2023-08-07T20:10:10.4054040Z remote: Counting objects:  58% (35/60)        
+2023-08-07T20:10:10.4054350Z remote: Counting objects:  60% (36/60)        
+2023-08-07T20:10:10.4054650Z remote: Counting objects:  61% (37/60)        
+2023-08-07T20:10:10.4055120Z remote: Counting objects:  63% (38/60)        
+2023-08-07T20:10:10.4055390Z remote: Counting objects:  65% (39/60)        
+2023-08-07T20:10:10.4055680Z remote: Counting objects:  66% (40/60)        
+2023-08-07T20:10:10.4055980Z remote: Counting objects:  68% (41/60)        
+2023-08-07T20:10:10.4056240Z remote: Counting objects:  70% (42/60)        
+2023-08-07T20:10:10.4056710Z remote: Counting objects:  71% (43/60)        
+2023-08-07T20:10:10.4057020Z remote: Counting objects:  73% (44/60)        
+2023-08-07T20:10:10.4057350Z remote: Counting objects:  75% (45/60)        
+2023-08-07T20:10:10.4057610Z remote: Counting objects:  76% (46/60)        
+2023-08-07T20:10:10.4058060Z remote: Counting objects:  78% (47/60)        
+2023-08-07T20:10:10.4058400Z remote: Counting objects:  80% (48/60)        
+2023-08-07T20:10:10.4058740Z remote: Counting objects:  81% (49/60)        
+2023-08-07T20:10:10.4059070Z remote: Counting objects:  83% (50/60)        
+2023-08-07T20:10:10.4059970Z remote: Counting objects:  85% (51/60)        
+2023-08-07T20:10:10.4060480Z remote: Counting objects:  86% (52/60)        
+2023-08-07T20:10:10.4060790Z remote: Counting objects:  88% (53/60)        
+2023-08-07T20:10:10.4061090Z remote: Counting objects:  90% (54/60)        
+2023-08-07T20:10:10.4061350Z remote: Counting objects:  91% (55/60)        
+2023-08-07T20:10:10.4061650Z remote: Counting objects:  93% (56/60)        
+2023-08-07T20:10:10.4062130Z remote: Counting objects:  95% (57/60)        
+2023-08-07T20:10:10.4062430Z remote: Counting objects:  96% (58/60)        
+2023-08-07T20:10:10.4062700Z remote: Counting objects:  98% (59/60)        
+2023-08-07T20:10:10.4062990Z remote: Counting objects: 100% (60/60)        
+2023-08-07T20:10:10.4063450Z remote: Counting objects: 100% (60/60), done.        
+2023-08-07T20:10:10.4063780Z remote: Compressing objects:   2% (1/43)        
+2023-08-07T20:10:10.4064120Z remote: Compressing objects:   4% (2/43)        
+2023-08-07T20:10:10.4064440Z remote: Compressing objects:   6% (3/43)        
+2023-08-07T20:10:10.4064720Z remote: Compressing objects:   9% (4/43)        
+2023-08-07T20:10:10.4065200Z remote: Compressing objects:  11% (5/43)        
+2023-08-07T20:10:10.4065540Z remote: Compressing objects:  13% (6/43)        
+2023-08-07T20:10:10.4065820Z remote: Compressing objects:  16% (7/43)        
+2023-08-07T20:10:10.4066140Z remote: Compressing objects:  18% (8/43)        
+2023-08-07T20:10:10.4066450Z remote: Compressing objects:  20% (9/43)        
+2023-08-07T20:10:10.4066960Z remote: Compressing objects:  23% (10/43)        
+2023-08-07T20:10:10.4067280Z remote: Compressing objects:  25% (11/43)        
+2023-08-07T20:10:10.4067600Z remote: Compressing objects:  27% (12/43)        
+2023-08-07T20:10:10.4067920Z remote: Compressing objects:  30% (13/43)        
+2023-08-07T20:10:10.4068190Z remote: Compressing objects:  32% (14/43)        
+2023-08-07T20:10:10.4305830Z remote: Compressing objects:  34% (15/43)        
+2023-08-07T20:10:10.4415610Z remote: Compressing objects:  37% (16/43)        
+2023-08-07T20:10:10.4511910Z remote: Compressing objects:  39% (17/43)        
+2023-08-07T20:10:10.4512790Z remote: Compressing objects:  41% (18/43)        
+2023-08-07T20:10:10.4518210Z remote: Compressing objects:  44% (19/43)        
+2023-08-07T20:10:10.4519590Z remote: Compressing objects:  46% (20/43)        
+2023-08-07T20:10:10.4520770Z remote: Compressing objects:  48% (21/43)        
+2023-08-07T20:10:10.4521810Z remote: Compressing objects:  51% (22/43)        
+2023-08-07T20:10:10.4522450Z remote: Compressing objects:  53% (23/43)        
+2023-08-07T20:10:10.4522990Z remote: Compressing objects:  55% (24/43)        
+2023-08-07T20:10:10.4523970Z remote: Compressing objects:  58% (25/43)        
+2023-08-07T20:10:10.4524550Z remote: Compressing objects:  60% (26/43)        
+2023-08-07T20:10:10.4525120Z remote: Compressing objects:  62% (27/43)        
+2023-08-07T20:10:10.4525680Z remote: Compressing objects:  65% (28/43)        
+2023-08-07T20:10:10.4526420Z remote: Compressing objects:  67% (29/43)        
+2023-08-07T20:10:10.4628210Z remote: Compressing objects:  69% (30/43)        
+2023-08-07T20:10:10.4628680Z remote: Compressing objects:  72% (31/43)        
+2023-08-07T20:10:10.4730050Z remote: Compressing objects:  74% (32/43)        
+2023-08-07T20:10:10.4831300Z remote: Compressing objects:  76% (33/43)        
+2023-08-07T20:10:10.4932710Z remote: Compressing objects:  79% (34/43)        
+2023-08-07T20:10:10.4945140Z remote: Compressing objects:  81% (35/43)        
+2023-08-07T20:10:10.4961060Z remote: Compressing objects:  83% (36/43)        
+2023-08-07T20:10:10.5055030Z remote: Compressing objects:  86% (37/43)        
+2023-08-07T20:10:10.5056040Z remote: Compressing objects:  88% (38/43)        
+2023-08-07T20:10:10.5058170Z remote: Compressing objects:  90% (39/43)        
+2023-08-07T20:10:10.5058890Z remote: Compressing objects:  93% (40/43)        
+2023-08-07T20:10:10.5059530Z remote: Compressing objects:  95% (41/43)        
+2023-08-07T20:10:10.5061070Z remote: Compressing objects:  97% (42/43)        
+2023-08-07T20:10:10.5062310Z remote: Compressing objects: 100% (43/43)        
+2023-08-07T20:10:10.5063010Z remote: Compressing objects: 100% (43/43), done.        
+2023-08-07T20:10:10.5064060Z remote: Total 60 (delta 17), reused 31 (delta 4), pack-reused 0        
+2023-08-07T20:10:10.5139500Z From https://github.com/jcabi/jcabi-ssh
+2023-08-07T20:10:10.5165590Z  * [new ref]         1d662e1c73dafbde66b20bfc7c24fde04a465546 -> pull/144/merge
+2023-08-07T20:10:10.5347970Z ##[endgroup]
+2023-08-07T20:10:10.5348850Z ##[group]Determining the checkout info
+2023-08-07T20:10:10.5349860Z ##[endgroup]
+2023-08-07T20:10:10.5350610Z ##[group]Checking out the ref
+2023-08-07T20:10:10.5356470Z [command]/usr/local/bin/git checkout --progress --force refs/remotes/pull/144/merge
+2023-08-07T20:10:10.5647770Z HEAD is now at 1d662e1 Merge 974f5b06ca3ad28076a269564b873c7e733e599e into 4183cd61e1b32d239c6f51146b113881c48de90b
+2023-08-07T20:10:10.5692260Z ##[endgroup]
+2023-08-07T20:10:10.5929600Z [command]/usr/local/bin/git log -1 --format='%H'
+2023-08-07T20:10:10.5949190Z '1d662e1c73dafbde66b20bfc7c24fde04a465546'
+2023-08-07T20:10:10.6519120Z ##[group]Run actions/setup-java@v3
+2023-08-07T20:10:10.6519410Z with:
+2023-08-07T20:10:10.6519640Z   distribution: temurin
+2023-08-07T20:10:10.6519880Z   java-version: 17
+2023-08-07T20:10:10.6520070Z   java-package: jdk
+2023-08-07T20:10:10.6520310Z   check-latest: false
+2023-08-07T20:10:10.6520980Z   server-id: github
+2023-08-07T20:10:10.6521260Z   server-username: GITHUB_ACTOR
+2023-08-07T20:10:10.6521550Z   server-password: GITHUB_TOKEN
+2023-08-07T20:10:10.6521840Z   overwrite-settings: true
+2023-08-07T20:10:10.6522070Z   job-status: success
+2023-08-07T20:10:10.6522660Z   token: ***
+2023-08-07T20:10:10.6522910Z ##[endgroup]
+2023-08-07T20:10:10.9753660Z ##[group]Installed distributions
+2023-08-07T20:10:11.0013580Z Resolved Java 17.0.7+7 from tool-cache
+2023-08-07T20:10:11.0040350Z Setting Java 17.0.7+7 as the default
+2023-08-07T20:10:11.0071180Z Creating toolchains.xml for JDK version 17 from temurin
+2023-08-07T20:10:11.0110430Z Writing to /Users/runner/.m2/toolchains.xml
+2023-08-07T20:10:11.0129820Z 
+2023-08-07T20:10:11.0159020Z Java configuration:
+2023-08-07T20:10:11.0192950Z   Distribution: temurin
+2023-08-07T20:10:11.0218520Z   Version: 17.0.7+7
+2023-08-07T20:10:11.0230360Z   Path: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-07T20:10:11.0249160Z 
+2023-08-07T20:10:11.0278200Z ##[endgroup]
+2023-08-07T20:10:11.0308350Z Creating settings.xml with server-id: github
+2023-08-07T20:10:11.0374740Z Writing to /Users/runner/.m2/settings.xml
+2023-08-07T20:10:11.2792460Z ##[group]Run actions/cache@v3
+2023-08-07T20:10:11.2792970Z with:
+2023-08-07T20:10:11.2793220Z   path: ~/.m2/repository
+2023-08-07T20:10:11.2793730Z   key: macOS-jdk-17-maven-057706c2caacc34b4c3bcf4297a5560210323452d74c67c3b8b14050d54bae07
+2023-08-07T20:10:11.2794300Z   restore-keys: macOS-jdk-17-maven-
+
+2023-08-07T20:10:11.2794600Z   enableCrossOsArchive: false
+2023-08-07T20:10:11.2794880Z   fail-on-cache-miss: false
+2023-08-07T20:10:11.2795120Z   lookup-only: false
+2023-08-07T20:10:11.2795520Z env:
+2023-08-07T20:10:11.2795900Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-07T20:10:11.2796300Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-07T20:10:11.2796630Z ##[endgroup]
+2023-08-07T20:10:13.2166740Z Received 4194304 of 122755915 (3.4%), 4.0 MBs/sec
+2023-08-07T20:10:14.2167030Z Received 46137344 of 122755915 (37.6%), 22.0 MBs/sec
+2023-08-07T20:10:15.2170940Z Received 96468992 of 122755915 (78.6%), 30.7 MBs/sec
+2023-08-07T20:10:17.9594090Z ##[error]The operation was canceled.
+2023-08-07T20:10:18.0573600Z Post job cleanup.
+2023-08-07T20:10:18.3233590Z Post job cleanup.
+2023-08-07T20:10:18.4756940Z [command]/usr/local/bin/git version
+2023-08-07T20:10:18.4857410Z git version 2.41.0
+2023-08-07T20:10:18.5085800Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/71bec971-df8a-460a-94a8-73469c1ef953/.gitconfig'
+2023-08-07T20:10:18.5139650Z Temporarily overriding HOME='/Users/runner/work/_temp/71bec971-df8a-460a-94a8-73469c1ef953' before making global git config changes
+2023-08-07T20:10:18.5172950Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:18.5174460Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:18.5176400Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:18.5186310Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:18.6436240Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:18.6516160Z http.https://github.com/.extraheader
+2023-08-07T20:10:18.6541900Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T20:10:18.6664090Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-07T20:10:18.8131220Z Cleaning up orphan processes
+
+2023-08-07T20:10:22.5303438Z Cleaning up orphan processes
+
+2023-08-07T20:10:18.3233540Z Post job cleanup.
+2023-08-07T20:10:18.4756690Z [command]/usr/local/bin/git version
+2023-08-07T20:10:18.4857380Z git version 2.41.0
+2023-08-07T20:10:18.5085780Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/71bec971-df8a-460a-94a8-73469c1ef953/.gitconfig'
+2023-08-07T20:10:18.5139600Z Temporarily overriding HOME='/Users/runner/work/_temp/71bec971-df8a-460a-94a8-73469c1ef953' before making global git config changes
+2023-08-07T20:10:18.5172910Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T20:10:18.5174440Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-ssh/jcabi-ssh
+2023-08-07T20:10:18.5176390Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T20:10:18.5186140Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T20:10:18.6436200Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T20:10:18.6516120Z http.https://github.com/.extraheader
+2023-08-07T20:10:18.6541880Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T20:10:18.6664040Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-07T20:10:14.5310924Z ##[group]Run actions/cache@v3
+2023-08-07T20:10:14.5311445Z with:
+2023-08-07T20:10:14.5311759Z   path: ~/.m2/repository
+2023-08-07T20:10:14.5312213Z   key: Windows-jdk-17-maven-057706c2caacc34b4c3bcf4297a5560210323452d74c67c3b8b14050d54bae07
+2023-08-07T20:10:14.5312756Z   restore-keys: Windows-jdk-17-maven-
+
+2023-08-07T20:10:14.5313110Z   enableCrossOsArchive: false
+2023-08-07T20:10:14.5313450Z   fail-on-cache-miss: false
+2023-08-07T20:10:14.5313740Z   lookup-only: false
+2023-08-07T20:10:14.5314050Z env:
+2023-08-07T20:10:14.5314438Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.8-7\x64
+2023-08-07T20:10:14.5314881Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.8-7\x64
+2023-08-07T20:10:14.5315288Z ##[endgroup]
+2023-08-07T20:10:16.4278856Z Received 83886080 of 122807836 (68.3%), 79.9 MBs/sec
+2023-08-07T20:10:17.3507733Z Received 122807836 of 122807836 (100.0%), 60.9 MBs/sec
+2023-08-07T20:10:17.3510934Z Cache Size: ~117 MB (122807836 B)
+2023-08-07T20:10:17.3583849Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/e08a08c8-d5c2-43de-b2c4-d6577588a8bf/cache.tzst -P -C D:/a/jcabi-ssh/jcabi-ssh --force-local --use-compress-program "zstd -d"
+2023-08-07T20:10:19.0658914Z ##[error]The operation was canceled.
+
+2023-08-07T20:10:02.3184625Z Current runner version: '2.307.1'
+2023-08-07T20:10:02.3217336Z ##[group]Operating System
+2023-08-07T20:10:02.3217977Z Microsoft Windows Server 2022
+2023-08-07T20:10:02.3218275Z 10.0.20348
+2023-08-07T20:10:02.3218563Z Datacenter
+2023-08-07T20:10:02.3218865Z ##[endgroup]
+2023-08-07T20:10:02.3219123Z ##[group]Runner Image
+2023-08-07T20:10:02.3219445Z Image: windows-2022
+2023-08-07T20:10:02.3219762Z Version: 20230730.1.0
+2023-08-07T20:10:02.3220210Z Included Software: https://github.com/actions/runner-images/blob/win22/20230730.1/images/win/Windows2022-Readme.md
+2023-08-07T20:10:02.3220810Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230730.1
+2023-08-07T20:10:02.3221235Z ##[endgroup]
+2023-08-07T20:10:02.3221532Z ##[group]Runner Image Provisioner
+2023-08-07T20:10:02.3221872Z 2.0.264.1
+2023-08-07T20:10:02.3222148Z ##[endgroup]
+2023-08-07T20:10:02.3223048Z ##[group]GITHUB_TOKEN Permissions
+2023-08-07T20:10:02.3223690Z Actions: write
+2023-08-07T20:10:02.3223949Z Checks: write
+2023-08-07T20:10:02.3224514Z Contents: write
+2023-08-07T20:10:02.3224831Z Deployments: write
+2023-08-07T20:10:02.3225167Z Discussions: write
+2023-08-07T20:10:02.3225429Z Issues: write
+2023-08-07T20:10:02.3225723Z Metadata: read
+2023-08-07T20:10:02.3226023Z Packages: write
+2023-08-07T20:10:02.3226292Z Pages: write
+2023-08-07T20:10:02.3226599Z PullRequests: write
+2023-08-07T20:10:02.3226943Z RepositoryProjects: write
+2023-08-07T20:10:02.3227253Z SecurityEvents: write
+2023-08-07T20:10:02.3227574Z Statuses: write
+2023-08-07T20:10:02.3227882Z ##[endgroup]
+2023-08-07T20:10:02.3231228Z Secret source: Actions
+2023-08-07T20:10:02.3231763Z Prepare workflow directory
+2023-08-07T20:10:02.4105944Z Prepare all required actions
+2023-08-07T20:10:02.4301923Z Getting action download info
+2023-08-07T20:10:02.6364331Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-07T20:10:02.9594751Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-07T20:10:03.2396246Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-07T20:10:03.6383772Z Complete job name: mvn (windows-2022, 17)
+
+2023-08-07T20:10:02.5343163Z ##[group]Run actions/setup-java@v3
+2023-08-07T20:10:02.5343465Z with:
+2023-08-07T20:10:02.5343684Z   distribution: temurin
+2023-08-07T20:10:02.5343920Z   java-version: 11
+2023-08-07T20:10:02.5344137Z   java-package: jdk
+2023-08-07T20:10:02.5344369Z   check-latest: false
+2023-08-07T20:10:02.5344600Z   server-id: github
+2023-08-07T20:10:02.5344826Z   server-username: GITHUB_ACTOR
+2023-08-07T20:10:02.5345113Z   server-password: GITHUB_TOKEN
+2023-08-07T20:10:02.5345381Z   overwrite-settings: true
+2023-08-07T20:10:02.5345610Z   job-status: success
+2023-08-07T20:10:02.5345955Z   token: ***
+2023-08-07T20:10:02.5346166Z ##[endgroup]
+2023-08-07T20:10:02.8031726Z ##[group]Installed distributions
+2023-08-07T20:10:02.8129482Z Resolved Java 11.0.19+7 from tool-cache
+2023-08-07T20:10:02.8130745Z Setting Java 11.0.19+7 as the default
+2023-08-07T20:10:02.8167479Z Creating toolchains.xml for JDK version 11 from temurin
+2023-08-07T20:10:02.8340908Z Writing to /home/runner/.m2/toolchains.xml
+2023-08-07T20:10:02.8341587Z 
+2023-08-07T20:10:02.8343204Z Java configuration:
+2023-08-07T20:10:02.8344989Z   Distribution: temurin
+2023-08-07T20:10:02.8345343Z   Version: 11.0.19+7
+2023-08-07T20:10:02.8355493Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-07T20:10:02.8356109Z 
+2023-08-07T20:10:02.8357373Z ##[endgroup]
+2023-08-07T20:10:02.8391739Z Creating settings.xml with server-id: github
+2023-08-07T20:10:02.8393111Z Writing to /home/runner/.m2/settings.xml

@@ -1,0 +1,168 @@
+===== pre-commit/6_Run pre-commitaction@v3.0.0.txt =====
+##[group]Run pre-commit/action@v3.0.0
+with:
+  extra_args: --hook-stage pre-push --all-files
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+##[group]Run python -m pip install pre-commit
+[36;1mpython -m pip install pre-commit[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+Collecting pre-commit
+  Downloading pre_commit-3.6.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting cfgv>=2.0.0 (from pre-commit)
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit)
+  Downloading identify-2.5.33-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit)
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
+Collecting pyyaml>=5.1 (from pre-commit)
+  Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit)
+  Downloading virtualenv-20.25.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting setuptools (from nodeenv>=0.11.1->pre-commit)
+  Downloading setuptools-69.0.2-py3-none-any.whl.metadata (6.3 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit)
+  Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit)
+  Downloading filelock-3.13.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.10.0->pre-commit)
+  Downloading platformdirs-4.1.0-py3-none-any.whl.metadata (11 kB)
+Downloading pre_commit-3.6.0-py2.py3-none-any.whl (204 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.0/204.0 kB 26.8 MB/s eta 0:00:00
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading identify-2.5.33-py2.py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 31.0 MB/s eta 0:00:00
+Downloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Downloading PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (724 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 725.0/725.0 kB 90.4 MB/s eta 0:00:00
+Downloading virtualenv-20.25.0-py3-none-any.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 116.1 MB/s eta 0:00:00
+Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 81.8 MB/s eta 0:00:00
+Downloading filelock-3.13.1-py3-none-any.whl (11 kB)
+Downloading platformdirs-4.1.0-py3-none-any.whl (17 kB)
+Downloading setuptools-69.0.2-py3-none-any.whl (819 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.5/819.5 kB 92.1 MB/s eta 0:00:00
+Installing collected packages: distlib, setuptools, pyyaml, platformdirs, identify, filelock, cfgv, virtualenv, nodeenv, pre-commit
+Successfully installed cfgv-3.4.0 distlib-0.3.8 filelock-3.13.1 identify-2.5.33 nodeenv-1.8.0 platformdirs-4.1.0 pre-commit-3.6.0 pyyaml-6.0.1 setuptools-69.0.2 virtualenv-20.25.0
+##[group]Run python -m pip freeze --local
+[36;1mpython -m pip freeze --local[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+cfgv==3.4.0
+distlib==0.3.8
+filelock==3.13.1
+identify==2.5.33
+nodeenv==1.8.0
+platformdirs==4.1.0
+pre-commit==3.6.0
+PyYAML==6.0.1
+setuptools==69.0.2
+virtualenv==20.25.0
+##[group]Run actions/cache@v3
+with:
+  path: ~/.cache/pre-commit
+  key: pre-commit-3|/opt/hostedtoolcache/Python/3.12.1/x64|22e1ac8b31209d20dbc1af062b7bb70cb716a8ce5ddbf255b52ad3a34004f0dc
+  enableCrossOsArchive: false
+  fail-on-cache-miss: false
+  lookup-only: false
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+Received 0 of 48057368 (0.0%), 0.0 MBs/sec
+Cache Size: ~46 MB (48057368 B)
+[command]/usr/bin/tar -xf /home/runner/work/_temp/516a3dc9-7b6f-410a-9989-4b9d88d8a69b/cache.tzst -P -C /home/runner/work/wandb/wandb --use-compress-program unzstd
+Received 48057368 of 48057368 (100.0%), 22.9 MBs/sec
+Cache restored successfully
+Cache restored from key: pre-commit-3|/opt/hostedtoolcache/Python/3.12.1/x64|22e1ac8b31209d20dbc1af062b7bb70cb716a8ce5ddbf255b52ad3a34004f0dc
+##[group]Run pre-commit run --show-diff-on-failure --color=always --hook-stage pre-push --all-files
+[36;1mpre-commit run --show-diff-on-failure --color=always --hook-stage pre-push --all-files[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+ruff.....................................................................[41mFailed[m
+[2m- hook id: ruff[m
+[2m- files were modified by this hook[m
+
+Found 1 error (1 fixed, 0 remaining).
+
+black-jupyter............................................................[41mFailed[m
+[2m- hook id: black-jupyter[m
+[2m- files were modified by this hook[m
+
+[1mreformatted wandb/integration/ultralytics/callback.py[0m
+
+[1mAll done! ✨ 🍰 ✨[0m
+[34m[1m1 file [0m[1mreformatted[0m, [34m870 files [0mleft unchanged.
+
+blacken-docs.............................................................[42mPassed[m
+clang-format.............................................................[42mPassed[m
+check for merge conflicts................................................[42mPassed[m
+trailing-whitespace......................................................[42mPassed[m
+end-of-file-fixer........................................................[42mPassed[m
+check-yaml...............................................................[42mPassed[m
+check-added-large-files..................................................[42mPassed[m
+check-shebang-scripts-are-executable.....................................[42mPassed[m
+check-executables-have-shebangs..........................................[42mPassed[m
+check-symlinks.......................................(no files to check)[46;30mSkipped[m
+check-toml...............................................................[42mPassed[m
+debug-statements.........................................................[42mPassed[m
+forbid-submodules....................................(no files to check)[46;30mSkipped[m
+black....................................................................[42mPassed[m
+go-generate-proto........................................................[42mPassed[m
+go-generate-graphql.....................................................[43;30mSkipped[m
+go-fmt...................................................................[42mPassed[m
+go-imports...............................................................[42mPassed[m
+go-unit-tests............................................................[42mPassed[m
+go-vet...................................................................[42mPassed[m
+golangci-lint............................................................[42mPassed[m
+go-critic................................................................[42mPassed[m
+go-cyclo.................................................................[42mPassed[m
+go-mod-tidy..............................................................[42mPassed[m
+go-build.................................................................[42mPassed[m
+pre-commit hook(s) made changes.
+If you are seeing this message in CI, reproduce locally with: `pre-commit run --all-files`.
+To run `pre-commit` as part of git workflow, use `pre-commit install`.
+All changes made by hooks:
+[1mdiff --git a/wandb/integration/ultralytics/bbox_utils.py b/wandb/integration/ultralytics/bbox_utils.py[m
+[1mindex 798aa57..9cee915 100644[m
+[1m--- a/wandb/integration/ultralytics/bbox_utils.py[m
+[1m+++ b/wandb/integration/ultralytics/bbox_utils.py[m
+[36m@@ -3,6 +3,7 @@[m [mfrom typing import Any, Dict, List, Optional, Tuple, Union[m
+ import torch[m
+ from ultralytics.engine.results import Results[m
+ from ultralytics.models.yolo.detect import DetectionPredictor[m
+[32m+[m
+ try:[m
+     from ultralytics.yolo.utils import ops[m
+ except ModuleNotFoundError:[m
+[1mdiff --git a/wandb/integration/ultralytics/callback.py b/wandb/integration/ultralytics/callback.py[m
+[1mindex ed8a224..618fc5a 100644[m
+[1m--- a/wandb/integration/ultralytics/callback.py[m
+[1m+++ b/wandb/integration/ultralytics/callback.py[m
+[36m@@ -42,6 +42,7 @@[m [mtry:[m
+         SegmentationValidator,[m
+     )[m
+     from ultralytics.utils.torch_utils import de_parallel[m
+[32m+[m
+     try:[m
+         from ultralytics.yolo.utils import RANK, __version__[m
+     except ModuleNotFoundError:[m
+##[error]Process completed with exit code 1.

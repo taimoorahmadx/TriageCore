@@ -1,0 +1,71 @@
+repo: micycle1/PGS
+run_id: e70bd198fa1e1d65f86e071b8ebdd021141cfa95
+head_sha: e70bd198fa1e1d65f86e071b8ebdd021141cfa95
+run_attempts: []
+commits:
+- sha: e70bd198fa1e1d65f86e071b8ebdd021141cfa95
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 454de17f9088033665f474f6b71cbc718f5a6e35
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - library.properties
+- sha: 3b86d0cb186973c536e04bc65e50f721008917a9
+  author: micycle1
+  files:
+  - examples/README.md
+  - examples/blowUp/blowUp.pde
+  - examples/moireVoronoi/moireVoronoi.pde
+  - resources/examples/blowUp.png
+- sha: 7b17a0d271f58cfc1ff79d0b8aa428ad373eb80a
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+- sha: 09880ba3248934f4f6d24d8468dfab4a6fd7bf5f
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+- sha: 57bb10d0bcdab7a4a1ec61fdd02012848fa0a8e6
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/commons/PMesh.java
+- sha: 797882e748392c206a1298612457ec9ac9753a89
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Coloring.java
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/commons/RLFColoring.java
+- sha: 1c805d0cb7830170e5f6d745b0cb026d37968628
+  author: micycle1
+  files:
+  - examples/README.md
+  - examples/dysonHatching/dysonHatching.pde
+  - examples/partitionSmooth/partitionSmooth.pde
+  - examples/ripplingTriangles/ripplingTriangles.pde
+  - examples/triangulate/triangulate.pde
+  - resources/examples/moireVoronoi.png
+  - resources/examples/partitionSmooth.png
+  - resources/examples/triangulate.png
+- sha: 45b9d4fb714bee6164c6eabe2828b6e9355c727c
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_Voronoi.java
+  - src/main/java/micycle/pgs/color/ColorUtils.java
+  - src/main/java/micycle/pgs/commons/VisibilityPolygon.java
+- sha: a401978488d26fd80f4417a009cb7531984b76fc
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS_Processing.java
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,82 @@
+repo: kiegroup/optaplanner-wb
+run_id: bf192132622ef035d43b717570a4d6746540364c
+head_sha: bf192132622ef035d43b717570a4d6746540364c
+run_attempts: []
+commits:
+- sha: bf192132622ef035d43b717570a4d6746540364c
+  author: mbiarnes
+  files:
+  - pom.xml
+- sha: 019cffdcbe136a5fad4e4ab323aefa41d62ef9bd
+  author: mbiarnes
+  files:
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/pom.xml
+  - optaplanner-wb-screens/pom.xml
+  - optaplanner-wb-ui/pom.xml
+  - optaplanner-wb-webapp/pom.xml
+  - pom.xml
+- sha: 4ce471af36972d00bb824f1ad8827dfd71ddb471
+  author: lampajr
+  files:
+  - .github/workflows/pull_request.yml
+- sha: b643a98a3672e8a2b81191e8a023d7cca5c18d84
+  author: bacciotti
+  files:
+  - .github/workflows/pr-backporting.yml
+  - .github/workflows/pull_request.yml
+- sha: 5bc0629b52b84bbfa7e02e65699abb660826e878
+  author: lampajr
+  files:
+  - .github/pull_request_template.md
+  - .github/workflows/pr-backporting.yml
+- sha: b9bdd66e268fda671ad631746fcab026de38a35a
+  author: RishiRajAnand
+  files:
+  - optaplanner-wb-ui/pom.xml
+- sha: d97b658ca3568e7d10730823ceb0b4fa1bfaf263
+  author: mbiarnes
+  files:
+  - .github/dependabot.yml
+- sha: fa3b4b14a07414de89b24d1d9058a3d7e1ae21b3
+  author: Ginxo
+  files:
+  - .github/dependabot.yml
+- sha: 25c72f2b861f7f91ff66bea998b1940e332ca2e3
+  author: Ginxo
+  files:
+  - optaplanner-wb-webapp/pom.xml
+- sha: e8714556382f09caf9f67e1b0f02d299c2cade3a
+  author: mbiarnes
+  files:
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/optaplanner-wb-domain-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-domain-editor/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/optaplanner-wb-guided-rule-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-guided-rule-editor/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-api/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-backend/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/optaplanner-wb-solver-editor-client/pom.xml
+  - optaplanner-wb-screens/optaplanner-wb-solver-editor/pom.xml
+  - optaplanner-wb-screens/pom.xml
+  - optaplanner-wb-ui/pom.xml
+  - optaplanner-wb-webapp/pom.xml
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory DEPENDENCY_RESOLUTION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

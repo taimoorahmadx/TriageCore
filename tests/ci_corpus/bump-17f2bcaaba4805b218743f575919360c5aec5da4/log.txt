@@ -1,0 +1,506 @@
+2023-07-21T16:50:36.5213724Z Post job cleanup.
+
+2023-07-21T16:50:36.7353120Z Post job cleanup.
+2023-07-21T16:50:36.8625184Z [command]/usr/bin/git version
+2023-07-21T16:50:36.8659294Z git version 2.41.0
+2023-07-21T16:50:36.8716727Z Temporarily overriding HOME='/home/runner/work/_temp/68325329-9b3c-4e15-8e1b-ba3277ec5b47' before making global git config changes
+2023-07-21T16:50:36.8719817Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-21T16:50:36.8727989Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/PGS/PGS
+2023-07-21T16:50:36.8782384Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-21T16:50:36.8825284Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-21T16:50:36.9109883Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-21T16:50:36.9134543Z http.https://github.com/.extraheader
+2023-07-21T16:50:36.9147776Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-21T16:50:36.9190598Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-07-21T16:48:41.4556675Z ##[group]Run mvn -B -Puber-jar verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+2023-07-21T16:48:41.4557382Z [36;1mmvn -B -Puber-jar verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar[0m
+2023-07-21T16:48:41.4621631Z shell: /usr/bin/bash -e {0}
+2023-07-21T16:48:41.4621909Z env:
+2023-07-21T16:48:41.4622253Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-21T16:48:41.4622696Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-21T16:48:41.4623227Z   GITHUB_TOKEN: ***
+2023-07-21T16:48:41.4623456Z   SONAR_TOKEN: 
+2023-07-21T16:48:41.4623695Z ##[endgroup]
+2023-07-21T16:48:45.1862739Z [INFO] Scanning for projects...
+2023-07-21T16:48:46.1185720Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/maven-metadata.xml
+2023-07-21T16:48:46.7813663Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/maven-metadata.xml (871 B at 1.3 kB/s)
+2023-07-21T16:48:46.8473193Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.9.1.2184/sonar-maven-plugin-3.9.1.2184.pom
+2023-07-21T16:48:46.9246890Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.9.1.2184/sonar-maven-plugin-3.9.1.2184.pom (12 kB at 148 kB/s)
+2023-07-21T16:48:46.9363220Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/59.0.29/parent-59.0.29.pom
+2023-07-21T16:48:46.9875952Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/59.0.29/parent-59.0.29.pom (32 kB at 621 kB/s)
+2023-07-21T16:48:46.9973178Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.9.1.2184/sonar-maven-plugin-3.9.1.2184.jar
+2023-07-21T16:48:47.0368185Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/scanner/maven/sonar-maven-plugin/3.9.1.2184/sonar-maven-plugin-3.9.1.2184.jar (50 kB at 1.2 MB/s)
+2023-07-21T16:48:47.0477038Z [INFO] 
+2023-07-21T16:48:47.0482545Z [INFO] ----------------------------< micycle:PGS >-----------------------------
+2023-07-21T16:48:47.0486061Z [INFO] Building Processing Geometry Suite 1.3.1-SNAPSHOT
+2023-07-21T16:48:47.0490704Z [INFO]   from pom.xml
+2023-07-21T16:48:47.0494746Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-07-21T16:48:47.0514015Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom
+2023-07-21T16:48:47.0782195Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom (21 kB at 791 kB/s)
+2023-07-21T16:48:47.0860089Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-07-21T16:48:47.1138218Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 289 kB/s)
+2023-07-21T16:48:47.1165206Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-07-21T16:48:47.1563798Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.2 MB/s)
+2023-07-21T16:48:47.1675276Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-07-21T16:48:47.1955837Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 767 kB/s)
+2023-07-21T16:48:47.2079333Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar
+2023-07-21T16:48:47.2845258Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar (507 kB at 6.6 MB/s)
+2023-07-21T16:48:47.3695327Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.pom
+2023-07-21T16:48:47.3961486Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.pom (3.8 kB at 146 kB/s)
+2023-07-21T16:48:47.4023483Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.8/org.jacoco.build-0.8.8.pom
+2023-07-21T16:48:47.4434218Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.8/org.jacoco.build-0.8.8.pom (44 kB at 1.0 MB/s)
+2023-07-21T16:48:47.4615419Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.jar
+2023-07-21T16:48:47.4893141Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.jar (56 kB at 1.9 MB/s)
+2023-07-21T16:48:47.5069083Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2023-07-21T16:48:47.5317518Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom (8.1 kB at 312 kB/s)
+2023-07-21T16:48:47.5358803Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+2023-07-21T16:48:47.5605355Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom (9.2 kB at 368 kB/s)
+2023-07-21T16:48:47.5649653Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+2023-07-21T16:48:47.5912850Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom (30 kB at 1.1 MB/s)
+2023-07-21T16:48:47.5971940Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+2023-07-21T16:48:47.6253151Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom (15 kB at 511 kB/s)
+2023-07-21T16:48:47.6366245Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2023-07-21T16:48:47.6595059Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar (30 kB at 1.2 MB/s)
+2023-07-21T16:48:47.6636484Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-07-21T16:48:47.6883265Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 393 kB/s)
+2023-07-21T16:48:47.6945396Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+2023-07-21T16:48:47.7194111Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 2.6 MB/s)
+2023-07-21T16:48:47.7254829Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.pom
+2023-07-21T16:48:47.7499734Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.pom (6.1 kB at 254 kB/s)
+2023-07-21T16:48:47.7526284Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.0/surefire-3.1.0.pom
+2023-07-21T16:48:47.7883833Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.0/surefire-3.1.0.pom (22 kB at 621 kB/s)
+2023-07-21T16:48:47.7948147Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.jar
+2023-07-21T16:48:47.8206247Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.jar (43 kB at 1.7 MB/s)
+2023-07-21T16:48:47.8322267Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
+2023-07-21T16:48:47.8556233Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom (5.8 kB at 254 kB/s)
+2023-07-21T16:48:47.8569697Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom
+2023-07-21T16:48:47.8815899Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom (13 kB at 522 kB/s)
+2023-07-21T16:48:47.8853889Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom
+2023-07-21T16:48:47.9119485Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom (26 kB at 1.0 MB/s)
+2023-07-21T16:48:47.9186831Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom
+2023-07-21T16:48:47.9736341Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom (15 kB at 269 kB/s)
+2023-07-21T16:48:47.9784416Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+2023-07-21T16:48:48.0012724Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar (34 kB at 1.5 MB/s)
+2023-07-21T16:48:48.0055393Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.pom
+2023-07-21T16:48:48.0299614Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.pom (12 kB at 518 kB/s)
+2023-07-21T16:48:48.0349696Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar
+2023-07-21T16:48:48.0655980Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar (147 kB at 4.7 MB/s)
+2023-07-21T16:48:48.0763297Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/com/github/micycle1/processing3/3.5.4/processing3-3.5.4.pom
+2023-07-21T16:48:48.4044830Z [INFO] Downloading from jitpack.io: https://jitpack.io/com/github/micycle1/processing3/3.5.4/processing3-3.5.4.pom
+2023-07-21T16:48:48.8484056Z [INFO] Downloaded from jitpack.io: https://jitpack.io/com/github/micycle1/processing3/3.5.4/processing3-3.5.4.pom (2.4 kB at 5.3 kB/s)
+2023-07-21T16:48:48.8529436Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/jogamp/jogl/jogl-all-main/2.3.2/jogl-all-main-2.3.2.pom
+2023-07-21T16:48:48.9125038Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/jogamp/jogl/jogl-all-main/2.3.2/jogl-all-main-2.3.2.pom
+2023-07-21T16:48:49.0136742Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jogamp/jogl/jogl-all-main/2.3.2/jogl-all-main-2.3.2.pom
+2023-07-21T16:48:49.0564644Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jogamp/jogl/jogl-all-main/2.3.2/jogl-all-main-2.3.2.pom (5.6 kB at 148 kB/s)
+2023-07-21T16:48:49.0566898Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/jogamp/jogl/jogl-all/2.3.2/jogl-all-2.3.2.pom
+2023-07-21T16:48:49.1143450Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/jogamp/jogl/jogl-all/2.3.2/jogl-all-2.3.2.pom
+2023-07-21T16:48:49.1964815Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jogamp/jogl/jogl-all/2.3.2/jogl-all-2.3.2.pom
+2023-07-21T16:48:49.2271558Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jogamp/jogl/jogl-all/2.3.2/jogl-all-2.3.2.pom (2.8 kB at 93 kB/s)
+2023-07-21T16:48:49.2442735Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/jogamp/gluegen/gluegen-rt-main/2.3.2/gluegen-rt-main-2.3.2.pom
+2023-07-21T16:48:49.3043113Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/jogamp/gluegen/gluegen-rt-main/2.3.2/gluegen-rt-main-2.3.2.pom
+2023-07-21T16:48:49.3720994Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jogamp/gluegen/gluegen-rt-main/2.3.2/gluegen-rt-main-2.3.2.pom
+2023-07-21T16:48:49.3951133Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jogamp/gluegen/gluegen-rt-main/2.3.2/gluegen-rt-main-2.3.2.pom (5.3 kB at 229 kB/s)
+2023-07-21T16:48:49.4031795Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/jogamp/gluegen/gluegen-rt/2.3.2/gluegen-rt-2.3.2.pom
+2023-07-21T16:48:49.4626469Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/jogamp/gluegen/gluegen-rt/2.3.2/gluegen-rt-2.3.2.pom
+2023-07-21T16:48:49.5345351Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jogamp/gluegen/gluegen-rt/2.3.2/gluegen-rt-2.3.2.pom
+2023-07-21T16:48:49.5673028Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jogamp/gluegen/gluegen-rt/2.3.2/gluegen-rt-2.3.2.pom (2.4 kB at 73 kB/s)
+2023-07-21T16:48:49.5836379Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom
+2023-07-21T16:48:49.6437364Z [INFO] Downloading from jitpack.io: https://jitpack.io/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom
+2023-07-21T16:48:49.6688865Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom
+2023-07-21T16:48:49.6909650Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.3.0/jaxb-api-2.3.0.pom (23 kB at 1.0 MB/s)
+2023-07-21T16:48:49.6934566Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/javax/xml/bind/jaxb-api-parent/2.3.0/jaxb-api-parent-2.3.0.pom
+2023-07-21T16:48:49.7535097Z [INFO] Downloading from jitpack.io: https://jitpack.io/javax/xml/bind/jaxb-api-parent/2.3.0/jaxb-api-parent-2.3.0.pom
+2023-07-21T16:48:49.7763571Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.0/jaxb-api-parent-2.3.0.pom
+2023-07-21T16:48:49.7974294Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.3.0/jaxb-api-parent-2.3.0.pom (5.6 kB at 245 kB/s)
+2023-07-21T16:48:49.7991365Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/net/java/jvnet-parent/5/jvnet-parent-5.pom
+2023-07-21T16:48:49.8588130Z [INFO] Downloading from jitpack.io: https://jitpack.io/net/java/jvnet-parent/5/jvnet-parent-5.pom
+2023-07-21T16:48:49.9303828Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/5/jvnet-parent-5.pom
+2023-07-21T16:48:49.9591740Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/java/jvnet-parent/5/jvnet-parent-5.pom (8.9 kB at 317 kB/s)
+2023-07-21T16:48:49.9671228Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/maven-metadata.xml
+2023-07-21T16:48:49.9691643Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/maven-metadata.xml
+2023-07-21T16:48:49.9707937Z [INFO] Downloading from jts-snapshots: https://repo.eclipse.org/content/repositories/jts-snapshots/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/maven-metadata.xml
+2023-07-21T16:48:50.4810906Z [INFO] Downloaded from jts-snapshots: https://repo.eclipse.org/content/repositories/jts-snapshots/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/maven-metadata.xml (1.4 kB at 2.8 kB/s)
+2023-07-21T16:48:50.4876846Z [INFO] Downloading from osgeo: https://repo.osgeo.org/repository/release/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/jts-core-1.20.0-20230720.185627-474.pom
+2023-07-21T16:48:50.5454446Z [INFO] Downloading from jitpack.io: https://jitpack.io/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/jts-core-1.20.0-20230720.185627-474.pom
+2023-07-21T16:48:50.6158431Z [INFO] Downloading from jts-snapshots: https://repo.eclipse.org/content/repositories/jts-snapshots/org/locationtech/jts/jts-core/1.20.0-SNAPSHOT/jts-core-1.20.0-20230720.185627-474.pom
+[... 5891 lines removed by TriageCore ...]
+2023-07-21T16:50:26.4968506Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar
+2023-07-21T16:50:26.4988122Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar (24 kB at 644 kB/s)
+2023-07-21T16:50:26.4989391Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar
+2023-07-21T16:50:26.5010565Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar (14 kB at 340 kB/s)
+2023-07-21T16:50:26.5012007Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar
+2023-07-21T16:50:26.5147329Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.jar (30 kB at 558 kB/s)
+2023-07-21T16:50:26.5148611Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar
+2023-07-21T16:50:26.5152977Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar (13 kB at 244 kB/s)
+2023-07-21T16:50:26.5154473Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar
+2023-07-21T16:50:26.5158229Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar (37 kB at 670 kB/s)
+2023-07-21T16:50:26.5159578Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar
+2023-07-21T16:50:26.5171186Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar (38 kB at 676 kB/s)
+2023-07-21T16:50:26.5173008Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar
+2023-07-21T16:50:26.5200678Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar (87 kB at 1.5 MB/s)
+2023-07-21T16:50:26.5202499Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar
+2023-07-21T16:50:26.5340745Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar (49 kB at 673 kB/s)
+2023-07-21T16:50:26.5342063Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar
+2023-07-21T16:50:26.5350308Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar (10 kB at 138 kB/s)
+2023-07-21T16:50:26.5351901Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+2023-07-21T16:50:26.5353600Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar (86 kB at 1.2 MB/s)
+2023-07-21T16:50:26.5354632Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar
+2023-07-21T16:50:26.5377991Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar (194 kB at 2.5 MB/s)
+2023-07-21T16:50:26.5379262Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar
+2023-07-21T16:50:26.5406578Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar (121 kB at 1.5 MB/s)
+2023-07-21T16:50:26.5534311Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar (6.8 kB at 73 kB/s)
+2023-07-21T16:50:26.5538687Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar (43 kB at 464 kB/s)
+2023-07-21T16:50:26.5563333Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar (223 kB at 2.3 MB/s)
+2023-07-21T16:50:26.5590421Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar (61 kB at 623 kB/s)
+2023-07-21T16:50:26.6004027Z [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-07-21T16:50:26.6004965Z [INFO] skip non existing resourceDirectory /home/runner/work/PGS/PGS/src/main/resources
+2023-07-21T16:50:26.6005800Z [INFO] 
+2023-07-21T16:50:26.6006433Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ PGS ---
+2023-07-21T16:50:26.6034737Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+2023-07-21T16:50:26.6247452Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 292 kB/s)
+2023-07-21T16:50:26.6248914Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom
+2023-07-21T16:50:26.6433966Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom (5.1 kB at 268 kB/s)
+2023-07-21T16:50:26.6444074Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+2023-07-21T16:50:26.6632143Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 2.4 MB/s)
+2023-07-21T16:50:26.6657973Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom
+2023-07-21T16:50:26.6848556Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 750 kB/s)
+2023-07-21T16:50:26.6863428Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+2023-07-21T16:50:26.7062557Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom (68 kB at 3.6 MB/s)
+2023-07-21T16:50:26.7088855Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+2023-07-21T16:50:26.7266335Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 825 kB/s)
+2023-07-21T16:50:26.7288209Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2023-07-21T16:50:26.7485177Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 237 kB/s)
+2023-07-21T16:50:26.7494931Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2023-07-21T16:50:26.7681077Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 353 kB/s)
+2023-07-21T16:50:26.7690354Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+2023-07-21T16:50:26.7880912Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (33 kB at 1.7 MB/s)
+2023-07-21T16:50:26.7902685Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2023-07-21T16:50:26.8089029Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 45 kB/s)
+2023-07-21T16:50:26.8096305Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2023-07-21T16:50:26.8305534Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 202 kB/s)
+2023-07-21T16:50:26.8313888Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+2023-07-21T16:50:26.8507425Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom (17 kB at 910 kB/s)
+2023-07-21T16:50:26.8529879Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom
+2023-07-21T16:50:26.8732098Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom (5.0 kB at 249 kB/s)
+2023-07-21T16:50:26.8740797Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom
+2023-07-21T16:50:26.8948488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom (4.1 kB at 197 kB/s)
+2023-07-21T16:50:26.8954571Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+2023-07-21T16:50:26.9144006Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 1.3 MB/s)
+2023-07-21T16:50:26.9162377Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom
+2023-07-21T16:50:26.9359141Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom (2.4 kB at 118 kB/s)
+2023-07-21T16:50:26.9366506Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
+2023-07-21T16:50:26.9552001Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom (11 kB at 627 kB/s)
+2023-07-21T16:50:26.9568618Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+2023-07-21T16:50:26.9766305Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 862 kB/s)
+2023-07-21T16:50:26.9783723Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom
+2023-07-21T16:50:26.9973474Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom (1.1 kB at 59 kB/s)
+2023-07-21T16:50:26.9979243Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom
+2023-07-21T16:50:27.0174146Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom (8.4 kB at 419 kB/s)
+2023-07-21T16:50:27.0186554Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom
+2023-07-21T16:50:27.0376594Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom (2.7 kB at 141 kB/s)
+2023-07-21T16:50:27.0412224Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+2023-07-21T16:50:27.0637046Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 348 kB/s)
+2023-07-21T16:50:27.0655104Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom
+2023-07-21T16:50:27.0913086Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom (1.1 kB at 52 kB/s)
+2023-07-21T16:50:27.0914794Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom
+2023-07-21T16:50:27.1088363Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom (770 B at 41 kB/s)
+2023-07-21T16:50:27.1100876Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom
+2023-07-21T16:50:27.1345632Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom (6.0 kB at 241 kB/s)
+2023-07-21T16:50:27.1361499Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom
+2023-07-21T16:50:27.1593433Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom (26 kB at 1.1 MB/s)
+2023-07-21T16:50:27.1624160Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom
+2023-07-21T16:50:27.1816104Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom (1.2 kB at 63 kB/s)
+2023-07-21T16:50:27.1824568Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom
+2023-07-21T16:50:27.2009278Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom (1.3 kB at 74 kB/s)
+2023-07-21T16:50:27.2081434Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+2023-07-21T16:50:27.2087557Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+2023-07-21T16:50:27.2093482Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2023-07-21T16:50:27.2103621Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2023-07-21T16:50:27.2113179Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar
+2023-07-21T16:50:27.2299788Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 211 kB/s)
+2023-07-21T16:50:27.2301278Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar
+2023-07-21T16:50:27.2315616Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 6.4 MB/s)
+2023-07-21T16:50:27.2318914Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 589 kB/s)
+2023-07-21T16:50:27.2319981Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar
+2023-07-21T16:50:27.2323749Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+2023-07-21T16:50:27.2327744Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 8.6 MB/s)
+2023-07-21T16:50:27.2328889Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+2023-07-21T16:50:27.2368705Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar (55 kB at 2.1 MB/s)
+2023-07-21T16:50:27.2372965Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar
+2023-07-21T16:50:27.2541495Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar (122 kB at 2.9 MB/s)
+2023-07-21T16:50:27.2542568Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar
+2023-07-21T16:50:27.2543798Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar (27 kB at 643 kB/s)
+2023-07-21T16:50:27.2568551Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 5.9 MB/s)
+2023-07-21T16:50:27.2572172Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 7.3 MB/s)
+2023-07-21T16:50:27.2575475Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar (4.7 kB at 101 kB/s)
+2023-07-21T16:50:27.2818657Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar (23 kB at 326 kB/s)
+2023-07-21T16:50:27.4787790Z [INFO] Changes detected - recompiling the module! :dependency
+2023-07-21T16:50:27.4803812Z [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+2023-07-21T16:50:27.4821395Z [INFO] Compiling 79 source files with javac [debug release 8] to target/classes
+2023-07-21T16:50:29.5552215Z Jabel: initialized
+2023-07-21T16:50:35.0318247Z [INFO] /home/runner/work/PGS/PGS/src/main/java/micycle/pgs/commons/AreaMerge.java: Some input files use or override a deprecated API.
+2023-07-21T16:50:35.0319896Z [INFO] /home/runner/work/PGS/PGS/src/main/java/micycle/pgs/commons/AreaMerge.java: Recompile with -Xlint:deprecation for details.
+2023-07-21T16:50:35.0320412Z [INFO] 
+2023-07-21T16:50:35.0321041Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ PGS ---
+2023-07-21T16:50:35.0375575Z [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-07-21T16:50:35.0376370Z [INFO] skip non existing resourceDirectory /home/runner/work/PGS/PGS/src/test/resources
+2023-07-21T16:50:35.0376850Z [INFO] 
+2023-07-21T16:50:35.0377479Z [INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ PGS ---
+2023-07-21T16:50:35.0543975Z [INFO] Changes detected - recompiling the module! :dependency
+2023-07-21T16:50:35.0544884Z [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+2023-07-21T16:50:35.0546258Z [INFO] Compiling 12 source files with javac [debug release 8] to target/test-classes
+2023-07-21T16:50:35.7818939Z Jabel: initialized
+2023-07-21T16:50:36.4286387Z [INFO] -------------------------------------------------------------
+2023-07-21T16:50:36.4287228Z [ERROR] COMPILATION ERROR : 
+2023-07-21T16:50:36.4288599Z [INFO] -------------------------------------------------------------
+2023-07-21T16:50:36.4289443Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[3,24] package org.junit does not exist
+2023-07-21T16:50:36.4290823Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4291569Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/FastPolygonizerTests.java:[13,17] cannot find symbol
+2023-07-21T16:50:36.4292013Z   symbol:   class Ignore
+2023-07-21T16:50:36.4292308Z   location: package org.junit
+2023-07-21T16:50:36.4292748Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[3,24] cannot find symbol
+2023-07-21T16:50:36.4293189Z   symbol:   class Assert
+2023-07-21T16:50:36.4293479Z   location: package org.junit
+2023-07-21T16:50:36.4293991Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4294594Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[4,24] cannot find symbol
+2023-07-21T16:50:36.4295007Z   symbol:   class Assert
+2023-07-21T16:50:36.4295297Z   location: package org.junit
+2023-07-21T16:50:36.4295776Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[4,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4296441Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[3,24] cannot find symbol
+2023-07-21T16:50:36.4296899Z   symbol:   class Assume
+2023-07-21T16:50:36.4297186Z   location: package org.junit
+2023-07-21T16:50:36.4297723Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4298400Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/FastPolygonizerTests.java:[101,10] cannot find symbol
+2023-07-21T16:50:36.4299555Z   symbol:   class Ignore
+2023-07-21T16:50:36.4299929Z   location: class micycle.pgs.FastPolygonizerTests
+2023-07-21T16:50:36.4300486Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[52,17] cannot find symbol
+2023-07-21T16:50:36.4300972Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4301379Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4301932Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[59,17] cannot find symbol
+2023-07-21T16:50:36.4302570Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4302974Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4303859Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[66,17] cannot find symbol
+2023-07-21T16:50:36.4304349Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4304760Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4305349Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[73,17] cannot find symbol
+2023-07-21T16:50:36.4305946Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4306347Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4306924Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[80,17] cannot find symbol
+2023-07-21T16:50:36.4307533Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4307932Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4308627Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[95,17] cannot find symbol
+2023-07-21T16:50:36.4309123Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4309630Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4323453Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[110,17] cannot find symbol
+2023-07-21T16:50:36.4324001Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4325699Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4326520Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[117,17] cannot find symbol
+2023-07-21T16:50:36.4327186Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4327792Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4328376Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[124,17] cannot find symbol
+2023-07-21T16:50:36.4328885Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4329290Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4331089Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[131,17] cannot find symbol
+2023-07-21T16:50:36.4331602Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4332006Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4333896Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[138,17] cannot find symbol
+2023-07-21T16:50:36.4334590Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4335201Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4335780Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[145,17] cannot find symbol
+2023-07-21T16:50:36.4336388Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4336757Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4337290Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[152,17] cannot find symbol
+2023-07-21T16:50:36.4337728Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4338383Z   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4338877Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[22,17] cannot find symbol
+2023-07-21T16:50:36.4339276Z   symbol:   method assertTrue(boolean)
+2023-07-21T16:50:36.4339610Z   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4340060Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[23,17] cannot find symbol
+2023-07-21T16:50:36.4340471Z   symbol:   method assertTrue(boolean)
+2023-07-21T16:50:36.4340786Z   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4345955Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[24,17] cannot find symbol
+2023-07-21T16:50:36.4346707Z   symbol:   method assertEquals(double,double,double)
+2023-07-21T16:50:36.4347078Z   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4348918Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[52,17] cannot find symbol
+2023-07-21T16:50:36.4349572Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4350068Z   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4350701Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[59,17] cannot find symbol
+2023-07-21T16:50:36.4351232Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4351676Z   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4352287Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[66,17] cannot find symbol
+2023-07-21T16:50:36.4353039Z   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4353474Z   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4353811Z [INFO] 29 errors 
+2023-07-21T16:50:36.4356407Z [INFO] -------------------------------------------------------------
+2023-07-21T16:50:36.4367268Z [INFO] 
+2023-07-21T16:50:36.4368113Z [INFO] ------------------------------------------------------------------------
+2023-07-21T16:50:36.4372117Z [INFO] Skipping Processing Geometry Suite
+2023-07-21T16:50:36.4380086Z [INFO] This project has been banned from the build due to previous failures.
+2023-07-21T16:50:36.4439657Z [INFO] ------------------------------------------------------------------------
+2023-07-21T16:50:36.4440276Z [INFO] ------------------------------------------------------------------------
+2023-07-21T16:50:36.4440640Z [INFO] BUILD FAILURE
+2023-07-21T16:50:36.4441122Z [INFO] ------------------------------------------------------------------------
+2023-07-21T16:50:36.4472571Z [INFO] Total time:  01:51 min
+2023-07-21T16:50:36.4523846Z [INFO] Finished at: 2023-07-21T16:50:36Z
+2023-07-21T16:50:36.4527929Z [INFO] ------------------------------------------------------------------------
+2023-07-21T16:50:36.4551934Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:testCompile (default-testCompile) on project PGS: Compilation failure: Compilation failure: 
+2023-07-21T16:50:36.4556243Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[3,24] package org.junit does not exist
+2023-07-21T16:50:36.4559505Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4562856Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/FastPolygonizerTests.java:[13,17] cannot find symbol
+2023-07-21T16:50:36.4566061Z [ERROR]   symbol:   class Ignore
+2023-07-21T16:50:36.4568852Z [ERROR]   location: package org.junit
+2023-07-21T16:50:36.4571884Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[3,24] cannot find symbol
+2023-07-21T16:50:36.4574742Z [ERROR]   symbol:   class Assert
+2023-07-21T16:50:36.4577541Z [ERROR]   location: package org.junit
+2023-07-21T16:50:36.4581066Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4584310Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[4,24] cannot find symbol
+2023-07-21T16:50:36.4586994Z [ERROR]   symbol:   class Assert
+2023-07-21T16:50:36.4589527Z [ERROR]   location: package org.junit
+2023-07-21T16:50:36.4592693Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[4,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4595195Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[3,24] cannot find symbol
+2023-07-21T16:50:36.4597401Z [ERROR]   symbol:   class Assume
+2023-07-21T16:50:36.4599776Z [ERROR]   location: package org.junit
+2023-07-21T16:50:36.4602531Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[3,1] static import only from classes and interfaces
+2023-07-21T16:50:36.4605212Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/FastPolygonizerTests.java:[101,10] cannot find symbol
+2023-07-21T16:50:36.4607355Z [ERROR]   symbol:   class Ignore
+2023-07-21T16:50:36.4609484Z [ERROR]   location: class micycle.pgs.FastPolygonizerTests
+2023-07-21T16:50:36.4611925Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[52,17] cannot find symbol
+2023-07-21T16:50:36.4614102Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4616291Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4618734Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[59,17] cannot find symbol
+2023-07-21T16:50:36.4620915Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4623073Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4671009Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[66,17] cannot find symbol
+2023-07-21T16:50:36.4676405Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4679275Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4681885Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[73,17] cannot find symbol
+2023-07-21T16:50:36.4684326Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4686491Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4688779Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[80,17] cannot find symbol
+2023-07-21T16:50:36.4690902Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4692985Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4695279Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[95,17] cannot find symbol
+2023-07-21T16:50:36.4697418Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4699491Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4701837Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[110,17] cannot find symbol
+2023-07-21T16:50:36.4704051Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4706115Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4708362Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[117,17] cannot find symbol
+2023-07-21T16:50:36.4710462Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4712503Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4714759Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[124,17] cannot find symbol
+2023-07-21T16:50:36.4717050Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4719280Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4721508Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[131,17] cannot find symbol
+2023-07-21T16:50:36.4723881Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4726070Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4728360Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[138,17] cannot find symbol
+2023-07-21T16:50:36.4730474Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4732515Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4735284Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[145,17] cannot find symbol
+2023-07-21T16:50:36.4737600Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4739766Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4742103Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java:[152,17] cannot find symbol
+2023-07-21T16:50:36.4766346Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4766807Z [ERROR]   location: class micycle.pgs.PGS_MorphologyGroupShapeTests
+2023-07-21T16:50:36.4767365Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[22,17] cannot find symbol
+2023-07-21T16:50:36.4767835Z [ERROR]   symbol:   method assertTrue(boolean)
+2023-07-21T16:50:36.4768206Z [ERROR]   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4768703Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[23,17] cannot find symbol
+2023-07-21T16:50:36.4769175Z [ERROR]   symbol:   method assertTrue(boolean)
+2023-07-21T16:50:36.4769553Z [ERROR]   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4770039Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_MeshingTests.java:[24,17] cannot find symbol
+2023-07-21T16:50:36.4770545Z [ERROR]   symbol:   method assertEquals(double,double,double)
+2023-07-21T16:50:36.4770962Z [ERROR]   location: class micycle.pgs.PGS_MeshingTests
+2023-07-21T16:50:36.4771486Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[52,17] cannot find symbol
+2023-07-21T16:50:36.4771987Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4772409Z [ERROR]   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4772996Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[59,17] cannot find symbol
+2023-07-21T16:50:36.4773493Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4773920Z [ERROR]   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4774504Z [ERROR] /home/runner/work/PGS/PGS/src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java:[66,17] cannot find symbol
+2023-07-21T16:50:36.4774987Z [ERROR]   symbol:   method assumeTrue(boolean)
+2023-07-21T16:50:36.4775407Z [ERROR]   location: class micycle.pgs.PGS_ProcessingGroupShapeTests
+2023-07-21T16:50:36.4775947Z [ERROR] -> [Help 1]
+2023-07-21T16:50:36.4776192Z [ERROR] 
+2023-07-21T16:50:36.4776646Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-07-21T16:50:36.4777219Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-21T16:50:36.4777559Z [ERROR] 
+2023-07-21T16:50:36.4777962Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-21T16:50:36.4778555Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-21T16:50:36.5116428Z ##[error]Process completed with exit code 1.
+2023-07-21T16:50:36.5213741Z Post job cleanup.
+2023-07-21T16:50:36.7353137Z Post job cleanup.
+2023-07-21T16:50:36.8625222Z [command]/usr/bin/git version
+2023-07-21T16:50:36.8659325Z git version 2.41.0
+2023-07-21T16:50:36.8716752Z Temporarily overriding HOME='/home/runner/work/_temp/68325329-9b3c-4e15-8e1b-ba3277ec5b47' before making global git config changes
+2023-07-21T16:50:36.8719836Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-21T16:50:36.8728012Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/PGS/PGS
+2023-07-21T16:50:36.8782405Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-21T16:50:36.8825306Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-21T16:50:36.9109923Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-21T16:50:36.9134675Z http.https://github.com/.extraheader
+2023-07-21T16:50:36.9147789Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-21T16:50:36.9190619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-21T16:50:36.9595022Z Post job cleanup.
+2023-07-21T16:50:37.1104347Z [command]/usr/bin/git version
+2023-07-21T16:50:37.1165217Z git version 2.41.0
+2023-07-21T16:50:37.1222530Z Temporarily overriding HOME='/home/runner/work/_temp/d5f88fd5-76df-45c9-b99b-73151d7a283c' before making global git config changes
+2023-07-21T16:50:37.1224419Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-21T16:50:37.1230754Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/PGS/PGS
+2023-07-21T16:50:37.1283914Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-21T16:50:37.1364215Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-21T16:50:37.1676911Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-21T16:50:37.1733930Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-21T16:50:37.2316003Z Cleaning up orphan processes
+
+2023-07-21T16:48:18.6643048Z ##[section]Starting: Prepare job build
+2023-07-21T16:48:18.6645070Z Evaluating strategy
+2023-07-21T16:48:18.6650463Z Creating job '__default'
+2023-07-21T16:48:18.6653023Z Evaluating timeout
+2023-07-21T16:48:18.6653063Z Evaluating cancel timeout
+2023-07-21T16:48:18.6653088Z Evaluating continue on error
+2023-07-21T16:48:18.6653129Z Evaluating target
+2023-07-21T16:48:18.6654442Z ##[section]Finishing: Prepare job build
+
+2023-07-21T16:48:40.6990969Z ##[group]Run actions/setup-java@v3
+2023-07-21T16:48:40.6991271Z with:
+2023-07-21T16:48:40.6991508Z   distribution: temurin
+2023-07-21T16:48:40.6991776Z   java-version: 17
+2023-07-21T16:48:40.6992030Z   cache: maven
+2023-07-21T16:48:40.6992286Z   java-package: jdk
+2023-07-21T16:48:40.6992541Z   check-latest: false
+2023-07-21T16:48:40.6992807Z   server-id: github
+2023-07-21T16:48:40.6993091Z   server-username: GITHUB_ACTOR
+2023-07-21T16:48:40.6993407Z   server-password: GITHUB_TOKEN
+2023-07-21T16:48:40.6993712Z   overwrite-settings: true
+2023-07-21T16:48:40.6993996Z   job-status: success
+2023-07-21T16:48:40.6994386Z   token: ***
+2023-07-21T16:48:40.6994630Z ##[endgroup]
+2023-07-21T16:48:40.9434130Z ##[group]Installed distributions
+2023-07-21T16:48:40.9501981Z Resolved Java 17.0.7+7 from tool-cache
+2023-07-21T16:48:40.9502585Z Setting Java 17.0.7+7 as the default
+2023-07-21T16:48:40.9528566Z Creating toolchains.xml for JDK version 17 from temurin
+2023-07-21T16:48:40.9652571Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-21T16:48:40.9653106Z 
+2023-07-21T16:48:40.9653291Z Java configuration:
+2023-07-21T16:48:40.9653668Z   Distribution: temurin
+2023-07-21T16:48:40.9654046Z   Version: 17.0.7+7
+2023-07-21T16:48:40.9654774Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-21T16:48:40.9655124Z 
+2023-07-21T16:48:40.9655647Z ##[endgroup]
+2023-07-21T16:48:40.9698051Z Creating settings.xml with server-id: github
+2023-07-21T16:48:40.9719678Z Writing to /home/runner/.m2/settings.xml
+2023-07-21T16:48:41.2141070Z maven cache is not found
+
+2023-07-21T16:48:41.2345376Z ##[group]Run actions/cache@v1
+2023-07-21T16:48:41.2345672Z with:
+2023-07-21T16:48:41.2345901Z   path: ~/.sonar/cache
+2023-07-21T16:48:41.2346137Z   key: Linux-sonar
+2023-07-21T16:48:41.2346404Z   restore-keys: Linux-sonar
+2023-07-21T16:48:41.2346665Z env:
+2023-07-21T16:48:41.2346975Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-21T16:48:41.2347435Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-21T16:48:41.2347769Z ##[endgroup]
+2023-07-21T16:48:41.4378186Z Cache not found for input keys: Linux-sonar, Linux-sonar.

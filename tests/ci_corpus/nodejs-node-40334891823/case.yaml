@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40334891823
 head_sha: f2f835b3ccac87e46541ccf700dc8b946c29e8ad
 run_attempts:
@@ -82,7 +83,7 @@ commits:
   - tools/nix/cross-compile-perfetto.nix
   - tools/perfetto/get_trace_processor.py
   - tools/perfetto/trace_processor_shell.json
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

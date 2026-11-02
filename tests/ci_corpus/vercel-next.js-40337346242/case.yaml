@@ -1,4 +1,5 @@
 repo: vercel/next.js
+source: mined
 run_id: 40337346242
 head_sha: 56b07938df21e9a336c30b66f5c8cc928710494c
 run_attempts:
@@ -113,7 +114,7 @@ commits:
   files:
   - turbopack/crates/turbopack-go/src/inputs.rs
   - turbopack/crates/turbopack-go/src/lib.rs
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

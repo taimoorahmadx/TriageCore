@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40347077152
 head_sha: d2ad764b26ea33ae9e8304cb28d8e713c17b686b
 run_attempts:
@@ -36,7 +37,7 @@ commits:
 - sha: 79239a48f1999c7ffa6b0a37ffb823485587d0b0
   author: nodejs-github-bot
   files: []
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

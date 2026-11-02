@@ -1,0 +1,63 @@
+repo: errbotio/errbot
+run_id: '180'
+head_sha: a14be35a9de01a87991618a5dbd6b96470d0f799
+run_attempts: []
+commits:
+- sha: a14be35a9de01a87991618a5dbd6b96470d0f799
+  author: sijis
+  files:
+  - errbot/botplugin.py
+  - errbot/core_plugins/vcheck.py
+- sha: 34be17184012ca1b0848b1f80b08445718234ecc
+  author: sijis
+  files:
+  - docs/user_guide/plugin_development/webhooks.rst
+- sha: eff39e7253f81de6a003dcd50a0098549d731bea
+  author: sijis
+  files:
+  - tests/base_backend_test.py
+  - tests/commandnotfound_plugin/commandnotfound.py
+  - tests/room_plugin/roomtest.py
+- sha: efce69f2b4c0ffc49c55925e36d4ccf3d98f1c85
+  author: sijis
+  files:
+  - tests/commands_test.py
+- sha: cb9e671b30bac5976c51300e820e95db74a8be0f
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: 9373e9ebc7b0b8c2ad17c5ccb5a38f08692068ad
+  author: sijis
+  files:
+  - CHANGES.rst
+  - docs/html_extras/repos.json
+- sha: b6acb8150265a614c32248b758a822261b9fea57
+  author: sijis
+  files:
+  - .readthedocs.yaml
+  - CHANGES.rst
+- sha: 41379c40b4f23bacb98df2710851332cf7f2b031
+  author: sijis
+  files:
+  - CHANGES.rst
+  - docs/html_extras/repos.json
+  - tools/blacklisted.txt
+  - tools/plugin-gen.py
+- sha: 91f62a7ee256e418a249be9c61e83f0f3ead662d
+  author: dependabot[bot]
+  files:
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: e2e41586ddfd5f216d4862b435d62207de63dbec
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

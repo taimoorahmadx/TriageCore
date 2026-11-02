@@ -1,0 +1,787 @@
+2023-07-13T17:04:07.1589678Z Current runner version: '2.306.0'
+2023-07-13T17:04:07.1618567Z ##[group]Operating System
+2023-07-13T17:04:07.1619236Z Ubuntu
+2023-07-13T17:04:07.1619487Z 22.04.2
+2023-07-13T17:04:07.1619793Z LTS
+2023-07-13T17:04:07.1620089Z ##[endgroup]
+2023-07-13T17:04:07.1620369Z ##[group]Runner Image
+2023-07-13T17:04:07.1620751Z Image: ubuntu-22.04
+2023-07-13T17:04:07.1621087Z Version: 20230710.1.0
+2023-07-13T17:04:07.1621613Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230710.1/images/linux/Ubuntu2204-Readme.md
+2023-07-13T17:04:07.1622202Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230710.1
+2023-07-13T17:04:07.1622648Z ##[endgroup]
+2023-07-13T17:04:07.1623026Z ##[group]Runner Image Provisioner
+2023-07-13T17:04:07.1623335Z 2.0.238.1
+2023-07-13T17:04:07.1623625Z ##[endgroup]
+2023-07-13T17:04:07.1624618Z ##[group]GITHUB_TOKEN Permissions
+2023-07-13T17:04:07.1625287Z Actions: read
+2023-07-13T17:04:07.1625551Z Checks: read
+2023-07-13T17:04:07.1625865Z Contents: read
+2023-07-13T17:04:07.1626482Z Deployments: read
+2023-07-13T17:04:07.1626814Z Discussions: read
+2023-07-13T17:04:07.1627128Z Issues: read
+2023-07-13T17:04:07.1627387Z Metadata: read
+2023-07-13T17:04:07.1627739Z Packages: read
+2023-07-13T17:04:07.1628048Z Pages: read
+2023-07-13T17:04:07.1628319Z PullRequests: read
+2023-07-13T17:04:07.1628670Z RepositoryProjects: read
+2023-07-13T17:04:07.1629031Z SecurityEvents: read
+2023-07-13T17:04:07.1629349Z Statuses: read
+2023-07-13T17:04:07.1629660Z ##[endgroup]
+2023-07-13T17:04:07.1633433Z Secret source: Dependabot
+2023-07-13T17:04:07.1633927Z Prepare workflow directory
+2023-07-13T17:04:07.2393149Z Prepare all required actions
+2023-07-13T17:04:07.2583420Z Getting action download info
+2023-07-13T17:04:07.5131720Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+2023-07-13T17:04:08.1748217Z Download action repository 'actions/setup-java@v1' (SHA:b6e674f4b717d7b0ae3baee0fbe79f498905dfde)
+2023-07-13T17:04:09.8771192Z Complete job name: build
+
+2023-07-13T17:04:14.7222786Z ##[group]Run mvn package
+2023-07-13T17:04:14.7223118Z [36;1mmvn package[0m
+2023-07-13T17:04:14.7282430Z shell: /usr/bin/bash -e {0}
+2023-07-13T17:04:14.7282681Z env:
+2023-07-13T17:04:14.7282932Z   JAVA_HOME_8.0.372_x64: /opt/hostedtoolcache/jdk/8.0.372/x64
+2023-07-13T17:04:14.7283218Z   JAVA_HOME: /opt/hostedtoolcache/jdk/8.0.372/x64
+2023-07-13T17:04:14.7283490Z   JAVA_HOME_8_0_372_X64: /opt/hostedtoolcache/jdk/8.0.372/x64
+2023-07-13T17:04:14.7283729Z ##[endgroup]
+2023-07-13T17:04:15.9687714Z [INFO] Scanning for projects...
+2023-07-13T17:04:16.2140828Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.7/nexus-staging-maven-plugin-1.6.7.pom
+2023-07-13T17:04:16.6233066Z Progress (1): 2.7/12 kB
+2023-07-13T17:04:16.6244409Z Progress (1): 5.5/12 kB
+2023-07-13T17:04:16.6252861Z Progress (1): 8.2/12 kB
+2023-07-13T17:04:16.6283636Z Progress (1): 11/12 kB 
+2023-07-13T17:04:16.6490168Z Progress (1): 12 kB   
+2023-07-13T17:04:16.6492664Z                    
+2023-07-13T17:04:16.6494285Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plugins/nexus-staging-maven-plugin/1.6.7/nexus-staging-maven-plugin-1.6.7.pom (12 kB at 27 kB/s)
+2023-07-13T17:04:16.6660943Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-staging/1.6.7/nexus-staging-1.6.7.pom
+2023-07-13T17:04:16.6819792Z Progress (1): 2.7/2.8 kB
+2023-07-13T17:04:16.7052051Z Progress (1): 2.8 kB    
+2023-07-13T17:04:16.7054255Z                     
+2023-07-13T17:04:16.7054999Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-staging/1.6.7/nexus-staging-1.6.7.pom (2.8 kB at 69 kB/s)
+2023-07-13T17:04:16.7098961Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-maven-plugins/1.6.7/nexus-maven-plugins-1.6.7.pom
+2023-07-13T17:04:16.7237359Z Progress (1): 2.7/18 kB
+2023-07-13T17:04:16.7258696Z Progress (1): 5.5/18 kB
+2023-07-13T17:04:16.7279816Z Progress (1): 8.2/18 kB
+2023-07-13T17:04:16.7301395Z Progress (1): 11/18 kB 
+2023-07-13T17:04:16.7307666Z Progress (1): 14/18 kB
+2023-07-13T17:04:16.7323606Z Progress (1): 16/18 kB
+2023-07-13T17:04:16.7571460Z Progress (1): 18 kB   
+2023-07-13T17:04:16.7573473Z                    
+2023-07-13T17:04:16.7574439Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-maven-plugins/1.6.7/nexus-maven-plugins-1.6.7.pom (18 kB at 366 kB/s)
+2023-07-13T17:04:16.7639787Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/public-parent/6/public-parent-6.pom
+2023-07-13T17:04:16.7950975Z Progress (1): 760 B
+2023-07-13T17:04:16.7951540Z                    
+2023-07-13T17:04:16.7952709Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/public-parent/6/public-parent-6.pom (760 B at 22 kB/s)
+2023-07-13T17:04:16.7968581Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/buildsupport/6/buildsupport-6.pom
+2023-07-13T17:04:16.8074551Z Progress (1): 2.7/23 kB
+2023-07-13T17:04:16.8084602Z Progress (1): 5.5/23 kB
+2023-07-13T17:04:16.8090071Z Progress (1): 8.2/23 kB
+2023-07-13T17:04:16.8100349Z Progress (1): 11/23 kB 
+2023-07-13T17:04:16.8106307Z Progress (1): 14/23 kB
+2023-07-13T17:04:16.8114385Z Progress (1): 16/23 kB
+2023-07-13T17:04:16.8132486Z Progress (1): 19/23 kB
+2023-07-13T17:04:16.8135737Z Progress (1): 22/23 kB
+2023-07-13T17:04:16.8241866Z Progress (1): 23 kB   
+2023-07-13T17:04:16.8243358Z                    
+2023-07-13T17:04:16.8244368Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/buildsupport/buildsupport/6/buildsupport-6.pom (23 kB at 821 kB/s)
+2023-07-13T17:04:16.8434133Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.7/nexus-common-1.6.7.pom
+2023-07-13T17:04:16.8651662Z Progress (1): 2.2 kB
+2023-07-13T17:04:16.8653919Z                     
+2023-07-13T17:04:16.8654605Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/maven/nexus-common/1.6.7/nexus-common-1.6.7.pom (2.2 kB at 101 kB/s)
+2023-07-13T17:04:16.8713030Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.pom
+2023-07-13T17:04:16.8992664Z Progress (1): 3.0 kB
+2023-07-13T17:04:16.8995013Z                     
+2023-07-13T17:04:16.8995766Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.4/plexus-sec-dispatcher-1.4.pom (3.0 kB at 106 kB/s)
+2023-07-13T17:04:16.9018795Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom
+2023-07-13T17:04:16.9386803Z Progress (1): 4.1/6.8 kB
+2023-07-13T17:04:16.9489852Z Progress (1): 6.8 kB    
+2023-07-13T17:04:16.9490935Z                     
+2023-07-13T17:04:16.9491611Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/12/spice-parent-12.pom (6.8 kB at 142 kB/s)
+2023-07-13T17:04:16.9536781Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom
+2023-07-13T17:04:16.9832284Z Progress (1): 4.1/8.4 kB
+2023-07-13T17:04:16.9839618Z Progress (1): 8.2/8.4 kB
+2023-07-13T17:04:17.0087229Z Progress (1): 8.4 kB    
+2023-07-13T17:04:17.0091287Z                     
+2023-07-13T17:04:17.0092027Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/4/forge-parent-4.pom (8.4 kB at 150 kB/s)
+2023-07-13T17:04:17.0151065Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7.pom
+2023-07-13T17:04:17.0260120Z Progress (1): 4.1/4.2 kB
+2023-07-13T17:04:17.0398972Z Progress (1): 4.2 kB    
+2023-07-13T17:04:17.0401197Z                     
+2023-07-13T17:04:17.0401912Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.7/plexus-cipher-1.7.pom (4.2 kB at 161 kB/s)
+2023-07-13T17:04:17.0422631Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom
+2023-07-13T17:04:17.0529947Z Progress (1): 4.1/8.4 kB
+2023-07-13T17:04:17.0532458Z Progress (1): 8.2/8.4 kB
+2023-07-13T17:04:17.0635760Z Progress (1): 8.4 kB    
+2023-07-13T17:04:17.0637973Z                     
+2023-07-13T17:04:17.0638671Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom (8.4 kB at 398 kB/s)
+2023-07-13T17:04:17.0659617Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom
+2023-07-13T17:04:17.0765068Z Progress (1): 4.1/8.4 kB
+2023-07-13T17:04:17.0769880Z Progress (1): 8.2/8.4 kB
+2023-07-13T17:04:17.0874579Z Progress (1): 8.4 kB    
+2023-07-13T17:04:17.0876664Z                     
+2023-07-13T17:04:17.0877329Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom (8.4 kB at 380 kB/s)
+2023-07-13T17:04:17.0913782Z Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/14.0.1/guava-14.0.1.pom
+2023-07-13T17:04:17.1021692Z Progress (1): 4.1/5.4 kB
+2023-07-13T17:04:17.1119459Z Progress (1): 5.4 kB    
+2023-07-13T17:04:17.1120030Z                     
+2023-07-13T17:04:17.1120852Z Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/14.0.1/guava-14.0.1.pom (5.4 kB at 269 kB/s)
+2023-07-13T17:04:17.1140154Z Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/14.0.1/guava-parent-14.0.1.pom
+2023-07-13T17:04:17.1344310Z Progress (1): 2.6 kB
+2023-07-13T17:04:17.1344982Z                     
+2023-07-13T17:04:17.1345752Z Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/14.0.1/guava-parent-14.0.1.pom (2.6 kB at 122 kB/s)
+2023-07-13T17:04:17.1378610Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2023-07-13T17:04:17.1483051Z Progress (1): 4.1/4.8 kB
+2023-07-13T17:04:17.1584459Z Progress (1): 4.8 kB    
+2023-07-13T17:04:17.1588318Z                     
+2023-07-13T17:04:17.1588977Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom (4.8 kB at 219 kB/s)
+2023-07-13T17:04:17.1624337Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-client-core/2.9.1-02/nexus-client-core-2.9.1-02.pom
+2023-07-13T17:04:17.1739903Z Progress (1): 4.1/4.9 kB
+2023-07-13T17:04:17.1841953Z Progress (1): 4.9 kB    
+2023-07-13T17:04:17.1844183Z                     
+2023-07-13T17:04:17.1844870Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-client-core/2.9.1-02/nexus-client-core-2.9.1-02.pom (4.9 kB at 224 kB/s)
+2023-07-13T17:04:17.1862856Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-components/2.9.1-02/nexus-components-2.9.1-02.pom
+2023-07-13T17:04:17.2071334Z Progress (1): 2.6 kB
+2023-07-13T17:04:17.2075047Z                     
+2023-07-13T17:04:17.2075708Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-components/2.9.1-02/nexus-components-2.9.1-02.pom (2.6 kB at 123 kB/s)
+2023-07-13T17:04:17.2090331Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-oss/2.9.1-02/nexus-oss-2.9.1-02.pom
+2023-07-13T17:04:17.2205093Z Progress (1): 4.1/37 kB
+2023-07-13T17:04:17.2206299Z Progress (1): 8.2/37 kB
+2023-07-13T17:04:17.2207955Z Progress (1): 12/37 kB 
+2023-07-13T17:04:17.2223568Z Progress (1): 16/37 kB
+2023-07-13T17:04:17.2224473Z Progress (1): 20/37 kB
+2023-07-13T17:04:17.2225987Z Progress (1): 25/37 kB
+2023-07-13T17:04:17.2227354Z Progress (1): 29/37 kB
+2023-07-13T17:04:17.2235883Z Progress (1): 33/37 kB
+2023-07-13T17:04:17.2236367Z Progress (1): 37/37 kB
+2023-07-13T17:04:17.2389958Z Progress (1): 37 kB   
+2023-07-13T17:04:17.2392295Z                    
+2023-07-13T17:04:17.2392982Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/nexus-oss/2.9.1-02/nexus-oss-2.9.1-02.pom (37 kB at 1.2 MB/s)
+2023-07-13T17:04:17.2462695Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/buildsupport/nexus-buildsupport-all/2.9.1-02/nexus-buildsupport-all-2.9.1-02.pom
+2023-07-13T17:04:17.2568137Z Progress (1): 4.1/5.7 kB
+2023-07-13T17:04:17.2677901Z Progress (1): 5.7 kB    
+2023-07-13T17:04:17.2678419Z                     
+2023-07-13T17:04:17.2679522Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/buildsupport/nexus-buildsupport-all/2.9.1-02/nexus-buildsupport-all-2.9.1-02.pom (5.7 kB at 271 kB/s)
+2023-07-13T17:04:17.2693441Z Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/buildsupport/nexus-buildsupport/2.9.1-02/nexus-buildsupport-2.9.1-02.pom
+2023-07-13T17:04:17.2905660Z Progress (1): 2.0 kB
+2023-07-13T17:04:17.2909935Z                     
+2023-07-13T17:04:17.2910682Z Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/nexus/buildsupport/nexus-buildsupport/2.9.1-02/nexus-buildsupport-2.9.1-02.pom (2.0 kB at 94 kB/s)
+2023-07-13T17:04:17.2952692Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-commons/2.9.1-02/nexus-buildsupport-commons-2.9.1-02.pom
+2023-07-13T17:04:17.5727135Z Progress (1): 3.0 kB
+2023-07-13T17:04:17.5731306Z                     
+2023-07-13T17:04:17.5732246Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-commons/2.9.1-02/nexus-buildsupport-commons-2.9.1-02.pom (3.0 kB at 11 kB/s)
+2023-07-13T17:04:17.5781606Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-db/2.9.1-02/nexus-buildsupport-db-2.9.1-02.pom
+2023-07-13T17:04:17.6616060Z Progress (1): 2.0 kB
+2023-07-13T17:04:17.6620059Z                     
+2023-07-13T17:04:17.6621101Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-db/2.9.1-02/nexus-buildsupport-db-2.9.1-02.pom (2.0 kB at 24 kB/s)
+2023-07-13T17:04:17.6666473Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-httpclient/2.9.1-02/nexus-buildsupport-httpclient-2.9.1-02.pom
+2023-07-13T17:04:17.7499259Z Progress (1): 2.1 kB
+2023-07-13T17:04:17.7500370Z                     
+2023-07-13T17:04:17.7501788Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-httpclient/2.9.1-02/nexus-buildsupport-httpclient-2.9.1-02.pom (2.1 kB at 26 kB/s)
+2023-07-13T17:04:17.7542010Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-maven/2.9.1-02/nexus-buildsupport-maven-2.9.1-02.pom
+2023-07-13T17:04:17.7965422Z Progress (1): 3.8/6.2 kB
+2023-07-13T17:04:17.8371980Z Progress (1): 6.2 kB    
+2023-07-13T17:04:17.8374337Z                     
+2023-07-13T17:04:17.8376373Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-maven/2.9.1-02/nexus-buildsupport-maven-2.9.1-02.pom (6.2 kB at 73 kB/s)
+2023-07-13T17:04:17.8418765Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-shiro/2.9.1-02/nexus-buildsupport-shiro-2.9.1-02.pom
+2023-07-13T17:04:17.9245374Z Progress (1): 3.4 kB
+2023-07-13T17:04:17.9245968Z                     
+2023-07-13T17:04:17.9247131Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-shiro/2.9.1-02/nexus-buildsupport-shiro-2.9.1-02.pom (3.4 kB at 41 kB/s)
+2023-07-13T17:04:17.9288750Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-bouncycastle/2.9.1-02/nexus-buildsupport-bouncycastle-2.9.1-02.pom
+2023-07-13T17:04:18.0148246Z Progress (1): 2.1 kB
+2023-07-13T17:04:18.0149440Z                     
+2023-07-13T17:04:18.0150810Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-bouncycastle/2.9.1-02/nexus-buildsupport-bouncycastle-2.9.1-02.pom (2.1 kB at 24 kB/s)
+2023-07-13T17:04:18.0215684Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-jetty/2.9.1-02/nexus-buildsupport-jetty-2.9.1-02.pom
+2023-07-13T17:04:18.0685220Z Progress (1): 3.8/4.5 kB
+2023-07-13T17:04:18.1098174Z Progress (1): 4.5 kB    
+2023-07-13T17:04:18.1098977Z                     
+2023-07-13T17:04:18.1100164Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-jetty/2.9.1-02/nexus-buildsupport-jetty-2.9.1-02.pom (4.5 kB at 50 kB/s)
+2023-07-13T17:04:18.1145434Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-goodies/2.9.1-02/nexus-buildsupport-goodies-2.9.1-02.pom
+2023-07-13T17:04:18.1963943Z Progress (1): 3.6 kB
+2023-07-13T17:04:18.1964971Z                     
+2023-07-13T17:04:18.1965924Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-goodies/2.9.1-02/nexus-buildsupport-goodies-2.9.1-02.pom (3.6 kB at 44 kB/s)
+2023-07-13T17:04:18.2001406Z Downloading from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-groovy/2.9.1-02/nexus-buildsupport-groovy-2.9.1-02.pom
+2023-07-13T17:04:18.2812854Z Progress (1): 2.6 kB
+2023-07-13T17:04:18.2815225Z                     
+2023-07-13T17:04:18.2816138Z Downloaded from rso-public-grid: https://repository.sonatype.org/content/groups/sonatype-public-grid/org/sonatype/nexus/buildsupport/nexus-buildsupport-groovy/2.9.1-02/nexus-buildsupport-groovy-2.9.1-02.pom (2.6 kB at 32 kB/s)
+[... 18883 lines removed by TriageCore ...]
+2023-07-13T17:04:41.2120568Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 159/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2121642Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 163/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2121917Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 167/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2122637Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 171/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2122924Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 176/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2124009Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 180/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2124294Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 184/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2125009Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 188/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2125306Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 192/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2126399Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 196/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2126686Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 200/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2127730Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 204/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2128386Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 208/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2128662Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 8.2/51 kB
+2023-07-13T17:04:41.2129144Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 12/51 kB 
+2023-07-13T17:04:41.2130177Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 16/51 kB
+2023-07-13T17:04:41.2130626Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 20/51 kB
+2023-07-13T17:04:41.2131122Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 25/51 kB
+2023-07-13T17:04:41.2131402Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 29/51 kB
+2023-07-13T17:04:41.2132310Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 33/51 kB
+2023-07-13T17:04:41.2132601Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 37/51 kB
+2023-07-13T17:04:41.2133287Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 41/51 kB
+2023-07-13T17:04:41.2133572Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 45/51 kB
+2023-07-13T17:04:41.2134283Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 49/51 kB
+2023-07-13T17:04:41.2138076Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 212/269 kB | 51 kB   
+2023-07-13T17:04:41.2138380Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 217/269 kB | 51 kB
+2023-07-13T17:04:41.2139107Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 221/269 kB | 51 kB
+2023-07-13T17:04:41.2139398Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 225/269 kB | 51 kB
+2023-07-13T17:04:41.2140453Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 229/269 kB | 51 kB
+2023-07-13T17:04:41.2140744Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 233/269 kB | 51 kB
+2023-07-13T17:04:41.2141634Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 237/269 kB | 51 kB
+2023-07-13T17:04:41.2141934Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 241/269 kB | 51 kB
+2023-07-13T17:04:41.2143074Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 245/269 kB | 51 kB
+2023-07-13T17:04:41.2143363Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 249/269 kB | 51 kB
+2023-07-13T17:04:41.2144077Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 253/269 kB | 51 kB
+2023-07-13T17:04:41.2144351Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 257/269 kB | 51 kB
+2023-07-13T17:04:41.2145305Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 262/269 kB | 51 kB
+2023-07-13T17:04:41.2145586Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 266/269 kB | 51 kB
+2023-07-13T17:04:41.2173047Z Progress (4): 3.1/51 MB | 2.2/3.0 MB | 269 kB | 51 kB    
+2023-07-13T17:04:41.2203347Z Progress (4): 3.4/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2208553Z Progress (4): 3.6/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2210550Z Progress (4): 3.6/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2212494Z Progress (4): 3.6/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2214439Z Progress (4): 3.6/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2216455Z Progress (4): 3.6/51 MB | 2.2/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2218345Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2220299Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2222265Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2224238Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2226177Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2228154Z Progress (4): 3.6/51 MB | 2.3/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2230282Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2245312Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2245664Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 51 kB
+2023-07-13T17:04:41.2250964Z Progress (5): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 51 kB | 4.1/194 kB
+2023-07-13T17:04:41.2251317Z                                                                   
+2023-07-13T17:04:41.2271142Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-util-io/1.6.0/kotlin-util-io-1.6.0.jar (51 kB at 143 kB/s)
+2023-07-13T17:04:41.2271467Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 8.2/194 kB
+2023-07-13T17:04:41.2271939Z                                                           
+2023-07-13T17:04:41.2272598Z Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl/1.6.0/kotlin-scripting-compiler-impl-1.6.0.jar
+2023-07-13T17:04:41.2273152Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 12/194 kB
+2023-07-13T17:04:41.2273423Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 16/194 kB
+2023-07-13T17:04:41.2273890Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 20/194 kB
+2023-07-13T17:04:41.2274159Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 20/194 kB
+2023-07-13T17:04:41.2274627Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 24/194 kB
+2023-07-13T17:04:41.2274885Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 28/194 kB
+2023-07-13T17:04:41.2275356Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 32/194 kB
+2023-07-13T17:04:41.2275613Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 36/194 kB
+2023-07-13T17:04:41.2276057Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 40/194 kB
+2023-07-13T17:04:41.2276311Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 45/194 kB
+2023-07-13T17:04:41.2276767Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 49/194 kB
+2023-07-13T17:04:41.2277022Z Progress (4): 3.6/51 MB | 2.4/3.0 MB | 269 kB | 53/194 kB
+2023-07-13T17:04:41.2277461Z                                                          
+2023-07-13T17:04:41.2278046Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-util-klib/1.6.0/kotlin-util-klib-1.6.0.jar (269 kB at 753 kB/s)
+2023-07-13T17:04:41.2279021Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.5.1/maven-compiler-plugin-3.5.1.jar
+2023-07-13T17:04:41.2279310Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 57/194 kB
+2023-07-13T17:04:41.2279769Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 61/194 kB
+2023-07-13T17:04:41.2280026Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 65/194 kB
+2023-07-13T17:04:41.2280473Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 69/194 kB
+2023-07-13T17:04:41.2280725Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 69/194 kB
+2023-07-13T17:04:41.2281166Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 73/194 kB
+2023-07-13T17:04:41.2281419Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 77/194 kB
+2023-07-13T17:04:41.2281866Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 81/194 kB
+2023-07-13T17:04:41.2282117Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 81/194 kB
+2023-07-13T17:04:41.2282562Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 85/194 kB
+2023-07-13T17:04:41.2282810Z Progress (3): 3.6/51 MB | 2.4/3.0 MB | 90/194 kB
+2023-07-13T17:04:41.2283264Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 90/194 kB
+2023-07-13T17:04:41.2283518Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 94/194 kB
+2023-07-13T17:04:41.2283964Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 98/194 kB
+2023-07-13T17:04:41.2284231Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 102/194 kB
+2023-07-13T17:04:41.2284677Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 102/194 kB
+2023-07-13T17:04:41.2284941Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 106/194 kB
+2023-07-13T17:04:41.2285401Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 110/194 kB
+2023-07-13T17:04:41.2285655Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 114/194 kB
+2023-07-13T17:04:41.2286177Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 118/194 kB
+2023-07-13T17:04:41.2286428Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 118/194 kB
+2023-07-13T17:04:41.2286879Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 122/194 kB
+2023-07-13T17:04:41.2287130Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 126/194 kB
+2023-07-13T17:04:41.2287698Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 131/194 kB
+2023-07-13T17:04:41.2288020Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 131/194 kB
+2023-07-13T17:04:41.2288468Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 135/194 kB
+2023-07-13T17:04:41.2288723Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 139/194 kB
+2023-07-13T17:04:41.2289310Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 143/194 kB
+2023-07-13T17:04:41.2289564Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 147/194 kB
+2023-07-13T17:04:41.2290014Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 147/194 kB
+2023-07-13T17:04:41.2290265Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 151/194 kB
+2023-07-13T17:04:41.2290712Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 155/194 kB
+2023-07-13T17:04:41.2290963Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 159/194 kB
+2023-07-13T17:04:41.2291413Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 163/194 kB
+2023-07-13T17:04:41.2291666Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 163/194 kB
+2023-07-13T17:04:41.2292112Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 167/194 kB
+2023-07-13T17:04:41.2292356Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 171/194 kB
+2023-07-13T17:04:41.2292801Z Progress (3): 3.6/51 MB | 2.5/3.0 MB | 176/194 kB
+2023-07-13T17:04:41.2293058Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 176/194 kB
+2023-07-13T17:04:41.2293515Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 180/194 kB
+2023-07-13T17:04:41.2293768Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 184/194 kB
+2023-07-13T17:04:41.2294215Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 188/194 kB
+2023-07-13T17:04:41.2294468Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 192/194 kB
+2023-07-13T17:04:41.2294954Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 192/194 kB
+2023-07-13T17:04:41.2295207Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 194 kB    
+2023-07-13T17:04:41.2295664Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 194 kB
+2023-07-13T17:04:41.2295919Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 194 kB
+2023-07-13T17:04:41.2301204Z Progress (3): 3.6/51 MB | 2.6/3.0 MB | 194 kB
+2023-07-13T17:04:41.2329580Z Progress (3): 3.9/51 MB | 2.6/3.0 MB | 194 kB
+2023-07-13T17:04:41.2331393Z Progress (3): 3.9/51 MB | 2.6/3.0 MB | 194 kB
+2023-07-13T17:04:41.2333710Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2335830Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2337570Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2339491Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2341407Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2343378Z Progress (3): 3.9/51 MB | 2.7/3.0 MB | 194 kB
+2023-07-13T17:04:41.2345282Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 194 kB
+2023-07-13T17:04:41.2347612Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 194 kB
+2023-07-13T17:04:41.2349755Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 194 kB
+2023-07-13T17:04:41.2353576Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 194 kB
+2023-07-13T17:04:41.2354560Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 4.1/310 kB
+2023-07-13T17:04:41.2356170Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 8.2/310 kB
+2023-07-13T17:04:41.2356699Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 12/310 kB 
+2023-07-13T17:04:41.2356977Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 16/310 kB
+2023-07-13T17:04:41.2357474Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 20/310 kB
+2023-07-13T17:04:41.2357740Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 24/310 kB
+2023-07-13T17:04:41.2358333Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 28/310 kB
+2023-07-13T17:04:41.2358604Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 32/310 kB
+2023-07-13T17:04:41.2359354Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 36/310 kB
+2023-07-13T17:04:41.2359638Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 40/310 kB
+2023-07-13T17:04:41.2360343Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 45/310 kB
+2023-07-13T17:04:41.2361379Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 49/310 kB
+2023-07-13T17:04:41.2361664Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 53/310 kB
+2023-07-13T17:04:41.2362138Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 57/310 kB
+2023-07-13T17:04:41.2362413Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 61/310 kB
+2023-07-13T17:04:41.2363619Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 65/310 kB
+2023-07-13T17:04:41.2370892Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 69/310 kB
+2023-07-13T17:04:41.2371639Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 73/310 kB
+2023-07-13T17:04:41.2371900Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 77/310 kB
+2023-07-13T17:04:41.2372370Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 81/310 kB
+2023-07-13T17:04:41.2372634Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 85/310 kB
+2023-07-13T17:04:41.2373093Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 90/310 kB
+2023-07-13T17:04:41.2373349Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 94/310 kB
+2023-07-13T17:04:41.2373806Z Progress (4): 3.9/51 MB | 2.8/3.0 MB | 194 kB | 98/310 kB
+2023-07-13T17:04:41.2374053Z                                                          
+2023-07-13T17:04:41.2375006Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-jvm/1.6.0/kotlin-scripting-jvm-1.6.0.jar (194 kB at 525 kB/s)
+2023-07-13T17:04:41.2375565Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/2.2.1/maven-toolchain-2.2.1.jar
+2023-07-13T17:04:41.2376045Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 102/310 kB
+2023-07-13T17:04:41.2376312Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 106/310 kB
+2023-07-13T17:04:41.2376793Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 110/310 kB
+2023-07-13T17:04:41.2377042Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 114/310 kB
+2023-07-13T17:04:41.2377500Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 118/310 kB
+2023-07-13T17:04:41.2377755Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 122/310 kB
+2023-07-13T17:04:41.2378209Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 126/310 kB
+2023-07-13T17:04:41.2378462Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 131/310 kB
+2023-07-13T17:04:41.2378910Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 135/310 kB
+2023-07-13T17:04:41.2379159Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 139/310 kB
+2023-07-13T17:04:41.2379604Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 143/310 kB
+2023-07-13T17:04:41.2379960Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 147/310 kB
+2023-07-13T17:04:41.2380440Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 151/310 kB
+2023-07-13T17:04:41.2380690Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 155/310 kB
+2023-07-13T17:04:41.2381144Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 159/310 kB
+2023-07-13T17:04:41.2381392Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 163/310 kB
+2023-07-13T17:04:41.2381835Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 167/310 kB
+2023-07-13T17:04:41.2382083Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 171/310 kB
+2023-07-13T17:04:41.2382528Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 176/310 kB
+2023-07-13T17:04:41.2382795Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 180/310 kB
+2023-07-13T17:04:41.2383243Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 184/310 kB
+2023-07-13T17:04:41.2383495Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 188/310 kB
+2023-07-13T17:04:41.2383936Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 192/310 kB
+2023-07-13T17:04:41.2384193Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 196/310 kB
+2023-07-13T17:04:41.2384644Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 200/310 kB
+2023-07-13T17:04:41.2384894Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 204/310 kB
+2023-07-13T17:04:41.2385349Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 208/310 kB
+2023-07-13T17:04:41.2385614Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 212/310 kB
+2023-07-13T17:04:41.2386061Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 217/310 kB
+2023-07-13T17:04:41.2386333Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 219/310 kB
+2023-07-13T17:04:41.2388114Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 219/310 kB
+2023-07-13T17:04:41.2390532Z Progress (3): 3.9/51 MB | 2.8/3.0 MB | 219/310 kB
+2023-07-13T17:04:41.2392524Z Progress (3): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB
+2023-07-13T17:04:41.2396220Z Progress (3): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB
+2023-07-13T17:04:41.2397158Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 4.1/50 kB
+2023-07-13T17:04:41.2398223Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 8.2/50 kB
+2023-07-13T17:04:41.2398720Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 12/50 kB 
+2023-07-13T17:04:41.2399033Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 16/50 kB
+2023-07-13T17:04:41.2399973Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 20/50 kB
+2023-07-13T17:04:41.2400327Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 24/50 kB
+2023-07-13T17:04:41.2400798Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 28/50 kB
+2023-07-13T17:04:41.2401085Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 32/50 kB
+2023-07-13T17:04:41.2401574Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 36/50 kB
+2023-07-13T17:04:41.2401854Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 40/50 kB
+2023-07-13T17:04:41.2402557Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 45/50 kB
+2023-07-13T17:04:41.2402834Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 49/50 kB
+2023-07-13T17:04:41.2406553Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 219/310 kB | 50 kB   
+2023-07-13T17:04:41.2406862Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 223/310 kB | 50 kB
+2023-07-13T17:04:41.2407673Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 227/310 kB | 50 kB
+2023-07-13T17:04:41.2408583Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 232/310 kB | 50 kB
+2023-07-13T17:04:41.2409478Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 236/310 kB | 50 kB
+2023-07-13T17:04:41.2409760Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 240/310 kB | 50 kB
+2023-07-13T17:04:41.2410239Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 244/310 kB | 50 kB
+2023-07-13T17:04:41.2410514Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 248/310 kB | 50 kB
+2023-07-13T17:04:41.2411621Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 252/310 kB | 50 kB
+2023-07-13T17:04:41.2411903Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 256/310 kB | 50 kB
+2023-07-13T17:04:41.2413122Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 260/310 kB | 50 kB
+2023-07-13T17:04:41.2413405Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 264/310 kB | 50 kB
+2023-07-13T17:04:41.2415801Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 268/310 kB | 50 kB
+2023-07-13T17:04:41.2416335Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 273/310 kB | 50 kB
+2023-07-13T17:04:41.2417006Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 277/310 kB | 50 kB
+2023-07-13T17:04:41.2417348Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 281/310 kB | 50 kB
+2023-07-13T17:04:41.2418189Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 285/310 kB | 50 kB
+2023-07-13T17:04:41.2418476Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 289/310 kB | 50 kB
+2023-07-13T17:04:41.2419175Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 293/310 kB | 50 kB
+2023-07-13T17:04:41.2419464Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 297/310 kB | 50 kB
+2023-07-13T17:04:41.2420410Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 301/310 kB | 50 kB
+2023-07-13T17:04:41.2420687Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 305/310 kB | 50 kB
+2023-07-13T17:04:41.2421164Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 309/310 kB | 50 kB
+2023-07-13T17:04:41.2426272Z Progress (4): 3.9/51 MB | 2.9/3.0 MB | 310 kB | 50 kB    
+2023-07-13T17:04:41.2428861Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2430973Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2432920Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2435047Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2437013Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2438983Z Progress (4): 4.2/51 MB | 2.9/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2440972Z Progress (4): 4.2/51 MB | 3.0/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2442938Z Progress (4): 4.2/51 MB | 3.0/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2444900Z Progress (4): 4.2/51 MB | 3.0/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2446751Z Progress (4): 4.2/51 MB | 3.0/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2448170Z Progress (4): 4.2/51 MB | 3.0/3.0 MB | 310 kB | 50 kB
+2023-07-13T17:04:41.2469665Z Progress (4): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB    
+2023-07-13T17:04:41.2470187Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 4.1/38 kB
+2023-07-13T17:04:41.2470696Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 8.2/38 kB
+2023-07-13T17:04:41.2470987Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 12/38 kB 
+2023-07-13T17:04:41.2471468Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 16/38 kB
+2023-07-13T17:04:41.2471944Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 20/38 kB
+2023-07-13T17:04:41.2472419Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 25/38 kB
+2023-07-13T17:04:41.2472681Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 29/38 kB
+2023-07-13T17:04:41.2473148Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 33/38 kB
+2023-07-13T17:04:41.2473412Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 37/38 kB
+2023-07-13T17:04:41.2482435Z Progress (5): 4.2/51 MB | 3.0 MB | 310 kB | 50 kB | 38 kB   
+2023-07-13T17:04:41.2510180Z Progress (5): 4.4/51 MB | 3.0 MB | 310 kB | 50 kB | 38 kB
+2023-07-13T17:04:41.2510537Z                                                          
+2023-07-13T17:04:41.2511621Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.5.1/maven-compiler-plugin-3.5.1.jar (50 kB at 131 kB/s)
+2023-07-13T17:04:41.2512227Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.0.0/maven-shared-utils-3.0.0.jar
+2023-07-13T17:04:41.2535225Z Progress (4): 4.7/51 MB | 3.0 MB | 310 kB | 38 kB
+2023-07-13T17:04:41.2535530Z                                                  
+2023-07-13T17:04:41.2536612Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl/1.6.0/kotlin-scripting-compiler-impl-1.6.0.jar (310 kB at 802 kB/s)
+2023-07-13T17:04:41.2537208Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.7/plexus-compiler-api-2.7.jar
+2023-07-13T17:04:41.2561464Z Progress (3): 4.9/51 MB | 3.0 MB | 38 kB
+2023-07-13T17:04:41.2561760Z                                         
+2023-07-13T17:04:41.2562886Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-toolchain/2.2.1/maven-toolchain-2.2.1.jar (38 kB at 97 kB/s)
+2023-07-13T17:04:41.2563513Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.7/plexus-compiler-manager-2.7.jar
+2023-07-13T17:04:41.2590737Z Progress (2): 5.2/51 MB | 3.0 MB
+2023-07-13T17:04:41.2591024Z                                 
+2023-07-13T17:04:41.2591942Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.6.0/kotlin-reflect-1.6.0.jar (3.0 MB at 7.7 MB/s)
+2023-07-13T17:04:41.2592550Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.7/plexus-compiler-javac-2.7.jar
+2023-07-13T17:04:41.2614448Z Progress (2): 5.2/51 MB | 4.1/155 kB
+2023-07-13T17:04:41.2614785Z Progress (2): 5.2/51 MB | 8.2/155 kB
+2023-07-13T17:04:41.2615330Z Progress (2): 5.2/51 MB | 12/155 kB 
+2023-07-13T17:04:41.2616523Z Progress (2): 5.2/51 MB | 16/155 kB
+2023-07-13T17:04:41.2616790Z Progress (2): 5.2/51 MB | 20/155 kB
+2023-07-13T17:04:41.2617258Z Progress (2): 5.2/51 MB | 24/155 kB
+2023-07-13T17:04:41.2618430Z Progress (2): 5.2/51 MB | 28/155 kB
+2023-07-13T17:04:41.2619280Z Progress (2): 5.2/51 MB | 32/155 kB
+2023-07-13T17:04:41.2619535Z Progress (2): 5.2/51 MB | 36/155 kB
+2023-07-13T17:04:41.2620929Z Progress (2): 5.2/51 MB | 40/155 kB
+2023-07-13T17:04:41.2621202Z Progress (2): 5.2/51 MB | 45/155 kB
+2023-07-13T17:04:41.2622200Z Progress (2): 5.2/51 MB | 49/155 kB
+2023-07-13T17:04:41.2622483Z Progress (2): 5.2/51 MB | 53/155 kB
+2023-07-13T17:04:41.2623112Z Progress (2): 5.2/51 MB | 57/155 kB
+2023-07-13T17:04:41.2623378Z Progress (2): 5.2/51 MB | 61/155 kB
+2023-07-13T17:04:41.2624411Z Progress (2): 5.2/51 MB | 65/155 kB
+2023-07-13T17:04:41.2624679Z Progress (2): 5.2/51 MB | 69/155 kB
+2023-07-13T17:04:41.2625318Z Progress (2): 5.2/51 MB | 73/155 kB
+2023-07-13T17:04:41.2625579Z Progress (2): 5.2/51 MB | 77/155 kB
+2023-07-13T17:04:41.2626611Z Progress (2): 5.2/51 MB | 81/155 kB
+2023-07-13T17:04:41.2626874Z Progress (2): 5.2/51 MB | 85/155 kB
+2023-07-13T17:04:41.2627562Z Progress (2): 5.2/51 MB | 90/155 kB
+2023-07-13T17:04:41.2627826Z Progress (2): 5.2/51 MB | 94/155 kB
+2023-07-13T17:04:41.2628852Z Progress (2): 5.2/51 MB | 98/155 kB
+2023-07-13T17:04:41.2629120Z Progress (2): 5.2/51 MB | 102/155 kB
+2023-07-13T17:04:41.2629749Z Progress (2): 5.2/51 MB | 106/155 kB
+2023-07-13T17:04:41.2630017Z Progress (2): 5.2/51 MB | 110/155 kB
+2023-07-13T17:04:41.2631020Z Progress (2): 5.2/51 MB | 114/155 kB
+2023-07-13T17:04:41.2631285Z Progress (2): 5.2/51 MB | 118/155 kB
+2023-07-13T17:04:41.2631943Z Progress (2): 5.2/51 MB | 122/155 kB
+2023-07-13T17:04:41.2632208Z Progress (2): 5.2/51 MB | 126/155 kB
+2023-07-13T17:04:41.2633508Z Progress (2): 5.2/51 MB | 131/155 kB
+2023-07-13T17:04:41.2634388Z Progress (2): 5.2/51 MB | 135/155 kB
+2023-07-13T17:04:41.2634648Z Progress (2): 5.2/51 MB | 139/155 kB
+2023-07-13T17:04:41.2635096Z Progress (2): 5.2/51 MB | 143/155 kB
+2023-07-13T17:04:41.2635996Z Progress (2): 5.2/51 MB | 147/155 kB
+2023-07-13T17:04:41.2636261Z Progress (2): 5.2/51 MB | 151/155 kB
+2023-07-13T17:04:41.2645194Z Progress (2): 5.2/51 MB | 155 kB    
+2023-07-13T17:04:41.2672123Z Progress (2): 5.5/51 MB | 155 kB
+2023-07-13T17:04:41.2672441Z Progress (3): 5.5/51 MB | 155 kB | 4.1/26 kB
+2023-07-13T17:04:41.2672927Z Progress (3): 5.5/51 MB | 155 kB | 8.2/26 kB
+2023-07-13T17:04:41.2673190Z Progress (3): 5.5/51 MB | 155 kB | 12/26 kB 
+2023-07-13T17:04:41.2673651Z Progress (3): 5.5/51 MB | 155 kB | 16/26 kB
+2023-07-13T17:04:41.2673906Z Progress (3): 5.5/51 MB | 155 kB | 20/26 kB
+2023-07-13T17:04:41.2674357Z Progress (3): 5.5/51 MB | 155 kB | 25/26 kB
+2023-07-13T17:04:41.2676712Z Progress (3): 5.5/51 MB | 155 kB | 26 kB   
+2023-07-13T17:04:41.2698794Z Progress (3): 5.7/51 MB | 155 kB | 26 kB
+2023-07-13T17:04:41.2699124Z Progress (4): 5.7/51 MB | 155 kB | 26 kB | 4.1/19 kB
+2023-07-13T17:04:41.2699615Z Progress (4): 5.7/51 MB | 155 kB | 26 kB | 8.2/19 kB
+2023-07-13T17:04:41.2699884Z Progress (4): 5.7/51 MB | 155 kB | 26 kB | 12/19 kB 
+2023-07-13T17:04:41.2700753Z Progress (4): 5.7/51 MB | 155 kB | 26 kB | 16/19 kB
+2023-07-13T17:04:41.2706342Z Progress (4): 5.7/51 MB | 155 kB | 26 kB | 19 kB   
+2023-07-13T17:04:41.2706995Z Progress (5): 5.7/51 MB | 155 kB | 26 kB | 19 kB | 4.1/4.7 kB
+2023-07-13T17:04:41.2708163Z Progress (5): 5.7/51 MB | 155 kB | 26 kB | 19 kB | 4.7 kB    
+2023-07-13T17:04:41.2735747Z Progress (5): 6.0/51 MB | 155 kB | 26 kB | 19 kB | 4.7 kB
+2023-07-13T17:04:41.2736109Z                                                          
+2023-07-13T17:04:41.2737071Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.0.0/maven-shared-utils-3.0.0.jar (155 kB at 381 kB/s)
+2023-07-13T17:04:41.2761253Z Progress (4): 6.3/51 MB | 26 kB | 19 kB | 4.7 kB
+2023-07-13T17:04:41.2761552Z                                                 
+2023-07-13T17:04:41.2762479Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.7/plexus-compiler-api-2.7.jar (26 kB at 63 kB/s)
+2023-07-13T17:04:41.2804553Z Progress (3): 6.5/51 MB | 19 kB | 4.7 kB
+2023-07-13T17:04:41.2804848Z                                         
+2023-07-13T17:04:41.2805829Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.7/plexus-compiler-manager-2.7.jar (4.7 kB at 11 kB/s)
+2023-07-13T17:04:41.2836604Z Progress (2): 6.8/51 MB | 19 kB
+2023-07-13T17:04:41.2868846Z Progress (2): 7.0/51 MB | 19 kB
+2023-07-13T17:04:41.2885494Z Progress (2): 7.3/51 MB | 19 kB
+2023-07-13T17:04:41.2885769Z                                
+2023-07-13T17:04:41.2886710Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.7/plexus-compiler-javac-2.7.jar (19 kB at 46 kB/s)
+2023-07-13T17:04:41.2931001Z Progress (1): 7.6/51 MB
+2023-07-13T17:04:41.2962232Z Progress (1): 7.8/51 MB
+2023-07-13T17:04:41.2992673Z Progress (1): 8.1/51 MB
+2023-07-13T17:04:41.3025481Z Progress (1): 8.4/51 MB
+2023-07-13T17:04:41.3057691Z Progress (1): 8.6/51 MB
+2023-07-13T17:04:41.3089282Z Progress (1): 8.9/51 MB
+2023-07-13T17:04:41.3119041Z Progress (1): 9.1/51 MB
+2023-07-13T17:04:41.3169137Z Progress (1): 9.4/51 MB
+2023-07-13T17:04:41.3200577Z Progress (1): 9.7/51 MB
+2023-07-13T17:04:41.3231824Z Progress (1): 9.9/51 MB
+2023-07-13T17:04:41.3296754Z Progress (1): 10/51 MB 
+2023-07-13T17:04:41.3331811Z Progress (1): 10/51 MB
+2023-07-13T17:04:41.3365962Z Progress (1): 11/51 MB
+2023-07-13T17:04:41.3397787Z Progress (1): 11/51 MB
+2023-07-13T17:04:41.3431011Z Progress (1): 11/51 MB
+2023-07-13T17:04:41.3459957Z Progress (1): 11/51 MB
+2023-07-13T17:04:41.3492449Z Progress (1): 12/51 MB
+2023-07-13T17:04:41.3522909Z Progress (1): 12/51 MB
+2023-07-13T17:04:41.3551830Z Progress (1): 12/51 MB
+2023-07-13T17:04:41.3585608Z Progress (1): 13/51 MB
+2023-07-13T17:04:41.3615227Z Progress (1): 13/51 MB
+2023-07-13T17:04:41.3646857Z Progress (1): 13/51 MB
+2023-07-13T17:04:41.3677216Z Progress (1): 13/51 MB
+2023-07-13T17:04:41.3709318Z Progress (1): 14/51 MB
+2023-07-13T17:04:41.3740074Z Progress (1): 14/51 MB
+2023-07-13T17:04:41.3771602Z Progress (1): 14/51 MB
+2023-07-13T17:04:41.3802072Z Progress (1): 14/51 MB
+2023-07-13T17:04:41.3831790Z Progress (1): 15/51 MB
+2023-07-13T17:04:41.3862532Z Progress (1): 15/51 MB
+2023-07-13T17:04:41.3893599Z Progress (1): 15/51 MB
+2023-07-13T17:04:41.3923872Z Progress (1): 15/51 MB
+2023-07-13T17:04:41.3955471Z Progress (1): 16/51 MB
+2023-07-13T17:04:41.3985032Z Progress (1): 16/51 MB
+2023-07-13T17:04:41.4015855Z Progress (1): 16/51 MB
+2023-07-13T17:04:41.4046705Z Progress (1): 16/51 MB
+2023-07-13T17:04:41.4078402Z Progress (1): 17/51 MB
+2023-07-13T17:04:41.4108225Z Progress (1): 17/51 MB
+2023-07-13T17:04:41.4139962Z Progress (1): 17/51 MB
+2023-07-13T17:04:41.4170425Z Progress (1): 18/51 MB
+2023-07-13T17:04:41.4241465Z Progress (1): 18/51 MB
+2023-07-13T17:04:41.4271749Z Progress (1): 18/51 MB
+2023-07-13T17:04:41.4301002Z Progress (1): 18/51 MB
+2023-07-13T17:04:41.4333011Z Progress (1): 19/51 MB
+2023-07-13T17:04:41.4361728Z Progress (1): 19/51 MB
+2023-07-13T17:04:41.4390734Z Progress (1): 19/51 MB
+2023-07-13T17:04:41.4423350Z Progress (1): 19/51 MB
+2023-07-13T17:04:41.4452435Z Progress (1): 20/51 MB
+2023-07-13T17:04:41.4488132Z Progress (1): 20/51 MB
+2023-07-13T17:04:41.4515438Z Progress (1): 20/51 MB
+2023-07-13T17:04:41.4545792Z Progress (1): 20/51 MB
+2023-07-13T17:04:41.4577464Z Progress (1): 21/51 MB
+2023-07-13T17:04:41.4607401Z Progress (1): 21/51 MB
+2023-07-13T17:04:41.4637090Z Progress (1): 21/51 MB
+2023-07-13T17:04:41.4668312Z Progress (1): 21/51 MB
+2023-07-13T17:04:41.4698515Z Progress (1): 22/51 MB
+2023-07-13T17:04:41.4730372Z Progress (1): 22/51 MB
+2023-07-13T17:04:41.4760663Z Progress (1): 22/51 MB
+2023-07-13T17:04:41.4791251Z Progress (1): 22/51 MB
+2023-07-13T17:04:41.4823134Z Progress (1): 23/51 MB
+2023-07-13T17:04:41.4853444Z Progress (1): 23/51 MB
+2023-07-13T17:04:41.4883778Z Progress (1): 23/51 MB
+2023-07-13T17:04:41.4914932Z Progress (1): 24/51 MB
+2023-07-13T17:04:41.4945690Z Progress (1): 24/51 MB
+2023-07-13T17:04:41.4975931Z Progress (1): 24/51 MB
+2023-07-13T17:04:41.5006377Z Progress (1): 24/51 MB
+2023-07-13T17:04:41.5037152Z Progress (1): 25/51 MB
+2023-07-13T17:04:41.5067752Z Progress (1): 25/51 MB
+2023-07-13T17:04:41.5098838Z Progress (1): 25/51 MB
+2023-07-13T17:04:41.5130383Z Progress (1): 25/51 MB
+2023-07-13T17:04:41.5162174Z Progress (1): 26/51 MB
+2023-07-13T17:04:41.5191913Z Progress (1): 26/51 MB
+2023-07-13T17:04:41.5223154Z Progress (1): 26/51 MB
+2023-07-13T17:04:41.5254933Z Progress (1): 26/51 MB
+2023-07-13T17:04:41.5284702Z Progress (1): 27/51 MB
+2023-07-13T17:04:41.5315714Z Progress (1): 27/51 MB
+2023-07-13T17:04:41.5347085Z Progress (1): 27/51 MB
+2023-07-13T17:04:41.5377860Z Progress (1): 27/51 MB
+2023-07-13T17:04:41.5408471Z Progress (1): 28/51 MB
+2023-07-13T17:04:41.5439085Z Progress (1): 28/51 MB
+2023-07-13T17:04:41.5469849Z Progress (1): 28/51 MB
+2023-07-13T17:04:41.5499760Z Progress (1): 28/51 MB
+2023-07-13T17:04:41.5533452Z Progress (1): 29/51 MB
+2023-07-13T17:04:41.5564176Z Progress (1): 29/51 MB
+2023-07-13T17:04:41.5594922Z Progress (1): 29/51 MB
+2023-07-13T17:04:41.5627941Z Progress (1): 30/51 MB
+2023-07-13T17:04:41.5657310Z Progress (1): 30/51 MB
+2023-07-13T17:04:41.5706054Z Progress (1): 30/51 MB
+2023-07-13T17:04:41.5738377Z Progress (1): 30/51 MB
+2023-07-13T17:04:41.5768786Z Progress (1): 31/51 MB
+2023-07-13T17:04:41.5797596Z Progress (1): 31/51 MB
+2023-07-13T17:04:41.5830896Z Progress (1): 31/51 MB
+2023-07-13T17:04:41.5860734Z Progress (1): 31/51 MB
+2023-07-13T17:04:41.5891061Z Progress (1): 32/51 MB
+2023-07-13T17:04:41.5922278Z Progress (1): 32/51 MB
+2023-07-13T17:04:41.5952694Z Progress (1): 32/51 MB
+2023-07-13T17:04:41.5984598Z Progress (1): 32/51 MB
+2023-07-13T17:04:41.6013932Z Progress (1): 33/51 MB
+2023-07-13T17:04:41.6046370Z Progress (1): 33/51 MB
+2023-07-13T17:04:41.6076711Z Progress (1): 33/51 MB
+2023-07-13T17:04:41.6107961Z Progress (1): 33/51 MB
+2023-07-13T17:04:41.6137707Z Progress (1): 34/51 MB
+2023-07-13T17:04:41.6167772Z Progress (1): 34/51 MB
+2023-07-13T17:04:41.6199314Z Progress (1): 34/51 MB
+2023-07-13T17:04:41.6228728Z Progress (1): 35/51 MB
+2023-07-13T17:04:41.6258629Z Progress (1): 35/51 MB
+2023-07-13T17:04:41.6290060Z Progress (1): 35/51 MB
+2023-07-13T17:04:41.6320985Z Progress (1): 35/51 MB
+2023-07-13T17:04:41.6351880Z Progress (1): 36/51 MB
+2023-07-13T17:04:41.6383745Z Progress (1): 36/51 MB
+2023-07-13T17:04:41.6412512Z Progress (1): 36/51 MB
+2023-07-13T17:04:41.6443062Z Progress (1): 36/51 MB
+2023-07-13T17:04:41.6474515Z Progress (1): 37/51 MB
+2023-07-13T17:04:41.6505984Z Progress (1): 37/51 MB
+2023-07-13T17:04:41.6535261Z Progress (1): 37/51 MB
+2023-07-13T17:04:41.6565848Z Progress (1): 37/51 MB
+2023-07-13T17:04:41.6596464Z Progress (1): 38/51 MB
+2023-07-13T17:04:41.6627661Z Progress (1): 38/51 MB
+2023-07-13T17:04:41.6657364Z Progress (1): 38/51 MB
+2023-07-13T17:04:41.6687521Z Progress (1): 38/51 MB
+2023-07-13T17:04:41.6718347Z Progress (1): 39/51 MB
+2023-07-13T17:04:41.6749528Z Progress (1): 39/51 MB
+2023-07-13T17:04:41.6779897Z Progress (1): 39/51 MB
+2023-07-13T17:04:41.6810009Z Progress (1): 39/51 MB
+2023-07-13T17:04:41.6839834Z Progress (1): 40/51 MB
+2023-07-13T17:04:41.6870170Z Progress (1): 40/51 MB
+2023-07-13T17:04:41.6901007Z Progress (1): 40/51 MB
+2023-07-13T17:04:41.6929775Z Progress (1): 41/51 MB
+2023-07-13T17:04:41.6962995Z Progress (1): 41/51 MB
+2023-07-13T17:04:41.6992288Z Progress (1): 41/51 MB
+2023-07-13T17:04:41.7023466Z Progress (1): 41/51 MB
+2023-07-13T17:04:41.7053310Z Progress (1): 42/51 MB
+2023-07-13T17:04:41.7083786Z Progress (1): 42/51 MB
+2023-07-13T17:04:41.7114240Z Progress (1): 42/51 MB
+2023-07-13T17:04:41.7145413Z Progress (1): 42/51 MB
+2023-07-13T17:04:41.7176217Z Progress (1): 43/51 MB
+2023-07-13T17:04:41.7205181Z Progress (1): 43/51 MB
+2023-07-13T17:04:41.7236571Z Progress (1): 43/51 MB
+2023-07-13T17:04:41.7266609Z Progress (1): 43/51 MB
+2023-07-13T17:04:41.7294494Z Progress (1): 44/51 MB
+2023-07-13T17:04:41.7326871Z Progress (1): 44/51 MB
+2023-07-13T17:04:41.7357693Z Progress (1): 44/51 MB
+2023-07-13T17:04:41.7389498Z Progress (1): 44/51 MB
+2023-07-13T17:04:41.7419330Z Progress (1): 45/51 MB
+2023-07-13T17:04:41.7449505Z Progress (1): 45/51 MB
+2023-07-13T17:04:41.7479891Z Progress (1): 45/51 MB
+2023-07-13T17:04:41.7510437Z Progress (1): 45/51 MB
+2023-07-13T17:04:41.7541225Z Progress (1): 46/51 MB
+2023-07-13T17:04:41.7572010Z Progress (1): 46/51 MB
+2023-07-13T17:04:41.7602996Z Progress (1): 46/51 MB
+2023-07-13T17:04:41.7633331Z Progress (1): 47/51 MB
+2023-07-13T17:04:41.7665696Z Progress (1): 47/51 MB
+2023-07-13T17:04:41.7694762Z Progress (1): 47/51 MB
+2023-07-13T17:04:41.7724550Z Progress (1): 47/51 MB
+2023-07-13T17:04:41.7755973Z Progress (1): 48/51 MB
+2023-07-13T17:04:41.7787683Z Progress (1): 48/51 MB
+2023-07-13T17:04:41.7818207Z Progress (1): 48/51 MB
+2023-07-13T17:04:41.7847994Z Progress (1): 48/51 MB
+2023-07-13T17:04:41.7878550Z Progress (1): 49/51 MB
+2023-07-13T17:04:41.7907805Z Progress (1): 49/51 MB
+2023-07-13T17:04:41.7936422Z Progress (1): 49/51 MB
+2023-07-13T17:04:41.7964706Z Progress (1): 49/51 MB
+2023-07-13T17:04:41.7993259Z Progress (1): 50/51 MB
+2023-07-13T17:04:41.8021828Z Progress (1): 50/51 MB
+2023-07-13T17:04:41.8050215Z Progress (1): 50/51 MB
+2023-07-13T17:04:41.8082133Z Progress (1): 50/51 MB
+2023-07-13T17:04:41.8107719Z Progress (1): 51/51 MB
+2023-07-13T17:04:41.8136302Z Progress (1): 51/51 MB
+2023-07-13T17:04:41.8153134Z Progress (1): 51/51 MB
+2023-07-13T17:04:41.8725790Z Progress (1): 51 MB   
+2023-07-13T17:04:41.8727715Z                    
+2023-07-13T17:04:41.8808884Z Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-compiler/1.6.0/kotlin-compiler-1.6.0.jar (51 MB at 51 MB/s)
+2023-07-13T17:04:42.5805591Z [WARNING] Using experimental Kotlin incremental compilation
+2023-07-13T17:04:42.6954348Z [INFO] Non-incremental compilation will be performed: NO_BUILD_HISTORY
+2023-07-13T17:04:46.1849749Z [INFO] Kotlin compile iteration: /home/runner/work/facebook-java-business-sdk/facebook-java-business-sdk/src/test/kotlin/com/facebook/ads/APIContextTest.kt
+2023-07-13T17:04:46.1850921Z [INFO] Exit code: COMPILATION_ERROR
+2023-07-13T17:04:46.1855771Z [ERROR] /home/runner/.m2/repository/com/squareup/okio/okio-jvm/3.4.0/okio-jvm-3.4.0.jar!/META-INF/okio.kotlin_module: (-1, -1) Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+2023-07-13T17:04:46.1856992Z [ERROR] /home/runner/.m2/repository/com/squareup/okio/okio/3.4.0/okio-3.4.0.jar!/META-INF/okio.kotlin_module: (-1, -1) Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+2023-07-13T17:04:46.1906133Z [INFO] Compiled 1 Kotlin files using incremental compiler
+2023-07-13T17:04:46.1931230Z [INFO] ------------------------------------------------------------------------
+2023-07-13T17:04:46.1931789Z [INFO] BUILD FAILURE
+2023-07-13T17:04:46.1933135Z [INFO] ------------------------------------------------------------------------
+2023-07-13T17:04:46.1935079Z [INFO] Total time:  30.251 s
+2023-07-13T17:04:46.1936613Z [INFO] Finished at: 2023-07-13T17:04:46Z
+2023-07-13T17:04:46.1937533Z [INFO] ------------------------------------------------------------------------
+2023-07-13T17:04:46.1946360Z [ERROR] Failed to execute goal org.jetbrains.kotlin:kotlin-maven-plugin:1.6.0:test-compile (test-compile) on project facebook-java-business-sdk: Compilation failure: Compilation failure: 
+2023-07-13T17:04:46.1947515Z [ERROR] /home/runner/.m2/repository/com/squareup/okio/okio-jvm/3.4.0/okio-jvm-3.4.0.jar!/META-INF/okio.kotlin_module: Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+2023-07-13T17:04:46.1948675Z [ERROR] /home/runner/.m2/repository/com/squareup/okio/okio/3.4.0/okio-3.4.0.jar!/META-INF/okio.kotlin_module: Module was compiled with an incompatible version of Kotlin. The binary version of its metadata is 1.8.0, expected version is 1.6.0.
+2023-07-13T17:04:46.1949297Z [ERROR] -> [Help 1]
+2023-07-13T17:04:46.1949690Z [ERROR] 
+2023-07-13T17:04:46.1950652Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-07-13T17:04:46.1951147Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-13T17:04:46.1951423Z [ERROR] 
+2023-07-13T17:04:46.1951746Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-13T17:04:46.1952200Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-13T17:04:46.2256132Z ##[error]Process completed with exit code 1.
+2023-07-13T17:04:46.2322431Z Post job cleanup.
+2023-07-13T17:04:46.2944428Z Post job cleanup.
+2023-07-13T17:04:46.4235660Z [command]/usr/bin/git version
+2023-07-13T17:04:46.4293016Z git version 2.41.0
+2023-07-13T17:04:46.4353504Z Temporarily overriding HOME='/home/runner/work/_temp/4de52074-2104-441a-bfa6-ef5d1b9815a6' before making global git config changes
+2023-07-13T17:04:46.4356897Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-13T17:04:46.4364029Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/facebook-java-business-sdk/facebook-java-business-sdk
+2023-07-13T17:04:46.4447238Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-13T17:04:46.4499455Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-13T17:04:46.4727095Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-13T17:04:46.4753383Z http.https://github.com/.extraheader
+2023-07-13T17:04:46.4764130Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-13T17:04:46.4799577Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-13T17:04:46.5215203Z Cleaning up orphan processes
+
+2023-07-13T17:04:46.2322416Z Post job cleanup.
+
+2023-07-13T17:04:01.3264050Z ##[section]Starting: Prepare job build
+2023-07-13T17:04:01.3266851Z Evaluating strategy
+2023-07-13T17:04:01.3271571Z Creating job '__default'
+2023-07-13T17:04:01.3275207Z Evaluating timeout
+2023-07-13T17:04:01.3275318Z Evaluating cancel timeout
+2023-07-13T17:04:01.3275358Z Evaluating continue on error
+2023-07-13T17:04:01.3275397Z Evaluating target
+2023-07-13T17:04:01.3277230Z ##[section]Finishing: Prepare job build
+
+2023-07-13T17:04:11.3821824Z ##[group]Run actions/setup-java@v1
+2023-07-13T17:04:11.3822067Z with:
+2023-07-13T17:04:11.3822263Z   java-version: 1.8
+2023-07-13T17:04:11.3822466Z   java-package: jdk
+2023-07-13T17:04:11.3822654Z   architecture: x64
+2023-07-13T17:04:11.3822851Z   server-id: github
+2023-07-13T17:04:11.3823060Z   server-username: GITHUB_ACTOR
+2023-07-13T17:04:11.3823304Z   server-password: GITHUB_TOKEN
+2023-07-13T17:04:11.3823505Z ##[endgroup]
+2023-07-13T17:04:12.2398498Z [command]/usr/bin/tar --version
+2023-07-13T17:04:12.2456884Z tar (GNU tar) 1.34
+2023-07-13T17:04:12.2457469Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-07-13T17:04:12.2458727Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-07-13T17:04:12.2459511Z This is free software: you are free to change and redistribute it.
+2023-07-13T17:04:12.2460552Z There is NO WARRANTY, to the extent permitted by law.
+2023-07-13T17:04:12.2461063Z 
+2023-07-13T17:04:12.2461937Z Written by John Gilmore and Jay Fenlason.
+2023-07-13T17:04:12.2487861Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/temp_1477623804 -f /home/runner/work/_temp/c455f19c-95fc-4712-94b4-607eb1985c62
+2023-07-13T17:04:14.6989939Z creating settings.xml with server-id: github; environment variables: username=$GITHUB_ACTOR, *** and gpg-passphrase=null
+2023-07-13T17:04:14.7065625Z writing /home/runner/.m2/settings.xml
+
+2023-07-13T17:04:46.5215186Z Cleaning up orphan processes

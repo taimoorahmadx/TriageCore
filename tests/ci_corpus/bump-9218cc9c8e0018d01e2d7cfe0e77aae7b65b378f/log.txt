@@ -1,0 +1,434 @@
+2023-06-07T23:58:22.0101666Z Cleaning up orphan processes
+
+2023-06-07T23:58:11.7257022Z ##[group]Run mvn -B package --file pom.xml
+2023-06-07T23:58:11.7257481Z [36;1mmvn -B package --file pom.xml[0m
+2023-06-07T23:58:11.7379030Z shell: /usr/bin/bash -e {0}
+2023-06-07T23:58:11.7379366Z env:
+2023-06-07T23:58:11.7380128Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-07T23:58:11.7380447Z ##[endgroup]
+2023-06-07T23:58:13.6678226Z [INFO] Scanning for projects...
+2023-06-07T23:58:13.7690535Z [INFO] 
+2023-06-07T23:58:13.7695217Z [INFO] -----------------< com.premiumminds:wicket-crudifier >------------------
+2023-06-07T23:58:13.7698128Z [INFO] Building wicket-crudifier 5.1-SNAPSHOT
+2023-06-07T23:58:13.7701542Z [INFO]   from pom.xml
+2023-06-07T23:58:13.7704483Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-07T23:58:14.1048007Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom
+2023-06-07T23:58:14.3448622Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom (6.7 kB at 27 kB/s)
+2023-06-07T23:58:14.3725413Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-06-07T23:58:14.3823959Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 506 kB/s)
+2023-06-07T23:58:14.3887793Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-06-07T23:58:14.4239395Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.4 MB/s)
+2023-06-07T23:58:14.4394015Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-06-07T23:58:14.4654220Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 797 kB/s)
+2023-06-07T23:58:14.4883755Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar
+2023-06-07T23:58:14.5006204Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar (32 kB at 2.5 MB/s)
+2023-06-07T23:58:14.5173611Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom
+2023-06-07T23:58:14.5367675Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom (21 kB at 1.1 MB/s)
+2023-06-07T23:58:14.5575014Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar
+2023-06-07T23:58:14.6144488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar (507 kB at 8.6 MB/s)
+2023-06-07T23:58:14.6937118Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2023-06-07T23:58:14.7060706Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom (8.1 kB at 676 kB/s)
+2023-06-07T23:58:14.7106733Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+2023-06-07T23:58:14.7241231Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom (9.2 kB at 708 kB/s)
+2023-06-07T23:58:14.7307423Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+2023-06-07T23:58:14.7429010Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom (30 kB at 2.7 MB/s)
+2023-06-07T23:58:14.7512960Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+2023-06-07T23:58:14.7605643Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom (15 kB at 1.1 MB/s)
+2023-06-07T23:58:14.7730990Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2023-06-07T23:58:14.8028314Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar (30 kB at 952 kB/s)
+2023-06-07T23:58:14.8152418Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-06-07T23:58:14.8274430Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 755 kB/s)
+2023-06-07T23:58:14.8479896Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+2023-06-07T23:58:14.8615977Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 4.4 MB/s)
+2023-06-07T23:58:14.8724175Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.pom
+2023-06-07T23:58:14.9170930Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.pom (6.1 kB at 149 kB/s)
+2023-06-07T23:58:14.9185210Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.0/surefire-3.1.0.pom
+2023-06-07T23:58:14.9426220Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.0/surefire-3.1.0.pom (22 kB at 972 kB/s)
+2023-06-07T23:58:14.9555584Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.jar
+2023-06-07T23:58:14.9937349Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/3.1.0/maven-surefire-plugin-3.1.0.jar (43 kB at 1.1 MB/s)
+2023-06-07T23:58:15.0044129Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.pom
+2023-06-07T23:58:15.0161807Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.pom (6.8 kB at 615 kB/s)
+2023-06-07T23:58:15.0190304Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/37/maven-plugins-37.pom
+2023-06-07T23:58:15.0325697Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/37/maven-plugins-37.pom (9.9 kB at 762 kB/s)
+2023-06-07T23:58:15.0350748Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom
+2023-06-07T23:58:15.0475916Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom (46 kB at 3.5 MB/s)
+2023-06-07T23:58:15.0578294Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom
+2023-06-07T23:58:15.0704595Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom (20 kB at 1.6 MB/s)
+2023-06-07T23:58:15.0799663Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.jar
+2023-06-07T23:58:15.0942768Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/3.3.0/maven-jar-plugin-3.3.0.jar (27 kB at 1.8 MB/s)
+2023-06-07T23:58:15.1127263Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-core/9.14.0/wicket-core-9.14.0.pom
+2023-06-07T23:58:15.1270628Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-core/9.14.0/wicket-core-9.14.0.pom (9.4 kB at 673 kB/s)
+2023-06-07T23:58:15.1323481Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-parent/9.14.0/wicket-parent-9.14.0.pom
+2023-06-07T23:58:15.1652282Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-parent/9.14.0/wicket-parent-9.14.0.pom (51 kB at 1.6 MB/s)
+2023-06-07T23:58:15.1717394Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom
+2023-06-07T23:58:15.1830597Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom (18 kB at 1.7 MB/s)
+2023-06-07T23:58:15.1951153Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/openjson/openjson/1.0.12/openjson-1.0.12.pom
+2023-06-07T23:58:15.2357550Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/openjson/openjson/1.0.12/openjson-1.0.12.pom (9.4 kB at 230 kB/s)
+2023-06-07T23:58:15.2402401Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-request/9.14.0/wicket-request-9.14.0.pom
+2023-06-07T23:58:15.2561783Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-request/9.14.0/wicket-request-9.14.0.pom (1.9 kB at 117 kB/s)
+2023-06-07T23:58:15.2737009Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-util/9.14.0/wicket-util-9.14.0.pom
+2023-06-07T23:58:15.2832305Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-util/9.14.0/wicket-util-9.14.0.pom (2.3 kB at 176 kB/s)
+2023-06-07T23:58:15.2981028Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.pom
+2023-06-07T23:58:15.3192051Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-fileupload/commons-fileupload/1.5/commons-fileupload-1.5.pom (16 kB at 676 kB/s)
+2023-06-07T23:58:15.3256831Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/56/commons-parent-56.pom
+2023-06-07T23:58:15.3575499Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/56/commons-parent-56.pom (82 kB at 2.4 MB/s)
+2023-06-07T23:58:15.3809097Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.1/junit-bom-5.9.1.pom
+2023-06-07T23:58:15.3961624Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.1/junit-bom-5.9.1.pom (5.6 kB at 375 kB/s)
+2023-06-07T23:58:15.4069548Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.pom
+2023-06-07T23:58:15.4214283Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.12.0/commons-io-2.12.0.pom (20 kB at 1.4 MB/s)
+2023-06-07T23:58:15.4355124Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/57/commons-parent-57.pom
+2023-06-07T23:58:15.4473292Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/57/commons-parent-57.pom (83 kB at 6.9 MB/s)
+2023-06-07T23:58:15.4567722Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom
+2023-06-07T23:58:15.4796368Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom (5.6 kB at 268 kB/s)
+2023-06-07T23:58:15.4810714Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.pom
+2023-06-07T23:58:15.4912986Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.pom (24 kB at 2.2 MB/s)
+2023-06-07T23:58:15.4963391Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/48/commons-parent-48.pom
+2023-06-07T23:58:15.5093287Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/48/commons-parent-48.pom (72 kB at 4.8 MB/s)
+2023-06-07T23:58:15.5215062Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom
+2023-06-07T23:58:15.5309323Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom (17 kB at 1.9 MB/s)
+2023-06-07T23:58:15.5371140Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.pom
+2023-06-07T23:58:15.5429720Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.pom (2.7 kB at 450 kB/s)
+2023-06-07T23:58:15.5446320Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.7/slf4j-parent-2.0.7.pom
+2023-06-07T23:58:15.5547988Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.7/slf4j-parent-2.0.7.pom (17 kB at 1.7 MB/s)
+2023-06-07T23:58:15.5638216Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/danekja/jdk-serializable-functional/1.9.0/jdk-serializable-functional-1.9.0.pom
+2023-06-07T23:58:15.5774247Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/danekja/jdk-serializable-functional/1.9.0/jdk-serializable-functional-1.9.0.pom (8.1 kB at 474 kB/s)
+2023-06-07T23:58:15.5922402Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-extensions/9.14.0/wicket-extensions-9.14.0.pom
+2023-06-07T23:58:15.6087440Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/wicket/wicket-extensions/9.14.0/wicket-extensions-9.14.0.pom (2.2 kB at 108 kB/s)
+2023-06-07T23:58:15.6162231Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils/5.0/pm-wicket-utils-5.0.pom
+2023-06-07T23:58:15.6253138Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils/5.0/pm-wicket-utils-5.0.pom (3.7 kB at 337 kB/s)
+2023-06-07T23:58:15.6274371Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils-parent/5.0/pm-wicket-utils-parent-5.0.pom
+2023-06-07T23:58:15.6422111Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils-parent/5.0/pm-wicket-utils-parent-5.0.pom (9.0 kB at 642 kB/s)
+2023-06-07T23:58:15.6484220Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.pom
+2023-06-07T23:58:15.6590575Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.pom (21 kB at 1.7 MB/s)
+2023-06-07T23:58:15.6721464Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/54/commons-parent-54.pom
+2023-06-07T23:58:15.6854904Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/54/commons-parent-54.pom (82 kB at 5.1 MB/s)
+2023-06-07T23:58:15.7050098Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom
+2023-06-07T23:58:15.7132989Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom (31 kB at 3.4 MB/s)
+2023-06-07T23:58:15.7250978Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom
+2023-06-07T23:58:15.7429866Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom (79 kB at 4.4 MB/s)
+2023-06-07T23:58:15.7517278Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom
+2023-06-07T23:58:15.7611483Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom (5.1 kB at 510 kB/s)
+2023-06-07T23:58:15.7681569Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils-testing/5.0/pm-wicket-utils-testing-5.0.pom
+2023-06-07T23:58:15.8425804Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/premiumminds/pm-wicket-utils-testing/5.0/pm-wicket-utils-testing-5.0.pom (2.4 kB at 32 kB/s)
+2023-06-07T23:58:15.8461094Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom
+2023-06-07T23:58:15.8724787Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.pom (18 kB at 667 kB/s)
+2023-06-07T23:58:15.8755704Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/47/commons-parent-47.pom
+2023-06-07T23:58:15.9813131Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/47/commons-parent-47.pom (78 kB at 732 kB/s)
+2023-06-07T23:58:15.9902337Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/19/apache-19.pom
+2023-06-07T23:58:16.2776079Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/19/apache-19.pom (15 kB at 55 kB/s)
+2023-06-07T23:58:16.2822334Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom
+2023-06-07T23:58:16.4790258Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom (19 kB at 98 kB/s)
+[... 1328 lines removed by TriageCore ...]
+2023-06-07T23:58:18.7419059Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom
+2023-06-07T23:58:18.7473028Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom (6.8 kB at 1.1 MB/s)
+2023-06-07T23:58:18.7487834Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom
+2023-06-07T23:58:18.7548981Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom (12 kB at 1.9 MB/s)
+2023-06-07T23:58:18.7642140Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom
+2023-06-07T23:58:18.7731364Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom (889 B at 99 kB/s)
+2023-06-07T23:58:18.7763346Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom
+2023-06-07T23:58:18.7859220Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom (5.8 kB at 649 kB/s)
+2023-06-07T23:58:18.7910098Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom
+2023-06-07T23:58:18.8004800Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom (2.9 kB at 318 kB/s)
+2023-06-07T23:58:18.8110111Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/10/spice-parent-10.pom
+2023-06-07T23:58:18.8167266Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/10/spice-parent-10.pom (3.0 kB at 502 kB/s)
+2023-06-07T23:58:18.8184358Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/3/forge-parent-3.pom
+2023-06-07T23:58:18.8237998Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/3/forge-parent-3.pom (5.0 kB at 1.0 MB/s)
+2023-06-07T23:58:18.8258271Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom
+2023-06-07T23:58:18.8319657Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom (8.1 kB at 1.3 MB/s)
+2023-06-07T23:58:18.8355519Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom
+2023-06-07T23:58:18.8405735Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom (890 B at 148 kB/s)
+2023-06-07T23:58:18.8421441Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom
+2023-06-07T23:58:18.8474257Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom (2.8 kB at 475 kB/s)
+2023-06-07T23:58:18.8495011Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom
+2023-06-07T23:58:18.8557519Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom (15 kB at 2.6 MB/s)
+2023-06-07T23:58:18.8629518Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar
+2023-06-07T23:58:18.8640246Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar
+2023-06-07T23:58:18.8691687Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar (13 kB at 2.1 MB/s)
+2023-06-07T23:58:18.8696346Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar
+2023-06-07T23:58:18.8779822Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar
+2023-06-07T23:58:18.8807873Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar
+2023-06-07T23:58:18.8825777Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar (35 kB at 2.0 MB/s)
+2023-06-07T23:58:18.8830854Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar
+2023-06-07T23:58:18.8897052Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar (116 kB at 6.5 MB/s)
+2023-06-07T23:58:18.8898334Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar
+2023-06-07T23:58:18.8903539Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar
+2023-06-07T23:58:18.8916190Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar (21 kB at 1.4 MB/s)
+2023-06-07T23:58:18.8917500Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar
+2023-06-07T23:58:18.9019425Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar (152 kB at 5.8 MB/s)
+2023-06-07T23:58:18.9024082Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
+2023-06-07T23:58:18.9039933Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar (5.9 kB at 220 kB/s)
+2023-06-07T23:58:18.9045658Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar (9.9 kB at 368 kB/s)
+2023-06-07T23:58:18.9047042Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.jar
+2023-06-07T23:58:18.9052198Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar
+2023-06-07T23:58:18.9069706Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar (57 kB at 1.5 MB/s)
+2023-06-07T23:58:18.9075853Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar
+2023-06-07T23:58:18.9119065Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar (29 kB at 851 kB/s)
+2023-06-07T23:58:18.9139727Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar (14 kB at 368 kB/s)
+2023-06-07T23:58:18.9144157Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar
+2023-06-07T23:58:18.9161718Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar
+2023-06-07T23:58:18.9167486Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.0/commons-cli-1.0.jar (30 kB at 753 kB/s)
+2023-06-07T23:58:18.9169114Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar
+2023-06-07T23:58:18.9180540Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar (24 kB at 597 kB/s)
+2023-06-07T23:58:18.9183023Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar
+2023-06-07T23:58:18.9191299Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar (37 kB at 878 kB/s)
+2023-06-07T23:58:18.9197019Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar
+2023-06-07T23:58:18.9261609Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar (13 kB at 274 kB/s)
+2023-06-07T23:58:18.9263124Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar
+2023-06-07T23:58:18.9292646Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar (87 kB at 1.6 MB/s)
+2023-06-07T23:58:18.9294761Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar
+2023-06-07T23:58:18.9313142Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1/classworlds-1.1.jar (38 kB at 701 kB/s)
+2023-06-07T23:58:18.9317710Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar
+2023-06-07T23:58:18.9362119Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar (49 kB at 909 kB/s)
+2023-06-07T23:58:18.9363375Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar
+2023-06-07T23:58:18.9365778Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar (86 kB at 1.6 MB/s)
+2023-06-07T23:58:18.9398742Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+2023-06-07T23:58:18.9428021Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar (10 kB at 155 kB/s)
+2023-06-07T23:58:18.9429907Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar
+2023-06-07T23:58:18.9488594Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/3.8.1/junit-3.8.1.jar (121 kB at 1.8 MB/s)
+2023-06-07T23:58:18.9490095Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar
+2023-06-07T23:58:18.9491102Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar (43 kB at 607 kB/s)
+2023-06-07T23:58:18.9496012Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar (194 kB at 2.7 MB/s)
+2023-06-07T23:58:18.9504127Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar (6.8 kB at 92 kB/s)
+2023-06-07T23:58:18.9548367Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar (61 kB at 783 kB/s)
+2023-06-07T23:58:18.9557883Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar (223 kB at 2.8 MB/s)
+2023-06-07T23:58:19.0782133Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-07T23:58:19.0783721Z [INFO] skip non existing resourceDirectory /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/resources
+2023-06-07T23:58:19.0895278Z [INFO] Copying 14 resources
+2023-06-07T23:58:19.0977954Z [INFO] 
+2023-06-07T23:58:19.0978674Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ wicket-crudifier ---
+2023-06-07T23:58:19.1041368Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+2023-06-07T23:58:19.1097953Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 972 kB/s)
+2023-06-07T23:58:19.1154584Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom
+2023-06-07T23:58:19.1211277Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom (5.1 kB at 1.0 MB/s)
+2023-06-07T23:58:19.1224645Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+2023-06-07T23:58:19.1290201Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 7.1 MB/s)
+2023-06-07T23:58:19.1400927Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom
+2023-06-07T23:58:19.1501243Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 1.4 MB/s)
+2023-06-07T23:58:19.1523353Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+2023-06-07T23:58:19.1591242Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom (68 kB at 11 MB/s)
+2023-06-07T23:58:19.1694042Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+2023-06-07T23:58:19.1746866Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 3.1 MB/s)
+2023-06-07T23:58:19.1833087Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2023-06-07T23:58:19.1883834Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 948 kB/s)
+2023-06-07T23:58:19.1897845Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2023-06-07T23:58:19.1963339Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 908 kB/s)
+2023-06-07T23:58:19.1988845Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+2023-06-07T23:58:19.2056721Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (33 kB at 4.7 MB/s)
+2023-06-07T23:58:19.2122570Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2023-06-07T23:58:19.2169449Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 163 kB/s)
+2023-06-07T23:58:19.2182145Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2023-06-07T23:58:19.2229580Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 1.1 MB/s)
+2023-06-07T23:58:19.2242353Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+2023-06-07T23:58:19.2316538Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom (17 kB at 2.5 MB/s)
+2023-06-07T23:58:19.2341961Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom
+2023-06-07T23:58:19.2397132Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom (5.0 kB at 994 kB/s)
+2023-06-07T23:58:19.2417321Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom
+2023-06-07T23:58:19.2494791Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom (4.1 kB at 518 kB/s)
+2023-06-07T23:58:19.2512061Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+2023-06-07T23:58:19.2598447Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 2.8 MB/s)
+2023-06-07T23:58:19.2641658Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom
+2023-06-07T23:58:19.2766603Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom (2.4 kB at 215 kB/s)
+2023-06-07T23:58:19.2767378Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
+2023-06-07T23:58:19.2824374Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom (11 kB at 1.6 MB/s)
+2023-06-07T23:58:19.2907849Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+2023-06-07T23:58:19.2970791Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 2.9 MB/s)
+2023-06-07T23:58:19.2995825Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+2023-06-07T23:58:19.3068369Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom (6.6 kB at 938 kB/s)
+2023-06-07T23:58:19.3094764Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom
+2023-06-07T23:58:19.3152656Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom (1.1 kB at 176 kB/s)
+2023-06-07T23:58:19.3169504Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom
+2023-06-07T23:58:19.3461104Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom (8.4 kB at 289 kB/s)
+2023-06-07T23:58:19.3489596Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom
+2023-06-07T23:58:19.3554547Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom (2.7 kB at 536 kB/s)
+2023-06-07T23:58:19.3590224Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+2023-06-07T23:58:19.3646418Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 1.3 MB/s)
+2023-06-07T23:58:19.3670208Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom
+2023-06-07T23:58:19.3720285Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom (1.1 kB at 228 kB/s)
+2023-06-07T23:58:19.3750269Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom
+2023-06-07T23:58:19.3793975Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom (770 B at 154 kB/s)
+2023-06-07T23:58:19.3805973Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom
+2023-06-07T23:58:19.3854978Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom (6.0 kB at 1.2 MB/s)
+2023-06-07T23:58:19.3868843Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom
+2023-06-07T23:58:19.3948491Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom (26 kB at 3.2 MB/s)
+2023-06-07T23:58:19.3983548Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom
+2023-06-07T23:58:19.4060180Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom (1.2 kB at 172 kB/s)
+2023-06-07T23:58:19.4072307Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom
+2023-06-07T23:58:19.4119387Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom (1.3 kB at 331 kB/s)
+2023-06-07T23:58:19.4189272Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+2023-06-07T23:58:19.4204549Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+2023-06-07T23:58:19.4277360Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 13 MB/s)
+2023-06-07T23:58:19.4284358Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2023-06-07T23:58:19.4344213Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2023-06-07T23:58:19.4350082Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar
+2023-06-07T23:58:19.4386576Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar
+2023-06-07T23:58:19.4474267Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar (55 kB at 3.2 MB/s)
+2023-06-07T23:58:19.4475622Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+2023-06-07T23:58:19.4476690Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 7.4 MB/s)
+2023-06-07T23:58:19.4477786Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar
+2023-06-07T23:58:19.4518361Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar (122 kB at 10 MB/s)
+2023-06-07T23:58:19.4523238Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 437 kB/s)
+2023-06-07T23:58:19.4525068Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+2023-06-07T23:58:19.4561830Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar
+2023-06-07T23:58:19.4609921Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar (4.7 kB at 179 kB/s)
+2023-06-07T23:58:19.4613191Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar
+2023-06-07T23:58:19.4627155Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 124 kB/s)
+2023-06-07T23:58:19.4689334Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 9.8 MB/s)
+2023-06-07T23:58:19.4716788Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar (27 kB at 772 kB/s)
+2023-06-07T23:58:19.4726489Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 7.0 MB/s)
+2023-06-07T23:58:19.4729945Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar (23 kB at 600 kB/s)
+2023-06-07T23:58:19.5517013Z [INFO] Changes detected - recompiling the module! :dependency
+2023-06-07T23:58:19.5553878Z [INFO] Compiling 24 source files with javac [debug optimize release 11] to target/classes
+2023-06-07T23:58:21.4158030Z [INFO] -------------------------------------------------------------
+2023-06-07T23:58:21.4162362Z [ERROR] COMPILATION ERROR : 
+2023-06-07T23:58:21.4163970Z [INFO] -------------------------------------------------------------
+2023-06-07T23:58:21.4166093Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[37,24] package javax.validation does not exist
+2023-06-07T23:58:21.4167419Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[38,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4168529Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[39,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4170041Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[40,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4171398Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[41,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4172584Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[42,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4173740Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[43,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4175255Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[121,17] cannot find symbol
+2023-06-07T23:58:21.4175800Z   symbol:   class Validator
+2023-06-07T23:58:21.4177657Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4182319Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[121,82] cannot access javax.validation.ValidatorFactory
+2023-06-07T23:58:21.4185700Z   class file for javax.validation.ValidatorFactory not found
+2023-06-07T23:58:21.4189348Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[122,17] cannot find symbol
+2023-06-07T23:58:21.4190137Z   symbol:   class BeanDescriptor
+2023-06-07T23:58:21.4194505Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4198446Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[133,25] cannot find symbol
+2023-06-07T23:58:21.4199358Z   symbol:   class ElementDescriptor
+2023-06-07T23:58:21.4203775Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4207756Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[135,37] cannot find symbol
+2023-06-07T23:58:21.4208494Z   symbol:   class ConstraintDescriptor
+2023-06-07T23:58:21.4213924Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4219859Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[136,37] cannot find symbol
+2023-06-07T23:58:21.4220394Z   symbol:   class ConstraintDescriptor
+2023-06-07T23:58:21.4230006Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4234982Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[137,82] cannot find symbol
+2023-06-07T23:58:21.4235520Z   symbol:   class NotNull
+2023-06-07T23:58:21.4240257Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4245045Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[138,82] cannot find symbol
+2023-06-07T23:58:21.4245541Z   symbol:   class NotEmpty
+2023-06-07T23:58:21.4250205Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4254698Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[139,82] cannot find symbol
+2023-06-07T23:58:21.4255204Z   symbol:   class NotBlank
+2023-06-07T23:58:21.4260192Z   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4264194Z [INFO] 16 errors 
+2023-06-07T23:58:21.4268007Z [INFO] -------------------------------------------------------------
+2023-06-07T23:58:21.4280968Z [INFO] ------------------------------------------------------------------------
+2023-06-07T23:58:21.4285639Z [INFO] BUILD FAILURE
+2023-06-07T23:58:21.4295275Z [INFO] ------------------------------------------------------------------------
+2023-06-07T23:58:21.4317487Z [INFO] Total time:  7.797 s
+2023-06-07T23:58:21.4323700Z [INFO] Finished at: 2023-06-07T23:58:21Z
+2023-06-07T23:58:21.4328075Z [INFO] ------------------------------------------------------------------------
+2023-06-07T23:58:21.4345376Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project wicket-crudifier: Compilation failure: Compilation failure: 
+2023-06-07T23:58:21.4349506Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[37,24] package javax.validation does not exist
+2023-06-07T23:58:21.4353958Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[38,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4357922Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[39,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4362095Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[40,36] package javax.validation.constraints does not exist
+2023-06-07T23:58:21.4366268Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[41,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4370570Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[42,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4375092Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[43,33] package javax.validation.metadata does not exist
+2023-06-07T23:58:21.4379381Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[121,17] cannot find symbol
+2023-06-07T23:58:21.4383358Z [ERROR]   symbol:   class Validator
+2023-06-07T23:58:21.4385700Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4388686Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[121,82] cannot access javax.validation.ValidatorFactory
+2023-06-07T23:58:21.4391509Z [ERROR]   class file for javax.validation.ValidatorFactory not found
+2023-06-07T23:58:21.4394577Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[122,17] cannot find symbol
+2023-06-07T23:58:21.4396878Z [ERROR]   symbol:   class BeanDescriptor
+2023-06-07T23:58:21.4399359Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4402479Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[133,25] cannot find symbol
+2023-06-07T23:58:21.4405002Z [ERROR]   symbol:   class ElementDescriptor
+2023-06-07T23:58:21.4407434Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4410793Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[135,37] cannot find symbol
+2023-06-07T23:58:21.4413172Z [ERROR]   symbol:   class ConstraintDescriptor
+2023-06-07T23:58:21.4415649Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4422314Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[136,37] cannot find symbol
+2023-06-07T23:58:21.4424688Z [ERROR]   symbol:   class ConstraintDescriptor
+2023-06-07T23:58:21.4427119Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4430526Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[137,82] cannot find symbol
+2023-06-07T23:58:21.4433130Z [ERROR]   symbol:   class NotNull
+2023-06-07T23:58:21.4435786Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4439177Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[138,82] cannot find symbol
+2023-06-07T23:58:21.4441713Z [ERROR]   symbol:   class NotEmpty
+2023-06-07T23:58:21.4444204Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4452247Z [ERROR] /home/runner/work/wicket-crudifier/wicket-crudifier/src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java:[139,82] cannot find symbol
+2023-06-07T23:58:21.4474632Z [ERROR]   symbol:   class NotBlank
+2023-06-07T23:58:21.4475321Z [ERROR]   location: class com.premiumminds.wicket.crudifier.form.elements.ListControlGroups<T>
+2023-06-07T23:58:21.4475870Z [ERROR] -> [Help 1]
+2023-06-07T23:58:21.4476241Z [ERROR] 
+2023-06-07T23:58:21.4476649Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-07T23:58:21.4477157Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-07T23:58:21.4477463Z [ERROR] 
+2023-06-07T23:58:21.4477805Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-07T23:58:21.4478500Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-07T23:58:21.4737377Z ##[error]Process completed with exit code 1.
+2023-06-07T23:58:21.4812411Z Post job cleanup.
+2023-06-07T23:58:21.6876310Z Post job cleanup.
+2023-06-07T23:58:21.8687508Z [command]/usr/bin/git version
+2023-06-07T23:58:21.8745363Z git version 2.40.1
+2023-06-07T23:58:21.8801855Z Temporarily overriding HOME='/home/runner/work/_temp/047af454-48f8-423c-9624-a8f457bed4ce' before making global git config changes
+2023-06-07T23:58:21.8803347Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-07T23:58:21.8810422Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/wicket-crudifier/wicket-crudifier
+2023-06-07T23:58:21.8860577Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-07T23:58:21.8901054Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-07T23:58:21.9203075Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-07T23:58:21.9245113Z http.https://github.com/.extraheader
+2023-06-07T23:58:21.9277401Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-07T23:58:21.9325480Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-07T23:58:22.0101693Z Cleaning up orphan processes
+
+2023-06-07T23:57:53.1176785Z ##[section]Starting: Prepare job build
+2023-06-07T23:57:53.1179637Z Evaluating strategy
+2023-06-07T23:57:53.1185697Z Creating job '__default'
+2023-06-07T23:57:53.1188717Z Evaluating timeout
+2023-06-07T23:57:53.1188766Z Evaluating cancel timeout
+2023-06-07T23:57:53.1188798Z Evaluating continue on error
+2023-06-07T23:57:53.1188844Z Evaluating target
+2023-06-07T23:57:53.1190372Z ##[section]Finishing: Prepare job build
+
+2023-06-07T23:58:03.5051742Z ##[group]Run actions/setup-java@v2
+2023-06-07T23:58:03.5052098Z with:
+2023-06-07T23:58:03.5052377Z   java-version: 11
+2023-06-07T23:58:03.5052657Z   distribution: adopt
+2023-06-07T23:58:03.5052924Z   java-package: jdk
+2023-06-07T23:58:03.5053200Z   architecture: x64
+2023-06-07T23:58:03.5053476Z   check-latest: false
+2023-06-07T23:58:03.5053748Z   server-id: github
+2023-06-07T23:58:03.5054109Z   server-username: GITHUB_ACTOR
+2023-06-07T23:58:03.5054462Z   server-password: GITHUB_TOKEN
+2023-06-07T23:58:03.5055451Z   overwrite-settings: true
+2023-06-07T23:58:03.5055778Z   job-status: success
+2023-06-07T23:58:03.5056055Z ##[endgroup]
+2023-06-07T23:58:03.7466592Z Trying to resolve the latest version from remote
+2023-06-07T23:58:05.6639707Z Resolved latest version as 11.0.19+7
+2023-06-07T23:58:05.6640766Z Trying to download...
+2023-06-07T23:58:05.6642518Z Downloading Java 11.0.19+7 (Adopt-Hotspot) from https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.19_7.tar.gz ...
+2023-06-07T23:58:07.2394827Z Extracting Java archive...
+2023-06-07T23:58:07.2544712Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/6e1bcb7a-8b2d-4a9f-9b07-83ca04c2942e -f /home/runner/work/_temp/7b4faef3-499e-41db-a4e0-980d7d0d5a3a
+2023-06-07T23:58:11.6820584Z Java 11.0.19+7 was downloaded
+2023-06-07T23:58:11.6822411Z Setting Java 11.0.19+7 as the default
+2023-06-07T23:58:11.6838670Z 
+2023-06-07T23:58:11.6839310Z Java configuration:
+2023-06-07T23:58:11.6839939Z   Distribution: adopt
+2023-06-07T23:58:11.6840232Z   Version: 11.0.19+7
+2023-06-07T23:58:11.6841160Z   Path: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-07T23:58:11.6841384Z 
+2023-06-07T23:58:11.6875230Z Creating settings.xml with server-id: github
+2023-06-07T23:58:11.6998265Z Writing to /home/runner/.m2/settings.xml
+
+2023-06-07T23:58:21.6876288Z Post job cleanup.
+2023-06-07T23:58:21.8687463Z [command]/usr/bin/git version
+2023-06-07T23:58:21.8745346Z git version 2.40.1
+2023-06-07T23:58:21.8801833Z Temporarily overriding HOME='/home/runner/work/_temp/047af454-48f8-423c-9624-a8f457bed4ce' before making global git config changes
+2023-06-07T23:58:21.8803336Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-07T23:58:21.8810409Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/wicket-crudifier/wicket-crudifier
+2023-06-07T23:58:21.8860552Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-07T23:58:21.8901033Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-07T23:58:21.9203047Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-07T23:58:21.9244931Z http.https://github.com/.extraheader
+2023-06-07T23:58:21.9277383Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-07T23:58:21.9325459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-07T23:58:21.4812391Z Post job cleanup.

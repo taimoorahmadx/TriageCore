@@ -123,7 +123,7 @@ scenarios:
   # real app: modern-todomvc (labels approved by project owner on 2026-11-02)
   - id: b1_rename_delete
     title: Renamed delete control works
-    description: A harmless class rename; deleting the seeded completed item succeeds.
+    description: Real Modern TodoMVC code; a deterministic test mutation renames the delete control, and deleting the seeded completed item succeeds.
     page: apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete
     steps:
       - id: delete_item
@@ -138,7 +138,7 @@ scenarios:
 
   - id: b1_rename_toggle
     title: Renamed completion control works
-    description: A harmless class rename; completing the seeded active item succeeds.
+    description: Real Modern TodoMVC code; a deterministic test mutation renames the completion control, and completing the seeded active item succeeds.
     page: apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle
     steps:
       - id: complete_item
@@ -153,7 +153,7 @@ scenarios:
 
   - id: b1_throw_delete
     title: Renamed delete control throws
-    description: An injected error blocks deletion of the seeded item.
+    description: Real Modern TodoMVC code; a deterministic test mutation injects an error that blocks deletion of the seeded item.
     page: apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete
     steps:
       - id: delete_item
@@ -168,7 +168,7 @@ scenarios:
 
   - id: b1_throw_toggle
     title: Renamed completion control throws
-    description: An injected error blocks completion of the seeded item.
+    description: Real Modern TodoMVC code; a deterministic test mutation injects an error that blocks completion of the seeded item.
     page: apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle
     steps:
       - id: complete_item
@@ -183,7 +183,7 @@ scenarios:
 
   - id: b1_noop_delete
     title: Renamed delete control does nothing
-    description: The injected no-op blocks deletion of the seeded item without throwing.
+    description: Real Modern TodoMVC code; a deterministic test mutation makes deletion a no-op without throwing.
     page: apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete
     steps:
       - id: delete_item
@@ -198,7 +198,7 @@ scenarios:
 
   - id: b1_noop_toggle
     title: Renamed completion control does nothing
-    description: The injected no-op blocks completion of the seeded item without throwing.
+    description: Real Modern TodoMVC code; a deterministic test mutation makes completion a no-op without throwing.
     page: apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle
     steps:
       - id: complete_item
@@ -213,7 +213,7 @@ scenarios:
 
   - id: b1_request_delete
     title: Delete request fails
-    description: A local HTTP 404 represents a failed service request; the app handler is blocked.
+    description: Real Modern TodoMVC code; a deterministic test mutation returns a local HTTP 404 and blocks the delete handler.
     page: apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete
     steps:
       - id: delete_item
@@ -228,7 +228,7 @@ scenarios:
 
   - id: b1_request_toggle
     title: Completion request fails
-    description: A local HTTP 404 represents a failed service request; the app handler is blocked.
+    description: Real Modern TodoMVC code; a deterministic test mutation returns a local HTTP 404 and blocks the completion handler.
     page: apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle
     steps:
       - id: complete_item
@@ -243,7 +243,7 @@ scenarios:
 
   - id: b1_slow_delete
     title: Delete control renders slowly
-    description: The app module and seeded item appear after 1.8 seconds; the original selector is unchanged.
+    description: Real Modern TodoMVC code; a deterministic test mutation delays the app module and seeded item by 1.8 seconds without changing the selector.
     page: apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete
     steps:
       - id: delete_item
@@ -258,7 +258,7 @@ scenarios:
 
   - id: b1_slow_toggle
     title: Completion control renders slowly
-    description: The app module and seeded item appear after 1.8 seconds; the original selector is unchanged.
+    description: Real Modern TodoMVC code; a deterministic test mutation delays the app module and seeded item by 1.8 seconds without changing the selector.
     page: apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle
     steps:
       - id: complete_item

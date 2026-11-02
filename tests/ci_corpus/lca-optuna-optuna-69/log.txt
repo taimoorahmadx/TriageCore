@@ -1,0 +1,36 @@
+===== checks/9_isort.txt =====
+##[group]Run isort . --check --diff
+[36;1misort . --check --diff[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+ERROR: /home/runner/work/optuna/optuna/optuna/study/_multi_objective.py Imports are incorrectly sorted and/or formatted.
+--- /home/runner/work/optuna/optuna/optuna/study/_multi_objective.py:before	2023-12-22 12:41:32.147471
++++ /home/runner/work/optuna/optuna/optuna/study/_multi_objective.py:after	2023-12-22 12:42:07.977714
+@@ -1,13 +1,16 @@
+ from __future__ import annotations
+ 
+ from collections import defaultdict
+-from typing import List, Optional, Sequence
++from typing import List
++from typing import Optional
++from typing import Sequence
+ 
+ import numpy as np
+ 
+ import optuna
+ from optuna.study._study_direction import StudyDirection
+-from optuna.trial import FrozenTrial, TrialState
++from optuna.trial import FrozenTrial
++from optuna.trial import TrialState
+ 
+ 
+ def _get_pareto_front_trials_2d(
+Skipped 30 files
+##[error]Process completed with exit code 1.

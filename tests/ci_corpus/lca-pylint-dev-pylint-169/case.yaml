@@ -1,0 +1,59 @@
+repo: pylint-dev/pylint
+run_id: '169'
+head_sha: fc6215f93ad9e2be8a32dc18b75a3f5bf6381a16
+run_attempts: []
+commits:
+- sha: fc6215f93ad9e2be8a32dc18b75a3f5bf6381a16
+  author: udifuchs
+  files:
+  - doc/whatsnew/fragments/9307.false_positive
+- sha: 8a2beda51d02432fd47229fb38f1f956b6dbc419
+  author: udifuchs
+  files:
+  - pylint/checkers/nested_min_max.py
+  - tests/functional/n/nested_min_max.py
+  - tests/functional/n/nested_min_max.txt
+- sha: 3d07694bfb9806b2f3391bce9031ec503e00771a
+  author: dependabot[bot]
+  files:
+  - .github/workflows/primer_run_main.yaml
+  - .github/workflows/primer_run_pr.yaml
+  - .github/workflows/tests.yaml
+- sha: c25078495cac47752db10025cf5976bb45e891c8
+  author: dependabot[bot]
+  files:
+  - .github/workflows/codeql-analysis.yml
+- sha: 72b3eb53e834c8745c47beb1c6e27cdaab5a0565
+  author: dependabot[bot]
+  files:
+  - .github/workflows/tests.yaml
+- sha: b0cd4852caee0912abb93d6787a45cf6e1108b25
+  author: pre-commit-ci[bot]
+  files:
+  - .pre-commit-config.yaml
+- sha: 278de0f43e389142d14d2ba2a47b770c2d84a085
+  author: Pierre-Sassoulas
+  files:
+  - doc/data/messages/t/too-many-positional/details.rst
+  - doc/data/messages/t/too-many-positional/related.rst
+  - doc/user_guide/checkers/features.rst
+  - doc/user_guide/messages/messages_overview.rst
+  - pylint/checkers/design_analysis.py
+- sha: b1d8b4ca2a6b8f715f75ecbe82ab54c8047a55de
+  author: dependabot[bot]
+  files:
+  - requirements_test_min.txt
+- sha: 988b8189d6349807e938124a072135b1b41713f3
+  author: pre-commit-ci[bot]
+  files:
+  - .pre-commit-config.yaml
+- sha: 0318b6bca1c303b7c89528a717f42929e531f041
+  author: jacobtylerwalls
+  files:
+  - pyproject.toml
+  - requirements_test_min.txt
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

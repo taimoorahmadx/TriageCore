@@ -1,0 +1,68 @@
+repo: django-import-export/django-import-export
+run_id: '82'
+head_sha: 616eb3b10db94cf4a4c209377f36b2ce995bd01c
+run_attempts: []
+commits:
+- sha: 616eb3b10db94cf4a4c209377f36b2ce995bd01c
+  author: PetrDlouhy
+  files:
+  - docs/changelog.rst
+  - import_export/admin.py
+  - tests/core/tests/test_admin_integration.py
+- sha: b63ddd6148c786573838fbfc0e30131dfdef3a71
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+  - import_export/__init__.py
+- sha: e71cd439a69ff27b886d9d5923b1713851694859
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+  - import_export/__init__.py
+- sha: a22a278dcec327084c3b8597e20e95d38e7914ef
+  author: matthewhegarty
+  files:
+  - tox.ini
+- sha: c5f44ec555d4b1e13fea1b6dcdfe980b933d1ca7
+  author: matthewhegarty
+  files:
+  - .github/workflows/django-import-export-ci.yml
+  - docs/changelog.rst
+  - import_export/formats/base_formats.py
+  - setup.py
+  - tests/core/tests/test_admin_integration.py
+  - tox.ini
+- sha: 9d7eb2ae0c8e4c025b1dbdfea6a31e2b9b29bde5
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+  - setup.py
+  - tox.ini
+- sha: 2a0ba4bace408b635bae58a8ceae9a31fc7e3927
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+- sha: 42362f9dfb56abc2578b9c04c52aae850cb7365f
+  author: travenin
+  files:
+  - import_export/locale/fi/LC_MESSAGES/django.mo
+  - import_export/locale/fi/LC_MESSAGES/django.po
+- sha: ebf58e0fe6b27285bb1c9bdfcfff0792bd7ad116
+  author: tal66
+  files:
+  - docs/changelog.rst
+  - import_export/admin.py
+  - import_export/templates/admin/import_export/export.html
+  - import_export/templates/admin/import_export/import.html
+  - import_export/templates/admin/import_export/resource_fields_list.html
+  - tests/core/tests/test_admin_integration.py
+- sha: f7decaaee3060a4b3854ef5983bfe9d4b459216b
+  author: matthewhegarty
+  files:
+  - CONTRIBUTING.md
+  - docs/changelog.rst
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,479 @@
+2023-06-21T14:01:09.4917217Z ##[group]Run github/codeql-action/init@v2
+2023-06-21T14:01:09.4917521Z with:
+2023-06-21T14:01:09.4917729Z   languages: java
+2023-06-21T14:01:09.4917958Z   queries: +security-and-quality
+2023-06-21T14:01:09.4918335Z   token: ***
+2023-06-21T14:01:09.4918567Z   matrix: {
+  "language": "java"
+}
+2023-06-21T14:01:09.4919005Z   setup-python-dependencies: true
+2023-06-21T14:01:09.4919272Z   debug: false
+2023-06-21T14:01:09.4919496Z env:
+2023-06-21T14:01:09.4919800Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-21T14:01:09.4920206Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-21T14:01:09.4920522Z ##[endgroup]
+2023-06-21T14:01:11.7601085Z ##[group]Setup CodeQL tools
+2023-06-21T14:01:13.5532139Z Did not find CodeQL tools version 2.13.4 in the toolcache.
+2023-06-21T14:01:15.7606617Z Downloading CodeQL tools from https://github.com/github/codeql-action/releases/download/codeql-bundle-v2.13.4/codeql-bundle-linux64.tar.gz. This may take a while.
+2023-06-21T14:01:21.4152351Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/f2618956-0982-4441-a858-cb102600e877 -f /home/runner/work/_temp/e1a0e9ca-0cb6-421e-831d-164a65ad89bf
+2023-06-21T14:01:54.6900516Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql version --format=terse
+2023-06-21T14:01:55.3943569Z 2.13.4
+2023-06-21T14:01:55.4209469Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql version --format=json
+2023-06-21T14:01:56.2492179Z {
+2023-06-21T14:01:56.2492620Z   "productName" : "CodeQL",
+2023-06-21T14:01:56.2492885Z   "vendor" : "GitHub",
+2023-06-21T14:01:56.2493283Z   "version" : "2.13.4",
+2023-06-21T14:01:56.2493762Z   "sha" : "3da2639fd65a91da4452f8779e2fa12e61873808",
+2023-06-21T14:01:56.2494210Z   "branches" : [
+2023-06-21T14:01:56.2494716Z     "codeql-cli-2.13.4"
+2023-06-21T14:01:56.2494950Z   ],
+2023-06-21T14:01:56.2495645Z   "copyright" : "Copyright (C) 2019-2023 GitHub, Inc.",
+2023-06-21T14:01:56.2496142Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql",
+2023-06-21T14:01:56.2496583Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+2023-06-21T14:01:56.2497077Z   "configFileFound" : false
+2023-06-21T14:01:56.2507184Z }
+2023-06-21T14:01:56.2629853Z ##[endgroup]
+2023-06-21T14:01:56.2638888Z ##[group]Load language configuration
+2023-06-21T14:01:56.2651126Z Languages from configuration: java
+2023-06-21T14:01:56.2660140Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql resolve queries java-code-scanning.qls --format=bylanguage
+2023-06-21T14:01:57.4221708Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3.
+2023-06-21T14:01:57.5708572Z Recording pack reference codeql/suite-helpers at /opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/.codeql/libraries/codeql/suite-helpers/0.5.3.
+2023-06-21T14:01:58.8631369Z {
+2023-06-21T14:01:58.8631810Z   "byLanguage" : {
+2023-06-21T14:01:58.8632065Z     "java" : {
+2023-06-21T14:01:58.8632958Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Arithmetic/InformationLoss.ql" : { },
+2023-06-21T14:01:58.8633768Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-927/ImplicitPendingIntents.ql" : { },
+2023-06-21T14:01:58.8634610Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-489/DebuggableAttributeEnabled.ql" : { },
+2023-06-21T14:01:58.8635421Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-489/WebviewDebuggingEnabled.ql" : { },
+2023-06-21T14:01:58.8636207Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-347/MissingJWTSignatureCheck.ql" : { },
+2023-06-21T14:01:58.8637017Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-297/UnsafeHostnameVerification.ql" : { },
+2023-06-21T14:01:58.8638512Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-807/TaintedPermissionsCheck.ql" : { },
+2023-06-21T14:01:58.8639571Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-730/PolynomialReDoS.ql" : { },
+2023-06-21T14:01:58.8640344Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-730/RegexInjection.ql" : { },
+2023-06-21T14:01:58.8641045Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-730/ReDoS.ql" : { },
+2023-06-21T14:01:58.8641768Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-090/LdapInjection.ql" : { },
+2023-06-21T14:01:58.8642600Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.ql" : { },
+2023-06-21T14:01:58.8643430Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-295/InsecureTrustManager.ql" : { },
+2023-06-21T14:01:58.8644146Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-022/ZipSlip.ql" : { },
+2023-06-21T14:01:58.8645005Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-022/TaintedPath.ql" : { },
+2023-06-21T14:01:58.8645848Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.ql" : { },
+2023-06-21T14:01:58.8646662Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-470/FragmentInjection.ql" : { },
+2023-06-21T14:01:58.8647560Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-829/InsecureDependencyResolution.ql" : { },
+2023-06-21T14:01:58.8648383Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-917/OgnlInjection.ql" : { },
+2023-06-21T14:01:58.8649319Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-352/SpringCSRFProtection.ql" : { },
+2023-06-21T14:01:58.8650597Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql" : { },
+2023-06-21T14:01:58.8651685Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.ql" : { },
+2023-06-21T14:01:58.8652577Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-614/InsecureCookie.ql" : { },
+2023-06-21T14:01:58.8653449Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-209/StackTraceExposure.ql" : { },
+2023-06-21T14:01:58.8654474Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-611/XXE.ql" : { },
+2023-06-21T14:01:58.8655659Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql" : { },
+2023-06-21T14:01:58.8656747Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql" : { },
+2023-06-21T14:01:58.8657593Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-079/XSS.ql" : { },
+2023-06-21T14:01:58.8658429Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-113/ResponseSplitting.ql" : { },
+2023-06-21T14:01:58.8659705Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-113/NettyResponseSplitting.ql" : { },
+2023-06-21T14:01:58.8660859Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-522/InsecureLdapAuth.ql" : { },
+2023-06-21T14:01:58.8661775Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-940/AndroidIntentRedirection.ql" : { },
+2023-06-21T14:01:58.8662718Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-441/UnsafeContentUriResolution.ql" : { },
+2023-06-21T14:01:58.8663939Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-643/XPathInjection.ql" : { },
+2023-06-21T14:01:58.8664808Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-681/NumericCastTainted.ql" : { },
+2023-06-21T14:01:58.8666010Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-601/UrlRedirect.ql" : { },
+2023-06-21T14:01:58.8688003Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-335/PredictableSeed.ql" : { },
+2023-06-21T14:01:58.8688912Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-925/ImproperIntentVerification.ql" : { },
+2023-06-21T14:01:58.8689711Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-326/InsufficientKeySize.ql" : { },
+2023-06-21T14:01:58.8690521Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-266/IntentUriPermissionManipulation.ql" : { },
+2023-06-21T14:01:58.8691460Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-078/ExecTainted.ql" : { },
+2023-06-21T14:01:58.8692187Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-078/ExecUnescaped.ql" : { },
+2023-06-21T14:01:58.8699874Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-089/SqlTainted.ql" : { },
+2023-06-21T14:01:58.8701221Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-312/CleartextStorageCookie.ql" : { },
+2023-06-21T14:01:58.8702007Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-780/RsaWithoutOaep.ql" : { },
+2023-06-21T14:01:58.8702756Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-918/RequestForgery.ql" : { },
+2023-06-21T14:01:58.8703496Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-074/XsltInjection.ql" : { },
+2023-06-21T14:01:58.8704229Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-074/JndiInjection.ql" : { },
+2023-06-21T14:01:58.8705006Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-1204/StaticInitializationVector.ql" : { },
+2023-06-21T14:01:58.8705814Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql" : { },
+2023-06-21T14:01:58.8706822Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-023/PartialPathTraversalFromRemote.ql" : { },
+2023-06-21T14:01:58.8709725Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/GroovyInjection.ql" : { },
+2023-06-21T14:01:58.8710814Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/InsecureBeanValidation.ql" : { },
+2023-06-21T14:01:58.8719323Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/MvelInjection.ql" : { },
+2023-06-21T14:01:58.8720093Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/SpelInjection.ql" : { },
+2023-06-21T14:01:58.8720832Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/JexlInjection.ql" : { },
+2023-06-21T14:01:58.8757229Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-094/TemplateInjection.ql" : { },
+2023-06-21T14:01:58.8758283Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-502/UnsafeDeserialization.ql" : { },
+2023-06-21T14:01:58.8759160Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-134/ExternallyControlledFormatString.ql" : { },
+2023-06-21T14:01:58.8759971Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Security/CWE/CWE-020/OverlyLargeRange.ql" : { },
+2023-06-21T14:01:58.8760737Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Diagnostics/SuccessfullyExtractedFiles.ql" : { },
+2023-06-21T14:01:58.8761494Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Diagnostics/ExtractionErrors.ql" : { },
+2023-06-21T14:01:58.8762270Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Diagnostics/ExtractionWarnings.ql" : { },
+2023-06-21T14:01:58.8763020Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/SupportedExternalSources.ql" : { },
+2023-06-21T14:01:58.8764856Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/SupportedExternalApis.ql" : { },
+2023-06-21T14:01:58.8765742Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/SupportedExternalSinks.ql" : { },
+2023-06-21T14:01:58.8766518Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/UnsupportedExternalAPIs.ql" : { },
+2023-06-21T14:01:58.8767656Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/ExtractorInformation.ql" : { },
+2023-06-21T14:01:58.8768408Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/SupportedExternalTaint.ql" : { },
+2023-06-21T14:01:58.8769136Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Telemetry/ExternalLibraryUsage.ql" : { },
+2023-06-21T14:01:58.8769900Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Metrics/Summaries/LinesOfCodeKotlin.ql" : { },
+2023-06-21T14:01:58.8770630Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Metrics/Summaries/LinesOfCode.ql" : { }
+2023-06-21T14:01:58.8771011Z     }
+2023-06-21T14:01:58.8771198Z   },
+2023-06-21T14:01:58.8771450Z   "noDeclaredLanguage" : { },
+2023-06-21T14:01:58.8771922Z   "multipleDeclaredLanguages" : { }
+2023-06-21T14:01:58.8772166Z }
+2023-06-21T14:01:58.8922282Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql resolve queries java-security-and-quality.qls --format=bylanguage
+2023-06-21T14:02:00.1773060Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3.
+2023-06-21T14:02:00.2732741Z Recording pack reference codeql/suite-helpers at /opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/.codeql/libraries/codeql/suite-helpers/0.5.3.
+2023-06-21T14:02:02.0551171Z {
+2023-06-21T14:02:02.0551773Z   "byLanguage" : {
+2023-06-21T14:02:02.0552123Z     "java" : {
+2023-06-21T14:02:02.0553126Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/NewStringString.ql" : { },
+2023-06-21T14:02:02.0577780Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/InnerClassCouldBeStatic.ql" : { },
+2023-06-21T14:02:02.0578920Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/InefficientEmptyStringTest.ql" : { },
+2023-06-21T14:02:02.0579826Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/InefficientKeySetIterator.ql" : { },
+2023-06-21T14:02:02.0580749Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/InefficientPrimConstructor.ql" : { },
+2023-06-21T14:02:02.0581660Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Performance/InefficientOutputStream.ql" : { },
+2023-06-21T14:02:02.0582547Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Collections/ReadOnlyContainer.ql" : { },
+2023-06-21T14:02:02.0583439Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Collections/ContainsTypeMismatch.ql" : { },
+2023-06-21T14:02:02.0584330Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Collections/WriteOnlyContainer.ql" : { },
+2023-06-21T14:02:02.0585901Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Collections/ArrayIndexOutOfBounds.ql" : { },
+2023-06-21T14:02:02.0586994Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Collections/RemoveTypeMismatch.ql" : { },
+2023-06-21T14:02:02.0587932Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Inheritance/NoNonFinalInConstructor.ql" : { },
+2023-06-21T14:02:02.0588810Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Nullness/NullExprDeref.ql" : { },
+2023-06-21T14:02:02.0590295Z       "/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/qlpacks/codeql/java-queries/0.6.3/Likely Bugs/Nullness/NullMaybe.ql" : { },
+[... 8377 lines removed by TriageCore ...]
+2023-06-21T14:18:18.5722801Z [2023-06-21 14:18:18] [autobuild] org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal on project code-coverage-api: Could not resolve dependencies for project io.jenkins.plugins:code-coverage-api:hpi:4.8.0-SNAPSHOT: Could not transfer artifact org.jvnet.winp:winp:jar:1.30 from/to repo.jenkins-ci.org (https://repo.jenkins-ci.org/public/): transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.5733243Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.getDependencies (LifecycleDependencyResolver.java:292)
+2023-06-21T14:18:18.5739226Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.resolveProjectDependencies (LifecycleDependencyResolver.java:170)
+2023-06-21T14:18:18.5744659Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.ensureDependenciesAreResolved (MojoExecutor.java:401)
+2023-06-21T14:18:18.5750884Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:347)
+2023-06-21T14:18:18.5756859Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-21T14:18:18.5761334Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-21T14:18:18.5769322Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-21T14:18:18.5774526Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-21T14:18:18.5780916Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-21T14:18:18.5788061Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-21T14:18:18.5794619Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-21T14:18:18.5798855Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-21T14:18:18.5802728Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-21T14:18:18.5806971Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-21T14:18:18.5810819Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-21T14:18:18.5825871Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-21T14:18:18.5830430Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-21T14:18:18.5834677Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T14:18:18.5840026Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-21T14:18:18.5844492Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T14:18:18.5848796Z [2023-06-21 14:18:18] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:498)
+2023-06-21T14:18:18.5852932Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-21T14:18:18.5860694Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-21T14:18:18.5908073Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-21T14:18:18.5909099Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-21T14:18:18.5910625Z [2023-06-21 14:18:18] [autobuild] Caused by: org.apache.maven.project.DependencyResolutionException: Could not resolve dependencies for project io.jenkins.plugins:code-coverage-api:hpi:4.8.0-SNAPSHOT: Could not transfer artifact org.jvnet.winp:winp:jar:1.30 from/to repo.jenkins-ci.org (https://repo.jenkins-ci.org/public/): transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.5912001Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve (DefaultProjectDependenciesResolver.java:214)
+2023-06-21T14:18:18.5913148Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.getDependencies (LifecycleDependencyResolver.java:266)
+2023-06-21T14:18:18.5914342Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.resolveProjectDependencies (LifecycleDependencyResolver.java:170)
+2023-06-21T14:18:18.5916045Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.ensureDependenciesAreResolved (MojoExecutor.java:401)
+2023-06-21T14:18:18.5916983Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:347)
+2023-06-21T14:18:18.5917815Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-21T14:18:18.5918556Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-21T14:18:18.5919401Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-21T14:18:18.5920324Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-21T14:18:18.5922036Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-21T14:18:18.5923601Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-21T14:18:18.5988994Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-21T14:18:18.5990558Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-21T14:18:18.5991697Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-21T14:18:18.5992730Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-21T14:18:18.5993404Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-21T14:18:18.5994050Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-21T14:18:18.5994694Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-21T14:18:18.5995364Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T14:18:18.6018428Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-21T14:18:18.6022475Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T14:18:18.6025787Z [2023-06-21 14:18:18] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:498)
+2023-06-21T14:18:18.6045006Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-21T14:18:18.6049383Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-21T14:18:18.6052291Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-21T14:18:18.6055568Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-21T14:18:18.6060127Z [2023-06-21 14:18:18] [autobuild] Caused by: org.eclipse.aether.resolution.DependencyResolutionException: Could not transfer artifact org.jvnet.winp:winp:jar:1.30 from/to repo.jenkins-ci.org (https://repo.jenkins-ci.org/public/): transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.6063959Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies (DefaultRepositorySystem.java:357)
+2023-06-21T14:18:18.6067376Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve (DefaultProjectDependenciesResolver.java:207)
+2023-06-21T14:18:18.6070559Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.getDependencies (LifecycleDependencyResolver.java:266)
+2023-06-21T14:18:18.6072797Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.resolveProjectDependencies (LifecycleDependencyResolver.java:170)
+2023-06-21T14:18:18.6076072Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.ensureDependenciesAreResolved (MojoExecutor.java:401)
+2023-06-21T14:18:18.6078774Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:347)
+2023-06-21T14:18:18.6081372Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-21T14:18:18.6084287Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-21T14:18:18.6087247Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-21T14:18:18.6091503Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-21T14:18:18.6094830Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-21T14:18:18.6098286Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-21T14:18:18.6100693Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-21T14:18:18.6106410Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-21T14:18:18.6187548Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-21T14:18:18.6190758Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-21T14:18:18.6191945Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-21T14:18:18.6192661Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-21T14:18:18.6193701Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-21T14:18:18.6194396Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T14:18:18.6195135Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-21T14:18:18.6196056Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T14:18:18.6196726Z [2023-06-21 14:18:18] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:498)
+2023-06-21T14:18:18.6197464Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-21T14:18:18.6198278Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-21T14:18:18.6199112Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-21T14:18:18.6199900Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-21T14:18:18.6201672Z [2023-06-21 14:18:18] [autobuild] Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Could not transfer artifact org.jvnet.winp:winp:jar:1.30 from/to repo.jenkins-ci.org (https://repo.jenkins-ci.org/public/): transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.6202938Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve (DefaultArtifactResolver.java:425)
+2023-06-21T14:18:18.6204064Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts (DefaultArtifactResolver.java:229)
+2023-06-21T14:18:18.6205055Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveDependencies (DefaultRepositorySystem.java:340)
+2023-06-21T14:18:18.6206086Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.project.DefaultProjectDependenciesResolver.resolve (DefaultProjectDependenciesResolver.java:207)
+2023-06-21T14:18:18.6207585Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.getDependencies (LifecycleDependencyResolver.java:266)
+2023-06-21T14:18:18.6209501Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleDependencyResolver.resolveProjectDependencies (LifecycleDependencyResolver.java:170)
+2023-06-21T14:18:18.6212130Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.ensureDependenciesAreResolved (MojoExecutor.java:401)
+2023-06-21T14:18:18.6214009Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:347)
+2023-06-21T14:18:18.6215126Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-21T14:18:18.6216069Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-21T14:18:18.6216979Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-21T14:18:18.6218034Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-21T14:18:18.6219128Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-21T14:18:18.6220464Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-21T14:18:18.6223192Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-21T14:18:18.6224070Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-21T14:18:18.6224838Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-21T14:18:18.6225582Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-21T14:18:18.6234064Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-21T14:18:18.6234909Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-21T14:18:18.6235630Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-21T14:18:18.6240157Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T14:18:18.6242762Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-21T14:18:18.6245328Z [2023-06-21 14:18:18] [autobuild]     at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T14:18:18.6248969Z [2023-06-21 14:18:18] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:498)
+2023-06-21T14:18:18.6251627Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-21T14:18:18.6254431Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-21T14:18:18.6257901Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-21T14:18:18.6260693Z [2023-06-21 14:18:18] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-21T14:18:18.6264753Z [2023-06-21 14:18:18] [autobuild] Caused by: org.eclipse.aether.transfer.ArtifactTransferException: Could not transfer artifact org.jvnet.winp:winp:jar:1.30 from/to repo.jenkins-ci.org (https://repo.jenkins-ci.org/public/): transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.6278039Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.ArtifactTransportListener.transferFailed (ArtifactTransportListener.java:52)
+2023-06-21T14:18:18.6280864Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run (BasicRepositoryConnector.java:369)
+2023-06-21T14:18:18.6283727Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run (RunnableErrorForwarder.java:75)
+2023-06-21T14:18:18.6286559Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+2023-06-21T14:18:18.6289211Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+2023-06-21T14:18:18.6297383Z [2023-06-21 14:18:18] [autobuild]     at java.lang.Thread.run (Thread.java:750)
+2023-06-21T14:18:18.6314634Z [2023-06-21 14:18:18] [autobuild] Caused by: org.apache.maven.wagon.TransferFailedException: transfer failed for https://repo.jenkins-ci.org/public/org/jvnet/winp/winp/1.30/winp-1.30.jar
+2023-06-21T14:18:18.6328491Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1250)
+2023-06-21T14:18:18.6391961Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1140)
+2023-06-21T14:18:18.6396116Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getInputStream (StreamWagon.java:126)
+2023-06-21T14:18:18.6397599Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getIfNewer (StreamWagon.java:88)
+2023-06-21T14:18:18.6400643Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.get (StreamWagon.java:61)
+2023-06-21T14:18:18.6403835Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter$GetTaskRunner.run (WagonTransporter.java:546)
+2023-06-21T14:18:18.6407179Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.execute (WagonTransporter.java:430)
+2023-06-21T14:18:18.6409721Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.get (WagonTransporter.java:407)
+2023-06-21T14:18:18.6414092Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask (BasicRepositoryConnector.java:457)
+2023-06-21T14:18:18.6423038Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run (BasicRepositoryConnector.java:364)
+2023-06-21T14:18:18.6426887Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run (RunnableErrorForwarder.java:75)
+2023-06-21T14:18:18.6430084Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+2023-06-21T14:18:18.6432926Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+2023-06-21T14:18:18.6435284Z [2023-06-21 14:18:18] [autobuild]     at java.lang.Thread.run (Thread.java:750)
+2023-06-21T14:18:18.6437870Z [2023-06-21 14:18:18] [autobuild] Caused by: javax.net.ssl.SSLException: Connection reset
+2023-06-21T14:18:18.6457079Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.Alert.createSSLException (Alert.java:127)
+2023-06-21T14:18:18.6459922Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.TransportContext.fatal (TransportContext.java:331)
+2023-06-21T14:18:18.6462954Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.TransportContext.fatal (TransportContext.java:274)
+2023-06-21T14:18:18.6468260Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.TransportContext.fatal (TransportContext.java:269)
+2023-06-21T14:18:18.6470927Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLTransport.decode (SSLTransport.java:138)
+2023-06-21T14:18:18.6474355Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.decode (SSLSocketImpl.java:1397)
+2023-06-21T14:18:18.6476534Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.readHandshakeRecord (SSLSocketImpl.java:1305)
+2023-06-21T14:18:18.6479797Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.startHandshake (SSLSocketImpl.java:440)
+2023-06-21T14:18:18.6482552Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket (SSLConnectionSocketFactory.java:436)
+2023-06-21T14:18:18.6584501Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.conn.ssl.SSLConnectionSocketFactory.connectSocket (SSLConnectionSocketFactory.java:384)
+2023-06-21T14:18:18.6585863Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.conn.DefaultHttpClientConnectionOperator.connect (DefaultHttpClientConnectionOperator.java:142)
+2023-06-21T14:18:18.6587423Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.conn.PoolingHttpClientConnectionManager.connect (PoolingHttpClientConnectionManager.java:376)
+2023-06-21T14:18:18.6588667Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.MainClientExec.establishRoute (MainClientExec.java:393)
+2023-06-21T14:18:18.6589766Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.MainClientExec.execute (MainClientExec.java:236)
+2023-06-21T14:18:18.6591169Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.ProtocolExec.execute (ProtocolExec.java:186)
+2023-06-21T14:18:18.6592170Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.RetryExec.execute (RetryExec.java:89)
+2023-06-21T14:18:18.6593174Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.RedirectExec.execute (RedirectExec.java:110)
+2023-06-21T14:18:18.6595105Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.client.InternalHttpClient.doExecute (InternalHttpClient.java:185)
+2023-06-21T14:18:18.6596326Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.client.CloseableHttpClient.execute (CloseableHttpClient.java:83)
+2023-06-21T14:18:18.6597447Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.execute (AbstractHttpClientWagon.java:1005)
+2023-06-21T14:18:18.6598600Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1162)
+2023-06-21T14:18:18.6599787Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1140)
+2023-06-21T14:18:18.6600701Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getInputStream (StreamWagon.java:126)
+2023-06-21T14:18:18.6601415Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getIfNewer (StreamWagon.java:88)
+2023-06-21T14:18:18.6602383Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.get (StreamWagon.java:61)
+2023-06-21T14:18:18.6603164Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter$GetTaskRunner.run (WagonTransporter.java:546)
+2023-06-21T14:18:18.6604357Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.execute (WagonTransporter.java:430)
+2023-06-21T14:18:18.6605500Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.get (WagonTransporter.java:407)
+2023-06-21T14:18:18.6606814Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask (BasicRepositoryConnector.java:457)
+2023-06-21T14:18:18.6607973Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run (BasicRepositoryConnector.java:364)
+2023-06-21T14:18:18.6609010Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run (RunnableErrorForwarder.java:75)
+2023-06-21T14:18:18.6609961Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+2023-06-21T14:18:18.6610844Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+2023-06-21T14:18:18.6611570Z [2023-06-21 14:18:18] [autobuild]     at java.lang.Thread.run (Thread.java:750)
+2023-06-21T14:18:18.6612232Z [2023-06-21 14:18:18] [autobuild] Caused by: java.net.SocketException: Connection reset
+2023-06-21T14:18:18.6612969Z [2023-06-21 14:18:18] [autobuild]     at java.net.SocketInputStream.read (SocketInputStream.java:210)
+2023-06-21T14:18:18.6613713Z [2023-06-21 14:18:18] [autobuild]     at java.net.SocketInputStream.read (SocketInputStream.java:141)
+2023-06-21T14:18:18.6614665Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketInputRecord.read (SSLSocketInputRecord.java:464)
+2023-06-21T14:18:18.6615491Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketInputRecord.decode (SSLSocketInputRecord.java:165)
+2023-06-21T14:18:18.6617661Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLTransport.decode (SSLTransport.java:109)
+2023-06-21T14:18:18.6618875Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.decode (SSLSocketImpl.java:1397)
+2023-06-21T14:18:18.6619703Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.readHandshakeRecord (SSLSocketImpl.java:1305)
+2023-06-21T14:18:18.6620567Z [2023-06-21 14:18:18] [autobuild]     at sun.security.ssl.SSLSocketImpl.startHandshake (SSLSocketImpl.java:440)
+2023-06-21T14:18:18.6621785Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket (SSLConnectionSocketFactory.java:436)
+2023-06-21T14:18:18.6623236Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.conn.ssl.SSLConnectionSocketFactory.connectSocket (SSLConnectionSocketFactory.java:384)
+2023-06-21T14:18:18.6625026Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.conn.DefaultHttpClientConnectionOperator.connect (DefaultHttpClientConnectionOperator.java:142)
+2023-06-21T14:18:18.6627530Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.conn.PoolingHttpClientConnectionManager.connect (PoolingHttpClientConnectionManager.java:376)
+2023-06-21T14:18:18.6628971Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.MainClientExec.establishRoute (MainClientExec.java:393)
+2023-06-21T14:18:18.6630215Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.MainClientExec.execute (MainClientExec.java:236)
+2023-06-21T14:18:18.6631410Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.ProtocolExec.execute (ProtocolExec.java:186)
+2023-06-21T14:18:18.6632894Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.RetryExec.execute (RetryExec.java:89)
+2023-06-21T14:18:18.6634202Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.execchain.RedirectExec.execute (RedirectExec.java:110)
+2023-06-21T14:18:18.6635409Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.client.InternalHttpClient.doExecute (InternalHttpClient.java:185)
+2023-06-21T14:18:18.6637061Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.httpclient.impl.client.CloseableHttpClient.execute (CloseableHttpClient.java:83)
+2023-06-21T14:18:18.6638361Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.execute (AbstractHttpClientWagon.java:1005)
+2023-06-21T14:18:18.6639669Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1162)
+2023-06-21T14:18:18.6640967Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.providers.http.wagon.shared.AbstractHttpClientWagon.fillInputData (AbstractHttpClientWagon.java:1140)
+2023-06-21T14:18:18.6642016Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getInputStream (StreamWagon.java:126)
+2023-06-21T14:18:18.6642829Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.getIfNewer (StreamWagon.java:88)
+2023-06-21T14:18:18.6644680Z [2023-06-21 14:18:18] [autobuild]     at org.apache.maven.wagon.StreamWagon.get (StreamWagon.java:61)
+2023-06-21T14:18:18.6645518Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter$GetTaskRunner.run (WagonTransporter.java:546)
+2023-06-21T14:18:18.6646607Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.execute (WagonTransporter.java:430)
+2023-06-21T14:18:18.6647553Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.transport.wagon.WagonTransporter.get (WagonTransporter.java:407)
+2023-06-21T14:18:18.6648977Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$GetTaskRunner.runTask (BasicRepositoryConnector.java:457)
+2023-06-21T14:18:18.6651528Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.connector.basic.BasicRepositoryConnector$TaskRunner.run (BasicRepositoryConnector.java:364)
+2023-06-21T14:18:18.6652814Z [2023-06-21 14:18:18] [autobuild]     at org.eclipse.aether.util.concurrency.RunnableErrorForwarder$1.run (RunnableErrorForwarder.java:75)
+2023-06-21T14:18:18.6653786Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+2023-06-21T14:18:18.6654652Z [2023-06-21 14:18:18] [autobuild]     at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+2023-06-21T14:18:18.6655524Z [2023-06-21 14:18:18] [autobuild]     at java.lang.Thread.run (Thread.java:750)
+2023-06-21T14:18:18.6656053Z [2023-06-21 14:18:18] [autobuild] [ERROR] 
+2023-06-21T14:18:18.6656634Z [2023-06-21 14:18:18] [autobuild] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-21T14:18:18.6657173Z [2023-06-21 14:18:18] [autobuild] [ERROR] 
+2023-06-21T14:18:18.6657971Z [2023-06-21 14:18:18] [autobuild] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-21T14:18:18.6658933Z [2023-06-21 14:18:18] [autobuild] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+2023-06-21T14:18:18.6998806Z [2023-06-21 14:18:18] [ERROR] Spawned process exited abnormally (code 1; tried to run: [mvn, clean, package, -f, pom.xml, -B, -V, -e, -Dfindbugs.skip, -Dcheckstyle.skip, -Dpmd.skip=true, -Dspotbugs.skip, -Denforcer.skip, -Dmaven.javadoc.skip, -DskipTests, -Dmaven.test.skip.exec, -Dlicense.skip=true, -Drat.skip=true, -Dspotless.check.skip=true, -t, /home/runner/.m2/toolchains.xml])
+2023-06-21T14:18:18.7132358Z ##[error]We were unable to automatically build your code. Please replace the call to the autobuild action with your custom build steps. Failure invoking /opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/java/tools/autobuild.sh with arguments .
+
+      Exit code 1 and error was:
+
+      Picked up JAVA_TOOL_OPTIONS:  -Dhttp.keepAlive=false -Dmaven.wagon.http.pool=false
+
+2023-06-21T14:18:19.1203734Z Post job cleanup.
+2023-06-21T14:18:19.6486452Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql version --format=terse
+2023-06-21T14:18:20.3739430Z 2.13.4
+2023-06-21T14:18:21.0039468Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=/home/runner/work/_temp/codeql-intermediate-results.sarif --sarif-include-diagnostics -vvv --sarif-category /language:java
+2023-06-21T14:18:21.7762527Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20230621.141821.770.log.
+2023-06-21T14:18:22.1080313Z Interpreting diagnostic messages
+2023-06-21T14:18:22.1104624Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic...
+2023-06-21T14:18:22.1110685Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors...
+2023-06-21T14:18:22.1114722Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java...
+2023-06-21T14:18:22.1118384Z Found diagnostics file /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java/autobuilder.jsonl.
+2023-06-21T14:18:22.1491400Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2023-06-21T14:18:22.1496764Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic/tracer...
+2023-06-21T14:18:22.1513990Z Found 0 raw diagnostic messages.
+2023-06-21T14:18:22.1555073Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2023-06-21T14:18:22.1579572Z Interpreted diagnostic messages. (47ms)
+2023-06-21T14:18:22.3102612Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2023-06-21T14:18:22.3315010Z ##[group]Uploading results
+2023-06-21T14:18:22.3316021Z Processing sarif files: ["../codeql-failed-run.sarif"]
+2023-06-21T14:18:22.3957678Z Uploading results
+2023-06-21T14:18:23.1115778Z Successfully uploaded results
+2023-06-21T14:18:23.1116486Z ##[endgroup]
+2023-06-21T14:18:23.1118677Z ##[group]Waiting for processing to finish
+2023-06-21T14:18:23.4084530Z Analysis upload status is pending.
+2023-06-21T14:18:28.6887286Z Analysis upload status is failed.
+2023-06-21T14:18:28.6899582Z ##[endgroup]
+2023-06-21T14:18:29.0699638Z Post job cleanup.
+2023-06-21T14:18:29.3259658Z Post job cleanup.
+2023-06-21T14:18:29.4658388Z [command]/usr/bin/git version
+2023-06-21T14:18:29.4733155Z git version 2.40.1
+2023-06-21T14:18:29.4800223Z Temporarily overriding HOME='/home/runner/work/_temp/2f6c9d0a-284d-43f4-8db4-ba76383151c1' before making global git config changes
+2023-06-21T14:18:29.4802582Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T14:18:29.4814505Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin
+2023-06-21T14:18:29.4888476Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T14:18:29.4979325Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-21T14:18:29.5517034Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T14:18:29.5569730Z http.https://github.com/.extraheader
+2023-06-21T14:18:29.5593158Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-21T14:18:29.5690019Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-21T14:18:29.6599842Z Cleaning up orphan processes
+
+2023-06-21T14:18:19.1203707Z Post job cleanup.
+2023-06-21T14:18:19.6486408Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql version --format=terse
+2023-06-21T14:18:20.3739385Z 2.13.4
+2023-06-21T14:18:21.0039419Z [command]/opt/hostedtoolcache/CodeQL/2.13.4-v2.13.4/x64/codeql/codeql database export-diagnostics /home/runner/work/_temp/codeql_databases --db-cluster --format=sarif-latest --output=/home/runner/work/_temp/codeql-intermediate-results.sarif --sarif-include-diagnostics -vvv --sarif-category /language:java
+2023-06-21T14:18:21.7762476Z Writing logs to /home/runner/work/_temp/codeql_databases/log/database-export-diagnostics-20230621.141821.770.log.
+2023-06-21T14:18:22.1080259Z Interpreting diagnostic messages
+2023-06-21T14:18:22.1104601Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic...
+2023-06-21T14:18:22.1110665Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors...
+2023-06-21T14:18:22.1114592Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java...
+2023-06-21T14:18:22.1118366Z Found diagnostics file /home/runner/work/_temp/codeql_databases/java/diagnostic/extractors/java/autobuilder.jsonl.
+2023-06-21T14:18:22.1491351Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic...
+2023-06-21T14:18:22.1496744Z Looking for diagnostics in /home/runner/work/_temp/codeql_databases/diagnostic/tracer...
+2023-06-21T14:18:22.1513971Z Found 0 raw diagnostic messages.
+2023-06-21T14:18:22.1555051Z Processed diagnostic messages (removed 0 due to limits, created 0 summary diagnostics for status page).
+2023-06-21T14:18:22.1579551Z Interpreted diagnostic messages. (47ms)
+2023-06-21T14:18:22.3102569Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2023-06-21T14:18:22.3314969Z ##[group]Uploading results
+2023-06-21T14:18:22.3316011Z Processing sarif files: ["../codeql-failed-run.sarif"]
+2023-06-21T14:18:22.3957641Z Uploading results
+2023-06-21T14:18:23.1115701Z Successfully uploaded results
+2023-06-21T14:18:23.1116460Z ##[endgroup]
+2023-06-21T14:18:23.1118664Z ##[group]Waiting for processing to finish
+2023-06-21T14:18:23.4084484Z Analysis upload status is pending.
+2023-06-21T14:18:28.6887242Z Analysis upload status is failed.
+2023-06-21T14:18:28.6899560Z ##[endgroup]
+
+2023-06-21T14:01:09.0983578Z ##[group]Run actions/setup-java@v3
+2023-06-21T14:01:09.0983867Z with:
+2023-06-21T14:01:09.0984084Z   distribution: temurin
+2023-06-21T14:01:09.0984320Z   java-version: 11
+2023-06-21T14:01:09.0984534Z   java-package: jdk
+2023-06-21T14:01:09.0984766Z   check-latest: false
+2023-06-21T14:01:09.0984997Z   server-id: github
+2023-06-21T14:01:09.0985218Z   server-username: GITHUB_ACTOR
+2023-06-21T14:01:09.0985501Z   server-password: GITHUB_TOKEN
+2023-06-21T14:01:09.0985767Z   overwrite-settings: true
+2023-06-21T14:01:09.0985994Z   job-status: success
+2023-06-21T14:01:09.0986342Z   token: ***
+2023-06-21T14:01:09.0986872Z ##[endgroup]
+2023-06-21T14:01:09.4197236Z ##[group]Installed distributions
+2023-06-21T14:01:09.4302289Z Resolved Java 11.0.19+7 from tool-cache
+2023-06-21T14:01:09.4306429Z Setting Java 11.0.19+7 as the default
+2023-06-21T14:01:09.4345723Z Creating toolchains.xml for JDK version 11 from temurin
+2023-06-21T14:01:09.4527417Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-21T14:01:09.4533341Z 
+2023-06-21T14:01:09.4536491Z Java configuration:
+2023-06-21T14:01:09.4539429Z   Distribution: temurin
+2023-06-21T14:01:09.4544049Z   Version: 11.0.19+7
+2023-06-21T14:01:09.4548440Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-21T14:01:09.4551781Z 
+2023-06-21T14:01:09.4557253Z ##[endgroup]
+2023-06-21T14:01:09.4625504Z Creating settings.xml with server-id: github
+2023-06-21T14:01:09.4665250Z Writing to /home/runner/.m2/settings.xml
+
+2023-06-21T14:00:59.8540762Z Current runner version: '2.305.0'
+2023-06-21T14:00:59.8591726Z ##[group]Operating System
+2023-06-21T14:00:59.8592444Z Ubuntu
+2023-06-21T14:00:59.8592733Z 22.04.2
+2023-06-21T14:00:59.8593164Z LTS
+2023-06-21T14:00:59.8593544Z ##[endgroup]
+2023-06-21T14:00:59.8593862Z ##[group]Runner Image
+2023-06-21T14:00:59.8594257Z Image: ubuntu-22.04
+2023-06-21T14:00:59.8594641Z Version: 20230611.1
+2023-06-21T14:00:59.8595418Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-21T14:00:59.8596167Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-21T14:00:59.8596696Z ##[endgroup]
+2023-06-21T14:00:59.8597113Z ##[group]Runner Image Provisioner
+2023-06-21T14:00:59.8597465Z 2.0.238.1
+2023-06-21T14:00:59.8597887Z ##[endgroup]
+2023-06-21T14:00:59.8598711Z ##[group]GITHUB_TOKEN Permissions
+2023-06-21T14:00:59.8599428Z Actions: read
+2023-06-21T14:00:59.8600001Z Contents: read
+2023-06-21T14:00:59.8600430Z Metadata: read
+2023-06-21T14:00:59.8601182Z SecurityEvents: write
+2023-06-21T14:00:59.8601600Z ##[endgroup]
+2023-06-21T14:00:59.8605791Z Secret source: Dependabot
+2023-06-21T14:00:59.8606455Z Prepare workflow directory
+2023-06-21T14:00:59.9690381Z Prepare all required actions
+2023-06-21T14:00:59.9960478Z Getting action download info
+2023-06-21T14:01:00.2940465Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-21T14:01:01.0230673Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-21T14:01:01.7823243Z Download action repository 'github/codeql-action@v2' (SHA:f6e388ebf0efc915c6c5b165b019ee61a6746a38)
+2023-06-21T14:01:07.3208879Z Complete job name: Analyze (java)

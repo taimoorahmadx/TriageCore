@@ -1,0 +1,427 @@
+2023-06-14T22:52:21.3678653Z ##[group]Run github/codeql-action/init@v1
+2023-06-14T22:52:21.3678948Z with:
+2023-06-14T22:52:21.3679136Z   languages: java
+2023-06-14T22:52:21.3679490Z   token: ***
+2023-06-14T22:52:21.3679695Z   matrix: {
+  "language": "java"
+}
+2023-06-14T22:52:21.3679949Z   setup-python-dependencies: true
+2023-06-14T22:52:21.3680185Z   debug: false
+2023-06-14T22:52:21.3680370Z ##[endgroup]
+2023-06-14T22:52:21.6666744Z ##[error]This version of the CodeQL Action was deprecated on January 18th, 2023, and is no longer updated or supported. For better performance, improved security, and new features, upgrade to v2. For more information, see https://github.blog/changelog/2023-01-18-code-scanning-codeql-action-v1-is-now-deprecated/
+2023-06-14T22:52:22.6297723Z ##[group]Setup CodeQL tools
+2023-06-14T22:52:22.6324019Z Downloading CodeQL tools from https://github.com/github/codeql-action/releases/download/codeql-bundle-20230105/codeql-bundle-linux64.tar.gz. This may take a while.
+2023-06-14T22:52:25.0673230Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a9f7def8-ca69-4098-a5f6-940a51d64718 -f /home/runner/work/_temp/3310e0c1-0d32-4577-8686-96f0163b7831
+2023-06-14T22:52:46.6216576Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql version --format=terse
+2023-06-14T22:52:47.0697393Z 2.12.0
+2023-06-14T22:52:47.0806039Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql version --format=json
+2023-06-14T22:52:47.6360141Z {
+2023-06-14T22:52:47.6360833Z   "productName" : "CodeQL",
+2023-06-14T22:52:47.6361526Z   "vendor" : "GitHub",
+2023-06-14T22:52:47.6361818Z   "version" : "2.12.0",
+2023-06-14T22:52:47.6362085Z   "sha" : "617c7f0b518ef16398b62cd0415782919741957e",
+2023-06-14T22:52:47.6362335Z   "branches" : [
+2023-06-14T22:52:47.6362766Z     "codeql-cli-2.12.0"
+2023-06-14T22:52:47.6362969Z   ],
+2023-06-14T22:52:47.6363306Z   "copyright" : "Copyright (C) 2019-2023 GitHub, Inc.",
+2023-06-14T22:52:47.6363723Z   "unpackedLocation" : "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql",
+2023-06-14T22:52:47.6364499Z   "configFileLocation" : "/home/runner/.config/codeql/config",
+2023-06-14T22:52:47.6364777Z   "configFileFound" : false
+2023-06-14T22:52:47.6371949Z }
+2023-06-14T22:52:47.6471508Z ##[endgroup]
+2023-06-14T22:52:47.6485258Z ##[group]Load language configuration
+2023-06-14T22:52:47.6499859Z Languages from configuration: java
+2023-06-14T22:52:47.6500566Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql resolve queries java-code-scanning.qls --format=bylanguage
+2023-06-14T22:52:48.4754569Z Recording pack reference codeql/java-queries at /opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0.
+2023-06-14T22:52:48.5258726Z Recording pack reference codeql/suite-helpers at /opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/.codeql/libraries/codeql/suite-helpers/0.4.0.
+2023-06-14T22:52:49.2227433Z {
+2023-06-14T22:52:49.2228082Z   "byLanguage" : {
+2023-06-14T22:52:49.2228577Z     "java" : {
+2023-06-14T22:52:49.2229456Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Likely Bugs/Arithmetic/InformationLoss.ql" : { },
+2023-06-14T22:52:49.2230305Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-020/OverlyLargeRange.ql" : { },
+2023-06-14T22:52:49.2231153Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-022/TaintedPath.ql" : { },
+2023-06-14T22:52:49.2233748Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-022/ZipSlip.ql" : { },
+2023-06-14T22:52:49.2235102Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-023/PartialPathTraversalFromRemote.ql" : { },
+2023-06-14T22:52:49.2235889Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-074/JndiInjection.ql" : { },
+2023-06-14T22:52:49.2237347Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-074/XsltInjection.ql" : { },
+2023-06-14T22:52:49.2238013Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-078/ExecTainted.ql" : { },
+2023-06-14T22:52:49.2238673Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-078/ExecUnescaped.ql" : { },
+2023-06-14T22:52:49.2239305Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-079/XSS.ql" : { },
+2023-06-14T22:52:49.2239936Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-089/SqlTainted.ql" : { },
+2023-06-14T22:52:49.2240601Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-090/LdapInjection.ql" : { },
+2023-06-14T22:52:49.2241284Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/GroovyInjection.ql" : { },
+2023-06-14T22:52:49.2241970Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/InsecureBeanValidation.ql" : { },
+2023-06-14T22:52:49.2242647Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/JexlInjection.ql" : { },
+2023-06-14T22:52:49.2243449Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/MvelInjection.ql" : { },
+2023-06-14T22:52:49.2244104Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/SpelInjection.ql" : { },
+2023-06-14T22:52:49.2244755Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-094/TemplateInjection.ql" : { },
+2023-06-14T22:52:49.2245468Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-1104/MavenPomDependsOnBintray.ql" : { },
+2023-06-14T22:52:49.2246332Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-113/NettyResponseSplitting.ql" : { },
+2023-06-14T22:52:49.2247013Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-113/ResponseSplitting.ql" : { },
+2023-06-14T22:52:49.2247690Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-1204/StaticInitializationVector.ql" : { },
+2023-06-14T22:52:49.2248600Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-134/ExternallyControlledFormatString.ql" : { },
+2023-06-14T22:52:49.2249311Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-209/StackTraceExposure.ql" : { },
+2023-06-14T22:52:49.2262515Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-266/IntentUriPermissionManipulation.ql" : { },
+2023-06-14T22:52:49.2263343Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-295/ImproperWebViewCertificateValidation.ql" : { },
+2023-06-14T22:52:49.2264077Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-295/InsecureTrustManager.ql" : { },
+2023-06-14T22:52:49.2265012Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-297/UnsafeHostnameVerification.ql" : { },
+2023-06-14T22:52:49.2265822Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-312/CleartextStorageCookie.ql" : { },
+2023-06-14T22:52:49.2266856Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-326/InsufficientKeySize.ql" : { },
+2023-06-14T22:52:49.2272168Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-327/BrokenCryptoAlgorithm.ql" : { },
+2023-06-14T22:52:49.2272986Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-335/PredictableSeed.ql" : { },
+2023-06-14T22:52:49.2273775Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-338/JHipsterGeneratedPRNG.ql" : { },
+2023-06-14T22:52:49.2274559Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-347/MissingJWTSignatureCheck.ql" : { },
+2023-06-14T22:52:49.2275316Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-352/SpringCSRFProtection.ql" : { },
+2023-06-14T22:52:49.2276090Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-441/UnsafeContentUriResolution.ql" : { },
+2023-06-14T22:52:49.2276959Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-470/FragmentInjection.ql" : { },
+2023-06-14T22:52:49.2277751Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-470/FragmentInjectionInPreferenceActivity.ql" : { },
+2023-06-14T22:52:49.2278553Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-489/DebuggableAttributeEnabled.ql" : { },
+2023-06-14T22:52:49.2279340Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-489/WebviewDebuggingEnabled.ql" : { },
+2023-06-14T22:52:49.2280080Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-502/UnsafeDeserialization.ql" : { },
+2023-06-14T22:52:49.2281030Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-601/UrlRedirect.ql" : { },
+2023-06-14T22:52:49.2281699Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-611/XXE.ql" : { },
+2023-06-14T22:52:49.2282393Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-614/InsecureCookie.ql" : { },
+2023-06-14T22:52:49.2283100Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-643/XPathInjection.ql" : { },
+2023-06-14T22:52:49.2283816Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-681/NumericCastTainted.ql" : { },
+2023-06-14T22:52:49.2284541Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-730/PolynomialReDoS.ql" : { },
+2023-06-14T22:52:49.2285227Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-730/ReDoS.ql" : { },
+2023-06-14T22:52:49.2285908Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-730/RegexInjection.ql" : { },
+2023-06-14T22:52:49.2286654Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-732/ReadingFromWorldWritableFile.ql" : { },
+2023-06-14T22:52:49.2287455Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-780/RsaWithoutOaep.ql" : { },
+2023-06-14T22:52:49.2288131Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-807/TaintedPermissionsCheck.ql" : { },
+2023-06-14T22:52:49.2288826Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-829/InsecureDependencyResolution.ql" : { },
+2023-06-14T22:52:49.2289611Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-917/OgnlInjection.ql" : { },
+2023-06-14T22:52:49.2290329Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-918/RequestForgery.ql" : { },
+2023-06-14T22:52:49.2291068Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-925/ImproperIntentVerification.ql" : { },
+2023-06-14T22:52:49.2291861Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-926/ImplicitlyExportedAndroidComponent.ql" : { },
+2023-06-14T22:52:49.2292625Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-927/ImplicitPendingIntents.ql" : { },
+2023-06-14T22:52:49.2293386Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Security/CWE/CWE-940/AndroidIntentRedirection.ql" : { },
+2023-06-14T22:52:49.2294103Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Diagnostics/ExtractionErrors.ql" : { },
+2023-06-14T22:52:49.2294808Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Diagnostics/ExtractionWarnings.ql" : { },
+2023-06-14T22:52:49.2295524Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Diagnostics/SuccessfullyExtractedFiles.ql" : { },
+2023-06-14T22:52:49.2296220Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Metrics/Summaries/LinesOfCode.ql" : { },
+2023-06-14T22:52:49.2296909Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/ExternalLibraryUsage.ql" : { },
+2023-06-14T22:52:49.2297614Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/ExtractorInformation.ql" : { },
+2023-06-14T22:52:49.2298407Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/SupportedExternalApis.ql" : { },
+2023-06-14T22:52:49.2299116Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/SupportedExternalSinks.ql" : { },
+2023-06-14T22:52:49.2299829Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/SupportedExternalSources.ql" : { },
+2023-06-14T22:52:49.2300548Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/SupportedExternalTaint.ql" : { },
+2023-06-14T22:52:49.2301262Z       "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/qlpacks/codeql/java-queries/0.5.0/Telemetry/UnsupportedExternalAPIs.ql" : { }
+2023-06-14T22:52:49.2301675Z     }
+2023-06-14T22:52:49.2301925Z   },
+2023-06-14T22:52:49.2302146Z   "noDeclaredLanguage" : { },
+2023-06-14T22:52:49.2302442Z   "multipleDeclaredLanguages" : { }
+2023-06-14T22:52:49.2302696Z }
+2023-06-14T22:52:49.2444224Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql resolve languages --format=betterjson --extractor-options-verbosity=4
+2023-06-14T22:52:50.0351829Z {
+2023-06-14T22:52:50.0352443Z   "extractors" : {
+2023-06-14T22:52:50.0353370Z     "csv" : [
+2023-06-14T22:52:50.0353698Z       {
+2023-06-14T22:52:50.0354490Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/csv"
+2023-06-14T22:52:50.0355187Z       }
+2023-06-14T22:52:50.0355485Z     ],
+2023-06-14T22:52:50.0355681Z     "properties" : [
+2023-06-14T22:52:50.0355948Z       {
+2023-06-14T22:52:50.0356455Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/properties"
+2023-06-14T22:52:50.0356875Z       }
+2023-06-14T22:52:50.0357041Z     ],
+2023-06-14T22:52:50.0357213Z     "javascript" : [
+2023-06-14T22:52:50.0357740Z       {
+2023-06-14T22:52:50.0358150Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/javascript",
+2023-06-14T22:52:50.0358448Z         "extractor_options" : {
+2023-06-14T22:52:50.0358660Z           "trap" : {
+2023-06-14T22:52:50.0358874Z             "title" : "TRAP options",
+2023-06-14T22:52:50.0359180Z             "description" : "Options about how the extractor handles TRAP files",
+2023-06-14T22:52:50.0359454Z             "type" : "object",
+2023-06-14T22:52:50.0359665Z             "visibility" : 3,
+2023-06-14T22:52:50.0359876Z             "properties" : {
+2023-06-14T22:52:50.0360078Z               "cache" : {
+2023-06-14T22:52:50.0360309Z                 "title" : "TRAP cache options",
+2023-06-14T22:52:50.0360623Z                 "description" : "Options about how the extractor handles its TRAP cache",
+2023-06-14T22:52:50.0360904Z                 "type" : "object",
+2023-06-14T22:52:50.0361120Z                 "properties" : {
+2023-06-14T22:52:50.0361336Z                   "dir" : {
+2023-06-14T22:52:50.0361569Z                     "title" : "TRAP cache directory",
+2023-06-14T22:52:50.0361876Z                     "description" : "The directory of the TRAP cache to use",
+2023-06-14T22:52:50.0362137Z                     "type" : "string"
+2023-06-14T22:52:50.0362331Z                   },
+2023-06-14T22:52:50.0362522Z                   "bound" : {
+2023-06-14T22:52:50.0362750Z                     "title" : "TRAP cache bound",
+2023-06-14T22:52:50.0363049Z                     "description" : "A soft limit (in MB) on the size of the TRAP cache",
+2023-06-14T22:52:50.0363312Z                     "type" : "string",
+2023-06-14T22:52:50.0363593Z                     "pattern" : "[0-9]+"
+2023-06-14T22:52:50.0363797Z                   },
+2023-06-14T22:52:50.0363980Z                   "write" : {
+2023-06-14T22:52:50.0364214Z                     "title" : "TRAP cache writeable",
+2023-06-14T22:52:50.0364538Z                     "description" : "Whether to write to the TRAP cache as well as reading it",
+2023-06-14T22:52:50.0364955Z                     "type" : "string",
+2023-06-14T22:52:50.0365205Z                     "pattern" : "(true|TRUE|false|FALSE)"
+2023-06-14T22:52:50.0365429Z                   }
+2023-06-14T22:52:50.0365600Z                 }
+2023-06-14T22:52:50.0365777Z               }
+2023-06-14T22:52:50.0365954Z             }
+2023-06-14T22:52:50.0366119Z           }
+2023-06-14T22:52:50.0366286Z         }
+2023-06-14T22:52:50.0366453Z       }
+2023-06-14T22:52:50.0366609Z     ],
+2023-06-14T22:52:50.0366780Z     "ruby" : [
+2023-06-14T22:52:50.0366954Z       {
+2023-06-14T22:52:50.0367295Z         "extractor_root" : "/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/ruby"
+[... 7299 lines removed by TriageCore ...]
+2023-06-14T22:53:41.0362137Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-spi/1.6.3/maven-resolver-spi-1.6.3.jar (38 kB at 34 kB/s)\n' +
+2023-06-14T22:53:41.0362535Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar\n' +
+2023-06-14T22:53:41.0363026Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.6.3/maven-resolver-api-1.6.3.jar (149 kB at 131 kB/s)\n' +
+2023-06-14T22:53:41.0363416Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar\n' +
+2023-06-14T22:53:41.0363899Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/resolver/maven-resolver-util/1.6.3/maven-resolver-util-1.6.3.jar (169 kB at 138 kB/s)\n' +
+2023-06-14T22:53:41.0364313Z     '[2023-06-14 22:53:36] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar\n' +
+2023-06-14T22:53:41.0364798Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.3.5/org.eclipse.sisu.inject-0.3.5.jar (379 kB at 280 kB/s)\n' +
+2023-06-14T22:53:41.0365506Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar\n' +
+2023-06-14T22:53:41.0365932Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar (4.5 kB at 3.2 kB/s)\n' +
+2023-06-14T22:53:41.0366306Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar\n' +
+2023-06-14T22:53:41.0366730Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/inject/guice/4.2.2/guice-4.2.2-no_aop.jar (521 kB at 368 kB/s)\n' +
+2023-06-14T22:53:41.0367146Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar\n' +
+2023-06-14T22:53:41.0367653Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar (3.0 MB at 2.1 MB/s)\n' +
+2023-06-14T22:53:41.0368106Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar\n' +
+2023-06-14T22:53:41.0368530Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar (4.6 kB at 3.0 kB/s)\n' +
+2023-06-14T22:53:41.0368956Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar\n' +
+2023-06-14T22:53:41.0369617Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar (2.2 kB at 1.3 kB/s)\n' +
+2023-06-14T22:53:41.0370069Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar\n' +
+2023-06-14T22:53:41.0370482Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 12 kB/s)\n' +
+2023-06-14T22:53:41.0370978Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar\n' +
+2023-06-14T22:53:41.0371425Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar (209 kB at 119 kB/s)\n' +
+2023-06-14T22:53:41.0371808Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar\n' +
+2023-06-14T22:53:41.0372290Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar (16 kB at 9.0 kB/s)\n' +
+2023-06-14T22:53:41.0372708Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar\n' +
+2023-06-14T22:53:41.0373149Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar (8.8 kB at 4.9 kB/s)\n' +
+2023-06-14T22:53:41.0373685Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar\n' +
+2023-06-14T22:53:41.0374169Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar (85 kB at 46 kB/s)\n' +
+2023-06-14T22:53:41.0374625Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar\n' +
+2023-06-14T22:53:41.0375152Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar (4.2 kB at 2.3 kB/s)\n' +
+2023-06-14T22:53:41.0375564Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar\n' +
+2023-06-14T22:53:41.0376051Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar (42 kB at 21 kB/s)\n' +
+2023-06-14T22:53:41.0376453Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar\n' +
+2023-06-14T22:53:41.0376905Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar (375 kB at 178 kB/s)\n' +
+2023-06-14T22:53:41.0377303Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar\n' +
+2023-06-14T22:53:41.0377781Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar (1.5 MB at 720 kB/s)\n' +
+2023-06-14T22:53:41.0378200Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar\n' +
+2023-06-14T22:53:41.0378686Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar (76 kB at 34 kB/s)\n' +
+2023-06-14T22:53:41.0379192Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.jar\n' +
+2023-06-14T22:53:41.0379631Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar (1.6 MB at 710 kB/s)\n' +
+2023-06-14T22:53:41.0380043Z     '[2023-06-14 22:53:37] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar\n' +
+2023-06-14T22:53:41.0380469Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar (196 kB at 83 kB/s)\n' +
+2023-06-14T22:53:41.0380865Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.5/maven-model-3.8.5.jar\n' +
+2023-06-14T22:53:41.0381285Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar (1.7 MB at 701 kB/s)\n' +
+2023-06-14T22:53:41.0381677Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar\n' +
+2023-06-14T22:53:41.0382220Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar (134 kB at 54 kB/s)\n' +
+2023-06-14T22:53:41.0382579Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar\n' +
+2023-06-14T22:53:41.0383027Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar (587 kB at 236 kB/s)\n' +
+2023-06-14T22:53:41.0383399Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar\n' +
+2023-06-14T22:53:41.0383947Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.2.0/maven-common-artifact-filters-3.2.0.jar (61 kB at 24 kB/s)\n' +
+2023-06-14T22:53:41.0384452Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.5/maven-model-3.8.5.jar (215 kB at 79 kB/s)\n' +
+2023-06-14T22:53:41.0384870Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar (327 kB at 119 kB/s)\n' +
+2023-06-14T22:53:41.0385251Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar (385 kB at 139 kB/s)\n' +
+2023-06-14T22:53:41.0385647Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar (123 kB at 44 kB/s)\n' +
+2023-06-14T22:53:41.0385806Z     '[2023-06-14 22:53:38] [autobuild] [INFO] \n' +
+2023-06-14T22:53:41.0386174Z     '[2023-06-14 22:53:38] [autobuild] [INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ dependency-lock-maven-plugin ---\n' +
+2023-06-14T22:53:41.0386554Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar\n' +
+2023-06-14T22:53:41.0386957Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar\n' +
+2023-06-14T22:53:41.0387359Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 2.0 MB/s)\n' +
+2023-06-14T22:53:41.0387786Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.1/plexus-utils-1.1.jar (169 kB at 1.3 MB/s)\n' +
+2023-06-14T22:53:41.0387955Z     '[2023-06-14 22:53:38] [autobuild] [INFO] \n' +
+2023-06-14T22:53:41.0388324Z     '[2023-06-14 22:53:38] [autobuild] [INFO] --- dependency-lock-maven-plugin:0.23:check (check) @ dependency-lock-maven-plugin ---\n' +
+2023-06-14T22:53:41.0388752Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.8.3/maven-plugin-api-3.8.3.pom\n' +
+2023-06-14T22:53:41.0389207Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.8.3/maven-plugin-api-3.8.3.pom (3.0 kB at 42 kB/s)\n' +
+2023-06-14T22:53:41.0389576Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.8.3/maven-3.8.3.pom\n' +
+2023-06-14T22:53:41.0389960Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.8.3/maven-3.8.3.pom (27 kB at 630 kB/s)\n' +
+2023-06-14T22:53:41.0390437Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.3/maven-model-3.8.3.pom\n' +
+2023-06-14T22:53:41.0390866Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.3/maven-model-3.8.3.pom (2.8 kB at 58 kB/s)\n' +
+2023-06-14T22:53:41.0391278Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom\n' +
+2023-06-14T22:53:41.0391711Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom (8.0 kB at 194 kB/s)\n' +
+2023-06-14T22:53:41.0392122Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.8.3/maven-artifact-3.8.3.pom\n' +
+2023-06-14T22:53:41.0392644Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.8.3/maven-artifact-3.8.3.pom (2.4 kB at 57 kB/s)\n' +
+2023-06-14T22:53:41.0393144Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.6.1/maven-plugin-annotations-3.6.1.pom\n' +
+2023-06-14T22:53:41.0393663Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.6.1/maven-plugin-annotations-3.6.1.pom (1.7 kB at 37 kB/s)\n' +
+2023-06-14T22:53:41.0394122Z     '[2023-06-14 22:53:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.6.1/maven-plugin-tools-3.6.1.pom\n' +
+2023-06-14T22:53:41.0394622Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.6.1/maven-plugin-tools-3.6.1.pom (15 kB at 354 kB/s)\n' +
+2023-06-14T22:53:41.0395026Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.8.3/maven-core-3.8.3.pom\n' +
+2023-06-14T22:53:41.0395443Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.8.3/maven-core-3.8.3.pom (7.6 kB at 176 kB/s)\n' +
+2023-06-14T22:53:41.0395851Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.8.3/maven-settings-3.8.3.pom\n' +
+2023-06-14T22:53:41.0396289Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.8.3/maven-settings-3.8.3.pom (1.9 kB at 31 kB/s)\n' +
+2023-06-14T22:53:41.0396832Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.8.3/maven-settings-builder-3.8.3.pom\n' +
+2023-06-14T22:53:41.0397312Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.8.3/maven-settings-builder-3.8.3.pom (2.5 kB at 60 kB/s)\n' +
+2023-06-14T22:53:41.0397766Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.8.3/maven-builder-support-3.8.3.pom\n' +
+2023-06-14T22:53:41.0398243Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.8.3/maven-builder-support-3.8.3.pom (1.4 kB at 35 kB/s)\n' +
+2023-06-14T22:53:41.0398818Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.8.3/maven-repository-metadata-3.8.3.pom\n' +
+2023-06-14T22:53:41.0399329Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.8.3/maven-repository-metadata-3.8.3.pom (1.9 kB at 34 kB/s)\n' +
+2023-06-14T22:53:41.0399767Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.8.3/maven-model-builder-3.8.3.pom\n' +
+2023-06-14T22:53:41.0400237Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.8.3/maven-model-builder-3.8.3.pom (3.4 kB at 74 kB/s)\n' +
+2023-06-14T22:53:41.0400701Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.8.3/maven-resolver-provider-3.8.3.pom\n' +
+2023-06-14T22:53:41.0401284Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.8.3/maven-resolver-provider-3.8.3.pom (4.2 kB at 46 kB/s)\n' +
+2023-06-14T22:53:41.0401680Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom\n' +
+2023-06-14T22:53:41.0402108Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.pom (11 kB at 255 kB/s)\n' +
+2023-06-14T22:53:41.0402545Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom\n' +
+2023-06-14T22:53:41.0403007Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/31.0.1-jre/guava-parent-31.0.1-jre.pom (14 kB at 355 kB/s)\n' +
+2023-06-14T22:53:41.0403468Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom\n' +
+2023-06-14T22:53:41.0403936Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.pom (2.1 kB at 49 kB/s)\n' +
+2023-06-14T22:53:41.0404367Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom\n' +
+2023-06-14T22:53:41.0404821Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.7.1/error_prone_parent-2.7.1.pom (7.0 kB at 162 kB/s)\n' +
+2023-06-14T22:53:41.0405269Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.pom\n' +
+2023-06-14T22:53:41.0405736Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.pom (15 kB at 356 kB/s)\n' +
+2023-06-14T22:53:41.0406144Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.13.0/jackson-base-2.13.0.pom\n' +
+2023-06-14T22:53:41.0406582Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-base/2.13.0/jackson-base-2.13.0.pom (9.7 kB at 207 kB/s)\n' +
+2023-06-14T22:53:41.0407109Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.pom\n' +
+2023-06-14T22:53:41.0407603Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.pom (6.1 kB at 148 kB/s)\n' +
+2023-06-14T22:53:41.0408026Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.pom\n' +
+2023-06-14T22:53:41.0408477Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.pom (5.5 kB at 138 kB/s)\n' +
+2023-06-14T22:53:41.0408904Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.8.3/maven-plugin-api-3.8.3.jar\n' +
+2023-06-14T22:53:41.0409505Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.6.1/maven-plugin-annotations-3.6.1.jar\n' +
+2023-06-14T22:53:41.0409900Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.8.3/maven-core-3.8.3.jar\n' +
+2023-06-14T22:53:41.0410308Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.8.3/maven-artifact-3.8.3.jar\n' +
+2023-06-14T22:53:41.0410698Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.8.3/maven-settings-3.8.3.jar\n' +
+2023-06-14T22:53:41.0411225Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.6.1/maven-plugin-annotations-3.6.1.jar (14 kB at 122 kB/s)\n' +
+2023-06-14T22:53:41.0411684Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.8.3/maven-settings-builder-3.8.3.jar\n' +
+2023-06-14T22:53:41.0412139Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.8.3/maven-plugin-api-3.8.3.jar (47 kB at 335 kB/s)\n' +
+2023-06-14T22:53:41.0412587Z     '[2023-06-14 22:53:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.8.3/maven-builder-support-3.8.3.jar\n' +
+2023-06-14T22:53:41.0413006Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.8.3/maven-core-3.8.3.jar (639 kB at 2.4 MB/s)\n' +
+2023-06-14T22:53:41.0413482Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.8.3/maven-repository-metadata-3.8.3.jar\n' +
+2023-06-14T22:53:41.0413990Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/3.8.3/maven-repository-metadata-3.8.3.jar (27 kB at 85 kB/s)\n' +
+2023-06-14T22:53:41.0414424Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.8.3/maven-model-builder-3.8.3.jar\n' +
+2023-06-14T22:53:41.0414864Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.8.3/maven-settings-3.8.3.jar (44 kB at 129 kB/s)\n' +
+2023-06-14T22:53:41.0415423Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.8.3/maven-resolver-provider-3.8.3.jar\n' +
+2023-06-14T22:53:41.0415910Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.8.3/maven-settings-builder-3.8.3.jar (42 kB at 116 kB/s)\n' +
+2023-06-14T22:53:41.0416307Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar\n' +
+2023-06-14T22:53:41.0416749Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.8.3/maven-artifact-3.8.3.jar (58 kB at 147 kB/s)\n' +
+2023-06-14T22:53:41.0417192Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar\n' +
+2023-06-14T22:53:41.0417667Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.8.3/maven-builder-support-3.8.3.jar (14 kB at 35 kB/s)\n' +
+2023-06-14T22:53:41.0418185Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar\n' +
+2023-06-14T22:53:41.0418598Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/31.0.1-jre/guava-31.0.1-jre.jar (3.0 MB at 4.6 MB/s)\n' +
+2023-06-14T22:53:41.0419047Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar\n' +
+2023-06-14T22:53:41.0419527Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.7.1/error_prone_annotations-2.7.1.jar (15 kB at 22 kB/s)\n' +
+2023-06-14T22:53:41.0419953Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar\n' +
+2023-06-14T22:53:41.0420447Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-resolver-provider/3.8.3/maven-resolver-provider-3.8.3.jar (67 kB at 98 kB/s)\n' +
+2023-06-14T22:53:41.0420851Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.3/maven-model-3.8.3.jar\n' +
+2023-06-14T22:53:41.0421329Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.0/jackson-databind-2.13.0.jar (1.5 MB at 2.2 MB/s)\n' +
+2023-06-14T22:53:41.0421744Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.jar\n' +
+2023-06-14T22:53:41.0422215Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model-builder/3.8.3/maven-model-builder-3.8.3.jar (192 kB at 265 kB/s)\n' +
+2023-06-14T22:53:41.0422692Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.0/jackson-annotations-2.13.0.jar (76 kB at 84 kB/s)\n' +
+2023-06-14T22:53:41.0423151Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.0/jackson-core-2.13.0.jar (375 kB at 403 kB/s)\n' +
+2023-06-14T22:53:41.0423658Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.8.3/maven-model-3.8.3.jar (215 kB at 222 kB/s)\n' +
+2023-06-14T22:53:41.0424105Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.jar (264 kB at 267 kB/s)\n' +
+2023-06-14T22:53:41.0424340Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] The following dependencies differ:\n' +
+2023-06-14T22:53:41.0424746Z     '[2023-06-14 22:53:40] [autobuild] [ERROR]   Expected com.google.guava:guava:jar:32.0.0-jre:provided:jar but found com.google.guava:guava:jar:31.1-jre:provided:jar\n' +
+2023-06-14T22:53:41.0425060Z     '[2023-06-14 22:53:40] [autobuild] [INFO] ------------------------------------------------------------------------\n' +
+2023-06-14T22:53:41.0425258Z     '[2023-06-14 22:53:40] [autobuild] [INFO] BUILD FAILURE\n' +
+2023-06-14T22:53:41.0425557Z     '[2023-06-14 22:53:40] [autobuild] [INFO] ------------------------------------------------------------------------\n' +
+2023-06-14T22:53:41.0425853Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Total time:  27.164 s\n' +
+2023-06-14T22:53:41.0426087Z     '[2023-06-14 22:53:40] [autobuild] [INFO] Finished at: 2023-06-14T22:53:40Z\n' +
+2023-06-14T22:53:41.0426392Z     '[2023-06-14 22:53:40] [autobuild] [INFO] ------------------------------------------------------------------------\n' +
+2023-06-14T22:53:41.0426888Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] Failed to execute goal se.vandmo:dependency-lock-maven-plugin:0.23:check (check) on project dependency-lock-maven-plugin: Dependencies differ -> [Help 1]\n' +
+2023-06-14T22:53:41.0427490Z     '[2023-06-14 22:53:40] [autobuild] org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal se.vandmo:dependency-lock-maven-plugin:0.23:check (check) on project dependency-lock-maven-plugin: Dependencies differ\n' +
+2023-06-14T22:53:41.0427859Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)\n' +
+2023-06-14T22:53:41.0428235Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)\n' +
+2023-06-14T22:53:41.0428600Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)\n' +
+2023-06-14T22:53:41.0429062Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)\n' +
+2023-06-14T22:53:41.0429524Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)\n' +
+2023-06-14T22:53:41.0430043Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)\n' +
+2023-06-14T22:53:41.0430442Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)\n' +
+2023-06-14T22:53:41.0430762Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)\n' +
+2023-06-14T22:53:41.0431068Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)\n' +
+2023-06-14T22:53:41.0431371Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)\n' +
+2023-06-14T22:53:41.0431665Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)\n' +
+2023-06-14T22:53:41.0431949Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)\n' +
+2023-06-14T22:53:41.0432235Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)\n' +
+2023-06-14T22:53:41.0432587Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)\n' +
+2023-06-14T22:53:41.0433074Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)\n' +
+2023-06-14T22:53:41.0433494Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)\n' +
+2023-06-14T22:53:41.0433772Z     '[2023-06-14 22:53:40] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:566)\n' +
+2023-06-14T22:53:41.0434166Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)\n' +
+2023-06-14T22:53:41.0434524Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)\n' +
+2023-06-14T22:53:41.0434918Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)\n' +
+2023-06-14T22:53:41.0435270Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)\n' +
+2023-06-14T22:53:41.0435684Z     '[2023-06-14 22:53:40] [autobuild] Caused by: org.apache.maven.plugin.MojoExecutionException: Dependencies differ\n' +
+2023-06-14T22:53:41.0436037Z     '[2023-06-14 22:53:40] [autobuild]     at se.vandmo.dependencylock.maven.mojos.CheckMojo.execute (CheckMojo.java:41)\n' +
+2023-06-14T22:53:41.0436465Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)\n' +
+2023-06-14T22:53:41.0436923Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)\n' +
+2023-06-14T22:53:41.0437292Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)\n' +
+2023-06-14T22:53:41.0437655Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)\n' +
+2023-06-14T22:53:41.0438114Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)\n' +
+2023-06-14T22:53:41.0438567Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)\n' +
+2023-06-14T22:53:41.0439091Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)\n' +
+2023-06-14T22:53:41.0439484Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)\n' +
+2023-06-14T22:53:41.0439813Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)\n' +
+2023-06-14T22:53:41.0440129Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)\n' +
+2023-06-14T22:53:41.0440445Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)\n' +
+2023-06-14T22:53:41.0440737Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)\n' +
+2023-06-14T22:53:41.0441038Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)\n' +
+2023-06-14T22:53:41.0441325Z     '[2023-06-14 22:53:40] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)\n' +
+2023-06-14T22:53:41.0441666Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)\n' +
+2023-06-14T22:53:41.0442054Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)\n' +
+2023-06-14T22:53:41.0442570Z     '[2023-06-14 22:53:40] [autobuild]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)\n' +
+2023-06-14T22:53:41.0442851Z     '[2023-06-14 22:53:40] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:566)\n' +
+2023-06-14T22:53:41.0443232Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)\n' +
+2023-06-14T22:53:41.0443588Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)\n' +
+2023-06-14T22:53:41.0443985Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)\n' +
+2023-06-14T22:53:41.0444334Z     '[2023-06-14 22:53:40] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)\n' +
+2023-06-14T22:53:41.0444503Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] \n' +
+2023-06-14T22:53:41.0444799Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] Re-run Maven using the -X switch to enable full debug logging.\n' +
+2023-06-14T22:53:41.0445084Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] \n' +
+2023-06-14T22:53:41.0445436Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] For more information about the errors and possible solutions, please read the following articles:\n' +
+2023-06-14T22:53:41.0445783Z     '[2023-06-14 22:53:40] [autobuild] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException\n' +
+2023-06-14T22:53:41.0446637Z     '[2023-06-14 22:53:40] [ERROR] Spawned process exited abnormally (code 1; tried to run: [/tmp/semmleTempDir/apache-maven-3.8.1/bin/mvn, clean, package, -f, pom.xml, -B, -V, -e, -Dfindbugs.skip, -Dcheckstyle.skip, -Dpmd.skip=true, -Dspotbugs.skip, -Denforcer.skip, -Dmaven.javadoc.skip, -DskipTests, -Dmaven.test.skip.exec, -Dlicense.skip=true, -Drat.skip=true, -Dspotless.check.skip=true])\n'
+2023-06-14T22:53:41.0446699Z }
+2023-06-14T22:53:41.2112650Z Post job cleanup.
+2023-06-14T22:53:41.5713818Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql version --format=terse
+2023-06-14T22:53:42.0844109Z 2.12.0
+2023-06-14T22:53:42.3961105Z [command]/opt/hostedtoolcache/CodeQL/0.0.0-20230105/x64/codeql/codeql diagnostics export --format=sarif-latest --output=../codeql-failed-run.sarif
+2023-06-14T22:53:43.1127358Z Uploading failed SARIF file ../codeql-failed-run.sarif
+2023-06-14T22:53:43.1264808Z ##[group]Uploading results
+2023-06-14T22:53:43.1265760Z Processing sarif files: ["../codeql-failed-run.sarif"]
+2023-06-14T22:53:43.1558083Z Uploading results
+2023-06-14T22:53:43.7045930Z Successfully uploaded results
+2023-06-14T22:53:43.7046770Z ##[endgroup]
+2023-06-14T22:53:43.7047499Z ##[group]Waiting for processing to finish
+2023-06-14T22:53:43.8639657Z Analysis upload status is pending.
+2023-06-14T22:53:49.0189468Z Analysis upload status is failed.
+2023-06-14T22:53:49.0190714Z ##[endgroup]
+2023-06-14T22:53:49.3068404Z Post job cleanup.
+2023-06-14T22:53:49.4389296Z [command]/usr/bin/git version
+2023-06-14T22:53:49.4444059Z git version 2.40.1
+2023-06-14T22:53:49.4484505Z Temporarily overriding HOME='/home/runner/work/_temp/841d62fb-d19d-46ae-9825-aa27825ba13e' before making global git config changes
+2023-06-14T22:53:49.4485311Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-14T22:53:49.4490284Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/dependency-lock-maven-plugin/dependency-lock-maven-plugin
+2023-06-14T22:53:49.4548291Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-14T22:53:49.4598776Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-14T22:53:49.5044747Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-14T22:53:49.5094715Z http.https://github.com/.extraheader
+2023-06-14T22:53:49.5103973Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-14T22:53:49.5163530Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-14T22:53:49.5876530Z Cleaning up orphan processes
+
+2023-06-14T22:52:15.7680173Z Current runner version: '2.304.0'
+2023-06-14T22:52:15.7712083Z ##[group]Operating System
+2023-06-14T22:52:15.7712776Z Ubuntu
+2023-06-14T22:52:15.7713042Z 22.04.2
+2023-06-14T22:52:15.7713327Z LTS
+2023-06-14T22:52:15.7713617Z ##[endgroup]
+2023-06-14T22:52:15.7713886Z ##[group]Runner Image
+2023-06-14T22:52:15.7714276Z Image: ubuntu-22.04
+2023-06-14T22:52:15.7714588Z Version: 20230517.1
+2023-06-14T22:52:15.7715039Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230517.1/images/linux/Ubuntu2204-Readme.md
+2023-06-14T22:52:15.7715654Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230517.1
+2023-06-14T22:52:15.7716095Z ##[endgroup]
+2023-06-14T22:52:15.7716455Z ##[group]Runner Image Provisioner
+2023-06-14T22:52:15.7717021Z 2.0.236.1
+2023-06-14T22:52:15.7717328Z ##[endgroup]
+2023-06-14T22:52:15.7717997Z ##[group]GITHUB_TOKEN Permissions
+2023-06-14T22:52:15.7718624Z Actions: read
+2023-06-14T22:52:15.7718934Z Contents: read
+2023-06-14T22:52:15.7719238Z Metadata: read
+2023-06-14T22:52:15.7719890Z SecurityEvents: write
+2023-06-14T22:52:15.7720219Z ##[endgroup]
+2023-06-14T22:52:15.7723836Z Secret source: Dependabot
+2023-06-14T22:52:15.7724411Z Prepare workflow directory
+2023-06-14T22:52:15.8486593Z Prepare all required actions
+2023-06-14T22:52:15.8674492Z Getting action download info
+2023-06-14T22:52:16.0408037Z Download action repository 'actions/checkout@v2' (SHA:ee0669bd1cc54295c223e0bb666b733df41de1c5)
+2023-06-14T22:52:16.3860558Z Download action repository 'github/codeql-action@v1' (SHA:231aa2c8a89117b126725a0e11897209b7118144)
+2023-06-14T22:52:20.5942688Z Complete job name: Analyze (java)

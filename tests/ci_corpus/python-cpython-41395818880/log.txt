@@ -1,0 +1,10 @@
+===== Unresolved review/system.txt =====
+2026-11-02T05:45:02.9060000Z Job is waiting for a hosted runner to come online.
+2026-11-02T05:45:02.9020000Z Evaluating label-reviews.if
+2026-11-02T05:45:02.9020000Z Evaluating: (success() && ((github.repository_owner == 'python')))
+2026-11-02T05:45:02.9020000Z Expanded: (true && ('python' == 'python'))
+2026-11-02T05:45:02.9020000Z Result: true
+2026-11-02T05:45:02.9060000Z Job is about to start running on the hosted runner: GitHub Actions 1002967115
+2026-11-02T05:45:02.9030000Z Requested labels: ubuntu-slim
+2026-11-02T05:45:02.9030000Z Job defined at: python/cpython/.github/workflows/require-pr-label.yml@refs/pull/161156/merge
+2026-11-02T05:45:02.9030000Z Waiting for a runner to pick up this job...

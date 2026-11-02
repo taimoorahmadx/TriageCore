@@ -1,0 +1,655 @@
+2023-08-22T16:54:57.3411923Z Cleaning up orphan processes
+
+2023-08-22T16:54:34.7571924Z Current runner version: '2.308.0'
+2023-08-22T16:54:34.7604593Z ##[group]Operating System
+2023-08-22T16:54:34.7605270Z Ubuntu
+2023-08-22T16:54:34.7605639Z 22.04.3
+2023-08-22T16:54:34.7605987Z LTS
+2023-08-22T16:54:34.7606303Z ##[endgroup]
+2023-08-22T16:54:34.7606806Z ##[group]Runner Image
+2023-08-22T16:54:34.7607266Z Image: ubuntu-22.04
+2023-08-22T16:54:34.7607636Z Version: 20230814.1.0
+2023-08-22T16:54:34.7608293Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230814.1/images/linux/Ubuntu2204-Readme.md
+2023-08-22T16:54:34.7609137Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230814.1
+2023-08-22T16:54:34.7609750Z ##[endgroup]
+2023-08-22T16:54:34.7610128Z ##[group]Runner Image Provisioner
+2023-08-22T16:54:34.7610556Z 2.0.264.1
+2023-08-22T16:54:34.7610919Z ##[endgroup]
+2023-08-22T16:54:34.7612165Z ##[group]GITHUB_TOKEN Permissions
+2023-08-22T16:54:34.7612918Z Actions: write
+2023-08-22T16:54:34.7613320Z Checks: write
+2023-08-22T16:54:34.7613716Z Contents: write
+2023-08-22T16:54:34.7614468Z Deployments: write
+2023-08-22T16:54:34.7614894Z Discussions: write
+2023-08-22T16:54:34.7615571Z Issues: write
+2023-08-22T16:54:34.7616033Z Metadata: read
+2023-08-22T16:54:34.7616445Z Packages: write
+2023-08-22T16:54:34.7616788Z Pages: write
+2023-08-22T16:54:34.7617195Z PullRequests: write
+2023-08-22T16:54:34.7617693Z RepositoryProjects: write
+2023-08-22T16:54:34.7618121Z SecurityEvents: write
+2023-08-22T16:54:34.7618542Z Statuses: write
+2023-08-22T16:54:34.7618938Z ##[endgroup]
+2023-08-22T16:54:34.7623281Z Secret source: Actions
+2023-08-22T16:54:34.7624004Z Prepare workflow directory
+2023-08-22T16:54:34.8510738Z Prepare all required actions
+2023-08-22T16:54:34.8742162Z Getting action download info
+2023-08-22T16:54:35.1446750Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-22T16:54:35.8305673Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-22T16:54:36.5433632Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-22T16:54:37.1841071Z Download action repository 'stCarolas/setup-maven@v4.5' (SHA:07fbbe97d97ef44336b7382563d66743297e442f)
+2023-08-22T16:54:39.0574559Z Complete job name: Java 17, Maven 3.9.0
+
+2023-08-22T16:54:46.7281862Z Cleaning up orphan processes
+
+2023-08-22T16:54:58.7221946Z Post job cleanup.
+
+2023-08-22T16:54:46.3492803Z Post job cleanup.
+
+2023-08-22T16:54:46.5281063Z Post job cleanup.
+2023-08-22T16:54:46.6322923Z [command]/usr/bin/git version
+2023-08-22T16:54:46.6369387Z git version 2.41.0
+2023-08-22T16:54:46.6415222Z Temporarily overriding HOME='/home/runner/work/_temp/9578fb66-9e1d-472c-99fe-ec1734c8c176' before making global git config changes
+2023-08-22T16:54:46.6416312Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-22T16:54:46.6422223Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jspc-maven-plugin/jspc-maven-plugin
+2023-08-22T16:54:46.6461694Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-22T16:54:46.6497539Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-22T16:54:46.6769948Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-22T16:54:46.6806769Z http.https://github.com/.extraheader
+2023-08-22T16:54:46.6808161Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-22T16:54:46.6856332Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-22T16:54:46.3289708Z ##[group]Run mvn test integration-test
+2023-08-22T16:54:46.3290194Z [36;1mmvn test integration-test[0m
+2023-08-22T16:54:46.3361151Z shell: /usr/bin/bash -e {0}
+2023-08-22T16:54:46.3361453Z env:
+2023-08-22T16:54:46.3361783Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.20-8/x64
+2023-08-22T16:54:46.3362232Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.20-8/x64
+2023-08-22T16:54:46.3362736Z ##[endgroup]
+2023-08-22T16:54:48.7221162Z [INFO] Scanning for projects...
+2023-08-22T16:54:50.0676800Z [INFO] Inspecting build with total of 1 modules...
+2023-08-22T16:54:50.0686122Z [INFO] Installing Nexus Staging features:
+2023-08-22T16:54:50.0727570Z [INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-08-22T16:54:50.0817761Z [INFO] 
+2023-08-22T16:54:50.0823074Z [INFO] -------------< io.leonard.maven.plugins:jspc-maven-plugin >-------------
+2023-08-22T16:54:50.0827192Z [INFO] Building JSPC Maven Plugin 4.1.2-SNAPSHOT
+2023-08-22T16:54:50.0831757Z [INFO]   from pom.xml
+2023-08-22T16:54:50.0835853Z [INFO] ----------------------------[ maven-plugin ]----------------------------
+2023-08-22T16:54:50.9738783Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom
+2023-08-22T16:54:51.3272097Z Progress (1): 1.4/8.7 kB
+2023-08-22T16:54:51.3285785Z Progress (1): 2.7/8.7 kB
+2023-08-22T16:54:51.3297298Z Progress (1): 4.1/8.7 kB
+2023-08-22T16:54:51.3309241Z Progress (1): 5.5/8.7 kB
+2023-08-22T16:54:51.3320146Z Progress (1): 6.9/8.7 kB
+2023-08-22T16:54:51.3329306Z Progress (1): 8.2/8.7 kB
+2023-08-22T16:54:51.3387635Z Progress (1): 8.7 kB    
+2023-08-22T16:54:51.3392960Z                     
+2023-08-22T16:54:51.3397059Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.pom (8.7 kB at 23 kB/s)
+2023-08-22T16:54:51.3723287Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/13/plexus-13.pom
+2023-08-22T16:54:51.3783787Z Progress (1): 1.4/27 kB
+2023-08-22T16:54:51.3793858Z Progress (1): 2.7/27 kB
+2023-08-22T16:54:51.3803075Z Progress (1): 4.1/27 kB
+2023-08-22T16:54:51.3817731Z Progress (1): 5.5/27 kB
+2023-08-22T16:54:51.3852952Z Progress (1): 6.9/27 kB
+2023-08-22T16:54:51.3859701Z Progress (1): 8.2/27 kB
+2023-08-22T16:54:51.3867796Z Progress (1): 9.6/27 kB
+2023-08-22T16:54:51.3875811Z Progress (1): 11/27 kB 
+2023-08-22T16:54:51.3882322Z Progress (1): 12/27 kB
+2023-08-22T16:54:51.3890046Z Progress (1): 14/27 kB
+2023-08-22T16:54:51.3900903Z Progress (1): 15/27 kB
+2023-08-22T16:54:51.3908677Z Progress (1): 16/27 kB
+2023-08-22T16:54:51.3918144Z Progress (1): 18/27 kB
+2023-08-22T16:54:51.3925837Z Progress (1): 19/27 kB
+2023-08-22T16:54:51.4013750Z Progress (1): 21/27 kB
+2023-08-22T16:54:51.4021907Z Progress (1): 22/27 kB
+2023-08-22T16:54:51.4031945Z Progress (1): 23/27 kB
+2023-08-22T16:54:51.4038321Z Progress (1): 25/27 kB
+2023-08-22T16:54:51.4050246Z Progress (1): 26/27 kB
+2023-08-22T16:54:51.4061651Z Progress (1): 27 kB   
+2023-08-22T16:54:51.4067337Z                    
+2023-08-22T16:54:51.4069702Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/13/plexus-13.pom (27 kB at 782 kB/s)
+2023-08-22T16:54:51.5584631Z Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar
+2023-08-22T16:54:51.5678986Z Progress (1): 1.4/192 kB
+2023-08-22T16:54:51.5689163Z Progress (1): 2.7/192 kB
+2023-08-22T16:54:51.5695218Z Progress (1): 4.1/192 kB
+2023-08-22T16:54:51.5701834Z Progress (1): 5.5/192 kB
+2023-08-22T16:54:51.5710274Z Progress (1): 6.9/192 kB
+2023-08-22T16:54:51.5717312Z Progress (1): 8.2/192 kB
+2023-08-22T16:54:51.5727276Z Progress (1): 9.6/192 kB
+2023-08-22T16:54:51.5734201Z Progress (1): 11/192 kB 
+2023-08-22T16:54:51.5741415Z Progress (1): 12/192 kB
+2023-08-22T16:54:51.5747361Z Progress (1): 14/192 kB
+2023-08-22T16:54:51.5752082Z Progress (1): 15/192 kB
+2023-08-22T16:54:51.5789726Z Progress (1): 16/192 kB
+2023-08-22T16:54:51.5906564Z Progress (1): 32/192 kB
+2023-08-22T16:54:51.6028606Z Progress (1): 49/192 kB
+2023-08-22T16:54:51.6054928Z Progress (1): 65/192 kB
+2023-08-22T16:54:51.6093587Z Progress (1): 81/192 kB
+2023-08-22T16:54:51.6125924Z Progress (1): 98/192 kB
+2023-08-22T16:54:51.6149135Z Progress (1): 114/192 kB
+2023-08-22T16:54:51.6174205Z Progress (1): 130/192 kB
+2023-08-22T16:54:51.6199002Z Progress (1): 147/192 kB
+2023-08-22T16:54:51.6232702Z Progress (1): 163/192 kB
+2023-08-22T16:54:51.6273109Z Progress (1): 180/192 kB
+2023-08-22T16:54:51.6284041Z Progress (1): 192 kB    
+2023-08-22T16:54:51.6288273Z                     
+2023-08-22T16:54:51.6290616Z Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/4.0.0/plexus-utils-4.0.0.jar (192 kB at 2.6 MB/s)
+2023-08-22T16:54:51.6398167Z [INFO] 
+2023-08-22T16:54:51.6404259Z [INFO] --- plugin:3.9.0:helpmojo (exec-plugin-doc) @ jspc-maven-plugin ---
+2023-08-22T16:54:52.6378632Z [INFO] 
+2023-08-22T16:54:52.6380283Z [INFO] --- resources:3.3.0:resources (default-resources) @ jspc-maven-plugin ---
+2023-08-22T16:54:52.7367744Z [INFO] skip non existing resourceDirectory /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/src/main/resources
+2023-08-22T16:54:52.7373839Z [INFO] 
+2023-08-22T16:54:52.7376292Z [INFO] --- compiler:3.10.1:compile (default-compile) @ jspc-maven-plugin ---
+2023-08-22T16:54:52.8609901Z [INFO] Changes detected - recompiling the module!
+2023-08-22T16:54:52.8627812Z [INFO] Compiling 6 source files to /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/target/classes
+2023-08-22T16:54:54.8325602Z [INFO] /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/src/main/java/io/leonard/maven/plugins/jspc/JspcMojo.java: /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/src/main/java/io/leonard/maven/plugins/jspc/JspcMojo.java uses or overrides a deprecated API.
+2023-08-22T16:54:54.8327100Z [INFO] /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/src/main/java/io/leonard/maven/plugins/jspc/JspcMojo.java: Recompile with -Xlint:deprecation for details.
+2023-08-22T16:54:54.8328328Z [INFO] 
+2023-08-22T16:54:54.8329687Z [INFO] --- plugin:3.9.0:descriptor (default-descriptor) @ jspc-maven-plugin ---
+2023-08-22T16:54:54.8460589Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-08-22T16:54:56.1176607Z [INFO] java-annotations mojo extractor found 2 mojo descriptors.
+2023-08-22T16:54:56.1379899Z [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-08-22T16:54:56.1406577Z [INFO] ant mojo extractor found 0 mojo descriptor.
+2023-08-22T16:54:56.1411485Z [INFO] bsh mojo extractor found 0 mojo descriptor.
+2023-08-22T16:54:56.1748143Z [INFO] 
+2023-08-22T16:54:56.1752609Z [INFO] --- resources:3.3.0:testResources (default-testResources) @ jspc-maven-plugin ---
+2023-08-22T16:54:56.1946499Z [INFO] Copying 63 resources
+2023-08-22T16:54:56.2159562Z [INFO] 
+2023-08-22T16:54:56.2181128Z [INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ jspc-maven-plugin ---
+2023-08-22T16:54:56.2261548Z [INFO] Changes detected - recompiling the module!
+2023-08-22T16:54:56.2299671Z [INFO] Compiling 8 source files to /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/target/test-classes
+2023-08-22T16:54:56.7873123Z [INFO] 
+2023-08-22T16:54:56.7913951Z [INFO] --- surefire:3.0.0-M8:test (default-test) @ jspc-maven-plugin ---
+2023-08-22T16:54:57.0508307Z [INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+2023-08-22T16:54:57.2660419Z [INFO] 
+2023-08-22T16:54:57.2663749Z [INFO] -------------------------------------------------------
+2023-08-22T16:54:57.2669961Z [INFO]  T E S T S
+2023-08-22T16:54:57.2670489Z [INFO] -------------------------------------------------------
+2023-08-22T16:54:57.9329844Z [INFO] Running org.apache.jasper.compiler.TestParallelJDTCompiler
+2023-08-22T16:54:58.4320899Z [INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.444 s - in org.apache.jasper.compiler.TestParallelJDTCompiler
+2023-08-22T16:54:58.4326546Z [INFO] Running io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping
+2023-08-22T16:54:58.4932819Z [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping
+2023-08-22T16:54:58.4933948Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping.should_throw_error_when_not_escaped  Time elapsed: 0.003 s  <<< ERROR!
+2023-08-22T16:54:58.4934915Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.4935536Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.4936298Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping.<init>(TestJspcMojoStrictQuoteEscaping.java:17)
+2023-08-22T16:54:58.4937136Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.4938020Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.4939334Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.4940128Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.4940813Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.4941577Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.4942297Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.4943303Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.4943980Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.4944824Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.4945915Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.4946571Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.4947256Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.4947884Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.4948445Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.4949037Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.4949788Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.4950516Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.4951225Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.4952133Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.4952746Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.4953660Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.4954431Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.4955160Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.4955896Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.4956844Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.4957577Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.4958250Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.4959337Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.4960057Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.4960991Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.4961777Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.4962213Z 	... 30 more
+2023-08-22T16:54:58.4962381Z 
+2023-08-22T16:54:58.4962788Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping.should_compile_even_if_not_escaped  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.4963515Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.4964095Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.4965017Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoStrictQuoteEscaping.<init>(TestJspcMojoStrictQuoteEscaping.java:17)
+2023-08-22T16:54:58.4966016Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.4966825Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.4968261Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.4969183Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.4970464Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.4972041Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.4986256Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.4987089Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.4987852Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.4988557Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.4989358Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.4990052Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.4990731Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.4991318Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.4991872Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.4992447Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+[... 10267 lines removed by TriageCore ...]
+2023-08-22T16:54:58.5690231Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.5691000Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.5691727Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.5692460Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.5693406Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.5694230Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.5694841Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.5695487Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.5696157Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.5696994Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.5697835Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.5698285Z 	... 30 more
+2023-08-22T16:54:58.5698457Z 
+2023-08-22T16:54:58.5698871Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojo.should_return_correct_merged_xml_when_mergeFragment_is_true_and_httpProxy_given  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.5699537Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.5700167Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.5700785Z 	at io.leonard.maven.plugins.jspc.TestJspcMojo.<init>(TestJspcMojo.java:21)
+2023-08-22T16:54:58.5701478Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.5702316Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.5703243Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.5704031Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.5704701Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.5705431Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.5706145Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.5706865Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.5707590Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.5708283Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.5708893Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.5709543Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.5710240Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.5710862Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.5711695Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.5712432Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.5713069Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.5713792Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.5714343Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.5715058Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.5715704Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.5716450Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.5869806Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.5870582Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.5871332Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.5872047Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.5872874Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.5873522Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.5874746Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.5875482Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.5876191Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.5877022Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.5877510Z 	... 30 more
+2023-08-22T16:54:58.5877763Z 
+2023-08-22T16:54:58.5878987Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojo.should_raise_no_validating_xml_error_when_mergeFragment_is_true_many_jsp_4_threads  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.5879736Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.5880321Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.5880916Z 	at io.leonard.maven.plugins.jspc.TestJspcMojo.<init>(TestJspcMojo.java:21)
+2023-08-22T16:54:58.5881608Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.5882399Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.5883296Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.5884056Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.5884718Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.5885416Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.5886110Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.5886801Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.5887496Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.5888169Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.5888778Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.5890142Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.5891025Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.5892028Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.5892780Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.5893746Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.5894304Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.5894839Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.5895372Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.5895902Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.5896485Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.5897371Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.5898119Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.5898836Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.5899558Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.5900245Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.5994099Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.5995190Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.5995853Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.5996506Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.5997808Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.5998418Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.5999046Z 	... 30 more
+2023-08-22T16:54:58.5999324Z 
+2023-08-22T16:54:58.5999998Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojo.should_return_one_compiled_jsp_in_bytecode_java11_when_executeMojo_on_project_one_jsp_compilerVersion_11  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6000865Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6001451Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6001940Z 	at io.leonard.maven.plugins.jspc.TestJspcMojo.<init>(TestJspcMojo.java:21)
+2023-08-22T16:54:58.6002606Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6003390Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6004250Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6005004Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6005739Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6006428Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6007093Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6007764Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6008441Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6009256Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6009825Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6010414Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6011375Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6012135Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6012684Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6013226Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6013770Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6014290Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6014805Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6015314Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6015876Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6016556Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6017256Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6017923Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6018593Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6019251Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6019855Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6020454Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6021072Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6021716Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6022337Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6022908Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6023315Z 	... 30 more
+2023-08-22T16:54:58.6023599Z 
+2023-08-22T16:54:58.6023902Z [INFO] Running io.leonard.maven.plugins.jspc.TestIncludesExcludesMojo
+2023-08-22T16:54:58.6024896Z [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in io.leonard.maven.plugins.jspc.TestIncludesExcludesMojo
+2023-08-22T16:54:58.6025962Z [ERROR] io.leonard.maven.plugins.jspc.TestIncludesExcludesMojo.shouldRespectIncludesAndExcludes  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6026623Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6027406Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6027967Z 	at io.leonard.maven.plugins.jspc.TestIncludesExcludesMojo.<init>(TestIncludesExcludesMojo.java:18)
+2023-08-22T16:54:58.6028735Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6029929Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6030765Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6042682Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6048047Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6048717Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6095994Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6096810Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6097429Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6098383Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6099107Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6099664Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6100236Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6100751Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6101190Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6102066Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6102555Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6103018Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6103450Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6103907Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6104440Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6105071Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6105722Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6106331Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6106930Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6107543Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6108098Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6108640Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6109213Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6109964Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6110522Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6110993Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6111318Z 	... 30 more
+2023-08-22T16:54:58.6111458Z 
+2023-08-22T16:54:58.6111705Z [INFO] Running io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading
+2023-08-22T16:54:58.6112655Z [ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading
+2023-08-22T16:54:58.6113459Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.should_return_one_time_jsp_declaration_in_web_xml_when_executeMojo_on_project_five_jsp_with_4_threads  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6114133Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6114604Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6115160Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.<init>(TestJspcMojoMultithreading.java:18)
+2023-08-22T16:54:58.6115810Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6116498Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6162747Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6163401Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6163925Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6165461Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6166185Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6166778Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6167343Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6167888Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6168542Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6169298Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6170144Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6170673Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6171147Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6171645Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6172142Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6172840Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6173416Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6174200Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6174689Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6175458Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6176079Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6176892Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6177675Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6178257Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6178794Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6179318Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6179866Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6180442Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6181005Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6181479Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6181805Z 	... 30 more
+2023-08-22T16:54:58.6181949Z 
+2023-08-22T16:54:58.6182415Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.should_return_same_compiled_jsp_as_monothread_reference_when_executeMojo_on_project_many_jsp_with_4_threads  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6183098Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6183762Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6184352Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.<init>(TestJspcMojoMultithreading.java:18)
+2023-08-22T16:54:58.6185179Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6185855Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6186624Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6187263Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6188071Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6188664Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6189394Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6189948Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6190505Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6191041Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6191519Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6192009Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6192551Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6193696Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6194179Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6194674Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6195172Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6195647Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6196116Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6196577Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6197606Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6198195Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6198800Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6199386Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6199964Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6200536Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6201049Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6201540Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6202069Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6202621Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6203348Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6203842Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6204166Z 	... 30 more
+2023-08-22T16:54:58.6204306Z 
+2023-08-22T16:54:58.6204753Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.should_return_one_time_jsp_declaration_in_web_xml_when_executeMojo_on_project_one_jsp_with_4_threads  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6205411Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6205879Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6206446Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoMultithreading.<init>(TestJspcMojoMultithreading.java:18)
+2023-08-22T16:54:58.6207436Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6208124Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6208890Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6210129Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6211026Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6211623Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6212743Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6213322Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6213907Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6214463Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6214939Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6215461Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6216032Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6216524Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6216951Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6217406Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6217851Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6218294Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6219440Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6219917Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6220417Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6221034Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6221662Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6222237Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6222835Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6223425Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6223962Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6224484Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6225031Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6225584Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6226150Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6226640Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6226960Z 	... 30 more
+2023-08-22T16:54:58.6227100Z 
+2023-08-22T16:54:58.6227436Z [INFO] Running io.leonard.maven.plugins.jspc.TestJspcMojoMultithreadingWithDifferentCompiler
+2023-08-22T16:54:58.6228541Z [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in io.leonard.maven.plugins.jspc.TestJspcMojoMultithreadingWithDifferentCompiler
+2023-08-22T16:54:58.6229717Z [ERROR] io.leonard.maven.plugins.jspc.TestJspcMojoMultithreadingWithDifferentCompiler.should_return_same_compiled_jsp_as_JDTCompiler_reference_when_executeMojo_on_project_many_jsp_with_4_threads_ParallelJDTCompiler  Time elapsed: 0 s  <<< ERROR!
+2023-08-22T16:54:58.6230521Z java.lang.NoClassDefFoundError: org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6231170Z 	at org.apache.maven.plugin.testing.MojoRule.<init>(MojoRule.java:67)
+2023-08-22T16:54:58.6231995Z 	at io.leonard.maven.plugins.jspc.TestJspcMojoMultithreadingWithDifferentCompiler.<init>(TestJspcMojoMultithreadingWithDifferentCompiler.java:16)
+2023-08-22T16:54:58.6232785Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+2023-08-22T16:54:58.6233453Z 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+2023-08-22T16:54:58.6234194Z 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+2023-08-22T16:54:58.6234997Z 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+2023-08-22T16:54:58.6235533Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:250)
+2023-08-22T16:54:58.6236251Z 	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:260)
+2023-08-22T16:54:58.6237071Z 	at org.junit.runners.BlockJUnit4ClassRunner$2.runReflectiveCall(BlockJUnit4ClassRunner.java:309)
+2023-08-22T16:54:58.6237652Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-08-22T16:54:58.6238219Z 	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:306)
+2023-08-22T16:54:58.6238759Z 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+2023-08-22T16:54:58.6239232Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-08-22T16:54:58.6239967Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+2023-08-22T16:54:58.6240513Z 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+2023-08-22T16:54:58.6240988Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-08-22T16:54:58.6241401Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-08-22T16:54:58.6241851Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-08-22T16:54:58.6242337Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-08-22T16:54:58.6242775Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-08-22T16:54:58.6243183Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-08-22T16:54:58.6243599Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-08-22T16:54:58.6244082Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:377)
+2023-08-22T16:54:58.6244663Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:284)
+2023-08-22T16:54:58.6245263Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:248)
+2023-08-22T16:54:58.6245826Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:167)
+2023-08-22T16:54:58.6246381Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-08-22T16:54:58.6246958Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-08-22T16:54:58.6247480Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-08-22T16:54:58.6247987Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-08-22T16:54:58.6249951Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-08-22T16:54:58.6250624Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-08-22T16:54:58.6251209Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-08-22T16:54:58.6251732Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527)
+2023-08-22T16:54:58.6253352Z 	... 30 more
+2023-08-22T16:54:58.6253494Z 
+2023-08-22T16:54:58.6347719Z [INFO] 
+2023-08-22T16:54:58.6385413Z [INFO] Results:
+2023-08-22T16:54:58.6388156Z [INFO] 
+2023-08-22T16:54:58.6388835Z [ERROR] Errors: 
+2023-08-22T16:54:58.6389667Z [ERROR]   TestIncludesExcludesMojo.<init>:18 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6391248Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6391907Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6392521Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6393131Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6393786Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6394857Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6395567Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6397261Z [ERROR]   TestJspcMojo.<init>:21 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6398032Z [ERROR]   TestJspcMojoMultithreading.<init>:18 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6398938Z [ERROR]   TestJspcMojoMultithreading.<init>:18 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6401489Z [ERROR]   TestJspcMojoMultithreading.<init>:18 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6404662Z [ERROR]   TestJspcMojoMultithreadingWithDifferentCompiler.<init>:16 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6407970Z [ERROR]   TestJspcMojoStrictQuoteEscaping.<init>:17 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6408734Z [ERROR]   TestJspcMojoStrictQuoteEscaping.<init>:17 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6413554Z [ERROR]   TestJspcMojoWithDifferentCompiler.<init>:16 » NoClassDefFound org/codehaus/plexus/util/xml/XmlStreamReader
+2023-08-22T16:54:58.6414003Z [INFO] 
+2023-08-22T16:54:58.6414335Z [ERROR] Tests run: 22, Failures: 0, Errors: 16, Skipped: 0
+2023-08-22T16:54:58.6414647Z [INFO] 
+2023-08-22T16:54:58.6456622Z [INFO] ------------------------------------------------------------------------
+2023-08-22T16:54:58.6513926Z [INFO] BUILD FAILURE
+2023-08-22T16:54:58.6515059Z [INFO] ------------------------------------------------------------------------
+2023-08-22T16:54:58.6532843Z [INFO] Total time:  9.993 s
+2023-08-22T16:54:58.6536527Z [INFO] Finished at: 2023-08-22T16:54:58Z
+2023-08-22T16:54:58.6537093Z [INFO] ------------------------------------------------------------------------
+2023-08-22T16:54:58.6551944Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M8:test (default-test) on project jspc-maven-plugin: 
+2023-08-22T16:54:58.6553846Z [ERROR] 
+2023-08-22T16:54:58.6554834Z [ERROR] Please refer to /home/runner/work/jspc-maven-plugin/jspc-maven-plugin/target/surefire-reports for the individual test results.
+2023-08-22T16:54:58.6562162Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-08-22T16:54:58.6562745Z [ERROR] -> [Help 1]
+2023-08-22T16:54:58.6563217Z [ERROR] 
+2023-08-22T16:54:58.6564242Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-08-22T16:54:58.6564791Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-22T16:54:58.6567680Z [ERROR] 
+2023-08-22T16:54:58.6568532Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-22T16:54:58.6569464Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-22T16:54:58.7131216Z ##[error]The operation was canceled.
+2023-08-22T16:54:58.7221967Z Post job cleanup.
+2023-08-22T16:54:58.9715648Z Post job cleanup.
+2023-08-22T16:54:59.1324632Z [command]/usr/bin/git version
+2023-08-22T16:54:59.1394784Z git version 2.41.0
+2023-08-22T16:54:59.1470891Z Temporarily overriding HOME='/home/runner/work/_temp/5ddefa6b-ce37-40b0-8730-b8c27cc81858' before making global git config changes
+2023-08-22T16:54:59.1473062Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-22T16:54:59.1481124Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jspc-maven-plugin/jspc-maven-plugin
+2023-08-22T16:54:59.1539086Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-22T16:54:59.1586552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-22T16:54:59.1988817Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-22T16:54:59.2007778Z http.https://github.com/.extraheader
+2023-08-22T16:54:59.2032719Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-22T16:54:59.2078804Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-22T16:54:59.2764303Z Cleaning up orphan processes
+
+2023-08-22T16:54:42.5623145Z ##[group]Run actions/setup-java@v3
+2023-08-22T16:54:42.5623487Z with:
+2023-08-22T16:54:42.5623760Z   java-version: 17
+2023-08-22T16:54:42.5624074Z   distribution: temurin
+2023-08-22T16:54:42.5624380Z   java-package: jdk
+2023-08-22T16:54:42.5624674Z   check-latest: false
+2023-08-22T16:54:42.5625270Z   server-id: github
+2023-08-22T16:54:42.5625584Z   server-username: GITHUB_ACTOR
+2023-08-22T16:54:42.5625912Z   server-password: GITHUB_TOKEN
+2023-08-22T16:54:42.5626387Z   overwrite-settings: true
+2023-08-22T16:54:42.5626706Z   job-status: success
+2023-08-22T16:54:42.5627403Z   token: ***
+2023-08-22T16:54:42.5627681Z ##[endgroup]
+2023-08-22T16:54:42.8188055Z ##[group]Installed distributions
+2023-08-22T16:54:42.8251640Z Resolved Java 17.0.8+7 from tool-cache
+2023-08-22T16:54:42.8252335Z Setting Java 17.0.8+7 as the default
+2023-08-22T16:54:42.8278704Z Creating toolchains.xml for JDK version 17 from temurin
+2023-08-22T16:54:42.8411215Z Writing to /home/runner/.m2/toolchains.xml
+2023-08-22T16:54:42.8411982Z 
+2023-08-22T16:54:42.8413099Z Java configuration:
+2023-08-22T16:54:42.8413550Z   Distribution: temurin
+2023-08-22T16:54:42.8413954Z   Version: 17.0.8+7
+2023-08-22T16:54:42.8414734Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-08-22T16:54:42.8415271Z 
+2023-08-22T16:54:42.8415862Z ##[endgroup]
+2023-08-22T16:54:42.8456205Z Creating settings.xml with server-id: github
+2023-08-22T16:54:42.8456836Z Writing to /home/runner/.m2/settings.xml
+
+2023-08-22T16:54:38.0245089Z ##[group]Run stCarolas/setup-maven@v4.5
+2023-08-22T16:54:38.0245369Z with:
+2023-08-22T16:54:38.0245593Z   maven-version: 3.8.1
+2023-08-22T16:54:38.0245830Z env:
+2023-08-22T16:54:38.0246119Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-08-22T16:54:38.0246542Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.8-7/x64
+2023-08-22T16:54:38.0246857Z ##[endgroup]
+2023-08-22T16:54:38.1012867Z downloading https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.8.1/apache-maven-3.8.1-bin.tar.gz
+2023-08-22T16:54:38.2623511Z [command]tar --version
+2023-08-22T16:54:38.2672914Z tar (GNU tar) 1.34
+2023-08-22T16:54:38.2673789Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-08-22T16:54:38.2674278Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-08-22T16:54:38.2674721Z This is free software: you are free to change and redistribute it.
+2023-08-22T16:54:38.2675113Z There is NO WARRANTY, to the extent permitted by law.
+2023-08-22T16:54:38.2675411Z 
+2023-08-22T16:54:38.2675535Z Written by John Gilmore and Jay Fenlason.
+2023-08-22T16:54:38.2688456Z [command]tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/e8f749e5-97b2-4b61-855a-c3b7fb7f3578 -f /home/runner/work/_temp/2b1cf98f-ce66-4f55-9571-79d4ead5ff9d

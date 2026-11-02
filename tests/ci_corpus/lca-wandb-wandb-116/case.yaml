@@ -1,0 +1,118 @@
+repo: wandb/wandb
+run_id: '116'
+head_sha: 077f6aaac3ebb96626ac747fb126a0b4d752489c
+run_attempts: []
+commits:
+- sha: 077f6aaac3ebb96626ac747fb126a0b4d752489c
+  author: jthetzel
+  files:
+  - wandb/integration/ultralytics/bbox_utils.py
+  - wandb/integration/ultralytics/callback.py
+  - wandb/integration/yolov8/yolov8.py
+- sha: 9d6b006e0ffee7e6d392c976bc186c64dcff02ac
+  author: dmitryduev
+  files:
+  - .circleci/config.yml
+  - tests/pytest_tests/system_tests/test_system_metrics/test_open_metrics.py
+- sha: ab2ccc1326cdcc5033e78c6b14ba4a01ee69a02c
+  author: dmitryduev
+  files:
+  - core/pkg/monitor/monitor.go
+  - core/pkg/service/wandb_internal.pb.go
+  - wandb/proto/v3/wandb_internal_pb2.py
+  - wandb/proto/v3/wandb_internal_pb2.pyi
+  - wandb/proto/v4/wandb_internal_pb2.py
+  - wandb/proto/v4/wandb_internal_pb2.pyi
+  - wandb/proto/wandb_internal.proto
+- sha: 96426b442abe712c27ac945886c5c089565dd253
+  author: dmitryduev
+  files:
+  - .github/pull_request_template.md
+- sha: 8b160787f0d55c89de31355f6e5afa4a6f4fe53f
+  author: kptkin
+  files:
+  - core/go.mod
+  - core/go.sum
+  - core/pkg/server/files.go
+  - core/pkg/server/git.go
+  - core/pkg/server/git_test.go
+  - core/pkg/server/handler.go
+  - core/pkg/server/sender.go
+  - core/pkg/server/stream.go
+  - core/pkg/service/wandb_internal.pb.go
+  - tests/pytest_tests/system_tests/test_core/test_file_upload.py
+  - tests/pytest_tests/system_tests/test_core/test_system_info.py
+  - tests/pytest_tests/system_tests/test_core/test_wandb_integration.py
+  - tests/pytest_tests/system_tests/test_core/test_wandb_run.py
+  - tests/pytest_tests/unit_tests_old/test_core/test_file_upload.py
+  - wandb/proto/v3/wandb_internal_pb2.py
+  - wandb/proto/v3/wandb_internal_pb2.pyi
+  - wandb/proto/v4/wandb_internal_pb2.py
+  - wandb/proto/v4/wandb_internal_pb2.pyi
+  - wandb/proto/wandb_internal.proto
+  - wandb/sdk/interface/interface.py
+  - wandb/sdk/interface/interface_shared.py
+  - wandb/sdk/internal/handler.py
+  - wandb/sdk/internal/sender.py
+  - wandb/sdk/internal/system/system_info.py
+  - wandb/sdk/wandb_run.py
+- sha: f0b292d298b07471ed4a20b3a8f812c57ad598df
+  author: szymon-piechowicz-wandb
+  files:
+  - tests/pytest_tests/system_tests/test_artifacts/test_wandb_artifacts.py
+  - tests/pytest_tests/unit_tests/test_artifacts/conftest.py
+  - tests/pytest_tests/unit_tests/test_artifacts/test_storage.py
+  - tests/pytest_tests/unit_tests/test_artifacts/test_wandb_artifacts.py
+  - wandb/cli/cli.py
+  - wandb/sdk/artifacts/artifact.py
+  - wandb/sdk/artifacts/artifact_file_cache.py
+  - wandb/sdk/artifacts/artifact_instance_cache.py
+  - wandb/sdk/artifacts/storage_handlers/azure_handler.py
+  - wandb/sdk/artifacts/storage_handlers/gcs_handler.py
+  - wandb/sdk/artifacts/storage_handlers/http_handler.py
+  - wandb/sdk/artifacts/storage_handlers/local_file_handler.py
+  - wandb/sdk/artifacts/storage_handlers/s3_handler.py
+  - wandb/sdk/artifacts/storage_handlers/wb_artifact_handler.py
+  - wandb/sdk/artifacts/storage_handlers/wb_local_artifact_handler.py
+  - wandb/sdk/artifacts/storage_policies/wandb_storage_policy.py
+- sha: 5fcea1ba0e5ecb5709bbf3f4ade9aece6d3fe9b1
+  author: bcsherma
+  files:
+  - tests/pytest_tests/system_tests/test_launch/test_launch_kubernetes.py
+  - tests/pytest_tests/unit_tests/test_launch/test_runner/test_kubernetes.py
+  - wandb/sdk/launch/runner/kubernetes_runner.py
+- sha: db3d197d781cadfcea866ff95c0203058563d44c
+  author: kptkin
+  files:
+  - .test_durations
+- sha: b1e07f4b3b3ca58dba6ad007bfafddc74ceea3a3
+  author: kptkin
+  files:
+  - tests/functional_tests/t0_main/lightning/pl_base.py
+  - tests/functional_tests/t0_main/lightning/t0_strategy_ddp.py
+  - tests/functional_tests/t0_main/lightning/t0_strategy_ddp.yea
+  - tests/functional_tests/t0_main/lightning/t1_strategy_ddp_spawn.py
+  - tests/functional_tests/t0_main/lightning/t1_strategy_ddp_spawn.yea
+  - tests/functional_tests/t0_main/lightning/train_gpu_ddp.py
+  - tests/functional_tests/t0_main/lightning/train_gpu_ddp.yea
+  - tests/functional_tests/t0_main/lightning/train_tpu_ddp.py
+  - tests/functional_tests/t0_main/lightning/train_tpu_ddp.yea
+- sha: 438f21cff228240b5f15f6d1a7287329fb44e60b
+  author: kptkin
+  files:
+  - core/pkg/server/connection.go
+  - core/pkg/server/handler.go
+  - core/pkg/server/handler_test.go
+  - core/pkg/server/history.go
+  - core/pkg/server/metric.go
+  - core/pkg/server/responder.go
+  - core/pkg/server/sender.go
+  - core/pkg/server/sender_test.go
+  - core/pkg/server/stream.go
+  - core/pkg/server/summary.go
+  - core/pkg/server/writer.go
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

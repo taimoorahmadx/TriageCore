@@ -1,0 +1,91 @@
+===== smoketest (3.8)/5_Run checks.txt =====
+##[group]Run pytest tests/test_smoketest.py
+[36;1mpytest tests/test_smoketest.py[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+ImportError while loading conftest '/home/runner/work/composer/composer/tests/conftest.py'.
+tests/conftest.py:9: in <module>
+    from composer.utils import reproducibility
+composer/__init__.py:10: in <module>
+    from composer.trainer import Trainer
+composer/trainer/__init__.py:6: in <module>
+    from composer.trainer.trainer import Trainer
+composer/trainer/trainer.py:37: in <module>
+    from composer.callbacks import CheckpointSaver, OptimizerMonitor
+composer/callbacks/__init__.py:12: in <module>
+    from composer.callbacks.eval_output_logging_callback import EvalOutputLogging
+composer/callbacks/eval_output_logging_callback.py:16: in <module>
+    from composer.datasets.in_context_learning_evaluation import (InContextLearningCodeEvalDataset,
+composer/datasets/in_context_learning_evaluation.py:13: in <module>
+    import transformers
+E   ModuleNotFoundError: No module named 'transformers'
+##[error]Process completed with exit code 4.
+
+
+===== smoketest (3.9)/5_Run checks.txt =====
+##[group]Run pytest tests/test_smoketest.py
+[36;1mpytest tests/test_smoketest.py[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
+ImportError while loading conftest '/home/runner/work/composer/composer/tests/conftest.py'.
+tests/conftest.py:9: in <module>
+    from composer.utils import reproducibility
+composer/__init__.py:10: in <module>
+    from composer.trainer import Trainer
+composer/trainer/__init__.py:6: in <module>
+    from composer.trainer.trainer import Trainer
+composer/trainer/trainer.py:37: in <module>
+    from composer.callbacks import CheckpointSaver, OptimizerMonitor
+composer/callbacks/__init__.py:12: in <module>
+    from composer.callbacks.eval_output_logging_callback import EvalOutputLogging
+composer/callbacks/eval_output_logging_callback.py:16: in <module>
+    from composer.datasets.in_context_learning_evaluation import (InContextLearningCodeEvalDataset,
+composer/datasets/in_context_learning_evaluation.py:13: in <module>
+    import transformers
+E   ModuleNotFoundError: No module named 'transformers'
+##[error]Process completed with exit code 4.
+
+
+===== smoketest (3.10)/5_Run checks.txt =====
+##[group]Run pytest tests/test_smoketest.py
+[36;1mpytest tests/test_smoketest.py[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
+ImportError while loading conftest '/home/runner/work/composer/composer/tests/conftest.py'.
+tests/conftest.py:9: in <module>
+    from composer.utils import reproducibility
+composer/__init__.py:10: in <module>
+    from composer.trainer import Trainer
+composer/trainer/__init__.py:6: in <module>
+    from composer.trainer.trainer import Trainer
+composer/trainer/trainer.py:37: in <module>
+    from composer.callbacks import CheckpointSaver, OptimizerMonitor
+composer/callbacks/__init__.py:12: in <module>
+    from composer.callbacks.eval_output_logging_callback import EvalOutputLogging
+composer/callbacks/eval_output_logging_callback.py:16: in <module>
+    from composer.datasets.in_context_learning_evaluation import (InContextLearningCodeEvalDataset,
+composer/datasets/in_context_learning_evaluation.py:13: in <module>
+    import transformers
+E   ModuleNotFoundError: No module named 'transformers'
+##[error]Process completed with exit code 4.

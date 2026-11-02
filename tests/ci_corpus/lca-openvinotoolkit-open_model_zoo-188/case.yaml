@@ -1,0 +1,137 @@
+repo: openvinotoolkit/open_model_zoo
+run_id: '188'
+head_sha: ce191b811e255722bfb4f5c2c7c30bcb7a4a3d59
+run_attempts: []
+commits:
+- sha: ce191b811e255722bfb4f5c2c7c30bcb7a4a3d59
+  author: Wovchena
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/amazon.py
+- sha: d719eadfed9f284d94cbe804d3f46a8ca8847357
+  author: Wovchena
+  files:
+  - ci/check-basics.py
+  - ci/get-jobs-for-changes.py
+  - ci/prepare-documentation.py
+  - ci/prepare-openvino-content.py
+  - demos/common/python/html_reader.py
+  - demos/common/python/visualizers/drawing_utils.py
+  - demos/formula_recognition_demo/python/utils.py
+  - demos/multi_camera_multi_target_tracking_demo/python/mc_tracker/sct.py
+  - demos/tests/run_tests.py
+  - models/public/mobilenet-v3-large-1.0-224-paddle/pre-convert.py
+  - models/public/mobilenet-v3-small-1.0-224-paddle/pre-convert.py
+  - models/public/mozilla-deepspeech-0.8.2/pre-convert.py
+  - models/public/ocrnet-hrnet-w48-paddle/pre-convert.py
+  - models/public/yolo-v2-tiny-tf/pre-convert.py
+  - models/public/yolo-v4-tf/pre-convert.py
+  - models/public/yolo-v4-tiny-tf/pre-convert.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/adapters/kaldi_asr_decoder.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/amazon.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/convert.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/im2latex.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/lfw.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/asr_encoder_decoder_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/asr_encoder_prediction_joint_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/mtcnn_models.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/sequential_action_recognition_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/model_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/launcher/loaders/__init__.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/launcher/loaders/pickle_loader.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/im2latex_images_match.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/representation/base_representation.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/utils.py
+  - tools/accuracy_checker/setup.py
+  - tools/model_tools/src/openvino/model_zoo/_common.py
+  - tools/model_tools/src/openvino/model_zoo/_concurrency.py
+  - tools/model_tools/src/openvino/model_zoo/_reporting.py
+- sha: 6c7e78cbad416944907aa141a69668869a3875fa
+  author: Wovchena
+  files:
+  - .yamllint
+- sha: d6fad24b9e330bb8e962a58877fb3eaafc6685fe
+  author: Wovchena
+  files:
+  - ci/bandit.yml
+  - ci/check-basics.py
+  - ci/get-jobs-for-changes.py
+  - ci/prepare-documentation.py
+  - ci/prepare-openvino-content.py
+  - demos/common/python/html_reader.py
+  - demos/common/python/visualizers/drawing_utils.py
+  - demos/formula_recognition_demo/python/utils.py
+  - demos/multi_camera_multi_target_tracking_demo/python/mc_tracker/sct.py
+  - demos/tests/run_tests.py
+  - models/public/mobilenet-v3-large-1.0-224-paddle/pre-convert.py
+  - models/public/mobilenet-v3-small-1.0-224-paddle/pre-convert.py
+  - models/public/mozilla-deepspeech-0.8.2/pre-convert.py
+  - models/public/ocrnet-hrnet-w48-paddle/pre-convert.py
+  - models/public/yolo-v2-tiny-tf/pre-convert.py
+  - models/public/yolo-v4-tf/pre-convert.py
+  - models/public/yolo-v4-tiny-tf/pre-convert.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/adapters/kaldi_asr_decoder.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/amazon.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/convert.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/im2latex.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/lfw.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/dataset.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/asr_encoder_decoder_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/asr_encoder_prediction_joint_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/mtcnn_models.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/custom_evaluators/sequential_action_recognition_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/evaluators/model_evaluator.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/launcher/loaders/__init__.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/launcher/loaders/pickle_loader.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/README.md
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/im2latex_images_match.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/representation/base_representation.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/utils.py
+  - tools/accuracy_checker/setup.py
+  - tools/model_tools/src/openvino/model_zoo/_common.py
+  - tools/model_tools/src/openvino/model_zoo/_concurrency.py
+  - tools/model_tools/src/openvino/model_zoo/_reporting.py
+- sha: 1a568fe583a1e09d5f528107beeeeca92ff73e9d
+  author: xianfu92
+  files:
+  - demos/action_recognition_demo/python/action_recognition_demo.py
+  - demos/tests/cases.py
+- sha: bb98fe444c84d67fd67ee7ec15a340722c652053
+  author: popovaan
+  files:
+  - README.md
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/utils.py
+  - tools/accuracy_checker/requirements-core.in
+  - tools/model_tools/requirements.in
+  - tools/model_tools/src/openvino/model_zoo/_common.py
+- sha: 626c8f5ba3bc866d84664ddd40edcc681e714f8c
+  author: pwolnows
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/README.md
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/__init__.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/vimeo90k.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/README.md
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/image_quality_assessment.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/preprocessor/geometric_transformations.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/representation/image_processing.py
+- sha: d7fd1e1b40fa09607bae08db9c216d0036554f41
+  author: sstrehlk
+  files:
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/README.md
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/annotation_converters/wikitext2raw.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/launcher/openvino_launcher.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/metrics/language_modeling.py
+  - tools/accuracy_checker/openvino/tools/accuracy_checker/representation/nlp_representation.py
+- sha: e13f63fc8dec24f102efe54cd24d8a554efc5ab7
+  author: jmacekx
+  files:
+  - demos/classification_benchmark_demo/cpp_gapi/README.md
+- sha: e0e434f64a4da07274c31c1aae48fbdcfa087fb0
+  author: ilya-lavrenov
+  files:
+  - tools/model_tools/requirements-tensorflow.in
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

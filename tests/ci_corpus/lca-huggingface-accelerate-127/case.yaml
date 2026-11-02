@@ -1,0 +1,55 @@
+repo: huggingface/accelerate
+run_id: '127'
+head_sha: 44b56e01683771fb4ca583f9ea57c67dcee8e779
+run_attempts: []
+commits:
+- sha: 44b56e01683771fb4ca583f9ea57c67dcee8e779
+  author: PhilJd
+  files:
+  - src/accelerate/big_modeling.py
+- sha: 68b3dbf666155a67925b9243c94f71c81fd557f4
+  author: dependabot[bot]
+  files:
+  - .github/workflows/build_and_run_tests.yml
+- sha: 403c0714d1dd019a481022afce5df75a9963ecd9
+  author: stas00
+  files:
+  - src/accelerate/utils/dataclasses.py
+- sha: 848ed800fac1a84e8fbda853086f06f5699835e5
+  author: pacman100
+  files:
+  - docs/source/usage_guides/fsdp.md
+  - src/accelerate/commands/config/cluster.py
+  - src/accelerate/commands/launch.py
+  - src/accelerate/utils/dataclasses.py
+  - src/accelerate/utils/launch.py
+  - tests/fsdp/test_fsdp.py
+- sha: ad957ce556413a0013776f0e6f6b3947e3fbc055
+  author: stas00
+  files:
+  - docs/source/usage_guides/deepspeed.md
+- sha: 3db088f5d6bd63cc47cc629ed11c65e0ed10bff9
+  author: stas00
+  files:
+  - docs/source/usage_guides/fsdp.md
+- sha: d1abd59114ada8ba673e1214218cb2878c13b82d
+  author: SunMarc
+  files:
+  - src/accelerate/utils/modeling.py
+- sha: ceb7c699bc36bdb3bbf32cceaaca2d1ceaf62dae
+  author: stas00
+  files:
+  - src/accelerate/accelerator.py
+- sha: c5baa055c063b72b6564dccb20683a4c1a3c1323
+  author: muellerzr
+  files:
+  - setup.py
+- sha: 349be97ccb0f21e462d1ce917ac49e7328365ef9
+  author: muellerzr
+  files:
+  - .github/workflows/self_hosted_integration_tests.yml
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

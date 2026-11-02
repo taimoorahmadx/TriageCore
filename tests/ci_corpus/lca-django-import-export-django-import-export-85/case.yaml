@@ -1,0 +1,79 @@
+repo: django-import-export/django-import-export
+run_id: '85'
+head_sha: 2f0605c9ec79b7a675728cb525ad55b36ade2e93
+run_attempts: []
+commits:
+- sha: 2f0605c9ec79b7a675728cb525ad55b36ade2e93
+  author: pre-commit-ci-lite[bot]
+  files:
+  - import_export/resources.py
+  - tests/core/tests/test_resources/test_import_export.py
+- sha: 61baf869bd720da4143c24eb52159bacc3c7635f
+  author: cocorocho
+  files:
+  - docs/changelog.rst
+  - import_export/resources.py
+  - tests/core/tests/test_resources/test_import_export.py
+  - tests/core/tests/test_resources/test_resources.py
+- sha: e4fafdb3226ac571ec1c275cc6773afad78f1347
+  author: matthewhegarty
+  files:
+  - docs/_static/images/change-form-export.png
+  - docs/advanced_usage.rst
+  - docs/changelog.rst
+  - import_export/admin.py
+  - import_export/templates/admin/import_export/base.html
+  - import_export/templates/admin/import_export/change_form.html
+  - import_export/templates/admin/import_export/change_list_export_item.html
+  - import_export/templates/admin/import_export/change_list_import_item.html
+  - import_export/templates/admin/import_export/export.html
+  - import_export/templates/admin/import_export/import.html
+  - import_export/templates/admin/import_export/resource_fields_list.html
+  - tests/core/admin.py
+  - tests/core/tests/admin_integration/test_action.py
+- sha: 7d912b4af1b4940895d26066c7d9a2f6be226242
+  author: cocorocho
+  files:
+  - docs/changelog.rst
+  - runtests.sh
+- sha: 4fa79c7bf5a28bd2a47c2c854ab0c26fa4ddb742
+  author: matthewhegarty
+  files:
+  - import_export/admin.py
+  - tests/core/tests/admin_integration/test_export.py
+- sha: 0aab3896980d9b05353c1663fa2207a52b461291
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+  - import_export/templates/admin/import_export/export.html
+  - import_export/templates/admin/import_export/import.html
+  - import_export/templates/admin/import_export/resource_fields_list.html
+- sha: ebf58e0fe6b27285bb1c9bdfcfff0792bd7ad116
+  author: tal66
+  files:
+  - docs/changelog.rst
+  - import_export/admin.py
+  - import_export/templates/admin/import_export/export.html
+  - import_export/templates/admin/import_export/import.html
+  - import_export/templates/admin/import_export/resource_fields_list.html
+  - tests/core/tests/test_admin_integration.py
+- sha: 4f78b38ba0893eed0feb52e854c6792f7e99ec21
+  author: matthewhegarty
+  files:
+  - Makefile
+  - docs/changelog.rst
+  - requirements/docs.txt
+- sha: 485fbe87b957878a8eb0ab46286d675b483d201e
+  author: matthewhegarty
+  files:
+  - docs/changelog.rst
+- sha: 7eb5c69e8aa279503b214b1ba4c33af47d849460
+  author: matthewhegarty
+  files:
+  - .github/workflows/release.yml
+  - docs/changelog.rst
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

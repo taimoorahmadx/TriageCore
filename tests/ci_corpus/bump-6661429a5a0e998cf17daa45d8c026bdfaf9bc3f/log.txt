@@ -1,0 +1,753 @@
+2023-06-15T13:24:57.7309710Z Cleaning up orphan processes
+
+2023-06-15T13:05:37.9256081Z ##[group]Run actions/setup-java@v3
+2023-06-15T13:05:37.9256403Z with:
+2023-06-15T13:05:37.9256683Z   distribution: temurin
+2023-06-15T13:05:37.9257025Z   java-version: 11
+2023-06-15T13:05:37.9257260Z   check-latest: true
+2023-06-15T13:05:37.9257554Z   java-package: jdk
+2023-06-15T13:05:37.9257883Z   server-id: github
+2023-06-15T13:05:37.9258137Z   server-username: GITHUB_ACTOR
+2023-06-15T13:05:37.9258518Z   server-password: GITHUB_TOKEN
+2023-06-15T13:05:37.9258832Z   overwrite-settings: true
+2023-06-15T13:05:37.9259094Z   job-status: success
+2023-06-15T13:05:37.9259579Z   token: ***
+2023-06-15T13:05:37.9259851Z ##[endgroup]
+2023-06-15T13:05:38.1492516Z ##[group]Installed distributions
+2023-06-15T13:05:38.1552988Z Trying to resolve the latest version from remote
+2023-06-15T13:05:38.6389154Z Resolved latest version as 11.0.19+7
+2023-06-15T13:05:38.6393416Z Resolved Java 11.0.19+7 from tool-cache
+2023-06-15T13:05:38.6397820Z Setting Java 11.0.19+7 as the default
+2023-06-15T13:05:38.6424616Z Creating toolchains.xml for JDK version 11 from temurin
+2023-06-15T13:05:38.6550172Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-15T13:05:38.6550655Z 
+2023-06-15T13:05:38.6551015Z Java configuration:
+2023-06-15T13:05:38.6551672Z   Distribution: temurin
+2023-06-15T13:05:38.6557192Z   Version: 11.0.19+7
+2023-06-15T13:05:38.6557748Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-15T13:05:38.6557989Z 
+2023-06-15T13:05:38.6558372Z ##[endgroup]
+2023-06-15T13:05:38.6585024Z Creating settings.xml with server-id: github
+2023-06-15T13:05:38.6585350Z Writing to /home/runner/.m2/settings.xml
+
+2023-06-15T13:05:38.6722927Z ##[group]Run mvn -V --color always -ntp clean verify --file pom.xml '-Dgpg.skip'
+2023-06-15T13:05:38.6723406Z [36;1mmvn -V --color always -ntp clean verify --file pom.xml '-Dgpg.skip'[0m
+2023-06-15T13:05:38.6783088Z shell: /usr/bin/bash -e {0}
+2023-06-15T13:05:38.6783346Z env:
+2023-06-15T13:05:38.6783640Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-15T13:05:38.6784004Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-15T13:05:38.6784304Z ##[endgroup]
+2023-06-15T13:05:41.1733574Z [1mApache Maven 3.8.8 (4c87b05d9aedce574290d1acc98575ed5eb6cd39)[m
+2023-06-15T13:05:41.1734468Z Maven home: /usr/share/apache-maven-3.8.8
+2023-06-15T13:05:41.1735170Z Java version: 11.0.19, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-11-jdk-amd64
+2023-06-15T13:05:41.1735743Z Default locale: en, platform encoding: UTF-8
+2023-06-15T13:05:41.1739835Z OS name: "linux", version: "5.15.0-1039-azure", arch: "amd64", family: "unix"
+2023-06-15T13:05:48.8931506Z [[1;34mINFO[m] Scanning for projects...
+2023-06-15T13:06:21.3838700Z [[1;33mWARNING[m] The POM for org.jenkins-ci.tools:maven-hpi-plugin:jar:3.46 is missing, no dependency information available
+2023-06-15T13:06:21.9814017Z [[1;33mWARNING[m] Failed to build parent project for org.jvnet.hudson.plugins:analysis-pom:pom:6.10.0
+2023-06-15T13:06:21.9815976Z [[1;33mWARNING[m] Failed to build parent project for io.jenkins.plugins:code-coverage-api:hpi:4.8.0-SNAPSHOT
+2023-06-15T13:06:37.1156358Z [[1;34mINFO[m] Inspecting build with total of 3 modules...
+2023-06-15T13:06:37.1163970Z [[1;34mINFO[m] Installing Nexus Staging features:
+2023-06-15T13:06:37.1169246Z [[1;34mINFO[m]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-06-15T13:06:37.1189776Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-06-15T13:06:37.1191758Z [[1;34mINFO[m] [1mReactor Build Order:[m
+2023-06-15T13:06:37.1193326Z [[1;34mINFO[m] 
+2023-06-15T13:06:37.1205595Z [[1;34mINFO[m] Code Coverage API Plugin                                           [hpi]
+2023-06-15T13:06:37.1216795Z [[1;34mINFO[m] UI Tests of Code Coverage Plugin                                   [jar]
+2023-06-15T13:06:37.1218990Z [[1;34mINFO[m] Aggregator for Code Coverage Plugin                                [pom]
+2023-06-15T13:06:37.1297295Z [[1;34mINFO[m] 
+2023-06-15T13:06:37.1300486Z [[1;34mINFO[m] [1m----------------< [0;36mio.jenkins.plugins:code-coverage-api[0;1m >----------------[m
+2023-06-15T13:06:37.1302775Z [[1;34mINFO[m] [1mBuilding Code Coverage API Plugin 4.8.0-SNAPSHOT                   [1/3][m
+2023-06-15T13:06:37.1305311Z [[1;34mINFO[m]   from plugin/pom.xml
+2023-06-15T13:06:37.1307355Z [[1;34mINFO[m] [1m--------------------------------[ hpi ]---------------------------------[m
+2023-06-15T13:07:27.1117544Z [[1;34mINFO[m] 
+2023-06-15T13:07:27.1120309Z [[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:3.2.0:clean[m [1m(default-clean)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:27.4339698Z [[1;34mINFO[m] 
+2023-06-15T13:07:27.4340823Z [[1;34mINFO[m] [1m--- [0;32mmaven-hpi-plugin:3.46:validate[m [1m(default-validate)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:27.4543101Z [[1;34mINFO[m] 
+2023-06-15T13:07:27.4554847Z [[1;34mINFO[m] [1m--- [0;32mmaven-hpi-plugin:3.46:validate-hpi[m [1m(default-validate-hpi)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:28.4415491Z [[1;34mINFO[m] 
+2023-06-15T13:07:28.4416458Z [[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.3.0:enforce[m [1m(display-info)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:29.4031257Z [[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+2023-06-15T13:07:29.4051002Z [[1;34mINFO[m] Rule 1: io.jenkins.tools.incrementals.enforcer.RequireExtensionVersion passed
+2023-06-15T13:07:29.4058032Z [[1;34mINFO[m] Rule 2: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+2023-06-15T13:07:29.4116941Z [[1;34mINFO[m] Rule 3: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+2023-06-15T13:07:30.0850514Z [[1;34mINFO[m] Rule 4: org.apache.maven.plugins.enforcer.EnforceBytecodeVersion passed
+2023-06-15T13:07:30.2325467Z [[1;34mINFO[m] Rule 5: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+2023-06-15T13:07:30.2353024Z [[1;34mINFO[m] 
+2023-06-15T13:07:30.2356836Z [[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.3.0:enforce[m [1m(no-snapshots-in-release)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:30.2418886Z [[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+2023-06-15T13:07:30.2425565Z [[1;34mINFO[m] 
+2023-06-15T13:07:30.2426468Z [[1;34mINFO[m] [1m--- [0;32mlocalizer-maven-plugin:1.31:generate[m [1m(default)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:33.4278322Z [[1;34mINFO[m] 
+2023-06-15T13:07:33.4297118Z [[1;34mINFO[m] [1m>>> [0;32mmaven-javadoc-plugin:3.5.0:javadoc[m [1m(default)[0;1m > [0;1mgenerate-sources[m @ [36mcode-coverage-api[0;1m >>>[m
+2023-06-15T13:07:33.4320680Z [[1;34mINFO[m] 
+2023-06-15T13:07:33.4323041Z [[1;34mINFO[m] [1m--- [0;32mmaven-hpi-plugin:3.46:validate[m [1m(default-validate)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:33.4455902Z [[1;34mINFO[m] 
+2023-06-15T13:07:33.4458797Z [[1;34mINFO[m] [1m--- [0;32mmaven-hpi-plugin:3.46:validate-hpi[m [1m(default-validate-hpi)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:33.9825091Z [[1;34mINFO[m] 
+2023-06-15T13:07:33.9827550Z [[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.3.0:enforce[m [1m(display-info)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:34.0049135Z [[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+2023-06-15T13:07:34.4831624Z [[1;34mINFO[m] Rule 4: org.apache.maven.plugins.enforcer.EnforceBytecodeVersion passed
+2023-06-15T13:07:34.5263877Z [[1;34mINFO[m] Rule 5: org.apache.maven.enforcer.rules.dependency.BannedDependencies passed
+2023-06-15T13:07:34.5264835Z [[1;34mINFO[m] 
+2023-06-15T13:07:34.5265849Z [[1;34mINFO[m] [1m--- [0;32mmaven-enforcer-plugin:3.3.0:enforce[m [1m(no-snapshots-in-release)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:34.5295759Z [[1;34mINFO[m] Rule 0: org.apache.maven.enforcer.rules.dependency.RequireReleaseDeps passed
+2023-06-15T13:07:34.5296464Z [[1;34mINFO[m] 
+2023-06-15T13:07:34.5297377Z [[1;34mINFO[m] [1m--- [0;32mlocalizer-maven-plugin:1.31:generate[m [1m(default)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:34.5394334Z [[1;34mINFO[m] 
+2023-06-15T13:07:34.5395213Z [[1;34mINFO[m] [1m<<< [0;32mmaven-javadoc-plugin:3.5.0:javadoc[m [1m(default)[0;1m < [0;1mgenerate-sources[m @ [36mcode-coverage-api[0;1m <<<[m
+2023-06-15T13:07:34.5395822Z [[1;34mINFO[m] 
+2023-06-15T13:07:34.5396085Z [[1;34mINFO[m] 
+2023-06-15T13:07:34.5398920Z [[1;34mINFO[m] [1m--- [0;32mmaven-javadoc-plugin:3.5.0:javadoc[m [1m(default)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:44.3619811Z [[1;34mINFO[m] No previous run data found, generating javadoc.
+2023-06-15T13:07:51.3759515Z [[1;34mINFO[m] 
+2023-06-15T13:07:51.3901575Z [[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:3.3.1:resources[m [1m(default-resources)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:51.4512158Z [[1;34mINFO[m] Copying 113 resources from src/main/resources to target/classes
+2023-06-15T13:07:51.4695104Z [[1;34mINFO[m] 
+2023-06-15T13:07:51.4700939Z [[1;34mINFO[m] [1m--- [0;32mflatten-maven-plugin:1.5.0:flatten[m [1m(flatten)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:51.5238049Z [[1;34mINFO[m] Generating flattened POM of project io.jenkins.plugins:code-coverage-api:hpi:4.8.0-SNAPSHOT...
+2023-06-15T13:07:51.8791871Z [[1;34mINFO[m] 
+2023-06-15T13:07:51.8796052Z [[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.11.0:compile[m [1m(default-compile)[m @ [36mcode-coverage-api[0;1m ---[m
+2023-06-15T13:07:52.8879025Z [[1;34mINFO[m] Changes detected - recompiling the module! :dependency
+2023-06-15T13:07:52.8945063Z [[1;34mINFO[m] Compiling 150 source files with javac [debug release 11] to target/classes
+2023-06-15T13:07:57.6723986Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageTokenMacro indexed under hudson.Extension
+2023-06-15T13:07:57.6727638Z [[1;34mINFO[m] io.jenkins.plugins.coverage.detector.AntPathReportDetector.AntPathReportDetectorDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6729232Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageQualityGate.Descriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6730335Z [[1;34mINFO[m] io.jenkins.plugins.coverage.CoveragePublisher.CoveragePublisherDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6767389Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageStep.Descriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6768603Z [[1;34mINFO[m] io.jenkins.plugins.coverage.adapter.JacocoReportAdapter.JacocoReportAdapterDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6770143Z [[1;34mINFO[m] io.jenkins.plugins.coverage.adapter.IstanbulCoberturaReportAdapter.IstanbulCoberturaReportAdapterDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6771362Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageTool.CoverageToolDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6772882Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageMetricColumn.CoverageMetricColumnDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6774085Z [[1;34mINFO[m] io.jenkins.plugins.coverage.model.visualization.dashboard.CoverageColumn.CoverageDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6775806Z [[1;34mINFO[m] io.jenkins.plugins.coverage.CoveragePullRequestMonitoringPortlet.PortletFactory indexed under hudson.Extension
+2023-06-15T13:07:57.6776969Z [[1;34mINFO[m] io.jenkins.plugins.coverage.adapter.CoberturaReportAdapter.CoberturaReportAdapterDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6778408Z [[1;34mINFO[m] io.jenkins.plugins.coverage.source.DefaultSourceFileResolver.DefaultSourceFileResolverDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6779500Z [[1;34mINFO[m] io.jenkins.plugins.coverage.threshold.Threshold.ThreshHoldDescriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6780614Z [[1;34mINFO[m] io.jenkins.plugins.coverage.metrics.steps.CoverageRecorder.Descriptor indexed under hudson.Extension
+2023-06-15T13:07:57.6783446Z [[1;33mWARNING[m] No processor claimed any of these annotations: /edu.umd.cs.findbugs.annotations.Nullable,/org.jenkinsci.plugins.tokenmacro.DataBoundTokenMacro.Parameter,/hudson.init.Initializer,/org.kohsuke.accmod.Restricted,/edu.umd.cs.findbugs.annotations.NonNull,/org.kohsuke.stapler.QueryParameter,/org.kohsuke.stapler.DataBoundSetter,/org.jenkinsci.Symbol,/edu.umd.cs.findbugs.annotations.CheckForNull,/org.kohsuke.stapler.bind.JavaScriptMethod,/org.kohsuke.stapler.AncestorInPath,/org.kohsuke.stapler.verb.POST,/edu.umd.cs.findbugs.annotations.SuppressFBWarnings,/org.kohsuke.stapler.export.Exported,/edu.hm.hafner.util.VisibleForTesting,/org.kohsuke.stapler.export.ExportedBean,/org.kohsuke.stapler.DataBoundConstructor,/edu.umd.cs.findbugs.annotations.DefaultAnnotation,/hudson.Extension
+2023-06-15T13:07:57.6786038Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageXmlStream.java:[123,41] found raw type: java.lang.Class
+2023-06-15T13:07:57.6786759Z   missing type arguments for generic class java.lang.Class<T>
+2023-06-15T13:07:57.6787852Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageXmlStream.java:[204,41] found raw type: java.lang.Class
+2023-06-15T13:07:57.6789189Z   missing type arguments for generic class java.lang.Class<T>
+2023-06-15T13:07:57.6791096Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageXmlStream.java:[174,47] found raw type: java.lang.Class
+2023-06-15T13:07:57.6791654Z   missing type arguments for generic class java.lang.Class<T>
+2023-06-15T13:07:57.6792399Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageXmlStream.java:[284,41] found raw type: java.lang.Class
+2023-06-15T13:07:57.6792919Z   missing type arguments for generic class java.lang.Class<T>
+2023-06-15T13:07:57.6793867Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/adapter/CoverageAdapter.java:[10,17] serializable class io.jenkins.plugins.coverage.adapter.CoverageAdapter has no definition of serialVersionUID
+2023-06-15T13:07:57.6795164Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[56,14] found raw type: io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor
+2023-06-15T13:07:57.6796024Z   missing type arguments for generic class io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor<T>
+2023-06-15T13:07:57.6797108Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[73,18] found raw type: io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor
+2023-06-15T13:07:57.6797947Z   missing type arguments for generic class io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor<T>
+2023-06-15T13:07:57.6799010Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[77,25] found raw type: java.lang.Class
+2023-06-15T13:07:57.6799557Z   missing type arguments for generic class java.lang.Class<T>
+2023-06-15T13:07:57.6800324Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[79,25] found raw type: java.lang.reflect.Constructor
+2023-06-15T13:07:57.6800924Z   missing type arguments for generic class java.lang.reflect.Constructor<T>
+2023-06-15T13:07:57.6801871Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[102,18] found raw type: io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor
+2023-06-15T13:07:57.6802737Z   missing type arguments for generic class io.jenkins.plugins.coverage.adapter.CoverageReportAdapterDescriptor<T>
+2023-06-15T13:07:57.6803842Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/ReportDetector.java:[24,17] serializable class io.jenkins.plugins.coverage.detector.ReportDetector has no definition of serialVersionUID
+2023-06-15T13:07:57.6805181Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/detector/AntPathReportDetector.java:[17,8] serializable class io.jenkins.plugins.coverage.detector.AntPathReportDetector has no definition of serialVersionUID
+2023-06-15T13:07:57.6806531Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/exception/CoverageException.java:[3,8] serializable class io.jenkins.plugins.coverage.exception.CoverageException has no definition of serialVersionUID
+2023-06-15T13:07:57.6807864Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/adapter/CoverageReportAdapter.java:[24,17] serializable class io.jenkins.plugins.coverage.adapter.CoverageReportAdapter has no definition of serialVersionUID
+2023-06-15T13:07:57.6809259Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/threshold/Threshold.java:[17,8] serializable class io.jenkins.plugins.coverage.threshold.Threshold has no definition of serialVersionUID
+2023-06-15T13:07:57.6810488Z [[1;33mWARNING[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/plugin/src/main/java/io/jenkins/plugins/coverage/targets/CoverageTrend.java:[10,8] serializable class io.jenkins.plugins.coverage.targets.CoverageTrend has no definition of serialVersionUID
+[... 2141 lines removed by TriageCore ...]
+2023-06-15T13:24:56.8318447Z [[1;34mINFO[m] 
+2023-06-15T13:24:56.8318925Z [[1;34mINFO[m] Code Coverage API Plugin 4.8.0-SNAPSHOT ............ [1;32mSUCCESS[m [17:30 min]
+2023-06-15T13:24:56.8319476Z [[1;34mINFO[m] UI Tests of Code Coverage Plugin UNVERSIONED ....... [1;31mFAILURE[m [ 48.711 s]
+2023-06-15T13:24:56.8320026Z [[1;34mINFO[m] Aggregator for Code Coverage Plugin UNVERSIONED .... [1;33mSKIPPED[m
+2023-06-15T13:24:56.8320597Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-06-15T13:24:56.8321048Z [[1;34mINFO[m] [1;31mBUILD FAILURE[m
+2023-06-15T13:24:56.8321541Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-06-15T13:24:56.8321990Z [[1;34mINFO[m] Total time:  19:07 min
+2023-06-15T13:24:56.8322400Z [[1;34mINFO[m] Finished at: 2023-06-15T13:24:56Z
+2023-06-15T13:24:56.8322911Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-06-15T13:24:56.8323984Z [[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile[m [1m(default-compile)[m on project [36mcode-coverage-api-ui-tests[m: [1;31mCompilation failure[m: Compilation failure: 
+2023-06-15T13:24:56.8325279Z [[1;31mERROR[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/ui-tests/src/main/java/io/jenkins/plugins/coverage/util/ChartUtil.java:[7,36] error: package com.gargoylesoftware.htmlunit does not exist
+2023-06-15T13:24:56.8326262Z [[1;31mERROR[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/ui-tests/src/main/java/io/jenkins/plugins/coverage/util/ChartUtil.java:[35,12] error: cannot find symbol
+2023-06-15T13:24:56.8326872Z [[1;31mERROR[m]   symbol:   class ScriptResult
+2023-06-15T13:24:56.8327277Z [[1;31mERROR[m]   location: class ChartUtil
+2023-06-15T13:24:56.8328010Z [[1;31mERROR[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/ui-tests/src/main/java/io/jenkins/plugins/coverage/util/ChartUtil.java:[35,44] error: cannot find symbol
+2023-06-15T13:24:56.8328611Z [[1;31mERROR[m]   symbol:   class ScriptResult
+2023-06-15T13:24:56.8329012Z [[1;31mERROR[m]   location: class ChartUtil
+2023-06-15T13:24:56.8329742Z [[1;31mERROR[m] /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/ui-tests/src/main/java/io/jenkins/plugins/coverage/util/ChartUtil.java:[60,42] error: cannot find symbol
+2023-06-15T13:24:56.8331045Z [[1;31mERROR[m]   symbol:   class ScriptResult
+2023-06-15T13:24:56.8331357Z [[1;31mERROR[m]   location: class ChartUtil
+2023-06-15T13:24:56.8331679Z [[1;31mERROR[m] -> [1m[Help 1][m
+2023-06-15T13:24:56.8331931Z [[1;31mERROR[m] 
+2023-06-15T13:24:56.8332644Z [[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+2023-06-15T13:24:56.8333122Z [[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+2023-06-15T13:24:56.8333622Z [[1;31mERROR[m] 
+2023-06-15T13:24:56.8334073Z [[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+2023-06-15T13:24:56.8334628Z [[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-15T13:24:56.8334975Z [[1;31mERROR[m] 
+2023-06-15T13:24:56.8335355Z [[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+2023-06-15T13:24:56.8335787Z [[1;31mERROR[m]   [1mmvn <args> -rf :code-coverage-api-ui-tests[m
+2023-06-15T13:24:57.3234516Z ##[error]Process completed with exit code 1.
+2023-06-15T13:24:57.3304846Z Post job cleanup.
+2023-06-15T13:24:57.5229490Z Post job cleanup.
+2023-06-15T13:24:57.6282725Z [command]/usr/bin/git version
+2023-06-15T13:24:57.6334043Z git version 2.40.1
+2023-06-15T13:24:57.6387293Z Temporarily overriding HOME='/home/runner/work/_temp/86259911-3390-4e2f-b80a-f8286542509b' before making global git config changes
+2023-06-15T13:24:57.6390097Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-15T13:24:57.6397228Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin
+2023-06-15T13:24:57.6462507Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-15T13:24:57.6517177Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-15T13:24:57.6771678Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-15T13:24:57.6803598Z http.https://github.com/.extraheader
+2023-06-15T13:24:57.6818127Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-15T13:24:57.6858619Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-15T13:24:57.7309733Z Cleaning up orphan processes
+
+2023-06-15T13:24:57.3304832Z Post job cleanup.
+
+2023-06-15T13:05:25.9294535Z ##[section]Starting: Prepare job coverage
+2023-06-15T13:05:25.9297594Z Evaluating strategy
+2023-06-15T13:05:25.9305870Z Creating job '__default'
+2023-06-15T13:05:25.9310157Z Evaluating timeout
+2023-06-15T13:05:25.9310261Z Evaluating cancel timeout
+2023-06-15T13:05:25.9310303Z Evaluating continue on error
+2023-06-15T13:05:25.9310342Z Evaluating target
+2023-06-15T13:05:25.9312188Z ##[section]Finishing: Prepare job coverage
+
+2023-06-15T13:05:34.4473406Z Current runner version: '2.304.0'
+2023-06-15T13:05:34.4506394Z ##[group]Operating System
+2023-06-15T13:05:34.4507004Z Ubuntu
+2023-06-15T13:05:34.4507338Z 22.04.2
+2023-06-15T13:05:34.4507650Z LTS
+2023-06-15T13:05:34.4507931Z ##[endgroup]
+2023-06-15T13:05:34.4508325Z ##[group]Runner Image
+2023-06-15T13:05:34.4508723Z Image: ubuntu-22.04
+2023-06-15T13:05:34.4509021Z Version: 20230611.1
+2023-06-15T13:05:34.4509574Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-15T13:05:34.4510259Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-15T13:05:34.4510718Z ##[endgroup]
+2023-06-15T13:05:34.4511118Z ##[group]Runner Image Provisioner
+2023-06-15T13:05:34.4511492Z 2.0.236.1
+2023-06-15T13:05:34.4511807Z ##[endgroup]
+2023-06-15T13:05:34.4512871Z ##[group]GITHUB_TOKEN Permissions
+2023-06-15T13:05:34.4513547Z Actions: read
+2023-06-15T13:05:34.4513883Z Checks: read
+2023-06-15T13:05:34.4514219Z Contents: read
+2023-06-15T13:05:34.4514875Z Deployments: read
+2023-06-15T13:05:34.4515239Z Discussions: read
+2023-06-15T13:05:34.4515580Z Issues: read
+2023-06-15T13:05:34.4515930Z Metadata: read
+2023-06-15T13:05:34.4516281Z Packages: read
+2023-06-15T13:05:34.4516563Z Pages: read
+2023-06-15T13:05:34.4516909Z PullRequests: read
+2023-06-15T13:05:34.4517302Z RepositoryProjects: read
+2023-06-15T13:05:34.4517673Z SecurityEvents: read
+2023-06-15T13:05:34.4518034Z Statuses: read
+2023-06-15T13:05:34.4518374Z ##[endgroup]
+2023-06-15T13:05:34.4522236Z Secret source: Dependabot
+2023-06-15T13:05:34.4522844Z Prepare workflow directory
+2023-06-15T13:05:34.5283752Z Prepare all required actions
+2023-06-15T13:05:34.5472522Z Getting action download info
+2023-06-15T13:05:34.7948284Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-15T13:05:35.4501379Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-15T13:05:36.0327935Z Download action repository 'codecov/codecov-action@v3' (SHA:eaaf4bedf32dbdc6b720b63067d99c4d77d6047d)
+2023-06-15T13:05:36.5935268Z Complete job name: Coverage on Ubuntu
+
+2023-06-15T13:24:57.5229476Z Post job cleanup.
+2023-06-15T13:24:57.6282681Z [command]/usr/bin/git version
+2023-06-15T13:24:57.6334012Z git version 2.40.1
+2023-06-15T13:24:57.6387268Z Temporarily overriding HOME='/home/runner/work/_temp/86259911-3390-4e2f-b80a-f8286542509b' before making global git config changes
+2023-06-15T13:24:57.6390078Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-15T13:24:57.6397208Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin
+2023-06-15T13:24:57.6462478Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-15T13:24:57.6517152Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-15T13:24:57.6771535Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-15T13:24:57.6803572Z http.https://github.com/.extraheader
+2023-06-15T13:24:57.6818111Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-15T13:24:57.6858600Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-15T13:05:36.6876635Z ##[group]Run actions/checkout@v3
+2023-06-15T13:05:36.6876985Z with:
+2023-06-15T13:05:36.6877253Z   repository: jenkinsci/code-coverage-api-plugin
+2023-06-15T13:05:36.6877785Z   token: ***
+2023-06-15T13:05:36.6878002Z   ssh-strict: true
+2023-06-15T13:05:36.6878226Z   persist-credentials: true
+2023-06-15T13:05:36.6878470Z   clean: true
+2023-06-15T13:05:36.6878733Z   sparse-checkout-cone-mode: true
+2023-06-15T13:05:36.6878981Z   fetch-depth: 1
+2023-06-15T13:05:36.6879169Z   lfs: false
+2023-06-15T13:05:36.6879372Z   submodules: false
+2023-06-15T13:05:36.6879606Z   set-safe-directory: true
+2023-06-15T13:05:36.6879826Z ##[endgroup]
+2023-06-15T13:05:36.9941515Z Syncing repository: jenkinsci/code-coverage-api-plugin
+2023-06-15T13:05:36.9943803Z ##[group]Getting Git version info
+2023-06-15T13:05:36.9944571Z Working directory is '/home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin'
+2023-06-15T13:05:36.9945832Z [command]/usr/bin/git version
+2023-06-15T13:05:37.0023402Z git version 2.40.1
+2023-06-15T13:05:37.0050296Z ##[endgroup]
+2023-06-15T13:05:37.0069958Z Temporarily overriding HOME='/home/runner/work/_temp/e8bb2532-7c34-46e4-993b-0ef34a7f0463' before making global git config changes
+2023-06-15T13:05:37.0070462Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-15T13:05:37.0075048Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin
+2023-06-15T13:05:37.0118457Z Deleting the contents of '/home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin'
+2023-06-15T13:05:37.0123921Z ##[group]Initializing the repository
+2023-06-15T13:05:37.0127821Z [command]/usr/bin/git init /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin
+2023-06-15T13:05:37.0199633Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-15T13:05:37.0201061Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-15T13:05:37.0201991Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-15T13:05:37.0202486Z hint: 
+2023-06-15T13:05:37.0203232Z hint: 	git config --global init.defaultBranch <name>
+2023-06-15T13:05:37.0203666Z hint: 
+2023-06-15T13:05:37.0204419Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-15T13:05:37.0205075Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-15T13:05:37.0206248Z hint: 
+2023-06-15T13:05:37.0206693Z hint: 	git branch -m <name>
+2023-06-15T13:05:37.0211078Z Initialized empty Git repository in /home/runner/work/code-coverage-api-plugin/code-coverage-api-plugin/.git/
+2023-06-15T13:05:37.0220716Z [command]/usr/bin/git remote add origin https://github.com/jenkinsci/code-coverage-api-plugin
+2023-06-15T13:05:37.0263695Z ##[endgroup]
+2023-06-15T13:05:37.0264380Z ##[group]Disabling automatic garbage collection
+2023-06-15T13:05:37.0266768Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-15T13:05:37.0301691Z ##[endgroup]
+2023-06-15T13:05:37.0302341Z ##[group]Setting up auth
+2023-06-15T13:05:37.0308190Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-15T13:05:37.0343238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-15T13:05:37.0719966Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-15T13:05:37.0761837Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-15T13:05:37.0990847Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-15T13:05:37.1022812Z ##[endgroup]
+2023-06-15T13:05:37.1023629Z ##[group]Fetching the repository
+2023-06-15T13:05:37.1033083Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +eba8c75ce2186498b191eda694b221262729aab2:refs/remotes/pull/709/merge
+2023-06-15T13:05:37.4649341Z remote: Enumerating objects: 592, done.        
+2023-06-15T13:05:37.4649808Z remote: Counting objects:   0% (1/592)        
+2023-06-15T13:05:37.4650196Z remote: Counting objects:   1% (6/592)        
+2023-06-15T13:05:37.4650569Z remote: Counting objects:   2% (12/592)        
+2023-06-15T13:05:37.4650910Z remote: Counting objects:   3% (18/592)        
+2023-06-15T13:05:37.4651262Z remote: Counting objects:   4% (24/592)        
+2023-06-15T13:05:37.4651612Z remote: Counting objects:   5% (30/592)        
+2023-06-15T13:05:37.4651959Z remote: Counting objects:   6% (36/592)        
+2023-06-15T13:05:37.4652384Z remote: Counting objects:   7% (42/592)        
+2023-06-15T13:05:37.4652769Z remote: Counting objects:   8% (48/592)        
+2023-06-15T13:05:37.4653118Z remote: Counting objects:   9% (54/592)        
+2023-06-15T13:05:37.4653483Z remote: Counting objects:  10% (60/592)        
+2023-06-15T13:05:37.4653808Z remote: Counting objects:  11% (66/592)        
+2023-06-15T13:05:37.4654159Z remote: Counting objects:  12% (72/592)        
+2023-06-15T13:05:37.4654499Z remote: Counting objects:  13% (77/592)        
+2023-06-15T13:05:37.4654850Z remote: Counting objects:  14% (83/592)        
+2023-06-15T13:05:37.4655181Z remote: Counting objects:  15% (89/592)        
+2023-06-15T13:05:37.4655527Z remote: Counting objects:  16% (95/592)        
+2023-06-15T13:05:37.4655881Z remote: Counting objects:  17% (101/592)        
+2023-06-15T13:05:37.4656243Z remote: Counting objects:  18% (107/592)        
+2023-06-15T13:05:37.4656683Z remote: Counting objects:  19% (113/592)        
+2023-06-15T13:05:37.4657033Z remote: Counting objects:  20% (119/592)        
+2023-06-15T13:05:37.4657780Z remote: Counting objects:  21% (125/592)        
+2023-06-15T13:05:37.4658128Z remote: Counting objects:  22% (131/592)        
+2023-06-15T13:05:37.4658463Z remote: Counting objects:  23% (137/592)        
+2023-06-15T13:05:37.4658818Z remote: Counting objects:  24% (143/592)        
+2023-06-15T13:05:37.4659165Z remote: Counting objects:  25% (148/592)        
+2023-06-15T13:05:37.4659497Z remote: Counting objects:  26% (154/592)        
+2023-06-15T13:05:37.4659842Z remote: Counting objects:  27% (160/592)        
+2023-06-15T13:05:37.4660262Z remote: Counting objects:  28% (166/592)        
+2023-06-15T13:05:37.4660632Z remote: Counting objects:  29% (172/592)        
+2023-06-15T13:05:37.4660971Z remote: Counting objects:  30% (178/592)        
+2023-06-15T13:05:37.4661313Z remote: Counting objects:  31% (184/592)        
+2023-06-15T13:05:37.4661671Z remote: Counting objects:  32% (190/592)        
+2023-06-15T13:05:37.4662028Z remote: Counting objects:  33% (196/592)        
+2023-06-15T13:05:37.4662367Z remote: Counting objects:  34% (202/592)        
+2023-06-15T13:05:37.4662710Z remote: Counting objects:  35% (208/592)        
+2023-06-15T13:05:37.4663068Z remote: Counting objects:  36% (214/592)        
+2023-06-15T13:05:37.4663408Z remote: Counting objects:  37% (220/592)        
+2023-06-15T13:05:37.4663735Z remote: Counting objects:  38% (225/592)        
+2023-06-15T13:05:37.4664092Z remote: Counting objects:  39% (231/592)        
+2023-06-15T13:05:37.4664438Z remote: Counting objects:  40% (237/592)        
+2023-06-15T13:05:37.4664789Z remote: Counting objects:  41% (243/592)        
+2023-06-15T13:05:37.4665117Z remote: Counting objects:  42% (249/592)        
+2023-06-15T13:05:37.4665464Z remote: Counting objects:  43% (255/592)        
+2023-06-15T13:05:37.4665813Z remote: Counting objects:  44% (261/592)        
+2023-06-15T13:05:37.4666166Z remote: Counting objects:  45% (267/592)        
+2023-06-15T13:05:37.4666492Z remote: Counting objects:  46% (273/592)        
+2023-06-15T13:05:37.4666838Z remote: Counting objects:  47% (279/592)        
+2023-06-15T13:05:37.4667183Z remote: Counting objects:  48% (285/592)        
+2023-06-15T13:05:37.4667560Z remote: Counting objects:  49% (291/592)        
+2023-06-15T13:05:37.4668269Z remote: Counting objects:  50% (296/592)        
+2023-06-15T13:05:37.4668537Z remote: Counting objects:  51% (302/592)        
+2023-06-15T13:05:37.4668799Z remote: Counting objects:  52% (308/592)        
+2023-06-15T13:05:37.4669050Z remote: Counting objects:  53% (314/592)        
+2023-06-15T13:05:37.4669313Z remote: Counting objects:  54% (320/592)        
+2023-06-15T13:05:37.4669574Z remote: Counting objects:  55% (326/592)        
+2023-06-15T13:05:37.4669834Z remote: Counting objects:  56% (332/592)        
+2023-06-15T13:05:37.4670082Z remote: Counting objects:  57% (338/592)        
+2023-06-15T13:05:37.4670344Z remote: Counting objects:  58% (344/592)        
+2023-06-15T13:05:37.4670610Z remote: Counting objects:  59% (350/592)        
+2023-06-15T13:05:37.4670867Z remote: Counting objects:  60% (356/592)        
+2023-06-15T13:05:37.4671126Z remote: Counting objects:  61% (362/592)        
+2023-06-15T13:05:37.4671389Z remote: Counting objects:  62% (368/592)        
+2023-06-15T13:05:37.4671644Z remote: Counting objects:  63% (373/592)        
+2023-06-15T13:05:37.4672000Z remote: Counting objects:  64% (379/592)        
+2023-06-15T13:05:37.4672270Z remote: Counting objects:  65% (385/592)        
+2023-06-15T13:05:37.4672540Z remote: Counting objects:  66% (391/592)        
+2023-06-15T13:05:37.4672790Z remote: Counting objects:  67% (397/592)        
+2023-06-15T13:05:37.4673052Z remote: Counting objects:  68% (403/592)        
+2023-06-15T13:05:37.4673314Z remote: Counting objects:  69% (409/592)        
+2023-06-15T13:05:37.4673577Z remote: Counting objects:  70% (415/592)        
+2023-06-15T13:05:37.4673830Z remote: Counting objects:  71% (421/592)        
+2023-06-15T13:05:37.4674096Z remote: Counting objects:  72% (427/592)        
+2023-06-15T13:05:37.4674504Z remote: Counting objects:  73% (433/592)        
+2023-06-15T13:05:37.4674752Z remote: Counting objects:  74% (439/592)        
+2023-06-15T13:05:37.4675013Z remote: Counting objects:  75% (444/592)        
+2023-06-15T13:05:37.4675287Z remote: Counting objects:  76% (450/592)        
+2023-06-15T13:05:37.4675536Z remote: Counting objects:  77% (456/592)        
+2023-06-15T13:05:37.4675802Z remote: Counting objects:  78% (462/592)        
+2023-06-15T13:05:37.4676067Z remote: Counting objects:  79% (468/592)        
+2023-06-15T13:05:37.4676335Z remote: Counting objects:  80% (474/592)        
+2023-06-15T13:05:37.4676578Z remote: Counting objects:  81% (480/592)        
+2023-06-15T13:05:37.4676838Z remote: Counting objects:  82% (486/592)        
+2023-06-15T13:05:37.4677309Z remote: Counting objects:  83% (492/592)        
+2023-06-15T13:05:37.4677589Z remote: Counting objects:  84% (498/592)        
+2023-06-15T13:05:37.4677859Z remote: Counting objects:  85% (504/592)        
+2023-06-15T13:05:37.4678214Z remote: Counting objects:  86% (510/592)        
+2023-06-15T13:05:37.4678560Z remote: Counting objects:  87% (516/592)        
+2023-06-15T13:05:37.4678883Z remote: Counting objects:  88% (521/592)        
+2023-06-15T13:05:37.4679242Z remote: Counting objects:  89% (527/592)        
+2023-06-15T13:05:37.4679587Z remote: Counting objects:  90% (533/592)        
+2023-06-15T13:05:37.4679934Z remote: Counting objects:  91% (539/592)        
+2023-06-15T13:05:37.4680259Z remote: Counting objects:  92% (545/592)        
+2023-06-15T13:05:37.4680609Z remote: Counting objects:  93% (551/592)        
+2023-06-15T13:05:37.4680954Z remote: Counting objects:  94% (557/592)        
+2023-06-15T13:05:37.4681281Z remote: Counting objects:  95% (563/592)        
+2023-06-15T13:05:37.4681623Z remote: Counting objects:  96% (569/592)        
+2023-06-15T13:05:37.4681974Z remote: Counting objects:  97% (575/592)        
+2023-06-15T13:05:37.4682320Z remote: Counting objects:  98% (581/592)        
+2023-06-15T13:05:37.4682647Z remote: Counting objects:  99% (587/592)        
+2023-06-15T13:05:37.4682999Z remote: Counting objects: 100% (592/592)        
+2023-06-15T13:05:37.4683369Z remote: Counting objects: 100% (592/592), done.        
+2023-06-15T13:05:37.4700964Z remote: Compressing objects:   0% (1/505)        
+2023-06-15T13:05:37.4707923Z remote: Compressing objects:   1% (6/505)        
+2023-06-15T13:05:37.4710189Z remote: Compressing objects:   2% (11/505)        
+2023-06-15T13:05:37.4710495Z remote: Compressing objects:   3% (16/505)        
+2023-06-15T13:05:37.4710784Z remote: Compressing objects:   4% (21/505)        
+2023-06-15T13:05:37.4711066Z remote: Compressing objects:   5% (26/505)        
+2023-06-15T13:05:37.4711370Z remote: Compressing objects:   6% (31/505)        
+2023-06-15T13:05:37.4711636Z remote: Compressing objects:   7% (36/505)        
+2023-06-15T13:05:37.4711910Z remote: Compressing objects:   8% (41/505)        
+2023-06-15T13:05:37.4712190Z remote: Compressing objects:   9% (46/505)        
+2023-06-15T13:05:37.4712478Z remote: Compressing objects:  10% (51/505)        
+2023-06-15T13:05:37.4712767Z remote: Compressing objects:  11% (56/505)        
+2023-06-15T13:05:37.4713040Z remote: Compressing objects:  12% (61/505)        
+2023-06-15T13:05:37.4713330Z remote: Compressing objects:  13% (66/505)        
+2023-06-15T13:05:37.4713607Z remote: Compressing objects:  14% (71/505)        
+2023-06-15T13:05:37.4713879Z remote: Compressing objects:  15% (76/505)        
+2023-06-15T13:05:37.4714159Z remote: Compressing objects:  16% (81/505)        
+2023-06-15T13:05:37.4714415Z remote: Compressing objects:  17% (86/505)        
+2023-06-15T13:05:37.4714689Z remote: Compressing objects:  18% (91/505)        
+2023-06-15T13:05:37.4714966Z remote: Compressing objects:  19% (96/505)        
+2023-06-15T13:05:37.4715232Z remote: Compressing objects:  20% (101/505)        
+2023-06-15T13:05:37.4715513Z remote: Compressing objects:  21% (107/505)        
+2023-06-15T13:05:37.4715795Z remote: Compressing objects:  22% (112/505)        
+2023-06-15T13:05:37.4716317Z remote: Compressing objects:  23% (117/505)        
+2023-06-15T13:05:37.4716599Z remote: Compressing objects:  24% (122/505)        
+2023-06-15T13:05:37.4775479Z remote: Compressing objects:  25% (127/505)        
+2023-06-15T13:05:37.5179998Z remote: Compressing objects:  26% (132/505)        
+2023-06-15T13:05:37.5411456Z remote: Compressing objects:  27% (137/505)        
+2023-06-15T13:05:37.5489388Z remote: Compressing objects:  28% (142/505)        
+2023-06-15T13:05:37.5592752Z remote: Compressing objects:  29% (147/505)        
+2023-06-15T13:05:37.5593156Z remote: Compressing objects:  30% (152/505)        
+2023-06-15T13:05:37.5593479Z remote: Compressing objects:  31% (157/505)        
+2023-06-15T13:05:37.5616877Z remote: Compressing objects:  32% (162/505)        
+2023-06-15T13:05:37.5628514Z remote: Compressing objects:  33% (167/505)        
+2023-06-15T13:05:37.5631478Z remote: Compressing objects:  34% (172/505)        
+2023-06-15T13:05:37.5649216Z remote: Compressing objects:  35% (177/505)        
+2023-06-15T13:05:37.5664975Z remote: Compressing objects:  36% (182/505)        
+2023-06-15T13:05:37.5678214Z remote: Compressing objects:  37% (187/505)        
+2023-06-15T13:05:37.5702669Z remote: Compressing objects:  38% (192/505)        
+2023-06-15T13:05:37.5720061Z remote: Compressing objects:  39% (197/505)        
+2023-06-15T13:05:37.5746657Z remote: Compressing objects:  40% (202/505)        
+2023-06-15T13:05:37.5747017Z remote: Compressing objects:  41% (208/505)        
+2023-06-15T13:05:37.5757386Z remote: Compressing objects:  42% (213/505)        
+2023-06-15T13:05:37.5776573Z remote: Compressing objects:  43% (218/505)        
+2023-06-15T13:05:37.5783514Z remote: Compressing objects:  44% (223/505)        
+2023-06-15T13:05:37.5791914Z remote: Compressing objects:  45% (228/505)        
+2023-06-15T13:05:37.5811734Z remote: Compressing objects:  46% (233/505)        
+2023-06-15T13:05:37.5819504Z remote: Compressing objects:  47% (238/505)        
+2023-06-15T13:05:37.5850568Z remote: Compressing objects:  48% (243/505)        
+2023-06-15T13:05:37.5875030Z remote: Compressing objects:  49% (248/505)        
+2023-06-15T13:05:37.5899585Z remote: Compressing objects:  50% (253/505)        
+2023-06-15T13:05:37.5911411Z remote: Compressing objects:  51% (258/505)        
+2023-06-15T13:05:37.5921230Z remote: Compressing objects:  52% (263/505)        
+2023-06-15T13:05:37.5927045Z remote: Compressing objects:  53% (268/505)        
+2023-06-15T13:05:37.5954394Z remote: Compressing objects:  54% (273/505)        
+2023-06-15T13:05:37.5964006Z remote: Compressing objects:  55% (278/505)        
+2023-06-15T13:05:37.5984932Z remote: Compressing objects:  56% (283/505)        
+2023-06-15T13:05:37.6011712Z remote: Compressing objects:  57% (288/505)        
+2023-06-15T13:05:37.6018808Z remote: Compressing objects:  58% (293/505)        
+2023-06-15T13:05:37.6029741Z remote: Compressing objects:  59% (298/505)        
+2023-06-15T13:05:37.6053933Z remote: Compressing objects:  60% (303/505)        
+2023-06-15T13:05:37.6056530Z remote: Compressing objects:  61% (309/505)        
+2023-06-15T13:05:37.6065614Z remote: Compressing objects:  62% (314/505)        
+2023-06-15T13:05:37.6099052Z remote: Compressing objects:  63% (319/505)        
+2023-06-15T13:05:37.6116668Z remote: Compressing objects:  64% (324/505)        
+2023-06-15T13:05:37.6126095Z remote: Compressing objects:  65% (329/505)        
+2023-06-15T13:05:37.6141226Z remote: Compressing objects:  66% (334/505)        
+2023-06-15T13:05:37.6147427Z remote: Compressing objects:  67% (339/505)        
+2023-06-15T13:05:37.6164758Z remote: Compressing objects:  68% (344/505)        
+2023-06-15T13:05:37.6177455Z remote: Compressing objects:  69% (349/505)        
+2023-06-15T13:05:37.6205666Z remote: Compressing objects:  70% (354/505)        
+2023-06-15T13:05:37.6211210Z remote: Compressing objects:  71% (359/505)        
+2023-06-15T13:05:37.6230188Z remote: Compressing objects:  72% (364/505)        
+2023-06-15T13:05:37.6233658Z remote: Compressing objects:  73% (369/505)        
+2023-06-15T13:05:37.6250111Z remote: Compressing objects:  74% (374/505)        
+2023-06-15T13:05:37.6254749Z remote: Compressing objects:  75% (379/505)        
+2023-06-15T13:05:37.6255113Z remote: Compressing objects:  76% (384/505)        
+2023-06-15T13:05:37.6262880Z remote: Compressing objects:  77% (389/505)        
+2023-06-15T13:05:37.6270216Z remote: Compressing objects:  78% (394/505)        
+2023-06-15T13:05:37.6288341Z remote: Compressing objects:  79% (399/505)        
+2023-06-15T13:05:37.6290232Z remote: Compressing objects:  80% (404/505)        
+2023-06-15T13:05:37.6290567Z remote: Compressing objects:  81% (410/505)        
+2023-06-15T13:05:37.6290858Z remote: Compressing objects:  82% (415/505)        
+2023-06-15T13:05:37.6292527Z remote: Compressing objects:  83% (420/505)        
+2023-06-15T13:05:37.6292809Z remote: Compressing objects:  84% (425/505)        
+2023-06-15T13:05:37.6293092Z remote: Compressing objects:  85% (430/505)        
+2023-06-15T13:05:37.6293390Z remote: Compressing objects:  86% (435/505)        
+2023-06-15T13:05:37.6293650Z remote: Compressing objects:  87% (440/505)        
+2023-06-15T13:05:37.6293927Z remote: Compressing objects:  88% (445/505)        
+2023-06-15T13:05:37.6295605Z remote: Compressing objects:  89% (450/505)        
+2023-06-15T13:05:37.6295939Z remote: Compressing objects:  90% (455/505)        
+2023-06-15T13:05:37.6296221Z remote: Compressing objects:  91% (460/505)        
+2023-06-15T13:05:37.6296487Z remote: Compressing objects:  92% (465/505)        
+2023-06-15T13:05:37.6296779Z remote: Compressing objects:  93% (470/505)        
+2023-06-15T13:05:37.6298425Z remote: Compressing objects:  94% (475/505)        
+2023-06-15T13:05:37.6298752Z remote: Compressing objects:  95% (480/505)        
+2023-06-15T13:05:37.6299018Z remote: Compressing objects:  96% (485/505)        
+2023-06-15T13:05:37.6299297Z remote: Compressing objects:  97% (490/505)        
+2023-06-15T13:05:37.6299595Z remote: Compressing objects:  98% (495/505)        
+2023-06-15T13:05:37.6299869Z remote: Compressing objects:  99% (500/505)        
+2023-06-15T13:05:37.6300142Z remote: Compressing objects: 100% (505/505)        
+2023-06-15T13:05:37.6300715Z remote: Compressing objects: 100% (505/505), done.        
+2023-06-15T13:05:37.6348848Z Receiving objects:   0% (1/592)
+2023-06-15T13:05:37.6350546Z Receiving objects:   1% (6/592)
+2023-06-15T13:05:37.6350998Z Receiving objects:   2% (12/592)
+2023-06-15T13:05:37.6354040Z Receiving objects:   3% (18/592)
+2023-06-15T13:05:37.6355163Z Receiving objects:   4% (24/592)
+2023-06-15T13:05:37.6672638Z Receiving objects:   5% (30/592)
+2023-06-15T13:05:37.7162692Z Receiving objects:   6% (36/592)
+2023-06-15T13:05:37.7298198Z Receiving objects:   7% (42/592)
+2023-06-15T13:05:37.7484609Z Receiving objects:   8% (48/592)
+2023-06-15T13:05:37.7484984Z Receiving objects:   9% (54/592)
+2023-06-15T13:05:37.7485237Z Receiving objects:  10% (60/592)
+2023-06-15T13:05:37.7489578Z Receiving objects:  11% (66/592)
+2023-06-15T13:05:37.7494432Z Receiving objects:  12% (72/592)
+2023-06-15T13:05:37.7497813Z Receiving objects:  13% (77/592)
+2023-06-15T13:05:37.7498289Z Receiving objects:  14% (83/592)
+2023-06-15T13:05:37.7501784Z Receiving objects:  15% (89/592)
+2023-06-15T13:05:37.7502300Z Receiving objects:  16% (95/592)
+2023-06-15T13:05:37.7502859Z Receiving objects:  17% (101/592)
+2023-06-15T13:05:37.7505571Z Receiving objects:  18% (107/592)
+2023-06-15T13:05:37.7508634Z Receiving objects:  19% (113/592)
+2023-06-15T13:05:37.7509152Z Receiving objects:  20% (119/592)
+2023-06-15T13:05:37.7512291Z Receiving objects:  21% (125/592)
+2023-06-15T13:05:37.7515333Z Receiving objects:  22% (131/592)
+2023-06-15T13:05:37.7519169Z Receiving objects:  23% (137/592)
+2023-06-15T13:05:37.7521967Z Receiving objects:  24% (143/592)
+2023-06-15T13:05:37.7528887Z Receiving objects:  25% (148/592)
+2023-06-15T13:05:37.7535148Z Receiving objects:  26% (154/592)
+2023-06-15T13:05:37.7540386Z Receiving objects:  27% (160/592)
+2023-06-15T13:05:37.7542604Z Receiving objects:  28% (166/592)
+2023-06-15T13:05:37.7548254Z Receiving objects:  29% (172/592)
+2023-06-15T13:05:37.7551823Z Receiving objects:  30% (178/592)
+2023-06-15T13:05:37.7553278Z Receiving objects:  31% (184/592)
+2023-06-15T13:05:37.7555740Z Receiving objects:  32% (190/592)
+2023-06-15T13:05:37.7558736Z Receiving objects:  33% (196/592)
+2023-06-15T13:05:37.7559156Z Receiving objects:  34% (202/592)
+2023-06-15T13:05:37.7559516Z Receiving objects:  35% (208/592)
+2023-06-15T13:05:37.7559844Z Receiving objects:  36% (214/592)
+2023-06-15T13:05:37.7563294Z Receiving objects:  37% (220/592)
+2023-06-15T13:05:37.7563707Z Receiving objects:  38% (225/592)
+2023-06-15T13:05:37.7567134Z Receiving objects:  39% (231/592)
+2023-06-15T13:05:37.7567537Z Receiving objects:  40% (237/592)
+2023-06-15T13:05:37.7567863Z Receiving objects:  41% (243/592)
+2023-06-15T13:05:37.7568172Z Receiving objects:  42% (249/592)
+2023-06-15T13:05:37.7568502Z Receiving objects:  43% (255/592)
+2023-06-15T13:05:37.7571943Z Receiving objects:  44% (261/592)
+2023-06-15T13:05:37.7572623Z Receiving objects:  45% (267/592)
+2023-06-15T13:05:37.7573009Z Receiving objects:  46% (273/592)
+2023-06-15T13:05:37.7573441Z Receiving objects:  47% (279/592)
+2023-06-15T13:05:37.7576934Z Receiving objects:  48% (285/592)
+2023-06-15T13:05:37.7577393Z Receiving objects:  49% (291/592)
+2023-06-15T13:05:37.7577724Z Receiving objects:  50% (296/592)
+2023-06-15T13:05:37.7578044Z Receiving objects:  51% (302/592)
+2023-06-15T13:05:37.7581312Z Receiving objects:  52% (308/592)
+2023-06-15T13:05:37.7581704Z Receiving objects:  53% (314/592)
+2023-06-15T13:05:37.7582051Z Receiving objects:  54% (320/592)
+2023-06-15T13:05:37.7582370Z Receiving objects:  55% (326/592)
+2023-06-15T13:05:37.7582677Z Receiving objects:  56% (332/592)
+2023-06-15T13:05:37.7585811Z Receiving objects:  57% (338/592)
+2023-06-15T13:05:37.7586207Z Receiving objects:  58% (344/592)
+2023-06-15T13:05:37.7586548Z Receiving objects:  59% (350/592)
+2023-06-15T13:05:37.7586867Z Receiving objects:  60% (356/592)
+2023-06-15T13:05:37.7587183Z Receiving objects:  61% (362/592)
+2023-06-15T13:05:37.7587501Z Receiving objects:  62% (368/592)
+2023-06-15T13:05:37.7590940Z Receiving objects:  63% (373/592)
+2023-06-15T13:05:37.7591648Z Receiving objects:  64% (379/592)
+2023-06-15T13:05:37.7591970Z Receiving objects:  65% (385/592)
+2023-06-15T13:05:37.7595778Z Receiving objects:  66% (391/592)
+2023-06-15T13:05:37.7596220Z Receiving objects:  67% (397/592)
+2023-06-15T13:05:37.7596565Z Receiving objects:  68% (403/592)
+2023-06-15T13:05:37.7596883Z Receiving objects:  69% (409/592)
+2023-06-15T13:05:37.7646160Z Receiving objects:  70% (415/592)
+2023-06-15T13:05:37.7646689Z Receiving objects:  71% (421/592)
+2023-06-15T13:05:37.7647053Z Receiving objects:  72% (427/592)
+2023-06-15T13:05:37.7647363Z Receiving objects:  73% (433/592)
+2023-06-15T13:05:37.7647692Z Receiving objects:  74% (439/592)
+2023-06-15T13:05:37.7648013Z Receiving objects:  75% (444/592)
+2023-06-15T13:05:37.7648334Z Receiving objects:  76% (450/592)
+2023-06-15T13:05:37.7648654Z Receiving objects:  77% (456/592)
+2023-06-15T13:05:37.7648971Z Receiving objects:  78% (462/592)
+2023-06-15T13:05:37.7649284Z Receiving objects:  79% (468/592)
+2023-06-15T13:05:37.7649600Z Receiving objects:  80% (474/592)
+2023-06-15T13:05:37.7649911Z Receiving objects:  81% (480/592)
+2023-06-15T13:05:37.7650225Z Receiving objects:  82% (486/592)
+2023-06-15T13:05:37.7650544Z Receiving objects:  83% (492/592)
+2023-06-15T13:05:37.7650865Z Receiving objects:  84% (498/592)
+2023-06-15T13:05:37.7651198Z Receiving objects:  85% (504/592)
+2023-06-15T13:05:37.7734176Z Receiving objects:  86% (510/592)
+2023-06-15T13:05:37.7735550Z Receiving objects:  87% (516/592)
+2023-06-15T13:05:37.7750794Z Receiving objects:  88% (521/592)
+2023-06-15T13:05:37.7752155Z Receiving objects:  89% (527/592)
+2023-06-15T13:05:37.7752906Z Receiving objects:  90% (533/592)
+2023-06-15T13:05:37.7818485Z Receiving objects:  91% (539/592)
+2023-06-15T13:05:37.7819401Z remote: Total 592 (delta 119), reused 290 (delta 34), pack-reused 0        
+2023-06-15T13:05:37.7839005Z Receiving objects:  92% (545/592)
+2023-06-15T13:05:37.7839528Z Receiving objects:  93% (551/592)
+2023-06-15T13:05:37.7840817Z Receiving objects:  94% (557/592)
+2023-06-15T13:05:37.7841349Z Receiving objects:  95% (563/592)
+2023-06-15T13:05:37.7843573Z Receiving objects:  96% (569/592)
+2023-06-15T13:05:37.7844082Z Receiving objects:  97% (575/592)
+2023-06-15T13:05:37.7846763Z Receiving objects:  98% (581/592)
+2023-06-15T13:05:37.7853933Z Receiving objects:  99% (587/592)
+2023-06-15T13:05:37.7854444Z Receiving objects: 100% (592/592)
+2023-06-15T13:05:37.7855777Z Receiving objects: 100% (592/592), 1.70 MiB | 11.29 MiB/s, done.
+2023-06-15T13:05:37.7856323Z Resolving deltas:   0% (0/119)
+2023-06-15T13:05:37.7858972Z Resolving deltas:   1% (2/119)
+2023-06-15T13:05:37.7859567Z Resolving deltas:   2% (3/119)
+2023-06-15T13:05:37.7861487Z Resolving deltas:   3% (4/119)
+2023-06-15T13:05:37.7861938Z Resolving deltas:   4% (5/119)
+2023-06-15T13:05:37.7865034Z Resolving deltas:   5% (6/119)
+2023-06-15T13:05:37.7865493Z Resolving deltas:   6% (8/119)
+2023-06-15T13:05:37.7866711Z Resolving deltas:   7% (9/119)
+2023-06-15T13:05:37.7867143Z Resolving deltas:   8% (10/119)
+2023-06-15T13:05:37.7867779Z Resolving deltas:   9% (11/119)
+2023-06-15T13:05:37.7868190Z Resolving deltas:  10% (12/119)
+2023-06-15T13:05:37.7869825Z Resolving deltas:  11% (14/119)
+2023-06-15T13:05:37.7870262Z Resolving deltas:  12% (15/119)
+2023-06-15T13:05:37.7870852Z Resolving deltas:  13% (16/119)
+2023-06-15T13:05:37.7871252Z Resolving deltas:  14% (17/119)
+2023-06-15T13:05:37.7871844Z Resolving deltas:  15% (18/119)
+2023-06-15T13:05:37.7872248Z Resolving deltas:  16% (20/119)
+2023-06-15T13:05:37.7873476Z Resolving deltas:  17% (21/119)
+2023-06-15T13:05:37.7873906Z Resolving deltas:  18% (22/119)
+2023-06-15T13:05:37.7875094Z Resolving deltas:  19% (23/119)
+2023-06-15T13:05:37.7875505Z Resolving deltas:  20% (24/119)
+2023-06-15T13:05:37.7876629Z Resolving deltas:  21% (25/119)
+2023-06-15T13:05:37.7877049Z Resolving deltas:  22% (27/119)
+2023-06-15T13:05:37.7877658Z Resolving deltas:  23% (28/119)
+2023-06-15T13:05:37.7878107Z Resolving deltas:  24% (29/119)
+2023-06-15T13:05:37.7878953Z Resolving deltas:  25% (30/119)
+2023-06-15T13:05:37.7880517Z Resolving deltas:  26% (31/119)
+2023-06-15T13:05:37.7881755Z Resolving deltas:  27% (33/119)
+2023-06-15T13:05:37.7882295Z Resolving deltas:  28% (34/119)
+2023-06-15T13:05:37.7883696Z Resolving deltas:  29% (35/119)
+2023-06-15T13:05:37.7884771Z Resolving deltas:  30% (36/119)
+2023-06-15T13:05:37.7885613Z Resolving deltas:  31% (37/119)
+2023-06-15T13:05:37.7886121Z Resolving deltas:  32% (39/119)
+2023-06-15T13:05:37.7886893Z Resolving deltas:  33% (40/119)
+2023-06-15T13:05:37.7887328Z Resolving deltas:  34% (41/119)
+2023-06-15T13:05:37.7889032Z Resolving deltas:  35% (42/119)
+2023-06-15T13:05:37.7889623Z Resolving deltas:  36% (43/119)
+2023-06-15T13:05:37.7890944Z Resolving deltas:  37% (45/119)
+2023-06-15T13:05:37.7893186Z Resolving deltas:  38% (46/119)
+2023-06-15T13:05:37.7894171Z Resolving deltas:  39% (47/119)
+2023-06-15T13:05:37.7894686Z Resolving deltas:  40% (48/119)
+2023-06-15T13:05:37.7897481Z Resolving deltas:  41% (49/119)
+2023-06-15T13:05:37.7898571Z Resolving deltas:  42% (50/119)
+2023-06-15T13:05:37.7900935Z Resolving deltas:  43% (52/119)
+2023-06-15T13:05:37.7902395Z Resolving deltas:  44% (53/119)
+2023-06-15T13:05:37.7903170Z Resolving deltas:  45% (54/119)
+2023-06-15T13:05:37.7903684Z Resolving deltas:  46% (55/119)
+2023-06-15T13:05:37.7905017Z Resolving deltas:  47% (56/119)
+2023-06-15T13:05:37.7906097Z Resolving deltas:  48% (58/119)
+2023-06-15T13:05:37.7907854Z Resolving deltas:  49% (59/119)
+2023-06-15T13:05:37.7910507Z Resolving deltas:  50% (60/119)
+2023-06-15T13:05:37.7912202Z Resolving deltas:  51% (61/119)
+2023-06-15T13:05:37.7912763Z Resolving deltas:  52% (62/119)
+2023-06-15T13:05:37.7914603Z Resolving deltas:  53% (64/119)
+2023-06-15T13:05:37.7915152Z Resolving deltas:  54% (65/119)
+2023-06-15T13:05:37.7915788Z Resolving deltas:  55% (66/119)
+2023-06-15T13:05:37.7917213Z Resolving deltas:  56% (67/119)
+2023-06-15T13:05:37.7919081Z Resolving deltas:  57% (68/119)
+2023-06-15T13:05:37.7919672Z Resolving deltas:  58% (70/119)
+2023-06-15T13:05:37.7921629Z Resolving deltas:  59% (71/119)
+2023-06-15T13:05:37.7922210Z Resolving deltas:  60% (72/119)
+2023-06-15T13:05:37.7923564Z Resolving deltas:  61% (73/119)
+2023-06-15T13:05:37.7924078Z Resolving deltas:  62% (74/119)
+2023-06-15T13:05:37.7926018Z Resolving deltas:  63% (75/119)
+2023-06-15T13:05:37.7926568Z Resolving deltas:  64% (77/119)
+2023-06-15T13:05:37.7927260Z Resolving deltas:  65% (78/119)
+2023-06-15T13:05:37.7927816Z Resolving deltas:  66% (79/119)
+2023-06-15T13:05:37.7928493Z Resolving deltas:  67% (80/119)
+2023-06-15T13:05:37.7928983Z Resolving deltas:  68% (81/119)
+2023-06-15T13:05:37.7929661Z Resolving deltas:  69% (83/119)
+2023-06-15T13:05:37.7930143Z Resolving deltas:  70% (84/119)
+2023-06-15T13:05:37.7930825Z Resolving deltas:  71% (85/119)
+2023-06-15T13:05:37.7931315Z Resolving deltas:  72% (86/119)
+2023-06-15T13:05:37.7931954Z Resolving deltas:  73% (87/119)
+2023-06-15T13:05:37.7932673Z Resolving deltas:  74% (89/119)
+2023-06-15T13:05:37.7933402Z Resolving deltas:  75% (90/119)
+2023-06-15T13:05:37.7933887Z Resolving deltas:  76% (91/119)
+2023-06-15T13:05:37.7934526Z Resolving deltas:  77% (92/119)
+2023-06-15T13:05:37.7935000Z Resolving deltas:  78% (93/119)
+2023-06-15T13:05:37.7935700Z Resolving deltas:  79% (95/119)
+2023-06-15T13:05:37.7936136Z Resolving deltas:  80% (96/119)
+2023-06-15T13:05:37.7936915Z Resolving deltas:  81% (97/119)
+2023-06-15T13:05:37.7937389Z Resolving deltas:  82% (98/119)
+2023-06-15T13:05:37.7938090Z Resolving deltas:  83% (99/119)
+2023-06-15T13:05:37.7938568Z Resolving deltas:  84% (100/119)
+2023-06-15T13:05:37.7939261Z Resolving deltas:  85% (102/119)
+2023-06-15T13:05:37.7939759Z Resolving deltas:  86% (103/119)
+2023-06-15T13:05:37.7940699Z Resolving deltas:  87% (104/119)
+2023-06-15T13:05:37.8016765Z Resolving deltas:  88% (105/119)
+2023-06-15T13:05:37.8017473Z Resolving deltas:  89% (106/119)
+2023-06-15T13:05:37.8025221Z Resolving deltas:  90% (108/119)
+2023-06-15T13:05:37.8035758Z Resolving deltas:  91% (109/119)
+2023-06-15T13:05:37.8036434Z Resolving deltas:  92% (110/119)
+2023-06-15T13:05:37.8038508Z Resolving deltas:  93% (111/119)
+2023-06-15T13:05:37.8039119Z Resolving deltas:  94% (112/119)
+2023-06-15T13:05:37.8039786Z Resolving deltas:  95% (114/119)
+2023-06-15T13:05:37.8044832Z Resolving deltas:  96% (115/119)
+2023-06-15T13:05:37.8123738Z Resolving deltas:  97% (116/119)
+2023-06-15T13:05:37.8126827Z Resolving deltas:  98% (117/119)
+2023-06-15T13:05:37.8142442Z Resolving deltas:  99% (118/119)
+2023-06-15T13:05:37.8143080Z Resolving deltas: 100% (119/119)
+2023-06-15T13:05:37.8143929Z Resolving deltas: 100% (119/119), done.
+2023-06-15T13:05:37.8238823Z From https://github.com/jenkinsci/code-coverage-api-plugin
+2023-06-15T13:05:37.8239721Z  * [new ref]         eba8c75ce2186498b191eda694b221262729aab2 -> pull/709/merge
+2023-06-15T13:05:37.8280169Z ##[endgroup]
+2023-06-15T13:05:37.8280942Z ##[group]Determining the checkout info
+2023-06-15T13:05:37.8281855Z ##[endgroup]
+2023-06-15T13:05:37.8282588Z ##[group]Checking out the ref
+2023-06-15T13:05:37.8283648Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/709/merge
+2023-06-15T13:05:37.8808089Z Note: switching to 'refs/remotes/pull/709/merge'.
+2023-06-15T13:05:37.8808810Z 
+2023-06-15T13:05:37.8809687Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-06-15T13:05:37.8810377Z changes and commit them, and you can discard any commits you make in this
+2023-06-15T13:05:37.8811211Z state without impacting any branches by switching back to a branch.
+2023-06-15T13:05:37.8811623Z 
+2023-06-15T13:05:37.8812361Z If you want to create a new branch to retain commits you create, you may
+2023-06-15T13:05:37.8813034Z do so (now or later) by using -c with the switch command. Example:
+2023-06-15T13:05:37.8813762Z 
+2023-06-15T13:05:37.8814160Z   git switch -c <new-branch-name>
+2023-06-15T13:05:37.8814737Z 
+2023-06-15T13:05:37.8815421Z Or undo this operation with:
+2023-06-15T13:05:37.8815983Z 
+2023-06-15T13:05:37.8816276Z   git switch -
+2023-06-15T13:05:37.8816801Z 
+2023-06-15T13:05:37.8817201Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-06-15T13:05:37.8817912Z 
+2023-06-15T13:05:37.8818430Z HEAD is now at eba8c75 Merge 6661429a5a0e998cf17daa45d8c026bdfaf9bc3f into 79b87391ade31bacff051c4cc6d862a4d4e984e1
+2023-06-15T13:05:37.8820649Z ##[endgroup]
+2023-06-15T13:05:37.8871772Z [command]/usr/bin/git log -1 --format='%H'
+2023-06-15T13:05:37.8903145Z 'eba8c75ce2186498b191eda694b221262729aab2'

@@ -1,0 +1,527 @@
+2023-08-04T19:15:34.8342526Z Cleaning up orphan processes
+
+2023-08-04T19:15:34.4831274Z Post job cleanup.
+
+2023-08-04T19:15:34.5574018Z Post job cleanup.
+2023-08-04T19:15:34.7149177Z [command]/usr/bin/git version
+2023-08-04T19:15:34.7205408Z git version 2.41.0
+2023-08-04T19:15:34.7303960Z Temporarily overriding HOME='/home/runner/work/_temp/4f51039f-6bcc-47bf-b280-32f5210d1a14' before making global git config changes
+2023-08-04T19:15:34.7304556Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-04T19:15:34.7305300Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry
+2023-08-04T19:15:34.7324385Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-04T19:15:34.7378022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-04T19:15:34.7637705Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-04T19:15:34.7667076Z http.https://github.com/.extraheader
+2023-08-04T19:15:34.7679936Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-04T19:15:34.7722181Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-04T19:12:33.5184735Z ##[group]Run echo "::set-output name=date::$(/bin/date -u "+%Y-%m")"
+2023-08-04T19:12:33.5185232Z [36;1mecho "::set-output name=date::$(/bin/date -u "+%Y-%m")"[0m
+2023-08-04T19:12:33.5254143Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-08-04T19:12:33.5254480Z env:
+2023-08-04T19:12:33.5254780Z   JAVA_HOME_11.0.20_x64: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:33.5255126Z   JAVA_HOME: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:33.5255464Z   JAVA_HOME_11_0_20_X64: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:33.5255739Z ##[endgroup]
+2023-08-04T19:12:33.5493682Z ##[warning]The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+
+2023-08-04T19:12:34.0881044Z ##[group]Run mvn -B formatter:validate install --file pom.xml
+2023-08-04T19:12:34.0882367Z [36;1mmvn -B formatter:validate install --file pom.xml[0m
+2023-08-04T19:12:34.0950018Z shell: /usr/bin/bash -e {0}
+2023-08-04T19:12:34.0950263Z env:
+2023-08-04T19:12:34.0950557Z   JAVA_HOME_11.0.20_x64: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:34.0950905Z   JAVA_HOME: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:34.0951244Z   JAVA_HOME_11_0_20_X64: /opt/hostedtoolcache/jdk/11.0.20/x64
+2023-08-04T19:12:34.0951513Z ##[endgroup]
+2023-08-04T19:12:35.6621313Z [INFO] Scanning for projects...
+2023-08-04T19:12:35.9872132Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/quarkiverse/quarkiverse-parent/15/quarkiverse-parent-15.pom
+2023-08-04T19:12:36.3526066Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/quarkiverse/quarkiverse-parent/15/quarkiverse-parent-15.pom (23 kB at 62 kB/s)
+2023-08-04T19:12:36.5362262Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/quarkus/quarkus-bom/1.13.7.Final/quarkus-bom-1.13.7.Final.pom
+2023-08-04T19:12:36.6103633Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/quarkus/quarkus-bom/1.13.7.Final/quarkus-bom-1.13.7.Final.pom (233 kB at 2.9 MB/s)
+2023-08-04T19:12:36.6286906Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/quarkus/quarkus-parent/1.13.7.Final/quarkus-parent-1.13.7.Final.pom
+2023-08-04T19:12:36.6708049Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/quarkus/quarkus-parent/1.13.7.Final/quarkus-parent-1.13.7.Final.pom (12 kB at 282 kB/s)
+2023-08-04T19:12:36.6804126Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/37/jboss-parent-37.pom
+2023-08-04T19:12:36.7245442Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/37/jboss-parent-37.pom (66 kB at 1.5 MB/s)
+2023-08-04T19:12:36.7364559Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.49.Final/netty-bom-4.1.49.Final.pom
+2023-08-04T19:12:36.7726205Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.49.Final/netty-bom-4.1.49.Final.pom (7.9 kB at 208 kB/s)
+2023-08-04T19:12:36.7799343Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2023-08-04T19:12:36.8139337Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom (4.8 kB at 127 kB/s)
+2023-08-04T19:12:36.8200724Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.12.3/jackson-bom-2.12.3.pom
+2023-08-04T19:12:36.8598328Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.12.3/jackson-bom-2.12.3.pom (17 kB at 430 kB/s)
+2023-08-04T19:12:36.8649097Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.12/jackson-parent-2.12.pom
+2023-08-04T19:12:36.9008551Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.12/jackson-parent-2.12.pom (7.5 kB at 209 kB/s)
+2023-08-04T19:12:36.9069784Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/41/oss-parent-41.pom
+2023-08-04T19:12:36.9403252Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/41/oss-parent-41.pom (23 kB at 708 kB/s)
+2023-08-04T19:12:36.9488641Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/resteasy/resteasy-bom/4.5.12.Final/resteasy-bom-4.5.12.Final.pom
+2023-08-04T19:12:36.9858645Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/resteasy/resteasy-bom/4.5.12.Final/resteasy-bom-4.5.12.Final.pom (8.5 kB at 228 kB/s)
+2023-08-04T19:12:36.9882247Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/35/jboss-parent-35.pom
+2023-08-04T19:12:37.0246192Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/35/jboss-parent-35.pom (66 kB at 1.8 MB/s)
+2023-08-04T19:12:37.0352848Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom
+2023-08-04T19:12:37.0677091Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom (5.1 kB at 154 kB/s)
+2023-08-04T19:12:37.0706492Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/fabric8/kubernetes-client-bom/5.3.1/kubernetes-client-bom-5.3.1.pom
+2023-08-04T19:12:37.1076834Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/fabric8/kubernetes-client-bom/5.3.1/kubernetes-client-bom-5.3.1.pom (16 kB at 427 kB/s)
+2023-08-04T19:12:37.1110688Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/vertx/vertx-dependencies/3.9.6/vertx-dependencies-3.9.6.pom
+2023-08-04T19:12:37.1824977Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/vertx/vertx-dependencies/3.9.6/vertx-dependencies-3.9.6.pom (31 kB at 438 kB/s)
+2023-08-04T19:12:37.1857720Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/vertx/vertx-parent/19/vertx-parent-19.pom
+2023-08-04T19:12:37.2405035Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/vertx/vertx-parent/19/vertx-parent-19.pom (15 kB at 280 kB/s)
+2023-08-04T19:12:37.2457698Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-bom/1.34.0/grpc-bom-1.34.0.pom
+2023-08-04T19:12:37.2898834Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/grpc/grpc-bom/1.34.0/grpc-bom-1.34.0.pom (4.6 kB at 104 kB/s)
+2023-08-04T19:12:37.2928869Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/bom/2.16.36/bom-2.16.36.pom
+2023-08-04T19:12:37.3301691Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/bom/2.16.36/bom-2.16.36.pom (63 kB at 1.7 MB/s)
+2023-08-04T19:12:37.3348985Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/aws-sdk-java-pom/2.16.36/aws-sdk-java-pom-2.16.36.pom
+2023-08-04T19:12:37.3713988Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/software/amazon/awssdk/aws-sdk-java-pom/2.16.36/aws-sdk-java-pom-2.16.36.pom (64 kB at 1.7 MB/s)
+2023-08-04T19:12:37.3881998Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/smallrye/common/smallrye-common-bom/1.5.0/smallrye-common-bom-1.5.0.pom
+2023-08-04T19:12:37.4234100Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/smallrye/common/smallrye-common-bom/1.5.0/smallrye-common-bom-1.5.0.pom (3.9 kB at 109 kB/s)
+2023-08-04T19:12:37.4302632Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.6.5/micrometer-bom-1.6.5.pom
+2023-08-04T19:12:37.4829503Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.6.5/micrometer-bom-1.6.5.pom (6.8 kB at 128 kB/s)
+2023-08-04T19:12:37.4860064Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.15.2/testcontainers-bom-1.15.2.pom
+2023-08-04T19:12:37.5205866Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.15.2/testcontainers-bom-1.15.2.pom (6.9 kB at 203 kB/s)
+2023-08-04T19:12:37.5236002Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.0.1/opentelemetry-bom-1.0.1.pom
+2023-08-04T19:12:37.5621537Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.0.1/opentelemetry-bom-1.0.1.pom (5.5 kB at 140 kB/s)
+2023-08-04T19:12:37.5647006Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom-alpha/1.0.1-alpha/opentelemetry-bom-alpha-1.0.1-alpha.pom
+2023-08-04T19:12:37.6286598Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom-alpha/1.0.1-alpha/opentelemetry-bom-alpha-1.0.1-alpha.pom (4.3 kB at 85 kB/s)
+2023-08-04T19:12:37.8250703Z [INFO] ------------------------------------------------------------------------
+2023-08-04T19:12:37.8255546Z [INFO] Reactor Build Order:
+2023-08-04T19:12:37.8256809Z [INFO] 
+2023-08-04T19:12:37.8265309Z [INFO] Quarkus Micrometer Registry - Parent                               [pom]
+2023-08-04T19:12:37.8266352Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Parent               [pom]
+2023-08-04T19:12:37.8271528Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Runtime              [jar]
+2023-08-04T19:12:37.8272503Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Deployment           [jar]
+2023-08-04T19:12:37.8274588Z [INFO] Quarkus Micrometer Registry - Datadog - Parent                     [pom]
+2023-08-04T19:12:37.8275454Z [INFO] Quarkus Micrometer Registry - Datadog - Runtime                    [jar]
+2023-08-04T19:12:37.8276123Z [INFO] Quarkus Micrometer Registry - Datadog - Deployment                 [jar]
+2023-08-04T19:12:37.8277609Z [INFO] Quarkus Micrometer Registry - JMX - Parent                         [pom]
+2023-08-04T19:12:37.8278554Z [INFO] Quarkus Micrometer Registry - JMX - Runtime                        [jar]
+2023-08-04T19:12:37.8279949Z [INFO] Quarkus Micrometer Registry - JMX - Deployment                     [jar]
+2023-08-04T19:12:37.8280825Z [INFO] Quarkus Micrometer Registry - New Relic - Parent                   [pom]
+2023-08-04T19:12:37.8288042Z [INFO] Quarkus Micrometer Registry - New Relic - Runtime                  [jar]
+2023-08-04T19:12:37.8289097Z [INFO] Quarkus Micrometer Registry - New Relic - Deployment               [jar]
+2023-08-04T19:12:37.8291154Z [INFO] Quarkus Micrometer Registry - SignalFX - Parent                    [pom]
+2023-08-04T19:12:37.8292146Z [INFO] Quarkus Micrometer Registry - SignalFX - Runtime                   [jar]
+2023-08-04T19:12:37.8293664Z [INFO] Quarkus Micrometer Registry - SignalFX - Deployment                [jar]
+2023-08-04T19:12:37.8295018Z [INFO] Quarkus Micrometer Registry - Stackdriver - Parent                 [pom]
+2023-08-04T19:12:37.8296541Z [INFO] Quarkus Micrometer Registry - Stackdriver - Runtime                [jar]
+2023-08-04T19:12:37.8297420Z [INFO] Quarkus Micrometer Registry - Stackdriver - Deployment             [jar]
+2023-08-04T19:12:37.8298853Z [INFO] Quarkus Micrometer Registry - StatsD - Parent                      [pom]
+2023-08-04T19:12:37.8299709Z [INFO] Quarkus Micrometer Registry - StatsD - Runtime                     [jar]
+2023-08-04T19:12:37.8301569Z [INFO] Quarkus Micrometer Registry - StatsD - Deployment                  [jar]
+2023-08-04T19:12:37.8302135Z [INFO] Quarkus Micrometer Registry - Documentation                        [jar]
+2023-08-04T19:12:37.8302633Z [INFO] Quarkus Micrometer Registry - Integration Test - Parent            [pom]
+2023-08-04T19:12:37.8303170Z [INFO] Quarkus Micrometer Registry - Integration Test - JMX               [jar]
+2023-08-04T19:12:37.8303673Z [INFO] Quarkus Micrometer Registry - Integration Test - Native            [jar]
+2023-08-04T19:12:37.8355693Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.3.0/maven-enforcer-plugin-3.3.0.pom
+2023-08-04T19:12:38.1561553Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.3.0/maven-enforcer-plugin-3.3.0.pom (7.0 kB at 22 kB/s)
+2023-08-04T19:12:38.1669761Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.3.0/enforcer-3.3.0.pom
+2023-08-04T19:12:38.2753191Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/enforcer/enforcer/3.3.0/enforcer-3.3.0.pom (8.2 kB at 76 kB/s)
+2023-08-04T19:12:38.2784089Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-08-04T19:12:38.5119949Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 211 kB/s)
+2023-08-04T19:12:38.5146591Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-08-04T19:12:38.9687020Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 46 kB/s)
+2023-08-04T19:12:38.9781673Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom
+2023-08-04T19:12:39.0137991Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.2/junit-bom-5.9.2.pom (5.6 kB at 156 kB/s)
+2023-08-04T19:12:39.0228697Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.3.0/maven-enforcer-plugin-3.3.0.jar
+2023-08-04T19:12:39.0608053Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-enforcer-plugin/3.3.0/maven-enforcer-plugin-3.3.0.jar (39 kB at 1.0 MB/s)
+2023-08-04T19:12:39.0753999Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/buildnumber-maven-plugin/3.2.0/buildnumber-maven-plugin-3.2.0.pom
+2023-08-04T19:12:39.1128347Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/buildnumber-maven-plugin/3.2.0/buildnumber-maven-plugin-3.2.0.pom (12 kB at 332 kB/s)
+2023-08-04T19:12:39.1158587Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/74/mojo-parent-74.pom
+2023-08-04T19:12:39.1598127Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/mojo-parent/74/mojo-parent-74.pom (36 kB at 810 kB/s)
+2023-08-04T19:12:39.1652268Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/buildnumber-maven-plugin/3.2.0/buildnumber-maven-plugin-3.2.0.jar
+2023-08-04T19:12:39.2020871Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/buildnumber-maven-plugin/3.2.0/buildnumber-maven-plugin-3.2.0.jar (46 kB at 1.2 MB/s)
+2023-08-04T19:12:39.2094895Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-08-04T19:12:39.2419435Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 307 kB/s)
+2023-08-04T19:12:39.2449803Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-08-04T19:12:39.2798589Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 231 kB/s)
+2023-08-04T19:12:39.2842484Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+2023-08-04T19:12:39.3187344Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 1.9 MB/s)
+2023-08-04T19:12:39.3282238Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom
+2023-08-04T19:12:39.3711402Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom (6.7 kB at 157 kB/s)
+2023-08-04T19:12:39.3809109Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar
+2023-08-04T19:12:39.4141077Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar (32 kB at 979 kB/s)
+[... 10843 lines removed by TriageCore ...]
+2023-08-04T19:15:18.2387108Z 2023-08-04 19:15:18,211 INFO  [io.quarkus] (main) Profile test activated. 
+2023-08-04T19:15:18.2388251Z 2023-08-04 19:15:18,211 INFO  [io.quarkus] (main) Installed features: [cdi, micrometer, mutiny, smallrye-context-propagation, smallrye-reactive-messaging, smallrye-reactive-messaging-kafka, vertx, vertx-web]
+2023-08-04T19:15:19.7369568Z 2023-08-04 19:15:19,728 ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (vert.x-eventloop-thread-3) HTTP Request to /message/fail failed, error id: 004b5d2b-bce0-40b0-8c38-6cef446a7dd5-1: java.lang.RuntimeException: Failed on purpose
+2023-08-04T19:15:19.7370418Z 	at io.quarkiverse.it.micrometer.jmx.MessageResource.fail(MessageResource.java:34)
+2023-08-04T19:15:19.7371488Z 	at io.quarkiverse.it.micrometer.jmx.MessageResource_RouteHandler_fail_bf588423db6f1c9530c090b0cd2d5eef7fe10510.invoke(MessageResource_RouteHandler_fail_bf588423db6f1c9530c090b0cd2d5eef7fe10510.zig:106)
+2023-08-04T19:15:19.7372187Z 	at io.quarkus.vertx.web.runtime.RouteHandler.handle(RouteHandler.java:97)
+2023-08-04T19:15:19.7372707Z 	at io.quarkus.vertx.web.runtime.RouteHandler.handle(RouteHandler.java:22)
+2023-08-04T19:15:19.7373180Z 	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1038)
+2023-08-04T19:15:19.7373732Z 	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:101)
+2023-08-04T19:15:19.7374291Z 	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:132)
+2023-08-04T19:15:19.7374810Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$17.handle(VertxHttpRecorder.java:1129)
+2023-08-04T19:15:19.7375364Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$17.handle(VertxHttpRecorder.java:1098)
+2023-08-04T19:15:19.7375883Z 	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1038)
+2023-08-04T19:15:19.7376557Z 	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:137)
+2023-08-04T19:15:19.7377123Z 	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:132)
+2023-08-04T19:15:19.7377679Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$4.handle(VertxHttpRecorder.java:335)
+2023-08-04T19:15:19.7378244Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$4.handle(VertxHttpRecorder.java:313)
+2023-08-04T19:15:19.7378774Z 	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1038)
+2023-08-04T19:15:19.7379325Z 	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:137)
+2023-08-04T19:15:19.7379907Z 	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:132)
+2023-08-04T19:15:19.7380512Z 	at io.quarkus.micrometer.runtime.binder.vertx.VertxMeterFilter.handle(VertxMeterFilter.java:19)
+2023-08-04T19:15:19.7381173Z 	at io.quarkus.micrometer.runtime.binder.vertx.VertxMeterFilter.handle(VertxMeterFilter.java:14)
+2023-08-04T19:15:19.7381750Z 	at io.vertx.ext.web.impl.RouteState.handleContext(RouteState.java:1038)
+2023-08-04T19:15:19.7382314Z 	at io.vertx.ext.web.impl.RoutingContextImplBase.iterateNext(RoutingContextImplBase.java:137)
+2023-08-04T19:15:19.7383126Z 	at io.vertx.ext.web.impl.RoutingContextImpl.next(RoutingContextImpl.java:132)
+2023-08-04T19:15:19.7383600Z 	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:54)
+2023-08-04T19:15:19.7384043Z 	at io.vertx.ext.web.impl.RouterImpl.handle(RouterImpl.java:36)
+2023-08-04T19:15:19.7384551Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$9.handle(VertxHttpRecorder.java:426)
+2023-08-04T19:15:19.7385096Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$9.handle(VertxHttpRecorder.java:423)
+2023-08-04T19:15:19.7385656Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$1.handle(VertxHttpRecorder.java:149)
+2023-08-04T19:15:19.7386213Z 	at io.quarkus.vertx.http.runtime.VertxHttpRecorder$1.handle(VertxHttpRecorder.java:131)
+2023-08-04T19:15:19.7386808Z 	at io.vertx.core.http.impl.WebSocketRequestHandler.handle(WebSocketRequestHandler.java:50)
+2023-08-04T19:15:19.7387414Z 	at io.vertx.core.http.impl.WebSocketRequestHandler.handle(WebSocketRequestHandler.java:32)
+2023-08-04T19:15:19.7388058Z 	at io.vertx.core.http.impl.Http1xServerConnection.handleMessage(Http1xServerConnection.java:136)
+2023-08-04T19:15:19.7388625Z 	at io.vertx.core.impl.ContextImpl.executeTask(ContextImpl.java:366)
+2023-08-04T19:15:19.7389104Z 	at io.vertx.core.impl.EventLoopContext.execute(EventLoopContext.java:43)
+2023-08-04T19:15:19.7389606Z 	at io.vertx.core.impl.ContextImpl.executeFromIO(ContextImpl.java:229)
+2023-08-04T19:15:19.7390110Z 	at io.vertx.core.net.impl.VertxHandler.channelRead(VertxHandler.java:164)
+2023-08-04T19:15:19.7390745Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7391602Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7392360Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7393190Z 	at io.netty.channel.ChannelInboundHandlerAdapter.channelRead(ChannelInboundHandlerAdapter.java:93)
+2023-08-04T19:15:19.7394020Z 	at io.netty.handler.codec.http.websocketx.extensions.WebSocketServerExtensionHandler.channelRead(WebSocketServerExtensionHandler.java:101)
+2023-08-04T19:15:19.7394858Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7395574Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7396280Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7396962Z 	at io.vertx.core.http.impl.Http1xUpgradeToH2CHandler.channelRead(Http1xUpgradeToH2CHandler.java:109)
+2023-08-04T19:15:19.7397648Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7398364Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7399072Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7399684Z 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+2023-08-04T19:15:19.7400327Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7401038Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7401741Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7402391Z 	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:324)
+2023-08-04T19:15:19.7403000Z 	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:296)
+2023-08-04T19:15:19.7404057Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7404989Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7405676Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7406279Z 	at io.vertx.core.http.impl.Http1xOrH2CHandler.end(Http1xOrH2CHandler.java:61)
+2023-08-04T19:15:19.7406819Z 	at io.vertx.core.http.impl.Http1xOrH2CHandler.channelRead(Http1xOrH2CHandler.java:38)
+2023-08-04T19:15:19.7407461Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7408170Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7408880Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7409513Z 	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:286)
+2023-08-04T19:15:19.7410138Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7410856Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7411614Z 	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+2023-08-04T19:15:19.7412609Z 	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+2023-08-04T19:15:19.7413259Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+2023-08-04T19:15:19.7414153Z 	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+2023-08-04T19:15:19.7414832Z 	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+2023-08-04T19:15:19.7415443Z 	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+2023-08-04T19:15:19.7415990Z 	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+2023-08-04T19:15:19.7416565Z 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+2023-08-04T19:15:19.7417145Z 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+2023-08-04T19:15:19.7417614Z 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+2023-08-04T19:15:19.7418136Z 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+2023-08-04T19:15:19.7418677Z 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+2023-08-04T19:15:19.7419220Z 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+2023-08-04T19:15:19.7419664Z 	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-08-04T19:15:19.7419871Z 
+2023-08-04T19:15:19.8102426Z HTTP/1.1 200 OK
+2023-08-04T19:15:19.8103013Z content-length: 785
+2023-08-04T19:15:19.8103175Z 
+2023-08-04T19:15:19.8103453Z metrics:name=httpServerConnections.env.test.registry.jmx.statistic.active
+2023-08-04T19:15:19.8104002Z metrics:name=httpServerConnections.env.test.registry.jmx.statistic.duration
+2023-08-04T19:15:19.8104541Z metrics:name=httpServerConnections.env.test.registry.jmx.statistic.max
+2023-08-04T19:15:19.8105205Z metrics:name=httpServerRequests.env.test.method.GET.outcome.SUCCESS.registry.jmx.status.200.uri./message/item/{id}
+2023-08-04T19:15:19.8105975Z metrics:name=httpServerRequests.env.test.method.GET.outcome.SUCCESS.registry.jmx.status.200.uri./message/ping
+2023-08-04T19:15:19.8106575Z metrics:name=httpServerBytesWritten.env.test.registry.jmx
+2023-08-04T19:15:19.8107153Z metrics:name=httpServerRequests.env.test.method.GET.outcome.SERVER_ERROR.registry.jmx.status.500.uri./message/fail
+2023-08-04T19:15:19.8107682Z metrics:name=httpServerBytesRead.env.test.registry.jmx
+2023-08-04T19:15:19.8108567Z metrics:name=httpServerRequests.env.test.method.GET.outcome.CLIENT_ERROR.registry.jmx.status.404.uri.NOT_FOUND
+2023-08-04T19:15:19.8108921Z 
+2023-08-04T19:15:19.8204918Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.74 s -- in io.quarkiverse.it.micrometer.jmx.JmxMetricsRegistryTest
+2023-08-04T19:15:19.8625919Z 2023-08-04 19:15:19,856 INFO  [io.quarkus] (main) Quarkus stopped in 0.035s
+2023-08-04T19:15:19.9069789Z [INFO] 
+2023-08-04T19:15:19.9070570Z [INFO] Results:
+2023-08-04T19:15:19.9071330Z [INFO] 
+2023-08-04T19:15:19.9071860Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+2023-08-04T19:15:19.9072566Z [INFO] 
+2023-08-04T19:15:19.9075307Z [INFO] 
+2023-08-04T19:15:19.9076403Z [INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ quarkus-micrometer-registry-it-jmx ---
+2023-08-04T19:15:19.9201314Z [INFO] Building jar: /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-jmx/target/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT.jar
+2023-08-04T19:15:19.9329520Z [INFO] 
+2023-08-04T19:15:19.9330855Z [INFO] --- maven-source-plugin:3.3.0:jar-no-fork (attach-sources) @ quarkus-micrometer-registry-it-jmx ---
+2023-08-04T19:15:19.9382988Z [INFO] Building jar: /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-jmx/target/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT-sources.jar
+2023-08-04T19:15:19.9508167Z [INFO] 
+2023-08-04T19:15:19.9509592Z [INFO] --- quarkus-maven-plugin:1.13.7.Final:build (default) @ quarkus-micrometer-registry-it-jmx ---
+2023-08-04T19:15:22.2652261Z [INFO] [org.jboss.threads] JBoss Threads version 3.2.0.Final
+2023-08-04T19:15:24.3468732Z [INFO] [io.quarkus.deployment.QuarkusAugmentor] Quarkus augmentation completed in 2688ms
+2023-08-04T19:15:24.3538613Z [INFO] 
+2023-08-04T19:15:24.3539599Z [INFO] --- maven-install-plugin:2.4:install (default-install) @ quarkus-micrometer-registry-it-jmx ---
+2023-08-04T19:15:24.3566614Z [INFO] Installing /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-jmx/target/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT.jar to /home/runner/.m2/repository/io/quarkiverse/micrometer/registry/quarkus-micrometer-registry-it-jmx/199-SNAPSHOT/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT.jar
+2023-08-04T19:15:24.3574074Z [INFO] Installing /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-jmx/pom.xml to /home/runner/.m2/repository/io/quarkiverse/micrometer/registry/quarkus-micrometer-registry-it-jmx/199-SNAPSHOT/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT.pom
+2023-08-04T19:15:24.3589627Z [INFO] Installing /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-jmx/target/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT-sources.jar to /home/runner/.m2/repository/io/quarkiverse/micrometer/registry/quarkus-micrometer-registry-it-jmx/199-SNAPSHOT/quarkus-micrometer-registry-it-jmx-199-SNAPSHOT-sources.jar
+2023-08-04T19:15:24.3609881Z [INFO] 
+2023-08-04T19:15:24.3611987Z [INFO] --< io.quarkiverse.micrometer.registry:quarkus-micrometer-registry-it-native >--
+2023-08-04T19:15:24.3614034Z [INFO] Building Quarkus Micrometer Registry - Integration Test - Native 199-SNAPSHOT [26/26]
+2023-08-04T19:15:24.3616168Z [INFO]   from integration-tests/micrometer-native/pom.xml
+2023-08-04T19:15:24.3618364Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-08-04T19:15:24.3983094Z [INFO] 
+2023-08-04T19:15:24.3983982Z [INFO] --- formatter-maven-plugin:2.23.0:validate (default-cli) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4303856Z [INFO] Processed 3 files in 30ms (Formatted: 0, Skipped: 0, Unchanged: 3, Failed: 0, Readonly: 0)
+2023-08-04T19:15:24.4393444Z [INFO] 
+2023-08-04T19:15:24.4394293Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce-java-version) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4413299Z [INFO] Rule 0: org.apache.maven.enforcer.rules.BannedRepositories passed
+2023-08-04T19:15:24.4415644Z [INFO] 
+2023-08-04T19:15:24.4416296Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce-maven-version) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4425435Z [INFO] 
+2023-08-04T19:15:24.4426532Z [INFO] --- buildnumber-maven-plugin:3.2.0:create (get-scm-revision) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4432822Z [INFO] 
+2023-08-04T19:15:24.4433766Z [INFO] --- formatter-maven-plugin:2.23.0:format (format-sources) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4726417Z [INFO] Processed 3 files in 28ms (Formatted: 0, Skipped: 0, Unchanged: 3, Failed: 0, Readonly: 0)
+2023-08-04T19:15:24.4727181Z [INFO] 
+2023-08-04T19:15:24.4728256Z [INFO] --- impsort-maven-plugin:1.9.0:sort (sort-imports) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4869603Z [INFO] Processed 3 files in 00:00.013 (Already Sorted: 3, Needed Sorting: 0)
+2023-08-04T19:15:24.4870665Z [INFO] 
+2023-08-04T19:15:24.4871742Z [INFO] --- maven-resources-plugin:3.3.1:resources (default-resources) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4884015Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2023-08-04T19:15:24.4926050Z [INFO] 
+2023-08-04T19:15:24.4927037Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.4957547Z [INFO] Changes detected - recompiling the module! :dependency
+2023-08-04T19:15:24.4958570Z [INFO] Compiling 1 source file with javac [debug deprecation release 11] to target/classes
+2023-08-04T19:15:24.9404768Z [WARNING] /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-native/src/main/java/io/quarkiverse/it/micrometer/native_mode/MessageResource.java:[27,30] unchecked conversion
+2023-08-04T19:15:24.9405906Z   required: java.util.List<java.lang.String>
+2023-08-04T19:15:24.9406674Z   found:    java.util.ArrayList
+2023-08-04T19:15:24.9442336Z [INFO] 
+2023-08-04T19:15:24.9443396Z [INFO] --- maven-resources-plugin:3.3.1:testResources (default-testResources) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.9459925Z [INFO] skip non existing resourceDirectory /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-native/src/test/resources
+2023-08-04T19:15:24.9460741Z [INFO] 
+2023-08-04T19:15:24.9461598Z [INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:24.9505795Z [INFO] Changes detected - recompiling the module! :dependency
+2023-08-04T19:15:24.9507083Z [INFO] Compiling 2 source files with javac [debug deprecation release 11] to target/test-classes
+2023-08-04T19:15:25.4276914Z [INFO] 
+2023-08-04T19:15:25.4281036Z [INFO] --- maven-surefire-plugin:3.1.2:test (default-test) @ quarkus-micrometer-registry-it-native ---
+2023-08-04T19:15:25.4339853Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+2023-08-04T19:15:25.4410765Z [INFO] 
+2023-08-04T19:15:25.4415046Z [INFO] -------------------------------------------------------
+2023-08-04T19:15:25.4418472Z [INFO]  T E S T S
+2023-08-04T19:15:25.4421619Z [INFO] -------------------------------------------------------
+2023-08-04T19:15:26.4811263Z [INFO] Running io.quarkiverse.it.micrometer.native_mode.NativeMeterRegistriesTest
+2023-08-04T19:15:34.1170755Z 2023-08-04 19:15:34,021 INFO  [io.mic.dat.DatadogMeterRegistry] (main) An application key must be configured in order for unit information to be sent to Datadog.
+2023-08-04T19:15:34.1175305Z 2023-08-04 19:15:34,024 INFO  [io.mic.cor.ins.pus.PushMeterRegistry] (main) publishing metrics for DatadogMeterRegistry every 1m
+2023-08-04T19:15:34.2169252Z 2023-08-04 19:15:34,203 INFO  [io.mic.cor.ins.pus.PushMeterRegistry] (main) publishing metrics for NewRelicMeterRegistry every 1m
+2023-08-04T19:15:34.3782633Z [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.870 s <<< FAILURE! -- in io.quarkiverse.it.micrometer.native_mode.NativeMeterRegistriesTest
+2023-08-04T19:15:34.3786936Z [ERROR] io.quarkiverse.it.micrometer.native_mode.NativeMeterRegistriesTest.testRegistryInjection -- Time elapsed: 0.012 s <<< ERROR!
+2023-08-04T19:15:34.3787865Z java.lang.RuntimeException: java.lang.RuntimeException: Failed to start quarkus
+2023-08-04T19:15:34.3788967Z 	at io.quarkus.test.junit.QuarkusTestExtension.throwBootFailureException(QuarkusTestExtension.java:674)
+2023-08-04T19:15:34.3789985Z 	at io.quarkus.test.junit.QuarkusTestExtension.interceptTestClassConstructor(QuarkusTestExtension.java:747)
+2023-08-04T19:15:34.3791136Z 	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+2023-08-04T19:15:34.3792133Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+2023-08-04T19:15:34.3793439Z 	at org.junit.jupiter.api.extension.InvocationInterceptor.interceptTestClassConstructor(InvocationInterceptor.java:72)
+2023-08-04T19:15:34.3794436Z 	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+2023-08-04T19:15:34.3795608Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+2023-08-04T19:15:34.3796624Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+2023-08-04T19:15:34.3797885Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+2023-08-04T19:15:34.3798898Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+2023-08-04T19:15:34.3800293Z 	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+2023-08-04T19:15:34.3801219Z 	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:77)
+2023-08-04T19:15:34.3802492Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:342)
+2023-08-04T19:15:34.3803608Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:289)
+2023-08-04T19:15:34.3805193Z 	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+2023-08-04T19:15:34.3806353Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:267)
+2023-08-04T19:15:34.3807730Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259)
+2023-08-04T19:15:34.3808577Z 	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+2023-08-04T19:15:34.3809649Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258)
+2023-08-04T19:15:34.3810672Z 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+2023-08-04T19:15:34.3811868Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101)
+2023-08-04T19:15:34.3812847Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3814042Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100)
+2023-08-04T19:15:34.3815001Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65)
+2023-08-04T19:15:34.3816801Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111)
+2023-08-04T19:15:34.3817527Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3818249Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111)
+2023-08-04T19:15:34.3819153Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79)
+2023-08-04T19:15:34.3819696Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+2023-08-04T19:15:34.3820479Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+2023-08-04T19:15:34.3821425Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+2023-08-04T19:15:34.3822170Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3822929Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+2023-08-04T19:15:34.3823567Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-08-04T19:15:34.3824230Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+2023-08-04T19:15:34.3824971Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3825721Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+2023-08-04T19:15:34.3826445Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+2023-08-04T19:15:34.3827047Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+2023-08-04T19:15:34.3827849Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+2023-08-04T19:15:34.3828931Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+2023-08-04T19:15:34.3829691Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3830446Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+2023-08-04T19:15:34.3831092Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-08-04T19:15:34.3831730Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+2023-08-04T19:15:34.3832469Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3833231Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+2023-08-04T19:15:34.3833958Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+2023-08-04T19:15:34.3834847Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+2023-08-04T19:15:34.3835842Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+2023-08-04T19:15:34.3836670Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+2023-08-04T19:15:34.3837460Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+2023-08-04T19:15:34.3838203Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+2023-08-04T19:15:34.3838976Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+2023-08-04T19:15:34.3839820Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+2023-08-04T19:15:34.3840655Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+2023-08-04T19:15:34.3841457Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+2023-08-04T19:15:34.3842056Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+2023-08-04T19:15:34.3842661Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+2023-08-04T19:15:34.3843330Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+2023-08-04T19:15:34.3844283Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+2023-08-04T19:15:34.3845064Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+2023-08-04T19:15:34.3845770Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+2023-08-04T19:15:34.3846362Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+2023-08-04T19:15:34.3846909Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+2023-08-04T19:15:34.3847451Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2023-08-04T19:15:34.3847911Z Caused by: java.lang.RuntimeException: Failed to start quarkus
+2023-08-04T19:15:34.3848367Z 	at io.quarkus.runner.ApplicationImpl.doStart(ApplicationImpl.zig:686)
+2023-08-04T19:15:34.3848838Z 	at io.quarkus.runtime.Application.start(Application.java:90)
+2023-08-04T19:15:34.3849342Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2023-08-04T19:15:34.3849939Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2023-08-04T19:15:34.3850619Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-08-04T19:15:34.3851335Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-08-04T19:15:34.3851850Z 	at io.quarkus.runner.bootstrap.StartupActionImpl.run(StartupActionImpl.java:212)
+2023-08-04T19:15:34.3852428Z 	at io.quarkus.test.junit.QuarkusTestExtension.doJavaStart(QuarkusTestExtension.java:331)
+2023-08-04T19:15:34.3853044Z 	at io.quarkus.test.junit.QuarkusTestExtension.ensureStarted(QuarkusTestExtension.java:643)
+2023-08-04T19:15:34.3853648Z 	at io.quarkus.test.junit.QuarkusTestExtension.beforeAll(QuarkusTestExtension.java:689)
+2023-08-04T19:15:34.3857844Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeBeforeAllCallbacks$8(ClassBasedTestDescriptor.java:368)
+2023-08-04T19:15:34.3858641Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-08-04T19:15:34.3859482Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeBeforeAllCallbacks(ClassBasedTestDescriptor.java:368)
+2023-08-04T19:15:34.3860322Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:192)
+2023-08-04T19:15:34.3861064Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:78)
+2023-08-04T19:15:34.3861795Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:136)
+2023-08-04T19:15:34.3862268Z 	... 35 more
+2023-08-04T19:15:34.3863644Z Caused by: java.lang.IllegalAccessError: class com.google.api.MetricDescriptor tried to access method 'com.google.protobuf.LazyStringArrayList com.google.protobuf.LazyStringArrayList.emptyList()' (com.google.api.MetricDescriptor and com.google.protobuf.LazyStringArrayList are in unnamed module of loader io.quarkus.bootstrap.classloading.QuarkusClassLoader @1d971dda)
+2023-08-04T19:15:34.3864694Z 	at com.google.api.MetricDescriptor.<init>(MetricDescriptor.java:2572)
+2023-08-04T19:15:34.3865154Z 	at com.google.api.MetricDescriptor.<clinit>(MetricDescriptor.java:5520)
+2023-08-04T19:15:34.3865728Z 	at com.google.cloud.monitoring.v3.stub.GrpcMetricServiceStub.<clinit>(GrpcMetricServiceStub.java:108)
+2023-08-04T19:15:34.3866447Z 	at com.google.cloud.monitoring.v3.stub.MetricServiceStubSettings.createStub(MetricServiceStubSettings.java:192)
+2023-08-04T19:15:34.3867447Z 	at com.google.cloud.monitoring.v3.MetricServiceClient.<init>(MetricServiceClient.java:157)
+2023-08-04T19:15:34.3868035Z 	at com.google.cloud.monitoring.v3.MetricServiceClient.create(MetricServiceClient.java:138)
+2023-08-04T19:15:34.3868674Z 	at io.micrometer.stackdriver.StackdriverMeterRegistry.start(StackdriverMeterRegistry.java:119)
+2023-08-04T19:15:34.3869319Z 	at io.micrometer.stackdriver.StackdriverMeterRegistry.<init>(StackdriverMeterRegistry.java:105)
+2023-08-04T19:15:34.3869928Z 	at io.micrometer.stackdriver.StackdriverMeterRegistry.<init>(StackdriverMeterRegistry.java:65)
+2023-08-04T19:15:34.3870573Z 	at io.micrometer.stackdriver.StackdriverMeterRegistry$Builder.build(StackdriverMeterRegistry.java:279)
+2023-08-04T19:15:34.3871401Z 	at io.quarkiverse.micrometer.registry.stackdriver.StackdriverMeterRegistryProvider.registry(StackdriverMeterRegistryProvider.java:58)
+2023-08-04T19:15:34.3872565Z 	at io.quarkiverse.micrometer.registry.stackdriver.StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.create(StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.zig:223)
+2023-08-04T19:15:34.3873863Z 	at io.quarkiverse.micrometer.registry.stackdriver.StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.create(StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.zig:238)
+2023-08-04T19:15:34.3874831Z 	at io.quarkus.arc.impl.AbstractSharedContext.createInstanceHandle(AbstractSharedContext.java:96)
+2023-08-04T19:15:34.3875459Z 	at io.quarkus.arc.impl.AbstractSharedContext.access$000(AbstractSharedContext.java:14)
+2023-08-04T19:15:34.3876152Z 	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:29)
+2023-08-04T19:15:34.3876710Z 	at io.quarkus.arc.impl.AbstractSharedContext$1.get(AbstractSharedContext.java:26)
+2023-08-04T19:15:34.3877174Z 	at io.quarkus.arc.impl.LazyValue.get(LazyValue.java:26)
+2023-08-04T19:15:34.3877657Z 	at io.quarkus.arc.impl.ComputingCache.computeIfAbsent(ComputingCache.java:69)
+2023-08-04T19:15:34.3878204Z 	at io.quarkus.arc.impl.AbstractSharedContext.get(AbstractSharedContext.java:26)
+2023-08-04T19:15:34.3885292Z 	at io.quarkiverse.micrometer.registry.stackdriver.StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.get(StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.zig:270)
+2023-08-04T19:15:34.3886938Z 	at io.quarkiverse.micrometer.registry.stackdriver.StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.get(StackdriverMeterRegistryProvider_ProducerMethod_registry_e8b4c36ef3b19cbaad16963e8c4cd7e863030314_Bean.zig:286)
+2023-08-04T19:15:34.3887896Z 	at io.quarkus.arc.impl.ArcContainerImpl.beanInstanceHandle(ArcContainerImpl.java:430)
+2023-08-04T19:15:34.3888509Z 	at io.quarkus.arc.impl.ArcContainerImpl.beanInstanceHandle(ArcContainerImpl.java:443)
+2023-08-04T19:15:34.3889083Z 	at io.quarkus.arc.impl.BeanManagerImpl.getReference(BeanManagerImpl.java:59)
+2023-08-04T19:15:34.3889700Z 	at io.quarkus.micrometer.runtime.MicrometerRecorder.configureRegistries(MicrometerRecorder.java:95)
+2023-08-04T19:15:34.3890694Z 	at io.quarkus.deployment.steps.MicrometerProcessor$configureRegistry-2125003310.deploy_0(MicrometerProcessor$configureRegistry-2125003310.zig:229)
+2023-08-04T19:15:34.3891644Z 	at io.quarkus.deployment.steps.MicrometerProcessor$configureRegistry-2125003310.deploy(MicrometerProcessor$configureRegistry-2125003310.zig:40)
+2023-08-04T19:15:34.3892282Z 	at io.quarkus.runner.ApplicationImpl.doStart(ApplicationImpl.zig:576)
+2023-08-04T19:15:34.3892629Z 	... 50 more
+2023-08-04T19:15:34.3892773Z 
+2023-08-04T19:15:34.4029412Z [INFO] 
+2023-08-04T19:15:34.4029982Z [INFO] Results:
+2023-08-04T19:15:34.4031938Z [INFO] 
+2023-08-04T19:15:34.4034281Z [ERROR] Errors: 
+2023-08-04T19:15:34.4158323Z [ERROR]   NativeMeterRegistriesTest.testRegistryInjection » Runtime java.lang.RuntimeException: Failed to start quarkus
+2023-08-04T19:15:34.4159168Z [INFO] 
+2023-08-04T19:15:34.4159480Z [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
+2023-08-04T19:15:34.4160195Z [INFO] 
+2023-08-04T19:15:34.4160803Z [INFO] ------------------------------------------------------------------------
+2023-08-04T19:15:34.4161506Z [INFO] Reactor Summary for Quarkus Micrometer Registry - Parent 199-SNAPSHOT:
+2023-08-04T19:15:34.4161923Z [INFO] 
+2023-08-04T19:15:34.4162996Z [INFO] Quarkus Micrometer Registry - Parent ............... SUCCESS [ 11.638 s]
+2023-08-04T19:15:34.4163920Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Parent SUCCESS [  0.037 s]
+2023-08-04T19:15:34.4164653Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Runtime SUCCESS [ 20.532 s]
+2023-08-04T19:15:34.4165311Z [INFO] Quarkus Micrometer Registry - Azure Monitor - Deployment SUCCESS [ 19.363 s]
+2023-08-04T19:15:34.4165979Z [INFO] Quarkus Micrometer Registry - Datadog - Parent ..... SUCCESS [  0.045 s]
+2023-08-04T19:15:34.4166601Z [INFO] Quarkus Micrometer Registry - Datadog - Runtime .... SUCCESS [  1.150 s]
+2023-08-04T19:15:34.4167211Z [INFO] Quarkus Micrometer Registry - Datadog - Deployment . SUCCESS [  7.703 s]
+2023-08-04T19:15:34.4167799Z [INFO] Quarkus Micrometer Registry - JMX - Parent ......... SUCCESS [  0.035 s]
+2023-08-04T19:15:34.4168404Z [INFO] Quarkus Micrometer Registry - JMX - Runtime ........ SUCCESS [  1.149 s]
+2023-08-04T19:15:34.4169003Z [INFO] Quarkus Micrometer Registry - JMX - Deployment ..... SUCCESS [  6.825 s]
+2023-08-04T19:15:34.4169605Z [INFO] Quarkus Micrometer Registry - New Relic - Parent ... SUCCESS [  0.044 s]
+2023-08-04T19:15:34.4170545Z [INFO] Quarkus Micrometer Registry - New Relic - Runtime .. SUCCESS [  1.176 s]
+2023-08-04T19:15:34.4171252Z [INFO] Quarkus Micrometer Registry - New Relic - Deployment SUCCESS [  7.870 s]
+2023-08-04T19:15:34.4171896Z [INFO] Quarkus Micrometer Registry - SignalFX - Parent .... SUCCESS [  0.010 s]
+2023-08-04T19:15:34.4172507Z [INFO] Quarkus Micrometer Registry - SignalFX - Runtime ... SUCCESS [  1.444 s]
+2023-08-04T19:15:34.4173102Z [INFO] Quarkus Micrometer Registry - SignalFX - Deployment  SUCCESS [ 10.175 s]
+2023-08-04T19:15:34.4173838Z [INFO] Quarkus Micrometer Registry - Stackdriver - Parent . SUCCESS [  0.030 s]
+2023-08-04T19:15:34.4174485Z [INFO] Quarkus Micrometer Registry - Stackdriver - Runtime  SUCCESS [ 20.938 s]
+2023-08-04T19:15:34.4175122Z [INFO] Quarkus Micrometer Registry - Stackdriver - Deployment SUCCESS [  8.521 s]
+2023-08-04T19:15:34.4175752Z [INFO] Quarkus Micrometer Registry - StatsD - Parent ...... SUCCESS [  0.015 s]
+2023-08-04T19:15:34.4176357Z [INFO] Quarkus Micrometer Registry - StatsD - Runtime ..... SUCCESS [  1.186 s]
+2023-08-04T19:15:34.4176965Z [INFO] Quarkus Micrometer Registry - StatsD - Deployment .. SUCCESS [  6.977 s]
+2023-08-04T19:15:34.4177572Z [INFO] Quarkus Micrometer Registry - Documentation ........ SUCCESS [ 13.234 s]
+2023-08-04T19:15:34.4178213Z [INFO] Quarkus Micrometer Registry - Integration Test - Parent SUCCESS [  1.809 s]
+2023-08-04T19:15:34.4178846Z [INFO] Quarkus Micrometer Registry - Integration Test - JMX SUCCESS [ 22.719 s]
+2023-08-04T19:15:34.4179474Z [INFO] Quarkus Micrometer Registry - Integration Test - Native FAILURE [ 10.044 s]
+2023-08-04T19:15:34.4180102Z [INFO] ------------------------------------------------------------------------
+2023-08-04T19:15:34.4180534Z [INFO] BUILD FAILURE
+2023-08-04T19:15:34.4181549Z [INFO] ------------------------------------------------------------------------
+2023-08-04T19:15:34.4182555Z [INFO] Total time:  02:58 min
+2023-08-04T19:15:34.4183062Z [INFO] Finished at: 2023-08-04T19:15:34Z
+2023-08-04T19:15:34.4183714Z [INFO] ------------------------------------------------------------------------
+2023-08-04T19:15:34.4184594Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project quarkus-micrometer-registry-it-native: 
+2023-08-04T19:15:34.4185510Z [ERROR] 
+2023-08-04T19:15:34.4202725Z [ERROR] Please refer to /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry/integration-tests/micrometer-native/target/surefire-reports for the individual test results.
+2023-08-04T19:15:34.4205412Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-08-04T19:15:34.4207019Z [ERROR] -> [Help 1]
+2023-08-04T19:15:34.4207592Z [ERROR] 
+2023-08-04T19:15:34.4208923Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-08-04T19:15:34.4209584Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-04T19:15:34.4209989Z [ERROR] 
+2023-08-04T19:15:34.4210974Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-04T19:15:34.4211615Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-04T19:15:34.4212071Z [ERROR] 
+2023-08-04T19:15:34.4212916Z [ERROR] After correcting the problems, you can resume the build with the command
+2023-08-04T19:15:34.4213611Z [ERROR]   mvn <args> -rf :quarkus-micrometer-registry-it-native
+2023-08-04T19:15:34.4731471Z ##[error]Process completed with exit code 1.
+2023-08-04T19:15:34.4831296Z Post job cleanup.
+2023-08-04T19:15:34.5574037Z Post job cleanup.
+2023-08-04T19:15:34.7149210Z [command]/usr/bin/git version
+2023-08-04T19:15:34.7205431Z git version 2.41.0
+2023-08-04T19:15:34.7303985Z Temporarily overriding HOME='/home/runner/work/_temp/4f51039f-6bcc-47bf-b280-32f5210d1a14' before making global git config changes
+2023-08-04T19:15:34.7304562Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-04T19:15:34.7305306Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/quarkus-micrometer-registry/quarkus-micrometer-registry
+2023-08-04T19:15:34.7324402Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-04T19:15:34.7378057Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-04T19:15:34.7637821Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-04T19:15:34.7667094Z http.https://github.com/.extraheader
+2023-08-04T19:15:34.7679950Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-04T19:15:34.7722201Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-04T19:15:34.8342550Z Cleaning up orphan processes
+
+2023-08-04T19:12:15.9272699Z ##[section]Starting: Prepare job build
+2023-08-04T19:12:15.9275193Z Evaluating strategy
+2023-08-04T19:12:15.9280076Z Creating job '__default'
+2023-08-04T19:12:15.9282633Z Evaluating timeout
+2023-08-04T19:12:15.9282668Z Evaluating cancel timeout
+2023-08-04T19:12:15.9282708Z Evaluating continue on error
+2023-08-04T19:12:15.9282733Z Evaluating target
+2023-08-04T19:12:15.9284781Z ##[section]Finishing: Prepare job build
+
+2023-08-04T19:12:26.4722914Z ##[group]Run actions/setup-java@v1
+2023-08-04T19:12:26.4723301Z with:
+2023-08-04T19:12:26.4723514Z   java-version: 11
+2023-08-04T19:12:26.4724000Z   java-package: jdk
+2023-08-04T19:12:26.4724259Z   architecture: x64
+2023-08-04T19:12:26.4724485Z   server-id: github
+2023-08-04T19:12:26.4724865Z   server-username: GITHUB_ACTOR
+2023-08-04T19:12:26.4725174Z   server-password: GITHUB_TOKEN
+2023-08-04T19:12:26.4725429Z ##[endgroup]
+2023-08-04T19:12:28.5288723Z [command]/usr/bin/tar --version
+2023-08-04T19:12:28.5365972Z tar (GNU tar) 1.34
+2023-08-04T19:12:28.5366602Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-08-04T19:12:28.5367250Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-08-04T19:12:28.5367876Z This is free software: you are free to change and redistribute it.
+2023-08-04T19:12:28.5368346Z There is NO WARRANTY, to the extent permitted by law.
+2023-08-04T19:12:28.5368637Z 
+2023-08-04T19:12:28.5368863Z Written by John Gilmore and Jay Fenlason.
+2023-08-04T19:12:28.5403765Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/temp_1781025946 -f /home/runner/work/_temp/2bcffc80-ca94-46b3-af1f-d2afe077a563
+2023-08-04T19:12:33.4877164Z creating settings.xml with server-id: github; environment variables: username=$GITHUB_ACTOR, *** and gpg-passphrase=null
+2023-08-04T19:12:33.4987502Z writing /home/runner/.m2/settings.xml

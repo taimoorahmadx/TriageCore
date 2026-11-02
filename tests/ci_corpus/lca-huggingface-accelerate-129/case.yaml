@@ -1,0 +1,58 @@
+repo: huggingface/accelerate
+run_id: '129'
+head_sha: 028ad1efee2c41691d78e5a4de90ebd6f8236cad
+run_attempts: []
+commits:
+- sha: 028ad1efee2c41691d78e5a4de90ebd6f8236cad
+  author: AjayP13
+  files:
+  - src/accelerate/utils/__init__.py
+  - src/accelerate/utils/fsdp_utils.py
+  - src/accelerate/utils/modeling.py
+- sha: bc1bcebbac61b294a21942da7541993b08431d41
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+- sha: c9991372b81edabb86965638db110ab930f8e165
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+- sha: 43c346940be63a9be9c101d6c02957fa014e9062
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+- sha: d47833e6a19f0f123d9d0e4549f4a93f89913977
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+  - src/accelerate/utils/imports.py
+- sha: 8fcffc3f4e92b72f74a448dab2d72737ddddb2f3
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+- sha: 2b77fc20db5fd3d6f635d1a5ad1e785204b8af51
+  author: AjayP13
+  files:
+  - src/accelerate/utils/fsdp_utils.py
+  - src/accelerate/utils/imports.py
+- sha: 3969731ce827b088fcc56ea790935cdece12f800
+  author: pacman100
+  files:
+  - src/accelerate/accelerator.py
+  - src/accelerate/test_utils/scripts/external_deps/test_performance.py
+  - tests/deepspeed/test_deepspeed.py
+- sha: 411aa58a77e0614e8e148a0dc5ba7c8737025ea6
+  author: pacman100
+  files:
+  - src/accelerate/accelerator.py
+  - src/accelerate/utils/dataclasses.py
+  - tests/deepspeed/test_deepspeed.py
+- sha: 4420ec641d0b827f227d638c8d086700f330769d
+  author: stas00
+  files:
+  - src/accelerate/accelerator.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

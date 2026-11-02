@@ -1,0 +1,64 @@
+repo: googleapis/java-pubsub-group-kafka-connector
+run_id: 78252d13ff355a0205fff6fb7c19791412bc6478
+head_sha: 78252d13ff355a0205fff6fb7c19791412bc6478
+run_attempts: []
+commits:
+- sha: 78252d13ff355a0205fff6fb7c19791412bc6478
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 0882294f8a6100fe81b73a714357477c12172f87
+  author: release-please[bot]
+  files:
+  - CHANGELOG.md
+  - pom.xml
+  - versions.txt
+- sha: ad1e72b7a09d6034c5ec0009131f39aaef236a50
+  author: kamalaboulhosn
+  files:
+  - README.md
+  - src/main/java/com/google/pubsub/kafka/sink/CloudPubSubSinkConnector.java
+  - src/main/java/com/google/pubsub/kafka/sink/CloudPubSubSinkTask.java
+- sha: b7eea5773e38ff39b413f3d7601fb7848806cedf
+  author: release-please[bot]
+  files:
+  - pom.xml
+  - versions.txt
+- sha: 4b97d9e6114772ebf01cddd03f4075f31db2082c
+  author: release-please[bot]
+  files:
+  - CHANGELOG.md
+  - pom.xml
+  - versions.txt
+- sha: 7290786e82db354f1d310c599f84150a7ec0ef8b
+  author: dpcollins-google
+  files:
+  - src/main/java/com/google/pubsub/kafka/common/ConnectorCredentialsProvider.java
+  - src/main/java/com/google/pubsub/kafka/sink/CloudPubSubSinkConnector.java
+  - src/main/java/com/google/pubsub/kafka/sink/CloudPubSubSinkTask.java
+  - src/main/java/com/google/pubsub/kafka/source/CloudPubSubSourceConnector.java
+  - src/main/java/com/google/pubsub/kafka/source/CloudPubSubSourceTask.java
+  - src/main/java/com/google/pubsublite/kafka/sink/ConfigDefs.java
+  - src/main/java/com/google/pubsublite/kafka/sink/PublisherFactoryImpl.java
+  - src/main/java/com/google/pubsublite/kafka/source/ConfigDefs.java
+- sha: c9c3beb70e8fa504a37216f18fe500e43b75936b
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 888d3d95ea01ae1535e6aba47fa71c6cb0f0e7e1
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 435cd98e3ae81f3d698e174782ac81199bdf756f
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 1e1c33666ee1e0ef3fd45684054dcf25216004f8
+  author: renovate-bot
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

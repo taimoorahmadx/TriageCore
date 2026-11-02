@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40274782291
 head_sha: 01c9a110658d4a8f48229cee90cc9fc23cdf0734
 run_attempts:
@@ -82,7 +83,7 @@ commits:
   - test/parallel/test-tls-set-ciphers-error.js
   - test/parallel/test-tls-set-ciphers.js
   - test/parallel/test-tls13-ciphers.js
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

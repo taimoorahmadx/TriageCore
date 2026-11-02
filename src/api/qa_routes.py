@@ -84,6 +84,7 @@ def scenarios() -> list[dict[str, Any]]:
             "title": s.title,
             "description": s.description,
             "page": s.page,
+            "source": "Modern TodoMVC" if s.page.startswith("apps/modern-todomvc/") else "scenario_lab",
             "steps": [
                 {
                     "id": spec.id,

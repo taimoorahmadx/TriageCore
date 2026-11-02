@@ -1,0 +1,30 @@
+===== format (3.8)/5_Running yapf.txt =====
+##[group]Run yapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \
+[36;1myapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/aws/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/gcp/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/azure/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/ibm/**'[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+--- ./sky/resources.py	(original)
++++ ./sky/resources.py	(reformatted)
+@@ -836,8 +836,8 @@
+             image_size = self.cloud.get_image_size(image_id, region)
+             if image_size >= self.disk_size:
+                 with ux_utils.print_exception_no_traceback():
+-                    size_comp = ('larger than' if image_size > self.disk_size
+-                                 else 'equal to')
++                    size_comp = ('larger than'
++                                 if image_size > self.disk_size else 'equal to')
+                     raise ValueError(
+                         f'Image {image_id!r} is {image_size}GB, which is '
+                         f'{size_comp} the specified disk_size: '
+##[error]Process completed with exit code 1.

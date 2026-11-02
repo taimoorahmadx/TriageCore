@@ -1,0 +1,61 @@
+repo: octodns/octodns
+run_id: '162'
+head_sha: 9e1aa7b8edfb723656f41f97bab57f9a653d5e1b
+run_attempts: []
+commits:
+- sha: 9e1aa7b8edfb723656f41f97bab57f9a653d5e1b
+  author: ross
+  files:
+  - octodns/manager.py
+  - tests/test_octodns_manager.py
+- sha: dc4addc837702c559101c921a2e7cd6552b74f17
+  author: AlizeyJalil
+  files:
+  - tests/config/missing-zone-config.yaml
+  - tests/test_octodns_manager.py
+- sha: d9ac836c243fd8eb087143fe4c7f6907b66eeeb9
+  author: AlizeyJalil
+  files:
+  - .DS_Store
+- sha: a2a502987e692353c4123e0e59e1a1b4724e0c68
+  author: AlizeyJalil
+  files:
+  - tests/config/missing-zone-config.yaml
+  - tests/test_octodns_manager.py
+- sha: c816fe7af0af95ef3bef09d2581000b0b784f5a5
+  author: AlizeyJalil
+  files:
+  - .DS_Store
+  - octodns/manager.py
+  - tests/config/missing-zone-config.yaml
+  - tests/test_octodns_manager.py
+- sha: bf247023b21f4a5c38e0f6b2414a892669d4fd25
+  author: ross
+  files:
+  - README.md
+- sha: 861ca6a02c6c83ac341d5514513222658c81b1d3
+  author: Janik-Haag
+  files:
+  - README.md
+- sha: ce84254b3024b94a9811f4d8b01c58ffc4184943
+  author: ross
+  files:
+  - CHANGELOG.md
+  - octodns/processor/meta.py
+  - tests/test_octodns_processor_meta.py
+- sha: d85c925ebf5ec857154e84421b211d8346bdc9b3
+  author: ross
+  files:
+  - octodns/processor/meta.py
+  - tests/test_octodns_processor_meta.py
+- sha: b8dab67d6a700c2933b6a69ec3e1d91806995efa
+  author: ross
+  files:
+  - CHANGELOG.md
+  - octodns/processor/meta.py
+  - tests/test_octodns_processor_meta.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

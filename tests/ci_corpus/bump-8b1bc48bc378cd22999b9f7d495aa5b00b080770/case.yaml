@@ -1,0 +1,60 @@
+repo: jenkinsci/forensics-api-plugin
+run_id: 8b1bc48bc378cd22999b9f7d495aa5b00b080770
+head_sha: 8b1bc48bc378cd22999b9f7d495aa5b00b080770
+run_attempts: []
+commits:
+- sha: 8b1bc48bc378cd22999b9f7d495aa5b00b080770
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 39e0c5004ecd45085737093f7615a59b5565fda9
+  author: uhafner
+  files:
+  - pom.xml
+- sha: 9dc83c405dab54e34264c6f6c7397d89a4ed80a4
+  author: uhafner
+  files:
+  - pom.xml
+- sha: 7c6bec0762bc21446882bac9d46af8d6ac97e097
+  author: uhafner
+  files:
+  - pom.xml
+  - src/main/java/io/jenkins/plugins/forensics/miner/AddedVersusDeletedLinesTrendChart.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/CodeMetricTrendChart.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/FileDetailsView.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/FilesCountTrendChart.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/RelativeCountTrendChart.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/SizePieChart.java
+  - src/test/java/io/jenkins/plugins/forensics/miner/FilesCountTrendChartTest.java
+- sha: 91544f4f889a38aa6951e953cad36b302605161b
+  author: uhafner
+  files:
+  - pom.xml
+- sha: 878bed7a1d2fb9c7d3693b10f581e5eb9eb692e5
+  author: uhafner
+  files:
+  - pom.xml
+- sha: e92c1c346e70915264272db2c8f679cc5e321fd3
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 39e421c83cde50fe4f52df1628aac4cb470c0fa4
+  author: uhafner
+  files:
+  - pom.xml
+- sha: 41b10456ca07ec79a217268a17ddda2114e97ea8
+  author: uhafner
+  files:
+  - pom.xml
+  - src/main/java/io/jenkins/plugins/forensics/miner/FileDetailsView.java
+  - src/main/java/io/jenkins/plugins/forensics/miner/SizePieChart.java
+  - src/test/java/io/jenkins/plugins/forensics/miner/FilesCountTrendChartTest.java
+- sha: 42f3c8e860892128dceec98b9cd907e02e9cd70a
+  author: uhafner
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

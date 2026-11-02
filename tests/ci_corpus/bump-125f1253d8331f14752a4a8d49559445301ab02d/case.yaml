@@ -1,0 +1,50 @@
+repo: leonardehrenfried/jspc-maven-plugin
+run_id: 125f1253d8331f14752a4a8d49559445301ab02d
+head_sha: 125f1253d8331f14752a4a8d49559445301ab02d
+run_attempts: []
+commits:
+- sha: 125f1253d8331f14752a4a8d49559445301ab02d
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 7fdb898e427cbab015229356a89faa7d5a49d0bb
+  author: leonardehrenfried
+  files:
+  - src/it/project_with_maven_dependency_plugin/pom.xml
+- sha: 892c0e161187f7a790e76c9f72dd0549091fcf69
+  author: renovate[bot]
+  files:
+  - src/it/project_with_maven_dependency_plugin/pom.xml
+- sha: 99bde9d3c887fa32a461223e878d2550cfb4d35d
+  author: leonardehrenfried
+  files:
+  - pom.xml
+- sha: 789d0dfb2c0e01fdcc61a5c0f18194ddfa53288b
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 1300a2341cc8213f67674c268dd06cfea27cc3c2
+  author: leonardehrenfried
+  files:
+  - src/it/project_multimodule_with space/moduleB/pom.xml
+- sha: e245b2293ecad27f00ff9cd3faf593ee7024d49f
+  author: leonardehrenfried
+  files:
+  - pom.xml
+- sha: feb6a70ce41f394b9a05336ae67edb4d28eaf87d
+  author: renovate[bot]
+  files:
+  - src/it/project_multimodule_with space/moduleB/pom.xml
+- sha: 9ef58959b65dde73edb24665ba1fe098fd3c81ba
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: e9fefc6ca5c1ce7eea24d8e0303e68b6943c5fca
+  author: leonardehrenfried
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory TEST_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

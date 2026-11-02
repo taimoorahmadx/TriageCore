@@ -1,0 +1,790 @@
+2023-07-11T05:35:07.4439277Z ##[group]Run actions/cache@v3.3.1
+2023-07-11T05:35:07.4439618Z with:
+2023-07-11T05:35:07.4439999Z   path: ~/.m2
+2023-07-11T05:35:07.4440463Z   key: Linux-java-17-m2-699f798b3538592428f5a932bcf0448ed1405164540a4f89bdebfc1c438ca5dd
+2023-07-11T05:35:07.4440866Z   restore-keys: Linux-java-17-m2
+2023-07-11T05:35:07.4441225Z   enableCrossOsArchive: false
+2023-07-11T05:35:07.4441612Z   fail-on-cache-miss: false
+2023-07-11T05:35:07.4441908Z   lookup-only: false
+2023-07-11T05:35:07.4442230Z env:
+2023-07-11T05:35:07.4442586Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-07-11T05:35:07.4442962Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-07-11T05:35:07.4443377Z ##[endgroup]
+2023-07-11T05:35:08.7963173Z Received 46137344 of 99459389 (46.4%), 44.0 MBs/sec
+2023-07-11T05:35:09.7978873Z Received 70099261 of 99459389 (70.5%), 33.4 MBs/sec
+2023-07-11T05:35:10.7986854Z Received 70099261 of 99459389 (70.5%), 22.3 MBs/sec
+2023-07-11T05:35:11.7999995Z Received 70099261 of 99459389 (70.5%), 16.7 MBs/sec
+2023-07-11T05:35:12.8013580Z Received 70099261 of 99459389 (70.5%), 13.4 MBs/sec
+2023-07-11T05:35:13.1640633Z Received 99459389 of 99459389 (100.0%), 17.7 MBs/sec
+2023-07-11T05:35:13.1642108Z Cache Size: ~95 MB (99459389 B)
+2023-07-11T05:35:13.1686442Z [command]/usr/bin/tar -xf /home/runner/work/_temp/b0263c5a-532b-44a4-9b0e-7cbab7b8533f/cache.tzst -P -C /home/runner/work/missinglink/missinglink --use-compress-program unzstd
+2023-07-11T05:35:13.5772993Z Cache restored successfully
+2023-07-11T05:35:13.6084649Z Cache restored from key: Linux-java-17-m2-9a3846eb957b3ee172acef199abf414c1723097b21c7deac572898197bf5560b
+
+2023-07-11T05:35:51.7788926Z Post job cleanup.
+
+2023-07-11T05:35:05.5743317Z ##[group]Run actions/cache@v3.3.1
+2023-07-11T05:35:05.5743584Z with:
+2023-07-11T05:35:05.5743785Z   path: ~/.m2
+2023-07-11T05:35:05.5744153Z   key: Linux-java-11-m2-699f798b3538592428f5a932bcf0448ed1405164540a4f89bdebfc1c438ca5dd
+2023-07-11T05:35:05.5744538Z   restore-keys: Linux-java-11-m2
+2023-07-11T05:35:05.5744879Z   enableCrossOsArchive: false
+2023-07-11T05:35:05.5745127Z   fail-on-cache-miss: false
+2023-07-11T05:35:05.5745368Z   lookup-only: false
+2023-07-11T05:35:05.5745589Z env:
+2023-07-11T05:35:05.5745838Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-07-11T05:35:05.5746193Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-07-11T05:35:05.5746472Z ##[endgroup]
+2023-07-11T05:35:06.9973223Z Received 25165824 of 96357955 (26.1%), 24.0 MBs/sec
+2023-07-11T05:35:07.9965938Z Received 92163651 of 96357955 (95.6%), 44.0 MBs/sec
+2023-07-11T05:35:08.1047742Z Received 96357955 of 96357955 (100.0%), 43.6 MBs/sec
+2023-07-11T05:35:08.1049436Z Cache Size: ~92 MB (96357955 B)
+2023-07-11T05:35:08.1082168Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ac54874f-7b23-4917-b540-a0c56cd39e2d/cache.tzst -P -C /home/runner/work/missinglink/missinglink --use-compress-program unzstd
+2023-07-11T05:35:08.3894898Z Cache restored successfully
+2023-07-11T05:35:09.3091173Z Cache restored from key: Linux-java-11-m2-55ce7164fa624ceb885bb030f59c572e0eab5605f76cdabb4163bb8bd36e1cfd
+
+2023-07-11T05:34:59.4484227Z ##[group]Run actions/setup-java@v3
+2023-07-11T05:34:59.4484754Z with:
+2023-07-11T05:34:59.4485068Z   distribution: zulu
+2023-07-11T05:34:59.4485341Z   java-version: 17
+2023-07-11T05:34:59.4485691Z   java-package: jdk
+2023-07-11T05:34:59.4486024Z   check-latest: false
+2023-07-11T05:34:59.4486332Z   server-id: github
+2023-07-11T05:34:59.4486664Z   server-username: GITHUB_ACTOR
+2023-07-11T05:34:59.4487033Z   server-password: GITHUB_TOKEN
+2023-07-11T05:34:59.4487494Z   overwrite-settings: true
+2023-07-11T05:34:59.4487773Z   job-status: success
+2023-07-11T05:34:59.4488257Z   token: ***
+2023-07-11T05:34:59.4488560Z ##[endgroup]
+2023-07-11T05:34:59.7633696Z ##[group]Installed distributions
+2023-07-11T05:34:59.7746184Z Trying to resolve the latest version from remote
+2023-07-11T05:34:59.8458206Z Resolved latest version as 17.0.7+7
+2023-07-11T05:34:59.8467086Z Trying to download...
+2023-07-11T05:34:59.8473841Z Downloading Java 17.0.7+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.42.21-ca-crac-jdk17.0.7-linux_x64.tar.gz ...
+2023-07-11T05:35:01.4246082Z Extracting Java archive...
+2023-07-11T05:35:01.4537137Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/44b5ffcb-56a8-46cc-b956-102fe59b934a -f /home/runner/work/_temp/00287746-7c75-41b1-ac0a-43cc2d124848
+2023-07-11T05:35:06.7999442Z Java 17.0.7+7 was downloaded
+2023-07-11T05:35:06.8000644Z Setting Java 17.0.7+7 as the default
+2023-07-11T05:35:06.8027286Z Creating toolchains.xml for JDK version 17 from zulu
+2023-07-11T05:35:06.8166992Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-11T05:35:06.8167804Z 
+2023-07-11T05:35:06.8168630Z Java configuration:
+2023-07-11T05:35:06.8169812Z   Distribution: zulu
+2023-07-11T05:35:06.8170410Z   Version: 17.0.7+7
+2023-07-11T05:35:06.8171385Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-07-11T05:35:06.8172008Z 
+2023-07-11T05:35:06.8173484Z ##[endgroup]
+2023-07-11T05:35:06.8209132Z Creating settings.xml with server-id: github
+2023-07-11T05:35:06.8242275Z Writing to /home/runner/.m2/settings.xml
+
+2023-07-11T05:35:09.3544585Z ##[group]Run mvn --batch-mode --update-snapshots fmt:check verify
+2023-07-11T05:35:09.3545159Z [36;1mmvn --batch-mode --update-snapshots fmt:check verify[0m
+2023-07-11T05:35:09.3606213Z shell: /usr/bin/bash -e {0}
+2023-07-11T05:35:09.3606503Z env:
+2023-07-11T05:35:09.3606783Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-07-11T05:35:09.3607150Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-07-11T05:35:09.3607444Z ##[endgroup]
+2023-07-11T05:35:12.3541697Z [INFO] Scanning for projects...
+2023-07-11T05:35:12.5108640Z [INFO] ------------------------------------------------------------------------
+2023-07-11T05:35:12.5109103Z [INFO] Reactor Build Order:
+2023-07-11T05:35:12.5109525Z [INFO] 
+2023-07-11T05:35:12.5119293Z [INFO] missinglink                                                        [pom]
+2023-07-11T05:35:12.5150883Z [INFO] missinglink-core                                                   [jar]
+2023-07-11T05:35:12.5151626Z [INFO] missinglink-benchmarks                                             [jar]
+2023-07-11T05:35:12.5152440Z [INFO] missinglink-maven-plugin                                  [maven-plugin]
+2023-07-11T05:35:12.6065873Z [INFO] 
+2023-07-11T05:35:12.6070026Z [INFO] -------------------< com.spotify:missinglink-parent >-------------------
+2023-07-11T05:35:12.6073450Z [INFO] Building missinglink 0.2.10-SNAPSHOT                               [1/4]
+2023-07-11T05:35:12.6077542Z [INFO]   from pom.xml
+2023-07-11T05:35:12.6081022Z [INFO] --------------------------------[ pom ]---------------------------------
+2023-07-11T05:35:12.6332079Z [INFO] 
+2023-07-11T05:35:12.6482039Z [INFO] --- fmt-maven-plugin:2.9.1:check (default-cli) @ missinglink-parent ---
+2023-07-11T05:35:12.7903646Z [INFO] Skipping format check: project uses 'pom' packaging
+2023-07-11T05:35:12.7914095Z [INFO] 
+2023-07-11T05:35:12.7917699Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ missinglink-parent ---
+2023-07-11T05:35:12.9014240Z [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+2023-07-11T05:35:12.9078520Z [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+2023-07-11T05:35:12.9083581Z [INFO] 
+2023-07-11T05:35:12.9087123Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce-maven) @ missinglink-parent ---
+2023-07-11T05:35:12.9104418Z [INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+2023-07-11T05:35:12.9108635Z [INFO] 
+2023-07-11T05:35:12.9112073Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ missinglink-parent ---
+2023-07-11T05:35:13.0634002Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/missinglink/missinglink/target/jacoco.exec
+2023-07-11T05:35:13.0634997Z [INFO] 
+2023-07-11T05:35:13.0636783Z [INFO] --- license-maven-plugin:1.20:check-file-header (check-file-header) @ missinglink-parent ---
+2023-07-11T05:35:13.7346235Z [WARNING] No file to scan.
+2023-07-11T05:35:13.7349803Z [INFO] 
+2023-07-11T05:35:13.7354156Z [INFO] 
+2023-07-11T05:35:13.7357763Z [INFO] --- fmt-maven-plugin:2.9.1:format (default) @ missinglink-parent ---
+2023-07-11T05:35:13.7374383Z [INFO] Skipping format check: project uses 'pom' packaging
+2023-07-11T05:35:13.7391559Z [INFO] 
+2023-07-11T05:35:13.7394955Z [INFO] --- jacoco-maven-plugin:0.8.10:report (report) @ missinglink-parent ---
+2023-07-11T05:35:13.7423471Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-07-11T05:35:13.7427528Z [INFO] 
+2023-07-11T05:35:13.7431152Z [INFO] >>> findbugs-maven-plugin:3.0.5:check (default) > :findbugs @ missinglink-parent >>>
+2023-07-11T05:35:13.7445332Z [INFO] 
+2023-07-11T05:35:13.7448928Z [INFO] --- findbugs-maven-plugin:3.0.5:findbugs (findbugs) @ missinglink-parent ---
+2023-07-11T05:35:14.0637816Z WARNING: An illegal reflective access operation has occurred
+2023-07-11T05:35:14.0638982Z WARNING: Illegal reflective access by org.codehaus.groovy.reflection.CachedClass (file:/home/runner/.m2/repository/org/codehaus/groovy/groovy/2.4.12/groovy-2.4.12.jar) to method java.lang.Object.finalize()
+2023-07-11T05:35:14.0640584Z WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.reflection.CachedClass
+2023-07-11T05:35:14.0641354Z WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+2023-07-11T05:35:14.0641896Z WARNING: All illegal access operations will be denied in a future release
+2023-07-11T05:35:14.3328310Z [INFO] 
+2023-07-11T05:35:14.3329480Z [INFO] <<< findbugs-maven-plugin:3.0.5:check (default) < :findbugs @ missinglink-parent <<<
+2023-07-11T05:35:14.3330073Z [INFO] 
+2023-07-11T05:35:14.3331584Z [INFO] 
+2023-07-11T05:35:14.3332187Z [INFO] --- findbugs-maven-plugin:3.0.5:check (default) @ missinglink-parent ---
+2023-07-11T05:35:14.3392723Z [INFO] 
+2023-07-11T05:35:14.3393725Z [INFO] --- jacoco-maven-plugin:0.8.10:report (default) @ missinglink-parent ---
+2023-07-11T05:35:14.3400904Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-07-11T05:35:14.3402850Z [INFO] 
+2023-07-11T05:35:14.3403573Z [INFO] --------------------< com.spotify:missinglink-core >--------------------
+2023-07-11T05:35:14.3404452Z [INFO] Building missinglink-core 0.2.10-SNAPSHOT                          [2/4]
+2023-07-11T05:35:14.3406266Z [INFO]   from core/pom.xml
+2023-07-11T05:35:14.3406852Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-07-11T05:35:14.3765991Z [INFO] 
+2023-07-11T05:35:14.3767132Z [INFO] --- fmt-maven-plugin:2.9.1:check (default-cli) @ missinglink-core ---
+2023-07-11T05:35:15.1030897Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java' is a directory. Skipping.
+2023-07-11T05:35:15.1035385Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com' is a directory. Skipping.
+2023-07-11T05:35:15.1036346Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify' is a directory. Skipping.
+2023-07-11T05:35:15.1037503Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink' is a directory. Skipping.
+2023-07-11T05:35:15.1122441Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/datamodel' is a directory. Skipping.
+2023-07-11T05:35:15.3979538Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink/datamodel' is a directory. Skipping.
+2023-07-11T05:35:15.4922587Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink/nested' is a directory. Skipping.
+2023-07-11T05:35:15.5656839Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java' is a directory. Skipping.
+2023-07-11T05:35:15.5660886Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com' is a directory. Skipping.
+2023-07-11T05:35:15.5664318Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify' is a directory. Skipping.
+2023-07-11T05:35:15.5667814Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink' is a directory. Skipping.
+2023-07-11T05:35:15.6531528Z [INFO] Processed 38 files (0 non-complying).
+2023-07-11T05:35:15.6532047Z [INFO] 
+2023-07-11T05:35:15.6532764Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ missinglink-core ---
+2023-07-11T05:35:15.6579263Z [INFO] Rule 1: org.apache.maven.enforcer.rules.dependency.RequireUpperBoundDeps passed
+2023-07-11T05:35:15.6579886Z [INFO] 
+2023-07-11T05:35:15.6580539Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce-maven) @ missinglink-core ---
+2023-07-11T05:35:15.6588394Z [INFO] 
+2023-07-11T05:35:15.6589103Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ missinglink-core ---
+2023-07-11T05:35:15.6598659Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/missinglink/missinglink/core/target/jacoco.exec
+2023-07-11T05:35:15.6599884Z [INFO] 
+2023-07-11T05:35:15.6600477Z [INFO] --- license-maven-plugin:1.20:check-file-header (check-file-header) @ missinglink-core ---
+2023-07-11T05:35:15.6714806Z [INFO] Will search files to update from root /home/runner/work/missinglink/missinglink/core/src/main/java
+2023-07-11T05:35:15.6715510Z [INFO] Will search files to update from root /home/runner/work/missinglink/missinglink/core/src/test/java
+2023-07-11T05:35:15.7692241Z [INFO] Scan 38 files header done in 83.802ms.
+2023-07-11T05:35:15.7693036Z [INFO] All files are up-to-date.
+2023-07-11T05:35:15.7693376Z [INFO] 
+2023-07-11T05:35:15.7693890Z [INFO] --- fmt-maven-plugin:2.9.1:format (default) @ missinglink-core ---
+2023-07-11T05:35:15.8533340Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java' is a directory. Skipping.
+2023-07-11T05:35:15.8535877Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com' is a directory. Skipping.
+2023-07-11T05:35:15.8537994Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify' is a directory. Skipping.
+2023-07-11T05:35:15.8540152Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink' is a directory. Skipping.
+2023-07-11T05:35:15.8681471Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/datamodel' is a directory. Skipping.
+2023-07-11T05:35:15.9956539Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink/datamodel' is a directory. Skipping.
+2023-07-11T05:35:16.0497586Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink/nested' is a directory. Skipping.
+2023-07-11T05:35:16.0788745Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java' is a directory. Skipping.
+2023-07-11T05:35:16.0789671Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com' is a directory. Skipping.
+2023-07-11T05:35:16.0790397Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify' is a directory. Skipping.
+2023-07-11T05:35:16.0791109Z [INFO] File '/home/runner/work/missinglink/missinglink/core/src/test/java/com/spotify/missinglink' is a directory. Skipping.
+2023-07-11T05:35:16.1481388Z [INFO] Processed 38 files (0 reformatted).
+2023-07-11T05:35:16.1481914Z [INFO] 
+2023-07-11T05:35:16.1482691Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ missinglink-core ---
+2023-07-11T05:35:16.2169352Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-07-11T05:35:16.2170085Z [INFO] skip non existing resourceDirectory /home/runner/work/missinglink/missinglink/core/src/main/resources
+2023-07-11T05:35:16.2170576Z [INFO] 
+2023-07-11T05:35:16.2177601Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ missinglink-core ---
+2023-07-11T05:35:16.3371572Z [INFO] Compiling 26 source files with javac [debug release 8] to target/classes
+2023-07-11T05:35:18.2697825Z [WARNING] No processor claimed any of these annotations: io.norberg.automatter.AutoMatter
+2023-07-11T05:35:18.2701976Z [WARNING] No processor claimed any of these annotations: javax.annotation.Generated,io.norberg.automatter.AutoMatter.Generated,io.norberg.automatter.AutoMatter.Field
+2023-07-11T05:35:18.2708869Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/MissingLinkException.java:[42,8] serializable class com.spotify.missinglink.MissingLinkException has no definition of serialVersionUID
+2023-07-11T05:35:18.2714171Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[62,13] found raw type: java.lang.Class
+2023-07-11T05:35:18.2717256Z   missing type arguments for generic class java.lang.Class<T>
+2023-07-11T05:35:18.2720893Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[63,68] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+2023-07-11T05:35:18.2724612Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[64,13] found raw type: java.util.Set
+2023-07-11T05:35:18.2727388Z   missing type arguments for generic class java.util.Set<E>
+2023-07-11T05:35:18.2732018Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[65,44] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+2023-07-11T05:35:18.2735230Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[66,13] found raw type: java.lang.Class
+2023-07-11T05:35:18.2738000Z   missing type arguments for generic class java.lang.Class<T>
+2023-07-11T05:35:18.2740905Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[67,13] found raw type: java.lang.Class
+2023-07-11T05:35:18.2743667Z   missing type arguments for generic class java.lang.Class<T>
+2023-07-11T05:35:18.2746790Z [WARNING] /home/runner/work/missinglink/missinglink/core/src/main/java/com/spotify/missinglink/Java9ModuleLoader.java:[70,43] unchecked call to getMethod(java.lang.String,java.lang.Class<?>...) as a member of the raw type java.lang.Class
+[... 9385 lines removed by TriageCore ...]
+2023-07-11T05:35:43.7494748Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-07-11T05:35:43.7495209Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-07-11T05:35:43.7495680Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-07-11T05:35:43.7496116Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-07-11T05:35:43.7496544Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-07-11T05:35:43.7496974Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-07-11T05:35:43.7497473Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+2023-07-11T05:35:43.7498081Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+2023-07-11T05:35:43.7498888Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+2023-07-11T05:35:43.7499457Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2023-07-11T05:35:43.7500062Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2023-07-11T05:35:43.7500748Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-07-11T05:35:43.7501307Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-07-11T05:35:43.7501853Z 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+2023-07-11T05:35:43.7502517Z 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+2023-07-11T05:35:43.7503166Z 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+2023-07-11T05:35:43.7503826Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+2023-07-11T05:35:43.7504421Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+2023-07-11T05:35:43.7504974Z Caused by: java.lang.ClassNotFoundException: org.codehaus.plexus.util.xml.XmlStreamReader
+2023-07-11T05:35:43.7505542Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+2023-07-11T05:35:43.7506116Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-07-11T05:35:43.7506593Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+2023-07-11T05:35:43.7506906Z 	... 34 more
+2023-07-11T05:35:43.7507035Z 
+2023-07-11T05:35:43.7507257Z Running com.spotify.missinglink.maven.MavenArtifactNameTest
+2023-07-11T05:35:43.7507888Z Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 sec
+2023-07-11T05:35:43.7508093Z 
+2023-07-11T05:35:43.7508182Z Results :
+2023-07-11T05:35:43.7508308Z 
+2023-07-11T05:35:43.7508402Z Tests in error: 
+2023-07-11T05:35:43.7508848Z   testCustomBootstrapPath(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7509495Z   shouldCheckProvidedIfConfigured(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7510162Z   testTargetDestinationPackages(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7510824Z   doesNotFailOnConflictByDefault(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7511434Z   testSkip(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7512001Z   noConflictsFound(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7512614Z   testTargetSourcePackages(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7513276Z   testIgnoreDestinationPackages(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7513945Z   testBadValuesForIncludeCategories(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7514611Z   failsOnConflictWhenOptionIsSet(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7515298Z   testIncludeCategoriesActuallyFilters(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7515981Z   shouldIgnoreProvidedByDefault(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7516632Z   testIgnoreSourcePackages(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7517257Z   testExcludeArtifacts(com.spotify.missinglink.maven.CheckMojoTest): org/codehaus/plexus/util/xml/XmlStreamReader
+2023-07-11T05:35:43.7517671Z 
+2023-07-11T05:35:43.7517813Z Tests run: 15, Failures: 0, Errors: 14, Skipped: 0
+2023-07-11T05:35:43.7517991Z 
+2023-07-11T05:35:43.7518479Z [INFO] ------------------------------------------------------------------------
+2023-07-11T05:35:43.7518952Z [INFO] Reactor Summary for missinglink 0.2.10-SNAPSHOT:
+2023-07-11T05:35:43.7519219Z [INFO] 
+2023-07-11T05:35:43.7519491Z [INFO] missinglink ........................................ SUCCESS [  1.734 s]
+2023-07-11T05:35:43.7520160Z [INFO] missinglink-core ................................... SUCCESS [ 24.366 s]
+2023-07-11T05:35:43.7520609Z [INFO] missinglink-benchmarks ............................. SUCCESS [  0.734 s]
+2023-07-11T05:35:43.7521073Z [INFO] missinglink-maven-plugin ........................... FAILURE [  4.301 s]
+2023-07-11T05:35:43.7521561Z [INFO] ------------------------------------------------------------------------
+2023-07-11T05:35:43.7521869Z [INFO] BUILD FAILURE
+2023-07-11T05:35:43.7522274Z [INFO] ------------------------------------------------------------------------
+2023-07-11T05:35:43.7522594Z [INFO] Total time:  31.418 s
+2023-07-11T05:35:43.7522918Z [INFO] Finished at: 2023-07-11T05:35:43Z
+2023-07-11T05:35:43.7523336Z [INFO] ------------------------------------------------------------------------
+2023-07-11T05:35:43.7524060Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project missinglink-maven-plugin: There are test failures.
+2023-07-11T05:35:43.7524496Z [ERROR] 
+2023-07-11T05:35:43.7525028Z [ERROR] Please refer to /home/runner/work/missinglink/missinglink/maven-plugin/target/surefire-reports for the individual test results.
+2023-07-11T05:35:43.7525461Z [ERROR] -> [Help 1]
+2023-07-11T05:35:43.7525805Z [ERROR] 
+2023-07-11T05:35:43.7526204Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-07-11T05:35:43.7526663Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-11T05:35:43.7526954Z [ERROR] 
+2023-07-11T05:35:43.7527311Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-11T05:35:43.7527811Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-11T05:35:43.7528138Z [ERROR] 
+2023-07-11T05:35:43.7528443Z [ERROR] After correcting the problems, you can resume the build with the command
+2023-07-11T05:35:43.7528860Z [ERROR]   mvn <args> -rf :missinglink-maven-plugin
+2023-07-11T05:35:43.7855734Z ##[error]Process completed with exit code 1.
+2023-07-11T05:35:43.7938135Z Post job cleanup.
+2023-07-11T05:35:43.9786206Z Post job cleanup.
+2023-07-11T05:35:44.0877249Z [command]/usr/bin/git version
+2023-07-11T05:35:44.0929981Z git version 2.41.0
+2023-07-11T05:35:44.0983855Z Temporarily overriding HOME='/home/runner/work/_temp/398a51e8-4995-436d-add6-8cdd08f63d1d' before making global git config changes
+2023-07-11T05:35:44.0987683Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-11T05:35:44.0997184Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/missinglink/missinglink
+2023-07-11T05:35:44.1057019Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-11T05:35:44.1102367Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-11T05:35:44.1381432Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-11T05:35:44.1411829Z http.https://github.com/.extraheader
+2023-07-11T05:35:44.1424527Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-11T05:35:44.1462343Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-11T05:35:44.1915427Z Cleaning up orphan processes
+
+2023-07-11T05:34:49.1318016Z ##[section]Starting: Prepare job test
+2023-07-11T05:34:49.1320433Z Evaluating strategy
+2023-07-11T05:34:49.1328661Z Creating job '_8'
+2023-07-11T05:34:49.1331857Z Evaluating timeout
+2023-07-11T05:34:49.1331916Z Evaluating cancel timeout
+2023-07-11T05:34:49.1331943Z Evaluating continue on error
+2023-07-11T05:34:49.1331972Z Evaluating target
+2023-07-11T05:34:49.1332655Z Creating job '_11'
+2023-07-11T05:34:49.1335133Z Evaluating timeout
+2023-07-11T05:34:49.1335174Z Evaluating cancel timeout
+2023-07-11T05:34:49.1335196Z Evaluating continue on error
+2023-07-11T05:34:49.1335219Z Evaluating target
+2023-07-11T05:34:49.1335624Z Creating job '_17'
+2023-07-11T05:34:49.1338031Z Evaluating timeout
+2023-07-11T05:34:49.1338055Z Evaluating cancel timeout
+2023-07-11T05:34:49.1338076Z Evaluating continue on error
+2023-07-11T05:34:49.1338098Z Evaluating target
+2023-07-11T05:34:49.1339569Z ##[section]Finishing: Prepare job test
+
+2023-07-11T05:35:49.4656752Z Post job cleanup.
+2023-07-11T05:35:49.6326178Z [command]/usr/bin/git version
+2023-07-11T05:35:49.6396422Z git version 2.41.0
+2023-07-11T05:35:49.6492596Z Temporarily overriding HOME='/home/runner/work/_temp/5a74be7a-11b3-4ebc-8dcf-a759a77013c7' before making global git config changes
+2023-07-11T05:35:49.6498981Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-11T05:35:49.6513004Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/missinglink/missinglink
+2023-07-11T05:35:49.6582811Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-11T05:35:49.6653304Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-11T05:35:49.7027429Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-11T05:35:49.7076308Z http.https://github.com/.extraheader
+2023-07-11T05:35:49.7096213Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-11T05:35:49.7147108Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-07-11T05:35:00.8563832Z ##[group]Run actions/checkout@v3
+2023-07-11T05:35:00.8564182Z with:
+2023-07-11T05:35:00.8564383Z   fetch-depth: 2
+2023-07-11T05:35:00.8564628Z   repository: spotify/missinglink
+2023-07-11T05:35:00.8565135Z   token: ***
+2023-07-11T05:35:00.8565341Z   ssh-strict: true
+2023-07-11T05:35:00.8565579Z   persist-credentials: true
+2023-07-11T05:35:00.8566123Z   clean: true
+2023-07-11T05:35:00.8566364Z   sparse-checkout-cone-mode: true
+2023-07-11T05:35:00.8566613Z   lfs: false
+2023-07-11T05:35:00.8566826Z   submodules: false
+2023-07-11T05:35:00.8567205Z   set-safe-directory: true
+2023-07-11T05:35:00.8567443Z ##[endgroup]
+2023-07-11T05:35:01.2612378Z Syncing repository: spotify/missinglink
+2023-07-11T05:35:01.2615015Z ##[group]Getting Git version info
+2023-07-11T05:35:01.2616118Z Working directory is '/home/runner/work/missinglink/missinglink'
+2023-07-11T05:35:01.2617257Z [command]/usr/bin/git version
+2023-07-11T05:35:01.2793329Z git version 2.41.0
+2023-07-11T05:35:01.2857405Z ##[endgroup]
+2023-07-11T05:35:01.2893827Z Temporarily overriding HOME='/home/runner/work/_temp/cd648cf7-03fd-48ea-b6ae-62f89539080c' before making global git config changes
+2023-07-11T05:35:01.2895027Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-11T05:35:01.2903374Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/missinglink/missinglink
+2023-07-11T05:35:01.2959362Z Deleting the contents of '/home/runner/work/missinglink/missinglink'
+2023-07-11T05:35:01.2967603Z ##[group]Initializing the repository
+2023-07-11T05:35:01.2973722Z [command]/usr/bin/git init /home/runner/work/missinglink/missinglink
+2023-07-11T05:35:01.3094864Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-11T05:35:01.3096585Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-11T05:35:01.3097761Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-11T05:35:01.3098546Z hint: 
+2023-07-11T05:35:01.3099453Z hint: 	git config --global init.defaultBranch <name>
+2023-07-11T05:35:01.3100028Z hint: 
+2023-07-11T05:35:01.3101474Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-11T05:35:01.3102300Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-11T05:35:01.3103173Z hint: 
+2023-07-11T05:35:01.3103941Z hint: 	git branch -m <name>
+2023-07-11T05:35:01.3130629Z Initialized empty Git repository in /home/runner/work/missinglink/missinglink/.git/
+2023-07-11T05:35:01.3145510Z [command]/usr/bin/git remote add origin https://github.com/spotify/missinglink
+2023-07-11T05:35:01.3206272Z ##[endgroup]
+2023-07-11T05:35:01.3207111Z ##[group]Disabling automatic garbage collection
+2023-07-11T05:35:01.3212498Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-11T05:35:01.3277473Z ##[endgroup]
+2023-07-11T05:35:01.3278524Z ##[group]Setting up auth
+2023-07-11T05:35:01.3288078Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-11T05:35:01.3334625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-11T05:35:01.3937556Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-11T05:35:01.3969582Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-11T05:35:01.4390969Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-11T05:35:01.4391965Z ##[endgroup]
+2023-07-11T05:35:01.4392960Z ##[group]Fetching the repository
+2023-07-11T05:35:01.4394049Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=2 origin +f8f4d9c507214f12fd0072b2a2dc5b889b73a458:refs/remotes/pull/321/merge
+2023-07-11T05:35:01.9344832Z remote: Enumerating objects: 316, done.        
+2023-07-11T05:35:01.9346559Z remote: Counting objects:   0% (1/316)        
+2023-07-11T05:35:01.9347356Z remote: Counting objects:   1% (4/316)        
+2023-07-11T05:35:01.9348028Z remote: Counting objects:   2% (7/316)        
+2023-07-11T05:35:01.9348685Z remote: Counting objects:   3% (10/316)        
+2023-07-11T05:35:01.9349353Z remote: Counting objects:   4% (13/316)        
+2023-07-11T05:35:01.9350004Z remote: Counting objects:   5% (16/316)        
+2023-07-11T05:35:01.9350648Z remote: Counting objects:   6% (19/316)        
+2023-07-11T05:35:01.9351286Z remote: Counting objects:   7% (23/316)        
+2023-07-11T05:35:01.9351964Z remote: Counting objects:   8% (26/316)        
+2023-07-11T05:35:01.9352608Z remote: Counting objects:   9% (29/316)        
+2023-07-11T05:35:01.9353236Z remote: Counting objects:  10% (32/316)        
+2023-07-11T05:35:01.9356105Z remote: Counting objects:  11% (35/316)        
+2023-07-11T05:35:01.9356752Z remote: Counting objects:  12% (38/316)        
+2023-07-11T05:35:01.9359381Z remote: Counting objects:  13% (42/316)        
+2023-07-11T05:35:01.9359989Z remote: Counting objects:  14% (45/316)        
+2023-07-11T05:35:01.9360732Z remote: Counting objects:  15% (48/316)        
+2023-07-11T05:35:01.9361388Z remote: Counting objects:  16% (51/316)        
+2023-07-11T05:35:01.9362025Z remote: Counting objects:  17% (54/316)        
+2023-07-11T05:35:01.9362645Z remote: Counting objects:  18% (57/316)        
+2023-07-11T05:35:01.9363305Z remote: Counting objects:  19% (61/316)        
+2023-07-11T05:35:01.9363952Z remote: Counting objects:  20% (64/316)        
+2023-07-11T05:35:01.9364584Z remote: Counting objects:  21% (67/316)        
+2023-07-11T05:35:01.9365706Z remote: Counting objects:  22% (70/316)        
+2023-07-11T05:35:01.9366365Z remote: Counting objects:  23% (73/316)        
+2023-07-11T05:35:01.9367035Z remote: Counting objects:  24% (76/316)        
+2023-07-11T05:35:01.9367744Z remote: Counting objects:  25% (79/316)        
+2023-07-11T05:35:01.9368376Z remote: Counting objects:  26% (83/316)        
+2023-07-11T05:35:01.9369031Z remote: Counting objects:  27% (86/316)        
+2023-07-11T05:35:01.9369734Z remote: Counting objects:  28% (89/316)        
+2023-07-11T05:35:01.9370390Z remote: Counting objects:  29% (92/316)        
+2023-07-11T05:35:01.9371020Z remote: Counting objects:  30% (95/316)        
+2023-07-11T05:35:01.9371691Z remote: Counting objects:  31% (98/316)        
+2023-07-11T05:35:01.9372339Z remote: Counting objects:  32% (102/316)        
+2023-07-11T05:35:01.9373024Z remote: Counting objects:  33% (105/316)        
+2023-07-11T05:35:01.9373653Z remote: Counting objects:  34% (108/316)        
+2023-07-11T05:35:01.9374332Z remote: Counting objects:  35% (111/316)        
+2023-07-11T05:35:01.9374983Z remote: Counting objects:  36% (114/316)        
+2023-07-11T05:35:01.9375782Z remote: Counting objects:  37% (117/316)        
+2023-07-11T05:35:01.9376439Z remote: Counting objects:  38% (121/316)        
+2023-07-11T05:35:01.9377104Z remote: Counting objects:  39% (124/316)        
+2023-07-11T05:35:01.9377752Z remote: Counting objects:  40% (127/316)        
+2023-07-11T05:35:01.9378262Z remote: Counting objects:  41% (130/316)        
+2023-07-11T05:35:01.9378958Z remote: Counting objects:  42% (133/316)        
+2023-07-11T05:35:01.9379387Z remote: Counting objects:  43% (136/316)        
+2023-07-11T05:35:01.9379677Z remote: Counting objects:  44% (140/316)        
+2023-07-11T05:35:01.9379952Z remote: Counting objects:  45% (143/316)        
+2023-07-11T05:35:01.9380237Z remote: Counting objects:  46% (146/316)        
+2023-07-11T05:35:01.9380525Z remote: Counting objects:  47% (149/316)        
+2023-07-11T05:35:01.9380810Z remote: Counting objects:  48% (152/316)        
+2023-07-11T05:35:01.9381447Z remote: Counting objects:  49% (155/316)        
+2023-07-11T05:35:01.9382074Z remote: Counting objects:  50% (158/316)        
+2023-07-11T05:35:01.9382695Z remote: Counting objects:  51% (162/316)        
+2023-07-11T05:35:01.9383637Z remote: Counting objects:  52% (165/316)        
+2023-07-11T05:35:01.9384273Z remote: Counting objects:  53% (168/316)        
+2023-07-11T05:35:01.9384894Z remote: Counting objects:  54% (171/316)        
+2023-07-11T05:35:01.9385643Z remote: Counting objects:  55% (174/316)        
+2023-07-11T05:35:01.9386433Z remote: Counting objects:  56% (177/316)        
+2023-07-11T05:35:01.9387077Z remote: Counting objects:  57% (181/316)        
+2023-07-11T05:35:01.9387714Z remote: Counting objects:  58% (184/316)        
+2023-07-11T05:35:01.9388345Z remote: Counting objects:  59% (187/316)        
+2023-07-11T05:35:01.9388880Z remote: Counting objects:  60% (190/316)        
+2023-07-11T05:35:01.9389515Z remote: Counting objects:  61% (193/316)        
+2023-07-11T05:35:01.9389957Z remote: Counting objects:  62% (196/316)        
+2023-07-11T05:35:01.9390251Z remote: Counting objects:  63% (200/316)        
+2023-07-11T05:35:01.9390659Z remote: Counting objects:  64% (203/316)        
+2023-07-11T05:35:01.9390974Z remote: Counting objects:  65% (206/316)        
+2023-07-11T05:35:01.9391283Z remote: Counting objects:  66% (209/316)        
+2023-07-11T05:35:01.9391635Z remote: Counting objects:  67% (212/316)        
+2023-07-11T05:35:01.9392507Z remote: Counting objects:  68% (215/316)        
+2023-07-11T05:35:01.9393070Z remote: Counting objects:  69% (219/316)        
+2023-07-11T05:35:01.9393717Z remote: Counting objects:  70% (222/316)        
+2023-07-11T05:35:01.9394346Z remote: Counting objects:  71% (225/316)        
+2023-07-11T05:35:01.9394996Z remote: Counting objects:  72% (228/316)        
+2023-07-11T05:35:01.9395635Z remote: Counting objects:  73% (231/316)        
+2023-07-11T05:35:01.9396563Z remote: Counting objects:  74% (234/316)        
+2023-07-11T05:35:01.9397333Z remote: Counting objects:  75% (237/316)        
+2023-07-11T05:35:01.9397961Z remote: Counting objects:  76% (241/316)        
+2023-07-11T05:35:01.9398584Z remote: Counting objects:  77% (244/316)        
+2023-07-11T05:35:01.9399221Z remote: Counting objects:  78% (247/316)        
+2023-07-11T05:35:01.9399824Z remote: Counting objects:  79% (250/316)        
+2023-07-11T05:35:01.9400455Z remote: Counting objects:  80% (253/316)        
+2023-07-11T05:35:01.9401075Z remote: Counting objects:  81% (256/316)        
+2023-07-11T05:35:01.9401701Z remote: Counting objects:  82% (260/316)        
+2023-07-11T05:35:01.9402304Z remote: Counting objects:  83% (263/316)        
+2023-07-11T05:35:01.9403052Z remote: Counting objects:  84% (266/316)        
+2023-07-11T05:35:01.9403677Z remote: Counting objects:  85% (269/316)        
+2023-07-11T05:35:01.9404186Z remote: Counting objects:  86% (272/316)        
+2023-07-11T05:35:01.9405222Z remote: Counting objects:  87% (275/316)        
+2023-07-11T05:35:01.9405647Z remote: Counting objects:  88% (279/316)        
+2023-07-11T05:35:01.9405950Z remote: Counting objects:  89% (282/316)        
+2023-07-11T05:35:01.9406329Z remote: Counting objects:  90% (285/316)        
+2023-07-11T05:35:01.9407080Z remote: Counting objects:  91% (288/316)        
+2023-07-11T05:35:01.9407583Z remote: Counting objects:  92% (291/316)        
+2023-07-11T05:35:01.9408198Z remote: Counting objects:  93% (294/316)        
+2023-07-11T05:35:01.9409484Z remote: Counting objects:  94% (298/316)        
+2023-07-11T05:35:01.9410121Z remote: Counting objects:  95% (301/316)        
+2023-07-11T05:35:01.9410803Z remote: Counting objects:  96% (304/316)        
+2023-07-11T05:35:01.9411588Z remote: Counting objects:  97% (307/316)        
+2023-07-11T05:35:01.9412296Z remote: Counting objects:  98% (310/316)        
+2023-07-11T05:35:01.9412914Z remote: Counting objects:  99% (313/316)        
+2023-07-11T05:35:01.9413540Z remote: Counting objects: 100% (316/316)        
+2023-07-11T05:35:01.9414179Z remote: Counting objects: 100% (316/316), done.        
+2023-07-11T05:35:01.9414819Z remote: Compressing objects:   0% (1/167)        
+2023-07-11T05:35:01.9415627Z remote: Compressing objects:   1% (2/167)        
+2023-07-11T05:35:01.9416722Z remote: Compressing objects:   2% (4/167)        
+2023-07-11T05:35:01.9417359Z remote: Compressing objects:   3% (6/167)        
+2023-07-11T05:35:01.9417965Z remote: Compressing objects:   4% (7/167)        
+2023-07-11T05:35:01.9418584Z remote: Compressing objects:   5% (9/167)        
+2023-07-11T05:35:01.9419209Z remote: Compressing objects:   6% (11/167)        
+2023-07-11T05:35:01.9419792Z remote: Compressing objects:   7% (12/167)        
+2023-07-11T05:35:01.9420538Z remote: Compressing objects:   8% (14/167)        
+2023-07-11T05:35:01.9421054Z remote: Compressing objects:   9% (16/167)        
+2023-07-11T05:35:01.9421893Z remote: Compressing objects:  10% (17/167)        
+2023-07-11T05:35:01.9422309Z remote: Compressing objects:  11% (19/167)        
+2023-07-11T05:35:01.9424198Z remote: Compressing objects:  12% (21/167)        
+2023-07-11T05:35:01.9425443Z remote: Compressing objects:  13% (22/167)        
+2023-07-11T05:35:01.9426579Z remote: Compressing objects:  14% (24/167)        
+2023-07-11T05:35:01.9427370Z remote: Compressing objects:  15% (26/167)        
+2023-07-11T05:35:01.9428588Z remote: Compressing objects:  16% (27/167)        
+2023-07-11T05:35:01.9429168Z remote: Compressing objects:  17% (29/167)        
+2023-07-11T05:35:01.9429719Z remote: Compressing objects:  18% (31/167)        
+2023-07-11T05:35:01.9430613Z remote: Compressing objects:  19% (32/167)        
+2023-07-11T05:35:01.9431308Z remote: Compressing objects:  20% (34/167)        
+2023-07-11T05:35:01.9432301Z remote: Compressing objects:  21% (36/167)        
+2023-07-11T05:35:01.9432940Z remote: Compressing objects:  22% (37/167)        
+2023-07-11T05:35:01.9433565Z remote: Compressing objects:  23% (39/167)        
+2023-07-11T05:35:01.9434552Z remote: Compressing objects:  24% (41/167)        
+2023-07-11T05:35:01.9435205Z remote: Compressing objects:  25% (42/167)        
+2023-07-11T05:35:01.9435842Z remote: Compressing objects:  26% (44/167)        
+2023-07-11T05:35:01.9436461Z remote: Compressing objects:  27% (46/167)        
+2023-07-11T05:35:01.9437130Z remote: Compressing objects:  28% (47/167)        
+2023-07-11T05:35:01.9437960Z remote: Compressing objects:  29% (49/167)        
+2023-07-11T05:35:01.9438626Z remote: Compressing objects:  30% (51/167)        
+2023-07-11T05:35:01.9439123Z remote: Compressing objects:  31% (52/167)        
+2023-07-11T05:35:01.9441873Z remote: Compressing objects:  32% (54/167)        
+2023-07-11T05:35:01.9443071Z remote: Compressing objects:  33% (56/167)        
+2023-07-11T05:35:01.9444028Z remote: Compressing objects:  34% (57/167)        
+2023-07-11T05:35:01.9445872Z remote: Compressing objects:  35% (59/167)        
+2023-07-11T05:35:01.9447404Z remote: Compressing objects:  36% (61/167)        
+2023-07-11T05:35:01.9448059Z remote: Compressing objects:  37% (62/167)        
+2023-07-11T05:35:01.9448851Z remote: Compressing objects:  38% (64/167)        
+2023-07-11T05:35:01.9449441Z remote: Compressing objects:  39% (66/167)        
+2023-07-11T05:35:01.9450227Z remote: Compressing objects:  40% (67/167)        
+2023-07-11T05:35:01.9450816Z remote: Compressing objects:  41% (69/167)        
+2023-07-11T05:35:01.9451584Z remote: Compressing objects:  42% (71/167)        
+2023-07-11T05:35:01.9452160Z remote: Compressing objects:  43% (72/167)        
+2023-07-11T05:35:01.9452941Z remote: Compressing objects:  44% (74/167)        
+2023-07-11T05:35:01.9453514Z remote: Compressing objects:  45% (76/167)        
+2023-07-11T05:35:01.9454282Z remote: Compressing objects:  46% (77/167)        
+2023-07-11T05:35:01.9454854Z remote: Compressing objects:  47% (79/167)        
+2023-07-11T05:35:01.9455893Z remote: Compressing objects:  48% (81/167)        
+2023-07-11T05:35:01.9457720Z remote: Compressing objects:  49% (82/167)        
+2023-07-11T05:35:01.9458760Z remote: Compressing objects:  50% (84/167)        
+2023-07-11T05:35:01.9459393Z remote: Compressing objects:  51% (86/167)        
+2023-07-11T05:35:01.9460574Z remote: Compressing objects:  52% (87/167)        
+2023-07-11T05:35:01.9461114Z remote: Compressing objects:  53% (89/167)        
+2023-07-11T05:35:01.9462202Z remote: Compressing objects:  54% (91/167)        
+2023-07-11T05:35:01.9462764Z remote: Compressing objects:  55% (92/167)        
+2023-07-11T05:35:01.9463525Z remote: Compressing objects:  56% (94/167)        
+2023-07-11T05:35:01.9464056Z remote: Compressing objects:  57% (96/167)        
+2023-07-11T05:35:01.9464817Z remote: Compressing objects:  58% (97/167)        
+2023-07-11T05:35:01.9465368Z remote: Compressing objects:  59% (99/167)        
+2023-07-11T05:35:01.9466129Z remote: Compressing objects:  60% (101/167)        
+2023-07-11T05:35:01.9466853Z remote: Compressing objects:  61% (102/167)        
+2023-07-11T05:35:01.9467662Z remote: Compressing objects:  62% (104/167)        
+2023-07-11T05:35:01.9468361Z remote: Compressing objects:  63% (106/167)        
+2023-07-11T05:35:01.9469163Z remote: Compressing objects:  64% (107/167)        
+2023-07-11T05:35:01.9469742Z remote: Compressing objects:  65% (109/167)        
+2023-07-11T05:35:01.9470545Z remote: Compressing objects:  66% (111/167)        
+2023-07-11T05:35:01.9471651Z remote: Compressing objects:  67% (112/167)        
+2023-07-11T05:35:01.9472419Z remote: Compressing objects:  68% (114/167)        
+2023-07-11T05:35:01.9472999Z remote: Compressing objects:  69% (116/167)        
+2023-07-11T05:35:01.9473779Z remote: Compressing objects:  70% (117/167)        
+2023-07-11T05:35:01.9474346Z remote: Compressing objects:  71% (119/167)        
+2023-07-11T05:35:01.9475173Z remote: Compressing objects:  72% (121/167)        
+2023-07-11T05:35:01.9475762Z remote: Compressing objects:  73% (122/167)        
+2023-07-11T05:35:01.9476569Z remote: Compressing objects:  74% (124/167)        
+2023-07-11T05:35:01.9477387Z remote: Compressing objects:  75% (126/167)        
+2023-07-11T05:35:01.9478606Z remote: Compressing objects:  76% (127/167)        
+2023-07-11T05:35:01.9478911Z remote: Compressing objects:  77% (129/167)        
+2023-07-11T05:35:01.9479209Z remote: Compressing objects:  78% (131/167)        
+2023-07-11T05:35:01.9479495Z remote: Compressing objects:  79% (132/167)        
+2023-07-11T05:35:01.9479788Z remote: Compressing objects:  80% (134/167)        
+2023-07-11T05:35:01.9480082Z remote: Compressing objects:  81% (136/167)        
+2023-07-11T05:35:01.9480375Z remote: Compressing objects:  82% (137/167)        
+2023-07-11T05:35:01.9480652Z remote: Compressing objects:  83% (139/167)        
+2023-07-11T05:35:01.9480947Z remote: Compressing objects:  84% (141/167)        
+2023-07-11T05:35:01.9481238Z remote: Compressing objects:  85% (142/167)        
+2023-07-11T05:35:01.9481512Z remote: Compressing objects:  86% (144/167)        
+2023-07-11T05:35:01.9481805Z remote: Compressing objects:  87% (146/167)        
+2023-07-11T05:35:01.9482107Z remote: Compressing objects:  88% (147/167)        
+2023-07-11T05:35:01.9482382Z remote: Compressing objects:  89% (149/167)        
+2023-07-11T05:35:01.9482706Z remote: Compressing objects:  90% (151/167)        
+2023-07-11T05:35:01.9482984Z remote: Compressing objects:  91% (152/167)        
+2023-07-11T05:35:01.9483286Z remote: Compressing objects:  92% (154/167)        
+2023-07-11T05:35:01.9483578Z remote: Compressing objects:  93% (156/167)        
+2023-07-11T05:35:01.9483855Z remote: Compressing objects:  94% (157/167)        
+2023-07-11T05:35:01.9484148Z remote: Compressing objects:  95% (159/167)        
+2023-07-11T05:35:01.9484437Z remote: Compressing objects:  96% (161/167)        
+2023-07-11T05:35:01.9484993Z remote: Compressing objects:  97% (162/167)        
+2023-07-11T05:35:01.9485274Z remote: Compressing objects:  98% (164/167)        
+2023-07-11T05:35:01.9485569Z remote: Compressing objects:  99% (166/167)        
+2023-07-11T05:35:01.9486051Z remote: Compressing objects: 100% (167/167)        
+2023-07-11T05:35:01.9486535Z remote: Compressing objects: 100% (167/167), done.        
+2023-07-11T05:35:01.9505124Z Receiving objects:   0% (1/316)
+2023-07-11T05:35:01.9506553Z Receiving objects:   1% (4/316)
+2023-07-11T05:35:01.9507931Z Receiving objects:   2% (7/316)
+2023-07-11T05:35:01.9512133Z Receiving objects:   3% (10/316)
+2023-07-11T05:35:01.9519293Z Receiving objects:   4% (13/316)
+2023-07-11T05:35:01.9520077Z Receiving objects:   5% (16/316)
+2023-07-11T05:35:01.9520826Z Receiving objects:   6% (19/316)
+2023-07-11T05:35:01.9521095Z Receiving objects:   7% (23/316)
+2023-07-11T05:35:01.9522925Z Receiving objects:   8% (26/316)
+2023-07-11T05:35:01.9524490Z Receiving objects:   9% (29/316)
+2023-07-11T05:35:01.9525639Z Receiving objects:  10% (32/316)
+2023-07-11T05:35:01.9527140Z Receiving objects:  11% (35/316)
+2023-07-11T05:35:01.9532258Z Receiving objects:  12% (38/316)
+2023-07-11T05:35:01.9642236Z Receiving objects:  13% (42/316)
+2023-07-11T05:35:01.9642631Z Receiving objects:  14% (45/316)
+2023-07-11T05:35:01.9644075Z Receiving objects:  15% (48/316)
+2023-07-11T05:35:01.9647207Z Receiving objects:  16% (51/316)
+2023-07-11T05:35:01.9649590Z Receiving objects:  17% (54/316)
+2023-07-11T05:35:01.9651166Z Receiving objects:  18% (57/316)
+2023-07-11T05:35:01.9652373Z Receiving objects:  19% (61/316)
+2023-07-11T05:35:01.9655099Z Receiving objects:  20% (64/316)
+2023-07-11T05:35:01.9655587Z Receiving objects:  21% (67/316)
+2023-07-11T05:35:01.9656844Z Receiving objects:  22% (70/316)
+2023-07-11T05:35:01.9717041Z Receiving objects:  23% (73/316)
+2023-07-11T05:35:01.9720762Z Receiving objects:  24% (76/316)
+2023-07-11T05:35:01.9724088Z Receiving objects:  25% (79/316)
+2023-07-11T05:35:01.9726028Z Receiving objects:  26% (83/316)
+2023-07-11T05:35:01.9727856Z Receiving objects:  27% (86/316)
+2023-07-11T05:35:02.1742964Z Receiving objects:  28% (89/316)
+2023-07-11T05:35:02.1744093Z remote: Total 316 (delta 74), reused 257 (delta 47), pack-reused 0        
+2023-07-11T05:35:02.1758096Z Receiving objects:  29% (92/316)
+2023-07-11T05:35:02.1759817Z Receiving objects:  30% (95/316)
+2023-07-11T05:35:02.1762207Z Receiving objects:  31% (98/316)
+2023-07-11T05:35:02.1763062Z Receiving objects:  32% (102/316)
+2023-07-11T05:35:02.1767331Z Receiving objects:  33% (105/316)
+2023-07-11T05:35:02.1768140Z Receiving objects:  34% (108/316)
+2023-07-11T05:35:02.1768533Z Receiving objects:  35% (111/316)
+2023-07-11T05:35:02.1769670Z Receiving objects:  36% (114/316)
+2023-07-11T05:35:02.1770514Z Receiving objects:  37% (117/316)
+2023-07-11T05:35:02.1774159Z Receiving objects:  38% (121/316)
+2023-07-11T05:35:02.1774461Z Receiving objects:  39% (124/316)
+2023-07-11T05:35:02.1776957Z Receiving objects:  40% (127/316)
+2023-07-11T05:35:02.1777287Z Receiving objects:  41% (130/316)
+2023-07-11T05:35:02.1778956Z Receiving objects:  42% (133/316)
+2023-07-11T05:35:02.1781250Z Receiving objects:  43% (136/316)
+2023-07-11T05:35:02.1781553Z Receiving objects:  44% (140/316)
+2023-07-11T05:35:02.1783149Z Receiving objects:  45% (143/316)
+2023-07-11T05:35:02.1784891Z Receiving objects:  46% (146/316)
+2023-07-11T05:35:02.1786488Z Receiving objects:  47% (149/316)
+2023-07-11T05:35:02.1789092Z Receiving objects:  48% (152/316)
+2023-07-11T05:35:02.1790967Z Receiving objects:  49% (155/316)
+2023-07-11T05:35:02.1793574Z Receiving objects:  50% (158/316)
+2023-07-11T05:35:02.1795504Z Receiving objects:  51% (162/316)
+2023-07-11T05:35:02.1798056Z Receiving objects:  52% (165/316)
+2023-07-11T05:35:02.1799932Z Receiving objects:  53% (168/316)
+2023-07-11T05:35:02.1802099Z Receiving objects:  54% (171/316)
+2023-07-11T05:35:02.1803835Z Receiving objects:  55% (174/316)
+2023-07-11T05:35:02.1809251Z Receiving objects:  56% (177/316)
+2023-07-11T05:35:02.1809965Z Receiving objects:  57% (181/316)
+2023-07-11T05:35:02.1810777Z Receiving objects:  58% (184/316)
+2023-07-11T05:35:02.1813832Z Receiving objects:  59% (187/316)
+2023-07-11T05:35:02.1814442Z Receiving objects:  60% (190/316)
+2023-07-11T05:35:02.1815320Z Receiving objects:  61% (193/316)
+2023-07-11T05:35:02.1816733Z Receiving objects:  62% (196/316)
+2023-07-11T05:35:02.1819395Z Receiving objects:  63% (200/316)
+2023-07-11T05:35:02.1820122Z Receiving objects:  64% (203/316)
+2023-07-11T05:35:02.1831283Z Receiving objects:  65% (206/316)
+2023-07-11T05:35:02.1831600Z Receiving objects:  66% (209/316)
+2023-07-11T05:35:02.1832659Z Receiving objects:  67% (212/316)
+2023-07-11T05:35:02.1832930Z Receiving objects:  68% (215/316)
+2023-07-11T05:35:02.1833179Z Receiving objects:  69% (219/316)
+2023-07-11T05:35:02.1833446Z Receiving objects:  70% (222/316)
+2023-07-11T05:35:02.1833712Z Receiving objects:  71% (225/316)
+2023-07-11T05:35:02.1833962Z Receiving objects:  72% (228/316)
+2023-07-11T05:35:02.1834478Z Receiving objects:  73% (231/316)
+2023-07-11T05:35:02.1835535Z Receiving objects:  74% (234/316)
+2023-07-11T05:35:02.1836706Z Receiving objects:  75% (237/316)
+2023-07-11T05:35:02.1836997Z Receiving objects:  76% (241/316)
+2023-07-11T05:35:02.1838000Z Receiving objects:  77% (244/316)
+2023-07-11T05:35:02.1838283Z Receiving objects:  78% (247/316)
+2023-07-11T05:35:02.1839454Z Receiving objects:  79% (250/316)
+2023-07-11T05:35:02.1841775Z Receiving objects:  80% (253/316)
+2023-07-11T05:35:02.1843854Z Receiving objects:  81% (256/316)
+2023-07-11T05:35:02.1844137Z Receiving objects:  82% (260/316)
+2023-07-11T05:35:02.1847648Z Receiving objects:  83% (263/316)
+2023-07-11T05:35:02.1849942Z Receiving objects:  84% (266/316)
+2023-07-11T05:35:02.1851183Z Receiving objects:  85% (269/316)
+2023-07-11T05:35:02.1852851Z Receiving objects:  86% (272/316)
+2023-07-11T05:35:02.1855019Z Receiving objects:  87% (275/316)
+2023-07-11T05:35:02.1856675Z Receiving objects:  88% (279/316)
+2023-07-11T05:35:02.1858344Z Receiving objects:  89% (282/316)
+2023-07-11T05:35:02.1860416Z Receiving objects:  90% (285/316)
+2023-07-11T05:35:02.1862379Z Receiving objects:  91% (288/316)
+2023-07-11T05:35:02.1864005Z Receiving objects:  92% (291/316)
+2023-07-11T05:35:02.1866267Z Receiving objects:  93% (294/316)
+2023-07-11T05:35:02.1868414Z Receiving objects:  94% (298/316)
+2023-07-11T05:35:02.1870148Z Receiving objects:  95% (301/316)
+2023-07-11T05:35:02.1871915Z Receiving objects:  96% (304/316)
+2023-07-11T05:35:02.1874224Z Receiving objects:  97% (307/316)
+2023-07-11T05:35:02.1876240Z Receiving objects:  98% (310/316)
+2023-07-11T05:35:02.1880972Z Receiving objects:  99% (313/316)
+2023-07-11T05:35:02.1881804Z Receiving objects: 100% (316/316)
+2023-07-11T05:35:02.1882473Z Receiving objects: 100% (316/316), 5.02 MiB | 21.15 MiB/s, done.
+2023-07-11T05:35:02.1885729Z Resolving deltas:   0% (0/74)
+2023-07-11T05:35:02.1890347Z Resolving deltas:   1% (1/74)
+2023-07-11T05:35:02.1892817Z Resolving deltas:   2% (2/74)
+2023-07-11T05:35:02.1899165Z Resolving deltas:   4% (3/74)
+2023-07-11T05:35:02.1899763Z Resolving deltas:   5% (4/74)
+2023-07-11T05:35:02.1900818Z Resolving deltas:   6% (5/74)
+2023-07-11T05:35:02.1901634Z Resolving deltas:   8% (6/74)
+2023-07-11T05:35:02.1904729Z Resolving deltas:   9% (7/74)
+2023-07-11T05:35:02.1909564Z Resolving deltas:  10% (8/74)
+2023-07-11T05:35:02.1911539Z Resolving deltas:  12% (9/74)
+2023-07-11T05:35:02.1915088Z Resolving deltas:  13% (10/74)
+2023-07-11T05:35:02.1916880Z Resolving deltas:  14% (11/74)
+2023-07-11T05:35:02.1921020Z Resolving deltas:  16% (12/74)
+2023-07-11T05:35:02.1921574Z Resolving deltas:  17% (13/74)
+2023-07-11T05:35:02.1921960Z Resolving deltas:  18% (14/74)
+2023-07-11T05:35:02.1923036Z Resolving deltas:  20% (15/74)
+2023-07-11T05:35:02.1923523Z Resolving deltas:  21% (16/74)
+2023-07-11T05:35:02.1924752Z Resolving deltas:  22% (17/74)
+2023-07-11T05:35:02.1925347Z Resolving deltas:  24% (18/74)
+2023-07-11T05:35:02.1927520Z Resolving deltas:  25% (19/74)
+2023-07-11T05:35:02.1927805Z Resolving deltas:  27% (20/74)
+2023-07-11T05:35:02.1930665Z Resolving deltas:  28% (21/74)
+2023-07-11T05:35:02.1931980Z Resolving deltas:  29% (22/74)
+2023-07-11T05:35:02.1936144Z Resolving deltas:  32% (24/74)
+2023-07-11T05:35:02.1936429Z Resolving deltas:  33% (25/74)
+2023-07-11T05:35:02.1948311Z Resolving deltas:  35% (26/74)
+2023-07-11T05:35:02.1948595Z Resolving deltas:  36% (27/74)
+2023-07-11T05:35:02.1948847Z Resolving deltas:  37% (28/74)
+2023-07-11T05:35:02.1949092Z Resolving deltas:  39% (29/74)
+2023-07-11T05:35:02.1949338Z Resolving deltas:  40% (30/74)
+2023-07-11T05:35:02.1949570Z Resolving deltas:  41% (31/74)
+2023-07-11T05:35:02.1950255Z Resolving deltas:  43% (32/74)
+2023-07-11T05:35:02.1950654Z Resolving deltas:  44% (33/74)
+2023-07-11T05:35:02.1950870Z Resolving deltas:  45% (34/74)
+2023-07-11T05:35:02.1951275Z Resolving deltas:  47% (35/74)
+2023-07-11T05:35:02.1951515Z Resolving deltas:  48% (36/74)
+2023-07-11T05:35:02.1951736Z Resolving deltas:  50% (37/74)
+2023-07-11T05:35:02.1951971Z Resolving deltas:  51% (38/74)
+2023-07-11T05:35:02.1952208Z Resolving deltas:  52% (39/74)
+2023-07-11T05:35:02.1952427Z Resolving deltas:  54% (40/74)
+2023-07-11T05:35:02.1952660Z Resolving deltas:  55% (41/74)
+2023-07-11T05:35:02.1952894Z Resolving deltas:  56% (42/74)
+2023-07-11T05:35:02.1953114Z Resolving deltas:  58% (43/74)
+2023-07-11T05:35:02.1953356Z Resolving deltas:  59% (44/74)
+2023-07-11T05:35:02.1953593Z Resolving deltas:  60% (45/74)
+2023-07-11T05:35:02.1953989Z Resolving deltas:  62% (46/74)
+2023-07-11T05:35:02.1954230Z Resolving deltas:  63% (47/74)
+2023-07-11T05:35:02.1954472Z Resolving deltas:  64% (48/74)
+2023-07-11T05:35:02.1954706Z Resolving deltas:  66% (49/74)
+2023-07-11T05:35:02.1954953Z Resolving deltas:  67% (50/74)
+2023-07-11T05:35:02.1955198Z Resolving deltas:  68% (51/74)
+2023-07-11T05:35:02.1955586Z Resolving deltas:  70% (52/74)
+2023-07-11T05:35:02.1955824Z Resolving deltas:  71% (53/74)
+2023-07-11T05:35:02.1956059Z Resolving deltas:  72% (54/74)
+2023-07-11T05:35:02.1956293Z Resolving deltas:  74% (55/74)
+2023-07-11T05:35:02.1956515Z Resolving deltas:  75% (56/74)
+2023-07-11T05:35:02.1956749Z Resolving deltas:  77% (57/74)
+2023-07-11T05:35:02.1956982Z Resolving deltas:  78% (58/74)
+2023-07-11T05:35:02.1957203Z Resolving deltas:  79% (59/74)
+2023-07-11T05:35:02.1957436Z Resolving deltas:  81% (60/74)
+2023-07-11T05:35:02.1957834Z Resolving deltas:  82% (61/74)
+2023-07-11T05:35:02.1958055Z Resolving deltas:  83% (62/74)
+2023-07-11T05:35:02.1958289Z Resolving deltas:  85% (63/74)
+2023-07-11T05:35:02.1958522Z Resolving deltas:  86% (64/74)
+2023-07-11T05:35:02.1958909Z Resolving deltas:  87% (65/74)
+2023-07-11T05:35:02.1959159Z Resolving deltas:  89% (66/74)
+2023-07-11T05:35:02.1959555Z Resolving deltas:  90% (67/74)
+2023-07-11T05:35:02.1959775Z Resolving deltas:  91% (68/74)
+2023-07-11T05:35:02.1960007Z Resolving deltas:  93% (69/74)
+2023-07-11T05:35:02.1960243Z Resolving deltas:  94% (70/74)
+2023-07-11T05:35:02.1960463Z Resolving deltas:  95% (71/74)
+2023-07-11T05:35:02.1967618Z Resolving deltas:  97% (72/74)
+2023-07-11T05:35:02.1970601Z Resolving deltas:  98% (73/74)
+2023-07-11T05:35:02.1976099Z Resolving deltas: 100% (74/74)
+2023-07-11T05:35:02.1976780Z Resolving deltas: 100% (74/74), done.
+2023-07-11T05:35:02.2266954Z From https://github.com/spotify/missinglink
+2023-07-11T05:35:02.2268140Z  * [new ref]         f8f4d9c507214f12fd0072b2a2dc5b889b73a458 -> pull/321/merge
+2023-07-11T05:35:02.2307481Z ##[endgroup]
+2023-07-11T05:35:02.2308297Z ##[group]Determining the checkout info
+2023-07-11T05:35:02.2313572Z ##[endgroup]
+2023-07-11T05:35:02.2314732Z ##[group]Checking out the ref
+2023-07-11T05:35:02.2320721Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/321/merge
+2023-07-11T05:35:02.2909121Z Note: switching to 'refs/remotes/pull/321/merge'.
+2023-07-11T05:35:02.2909653Z 
+2023-07-11T05:35:02.2917125Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-11T05:35:02.2917908Z changes and commit them, and you can discard any commits you make in this
+2023-07-11T05:35:02.2918947Z state without impacting any branches by switching back to a branch.
+2023-07-11T05:35:02.2919857Z 
+2023-07-11T05:35:02.2920308Z If you want to create a new branch to retain commits you create, you may
+2023-07-11T05:35:02.2921570Z do so (now or later) by using -c with the switch command. Example:
+2023-07-11T05:35:02.2922275Z 
+2023-07-11T05:35:02.2923038Z   git switch -c <new-branch-name>
+2023-07-11T05:35:02.2923541Z 
+2023-07-11T05:35:02.2925794Z Or undo this operation with:
+2023-07-11T05:35:02.2926432Z 
+2023-07-11T05:35:02.2927062Z   git switch -
+2023-07-11T05:35:02.2928036Z 
+2023-07-11T05:35:02.2929245Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-11T05:35:02.2930728Z 
+2023-07-11T05:35:02.2931699Z HEAD is now at f8f4d9c Merge 78445745997d3ebe5d1e35d9762d95af875c85ec into 5a670cc1a4c469d4ddb6f5c7b95bcffe0044b152
+2023-07-11T05:35:02.2935060Z ##[endgroup]
+2023-07-11T05:35:02.2981266Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-11T05:35:02.3016906Z 'f8f4d9c507214f12fd0072b2a2dc5b889b73a458'

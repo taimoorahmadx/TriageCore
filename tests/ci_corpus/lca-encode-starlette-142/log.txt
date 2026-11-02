@@ -1,0 +1,106 @@
+===== Python 3.8/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
++ ./scripts/sync-version
++ ruff format --check --diff starlette tests
+67 files already formatted
++ mypy starlette
+starlette/concurrency.py:32: error: Need more than 1 value to unpack (2 expected)  [misc]
+starlette/_utils.py:77: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:12: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: "dict" is not subscriptable, use "typing.Dict" instead  [misc]
+starlette/exceptions.py:30: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:59: error: "list" is not subscriptable, use "typing.List" instead  [misc]
+Found 7 errors in 3 files (checked 35 source files)
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.9/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ ./scripts/sync-version
++ ruff format --check --diff starlette tests
+67 files already formatted
++ mypy starlette
+starlette/concurrency.py:32: error: Need more than 1 value to unpack (2 expected)  [misc]
+starlette/_utils.py:77: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:12: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: "dict" is not subscriptable, use "typing.Dict" instead  [misc]
+starlette/exceptions.py:30: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:59: error: "list" is not subscriptable, use "typing.List" instead  [misc]
+Found 7 errors in 3 files (checked 35 source files)
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.10/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
++ ./scripts/sync-version
++ ruff format --check --diff starlette tests
+67 files already formatted
++ mypy starlette
+starlette/concurrency.py:32: error: Need more than 1 value to unpack (2 expected)  [misc]
+starlette/_utils.py:77: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:12: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: "dict" is not subscriptable, use "typing.Dict" instead  [misc]
+starlette/exceptions.py:30: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:59: error: "list" is not subscriptable, use "typing.List" instead  [misc]
+Found 7 errors in 3 files (checked 35 source files)
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.11/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ ./scripts/sync-version
++ ruff format --check --diff starlette tests
+67 files already formatted
++ mypy starlette
+starlette/concurrency.py:32: error: Need more than 1 value to unpack (2 expected)  [misc]
+starlette/_utils.py:77: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:12: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:13: error: "dict" is not subscriptable, use "typing.Dict" instead  [misc]
+starlette/exceptions.py:30: error: X | Y syntax for unions requires Python 3.10  [syntax]
+starlette/exceptions.py:59: error: "list" is not subscriptable, use "typing.List" instead  [misc]
+Found 7 errors in 3 files (checked 35 source files)
+##[error]Process completed with exit code 1.

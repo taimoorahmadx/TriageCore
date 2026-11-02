@@ -1,0 +1,50 @@
+repo: jenkinsci/file-operations-plugin
+run_id: 8d55e2e454692c14deeffa58518698ad112602a0
+head_sha: 8d55e2e454692c14deeffa58518698ad112602a0
+run_attempts: []
+commits:
+- sha: 8d55e2e454692c14deeffa58518698ad112602a0
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: a1704da2a024a4cca615d9b5ccf4d2d0eb931ff2
+  author: jonesbusy
+  files:
+  - pom.xml
+- sha: 6fd4e9d6d3b6448303edb3369ef5e3a134b4bd0f
+  author: jonesbusy
+  files:
+  - pom.xml
+- sha: f4a4af3d2acd42f88b24b76a063c5713c7f628b4
+  author: jonesbusy
+  files:
+  - pom.xml
+- sha: d13a6948c864c6f118e929d0995fa395028b5d76
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 6fb69c2d31a19df91f124a936599dbcb8dd3a52d
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 39af44d7812a3066f7b32c1a470fb6c0e8a54ce6
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 64ea78f135b6786005d820c0de136124b399a373
+  author: jonesbusy
+  files:
+  - pom.xml
+- sha: 893741d05276d9884c14aae3b67c3b38f2dfb4ee
+  author: jonesbusy
+  files:
+  - pom.xml
+- sha: 92a8032cb2e996614f34b59aa99a7edae35f9168
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,60 @@
+repo: optuna/optuna
+run_id: '69'
+head_sha: 3137ef65975fc93e9e82b130e545028223cef408
+run_attempts: []
+commits:
+- sha: 3137ef65975fc93e9e82b130e545028223cef408
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/nsgaii/_constraints_evaluation.py
+  - optuna/study/_multi_objective.py
+- sha: 117d42422852b4183341b59a615eaf1dc79878c9
+  author: Alnusjaponica
+  files:
+  - tests/samplers_tests/test_nsgaii.py
+- sha: 7a481bc3cd33d672ffabf7b8b7a70174e6823214
+  author: Alnusjaponica
+  files:
+  - tests/samplers_tests/tpe_tests/test_multi_objective_sampler.py
+  - tests/study_tests/test_multi_objective.py
+- sha: 886906b6a632fb5c87f18a2c2fd57a501d9f3476
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/_nsgaiii/_elite_population_selection_strategy.py
+  - optuna/samplers/nsgaii/_elite_population_selection_strategy.py
+- sha: 0b143fbf51f35e5c2e80d105e789a7224a0d2ec1
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/nsgaii/_elite_population_selection_strategy.py
+- sha: 35388353131dafd5591fdfff92e25c45fd3682a0
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/_nsgaiii/_elite_population_selection_strategy.py
+  - optuna/samplers/nsgaii/_child_generation_strategy.py
+  - optuna/samplers/nsgaii/_elite_population_selection_strategy.py
+  - tests/samplers_tests/test_nsgaii.py
+- sha: 2469405bc5bc4ceafeca830d71d7ff4d9a8794d2
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/_nsgaiii/_elite_population_selection_strategy.py
+  - optuna/samplers/nsgaii/_child_generation_strategy.py
+  - optuna/samplers/nsgaii/_constraints_evaluation.py
+  - optuna/samplers/nsgaii/_elite_population_selection_strategy.py
+  - tests/samplers_tests/test_nsgaii.py
+- sha: 9cc421f03b835f897d876a12a4bb684148406e81
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/nsgaii/_dominates.py
+- sha: 4c4746c0299ca198a3e9878e93fb111056ee0a36
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/nsgaii/_dominates.py
+- sha: 12bd87c0a228c16d2cdd237b680c3d441e093cb1
+  author: Alnusjaponica
+  files:
+  - optuna/samplers/_tpe/sampler.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

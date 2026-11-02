@@ -1,0 +1,611 @@
+2023-08-08T19:39:30.8832503Z ##[section]Starting: Prepare job dependencies
+2023-08-08T19:39:30.8834710Z Evaluating strategy
+2023-08-08T19:39:30.8842466Z Creating job '_8'
+2023-08-08T19:39:30.8845146Z Evaluating timeout
+2023-08-08T19:39:30.8845192Z Evaluating cancel timeout
+2023-08-08T19:39:30.8845216Z Evaluating continue on error
+2023-08-08T19:39:30.8845240Z Evaluating target
+2023-08-08T19:39:30.8845746Z Creating job '_11'
+2023-08-08T19:39:30.8848108Z Evaluating timeout
+2023-08-08T19:39:30.8848135Z Evaluating cancel timeout
+2023-08-08T19:39:30.8848156Z Evaluating continue on error
+2023-08-08T19:39:30.8848194Z Evaluating target
+2023-08-08T19:39:30.8849712Z ##[section]Finishing: Prepare job dependencies
+
+2023-08-08T19:39:31.2135978Z Requested labels: ubuntu-latest
+2023-08-08T19:39:31.2136312Z Job defined at: googleapis/java-pubsub-group-kafka-connector/.github/workflows/ci.yaml@refs/pull/254/merge
+2023-08-08T19:39:31.2136474Z Waiting for a runner to pick up this job...
+2023-08-08T19:39:33.5087322Z Job is waiting for a hosted runner to come online.
+2023-08-08T19:39:34.7129211Z Job is about to start running on the hosted runner: GitHub Actions 17 (hosted)
+2023-08-08T19:39:36.9788442Z Current runner version: '2.307.1'
+2023-08-08T19:39:36.9818305Z ##[group]Operating System
+2023-08-08T19:39:36.9818917Z Ubuntu
+2023-08-08T19:39:36.9819182Z 22.04.2
+2023-08-08T19:39:36.9819508Z LTS
+2023-08-08T19:39:36.9819822Z ##[endgroup]
+2023-08-08T19:39:36.9820160Z ##[group]Runner Image
+2023-08-08T19:39:36.9820542Z Image: ubuntu-22.04
+2023-08-08T19:39:36.9820934Z Version: 20230728.3.0
+2023-08-08T19:39:36.9821458Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230728.3/images/linux/Ubuntu2204-Readme.md
+2023-08-08T19:39:36.9822179Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230728.3
+2023-08-08T19:39:36.9822706Z ##[endgroup]
+2023-08-08T19:39:36.9823100Z ##[group]Runner Image Provisioner
+2023-08-08T19:39:36.9823419Z 2.0.264.1
+2023-08-08T19:39:36.9823748Z ##[endgroup]
+2023-08-08T19:39:36.9824815Z ##[group]GITHUB_TOKEN Permissions
+2023-08-08T19:39:36.9825568Z Actions: read
+2023-08-08T19:39:36.9825856Z Checks: read
+2023-08-08T19:39:36.9826444Z Contents: read
+2023-08-08T19:39:36.9826865Z Deployments: read
+2023-08-08T19:39:36.9827231Z Discussions: read
+2023-08-08T19:39:36.9827575Z Issues: read
+2023-08-08T19:39:36.9827891Z Metadata: read
+2023-08-08T19:39:36.9828273Z Packages: read
+2023-08-08T19:39:36.9828611Z Pages: read
+2023-08-08T19:39:36.9828906Z PullRequests: read
+2023-08-08T19:39:36.9829294Z RepositoryProjects: read
+2023-08-08T19:39:36.9829740Z SecurityEvents: read
+2023-08-08T19:39:36.9830048Z Statuses: read
+2023-08-08T19:39:36.9830388Z ##[endgroup]
+2023-08-08T19:39:36.9834216Z Secret source: None
+2023-08-08T19:39:36.9834707Z Prepare workflow directory
+2023-08-08T19:39:37.0599769Z Prepare all required actions
+2023-08-08T19:39:37.0799640Z Getting action download info
+2023-08-08T19:39:37.3409089Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-08T19:39:37.6466571Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-08T19:39:38.0133943Z Complete job name: dependencies (11)
+2023-08-08T19:39:38.1289455Z ##[group]Run actions/checkout@v3
+2023-08-08T19:39:38.1289793Z with:
+2023-08-08T19:39:38.1290300Z   repository: googleapis/java-pubsub-group-kafka-connector
+2023-08-08T19:39:38.1290894Z   token: ***
+2023-08-08T19:39:38.1291118Z   ssh-strict: true
+2023-08-08T19:39:38.1291367Z   persist-credentials: true
+2023-08-08T19:39:38.1291594Z   clean: true
+2023-08-08T19:39:38.1291848Z   sparse-checkout-cone-mode: true
+2023-08-08T19:39:38.1292111Z   fetch-depth: 1
+2023-08-08T19:39:38.1292320Z   lfs: false
+2023-08-08T19:39:38.1292528Z   submodules: false
+2023-08-08T19:39:38.1292769Z   set-safe-directory: true
+2023-08-08T19:39:38.1293009Z ##[endgroup]
+2023-08-08T19:39:38.3664459Z Syncing repository: googleapis/java-pubsub-group-kafka-connector
+2023-08-08T19:39:38.3666877Z ##[group]Getting Git version info
+2023-08-08T19:39:38.3667812Z Working directory is '/home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector'
+2023-08-08T19:39:38.3669082Z [command]/usr/bin/git version
+2023-08-08T19:39:38.3703936Z git version 2.41.0
+2023-08-08T19:39:38.3734646Z ##[endgroup]
+2023-08-08T19:39:38.3753909Z Temporarily overriding HOME='/home/runner/work/_temp/1eeee5d8-3221-48fb-9938-51ce921a6377' before making global git config changes
+2023-08-08T19:39:38.3754907Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-08T19:39:38.3761818Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector
+2023-08-08T19:39:38.3808290Z Deleting the contents of '/home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector'
+2023-08-08T19:39:38.3815368Z ##[group]Initializing the repository
+2023-08-08T19:39:38.3820633Z [command]/usr/bin/git init /home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector
+2023-08-08T19:39:38.3891270Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-08T19:39:38.3892333Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-08T19:39:38.3892874Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-08T19:39:38.3893287Z hint: 
+2023-08-08T19:39:38.3894115Z hint: 	git config --global init.defaultBranch <name>
+2023-08-08T19:39:38.3894487Z hint: 
+2023-08-08T19:39:38.3895356Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-08T19:39:38.3895944Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-08T19:39:38.3896320Z hint: 
+2023-08-08T19:39:38.3897000Z hint: 	git branch -m <name>
+2023-08-08T19:39:38.3911291Z Initialized empty Git repository in /home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector/.git/
+2023-08-08T19:39:38.3925945Z [command]/usr/bin/git remote add origin https://github.com/googleapis/java-pubsub-group-kafka-connector
+2023-08-08T19:39:38.3976929Z ##[endgroup]
+2023-08-08T19:39:38.3977567Z ##[group]Disabling automatic garbage collection
+2023-08-08T19:39:38.3983982Z [command]/usr/bin/git config --local gc.auto 0
+2023-08-08T19:39:38.4019675Z ##[endgroup]
+2023-08-08T19:39:38.4020207Z ##[group]Setting up auth
+2023-08-08T19:39:38.4029674Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-08T19:39:38.4076299Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-08T19:39:38.4477359Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-08T19:39:38.4503956Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-08T19:39:38.4762254Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-08T19:39:38.4798885Z ##[endgroup]
+2023-08-08T19:39:38.4801347Z ##[group]Fetching the repository
+2023-08-08T19:39:38.4814575Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +c960b237b736f5bda01074320510f37880a7bd8c:refs/remotes/pull/254/merge
+2023-08-08T19:39:38.6878827Z remote: Enumerating objects: 154, done.        
+2023-08-08T19:39:38.6892529Z remote: Counting objects:   0% (1/154)        
+2023-08-08T19:39:38.6893371Z remote: Counting objects:   1% (2/154)        
+2023-08-08T19:39:38.6893923Z remote: Counting objects:   2% (4/154)        
+2023-08-08T19:39:38.6894448Z remote: Counting objects:   3% (5/154)        
+2023-08-08T19:39:38.6894870Z remote: Counting objects:   4% (7/154)        
+2023-08-08T19:39:38.6896390Z remote: Counting objects:   5% (8/154)        
+2023-08-08T19:39:38.6896725Z remote: Counting objects:   6% (10/154)        
+2023-08-08T19:39:38.6897571Z remote: Counting objects:   7% (11/154)        
+2023-08-08T19:39:38.6898111Z remote: Counting objects:   8% (13/154)        
+2023-08-08T19:39:38.6898441Z remote: Counting objects:   9% (14/154)        
+2023-08-08T19:39:38.6898752Z remote: Counting objects:  10% (16/154)        
+2023-08-08T19:39:38.6899124Z remote: Counting objects:  11% (17/154)        
+2023-08-08T19:39:38.6899446Z remote: Counting objects:  12% (19/154)        
+2023-08-08T19:39:38.6899851Z remote: Counting objects:  13% (21/154)        
+2023-08-08T19:39:38.6900165Z remote: Counting objects:  14% (22/154)        
+2023-08-08T19:39:38.6900481Z remote: Counting objects:  15% (24/154)        
+2023-08-08T19:39:38.6900918Z remote: Counting objects:  16% (25/154)        
+2023-08-08T19:39:38.6901194Z remote: Counting objects:  17% (27/154)        
+2023-08-08T19:39:38.6901597Z remote: Counting objects:  18% (28/154)        
+2023-08-08T19:39:38.6901870Z remote: Counting objects:  19% (30/154)        
+2023-08-08T19:39:38.6902173Z remote: Counting objects:  20% (31/154)        
+2023-08-08T19:39:38.6902785Z remote: Counting objects:  21% (33/154)        
+2023-08-08T19:39:38.6903661Z remote: Counting objects:  22% (34/154)        
+2023-08-08T19:39:38.6904276Z remote: Counting objects:  23% (36/154)        
+2023-08-08T19:39:38.6904552Z remote: Counting objects:  24% (37/154)        
+2023-08-08T19:39:38.6904827Z remote: Counting objects:  25% (39/154)        
+2023-08-08T19:39:38.6905229Z remote: Counting objects:  26% (41/154)        
+2023-08-08T19:39:38.6905510Z remote: Counting objects:  27% (42/154)        
+2023-08-08T19:39:38.6905795Z remote: Counting objects:  28% (44/154)        
+2023-08-08T19:39:38.6906070Z remote: Counting objects:  29% (45/154)        
+2023-08-08T19:39:38.6906328Z remote: Counting objects:  30% (47/154)        
+2023-08-08T19:39:38.6906598Z remote: Counting objects:  31% (48/154)        
+2023-08-08T19:39:38.6906914Z remote: Counting objects:  32% (50/154)        
+2023-08-08T19:39:38.6907674Z remote: Counting objects:  33% (51/154)        
+2023-08-08T19:39:38.6907977Z remote: Counting objects:  34% (53/154)        
+2023-08-08T19:39:38.6908612Z remote: Counting objects:  35% (54/154)        
+2023-08-08T19:39:38.6908880Z remote: Counting objects:  36% (56/154)        
+2023-08-08T19:39:38.6909157Z remote: Counting objects:  37% (57/154)        
+2023-08-08T19:39:38.6909432Z remote: Counting objects:  38% (59/154)        
+2023-08-08T19:39:38.6909704Z remote: Counting objects:  39% (61/154)        
+2023-08-08T19:39:38.6909965Z remote: Counting objects:  40% (62/154)        
+2023-08-08T19:39:38.6910731Z remote: Counting objects:  41% (64/154)        
+2023-08-08T19:39:38.6911370Z remote: Counting objects:  42% (65/154)        
+2023-08-08T19:39:38.6911645Z remote: Counting objects:  43% (67/154)        
+2023-08-08T19:39:38.6911917Z remote: Counting objects:  44% (68/154)        
+2023-08-08T19:39:38.6912191Z remote: Counting objects:  45% (70/154)        
+2023-08-08T19:39:38.6912819Z remote: Counting objects:  46% (71/154)        
+2023-08-08T19:39:38.6913654Z remote: Counting objects:  47% (73/154)        
+2023-08-08T19:39:38.6913963Z remote: Counting objects:  48% (74/154)        
+2023-08-08T19:39:38.6914235Z remote: Counting objects:  49% (76/154)        
+2023-08-08T19:39:38.6914880Z remote: Counting objects:  50% (77/154)        
+2023-08-08T19:39:38.6915486Z remote: Counting objects:  51% (79/154)        
+2023-08-08T19:39:38.6915769Z remote: Counting objects:  52% (81/154)        
+2023-08-08T19:39:38.6916031Z remote: Counting objects:  53% (82/154)        
+2023-08-08T19:39:38.6916647Z remote: Counting objects:  54% (84/154)        
+2023-08-08T19:39:38.6917242Z remote: Counting objects:  55% (85/154)        
+2023-08-08T19:39:38.6917520Z remote: Counting objects:  56% (87/154)        
+2023-08-08T19:39:38.6918116Z remote: Counting objects:  57% (88/154)        
+2023-08-08T19:39:38.6918394Z remote: Counting objects:  58% (90/154)        
+2023-08-08T19:39:38.6918988Z remote: Counting objects:  59% (91/154)        
+2023-08-08T19:39:38.6920372Z remote: Counting objects:  60% (93/154)        
+2023-08-08T19:39:38.6921125Z remote: Counting objects:  61% (94/154)        
+2023-08-08T19:39:38.6921409Z remote: Counting objects:  62% (96/154)        
+2023-08-08T19:39:38.6921686Z remote: Counting objects:  63% (98/154)        
+2023-08-08T19:39:38.6922515Z remote: Counting objects:  64% (99/154)        
+2023-08-08T19:39:38.6923115Z remote: Counting objects:  65% (101/154)        
+2023-08-08T19:39:38.6923411Z remote: Counting objects:  66% (102/154)        
+2023-08-08T19:39:38.6923697Z remote: Counting objects:  67% (104/154)        
+2023-08-08T19:39:38.6924620Z remote: Counting objects:  68% (105/154)        
+2023-08-08T19:39:38.6924916Z remote: Counting objects:  69% (107/154)        
+2023-08-08T19:39:38.6925192Z remote: Counting objects:  70% (108/154)        
+2023-08-08T19:39:38.6925861Z remote: Counting objects:  71% (110/154)        
+2023-08-08T19:39:38.6926468Z remote: Counting objects:  72% (111/154)        
+2023-08-08T19:39:38.6926750Z remote: Counting objects:  73% (113/154)        
+2023-08-08T19:39:38.6928915Z remote: Counting objects:  74% (114/154)        
+2023-08-08T19:39:38.6929258Z remote: Counting objects:  75% (116/154)        
+2023-08-08T19:39:38.6929536Z remote: Counting objects:  76% (118/154)        
+2023-08-08T19:39:38.6930466Z remote: Counting objects:  77% (119/154)        
+2023-08-08T19:39:38.6931087Z remote: Counting objects:  78% (121/154)        
+2023-08-08T19:39:38.6931373Z remote: Counting objects:  79% (122/154)        
+2023-08-08T19:39:38.6931647Z remote: Counting objects:  80% (124/154)        
+2023-08-08T19:39:38.6931921Z remote: Counting objects:  81% (125/154)        
+2023-08-08T19:39:38.6932186Z remote: Counting objects:  82% (127/154)        
+2023-08-08T19:39:38.6932825Z remote: Counting objects:  83% (128/154)        
+2023-08-08T19:39:38.6933464Z remote: Counting objects:  84% (130/154)        
+2023-08-08T19:39:38.6933739Z remote: Counting objects:  85% (131/154)        
+2023-08-08T19:39:38.6934012Z remote: Counting objects:  86% (133/154)        
+2023-08-08T19:39:38.6934307Z remote: Counting objects:  87% (134/154)        
+2023-08-08T19:39:38.6935668Z remote: Counting objects:  88% (136/154)        
+2023-08-08T19:39:38.6936180Z remote: Counting objects:  89% (138/154)        
+2023-08-08T19:39:38.6936913Z remote: Counting objects:  90% (139/154)        
+2023-08-08T19:39:38.6937529Z remote: Counting objects:  91% (141/154)        
+2023-08-08T19:39:38.6937794Z remote: Counting objects:  92% (142/154)        
+2023-08-08T19:39:38.6938651Z remote: Counting objects:  93% (144/154)        
+2023-08-08T19:39:38.6938962Z remote: Counting objects:  94% (145/154)        
+2023-08-08T19:39:38.6939225Z remote: Counting objects:  95% (147/154)        
+2023-08-08T19:39:38.6939501Z remote: Counting objects:  96% (148/154)        
+2023-08-08T19:39:38.6939773Z remote: Counting objects:  97% (150/154)        
+2023-08-08T19:39:38.6940046Z remote: Counting objects:  98% (151/154)        
+2023-08-08T19:39:38.6940307Z remote: Counting objects:  99% (153/154)        
+2023-08-08T19:39:38.6940817Z remote: Counting objects: 100% (154/154)        
+2023-08-08T19:39:38.6941183Z remote: Counting objects: 100% (154/154), done.        
+2023-08-08T19:39:38.6941491Z remote: Compressing objects:   0% (1/126)        
+2023-08-08T19:39:38.6942214Z remote: Compressing objects:   1% (2/126)        
+2023-08-08T19:39:38.6942515Z remote: Compressing objects:   2% (3/126)        
+2023-08-08T19:39:38.6942839Z remote: Compressing objects:   3% (4/126)        
+2023-08-08T19:39:38.6943130Z remote: Compressing objects:   4% (6/126)        
+2023-08-08T19:39:38.6943536Z remote: Compressing objects:   5% (7/126)        
+2023-08-08T19:39:38.6943817Z remote: Compressing objects:   6% (8/126)        
+2023-08-08T19:39:38.6944109Z remote: Compressing objects:   7% (9/126)        
+2023-08-08T19:39:38.6944404Z remote: Compressing objects:   8% (11/126)        
+2023-08-08T19:39:38.6944703Z remote: Compressing objects:   9% (12/126)        
+2023-08-08T19:39:38.6944987Z remote: Compressing objects:  10% (13/126)        
+2023-08-08T19:39:38.6945305Z remote: Compressing objects:  11% (14/126)        
+2023-08-08T19:39:38.6945599Z remote: Compressing objects:  12% (16/126)        
+2023-08-08T19:39:38.6945877Z remote: Compressing objects:  13% (17/126)        
+2023-08-08T19:39:38.6946654Z remote: Compressing objects:  14% (18/126)        
+2023-08-08T19:39:38.6947303Z remote: Compressing objects:  15% (19/126)        
+2023-08-08T19:39:38.6947635Z remote: Compressing objects:  16% (21/126)        
+2023-08-08T19:39:38.6947928Z remote: Compressing objects:  17% (22/126)        
+2023-08-08T19:39:38.6948217Z remote: Compressing objects:  18% (23/126)        
+2023-08-08T19:39:38.6948507Z remote: Compressing objects:  19% (24/126)        
+2023-08-08T19:39:38.6949059Z remote: Compressing objects:  20% (26/126)        
+2023-08-08T19:39:38.6949469Z remote: Compressing objects:  21% (27/126)        
+2023-08-08T19:39:38.6949759Z remote: Compressing objects:  22% (28/126)        
+2023-08-08T19:39:38.6950038Z remote: Compressing objects:  23% (29/126)        
+2023-08-08T19:39:38.6950569Z remote: Compressing objects:  24% (31/126)        
+2023-08-08T19:39:38.6951688Z remote: Compressing objects:  25% (32/126)        
+2023-08-08T19:39:38.6951988Z remote: Compressing objects:  26% (33/126)        
+2023-08-08T19:39:38.6952623Z remote: Compressing objects:  27% (35/126)        
+2023-08-08T19:39:38.6952917Z remote: Compressing objects:  28% (36/126)        
+2023-08-08T19:39:38.6953204Z remote: Compressing objects:  29% (37/126)        
+2023-08-08T19:39:38.6953480Z remote: Compressing objects:  30% (38/126)        
+2023-08-08T19:39:38.6953770Z remote: Compressing objects:  31% (40/126)        
+2023-08-08T19:39:38.6954175Z remote: Compressing objects:  32% (41/126)        
+2023-08-08T19:39:38.6954452Z remote: Compressing objects:  33% (42/126)        
+2023-08-08T19:39:38.6954740Z remote: Compressing objects:  34% (43/126)        
+2023-08-08T19:39:38.6955073Z remote: Compressing objects:  35% (45/126)        
+2023-08-08T19:39:38.6955365Z remote: Compressing objects:  36% (46/126)        
+2023-08-08T19:39:38.6955753Z remote: Compressing objects:  37% (47/126)        
+2023-08-08T19:39:38.6956047Z remote: Compressing objects:  38% (48/126)        
+2023-08-08T19:39:38.6956336Z remote: Compressing objects:  39% (50/126)        
+2023-08-08T19:39:38.6956609Z remote: Compressing objects:  40% (51/126)        
+2023-08-08T19:39:38.6956935Z remote: Compressing objects:  41% (52/126)        
+2023-08-08T19:39:38.6957225Z remote: Compressing objects:  42% (53/126)        
+[... 35336 lines removed by TriageCore ...]
+2023-08-08T19:42:01.4492930Z [WARNING]   - META-INF/maven/com.google.errorprone/error_prone_annotations/pom.properties
+2023-08-08T19:42:01.4493515Z [WARNING]   - META-INF/maven/com.google.errorprone/error_prone_annotations/pom.xml
+2023-08-08T19:42:01.4494108Z [WARNING] auto-value-1.10.1.jar, j2objc-annotations-1.3.jar define 2 overlapping resources: 
+2023-08-08T19:42:01.4494683Z [WARNING]   - META-INF/maven/com.google.j2objc/j2objc-annotations/pom.properties
+2023-08-08T19:42:01.4495594Z [WARNING]   - META-INF/maven/com.google.j2objc/j2objc-annotations/pom.xml
+2023-08-08T19:42:01.4498142Z [WARNING] auto-value-1.10.1.jar, listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar define 2 overlapping resources: 
+2023-08-08T19:42:01.4498879Z [WARNING]   - META-INF/maven/com.google.guava/listenablefuture/pom.properties
+2023-08-08T19:42:01.4499431Z [WARNING]   - META-INF/maven/com.google.guava/listenablefuture/pom.xml
+2023-08-08T19:42:01.4509331Z [WARNING] auto-value-1.10.1.jar, guava-31.1-jre.jar define 2 overlapping resources: 
+2023-08-08T19:42:01.4510249Z [WARNING]   - META-INF/maven/com.google.guava/guava/pom.properties
+2023-08-08T19:42:01.5176991Z [WARNING]   - META-INF/maven/com.google.guava/guava/pom.xml
+2023-08-08T19:42:01.5178442Z [WARNING] auto-value-1.10.1.jar, failureaccess-1.0.1.jar define 2 overlapping resources: 
+2023-08-08T19:42:01.5179353Z [WARNING]   - META-INF/maven/com.google.guava/failureaccess/pom.properties
+2023-08-08T19:42:01.5192404Z [WARNING]   - META-INF/maven/com.google.guava/failureaccess/pom.xml
+2023-08-08T19:42:01.5193791Z [WARNING] maven-shade-plugin has detected that some class files are
+2023-08-08T19:42:01.5194924Z [WARNING] present in two or more JARs. When this happens, only one
+2023-08-08T19:42:01.5196500Z [WARNING] single version of the class is copied to the uber jar.
+2023-08-08T19:42:01.5198725Z [WARNING] Usually this is not harmful and you can skip these warnings,
+2023-08-08T19:42:01.5199932Z [WARNING] otherwise try to manually exclude artifacts based on
+2023-08-08T19:42:01.5201533Z [WARNING] mvn dependency:tree -Ddetail=true and the above output.
+2023-08-08T19:42:01.5204270Z [WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+2023-08-08T19:42:01.5219510Z [INFO] Replacing original artifact with shaded artifact.
+2023-08-08T19:42:01.5227699Z [INFO] Replacing D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\pubsub-group-kafka-connector-1.2.0.jar with D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\pubsub-group-kafka-connector-1.2.0-shaded.jar
+2023-08-08T19:42:01.5228516Z [INFO] 
+2023-08-08T19:42:01.5229046Z [INFO] --- maven-failsafe-plugin:3.0.0-M7:integration-test (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5229865Z [INFO] Tests are skipped.
+2023-08-08T19:42:01.5230157Z [INFO] 
+2023-08-08T19:42:01.5230645Z [INFO] --- maven-failsafe-plugin:3.0.0-M7:verify (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5231064Z [INFO] Tests are skipped.
+2023-08-08T19:42:01.5231343Z [INFO] 
+2023-08-08T19:42:01.5231809Z [INFO] >>> clirr-maven-plugin:2.8:check (default) > compile @ pubsub-group-kafka-connector >>>
+2023-08-08T19:42:01.5232193Z [INFO] 
+2023-08-08T19:42:01.5232666Z [INFO] --- maven-enforcer-plugin:3.1.0:enforce (enforce) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5233358Z [INFO] Skipping Rule Enforcement.
+2023-08-08T19:42:01.5233647Z [INFO] 
+2023-08-08T19:42:01.5234126Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5235115Z [INFO] argLine set to -javaagent:C:\\Users\\runneradmin\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.8\\org.jacoco.agent-0.8.8-runtime.jar=destfile=D:\\a\\java-pubsub-group-kafka-connector\\java-pubsub-group-kafka-connector\\target\\jacoco.exec
+2023-08-08T19:42:01.5235908Z [INFO] 
+2023-08-08T19:42:01.5236382Z [INFO] --- protobuf-maven-plugin:0.6.1:compile (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5237162Z [INFO] D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto does not exist. Review the configuration or consider disabling the plugin.
+2023-08-08T19:42:01.5237673Z [INFO] 
+2023-08-08T19:42:01.5238156Z [INFO] --- protobuf-maven-plugin:0.6.1:compile-custom (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5238942Z [INFO] D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto does not exist. Review the configuration or consider disabling the plugin.
+2023-08-08T19:42:01.5239433Z [INFO] 
+2023-08-08T19:42:01.5239977Z [INFO] --- build-helper-maven-plugin:3.3.0:add-resource (add-main-proto-resources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5240417Z [INFO] 
+2023-08-08T19:42:01.5240904Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5241523Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-08T19:42:01.5241877Z [INFO] Copying 1 resource
+2023-08-08T19:42:01.5242481Z [INFO] skip non existing resourceDirectory D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto
+2023-08-08T19:42:01.5243267Z [INFO] skip non existing resourceDirectory D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto
+2023-08-08T19:42:01.5243721Z [INFO] 
+2023-08-08T19:42:01.5244215Z [INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:01.5244725Z [INFO] Changes detected - recompiling the module!
+2023-08-08T19:42:01.5245369Z [INFO] Compiling 28 source files to D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\classes
+2023-08-08T19:42:02.1958691Z [WARNING] /D:/a/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector/src/main/java/com/google/pubsub/kafka/source/CloudPubSubSourceTask.java:[356,15] commitRecord(org.apache.kafka.connect.source.SourceRecord) in org.apache.kafka.connect.source.SourceTask has been deprecated
+2023-08-08T19:42:02.1960285Z [INFO] /D:/a/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector/src/main/java/com/google/pubsublite/kafka/sink/Schemas.java: Some input files use unchecked or unsafe operations.
+2023-08-08T19:42:02.1961311Z [INFO] /D:/a/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector/src/main/java/com/google/pubsublite/kafka/sink/Schemas.java: Recompile with -Xlint:unchecked for details.
+2023-08-08T19:42:02.1961869Z [INFO] 
+2023-08-08T19:42:02.1962382Z [INFO] <<< clirr-maven-plugin:2.8:check (default) < compile @ pubsub-group-kafka-connector <<<
+2023-08-08T19:42:02.1962779Z [INFO] 
+2023-08-08T19:42:02.1963035Z [INFO] 
+2023-08-08T19:42:02.1963519Z [INFO] --- clirr-maven-plugin:2.8:check (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:02.1964206Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/clirr/clirr-core/0.6/clirr-core-0.6.pom
+2023-08-08T19:42:02.2399767Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/clirr/clirr-core/0.6/clirr-core-0.6.pom (3.8 kB at 123 kB/s)
+2023-08-08T19:42:02.2400754Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.0/bcel-6.0.pom
+2023-08-08T19:42:02.2697416Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.0/bcel-6.0.pom (19 kB at 603 kB/s)
+2023-08-08T19:42:02.2790702Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/40/commons-parent-40.pom
+2023-08-08T19:42:02.3034470Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/40/commons-parent-40.pom (64 kB at 2.1 MB/s)
+2023-08-08T19:42:02.3146014Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.pom
+2023-08-08T19:42:02.3361360Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.pom (24 kB at 740 kB/s)
+2023-08-08T19:42:02.3457291Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.pom
+2023-08-08T19:42:02.3758652Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.pom (3.2 kB at 102 kB/s)
+2023-08-08T19:42:02.3776578Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/1.0/doxia-sitetools-1.0.pom
+2023-08-08T19:42:02.4084160Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/1.0/doxia-sitetools-1.0.pom (9.6 kB at 309 kB/s)
+2023-08-08T19:42:02.4108394Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.7/plexus-utils-1.5.7.pom
+2023-08-08T19:42:02.4407113Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.7/plexus-utils-1.5.7.pom (8.1 kB at 538 kB/s)
+2023-08-08T19:42:02.4428459Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.pom
+2023-08-08T19:42:02.4776169Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.pom (1.6 kB at 52 kB/s)
+2023-08-08T19:42:02.4792701Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/1.0/doxia-modules-1.0.pom
+2023-08-08T19:42:02.5091488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/1.0/doxia-modules-1.0.pom (2.4 kB at 75 kB/s)
+2023-08-08T19:42:02.5209978Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.pom
+2023-08-08T19:42:02.5513253Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.pom (2.4 kB at 77 kB/s)
+2023-08-08T19:42:02.5536375Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.pom
+2023-08-08T19:42:02.5827973Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.pom (4.4 kB at 138 kB/s)
+2023-08-08T19:42:02.5855625Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.pom
+2023-08-08T19:42:02.6158940Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.pom (1.1 kB at 34 kB/s)
+2023-08-08T19:42:02.6175848Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.12/plexus-components-1.1.12.pom
+2023-08-08T19:42:02.6511815Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.12/plexus-components-1.1.12.pom (3.0 kB at 97 kB/s)
+2023-08-08T19:42:02.6532471Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.pom
+2023-08-08T19:42:02.6874264Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.pom (2.0 kB at 63 kB/s)
+2023-08-08T19:42:02.6964690Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-20/plexus-container-default-1.0-alpha-20.pom
+2023-08-08T19:42:02.7213845Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-20/plexus-container-default-1.0-alpha-20.pom (3.0 kB at 187 kB/s)
+2023-08-08T19:42:02.7299337Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0-alpha-20/plexus-containers-1.0-alpha-20.pom
+2023-08-08T19:42:02.7524255Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.0-alpha-20/plexus-containers-1.0-alpha-20.pom (1.9 kB at 118 kB/s)
+2023-08-08T19:42:02.7614012Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.3/plexus-utils-1.3.pom
+2023-08-08T19:42:02.7888812Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.3/plexus-utils-1.3.pom (1.0 kB at 33 kB/s)
+2023-08-08T19:42:02.7972499Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom
+2023-08-08T19:42:02.8308175Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom (7.2 kB at 233 kB/s)
+2023-08-08T19:42:02.8398422Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/1.2-alpha-7/plexus-classworlds-1.2-alpha-7.pom
+2023-08-08T19:42:02.8641337Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/1.2-alpha-7/plexus-classworlds-1.2-alpha-7.pom (2.4 kB at 77 kB/s)
+2023-08-08T19:42:02.8738374Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.9/plexus-1.0.9.pom
+2023-08-08T19:42:02.8965064Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.9/plexus-1.0.9.pom (7.7 kB at 248 kB/s)
+2023-08-08T19:42:02.9059512Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity/1.5/velocity-1.5.pom
+2023-08-08T19:42:02.9487391Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity/1.5/velocity-1.5.pom (7.8 kB at 165 kB/s)
+2023-08-08T19:42:02.9507029Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.1/commons-collections-3.1.pom
+2023-08-08T19:42:02.9794330Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.1/commons-collections-3.1.pom (6.1 kB at 196 kB/s)
+2023-08-08T19:42:02.9812338Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom
+2023-08-08T19:42:03.0119448Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.pom (9.9 kB at 310 kB/s)
+2023-08-08T19:42:03.0144286Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/oro/oro/2.0.8/oro-2.0.8.pom
+2023-08-08T19:42:03.0452938Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/oro/oro/2.0.8/oro-2.0.8.pom (140 B at 4.5 kB/s)
+2023-08-08T19:42:03.0539656Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2/commons-collections-3.2.pom
+2023-08-08T19:42:03.0751443Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2/commons-collections-3.2.pom (11 kB at 690 kB/s)
+2023-08-08T19:42:03.0835563Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.pom
+2023-08-08T19:42:03.1135125Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.pom (2.3 kB at 70 kB/s)
+2023-08-08T19:42:03.1167561Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.pom
+2023-08-08T19:42:03.1456327Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.pom (2.7 kB at 90 kB/s)
+2023-08-08T19:42:03.1478752Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.pom
+2023-08-08T19:42:03.1974680Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.pom (2.2 kB at 48 kB/s)
+2023-08-08T19:42:03.1998624Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-6/plexus-i18n-1.0-beta-6.pom
+2023-08-08T19:42:03.2302986Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-6/plexus-i18n-1.0-beta-6.pom (771 B at 25 kB/s)
+2023-08-08T19:42:03.2319800Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.4/plexus-components-1.1.4.pom
+2023-08-08T19:42:03.2620564Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.4/plexus-components-1.1.4.pom (2.1 kB at 65 kB/s)
+2023-08-08T19:42:03.2640008Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom
+2023-08-08T19:42:03.3774397Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom (7.3 kB at 66 kB/s)
+2023-08-08T19:42:03.3795241Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.7/plexus-utils-3.0.7.pom
+2023-08-08T19:42:03.4091836Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.7/plexus-utils-3.0.7.pom (2.5 kB at 157 kB/s)
+2023-08-08T19:42:03.4109408Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.1/plexus-3.1.pom
+2023-08-08T19:42:03.4415496Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.1/plexus-3.1.pom (19 kB at 582 kB/s)
+2023-08-08T19:42:03.4483223Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/sf/clirr/clirr-core/0.6/clirr-core-0.6.jar
+2023-08-08T19:42:03.4484069Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.0/bcel-6.0.jar
+2023-08-08T19:42:03.4484916Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.jar
+2023-08-08T19:42:03.4485741Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.jar
+2023-08-08T19:42:03.4486478Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.jar
+2023-08-08T19:42:03.5058161Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/sf/clirr/clirr-core/0.6/clirr-core-0.6.jar (69 kB at 1.5 MB/s)
+2023-08-08T19:42:03.5059256Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.jar
+2023-08-08T19:42:03.5060184Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.jar (49 kB at 1.0 MB/s)
+2023-08-08T19:42:03.5061273Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar
+2023-08-08T19:42:03.5062029Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.jar (55 kB at 886 kB/s)
+2023-08-08T19:42:03.5062765Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity/1.5/velocity-1.5.jar
+2023-08-08T19:42:03.5186678Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.jar (22 kB at 352 kB/s)
+2023-08-08T19:42:03.5187453Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+2023-08-08T19:42:03.5188063Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/bcel/bcel/6.0/bcel-6.0.jar (671 kB at 11 MB/s)
+2023-08-08T19:42:03.5188602Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/oro/oro/2.0.8/oro-2.0.8.jar
+2023-08-08T19:42:03.5316861Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar (7.7 kB at 98 kB/s)
+2023-08-08T19:42:03.5317853Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2/commons-collections-3.2.jar
+2023-08-08T19:42:03.5318795Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.jar (47 kB at 596 kB/s)
+2023-08-08T19:42:03.5319467Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.jar
+2023-08-08T19:42:03.5386369Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity/1.5/velocity-1.5.jar (392 kB at 4.2 MB/s)
+2023-08-08T19:42:03.5389857Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.jar
+2023-08-08T19:42:03.5503811Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-lang/commons-lang/2.1/commons-lang-2.1.jar (208 kB at 2.2 MB/s)
+2023-08-08T19:42:03.5504717Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.jar
+2023-08-08T19:42:03.5506274Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/oro/oro/2.0.8/oro-2.0.8.jar (65 kB at 702 kB/s)
+2023-08-08T19:42:03.5508477Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-6/plexus-i18n-1.0-beta-6.jar
+2023-08-08T19:42:03.5529506Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.jar (47 kB at 432 kB/s)
+2023-08-08T19:42:03.5530337Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.7/plexus-utils-3.0.7.jar
+2023-08-08T19:42:03.5673692Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-collections/commons-collections/3.2/commons-collections-3.2.jar (571 kB at 4.6 MB/s)
+2023-08-08T19:42:03.5674788Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.jar (19 kB at 148 kB/s)
+2023-08-08T19:42:03.5783518Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-6/plexus-i18n-1.0-beta-6.jar (12 kB at 96 kB/s)
+2023-08-08T19:42:03.5802040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.jar (28 kB at 222 kB/s)
+2023-08-08T19:42:03.5907537Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.7/plexus-utils-3.0.7.jar (230 kB at 1.6 MB/s)
+2023-08-08T19:42:03.6807091Z [INFO] Skipping execution
+2023-08-08T19:42:03.6807770Z [INFO] 
+2023-08-08T19:42:03.6808424Z [INFO] --- maven-install-plugin:2.4:install (default-install) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:03.6809124Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.pom
+2023-08-08T19:42:03.7030212Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.pom (2.5 kB at 157 kB/s)
+2023-08-08T19:42:03.7046659Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom
+2023-08-08T19:42:03.7385056Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom (1.1 kB at 23 kB/s)
+2023-08-08T19:42:03.7605795Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom
+2023-08-08T19:42:03.7855342Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom (5.0 kB at 311 kB/s)
+2023-08-08T19:42:03.8105760Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.jar
+2023-08-08T19:42:03.8106735Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar
+2023-08-08T19:42:03.8525422Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar (12 kB at 383 kB/s)
+2023-08-08T19:42:03.8526478Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.jar (230 kB at 7.4 MB/s)
+2023-08-08T19:42:03.9064588Z [INFO] Installing D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\pubsub-group-kafka-connector-1.2.0.jar to C:\Users\runneradmin\.m2\repository\com\google\cloud\pubsub-group-kafka-connector\1.2.0\pubsub-group-kafka-connector-1.2.0.jar
+2023-08-08T19:42:03.9382329Z [INFO] Installing D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\dependency-reduced-pom.xml to C:\Users\runneradmin\.m2\repository\com\google\cloud\pubsub-group-kafka-connector\1.2.0\pubsub-group-kafka-connector-1.2.0.pom
+2023-08-08T19:42:03.9568001Z [INFO] Installing D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\pubsub-group-kafka-connector-1.2.0-tests.jar to C:\Users\runneradmin\.m2\repository\com\google\cloud\pubsub-group-kafka-connector\1.2.0\pubsub-group-kafka-connector-1.2.0-tests.jar
+2023-08-08T19:42:03.9571473Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:03.9572154Z [INFO] BUILD SUCCESS
+2023-08-08T19:42:03.9573005Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:03.9573728Z [INFO] Total time:  01:37 min (Wall Clock)
+2023-08-08T19:42:03.9574409Z [INFO] Finished at: 2023-08-08T19:42:03Z
+2023-08-08T19:42:03.9575012Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:05.8031033Z [INFO] Scanning for projects...
+2023-08-08T19:42:07.2571041Z [INFO] Inspecting build with total of 1 modules...
+2023-08-08T19:42:07.2575242Z [INFO] Installing Nexus Staging features:
+2023-08-08T19:42:07.2576692Z [INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-08-08T19:42:07.5309623Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:07.6638586Z [INFO] Detecting the operating system and CPU architecture
+2023-08-08T19:42:07.8292851Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:08.0239429Z [INFO] os.detected.name: windows
+2023-08-08T19:42:08.1420987Z [INFO] os.detected.arch: x86_64
+2023-08-08T19:42:08.3082812Z [INFO] os.detected.bitness: 64
+2023-08-08T19:42:08.4732458Z [INFO] os.detected.version: 10.0
+2023-08-08T19:42:08.4733972Z [INFO] os.detected.version.major: 10
+2023-08-08T19:42:08.4734571Z [INFO] os.detected.version.minor: 0
+2023-08-08T19:42:08.4735310Z [INFO] os.detected.classifier: windows-x86_64
+2023-08-08T19:42:08.4736056Z [INFO] 
+2023-08-08T19:42:08.4737572Z [INFO] -----------< com.google.cloud:pubsub-group-kafka-connector >------------
+2023-08-08T19:42:08.4738149Z [INFO] Building Pub/Sub Group Kafka Connector 1.2.0
+2023-08-08T19:42:08.4738770Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-08-08T19:42:08.4739232Z [INFO] 
+2023-08-08T19:42:08.4739814Z [INFO] --- maven-enforcer-plugin:3.1.0:enforce (enforce) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.4740350Z [INFO] Skipping Rule Enforcement.
+2023-08-08T19:42:08.4740753Z [INFO] 
+2023-08-08T19:42:08.4741377Z [INFO] --- jacoco-maven-plugin:0.8.8:prepare-agent (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.4742481Z [INFO] argLine set to -javaagent:C:\\Users\\runneradmin\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.8\\org.jacoco.agent-0.8.8-runtime.jar=destfile=D:\\a\\java-pubsub-group-kafka-connector\\java-pubsub-group-kafka-connector\\target\\jacoco.exec
+2023-08-08T19:42:08.4743254Z [INFO] 
+2023-08-08T19:42:08.4743837Z [INFO] --- protobuf-maven-plugin:0.6.1:compile (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.4744742Z [INFO] D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto does not exist. Review the configuration or consider disabling the plugin.
+2023-08-08T19:42:08.4745360Z [INFO] 
+2023-08-08T19:42:08.4745937Z [INFO] --- protobuf-maven-plugin:0.6.1:compile-custom (default) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.4746833Z [INFO] D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto does not exist. Review the configuration or consider disabling the plugin.
+2023-08-08T19:42:08.4747447Z [INFO] 
+2023-08-08T19:42:08.4748097Z [INFO] --- build-helper-maven-plugin:3.3.0:add-resource (add-main-proto-resources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.4748744Z [INFO] 
+2023-08-08T19:42:08.7140272Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7169875Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-08T19:42:08.7477822Z [INFO] Copying 1 resource
+2023-08-08T19:42:08.7480334Z [INFO] skip non existing resourceDirectory D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\main\proto
+2023-08-08T19:42:08.7481006Z [INFO] 
+2023-08-08T19:42:08.7481691Z [INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7482350Z [INFO] Nothing to compile - all classes are up to date
+2023-08-08T19:42:08.7482818Z [INFO] 
+2023-08-08T19:42:08.7485022Z [INFO] --- build-helper-maven-plugin:3.3.0:add-test-resource (add-test-proto-resources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7492086Z [INFO] 
+2023-08-08T19:42:08.7492793Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7495009Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-08T19:42:08.7495472Z [INFO] Copying 6 resources
+2023-08-08T19:42:08.7496343Z [INFO] skip non existing resourceDirectory D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\src\test\proto
+2023-08-08T19:42:08.7571407Z [INFO] 
+2023-08-08T19:42:08.7572340Z [INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7572963Z [INFO] Nothing to compile - all classes are up to date
+2023-08-08T19:42:08.7576578Z [INFO] 
+2023-08-08T19:42:08.7577343Z [INFO] --- animal-sniffer-maven-plugin:1.22:check (java8) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:08.7578281Z [INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+2023-08-08T19:42:10.5846877Z [INFO] 
+2023-08-08T19:42:10.5849174Z [INFO] --- maven-surefire-plugin:3.0.0-M7:test (default-test) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:10.7239737Z [INFO] Using configured provider org.apache.maven.surefire.junitcore.JUnitCoreProvider
+2023-08-08T19:42:11.1318337Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.2/junit-4.8.2.pom
+2023-08-08T19:42:11.6820024Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.8.2/junit-4.8.2.pom (1.5 kB at 5.0 kB/s)
+2023-08-08T19:42:11.6822818Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom
+2023-08-08T19:42:11.7227011Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.pom (5.4 kB at 175 kB/s)
+2023-08-08T19:42:11.7381001Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom
+2023-08-08T19:42:11.7739377Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-core/2.28.2/mockito-core-2.28.2.pom (20 kB at 628 kB/s)
+2023-08-08T19:42:11.7910185Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom
+2023-08-08T19:42:11.8200425Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.9.10/byte-buddy-1.9.10.pom (10 kB at 323 kB/s)
+2023-08-08T19:42:11.8300556Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom
+2023-08-08T19:42:11.8650297Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.9.10/byte-buddy-parent-1.9.10.pom (36 kB at 1.2 MB/s)
+2023-08-08T19:42:11.8823355Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom
+2023-08-08T19:42:11.9105969Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-agent/1.9.10/byte-buddy-agent-1.9.10.pom (6.0 kB at 195 kB/s)
+2023-08-08T19:42:11.9258961Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.pom
+2023-08-08T19:42:11.9495243Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis/2.6/objenesis-2.6.pom (2.8 kB at 90 kB/s)
+2023-08-08T19:42:11.9605795Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/2.6/objenesis-parent-2.6.pom
+2023-08-08T19:42:11.9860603Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/objenesis/objenesis-parent/2.6/objenesis-parent-2.6.pom (17 kB at 533 kB/s)
+2023-08-08T19:42:12.0074069Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom
+2023-08-08T19:42:12.0410805Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.pom (820 B at 17 kB/s)
+2023-08-08T19:42:12.0511858Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom
+2023-08-08T19:42:12.0915702Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.22.0/assertj-core-3.22.0.pom (31 kB at 652 kB/s)
+2023-08-08T19:42:12.0953724Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom
+2023-08-08T19:42:12.1311758Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.14/assertj-parent-pom-2.2.14.pom (25 kB at 792 kB/s)
+2023-08-08T19:42:12.1442337Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom
+2023-08-08T19:42:12.1686934Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.0/junit-bom-5.8.0.pom (5.6 kB at 182 kB/s)
+2023-08-08T19:42:12.2229126Z [INFO] 
+2023-08-08T19:42:12.2232489Z [INFO] -------------------------------------------------------
+2023-08-08T19:42:12.2233524Z [INFO]  T E S T S
+2023-08-08T19:42:12.2238266Z [INFO] -------------------------------------------------------
+2023-08-08T19:42:13.7453556Z SLF4J: No SLF4J providers were found.
+2023-08-08T19:42:13.7454052Z [INFO] Running com.google.pubsub.kafka.sink.CloudPubSubSinkConnectorTest
+2023-08-08T19:42:13.7455306Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.078 s - in com.google.pubsub.kafka.sink.CloudPubSubSinkConnectorTest
+2023-08-08T19:42:13.9322459Z SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-08-08T19:42:14.1711691Z SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+2023-08-08T19:42:14.1712189Z [INFO] Running com.google.pubsub.kafka.sink.CloudPubSubSinkTaskTest
+2023-08-08T19:42:16.0398229Z NULL MSG
+2023-08-08T19:42:16.0613364Z [INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.844 s - in com.google.pubsub.kafka.sink.CloudPubSubSinkTaskTest
+2023-08-08T19:42:16.0616694Z [INFO] Running com.google.pubsub.kafka.source.AckBatchingSubscriberTest
+2023-08-08T19:42:16.0617684Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.11 s - in com.google.pubsub.kafka.source.AckBatchingSubscriberTest
+2023-08-08T19:42:16.0618308Z [INFO] Running com.google.pubsub.kafka.source.CloudPubSubSourceConnectorTest
+2023-08-08T19:42:16.0619213Z [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.297 s - in com.google.pubsub.kafka.source.CloudPubSubSourceConnectorTest
+2023-08-08T19:42:16.0619857Z [INFO] Running com.google.pubsub.kafka.source.CloudPubSubSourceTaskTest
+2023-08-08T19:42:16.0620584Z [INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.google.pubsub.kafka.source.CloudPubSubSourceTaskTest
+2023-08-08T19:42:16.0621188Z [INFO] Running com.google.pubsub.kafka.source.StreamingPullSubscriberTest
+2023-08-08T19:42:17.1367300Z [INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.063 s - in com.google.pubsub.kafka.source.StreamingPullSubscriberTest
+2023-08-08T19:42:17.1390775Z [INFO] Running com.google.pubsublite.kafka.sink.PubSubLiteSinkTaskTest
+2023-08-08T19:42:17.4849517Z [INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.219 s - in com.google.pubsublite.kafka.sink.PubSubLiteSinkTaskTest
+2023-08-08T19:42:17.6054350Z [INFO] Running com.google.pubsublite.kafka.sink.SchemasTest
+2023-08-08T19:42:17.6072011Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s - in com.google.pubsublite.kafka.sink.SchemasTest
+2023-08-08T19:42:17.6073243Z [INFO] Running com.google.pubsublite.kafka.source.PollerImplTest
+2023-08-08T19:42:17.7202295Z [INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.157 s - in com.google.pubsublite.kafka.source.PollerImplTest
+2023-08-08T19:42:17.7203931Z [INFO] Running com.google.pubsublite.kafka.source.PubSubLiteSourceTaskTest
+2023-08-08T19:42:17.7205047Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s - in com.google.pubsublite.kafka.source.PubSubLiteSourceTaskTest
+2023-08-08T19:42:17.8112226Z [INFO] 
+2023-08-08T19:42:17.8112815Z [INFO] Results:
+2023-08-08T19:42:17.8113167Z [INFO] 
+2023-08-08T19:42:17.8113605Z [INFO] Tests run: 78, Failures: 0, Errors: 0, Skipped: 0
+2023-08-08T19:42:17.8113947Z [INFO] 
+2023-08-08T19:42:17.8153714Z [INFO] 
+2023-08-08T19:42:17.8154538Z [INFO] --- jacoco-maven-plugin:0.8.8:report (report) @ pubsub-group-kafka-connector ---
+2023-08-08T19:42:17.8427041Z [INFO] Loading execution data file D:\a\java-pubsub-group-kafka-connector\java-pubsub-group-kafka-connector\target\jacoco.exec
+2023-08-08T19:42:18.2987814Z [INFO] Analyzed bundle 'Pub/Sub Group Kafka Connector' with 33 classes
+2023-08-08T19:42:18.4531826Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:18.4533607Z [INFO] BUILD SUCCESS
+2023-08-08T19:42:18.4534693Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:18.4536578Z [INFO] Total time:  12.671 s
+2023-08-08T19:42:18.4561732Z [INFO] Finished at: 2023-08-08T19:42:18Z
+2023-08-08T19:42:18.4562457Z [INFO] ------------------------------------------------------------------------
+2023-08-08T19:42:18.6146439Z basename: missing operand
+2023-08-08T19:42:18.6148689Z Try 'basename --help' for more information.
+2023-08-08T19:42:18.6166541Z exiting with 0
+
+2023-08-08T19:40:47.3641192Z Cleaning up orphan processes
+
+2023-08-08T19:40:31.9178917Z Post job cleanup.
+2023-08-08T19:40:32.0359119Z [command]/usr/bin/git version
+2023-08-08T19:40:32.0424224Z git version 2.41.0
+2023-08-08T19:40:32.0478285Z Temporarily overriding HOME='/home/runner/work/_temp/e8d2aa19-917b-4b56-9087-2f1252d70efe' before making global git config changes
+2023-08-08T19:40:32.0480166Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-08T19:40:32.0487631Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/java-pubsub-group-kafka-connector/java-pubsub-group-kafka-connector
+2023-08-08T19:40:32.0540252Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-08T19:40:32.0581834Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-08T19:40:32.0861147Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-08T19:40:32.0893041Z http.https://github.com/.extraheader
+2023-08-08T19:40:32.0906821Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-08T19:40:32.0947524Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-08T19:39:54.0352468Z ##[group]Run actions/setup-java@v3
+2023-08-08T19:39:54.0352754Z with:
+2023-08-08T19:39:54.0352928Z   distribution: zulu
+2023-08-08T19:39:54.0353121Z   java-version: 8
+2023-08-08T19:39:54.0353298Z   java-package: jdk
+2023-08-08T19:39:54.0353487Z   check-latest: false
+2023-08-08T19:39:54.0353667Z   server-id: github
+2023-08-08T19:39:54.0353855Z   server-username: GITHUB_ACTOR
+2023-08-08T19:39:54.0354102Z   server-password: GITHUB_TOKEN
+2023-08-08T19:39:54.0354316Z   overwrite-settings: true
+2023-08-08T19:39:54.0354512Z   job-status: success
+2023-08-08T19:39:54.0354933Z   token: ***
+2023-08-08T19:39:54.0355115Z ##[endgroup]
+2023-08-08T19:39:54.3426343Z ##[group]Installed distributions
+2023-08-08T19:39:54.3467187Z Trying to resolve the latest version from remote
+2023-08-08T19:39:54.8545412Z Resolved latest version as 8.0.382+5
+2023-08-08T19:39:54.8545959Z Trying to download...
+2023-08-08T19:39:54.8547138Z Downloading Java 8.0.382+5 (Zulu) from https://cdn.azul.com/zulu/bin/zulu8.72.0.17-ca-jdk8.0.382-win_x64.zip ...
+2023-08-08T19:39:55.5491343Z Extracting Java archive...
+2023-08-08T19:39:55.6055806Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\40f2ee91-8e07-4a5f-80d8-78653994cfe6', 'D:\a\_temp\9dfd9de3-d510-428d-a6b2-25b315cb55f6')"
+2023-08-08T19:40:03.3914110Z Java 8.0.382+5 was downloaded
+2023-08-08T19:40:03.3914563Z Setting Java 8.0.382+5 as the default
+2023-08-08T19:40:03.3942447Z Creating toolchains.xml for JDK version 8 from zulu
+2023-08-08T19:40:03.4060851Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-08-08T19:40:03.4066274Z 
+2023-08-08T19:40:03.4066505Z Java configuration:
+2023-08-08T19:40:03.4066889Z   Distribution: zulu
+2023-08-08T19:40:03.4067202Z   Version: 8.0.382+5
+2023-08-08T19:40:03.4067856Z   Path: C:\hostedtoolcache\windows\Java_Zulu_jdk\8.0.382-5\x64
+2023-08-08T19:40:03.4068164Z 
+2023-08-08T19:40:03.4068635Z ##[endgroup]
+2023-08-08T19:40:03.4082094Z Creating settings.xml with server-id: github
+2023-08-08T19:40:03.4096252Z Writing to C:\Users\runneradmin\.m2\settings.xml

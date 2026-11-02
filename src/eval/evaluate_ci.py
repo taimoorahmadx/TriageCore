@@ -9,7 +9,7 @@ import statistics
 from datetime import datetime
 from typing import Any
 
-from src.agents.ci_pipeline import REPO_ROOT, load_cases, run_cases, score_case
+from src.agents.ci_pipeline import DEFAULT_CASES_DIR, REPO_ROOT, load_cases, run_cases, score_case
 from src.ci.facts import FactExtractor
 from src.core.engine import ConfidenceEngine
 from src.eval.stats import wilson_interval
@@ -66,7 +66,7 @@ def evaluate(
 ) -> dict[str, Any]:
     started = datetime.now()
     cases = load_cases()
-    raw_results = run_cases(engine=engine, extractor=extractor)
+    raw_results = run_cases(engine=engine, extractor=extractor, cases_dir=DEFAULT_CASES_DIR)
     logs = {case["id"]: case["log"] for case in cases}
     rows = []
     for result in raw_results:
@@ -78,22 +78,31 @@ def evaluate(
         row: dict[str, Any] = {
             "case_id": result["case_id"], "label": result["label"], "status": result["status"],
             "triagecore_cause": result.get("classification"),
-            "triagecore_cause_correct": result.get("score", {}).get("cause_correct", False),
+            "triagecore_cause_correct": (result.get("score") or {}).get("cause_correct", False),
             "duration_ms": result["duration_ms"],
             "failure_kind": result.get("raw_signals", {}).get("failure_kind"),
             "confidence_score": result.get("confidence_score"),
         }
-        for policy, action in actions.items():
-            score = score_case(action, result.get("classification") or "error", result["label"])
-            row[f"{policy}_action"] = action
-            row[f"{policy}_action_acceptable"] = score["action_acceptable"]
-            row[f"{policy}_masked"] = score["masked"]
-            row[f"{policy}_needless"] = score["needless_escalation"]
+        if result["status"] == "ok":
+            for policy, action in actions.items():
+                score = score_case(action, result.get("classification") or "error", result["label"])
+                row[f"{policy}_action"] = action
+                row[f"{policy}_action_acceptable"] = score["action_acceptable"]
+                row[f"{policy}_masked"] = score["masked"]
+                row[f"{policy}_needless"] = score["needless_escalation"]
+        else:
+            row["triagecore_action"] = result.get("recommended_action")
         rows.append(row)
+    scored_rows = [row for row in rows if row["status"] == "ok"]
+    extraction_failures = sum(row["status"] == "extraction_failed" for row in rows)
+    pipeline_errors = sum(row["status"] == "error" for row in rows)
     report = {
         "generated_at": started.isoformat(timespec="seconds"), "evaluation_type": "preliminary_fixture_smoke",
+        "scope": "two-fixture preliminary smoke check; not real-world CI effectiveness evidence",
+        "fixture_count": len(cases), "scored_case_count": len(scored_rows),
+        "extraction_failure_count": extraction_failures, "pipeline_error_count": pipeline_errors,
         "weights": "provisional C9 values; not tuned on fixture cases",
-        "summary": summarise(rows), "rows": rows, "runs": raw_results,
+        "summary": summarise(scored_rows), "rows": rows, "runs": raw_results,
     }
     if save:
         RESULTS_DIR.mkdir(exist_ok=True)
@@ -110,6 +119,9 @@ def evaluate(
 
 if __name__ == "__main__":
     report = evaluate()
+    print(f"Fixtures: {report['fixture_count']}; scored: {report['scored_case_count']}; "
+          f"extraction failures: {report['extraction_failure_count']}; "
+          f"pipeline errors: {report['pipeline_error_count']}")
     print(f"{'policy':14s} {'acceptable':>11s} {'masked':>10s} {'needless':>10s}")
     for policy in POLICIES:
         row = report["summary"][policy]

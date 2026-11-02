@@ -1,0 +1,68 @@
+repo: premium-minds/wicket-crudifier
+run_id: 1a2fb9f65e12d6c43a8472b9b035299b29a75ce8
+head_sha: 1a2fb9f65e12d6c43a8472b9b035299b29a75ce8
+run_attempts: []
+commits:
+- sha: 1a2fb9f65e12d6c43a8472b9b035299b29a75ce8
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: ae08243fdbc516e63f923513cb7aeac99bf55ffb
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: ed39571ebb0ce7e019dd63e54dd08324cb4314ce
+  author: froque
+  files:
+  - pom.xml
+- sha: 00fc4cc564c810999b07fffb18253ec19e218bba
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 69078521786f9bbd942cb37ebaf8e8ac370406ea
+  author: froque
+  files:
+  - CHANGELOG.md
+  - README.md
+- sha: 78a88cf29f7c939ef89bc0931969c482b1a90635
+  author: froque
+  files:
+  - pom.xml
+- sha: a7a592c868e76f134720ce6a0a1082d0faaaff5b
+  author: froque
+  files:
+  - pom.xml
+- sha: 4d83e2315ccd651eb98bdf17423890500c81caa3
+  author: froque
+  files:
+  - pom.xml
+  - src/main/java/com/premiumminds/wicket/crudifier/form/ICrudifierForm.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/AbstractControlGroup.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/CheckboxControlGroup.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/ControlGroupProvider.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/DateControlGroup.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroups.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/TemporalControlGroup.java
+  - src/main/java/com/premiumminds/wicket/crudifier/form/elements/TextFieldControlGroup.java
+  - src/main/java/com/premiumminds/wicket/crudifier/table/ButtonColumn.java
+  - src/main/java/com/premiumminds/wicket/crudifier/table/IColumn.java
+  - src/main/java/com/premiumminds/wicket/crudifier/table/PropertyColumn.java
+  - src/main/java/com/premiumminds/wicket/crudifier/view/CrudifierView.java
+  - src/test/java/com/premiumminds/wicket/crudifier/BootstrapCrudifierFormTest.java
+  - src/test/java/com/premiumminds/wicket/crudifier/form/elements/AbstractControlGroupTest.java
+  - src/test/java/com/premiumminds/wicket/crudifier/form/elements/CheckboxControlGroupTest.java
+  - src/test/java/com/premiumminds/wicket/crudifier/form/elements/CollectionControlGroupTest.java
+  - src/test/java/com/premiumminds/wicket/crudifier/form/elements/ListControlGroupsTest.java
+- sha: f1822970730bac759dda278f72b77cffa21707c8
+  author: froque
+  files:
+  - pom.xml
+- sha: 9ed64b5d03d936fe4a098d250975c3ac0fb0f514
+  author: froque
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

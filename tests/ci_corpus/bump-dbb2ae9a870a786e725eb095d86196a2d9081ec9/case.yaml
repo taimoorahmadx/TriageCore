@@ -1,0 +1,50 @@
+repo: jcabi/jcabi-simpledb
+run_id: dbb2ae9a870a786e725eb095d86196a2d9081ec9
+head_sha: dbb2ae9a870a786e725eb095d86196a2d9081ec9
+run_attempts: []
+commits:
+- sha: dbb2ae9a870a786e725eb095d86196a2d9081ec9
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 4af3ea931691caa0a667852b626485b1b0cbffcf
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 938f9d0e74346a11ce74d8a3ec00b287abbf82e9
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 0645735807b26ada5050c3c4ce1b2a004d92ea3a
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: a0c93cf1ef57d3ec2a08287dd4a16e90eec55d7d
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 52c9407764191a3194a8a007bc78ada13ee6a765
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 76c35fe53f07db1dea4d474d7e2e2fc0b7a02d31
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: cb9bdd07a62cb1e2436df1fd54db6e039994f25d
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f1381e25a4aaa90bb10b73e85a2db91bc5d3e769
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 1ae2b6d8e8c7e9ba95de78dac9f91bc9609dba8f
+  author: rultor
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory TEST_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

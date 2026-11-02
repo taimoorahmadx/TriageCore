@@ -1,4 +1,5 @@
 repo: pytest-dev/pytest
+source: mined
 run_id: 40300247079
 head_sha: b9022ba04a33bfc76b5c9aefb8974755a80bf5ce
 run_attempts:

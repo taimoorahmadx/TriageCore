@@ -1,0 +1,58 @@
+repo: encode/httpx
+run_id: '106'
+head_sha: 83b5e4bf130d204fbb25b26a341c62aee4fc2d0f
+run_attempts: []
+commits:
+- sha: 83b5e4bf130d204fbb25b26a341c62aee4fc2d0f
+  author: Tom Christie
+  files:
+  - httpx/__init__.py
+  - httpx/_config.py
+  - httpx/_transports/default.py
+  - tests/test_config.py
+- sha: 99cba6ac642b12f0331d069ae324402c54c4c600
+  author: the-ress
+  files:
+  - CHANGELOG.md
+  - httpx/_auth.py
+  - tests/test_auth.py
+- sha: ca51b4532a4495c38c8abf1a393dbd80099deae3
+  author: karpetrosyan
+  files:
+  - httpx/_client.py
+- sha: c6907c22034e2739c4c1af89908e3c9f90602788
+  author: karpetrosyan
+  files:
+  - httpx/_config.py
+  - httpx/_multipart.py
+  - requirements.txt
+- sha: ebc1393c5cf6430e3027bdb724368a9d6e3429ef
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 4ddff16bbe41c0bc4b8a5ea3a2c204d8e99478f3
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: f1ed7463086f0aed97afa61a1197c51840d3bb2e
+  author: dependabot[bot]
+  files:
+  - .github/workflows/publish.yml
+  - .github/workflows/test-suite.yml
+- sha: ea3071642d12ed546d901861a5901da6fad37073
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: b871b4b8b29aca2e675645fae0c9f8e7d2a5e7d5
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: dd5304d3eb97f0aad7126a45f3fd7041dfee0ac2
+  author: lovelydinosaur
+  files:
+  - tests/test_asgi.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

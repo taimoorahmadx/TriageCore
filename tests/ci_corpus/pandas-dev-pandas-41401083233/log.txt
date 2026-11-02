@@ -1,0 +1,475 @@
+===== Clang (ASAN_LSAN)/15_Post Checkout.txt =====
+﻿2026-11-02T07:52:22.5749717Z Post job cleanup.
+2026-11-02T07:52:22.5757474Z ##[command]/usr/bin/docker exec  7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4 sh -c "cat /etc/*release | grep ^ID"
+2026-11-02T07:52:22.8049306Z [command]/usr/bin/git version
+2026-11-02T07:52:22.8165231Z git version 2.53.0
+2026-11-02T07:52:22.8204865Z Copying '/github/home/.gitconfig' to '/__w/_temp/09232738-dbc0-472b-914d-91fda262cfd1/.gitconfig'
+2026-11-02T07:52:22.8219476Z Temporarily overriding HOME='/__w/_temp/09232738-dbc0-472b-914d-91fda262cfd1' before making global git config changes
+2026-11-02T07:52:22.8221610Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-02T07:52:22.8227237Z [command]/usr/bin/git config --global --add safe.directory /__w/pandas/pandas
+2026-11-02T07:52:22.8302558Z Removing SSH command configuration
+2026-11-02T07:52:22.8308866Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-02T07:52:22.8371724Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-02T07:52:22.8839073Z Removing HTTP extra header
+2026-11-02T07:52:22.8845257Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-02T07:52:22.8894165Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-02T07:52:22.9214348Z Removing includeIf entries pointing to credentials config files
+2026-11-02T07:52:22.9223281Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-02T07:52:22.9264023Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+===== Clang (ASAN_LSAN)/16_Stop containers.txt =====
+﻿2026-11-02T07:52:22.9759473Z Stop and remove container: 828fea3d6ad342578687497a6b0ffe6b_ghcrionaschemecpythonasan3147sha2565e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a_662e1a
+2026-11-02T07:52:22.9764438Z ##[command]/usr/bin/docker rm --force 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T07:52:24.3843609Z 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T07:52:24.3882576Z Remove container network: github_network_c713e731008443ec940bafaaaa5c70db
+2026-11-02T07:52:24.3887554Z ##[command]/usr/bin/docker network rm github_network_c713e731008443ec940bafaaaa5c70db
+2026-11-02T07:52:24.4910170Z github_network_c713e731008443ec940bafaaaa5c70db
+
+===== Clang (ASAN_LSAN)/17_Complete job.txt =====
+﻿2026-11-02T07:52:24.5003373Z Cleaning up orphan processes
+
+===== Clang (ASAN_LSAN)/1_Set up job.txt =====
+﻿2026-11-02T06:37:33.0345303Z Current runner version: '2.338.2'
+2026-11-02T06:37:33.0375385Z ##[group]Runner Image Provisioner
+2026-11-02T06:37:33.0376955Z Hosted Compute Agent
+2026-11-02T06:37:33.0377638Z Version: 20261021.618
+2026-11-02T06:37:33.0378291Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-02T06:37:33.0379108Z Build Date: 2026-10-21T00:45:21Z
+2026-11-02T06:37:33.0379823Z Worker ID: {cb45d78c-b98c-48d5-8654-fd279203bf8b}
+2026-11-02T06:37:33.0380611Z Region: eastus
+2026-11-02T06:37:33.0381191Z Cloud: Azure
+2026-11-02T06:37:33.0381750Z ##[endgroup]
+2026-11-02T06:37:33.0383390Z ##[group]Operating System
+2026-11-02T06:37:33.0384099Z Ubuntu
+2026-11-02T06:37:33.0384799Z 24.04.5
+2026-11-02T06:37:33.0385340Z LTS
+2026-11-02T06:37:33.0385872Z ##[endgroup]
+2026-11-02T06:37:33.0387024Z ##[group]Runner Image
+2026-11-02T06:37:33.0387692Z Image: ubuntu-24.04
+2026-11-02T06:37:33.0388346Z Version: 20261025.353.1
+2026-11-02T06:37:33.0389448Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-02T06:37:33.0391263Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-02T06:37:33.0392251Z ##[endgroup]
+2026-11-02T06:37:33.0393510Z ##[group]GITHUB_TOKEN Permissions
+2026-11-02T06:37:33.0396199Z Contents: read
+2026-11-02T06:37:33.0397004Z Metadata: read
+2026-11-02T06:37:33.0397586Z ##[endgroup]
+2026-11-02T06:37:33.0399962Z Secret source: None
+2026-11-02T06:37:33.0401036Z Cache mode: write
+2026-11-02T06:37:33.0402412Z Prepare workflow directory
+2026-11-02T06:37:33.0877306Z Prepare all required actions
+2026-11-02T06:37:33.0928420Z Getting action download info
+2026-11-02T06:37:33.2571217Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-02T06:37:33.3603939Z Download action repository 'actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-11-02T06:37:33.6040406Z Complete job name: Clang (ASAN/LSAN)
+
+===== Clang (ASAN_LSAN)/2_Initialize containers.txt =====
+﻿2026-11-02T06:37:33.6768756Z ##[group]Checking docker version
+2026-11-02T06:37:33.6782645Z ##[command]/usr/bin/docker version --format '{{.Server.APIVersion}}'
+2026-11-02T06:37:33.7725308Z '1.48'
+2026-11-02T06:37:33.7740957Z Docker daemon API version: '1.48'
+2026-11-02T06:37:33.7741941Z ##[command]/usr/bin/docker version --format '{{.Client.APIVersion}}'
+2026-11-02T06:37:33.7938922Z '1.48'
+2026-11-02T06:37:33.7957157Z Docker client API version: '1.48'
+2026-11-02T06:37:33.7963505Z ##[endgroup]
+2026-11-02T06:37:33.7967086Z ##[group]Clean up resources from previous jobs
+2026-11-02T06:37:33.7972357Z ##[command]/usr/bin/docker ps --all --quiet --no-trunc --filter "label=5c90f0"
+2026-11-02T06:37:33.8157273Z ##[command]/usr/bin/docker network prune --force --filter "label=5c90f0"
+2026-11-02T06:37:33.8324728Z ##[endgroup]
+2026-11-02T06:37:33.8325462Z ##[group]Create local container network
+2026-11-02T06:37:33.8336945Z ##[command]/usr/bin/docker network create --label 5c90f0 github_network_c713e731008443ec940bafaaaa5c70db
+2026-11-02T06:37:33.8888948Z 6318198501eafc0cd421f1bb31ed71733331d8fe293c93285798a501bd1ec5fe
+2026-11-02T06:37:33.8914856Z ##[endgroup]
+2026-11-02T06:37:33.8944283Z ##[group]Starting job container
+2026-11-02T06:37:33.8971576Z ##[command]/usr/bin/docker --config /home/runner/work/_temp/.docker_f28c771b-2246-4f14-9417-27035b78ef82 login ghcr.io -u Huang-404-Q --password-stdin
+2026-11-02T06:37:34.0742066Z ##[command]/usr/bin/docker --config /home/runner/work/_temp/.docker_f28c771b-2246-4f14-9417-27035b78ef82 pull ghcr.io/nascheme/cpython-asan:3.14.7@sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a
+2026-11-02T06:37:34.2617457Z ghcr.io/nascheme/cpython-asan@sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a: Pulling from nascheme/cpython-asan
+2026-11-02T06:37:34.2622290Z 617772c7d19b: Pulling fs layer
+2026-11-02T06:37:34.2623701Z a7fb98a8eddd: Pulling fs layer
+2026-11-02T06:37:34.2624725Z c4ff001acf85: Pulling fs layer
+2026-11-02T06:37:34.2626424Z d4c804b4abde: Pulling fs layer
+2026-11-02T06:37:34.2627605Z 663968204262: Pulling fs layer
+2026-11-02T06:37:34.2628622Z c5b8c69c8da7: Pulling fs layer
+2026-11-02T06:37:34.2629338Z 300e12d045fe: Pulling fs layer
+2026-11-02T06:37:34.2629910Z 72e680241f50: Pulling fs layer
+2026-11-02T06:37:34.2630596Z b1f6c429e6ce: Pulling fs layer
+2026-11-02T06:37:34.2631154Z d7d9390decaa: Pulling fs layer
+2026-11-02T06:37:34.2631830Z 5c6e6eb74c78: Pulling fs layer
+2026-11-02T06:37:34.2632354Z d4c804b4abde: Waiting
+2026-11-02T06:37:34.2632965Z 663968204262: Waiting
+2026-11-02T06:37:34.2633447Z c5b8c69c8da7: Waiting
+2026-11-02T06:37:34.2633984Z 300e12d045fe: Waiting
+2026-11-02T06:37:34.2634529Z 72e680241f50: Waiting
+2026-11-02T06:37:34.2634990Z b1f6c429e6ce: Waiting
+2026-11-02T06:37:34.2635758Z d7d9390decaa: Waiting
+2026-11-02T06:37:34.3164620Z a7fb98a8eddd: Verifying Checksum
+2026-11-02T06:37:34.3166151Z a7fb98a8eddd: Download complete
+2026-11-02T06:37:34.3448219Z c4ff001acf85: Verifying Checksum
+2026-11-02T06:37:34.3449948Z c4ff001acf85: Download complete
+2026-11-02T06:37:34.4215326Z 663968204262: Download complete
+2026-11-02T06:37:34.4576802Z 617772c7d19b: Verifying Checksum
+2026-11-02T06:37:34.4578252Z 617772c7d19b: Download complete
+2026-11-02T06:37:34.4958033Z c5b8c69c8da7: Verifying Checksum
+2026-11-02T06:37:34.4960909Z c5b8c69c8da7: Download complete
+2026-11-02T06:37:34.5708148Z 300e12d045fe: Verifying Checksum
+2026-11-02T06:37:34.5709916Z 300e12d045fe: Download complete
+2026-11-02T06:37:34.6319158Z b1f6c429e6ce: Verifying Checksum
+2026-11-02T06:37:34.6325411Z b1f6c429e6ce: Download complete
+2026-11-02T06:37:34.7488874Z d7d9390decaa: Verifying Checksum
+2026-11-02T06:37:34.7493885Z d7d9390decaa: Download complete
+2026-11-02T06:37:34.8188883Z 5c6e6eb74c78: Verifying Checksum
+2026-11-02T06:37:34.8191183Z 5c6e6eb74c78: Download complete
+2026-11-02T06:37:35.6426441Z 72e680241f50: Verifying Checksum
+2026-11-02T06:37:35.6427854Z 72e680241f50: Download complete
+2026-11-02T06:37:37.0280164Z 617772c7d19b: Pull complete
+2026-11-02T06:37:37.4956706Z d4c804b4abde: Verifying Checksum
+2026-11-02T06:37:37.4957798Z d4c804b4abde: Download complete
+2026-11-02T06:37:38.0907945Z a7fb98a8eddd: Pull complete
+2026-11-02T06:37:38.1047883Z c4ff001acf85: Pull complete
+2026-11-02T06:37:46.0892468Z d4c804b4abde: Pull complete
+2026-11-02T06:37:46.1012495Z 663968204262: Pull complete
+2026-11-02T06:37:46.1103202Z c5b8c69c8da7: Pull complete
+2026-11-02T06:37:46.6345070Z 300e12d045fe: Pull complete
+2026-11-02T06:37:51.0535808Z 72e680241f50: Pull complete
+2026-11-02T06:37:51.0727347Z b1f6c429e6ce: Pull complete
+2026-11-02T06:37:51.2851048Z d7d9390decaa: Pull complete
+2026-11-02T06:37:51.2991321Z 5c6e6eb74c78: Pull complete
+2026-11-02T06:37:51.3035452Z Digest: sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a
+2026-11-02T06:37:51.3047623Z Status: Downloaded newer image for ghcr.io/nascheme/cpython-asan@sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a
+2026-11-02T06:37:51.3088065Z ghcr.io/nascheme/cpython-asan:3.14.7@sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a
+2026-11-02T06:37:51.3176755Z ##[command]/usr/bin/docker create --name 828fea3d6ad342578687497a6b0ffe6b_ghcrionaschemecpythonasan3147sha2565e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a_662e1a --label 5c90f0 --workdir /__w/pandas/pandas --network github_network_c713e731008443ec940bafaaaa5c70db --shm-size=2g -e "HOME=/github/home" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work":"/__w" -v "/home/runner/actions-runner/cached/2.338.2/externals":"/__e":ro -v "/home/runner/work/_temp":"/__w/_temp" -v "/home/runner/work/_actions":"/__w/_actions" -v "/opt/hostedtoolcache":"/__t" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" --entrypoint "tail" ghcr.io/nascheme/cpython-asan:3.14.7@sha256:5e7cfa58bbaff0a31efc199d7d39902b80f99ab526c9c74104cd909ff075fd0a "-f" "/dev/null"
+2026-11-02T06:37:51.3496480Z 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T06:37:51.3529253Z ##[command]/usr/bin/docker start 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T06:37:51.5621821Z 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T06:37:51.5643909Z ##[command]/usr/bin/docker ps --all --filter id=7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4 --filter status=running --no-trunc --format "{{.ID}} {{.Status}}"
+2026-11-02T06:37:51.5797190Z 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4 Up Less than a second
+2026-11-02T06:37:51.5825267Z ##[command]/usr/bin/docker inspect --format "{{range .Config.Env}}{{println .}}{{end}}" 7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4
+2026-11-02T06:37:51.5987628Z GITHUB_ACTIONS=true
+2026-11-02T06:37:51.5988121Z CI=true
+2026-11-02T06:37:51.5988354Z HOME=/github/home
+2026-11-02T06:37:51.5988916Z PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/work/.pyenv/bin:/work/.pyenv/shims
+2026-11-02T06:37:51.5989574Z DEBIAN_FRONTEND=noninteractive
+2026-11-02T06:37:51.5989863Z CC=clang-21
+2026-11-02T06:37:51.5990090Z CXX=clang++-21
+2026-11-02T06:37:51.5990322Z WORK=/work
+2026-11-02T06:37:51.5990565Z PYENV_ROOT=/work/.pyenv
+2026-11-02T06:37:51.5990845Z PYENV_BIN=/work/.pyenv/bin
+2026-11-02T06:37:51.5991137Z PYENV_SHIMS=/work/.pyenv/shims
+2026-11-02T06:37:51.6015056Z ##[endgroup]
+2026-11-02T06:37:51.6025644Z ##[group]Waiting for all services to be ready
+2026-11-02T06:37:51.6028293Z ##[endgroup]
+
+===== Clang (ASAN_LSAN)/3_Checkout.txt =====
+﻿2026-11-02T06:37:51.6467635Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-02T06:37:51.6468524Z with:
+2026-11-02T06:37:51.6468758Z   fetch-depth: 0
+2026-11-02T06:37:51.6469023Z   persist-credentials: false
+2026-11-02T06:37:51.6469313Z   repository: pandas-dev/pandas
+2026-11-02T06:37:51.6471836Z   token: ***
+2026-11-02T06:37:51.6472078Z   ssh-strict: true
+2026-11-02T06:37:51.6472325Z   ssh-user: git
+2026-11-02T06:37:51.6472539Z   clean: true
+2026-11-02T06:37:51.6472780Z   sparse-checkout-cone-mode: true
+2026-11-02T06:37:51.6473069Z   fetch-tags: false
+2026-11-02T06:37:51.6473303Z   show-progress: true
+2026-11-02T06:37:51.6473568Z   lfs: false
+2026-11-02T06:37:51.6473782Z   submodules: false
+2026-11-02T06:37:51.6474026Z   set-safe-directory: true
+2026-11-02T06:37:51.6474395Z   allow-unsafe-pr-checkout: false
+2026-11-02T06:37:51.6474913Z env:
+2026-11-02T06:37:51.6475137Z   ASAN_OPTIONS: detect_leaks=0
+2026-11-02T06:37:51.6475393Z ##[endgroup]
+2026-11-02T06:37:51.6544652Z ##[command]/usr/bin/docker exec  7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4 sh -c "cat /etc/*release | grep ^ID"
+2026-11-02T06:37:52.1153267Z Syncing repository: pandas-dev/pandas
+2026-11-02T06:37:52.1155669Z ##[group]Getting Git version info
+2026-11-02T06:37:52.1156602Z Working directory is '/__w/pandas/pandas'
+2026-11-02T06:37:52.1157608Z [command]/usr/bin/git version
+2026-11-02T06:37:52.1158152Z git version 2.53.0
+2026-11-02T06:37:52.1181608Z ##[endgroup]
+2026-11-02T06:37:52.1191491Z Temporarily overriding HOME='/__w/_temp/42173ebe-9ca3-4a15-8f76-f83b62975d31' before making global git config changes
+2026-11-02T06:37:52.1192892Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-02T06:37:52.1198233Z [command]/usr/bin/git config --global --add safe.directory /__w/pandas/pandas
+2026-11-02T06:37:52.1240137Z Deleting the contents of '/__w/pandas/pandas'
+2026-11-02T06:37:52.1244397Z ##[group]Determining repository object format
+2026-11-02T06:37:52.1246658Z ##[endgroup]
+2026-11-02T06:37:52.1247453Z ##[group]Initializing the repository
+2026-11-02T06:37:52.1251564Z [command]/usr/bin/git init /__w/pandas/pandas
+2026-11-02T06:37:52.1313331Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-02T06:37:52.1314400Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-02T06:37:52.1315355Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-02T06:37:52.1316869Z hint: call:
+2026-11-02T06:37:52.1317244Z hint:
+2026-11-02T06:37:52.1317790Z hint: 	git config --global init.defaultBranch <name>
+2026-11-02T06:37:52.1318387Z hint:
+2026-11-02T06:37:52.1318956Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-02T06:37:52.1319935Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-02T06:37:52.1320635Z hint:
+2026-11-02T06:37:52.1320988Z hint: 	git branch -m <name>
+2026-11-02T06:37:52.1321402Z hint:
+2026-11-02T06:37:52.1321995Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-02T06:37:52.1322895Z Initialized empty Git repository in /__w/pandas/pandas/.git/
+2026-11-02T06:37:52.1332226Z [command]/usr/bin/git remote add origin https://github.com/pandas-dev/pandas
+2026-11-02T06:37:52.1372859Z ##[endgroup]
+2026-11-02T06:37:52.1373594Z ##[group]Disabling automatic garbage collection
+2026-11-02T06:37:52.1375721Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-02T06:37:52.1411328Z ##[endgroup]
+2026-11-02T06:37:52.1411966Z ##[group]Setting up auth
+2026-11-02T06:37:52.1413544Z Removing SSH command configuration
+2026-11-02T06:37:52.1420178Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-02T06:37:52.1456665Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-02T06:37:52.1775511Z Removing HTTP extra header
+2026-11-02T06:37:52.1782712Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-02T06:37:52.1820472Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-02T06:37:52.2126668Z Removing includeIf entries pointing to credentials config files
+2026-11-02T06:37:52.2132342Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-02T06:37:52.2174265Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-02T06:37:52.2528398Z [command]/usr/bin/git config --file /__w/_temp/git-credentials-1d849ec1-64b8-4b60-abf7-cfa4813ba6e0.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-02T06:37:52.2573007Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/pandas/pandas/.git.path /__w/_temp/git-credentials-1d849ec1-64b8-4b60-abf7-cfa4813ba6e0.config
+2026-11-02T06:37:52.2611096Z [command]/usr/bin/git config --local includeIf.gitdir:/__w/pandas/pandas/.git/worktrees/*.path /__w/_temp/git-credentials-1d849ec1-64b8-4b60-abf7-cfa4813ba6e0.config
+2026-11-02T06:37:52.2648202Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-1d849ec1-64b8-4b60-abf7-cfa4813ba6e0.config
+2026-11-02T06:37:52.2684885Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-1d849ec1-64b8-4b60-abf7-cfa4813ba6e0.config
+2026-11-02T06:37:52.2718230Z ##[endgroup]
+2026-11-02T06:37:52.2718766Z ##[group]Fetching the repository
+2026-11-02T06:37:52.2726752Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +f170f62b8ac39695e2cee54396d5ebc958256c69:refs/remotes/pull/71840/merge
+2026-11-02T06:38:21.1494742Z From https://github.com/pandas-dev/pandas
+[... 148136 lines removed by TriageCore ...]
+2026-11-02T07:51:52.1994075Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.1995271Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/US/Pacific'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.1996763Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.1998025Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-W-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.1999295Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2000496Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2001708Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2003065Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-ME-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2004325Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2005522Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2006912Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2008188Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-ME-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2009456Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2010662Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2011876Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2013217Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-ME-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2014496Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2015711Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2017065Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2018354Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-ME-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2019628Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2021076Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2022302Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2023578Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-QE-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2024844Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2026175Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2027504Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_astype_object['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2028773Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-QE-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2030053Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2031345Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2032604Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-QE-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2033889Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2035174Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-QE-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2036593Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_getitem_2d['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2037868Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2039086Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2040368Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-YE-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2041650Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2042872Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2044119Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-YE-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2045425Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2046745Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2047978Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2049225Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-YE-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2050465Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2051761Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_concat_same_type['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2052978Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2054272Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/US/Pacific'-YE-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2055577Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2056872Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2058151Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-D-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2059396Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2060564Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2061889Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2063210Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-D-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2064466Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2065656Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2067109Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2068436Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-D-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2069756Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2070948Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2072223Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2073569Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-D-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2074838Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2076264Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2077546Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2078877Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-B-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2080205Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2081401Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2082670Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2084006Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-B-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2085257Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2086662Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2087923Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2089241Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-B-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2090506Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2091725Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_to_period_2d['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2092982Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-D-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2094382Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-B-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2095663Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2097037Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2098363Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-W-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2099619Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_iter_2d['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2100971Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-W-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2102299Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2103628Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-W-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2105048Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2106517Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-W-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2107852Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2109151Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2110463Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-ME-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2111857Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2113163Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2114488Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-ME-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2115811Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2117288Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2118666Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2119977Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-ME-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2121308Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-B-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2122644Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2124007Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-ME-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2125472Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2126921Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2128257Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2129677Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-QE-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2130991Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2132277Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2133597Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2134954Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-QE-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2136458Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/US/Pacific'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2137773Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2139088Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2140418Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-QE-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2141749Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-D] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2143126Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2144445Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2145784Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-QE-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2147272Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-B] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2148586Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2150013Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2151363Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-YE-list] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2152685Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-W] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2154096Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2155413Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2156895Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-YE-array] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2158225Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-ME] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2159550Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-W-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2160967Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2162329Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-YE-Index] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2163661Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-QE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2164984Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2166447Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2167873Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_setitem_numeric_raises['dateutil/Asia/Singapore'-YE-Series] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2169208Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_shift_fill_int_deprecated['dateutil/Asia/Singapore'-YE] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2170517Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2171842Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2173209Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2174623Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2176073Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2177383Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2178802Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2180148Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-ME-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2181471Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2182790Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2184112Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2185526Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2186999Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2188475Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2189807Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2191166Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2192677Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2194021Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-ME-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2195347Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2196850Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2198225Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2199657Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2200995Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2202345Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2203754Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2205094Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2206539Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2207879Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2209217Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2210625Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2211989Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-YE-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2213316Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2214640Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2216083Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2217500Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2218837Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-QE-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2220168Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-D-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2221495Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2222821Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2224250Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2225574Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2227063Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2228443Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_year_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2229776Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2231118Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_month_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2232439Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-QE-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2233765Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_leap_year] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2235152Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_quarter_end] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2236645Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-B-is_quarter_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2237985Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2239316Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/Asia/Singapore'-W-is_month_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2240647Z ERROR pandas/tests/arrays/test_datetimelike.py::TestDatetimeArray::test_bool_properties['dateutil/US/Pacific'-YE-is_year_start] - AttributeError: 'NoneType' object has no attribute 'total_seconds'
+2026-11-02T07:51:52.2241662Z = 2422 failed, 187357 passed, 22906 skipped, 669 xfailed, 1160 errors in 3895.49s (1:04:55) =
+2026-11-02T07:52:21.9417674Z ##[error]Process completed with exit code 1.
+
+===== Clang (ASAN_LSAN)/7_Report sanitizer logs.txt =====
+﻿2026-11-02T07:52:21.9511642Z ##[group]Run shopt -s nullglob
+2026-11-02T07:52:21.9512045Z [36;1mshopt -s nullglob[0m
+2026-11-02T07:52:21.9512376Z [36;1mlogs=(/tmp/sanitizer-logs/*)[0m
+2026-11-02T07:52:21.9512733Z [36;1mif [ ${#logs[@]} -eq 0 ]; then[0m
+2026-11-02T07:52:21.9513095Z [36;1m  echo "No sanitizer reports"[0m
+2026-11-02T07:52:21.9513420Z [36;1m  exit 0[0m
+2026-11-02T07:52:21.9513663Z [36;1mfi[0m
+2026-11-02T07:52:21.9514046Z [36;1mgrep -h "^SUMMARY:" "${logs[@]}" | sort | uniq -c | sort -rn || true[0m
+2026-11-02T07:52:21.9514514Z [36;1mfor f in "${logs[@]}"; do[0m
+2026-11-02T07:52:21.9514793Z [36;1m  echo "::group::$f"[0m
+2026-11-02T07:52:21.9515054Z [36;1m  cat "$f"[0m
+2026-11-02T07:52:21.9515288Z [36;1m  echo "::endgroup::"[0m
+2026-11-02T07:52:21.9515554Z [36;1mdone[0m
+2026-11-02T07:52:21.9516108Z [36;1mexit 1[0m
+2026-11-02T07:52:21.9516478Z shell: bash -euox pipefail {0}
+2026-11-02T07:52:21.9516778Z env:
+2026-11-02T07:52:21.9516986Z   ASAN_OPTIONS: detect_leaks=0
+2026-11-02T07:52:21.9517239Z ##[endgroup]
+2026-11-02T07:52:22.0410753Z + shopt -s nullglob
+2026-11-02T07:52:22.0411416Z + logs=(/tmp/sanitizer-logs/*)
+2026-11-02T07:52:22.0418037Z + '[' 0 -eq 0 ']'
+2026-11-02T07:52:22.0418556Z + echo 'No sanitizer reports'
+2026-11-02T07:52:22.0419065Z + exit 0
+2026-11-02T07:52:22.0419451Z No sanitizer reports
+
+===== Clang (ASAN_LSAN)/8_Upload sanitizer logs.txt =====
+﻿2026-11-02T07:52:22.0537660Z ##[group]Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+2026-11-02T07:52:22.0538331Z with:
+2026-11-02T07:52:22.0538555Z   name: sanitizer-logs
+2026-11-02T07:52:22.0538791Z   path: /tmp/sanitizer-logs/
+2026-11-02T07:52:22.0539113Z   if-no-files-found: ignore
+2026-11-02T07:52:22.0539441Z   compression-level: 6
+2026-11-02T07:52:22.0539658Z   overwrite: false
+2026-11-02T07:52:22.0539888Z   include-hidden-files: false
+2026-11-02T07:52:22.0540137Z   archive: true
+2026-11-02T07:52:22.0540325Z env:
+2026-11-02T07:52:22.0540565Z   ASAN_OPTIONS: detect_leaks=0
+2026-11-02T07:52:22.0540917Z ##[endgroup]
+2026-11-02T07:52:22.0545246Z ##[command]/usr/bin/docker exec  7f567e60147fb71fb95374a1b831e59efd3036c48872caee53b2a379d6a8b7b4 sh -c "cat /etc/*release | grep ^ID"
+2026-11-02T07:52:22.5418789Z No files were found with the provided path: /tmp/sanitizer-logs/. No artifacts will be uploaded.
+
+===== Clang (ASAN_LSAN)/system.txt =====
+2026-11-02T06:37:30.4900000Z Evaluating Linux-LSan.if
+2026-11-02T06:37:30.4900000Z Evaluating: success()
+2026-11-02T06:37:30.4900000Z Result: true
+2026-11-02T06:37:30.8890000Z Requested labels: ubuntu-24.04
+2026-11-02T06:37:30.8890000Z Job defined at: pandas-dev/pandas/.github/workflows/unit-tests.yml@refs/pull/71840/merge
+2026-11-02T06:37:30.8890000Z Waiting for a runner to pick up this job...
+2026-11-02T06:37:31.0760000Z Job is waiting for a hosted runner to come online.
+2026-11-02T06:37:31.0900000Z Job is about to start running on the hosted runner: GitHub Actions 1001134515

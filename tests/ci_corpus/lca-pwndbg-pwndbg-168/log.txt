@@ -1,0 +1,1225 @@
+===== tests (ubuntu-22.04)/6_Run tests.txt =====
+##[group]Run mkdir .cov
+[36;1mmkdir .cov[0m
+[36;1msudo sysctl -w kernel.yama.ptrace_scope=0[0m
+[36;1m./tests.sh --cov[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+kernel.yama.ptrace_scope = 0
+[+] Building 'div_zero.out'
+[+] Building 'heap_bins.out'
+[+] Building heap_bugs.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-Wno-int-to-pointer-cast -Wno-int-conversion -Wno-unused-variable \
+-target native-native-gnu.2.33 \
+-Wl,-rpath=/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/binaries/glibcs/2.33:\
+-Wl,--dynamic-linker=/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/binaries/glibcs/2.33/ld-linux-x86-64.so.2 \
+-o heap_bugs.out heap_bugs.c
+[+] Building 'heap_find_fake_fast.out'
+[+] Building heap_malloc_chunk.out
+gcc -g -O0 -Wno-nonnull -Wno-unused-result -o heap_malloc_chunk.out heap_malloc_chunk.c -pthread -lpthread
+[+] Building heap_vis.out
+gcc -g -O0 -Wno-nonnull -o heap_vis.out heap_vis.c -pthread -lpthread
+[+] Building 'initialized_heap.out'
+[+] Building issue_1565.out
+gcc -g -O0 -o issue_1565.out issue_1565.c -pthread -lpthread
+[+] Building 'linked-lists.out'
+[+] Building multiple_threads.out
+gcc -g -O0 -o multiple_threads.out multiple_threads.c -pthread -lpthread
+[+] Building 'reference-binary-net.out'
+[+] Building 'reference-binary.out'
+[+] Building 'search_memory.out'
+[+] Building 'tabstop.out'
+[+] Building 'telescope_binary.out'
+[+] Building tls.i386.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target i386-linux-gnu \
+-o tls.i386.out tls.i386.c
+[+] Building tls.x86-64.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target x86_64-linux-gnu \
+-o tls.x86-64.out tls.x86-64.c
+[+] Building 'use-fds.out'
+[+] Building 'very_long_symbols.out'
+[+] Building 'conditional_branch_breakpoints_x64.o'
+[+] Linking 'conditional_branch_breakpoints_x64.out'
+[+] Building 'emulate_disasm.o'
+[+] Linking 'emulate_disasm.out'
+[+] Building 'emulate_disasm_loop.o'
+[+] Linking 'emulate_disasm_loop.out'
+[+] Building 'memory.o'
+[+] Linking 'memory.out'
+[+] Building 'stepuntilasm_x64.o'
+[+] Linking 'stepuntilasm_x64.out'
+[+] Building 'syscalls-x64.o'
+[+] Linking 'syscalls-x64.out'
+[+] Building 'gosample.x64'
+[+] Building 'gosample.x86'
+[+] Building reference_bin_pie.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fpie -o reference_bin_pie.out reference-binary.c
+[+] Building reference_bin_nopie.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fno-pie -o reference_bin_nopie.out reference-binary.c
+g++ -O0 -ggdb -Wno-pmf-conversions symbol_1600_and_752.cpp -o symbol_1600_and_752.out
+[+] Building initialized_heap_x64.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target x86_64-linux-gnu \
+-o initialized_heap_x64.out initialized_heap.c
+[+] Building initialized_heap_i386_big.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target i386-linux-gnu \
+-o initialized_heap_i386_big.out initialized_heap.c
+[+] Building linked-lists.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fpie -g -o linked_lists.out linked-lists.c
+rm emulate_disasm_loop.o syscalls-x64.o conditional_branch_breakpoints_x64.o stepuntilasm_x64.o emulate_disasm.o memory.o
+Will run codecov
+ZIGPATH set to /home/runner/work/pwndbg/pwndbg/.zig
+
+Running tests in parallel
+Running with coverage
+Running with coverage
+Running with coverage
+Running with coverage
+test_attachp_command_attaches_to_procname_resolve_none                 [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_procname_resolve_none_no_truncate     [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_procname                              [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_pid                                   [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_procname_resolve_ask                  [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_procname_resolve_oldest               [32mPASSED[0m
+Running with coverage
+test_attachp_command_nonexistent_procname                              [32mPASSED[0m
+Running with coverage
+test_attachp_command_attaches_to_procname_resolve_newest               [32mPASSED[0m
+Running with coverage
+test_cache_single_value                                                [32mPASSED[0m
+Running with coverage
+test_cache_args_kwargs_properly                                        [32mPASSED[0m
+Running with coverage
+test_command_break_if_x64[x86-64]                                      [32mPASSED[0m
+Running with coverage
+test_attachp_command_no_pids                                           [32mPASSED[0m
+Running with coverage
+test_config                                                            [32mPASSED[0m
+Running with coverage
+test_config_filtering                                                  [32mPASSED[0m
+Running with coverage
+test_config_filtering_missing                                          [32mPASSED[0m
+Running with coverage
+test_command_cyclic_value                                              [32mPASSED[0m
+Running with coverage
+test_command_cyclic_register                                           [32mPASSED[0m
+Running with coverage
+test_command_cyclic_address                                            [32mPASSED[0m
+Running with coverage
+test_command_cyclic_wrong_alphabet                                     [32mPASSED[0m
+Running with coverage
+test_command_cyclic_wrong_length                                       [32mPASSED[0m
+Running with coverage
+test_command_distance                                                  [32mPASSED[0m
+Running with coverage
+test_command_ignore_no_breakpoint_set                                  [32mPASSED[0m
+Running with coverage
+test_command_errno                                                     [32mPASSED[0m
+Running with coverage
+test_command_ignore_no_breakpoint_set_remove                           [32mPASSED[0m
+Running with coverage
+test_command_ignore_no_breakpoint_found                                [32mPASSED[0m
+Running with coverage
+test_command_ignore_breakpoint_last_found_two                          [32mPASSED[0m
+Running with coverage
+test_command_ignore_breakpoint_last_negative                           [32mPASSED[0m
+Running with coverage
+test_command_ignore_breakpoint_last_found_one                          [32mPASSED[0m
+Running with coverage
+test_command_killthreads_kills_all_threads_except_current              [32mPASSED[0m
+Running with coverage
+test_command_killthreads_before_binary_start                           [32mPASSED[0m
+Running with coverage
+test_command_killthreads_kills_specific_thread                         [32mPASSED[0m
+Running with coverage
+test_command_killthreads_produces_error_when_unknown_thread_passed     [32mPASSED[0m
+Running with coverage
+test_command_plist_flat_no_flags                                       [32mPASSED[0m
+Running with coverage
+test_command_plist_flat_field                                          [32mPASSED[0m
+Running with coverage
+test_command_plist_flat_sentinel                                       [32mPASSED[0m
+Running with coverage
+test_command_plist_nested_direct                                       [32mPASSED[0m
+Running with coverage
+test_command_procinfo_before_binary_start                              [32mPASSED[0m
+Running with coverage
+test_command_plist_nested_indirect                                     [32mPASSED[0m
+Running with coverage
+test_command_procinfo                                                  [32mPASSED[0m
+Running with coverage
+test_command_search_limit                                              [32mPASSED[0m
+Running with coverage
+test_command_search_step                                               [32mPASSED[0m
+Running with coverage
+test_command_search_alignment                                          [32mPASSED[0m
+Running with coverage
+test_command_search_byte_width                                         [32mPASSED[0m
+Running with coverage
+test_command_search_word_width                                         [32mPASSED[0m
+Running with coverage
+test_command_search_dword_width                                        [32mPASSED[0m
+Running with coverage
+test_command_search_rwx                                                [32mPASSED[0m
+Running with coverage
+test_command_untilasm_x64                                              [32mPASSED[0m
+Running with coverage
+test_command_search_qword_width                                        [32mPASSED[0m
+Running with coverage
+test_command_telescope                                                 [32mPASSED[0m
+Running with coverage
+test_command_telescope_reverse                                         [32mPASSED[0m
+Running with coverage
+test_command_telescope_n_records                                       [32mPASSED[0m
+Running with coverage
+test_telescope_command_with_address_as_count                           [32mPASSED[0m
+Running with coverage
+test_telescope_command_with_address_as_count_and_reversed_flag         [32mPASSED[0m
+Running with coverage
+test_command_telescope_reverse_skipped_records_shows_input_address     [32mPASSED[0m
+Running with coverage
+test_command_telescope_frame                                           [32mPASSED[0m
+Running with coverage
+test_command_telescope_frame_bp_below_sp                               [32mPASSED[0m
+Running with coverage
+test_command_telescope_frame_bp_sp_different_vmmaps                    [32mPASSED[0m
+Running with coverage
+test_tls_address_and_command[x86-64]                                   [32mPASSED[0m
+Running with coverage
+test_tls_address_and_command[i386]                                     [32mPASSED[0m
+Running with coverage
+test_command_vmmap_on_coredump_on_crash_simple_binary[False]           [32mPASSED[0m
+Running with coverage
+test_command_vmmap_on_coredump_on_crash_simple_binary[True]            [32mPASSED[0m
+Running with coverage
+test_command_xor_with_gdb_execute                                      [32mPASSED[0m
+Running with coverage
+test_vmmap_issue_1565                                                  [32mPASSED[0m
+Running with coverage
+test_command_xor_with_int                                              [32mPASSED[0m
+Running with coverage
+test_command_xor_with_hex                                              [32mPASSED[0m
+Running with coverage
+test_command_memfrob                                                   [32mPASSED[0m
+Running with coverage
+test_commands[k]                                                       [33mXPASS[0m
+Running with coverage
+test_commands[peb]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[stepuntilasm]                                            [33mXPASS[0m
+Running with coverage
+test_commands[bins]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[tips]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[setflag]                                                 [33mXPASS[0m
+Running with coverage
+test_commands[ai]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[bc]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[comm]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[pwndbg]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[brva]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[ez]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[lm]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[be]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[xpsr]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[argv]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[spray]                                                   [33mXPASS[0m
+Running with coverage
+test_commands[dds]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[hexdump]                                                 [33mXPASS[0m
+Running with coverage
+test_commands[retaddr]                                                 [33mXPASS[0m
+Running with coverage
+test_commands[contextwatch]                                            [33mXPASS[0m
+Running with coverage
+test_commands[bp]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[xuntil]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[configfile]                                              [33mXPASS[0m
+Running with coverage
+test_commands[slab]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[main]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[cunwatch]                                                [33mXPASS[0m
+Running with coverage
+test_commands[go]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[cwatch]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[disable-heap-tracker]                                    [33mXPASS[0m
+Running with coverage
+test_commands[env]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[dt]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[asm]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[canary]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[vmmap_load]                                              [33mXPASS[0m
+Running with coverage
+test_commands[ew]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[save_ida]                                                [33mXPASS[0m
+Running with coverage
+test_commands[dqs]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[kchecksec]                                               [33mXPASS[0m
+Running with coverage
+test_commands[getpid]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[rzpipe]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[gsbase]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[unsortedbin]                                             [33mXPASS[0m
+Running with coverage
+test_commands[tcachebins]                                              [33mXPASS[0m
+Running with coverage
+test_commands[stepsyscall]                                             [33mXPASS[0m
+Running with coverage
+test_commands[pstate]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[ds]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[threads]                                                 [33mXPASS[0m
+Running with coverage
+test_commands[emulate]                                                 [33mXPASS[0m
+Running with coverage
+test_commands[patch]                                                   [33mXPASS[0m
+Running with coverage
+test_commands[ctx]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[ropgadget]                                               [33mXPASS[0m
+Running with coverage
+test_commands[gotplt]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[stack]                                                   [33mXPASS[0m
+Running with coverage
+test_commands[plt]                                                     [33mXPASS[0m
+Running with coverage
+test_commands[fastbins]                                                [33mXPASS[0m
+Running with coverage
+test_commands[ln]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[flag]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[distance]                                                [33mXPASS[0m
+Running with coverage
+test_commands[bd]                                                      [33mXPASS[0m
+Running with coverage
+test_commands[auxv]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[libs]                                                    [33mXPASS[0m
+Running with coverage
+test_commands[top_chunk]                                               [33mXPASS[0m
+Running with coverage
+test_commands[config]                                                  [33mXPASS[0m
+Running with coverage
+test_commands[bugreport]                                               [33mXFAIL[0m
+
+pwndbg: loaded 155 pwndbg commands and 47 shell commands. Type pwndbg [--shell | --all] [filter] for a list.
+pwndbg: created $rebase, $ida GDB functions (can be used with print/break)
+['/home/runner/work/pwndbg/pwndbg', '/home/runner/work/pwndbg/pwndbg/.venv/lib/python3.10/site-packages', '/usr/share/gdb/python', '/usr/lib/python310.zip', '/usr/lib/python3.10', '/usr/lib/python3.10/lib-dynload', '/home/runner/work/pwndbg/pwndbg']
+Launching pytest with args: ['/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/test_commands.py::test_commands[bugreport]', '-vvv', '-s', '--showlocals', '--color=yes']
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-7.3.1, pluggy-1.3.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/pwndbg/pwndbg/tests/gdb-tests
+plugins: cov-4.1.0
+[1mcollecting ... [0mcollected 1 item
+
+tests/test_commands.py::test_commands[bugreport] Running command bugreport
+
+Program stopped.
+0x00007ffff7fe3290 in _start () from /lib64/ld-linux-x86-64.so.2
+[33mXFAIL[0m (flaky test)
+
+[33m============================== [33m[1m1 xfailed[0m[33m in 0.13s[0m[33m ==============================[0m
+
+Running with coverage
+test_commands[elfsections]                                             [33mXPASS[0m
+Running with coverage
+test_commands[heap_config]                                             [33mXPASS[0m
+Running with coverage
+[... 454 lines removed by TriageCore ...]
+rootdir: /home/runner/work/pwndbg/pwndbg/tests/gdb-tests
+plugins: cov-4.1.0
+[1mcollecting ... [0mcollected 1 item
+
+tests/test_context_commands.py::test_empty_context_sections[-] 
+Program stopped.
+0x00007ffff7fe3290 in _start () from /lib64/ld-linux-x86-64.so.2
+[31mFAILED[0m
+
+=================================== FAILURES ===================================
+[31m[1m________________________ test_empty_context_sections[-] ________________________[0m
+
+start_binary = <function start_binary.<locals>._start_binary at 0x7fc85d638e50>
+sections = '-'
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33msections[39;49;00m[33m"[39;49;00m, ([33m"[39;49;00m[33m'[39;49;00m[33m'[39;49;00m[33m"[39;49;00m, [33m'[39;49;00m[33m"[39;49;00m[33m"[39;49;00m[33m'[39;49;00m, [33m"[39;49;00m[33mnone[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m"[39;49;00m))[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_empty_context_sections[39;49;00m(start_binary, sections):[90m[39;49;00m
+        start_binary(USE_FDS_BINARY)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Sanity check[39;49;00m[90m[39;49;00m
+        default_ctx_sects = [33m"[39;49;00m[33mregs disasm code ghidra stack backtrace expressions threads[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m pwndbg.gdblib.config.context_sections.value == default_ctx_sects[90m[39;49;00m
+[1m[31mE       AssertionError: assert 'regs disasm code ghidra stack backtrace expressions threads heap-tracker' == 'regs disasm code ghidra stack backtrace expressions threads'[0m
+[1m[31mE         - regs disasm code ghidra stack backtrace expressions threads[0m
+[1m[31mE         + regs disasm code ghidra stack backtrace expressions threads heap-tracker[0m
+[1m[31mE         ?                                                            +++++++++++++[0m
+
+default_ctx_sects = 'regs disasm code ghidra stack backtrace expressions threads'
+sections   = '-'
+start_binary = <function start_binary.<locals>._start_binary at 0x7fc85d638e50>
+
+[1m[31mtests/test_context_commands.py[0m:85: AssertionError
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_context_commands.py::[1mtest_empty_context_sections[-][0m - AssertionError: assert 'regs disasm code ghidra stack backtrace expressions threads heap-tracker' == 'regs disasm code ghidra stack backtrace expressions threads'
+  - regs disasm code ghidra stack backtrace expressions threads
+  + regs disasm code ghidra stack backtrace expressions threads heap-tracker
+  ?                                                            +++++++++++++
+[31m============================== [31m[1m1 failed[0m[31m in 0.28s[0m[31m ===============================[0m
+--------------------------------------------------------------------------------
+If you want to debug tests locally, run ./tests.sh with the --pdb flag
+--------------------------------------------------------------------------------
+
+Running with coverage
+test_empty_context_sections[]                                          [31mFAILED[0m
+
+pwndbg: loaded 155 pwndbg commands and 47 shell commands. Type pwndbg [--shell | --all] [filter] for a list.
+pwndbg: created $rebase, $ida GDB functions (can be used with print/break)
+['/home/runner/work/pwndbg/pwndbg', '/home/runner/work/pwndbg/pwndbg/.venv/lib/python3.10/site-packages', '/usr/share/gdb/python', '/usr/lib/python310.zip', '/usr/lib/python3.10', '/usr/lib/python3.10/lib-dynload', '/home/runner/work/pwndbg/pwndbg']
+Launching pytest with args: ['/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/test_context_commands.py::test_empty_context_sections[]', '-vvv', '-s', '--showlocals', '--color=yes']
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.10.12, pytest-7.3.1, pluggy-1.3.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/pwndbg/pwndbg/tests/gdb-tests
+plugins: cov-4.1.0
+[1mcollecting ... [0mcollected 1 item
+
+tests/test_context_commands.py::test_empty_context_sections[] 
+Program stopped.
+0x00007ffff7fe3290 in _start () from /lib64/ld-linux-x86-64.so.2
+[31mFAILED[0m
+
+=================================== FAILURES ===================================
+[31m[1m________________________ test_empty_context_sections[] _________________________[0m
+
+start_binary = <function start_binary.<locals>._start_binary at 0x7fa3f0528e50>
+sections = ''
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33msections[39;49;00m[33m"[39;49;00m, ([33m"[39;49;00m[33m'[39;49;00m[33m'[39;49;00m[33m"[39;49;00m, [33m'[39;49;00m[33m"[39;49;00m[33m"[39;49;00m[33m'[39;49;00m, [33m"[39;49;00m[33mnone[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m-[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m"[39;49;00m))[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_empty_context_sections[39;49;00m(start_binary, sections):[90m[39;49;00m
+        start_binary(USE_FDS_BINARY)[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Sanity check[39;49;00m[90m[39;49;00m
+        default_ctx_sects = [33m"[39;49;00m[33mregs disasm code ghidra stack backtrace expressions threads[39;49;00m[33m"[39;49;00m[90m[39;49;00m
+>       [94massert[39;49;00m pwndbg.gdblib.config.context_sections.value == default_ctx_sects[90m[39;49;00m
+[1m[31mE       AssertionError: assert 'regs disasm code ghidra stack backtrace expressions threads heap-tracker' == 'regs disasm code ghidra stack backtrace expressions threads'[0m
+[1m[31mE         - regs disasm code ghidra stack backtrace expressions threads[0m
+[1m[31mE         + regs disasm code ghidra stack backtrace expressions threads heap-tracker[0m
+[1m[31mE         ?                                                            +++++++++++++[0m
+
+default_ctx_sects = 'regs disasm code ghidra stack backtrace expressions threads'
+sections   = ''
+start_binary = <function start_binary.<locals>._start_binary at 0x7fa3f0528e50>
+
+[1m[31mtests/test_context_commands.py[0m:85: AssertionError
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_context_commands.py::[1mtest_empty_context_sections[][0m - AssertionError: assert 'regs disasm code ghidra stack backtrace expressions threads heap-tracker' == 'regs disasm code ghidra stack backtrace expressions threads'
+  - regs disasm code ghidra stack backtrace expressions threads
+  + regs disasm code ghidra stack backtrace expressions threads heap-tracker
+  ?                                                            +++++++++++++
+[31m============================== [31m[1m1 failed[0m[31m in 0.26s[0m[31m ===============================[0m
+--------------------------------------------------------------------------------
+If you want to debug tests locally, run ./tests.sh with the --pdb flag
+--------------------------------------------------------------------------------
+
+Running with coverage
+test_source_code_tabstop                                               [32mPASSED[0m
+Running with coverage
+test_context_disasm_syscalls_args_display                              [32mPASSED[0m
+Running with coverage
+test_context_backtrace_show_proper_symbol_names                        [32mPASSED[0m
+Running with coverage
+test_context_disasm_works_properly_with_disasm_flavor_switch           [32mPASSED[0m
+Running with coverage
+test_context_disasm_proper_render_on_mem_change_issue_1818[True]       [32mPASSED[0m
+Running with coverage
+test_context_disasm_proper_render_on_mem_change_issue_1818[False]      [32mPASSED[0m
+Running with coverage
+test_emulate_disasm                                                    [32mPASSED[0m
+Running with coverage
+test_cymbol                                                            [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params0]                        [32mPASSED[0m
+Running with coverage
+test_emulate_disasm_loop                                               [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params1]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params2]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params3]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params4]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params5]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params6]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params7]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params8]                        [32mPASSED[0m
+Running with coverage
+test_gdb_parameter_default_value_works[params9]                        [32mPASSED[0m
+Running with coverage
+test_typeinfo_go_x64                                                   [32mPASSED[0m
+Running with coverage
+test_parsing_info_sharedlibrary_to_find_libc_filename[have-(*)]        [32mPASSED[0m
+Running with coverage
+test_typeinfo_go_x86                                                   [32mPASSED[0m
+Running with coverage
+test_parsing_info_sharedlibrary_to_find_libc_filename[does-not-have-(*)] [32mPASSED[0m
+Running with coverage
+test_hexdump                                                           [32mPASSED[0m
+Running with coverage
+test_hexdump_collapse_lines                                            [32mPASSED[0m
+Running with coverage
+test_loads_pure_gdb_without_crashing                                   [32mPASSED[0m
+Running with coverage
+test_loads_binary_without_crashing                                     [32mPASSED[0m
+Running with coverage
+test_loads_core_without_crashing                                       [32mPASSED[0m
+Running with coverage
+test_loads_binary_with_core_without_crashing                           [32mPASSED[0m
+Running with coverage
+test_memory_read_write                                                 [32mPASSED[0m
+Running with coverage
+test_entry_no_file_loaded                                              [32mPASSED[0m
+Running with coverage
+test_list_and_filter_commands_filter                                   [32mPASSED[0m
+Running with coverage
+test_list_and_filter_commands_full_list[True-True]                     [32mPASSED[0m
+Running with coverage
+test_list_and_filter_commands_full_list[False-True]                    [32mPASSED[0m
+Running with coverage
+test_list_and_filter_commands_full_list[True-False]                    [32mPASSED[0m
+Running with coverage
+test_cannot_run_mmap_when_not_running                                  [32mPASSED[0m
+Running with coverage
+test_cannot_run_mprotect_when_not_running                              [32mPASSED[0m
+Running with coverage
+test_mprotect_executes_properly                                        [32mPASSED[0m
+Running with coverage
+test_mmap_executes_properly                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_bytes[1]                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_bytes[2]                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_bytes[3]                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_bytes[4]                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_bytes[5]                                            [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_seperator[0]                                        [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_seperator[1]                                        [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_seperator[2]                                        [32mPASSED[0m
+Running with coverage
+test_nearpc_opcode_invalid_config                                      [32mPASSED[0m
+Running with coverage
+test_symbol_get                                                        [32mPASSED[0m
+Running with coverage
+test_symbol_duplicated_symbols_issue_1610                              [32mPASSED[0m
+Running with coverage
+test_windbg_dX_commands                                                [32mPASSED[0m
+Running with coverage
+test_triggers                                                          [32mPASSED[0m
+Running with coverage
+test_windbg_eX_commands                                                [32mPASSED[0m
+Running with coverage
+test_windbg_commands_x86                                               [32mPASSED[0m
+Running with coverage
+test_find_fake_fast_command                                            [32mPASSED[0m
+Running with coverage
+test_malloc_chunk_command                                              [32mPASSED[0m
+Running with coverage
+test_malloc_chunk_command_heuristic                                    [32mPASSED[0m
+Running with coverage
+test_main_arena_heuristic                                              [32mPASSED[0m
+Running with coverage
+test_mp_heuristic                                                      [32mPASSED[0m
+Running with coverage
+test_thread_cache_heuristic[single-threaded]                           [32mPASSED[0m
+Running with coverage
+test_thread_cache_heuristic[multi-threaded]                            [32mPASSED[0m
+Running with coverage
+test_thread_arena_heuristic[single-threaded]                           [32mPASSED[0m
+Running with coverage
+test_thread_arena_heuristic[multi-threaded]                            [32mPASSED[0m
+Running with coverage
+test_global_max_fast_heuristic                                         [32mPASSED[0m
+Running with coverage
+test_heuristic_fail_gracefully[single-threaded]                        [32mPASSED[0m
+Running with coverage
+test_heuristic_fail_gracefully[multi-threaded]                         [32mPASSED[0m
+Running with coverage
+test_heap_bins                                                         [32mPASSED[0m
+Running with coverage
+test_largebins_size_range_64bit                                        [32mPASSED[0m
+Running with coverage
+test_largebins_size_range_32bit_big                                    [32mPASSED[0m
+Running with coverage
+test_smallbins_sizes_64bit                                             [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_overflow                                         [32mPASSED[0m
+Running with coverage
+test_smallbins_sizes_32bit_big                                         [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_misaligned                                       [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_size_minsize                                     [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_size_misaligned                                  [32mPASSED[0m
+Running with coverage
+test_try_free_double_free_tcache                                       [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_next_size_fast                                   [32mPASSED[0m
+Running with coverage
+test_try_free_double_free                                              [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_fastbin_entry                                    [32mPASSED[0m
+Running with coverage
+test_try_free_double_free_or_corruption_top                            [32mPASSED[0m
+Running with coverage
+test_try_free_double_free_or_corruption_out                            [32mPASSED[0m
+Running with coverage
+test_try_free_double_free_or_corruption_prev                           [32mPASSED[0m
+Running with coverage
+test_try_free_invalid_next_size_normal                                 [32mPASSED[0m
+test_try_free_corrupted_consolidate_backward                           [32mPASSED[0m
+test_try_free_corrupted_unsorted_chunks                                [33mSKIPPED[0m
+test_vis_heap_chunk_command                                            [32mPASSED[0m
+Tests completed in 152 seconds
+
+*********************************
+********* TESTS SUMMARY *********
+*********************************
+Tests passed or skipped: 353
+Tests failed: 5
+
+Failing tests: tests/test_context_commands.py::test_empty_context_sections[''] tests/test_context_commands.py::test_empty_context_sections[""] tests/test_context_commands.py::test_empty_context_sections[none] tests/test_context_commands.py::test_empty_context_sections[-] tests/test_context_commands.py::test_empty_context_sections[]
+##[error]Process completed with exit code 1.
+
+
+===== tests (ubuntu-20.04)/6_Run tests.txt =====
+##[group]Run mkdir .cov
+[36;1mmkdir .cov[0m
+[36;1msudo sysctl -w kernel.yama.ptrace_scope=0[0m
+[36;1m./tests.sh --cov[0m
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+kernel.yama.ptrace_scope = 0
+[+] Building tls.i386.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target i386-linux-gnu \
+-o tls.i386.out tls.i386.c
+[+] Building heap_bugs.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-Wno-int-to-pointer-cast -Wno-int-conversion -Wno-unused-variable \
+-target native-native-gnu.2.33 \
+-Wl,-rpath=/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/binaries/glibcs/2.33:\
+-Wl,--dynamic-linker=/home/runner/work/pwndbg/pwndbg/tests/gdb-tests/tests/binaries/glibcs/2.33/ld-linux-x86-64.so.2 \
+-o heap_bugs.out heap_bugs.c
+[+] Building 'initialized_heap.out'
+[+] Building 'tabstop.out'
+[+] Building 'search_memory.out'
+[+] Building 'heap_bins.out'
+[+] Building 'div_zero.out'
+[+] Building multiple_threads.out
+gcc -g -O0 -o multiple_threads.out multiple_threads.c -pthread -lpthread
+[+] Building 'telescope_binary.out'
+[+] Building 'reference-binary-net.out'
+[+] Building tls.x86-64.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target x86_64-linux-gnu \
+-o tls.x86-64.out tls.x86-64.c
+[+] Building 'heap_find_fake_fast.out'
+[+] Building 'reference-binary.out'
+[+] Building heap_malloc_chunk.out
+gcc -g -O0 -Wno-nonnull -Wno-unused-result -o heap_malloc_chunk.out heap_malloc_chunk.c -pthread -lpthread
+[+] Building heap_vis.out
+gcc -g -O0 -Wno-nonnull -o heap_vis.out heap_vis.c -pthread -lpthread
+[+] Building 'very_long_symbols.out'
+[+] Building 'linked-lists.out'
+[+] Building 'use-fds.out'
+[+] Building issue_1565.out
+gcc -g -O0 -o issue_1565.out issue_1565.c -pthread -lpthread
+[+] Building 'emulate_disasm.o'
+[+] Linking 'emulate_disasm.out'
+[+] Building 'conditional_branch_breakpoints_x64.o'
+[+] Linking 'conditional_branch_breakpoints_x64.out'
+[+] Building 'memory.o'
+[+] Linking 'memory.out'
+[+] Building 'emulate_disasm_loop.o'
+[+] Linking 'emulate_disasm_loop.out'
+[+] Building 'syscalls-x64.o'
+[+] Linking 'syscalls-x64.out'
+[+] Building 'stepuntilasm_x64.o'
+[+] Linking 'stepuntilasm_x64.out'
+[+] Building 'gosample.x86'
+[+] Building 'gosample.x64'
+[+] Building reference_bin_pie.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fpie -o reference_bin_pie.out reference-binary.c
+[+] Building reference_bin_nopie.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fno-pie -o reference_bin_nopie.out reference-binary.c
+g++ -O0 -ggdb -Wno-pmf-conversions symbol_1600_and_752.cpp -o symbol_1600_and_752.out
+[+] Building initialized_heap_x64.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target x86_64-linux-gnu \
+-o initialized_heap_x64.out initialized_heap.c
+[+] Building initialized_heap_i386_big.out
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc \
+-Wall -DDEBUG=1 -ggdb -O0 -gdwarf-4 \
+-target i386-linux-gnu \
+-o initialized_heap_i386_big.out initialized_heap.c
+[+] Building linked-lists.c
+/home/runner/work/pwndbg/pwndbg/.zig/zig cc -fpie -g -o linked_lists.out linked-lists.c
+rm syscalls-x64.o conditional_branch_breakpoints_x64.o emulate_disasm_loop.o emulate_disasm.o stepuntilasm_x64.o memory.o
+Will run codecov
+ZIGPATH set to /home/runner/work/pwndbg/pwndbg/.zig
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.3.1, pluggy-1.3.0
+rootdir: /home/runner/work/pwndbg/pwndbg/tests/gdb-tests
+plugins: cov-4.1.0
+collected 59 items / 27 errors
+
+<Package tests>
+  <Module test_attachp.py>
+    <Function test_attachp_command_attaches_to_procname>
+    <Function test_attachp_command_attaches_to_pid>
+    <Function test_attachp_command_attaches_to_procname_resolve_none>
+    <Function test_attachp_command_attaches_to_procname_resolve_none_no_truncate>
+    <Function test_attachp_command_attaches_to_procname_resolve_ask>
+    <Function test_attachp_command_attaches_to_procname_resolve_oldest>
+    <Function test_attachp_command_attaches_to_procname_resolve_newest>
+    <Function test_attachp_command_nonexistent_procname>
+    <Function test_attachp_command_no_pids>
+  <Module test_cache.py>
+    <Function test_cache_single_value>
+    <Function test_cache_args_kwargs_properly>
+  <Module test_command_config.py>
+    <Function test_config>
+    <Function test_config_filtering>
+    <Function test_config_filtering_missing>
+  <Module test_command_errno.py>
+    <Function test_command_errno>
+  <Module test_command_killthreads.py>
+    <Function test_command_killthreads_kills_all_threads_except_current>
+    <Function test_command_killthreads_kills_specific_thread>
+    <Function test_command_killthreads_produces_error_when_unknown_thread_passed>
+    <Function test_command_killthreads_before_binary_start>
+  <Module test_command_plist.py>
+    <Function test_command_plist_flat_no_flags>
+    <Function test_command_plist_flat_field>
+    <Function test_command_plist_flat_sentinel>
+    <Function test_command_plist_nested_direct>
+    <Function test_command_plist_nested_indirect>
+  <Module test_command_procinfo.py>
+    <Function test_command_procinfo>
+    <Function test_command_procinfo_before_binary_start>
+  <Module test_command_search.py>
+    <Function test_command_search_limit>
+    <Function test_command_search_alignment>
+    <Function test_command_search_step>
+    <Function test_command_search_byte_width>
+    <Function test_command_search_word_width>
+    <Function test_command_search_dword_width>
+    <Function test_command_search_qword_width>
+    <Function test_command_search_rwx>
+  <Module test_commands_elf.py>
+    <Function test_commands_plt_gotplt_got_when_no_sections>
+    <Function test_command_plt[reference_bin_pie.out-True]>
+    <Function test_command_plt[reference_bin_nopie.out-False]>
+    <Function test_command_got_for_target_binary[reference_bin_pie.out-True]>
+    <Function test_command_got_for_target_binary[reference_bin_nopie.out-False]>
+    <Function test_command_got_for_target_binary_and_loaded_library>
+  <Module test_emulate.py>
+    <Function test_emulate_disasm>
+    <Function test_emulate_disasm_loop>
+  <Module test_go.py>
+    <Function test_typeinfo_go_x64>
+    <Function test_typeinfo_go_x86>
+  <Module test_loads.py>
+    <Function test_loads_pure_gdb_without_crashing>
+    <Function test_loads_binary_without_crashing>
+    <Function test_loads_binary_with_core_without_crashing>
+    <Function test_loads_core_without_crashing>
+    <Function test_entry_no_file_loaded>
+  <Module test_nearpc.py>
+    <Function test_nearpc_opcode_bytes[1]>
+    <Function test_nearpc_opcode_bytes[2]>
+    <Function test_nearpc_opcode_bytes[3]>
+    <Function test_nearpc_opcode_bytes[4]>
+    <Function test_nearpc_opcode_bytes[5]>
+    <Function test_nearpc_opcode_seperator[0]>
+    <Function test_nearpc_opcode_seperator[1]>
+    <Function test_nearpc_opcode_seperator[2]>
+    <Function test_nearpc_opcode_invalid_config>
+  <Module test_triggers.py>
+    <Function test_triggers>
+
+==================================== ERRORS ====================================
+________________ ERROR collecting tests/test_command_branch.py _________________
+tests/test_command_branch.py:6: in <module>
+    import pwndbg.gdblib
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+________________ ERROR collecting tests/test_command_cyclic.py _________________
+tests/test_command_cyclic.py:6: in <module>
+    import pwndbg.gdblib.arch
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_______________ ERROR collecting tests/test_command_distance.py ________________
+tests/test_command_distance.py:5: in <module>
+    import pwndbg.gdblib.regs
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+________________ ERROR collecting tests/test_command_ignore.py _________________
+tests/test_command_ignore.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_____________ ERROR collecting tests/test_command_stepuntilasm.py ______________
+tests/test_command_stepuntilasm.py:5: in <module>
+    import pwndbg.gdblib
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_______________ ERROR collecting tests/test_command_telescope.py _______________
+tests/test_command_telescope.py:7: in <module>
+    import pwndbg.gdblib
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+__________________ ERROR collecting tests/test_command_tls.py __________________
+tests/test_command_tls.py:6: in <module>
+    import pwndbg.gdblib.tls
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_________________ ERROR collecting tests/test_command_vmmap.py _________________
+tests/test_command_vmmap.py:8: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+__________________ ERROR collecting tests/test_command_xor.py __________________
+tests/test_command_xor.py:5: in <module>
+    import pwndbg.gdblib.memory
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+___________________ ERROR collecting tests/test_commands.py ____________________
+tests/test_commands.py:10: in <module>
+    from pwndbg.commands.shell import pwncmd_names
+../../pwndbg/commands/shell.py:11: in <module>
+    import pwndbg.commands
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_________________ ERROR collecting tests/test_commands_next.py _________________
+tests/test_commands_next.py:6: in <module>
+    import pwndbg.gdblib.regs
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_______________ ERROR collecting tests/test_context_commands.py ________________
+tests/test_context_commands.py:8: in <module>
+    import pwndbg.commands
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+____________________ ERROR collecting tests/test_cymbol.py _____________________
+tests/test_cymbol.py:5: in <module>
+    import pwndbg.commands.cymbol
+../../pwndbg/commands/cymbol.py:28: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_______________ ERROR collecting tests/test_gdblib_parameter.py ________________
+tests/test_gdblib_parameter.py:6: in <module>
+    import pwndbg.gdblib.config
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_____________________ ERROR collecting tests/test_glibc.py _____________________
+tests/test_glibc.py:10: in <module>
+    import pwndbg.gdblib.info
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+____________________ ERROR collecting tests/test_hexdump.py ____________________
+tests/test_hexdump.py:6: in <module>
+    import pwndbg.gdblib.config
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+____________________ ERROR collecting tests/test_memory.py _____________________
+tests/test_memory.py:3: in <module>
+    import pwndbg.gdblib.memory
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_____________________ ERROR collecting tests/test_misc.py ______________________
+tests/test_misc.py:5: in <module>
+    import pwndbg.commands
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_____________________ ERROR collecting tests/test_mmap.py ______________________
+tests/test_mmap.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+___________________ ERROR collecting tests/test_mprotect.py ____________________
+tests/test_mprotect.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+____________________ ERROR collecting tests/test_symbol.py _____________________
+tests/test_symbol.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+____________________ ERROR collecting tests/test_windbg.py _____________________
+tests/test_windbg.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+______________ ERROR collecting tests/heap/test_find_fake_fast.py ______________
+tests/heap/test_find_fake_fast.py:7: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+___________________ ERROR collecting tests/heap/test_heap.py ___________________
+tests/heap/test_heap.py:6: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+________________ ERROR collecting tests/heap/test_heap_bins.py _________________
+tests/heap/test_heap_bins.py:6: in <module>
+    import pwndbg.gdblib.memory
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_________________ ERROR collecting tests/heap/test_try_free.py _________________
+tests/heap/test_try_free.py:9: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+_____________ ERROR collecting tests/heap/test_vis_heap_chunks.py ______________
+tests/heap/test_vis_heap_chunks.py:5: in <module>
+    import pwndbg
+../../pwndbg/__init__.py:14: in <module>
+    load_commands()
+../../pwndbg/commands/__init__.py:633: in load_commands
+    import pwndbg.commands.ai
+../../pwndbg/commands/ai.py:21: in <module>
+    from pwndbg.commands import context
+../../pwndbg/commands/context.py:24: in <module>
+    import pwndbg.gdblib.heap_tracking
+../../pwndbg/gdblib/heap_tracking.py:88: in <module>
+    def resolve_address(name: str) -> int | None:
+E   TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+=========================== short test summary info ============================
+ERROR tests/test_command_branch.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_cyclic.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_distance.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_ignore.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_stepuntilasm.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_telescope.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_tls.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_vmmap.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_command_xor.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_commands.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_commands_next.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_context_commands.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_cymbol.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_gdblib_parameter.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_glibc.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_hexdump.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_memory.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_misc.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_mmap.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_mprotect.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_symbol.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/test_windbg.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/heap/test_find_fake_fast.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/heap/test_heap.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/heap/test_heap_bins.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/heap/test_try_free.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+ERROR tests/heap/test_vis_heap_chunks.py - TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+!!!!!!!!!!!!!!!!!!! Interrupted: 27 errors during collection !!!!!!!!!!!!!!!!!!!
+==================== 59 tests collected, 27 errors in 1.58s ====================
+Failed to collect all tests, perhaps there is a syntax error in one of test files?
+
+##[error]Process completed with exit code 1.

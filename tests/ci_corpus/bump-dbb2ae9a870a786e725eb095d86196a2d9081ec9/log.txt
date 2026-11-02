@@ -1,0 +1,686 @@
+2023-06-21T11:56:35.6919959Z Post job cleanup.
+2023-06-21T11:56:35.8394214Z [command]/usr/bin/git version
+2023-06-21T11:56:35.8461412Z git version 2.40.1
+2023-06-21T11:56:35.8531099Z Temporarily overriding HOME='/home/runner/work/_temp/1f076b73-8df8-4619-8530-f923c2a0b5fd' before making global git config changes
+2023-06-21T11:56:35.8532443Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T11:56:35.8540472Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jcabi-simpledb/jcabi-simpledb
+2023-06-21T11:56:35.8637629Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T11:56:35.8692833Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-21T11:56:37.9712216Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T11:56:37.9713117Z http.https://github.com/.extraheader
+2023-06-21T11:56:37.9714961Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-21T11:56:37.9717630Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-21T11:56:18.5097970Z Post job cleanup.
+2023-06-21T11:56:18.6602920Z [command]/usr/local/bin/git version
+2023-06-21T11:56:18.6730360Z git version 2.41.0
+2023-06-21T11:56:18.6853580Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/07a29b4c-e020-4c95-86b4-bca296b2500d/.gitconfig'
+2023-06-21T11:56:18.6855070Z Temporarily overriding HOME='/Users/runner/work/_temp/07a29b4c-e020-4c95-86b4-bca296b2500d' before making global git config changes
+2023-06-21T11:56:18.6856510Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T11:56:18.6857760Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-simpledb/jcabi-simpledb
+2023-06-21T11:56:18.6988910Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T11:56:18.7107820Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-21T11:56:18.8376030Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T11:56:18.8466410Z http.https://github.com/.extraheader
+2023-06-21T11:56:18.8486040Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-21T11:56:18.8600920Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-21T11:56:23.6728445Z Post job cleanup.
+
+2023-06-21T11:55:19.8580191Z Requested labels: windows-2022
+2023-06-21T11:55:19.8580634Z Job defined at: jcabi/jcabi-simpledb/.github/workflows/mvn.yml@refs/pull/22/merge
+2023-06-21T11:55:19.8580773Z Waiting for a runner to pick up this job...
+2023-06-21T11:55:22.8796228Z Job is waiting for a hosted runner to come online.
+2023-06-21T11:55:26.8646171Z Job is about to start running on the hosted runner: GitHub Actions 14 (hosted)
+2023-06-21T11:55:33.4425568Z Current runner version: '2.305.0'
+2023-06-21T11:55:33.4452142Z ##[group]Operating System
+2023-06-21T11:55:33.4452722Z Microsoft Windows Server 2022
+2023-06-21T11:55:33.4453068Z 10.0.20348
+2023-06-21T11:55:33.4453313Z Datacenter
+2023-06-21T11:55:33.4453585Z ##[endgroup]
+2023-06-21T11:55:33.4453868Z ##[group]Runner Image
+2023-06-21T11:55:33.4454139Z Image: windows-2022
+2023-06-21T11:55:33.4454479Z Version: 20230612.1
+2023-06-21T11:55:33.4454960Z Included Software: https://github.com/actions/runner-images/blob/win22/20230612.1/images/win/Windows2022-Readme.md
+2023-06-21T11:55:33.4455522Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230612.1
+2023-06-21T11:55:33.4455949Z ##[endgroup]
+2023-06-21T11:55:33.4456258Z ##[group]Runner Image Provisioner
+2023-06-21T11:55:33.4456521Z 2.0.238.1
+2023-06-21T11:55:33.4456792Z ##[endgroup]
+2023-06-21T11:55:33.4457688Z ##[group]GITHUB_TOKEN Permissions
+2023-06-21T11:55:33.4458230Z Actions: write
+2023-06-21T11:55:33.4458854Z Checks: write
+2023-06-21T11:55:33.4459244Z Contents: write
+2023-06-21T11:55:33.4459594Z Deployments: write
+2023-06-21T11:55:33.4459904Z Discussions: write
+2023-06-21T11:55:33.4460189Z Issues: write
+2023-06-21T11:55:33.4460427Z Metadata: read
+2023-06-21T11:55:33.4460707Z Packages: write
+2023-06-21T11:55:33.4460988Z Pages: write
+2023-06-21T11:55:33.4461303Z PullRequests: write
+2023-06-21T11:55:33.4461582Z RepositoryProjects: write
+2023-06-21T11:55:33.4461904Z SecurityEvents: write
+2023-06-21T11:55:33.4462199Z Statuses: write
+2023-06-21T11:55:33.4462442Z ##[endgroup]
+2023-06-21T11:55:33.4466142Z Secret source: Actions
+2023-06-21T11:55:33.4466620Z Prepare workflow directory
+2023-06-21T11:55:33.5347574Z Prepare all required actions
+2023-06-21T11:55:33.5537012Z Getting action download info
+2023-06-21T11:55:33.7558118Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-21T11:55:34.4676524Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-21T11:55:35.2037666Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-06-21T11:55:35.9095048Z Complete job name: mvn (windows-2022, 11)
+2023-06-21T11:55:36.0940394Z ##[group]Run actions/checkout@v3
+2023-06-21T11:55:36.0940801Z with:
+2023-06-21T11:55:36.0941037Z   repository: jcabi/jcabi-simpledb
+2023-06-21T11:55:36.0941541Z   token: ***
+2023-06-21T11:55:36.0941728Z   ssh-strict: true
+2023-06-21T11:55:36.0941952Z   persist-credentials: true
+2023-06-21T11:55:36.0942171Z   clean: true
+2023-06-21T11:55:36.0942387Z   sparse-checkout-cone-mode: true
+2023-06-21T11:55:36.0942625Z   fetch-depth: 1
+2023-06-21T11:55:36.0942814Z   lfs: false
+2023-06-21T11:55:36.0943015Z   submodules: false
+2023-06-21T11:55:36.0943236Z   set-safe-directory: true
+2023-06-21T11:55:36.0943458Z ##[endgroup]
+2023-06-21T11:55:37.1745468Z Syncing repository: jcabi/jcabi-simpledb
+2023-06-21T11:55:37.1748916Z ##[group]Getting Git version info
+2023-06-21T11:55:37.1749663Z Working directory is 'D:\a\jcabi-simpledb\jcabi-simpledb'
+2023-06-21T11:55:37.1750387Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-06-21T11:55:37.2382992Z git version 2.41.0.windows.1
+2023-06-21T11:55:37.2425762Z ##[endgroup]
+2023-06-21T11:55:37.2452107Z Temporarily overriding HOME='D:\a\_temp\a51b88fb-83e3-44c3-954d-e29d8b3c2b7c' before making global git config changes
+2023-06-21T11:55:37.2452797Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T11:55:37.2466384Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-simpledb\jcabi-simpledb
+2023-06-21T11:55:37.3336881Z Deleting the contents of 'D:\a\jcabi-simpledb\jcabi-simpledb'
+2023-06-21T11:55:37.3341832Z ##[group]Initializing the repository
+2023-06-21T11:55:37.3351719Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\jcabi-simpledb\jcabi-simpledb
+2023-06-21T11:55:37.4787319Z Initialized empty Git repository in D:/a/jcabi-simpledb/jcabi-simpledb/.git/
+2023-06-21T11:55:37.4830761Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jcabi/jcabi-simpledb
+2023-06-21T11:55:37.5700339Z ##[endgroup]
+2023-06-21T11:55:37.5701137Z ##[group]Disabling automatic garbage collection
+2023-06-21T11:55:37.5710406Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2023-06-21T11:55:37.6021028Z ##[endgroup]
+2023-06-21T11:55:37.6042872Z ##[group]Setting up auth
+2023-06-21T11:55:37.6056649Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T11:55:37.6385448Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-06-21T11:55:39.8458591Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T11:55:39.8761075Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-06-21T11:55:40.3568081Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2023-06-21T11:55:40.3876837Z ##[endgroup]
+2023-06-21T11:55:40.3877525Z ##[group]Fetching the repository
+2023-06-21T11:55:40.3892121Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +644901374b3274f0b2f8e9e382b35dc98a281951:refs/remotes/pull/22/merge
+2023-06-21T11:55:42.5557537Z remote: Enumerating objects: 54, done.        
+2023-06-21T11:55:42.5558008Z remote: Counting objects:   1% (1/54)        
+2023-06-21T11:55:42.5558345Z remote: Counting objects:   3% (2/54)        
+2023-06-21T11:55:42.5558630Z remote: Counting objects:   5% (3/54)        
+2023-06-21T11:55:42.5559000Z remote: Counting objects:   7% (4/54)        
+2023-06-21T11:55:42.5559336Z remote: Counting objects:   9% (5/54)        
+2023-06-21T11:55:42.5561770Z remote: Counting objects:  11% (6/54)        
+2023-06-21T11:55:42.5562182Z remote: Counting objects:  12% (7/54)        
+2023-06-21T11:55:42.5562502Z remote: Counting objects:  14% (8/54)        
+2023-06-21T11:55:42.5562811Z remote: Counting objects:  16% (9/54)        
+2023-06-21T11:55:42.5563123Z remote: Counting objects:  18% (10/54)        
+2023-06-21T11:55:42.5563458Z remote: Counting objects:  20% (11/54)        
+2023-06-21T11:55:42.5563798Z remote: Counting objects:  22% (12/54)        
+2023-06-21T11:55:42.5564110Z remote: Counting objects:  24% (13/54)        
+2023-06-21T11:55:42.5564412Z remote: Counting objects:  25% (14/54)        
+2023-06-21T11:55:42.5564720Z remote: Counting objects:  27% (15/54)        
+2023-06-21T11:55:42.5565036Z remote: Counting objects:  29% (16/54)        
+2023-06-21T11:55:42.5565360Z remote: Counting objects:  31% (17/54)        
+2023-06-21T11:55:42.5565651Z remote: Counting objects:  33% (18/54)        
+2023-06-21T11:55:42.5565964Z remote: Counting objects:  35% (19/54)        
+2023-06-21T11:55:42.5566267Z remote: Counting objects:  37% (20/54)        
+2023-06-21T11:55:42.5566559Z remote: Counting objects:  38% (21/54)        
+2023-06-21T11:55:42.5566867Z remote: Counting objects:  40% (22/54)        
+2023-06-21T11:55:42.5567181Z remote: Counting objects:  42% (23/54)        
+2023-06-21T11:55:42.5567488Z remote: Counting objects:  44% (24/54)        
+2023-06-21T11:55:42.5567787Z remote: Counting objects:  46% (25/54)        
+2023-06-21T11:55:42.5568094Z remote: Counting objects:  48% (26/54)        
+2023-06-21T11:55:42.5568404Z remote: Counting objects:  50% (27/54)        
+2023-06-21T11:55:42.5568716Z remote: Counting objects:  51% (28/54)        
+2023-06-21T11:55:42.5569007Z remote: Counting objects:  53% (29/54)        
+2023-06-21T11:55:42.5570217Z remote: Counting objects:  55% (30/54)        
+2023-06-21T11:55:42.5570523Z remote: Counting objects:  57% (31/54)        
+2023-06-21T11:55:42.5570845Z remote: Counting objects:  59% (32/54)        
+2023-06-21T11:55:42.5571138Z remote: Counting objects:  61% (33/54)        
+2023-06-21T11:55:42.5571454Z remote: Counting objects:  62% (34/54)        
+2023-06-21T11:55:42.5571760Z remote: Counting objects:  64% (35/54)        
+2023-06-21T11:55:42.5572054Z remote: Counting objects:  66% (36/54)        
+2023-06-21T11:55:42.5572364Z remote: Counting objects:  68% (37/54)        
+2023-06-21T11:55:42.5572999Z remote: Counting objects:  70% (38/54)        
+2023-06-21T11:55:42.5573310Z remote: Counting objects:  72% (39/54)        
+2023-06-21T11:55:42.5573612Z remote: Counting objects:  74% (40/54)        
+2023-06-21T11:55:42.5573917Z remote: Counting objects:  75% (41/54)        
+2023-06-21T11:55:42.5574323Z remote: Counting objects:  77% (42/54)        
+2023-06-21T11:55:42.5574637Z remote: Counting objects:  79% (43/54)        
+2023-06-21T11:55:42.5574934Z remote: Counting objects:  81% (44/54)        
+2023-06-21T11:55:42.5575235Z remote: Counting objects:  83% (45/54)        
+2023-06-21T11:55:42.5575550Z remote: Counting objects:  85% (46/54)        
+2023-06-21T11:55:42.5575844Z remote: Counting objects:  87% (47/54)        
+2023-06-21T11:55:42.5576147Z remote: Counting objects:  88% (48/54)        
+2023-06-21T11:55:42.5576453Z remote: Counting objects:  90% (49/54)        
+2023-06-21T11:55:42.5576755Z remote: Counting objects:  92% (50/54)        
+2023-06-21T11:55:42.5577045Z remote: Counting objects:  94% (51/54)        
+2023-06-21T11:55:42.5577349Z remote: Counting objects:  96% (52/54)        
+2023-06-21T11:55:42.5577677Z remote: Counting objects:  98% (53/54)        
+2023-06-21T11:55:42.5577981Z remote: Counting objects: 100% (54/54)        
+2023-06-21T11:55:42.5578294Z remote: Counting objects: 100% (54/54), done.        
+2023-06-21T11:55:42.5578640Z remote: Compressing objects:   2% (1/34)        
+2023-06-21T11:55:42.5578985Z remote: Compressing objects:   5% (2/34)        
+2023-06-21T11:55:42.5579314Z remote: Compressing objects:   8% (3/34)        
+2023-06-21T11:55:42.5580335Z remote: Compressing objects:  11% (4/34)        
+2023-06-21T11:55:42.5580701Z remote: Compressing objects:  14% (5/34)        
+2023-06-21T11:55:42.5581020Z remote: Compressing objects:  17% (6/34)        
+2023-06-21T11:55:42.5581338Z remote: Compressing objects:  20% (7/34)        
+2023-06-21T11:55:42.5581658Z remote: Compressing objects:  23% (8/34)        
+2023-06-21T11:55:42.5581993Z remote: Compressing objects:  26% (9/34)        
+2023-06-21T11:55:43.1365830Z remote: Compressing objects:  29% (10/34)        
+2023-06-21T11:55:43.1366445Z remote: Compressing objects:  32% (11/34)        
+2023-06-21T11:55:43.1369643Z remote: Compressing objects:  35% (12/34)        
+2023-06-21T11:55:43.1370015Z remote: Compressing objects:  38% (13/34)        
+2023-06-21T11:55:43.1370397Z remote: Compressing objects:  41% (14/34)        
+2023-06-21T11:55:43.1370771Z remote: Compressing objects:  44% (15/34)        
+2023-06-21T11:55:43.1371094Z remote: Compressing objects:  47% (16/34)        
+2023-06-21T11:55:43.1371448Z remote: Compressing objects:  50% (17/34)        
+2023-06-21T11:55:43.1371757Z remote: Compressing objects:  52% (18/34)        
+2023-06-21T11:55:43.1372079Z remote: Compressing objects:  55% (19/34)        
+2023-06-21T11:55:43.1372400Z remote: Compressing objects:  58% (20/34)        
+2023-06-21T11:55:43.1372721Z remote: Compressing objects:  61% (21/34)        
+2023-06-21T11:55:43.1373026Z remote: Compressing objects:  64% (22/34)        
+2023-06-21T11:55:43.1373339Z remote: Compressing objects:  67% (23/34)        
+2023-06-21T11:55:43.1373660Z remote: Compressing objects:  70% (24/34)        
+2023-06-21T11:55:43.1373981Z remote: Compressing objects:  73% (25/34)        
+2023-06-21T11:55:43.1374283Z remote: Compressing objects:  76% (26/34)        
+2023-06-21T11:55:43.1374867Z remote: Compressing objects:  79% (27/34)        
+2023-06-21T11:55:43.1375185Z remote: Compressing objects:  82% (28/34)        
+2023-06-21T11:55:43.1375508Z remote: Compressing objects:  85% (29/34)        
+2023-06-21T11:55:43.1375819Z remote: Compressing objects:  88% (30/34)        
+2023-06-21T11:55:43.1376135Z remote: Compressing objects:  91% (31/34)        
+2023-06-21T11:55:43.1376449Z remote: Compressing objects:  94% (32/34)        
+2023-06-21T11:55:43.1376757Z remote: Compressing objects:  97% (33/34)        
+2023-06-21T11:55:43.1377073Z remote: Compressing objects: 100% (34/34)        
+2023-06-21T11:55:43.1377408Z remote: Compressing objects: 100% (34/34), done.        
+2023-06-21T11:55:43.1378315Z remote: Total 54 (delta 14), reused 33 (delta 5), pack-reused 0        
+2023-06-21T11:55:43.1378778Z From https://github.com/jcabi/jcabi-simpledb
+2023-06-21T11:55:43.1379272Z  * [new ref]         644901374b3274f0b2f8e9e382b35dc98a281951 -> pull/22/merge
+2023-06-21T11:55:43.1381316Z ##[endgroup]
+2023-06-21T11:55:43.1381822Z ##[group]Determining the checkout info
+2023-06-21T11:55:43.1382318Z ##[endgroup]
+2023-06-21T11:55:43.1382892Z ##[group]Checking out the ref
+2023-06-21T11:55:43.1390786Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/22/merge
+2023-06-21T11:55:43.1391437Z Note: switching to 'refs/remotes/pull/22/merge'.
+2023-06-21T11:55:43.1391721Z 
+2023-06-21T11:55:43.1392076Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-06-21T11:55:43.1392645Z changes and commit them, and you can discard any commits you make in this
+2023-06-21T11:55:43.1393139Z state without impacting any branches by switching back to a branch.
+2023-06-21T11:55:43.1393440Z 
+2023-06-21T11:55:43.1393640Z If you want to create a new branch to retain commits you create, you may
+2023-06-21T11:55:43.1394222Z do so (now or later) by using -c with the switch command. Example:
+2023-06-21T11:55:43.1394502Z 
+2023-06-21T11:55:43.1395051Z   git switch -c <new-branch-name>
+2023-06-21T11:55:43.1395317Z 
+2023-06-21T11:55:43.1396009Z Or undo this operation with:
+2023-06-21T11:55:43.1396484Z 
+2023-06-21T11:55:43.1396738Z   git switch -
+2023-06-21T11:55:43.1397194Z 
+2023-06-21T11:55:43.1398020Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-06-21T11:55:43.1398316Z 
+2023-06-21T11:55:43.1398581Z HEAD is now at 6449013 Merge dbb2ae9a870a786e725eb095d86196a2d9081ec9 into 4af3ea931691caa0a667852b626485b1b0cbffcf
+2023-06-21T11:55:43.1399577Z ##[endgroup]
+2023-06-21T11:55:43.1400599Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format='%H'
+2023-06-21T11:55:43.1401046Z '644901374b3274f0b2f8e9e382b35dc98a281951'
+2023-06-21T11:55:43.1831825Z ##[group]Run actions/setup-java@v3
+2023-06-21T11:55:43.1832201Z with:
+2023-06-21T11:55:43.1832493Z   distribution: temurin
+2023-06-21T11:55:43.1832778Z   java-version: 11
+2023-06-21T11:55:43.1833019Z   java-package: jdk
+2023-06-21T11:55:43.1833296Z   check-latest: false
+2023-06-21T11:55:43.1833581Z   server-id: github
+2023-06-21T11:55:43.1833830Z   server-username: GITHUB_ACTOR
+2023-06-21T11:55:43.1834162Z   server-password: GITHUB_TOKEN
+2023-06-21T11:55:43.1834477Z   overwrite-settings: true
+2023-06-21T11:55:43.1834726Z   job-status: success
+2023-06-21T11:55:43.1835244Z   token: ***
+2023-06-21T11:55:43.1835508Z ##[endgroup]
+[... 15838 lines removed by TriageCore ...]
+2023-06-21T11:56:18.0935200Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+2023-06-21T11:56:18.0936080Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+2023-06-21T11:56:18.0936990Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+2023-06-21T11:56:18.0937860Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+2023-06-21T11:56:18.0939610Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+2023-06-21T11:56:18.0942100Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+2023-06-21T11:56:18.0943000Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+2023-06-21T11:56:18.0943890Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+2023-06-21T11:56:18.0955810Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.0956820Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+2023-06-21T11:56:18.0957690Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+2023-06-21T11:56:18.0958570Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+2023-06-21T11:56:18.0959580Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+2023-06-21T11:56:18.0960430Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.0962860Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.0966960Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.0993690Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.0995630Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.0996500Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.0997340Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.0998030Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+2023-06-21T11:56:18.0998910Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-06-21T11:56:18.0999910Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-06-21T11:56:18.1000720Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1001580Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.1002330Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.1003090Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.1003930Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1004770Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.1005580Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.1006250Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+2023-06-21T11:56:18.1007150Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-06-21T11:56:18.1008150Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-06-21T11:56:18.1008980Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1010200Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.1011070Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.1011830Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.1012650Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1013300Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.1014120Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.1015100Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+2023-06-21T11:56:18.1016120Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+2023-06-21T11:56:18.1017380Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+2023-06-21T11:56:18.1018290Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+2023-06-21T11:56:18.1019140Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+2023-06-21T11:56:18.1019980Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+2023-06-21T11:56:18.1020820Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+2023-06-21T11:56:18.1023690Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+2023-06-21T11:56:18.1029430Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+2023-06-21T11:56:18.1030330Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+2023-06-21T11:56:18.1031240Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+2023-06-21T11:56:18.1032040Z 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+2023-06-21T11:56:18.1057410Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+2023-06-21T11:56:18.1058900Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+2023-06-21T11:56:18.1060130Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+2023-06-21T11:56:18.1061220Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+2023-06-21T11:56:18.1062230Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-06-21T11:56:18.1066190Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-06-21T11:56:18.1067290Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-06-21T11:56:18.1068230Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-06-21T11:56:18.1069250Z Caused by: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1073000Z 	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
+2023-06-21T11:56:18.1074260Z 	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
+2023-06-21T11:56:18.1082000Z 	at com.jcabi.aspects.aj.MethodValidator.<init>(MethodValidator.java:70)
+2023-06-21T11:56:18.1083480Z 	at com.jcabi.aspects.aj.MethodValidator.ajc$postClinit(MethodValidator.java:1)
+2023-06-21T11:56:18.1084960Z 	at com.jcabi.aspects.aj.MethodValidator.<clinit>(MethodValidator.java:1)
+2023-06-21T11:56:18.1085900Z 	at com.jcabi.simpledb.Credentials$Simple.<init>(Credentials.java:100)
+2023-06-21T11:56:18.1086840Z 	at com.jcabi.simpledb.CredentialsTest.instantiatesAwsClient(CredentialsTest.java:45)
+2023-06-21T11:56:18.1089550Z 	... 71 more
+2023-06-21T11:56:18.1089810Z 
+2023-06-21T11:56:18.1090580Z [INFO] Running com.jcabi.simpledb.AwsDomainTest
+2023-06-21T11:56:18.1091370Z [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in com.jcabi.simpledb.AwsDomainTest
+2023-06-21T11:56:18.1091910Z [ERROR] com.jcabi.simpledb.AwsDomainTest.makesAnItem  Time elapsed: 0.004 s  <<< ERROR!
+2023-06-21T11:56:18.1092680Z org.aspectj.lang.NoAspectBoundException: Exception while initializing com.jcabi.aspects.aj.MethodValidator: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1093400Z 	at com.jcabi.aspects.aj.MethodValidator.aspectOf(MethodValidator.java:1)
+2023-06-21T11:56:18.1093770Z 	at com.jcabi.simpledb.AwsDomain.item(AwsDomain.java:95)
+2023-06-21T11:56:18.1094140Z 	at com.jcabi.simpledb.AwsDomainTest.makesAnItem(AwsDomainTest.java:48)
+2023-06-21T11:56:18.1094820Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2023-06-21T11:56:18.1095320Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+2023-06-21T11:56:18.1095980Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-06-21T11:56:18.1096940Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+2023-06-21T11:56:18.1097370Z 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+2023-06-21T11:56:18.1097880Z 	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+2023-06-21T11:56:18.1098470Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+2023-06-21T11:56:18.1099060Z 	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+2023-06-21T11:56:18.1099630Z 	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+2023-06-21T11:56:18.1100230Z 	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+2023-06-21T11:56:18.1100910Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+2023-06-21T11:56:18.1101630Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+2023-06-21T11:56:18.1102300Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+2023-06-21T11:56:18.1102930Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+2023-06-21T11:56:18.1103760Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+2023-06-21T11:56:18.1104400Z 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+2023-06-21T11:56:18.1105030Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+2023-06-21T11:56:18.1105660Z 	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+2023-06-21T11:56:18.1106320Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
+2023-06-21T11:56:18.1106950Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1108070Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+2023-06-21T11:56:18.1108770Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+2023-06-21T11:56:18.1109370Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+2023-06-21T11:56:18.1109970Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+2023-06-21T11:56:18.1110570Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1111170Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.1111690Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.1112220Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.1112810Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1113420Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.1114000Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.1114430Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+2023-06-21T11:56:18.1115060Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-06-21T11:56:18.1116190Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-06-21T11:56:18.1117250Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1117880Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.1118410Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.1118930Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.1119520Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1120130Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.1120720Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.1121150Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+2023-06-21T11:56:18.1121790Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+2023-06-21T11:56:18.1122550Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+2023-06-21T11:56:18.1123140Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1123740Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+2023-06-21T11:56:18.1124250Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+2023-06-21T11:56:18.1124780Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+2023-06-21T11:56:18.1125380Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+2023-06-21T11:56:18.1125990Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+2023-06-21T11:56:18.1127200Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+2023-06-21T11:56:18.1128010Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+2023-06-21T11:56:18.1128810Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+2023-06-21T11:56:18.1129460Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+2023-06-21T11:56:18.1130100Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+2023-06-21T11:56:18.1130730Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+2023-06-21T11:56:18.1131330Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+2023-06-21T11:56:18.1131950Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+2023-06-21T11:56:18.1132640Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+2023-06-21T11:56:18.1133310Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+2023-06-21T11:56:18.1133850Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+2023-06-21T11:56:18.1134310Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+2023-06-21T11:56:18.1135190Z 	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+2023-06-21T11:56:18.1135740Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:55)
+2023-06-21T11:56:18.1136290Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:223)
+2023-06-21T11:56:18.1137020Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:175)
+2023-06-21T11:56:18.1137860Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:139)
+2023-06-21T11:56:18.1138430Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+2023-06-21T11:56:18.1138920Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+2023-06-21T11:56:18.1139350Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+2023-06-21T11:56:18.1139780Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+2023-06-21T11:56:18.1140350Z Caused by: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1140890Z 	at javax.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
+2023-06-21T11:56:18.1141340Z 	at javax.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
+2023-06-21T11:56:18.1141770Z 	at com.jcabi.aspects.aj.MethodValidator.<init>(MethodValidator.java:70)
+2023-06-21T11:56:18.1142180Z 	at com.jcabi.aspects.aj.MethodValidator.ajc$postClinit(MethodValidator.java:1)
+2023-06-21T11:56:18.1142570Z 	at com.jcabi.aspects.aj.MethodValidator.<clinit>(MethodValidator.java:1)
+2023-06-21T11:56:18.1142950Z 	at com.jcabi.simpledb.Credentials$Simple.<init>(Credentials.java:100)
+2023-06-21T11:56:18.1143370Z 	at com.jcabi.simpledb.CredentialsTest.instantiatesAwsClient(CredentialsTest.java:45)
+2023-06-21T11:56:18.1143690Z 	... 71 more
+2023-06-21T11:56:18.1143900Z 
+2023-06-21T11:56:18.1143970Z [INFO] 
+2023-06-21T11:56:18.1144140Z [INFO] Results:
+2023-06-21T11:56:18.1144320Z [INFO] 
+2023-06-21T11:56:18.1144480Z [ERROR] Errors: 
+2023-06-21T11:56:18.1146210Z [ERROR]   AwsDomainTest.makesAnItem:48 » NoAspectBound Exception while initializing com.jcabi.aspects.aj.MethodValidator: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1147720Z [ERROR]   CredentialsTest.instantiatesAwsClient:45 » NoAspectBound Exception while initializing com.jcabi.aspects.aj.MethodValidator: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1149110Z [ERROR]   CredentialsTest.instantiatesAwsClientWithCustomRegion:54 » NoAspectBound Exception while initializing com.jcabi.aspects.aj.MethodValidator: javax.validation.NoProviderFoundException: Unable to create a Configuration, because no Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2023-06-21T11:56:18.1149760Z [INFO] 
+2023-06-21T11:56:18.1150000Z [ERROR] Tests run: 5, Failures: 0, Errors: 3, Skipped: 0
+2023-06-21T11:56:18.1150220Z [INFO] 
+2023-06-21T11:56:18.1150620Z [INFO] ------------------------------------------------------------------------
+2023-06-21T11:56:18.1150890Z [INFO] BUILD FAILURE
+2023-06-21T11:56:18.1151270Z [INFO] ------------------------------------------------------------------------
+2023-06-21T11:56:18.1151540Z [INFO] Total time:  30.150 s
+2023-06-21T11:56:18.1151860Z [INFO] Finished at: 2023-06-21T11:56:18Z
+2023-06-21T11:56:18.1152250Z [INFO] ------------------------------------------------------------------------
+2023-06-21T11:56:18.1152520Z [WARNING] 
+2023-06-21T11:56:18.1153150Z [WARNING] Plugin validation issues were detected in 6 plugin(s)
+2023-06-21T11:56:18.1153390Z [WARNING] 
+2023-06-21T11:56:18.1153960Z [WARNING]  * org.codehaus.mojo:buildnumber-maven-plugin:3.0.0
+2023-06-21T11:56:18.1154430Z [WARNING]  * org.apache.maven.plugins:maven-compiler-plugin:3.10.1
+2023-06-21T11:56:18.1154900Z [WARNING]  * org.apache.maven.plugins:maven-enforcer-plugin:3.1.0
+2023-06-21T11:56:18.1155350Z [WARNING]  * org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7
+2023-06-21T11:56:18.1155760Z [WARNING]  * com.jcabi:jcabi-maven-plugin:0.17.0
+2023-06-21T11:56:18.1156170Z [WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+2023-06-21T11:56:18.1156430Z [WARNING] 
+2023-06-21T11:56:18.1156940Z [WARNING] For more or less details, use 'maven.plugin.validation' property with one of the values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+2023-06-21T11:56:18.1157270Z [WARNING] 
+2023-06-21T11:56:18.1157770Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project jcabi-simpledb: 
+2023-06-21T11:56:18.1158120Z [ERROR] 
+2023-06-21T11:56:18.1158810Z [ERROR] Please refer to /Users/runner/work/jcabi-simpledb/jcabi-simpledb/target/surefire-reports for the individual test results.
+2023-06-21T11:56:18.1159400Z [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-06-21T11:56:18.1159750Z [ERROR] -> [Help 1]
+2023-06-21T11:56:18.1160420Z org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M7:test (default-test) on project jcabi-simpledb: 
+2023-06-21T11:56:18.1160800Z 
+2023-06-21T11:56:18.1161170Z Please refer to /Users/runner/work/jcabi-simpledb/jcabi-simpledb/target/surefire-reports for the individual test results.
+2023-06-21T11:56:18.1161720Z Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-06-21T11:56:18.1162160Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:347)
+2023-06-21T11:56:18.1162660Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:330)
+2023-06-21T11:56:18.1163140Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+2023-06-21T11:56:18.1164090Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:175)
+2023-06-21T11:56:18.1164620Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:76)
+2023-06-21T11:56:18.1165070Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:163)
+2023-06-21T11:56:18.1165580Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-06-21T11:56:18.1166100Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:160)
+2023-06-21T11:56:18.1166650Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-06-21T11:56:18.1167280Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-06-21T11:56:18.1167960Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-06-21T11:56:18.1168580Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-06-21T11:56:18.1169030Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-06-21T11:56:18.1169410Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-06-21T11:56:18.1169780Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-06-21T11:56:18.1170130Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:910)
+2023-06-21T11:56:18.1170480Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-06-21T11:56:18.1170820Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-06-21T11:56:18.1171550Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T11:56:18.1172030Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-06-21T11:56:18.1172560Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T11:56:18.1173000Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-06-21T11:56:18.1173410Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-06-21T11:56:18.1173910Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-06-21T11:56:18.1174400Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-06-21T11:56:18.1174880Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-06-21T11:56:18.1175290Z Caused by: org.apache.maven.plugin.MojoFailureException: 
+2023-06-21T11:56:18.1175500Z 
+2023-06-21T11:56:18.1175950Z Please refer to /Users/runner/work/jcabi-simpledb/jcabi-simpledb/target/surefire-reports for the individual test results.
+2023-06-21T11:56:18.1176510Z Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+2023-06-21T11:56:18.1176970Z     at org.apache.maven.plugin.surefire.SurefireHelper.throwException (SurefireHelper.java:283)
+2023-06-21T11:56:18.1177510Z     at org.apache.maven.plugin.surefire.SurefireHelper.reportExecution (SurefireHelper.java:171)
+2023-06-21T11:56:18.1178030Z     at org.apache.maven.plugin.surefire.SurefirePlugin.handleSummary (SurefirePlugin.java:546)
+2023-06-21T11:56:18.1178670Z     at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked (AbstractSurefireMojo.java:1183)
+2023-06-21T11:56:18.1179300Z     at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute (AbstractSurefireMojo.java:931)
+2023-06-21T11:56:18.1179850Z     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+2023-06-21T11:56:18.1180400Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:342)
+2023-06-21T11:56:18.1180890Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:330)
+2023-06-21T11:56:18.1181670Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+2023-06-21T11:56:18.1182210Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:175)
+2023-06-21T11:56:18.1182670Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:76)
+2023-06-21T11:56:18.1183110Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:163)
+2023-06-21T11:56:18.1183620Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-06-21T11:56:18.1184150Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:160)
+2023-06-21T11:56:18.1184710Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-06-21T11:56:18.1185320Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-06-21T11:56:18.1185990Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-06-21T11:56:18.1186860Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-06-21T11:56:18.1187350Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-06-21T11:56:18.1187710Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-06-21T11:56:18.1188080Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-06-21T11:56:18.1188440Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:910)
+2023-06-21T11:56:18.1188790Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-06-21T11:56:18.1189510Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-06-21T11:56:18.1190260Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-21T11:56:18.1192540Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-06-21T11:56:18.1193790Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-21T11:56:18.1194260Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-06-21T11:56:18.1194690Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-06-21T11:56:18.1195180Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-06-21T11:56:18.1195690Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-06-21T11:56:18.1196340Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-06-21T11:56:18.1196680Z [ERROR] 
+2023-06-21T11:56:18.1197180Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-21T11:56:18.1197440Z [ERROR] 
+2023-06-21T11:56:18.1197740Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-21T11:56:18.1198170Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-21T11:56:18.1506670Z ##[error]Process completed with exit code 1.
+2023-06-21T11:56:18.1675020Z Post job cleanup.
+2023-06-21T11:56:18.5098050Z Post job cleanup.
+2023-06-21T11:56:18.6603280Z [command]/usr/local/bin/git version
+2023-06-21T11:56:18.6730400Z git version 2.41.0
+2023-06-21T11:56:18.6853780Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/07a29b4c-e020-4c95-86b4-bca296b2500d/.gitconfig'
+2023-06-21T11:56:18.6855090Z Temporarily overriding HOME='/Users/runner/work/_temp/07a29b4c-e020-4c95-86b4-bca296b2500d' before making global git config changes
+2023-06-21T11:56:18.6856520Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T11:56:18.6857770Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-simpledb/jcabi-simpledb
+2023-06-21T11:56:18.6988960Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T11:56:18.7108010Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-21T11:56:18.8376070Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T11:56:18.8466450Z http.https://github.com/.extraheader
+2023-06-21T11:56:18.8486060Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-21T11:56:18.8600970Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-21T11:56:19.0398210Z Cleaning up orphan processes
+
+2023-06-21T11:56:35.4196232Z Post job cleanup.
+
+2023-06-21T11:55:44.2787070Z ##[group]Run mvn -version
+2023-06-21T11:55:44.2787860Z [36;1mmvn -version[0m
+2023-06-21T11:55:44.3026480Z shell: /bin/bash -e {0}
+2023-06-21T11:55:44.3026800Z env:
+2023-06-21T11:55:44.3027160Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-21T11:55:44.3027610Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-21T11:55:44.3027910Z ##[endgroup]
+2023-06-21T11:55:45.6130630Z Apache Maven 3.9.2 (c9616018c7a021c1c39be70fb2843d6f5f9b8a1c)
+2023-06-21T11:55:45.6137680Z Maven home: /usr/local/Cellar/maven/3.9.2/libexec
+2023-06-21T11:55:45.6138910Z Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-21T11:55:45.6139530Z Default locale: en_US, platform encoding: UTF-8
+2023-06-21T11:55:45.6139900Z OS name: "mac os x", version: "12.6.6", arch: "x86_64", family: "mac"
+
+2023-06-21T11:55:41.0695885Z ##[group]Run actions/cache@v3
+2023-06-21T11:55:41.0696400Z with:
+2023-06-21T11:55:41.0696726Z   path: ~/.m2/repository
+2023-06-21T11:55:41.0697326Z   key: Windows-jdk-17-maven-8c6cc7cb8c1f56c5f19aec88de9d137b2b8ead06000fd4ba9f7d971a63664f89
+2023-06-21T11:55:41.0697868Z   restore-keys: Windows-jdk-17-maven-
+
+2023-06-21T11:55:41.0698270Z   enableCrossOsArchive: false
+2023-06-21T11:55:41.0698648Z   fail-on-cache-miss: false
+2023-06-21T11:55:41.0698930Z   lookup-only: false
+2023-06-21T11:55:41.0699282Z env:
+2023-06-21T11:55:41.0699690Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-06-21T11:55:41.0700234Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-06-21T11:55:41.0700604Z ##[endgroup]
+2023-06-21T11:55:41.7976979Z Cache not found for input keys: Windows-jdk-17-maven-8c6cc7cb8c1f56c5f19aec88de9d137b2b8ead06000fd4ba9f7d971a63664f89, Windows-jdk-17-maven-
+
+2023-06-21T11:56:18.1674990Z Post job cleanup.
+
+2023-06-21T11:55:28.9878397Z Current runner version: '2.305.0'
+2023-06-21T11:55:28.9910917Z ##[group]Operating System
+2023-06-21T11:55:28.9911588Z Ubuntu
+2023-06-21T11:55:28.9911954Z 20.04.6
+2023-06-21T11:55:28.9912334Z LTS
+2023-06-21T11:55:28.9912713Z ##[endgroup]
+2023-06-21T11:55:28.9913068Z ##[group]Runner Image
+2023-06-21T11:55:28.9913497Z Image: ubuntu-20.04
+2023-06-21T11:55:28.9913935Z Version: 20230611.1
+2023-06-21T11:55:28.9914534Z Included Software: https://github.com/actions/runner-images/blob/ubuntu20/20230611.1/images/linux/Ubuntu2004-Readme.md
+2023-06-21T11:55:28.9915336Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu20%2F20230611.1
+2023-06-21T11:55:28.9915894Z ##[endgroup]
+2023-06-21T11:55:28.9916284Z ##[group]Runner Image Provisioner
+2023-06-21T11:55:28.9916752Z 2.0.238.1
+2023-06-21T11:55:28.9917428Z ##[endgroup]
+2023-06-21T11:55:28.9918622Z ##[group]GITHUB_TOKEN Permissions
+2023-06-21T11:55:28.9919469Z Actions: write
+2023-06-21T11:55:28.9919824Z Checks: write
+2023-06-21T11:55:28.9920216Z Contents: write
+2023-06-21T11:55:28.9921010Z Deployments: write
+2023-06-21T11:55:28.9921431Z Discussions: write
+2023-06-21T11:55:28.9921778Z Issues: write
+2023-06-21T11:55:28.9922163Z Metadata: read
+2023-06-21T11:55:28.9922554Z Packages: write
+2023-06-21T11:55:28.9922938Z Pages: write
+2023-06-21T11:55:28.9923337Z PullRequests: write
+2023-06-21T11:55:28.9923791Z RepositoryProjects: write
+2023-06-21T11:55:28.9924196Z SecurityEvents: write
+2023-06-21T11:55:28.9924639Z Statuses: write
+2023-06-21T11:55:28.9925062Z ##[endgroup]
+2023-06-21T11:55:28.9929553Z Secret source: Actions
+2023-06-21T11:55:28.9930226Z Prepare workflow directory
+2023-06-21T11:55:29.0830766Z Prepare all required actions
+2023-06-21T11:55:29.1068190Z Getting action download info
+2023-06-21T11:55:29.4348375Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-21T11:55:30.1125828Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-21T11:55:30.7002962Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-06-21T11:55:31.4787423Z Complete job name: mvn (ubuntu-20.04, 11)
+
+2023-06-21T11:55:41.6276210Z ##[group]Run java -version
+2023-06-21T11:55:41.6276790Z [36;1mjava -version[0m
+2023-06-21T11:55:41.6496540Z shell: /bin/bash -e {0}
+2023-06-21T11:55:41.6496930Z env:
+2023-06-21T11:55:41.6497310Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-06-21T11:55:41.6498010Z   JAVA_HOME_11_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-06-21T11:55:41.6498520Z ##[endgroup]
+2023-06-21T11:55:42.0146770Z openjdk version "11.0.19" 2023-04-18
+2023-06-21T11:55:42.0147960Z OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+2023-06-21T11:55:42.0148560Z OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+
+2023-06-21T11:56:24.0514886Z Post job cleanup.
+2023-06-21T11:56:24.2955122Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-06-21T11:56:24.3234556Z git version 2.41.0.windows.1
+2023-06-21T11:56:24.3302654Z Temporarily overriding HOME='D:\a\_temp\7a5952b6-3e31-4930-81ca-aa8074bd1ad2' before making global git config changes
+2023-06-21T11:56:24.3303380Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-21T11:56:24.3313699Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-simpledb\jcabi-simpledb
+2023-06-21T11:56:24.3623364Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-06-21T11:56:24.3922624Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-06-21T11:56:24.8736136Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-21T11:56:24.9009677Z http.https://github.com/.extraheader
+2023-06-21T11:56:24.9051572Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-06-21T11:56:24.9456814Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+
+2023-06-21T11:55:32.7031319Z ##[group]Run actions/setup-java@v3
+2023-06-21T11:55:32.7031652Z with:
+2023-06-21T11:55:32.7031905Z   distribution: temurin
+2023-06-21T11:55:32.7032181Z   java-version: 11
+2023-06-21T11:55:32.7032437Z   java-package: jdk
+2023-06-21T11:55:32.7032707Z   check-latest: false
+2023-06-21T11:55:32.7032972Z   server-id: github
+2023-06-21T11:55:32.7033239Z   server-username: GITHUB_ACTOR
+2023-06-21T11:55:32.7033585Z   server-password: GITHUB_TOKEN
+2023-06-21T11:55:32.7033902Z   overwrite-settings: true
+2023-06-21T11:55:32.7034177Z   job-status: success
+2023-06-21T11:55:32.7034661Z   token: ***
+2023-06-21T11:55:32.7034906Z ##[endgroup]
+2023-06-21T11:55:32.9660833Z ##[group]Installed distributions
+2023-06-21T11:55:32.9730272Z Resolved Java 11.0.19+7 from tool-cache
+2023-06-21T11:55:32.9731060Z Setting Java 11.0.19+7 as the default
+2023-06-21T11:55:32.9756576Z Creating toolchains.xml for JDK version 11 from temurin
+2023-06-21T11:55:32.9880007Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-21T11:55:32.9881125Z 
+2023-06-21T11:55:32.9881841Z Java configuration:
+2023-06-21T11:55:32.9882348Z   Distribution: temurin
+2023-06-21T11:55:32.9883099Z   Version: 11.0.19+7
+2023-06-21T11:55:32.9884020Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-21T11:55:32.9884745Z 
+2023-06-21T11:55:32.9885538Z ##[endgroup]
+2023-06-21T11:55:32.9913545Z Creating settings.xml with server-id: github
+2023-06-21T11:55:32.9914415Z Writing to /home/runner/.m2/settings.xml
+
+2023-06-21T11:55:33.0047515Z Current runner version: '2.305.0'
+2023-06-21T11:55:33.0086723Z ##[group]Operating System
+2023-06-21T11:55:33.0087382Z Microsoft Windows Server 2022
+2023-06-21T11:55:33.0087729Z 10.0.20348
+2023-06-21T11:55:33.0088049Z Datacenter
+2023-06-21T11:55:33.0088313Z ##[endgroup]
+2023-06-21T11:55:33.0088636Z ##[group]Runner Image
+2023-06-21T11:55:33.0089029Z Image: windows-2022
+2023-06-21T11:55:33.0089299Z Version: 20230612.1
+2023-06-21T11:55:33.0089822Z Included Software: https://github.com/actions/runner-images/blob/win22/20230612.1/images/win/Windows2022-Readme.md
+2023-06-21T11:55:33.0090440Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230612.1
+2023-06-21T11:55:33.0090883Z ##[endgroup]
+2023-06-21T11:55:33.0091180Z ##[group]Runner Image Provisioner
+2023-06-21T11:55:33.0091534Z 2.0.238.1
+2023-06-21T11:55:33.0091835Z ##[endgroup]
+2023-06-21T11:55:33.0092779Z ##[group]GITHUB_TOKEN Permissions
+2023-06-21T11:55:33.0093410Z Actions: write
+2023-06-21T11:55:33.0093749Z Checks: write
+2023-06-21T11:55:33.0094390Z Contents: write
+2023-06-21T11:55:33.0094711Z Deployments: write
+2023-06-21T11:55:33.0095054Z Discussions: write
+2023-06-21T11:55:33.0095317Z Issues: write
+2023-06-21T11:55:33.0095625Z Metadata: read
+2023-06-21T11:55:33.0095941Z Packages: write
+2023-06-21T11:55:33.0096200Z Pages: write
+2023-06-21T11:55:33.0096539Z PullRequests: write
+2023-06-21T11:55:33.0096895Z RepositoryProjects: write
+2023-06-21T11:55:33.0097199Z SecurityEvents: write
+2023-06-21T11:55:33.0097603Z Statuses: write
+2023-06-21T11:55:33.0097939Z ##[endgroup]
+2023-06-21T11:55:33.0101835Z Secret source: Actions
+2023-06-21T11:55:33.0102375Z Prepare workflow directory
+2023-06-21T11:55:33.1026105Z Prepare all required actions
+2023-06-21T11:55:33.1228259Z Getting action download info
+2023-06-21T11:55:33.3401964Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-21T11:55:33.7702041Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-21T11:55:34.1101588Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-06-21T11:55:34.6144833Z Complete job name: mvn (windows-2022, 17)

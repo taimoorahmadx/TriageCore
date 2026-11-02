@@ -1,10 +1,14 @@
 repo: pydantic/pydantic
+source: mined
 run_id: 40319557146
 head_sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
 run_attempts:
 - attempt: 1
   head_sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
   conclusion: failure
+- attempt: 2
+  head_sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
+  conclusion: success
 commits:
 - sha: e4c0aedcb493ca9fc9b287cbe92628210cc21792
   author: Viicos
@@ -36,8 +40,7 @@ commits:
 - sha: 22b5c7898523a8a3ae14549cd8b6bb5fc10b7f46
   author: tongwentao
   files: []
-label: infra
-label_source: The failed job log ends while waiting for a hosted runner to come online;
-  no test or build error appears in the captured log.
+label: flaky
+label_source: GitHub run history confirms attempt 1 failed and attempt 2 passed on the same head SHA.
 risk_tier: medium
 suggested_label: infra

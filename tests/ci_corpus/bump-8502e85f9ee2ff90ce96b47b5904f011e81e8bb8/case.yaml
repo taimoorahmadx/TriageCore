@@ -1,0 +1,53 @@
+repo: NemProject/nem
+run_id: 8502e85f9ee2ff90ce96b47b5904f011e81e8bb8
+head_sha: 8502e85f9ee2ff90ce96b47b5904f011e81e8bb8
+run_attempts: []
+commits:
+- sha: 8502e85f9ee2ff90ce96b47b5904f011e81e8bb8
+  author: dependabot[bot]
+  files:
+  - nis/pom.xml
+- sha: 3689c9cb4492c65ef5f47304205e21f504508a44
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 84a62535ecc3eb08575fa3f5ac4752d2e578b32b
+  author: dependabot[bot]
+  files:
+  - .github/workflows/auto-merge.yaml
+- sha: a520c9eaeab08fccb9b371e361af45cd1428f5bd
+  author: Wayonb
+  files:
+  - core/Jenkinsfile
+  - deploy/Jenkinsfile
+  - nis/Jenkinsfile
+  - peer/Jenkinsfile
+- sha: 74f80aaa1a9464dd6b0ee2fc0a3c469dad5f6318
+  author: dependabot[bot]
+  files:
+  - deploy/pom.xml
+- sha: d0639c5fd2967c49d7b5a2830c37dab482a9af48
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: eb1c6fb16b33e352101efc74e532a29f579efe02
+  author: dependabot[bot]
+  files:
+  - .github/workflows/auto-merge.yaml
+- sha: b1cbbddc5a9d98a35b588b2ac53958113f926d52
+  author: dependabot[bot]
+  files:
+  - nis/pom.xml
+- sha: e6cec26127f1d13dd1faa0a8a958dc67fd95993e
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 280c2a7ecf6586c3bed3721f8f3a859f05b69ac7
+  author: dependabot[bot]
+  files:
+  - peer/pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,53 @@
+repo: mindsdb/mindsdb
+run_id: '155'
+head_sha: e5b5fcb646e6fa9cab60fb4fff930888149b88fe
+run_attempts: []
+commits:
+- sha: e5b5fcb646e6fa9cab60fb4fff930888149b88fe
+  author: ea-rus
+  files:
+  - mindsdb/integrations/handlers/rag_handler/requirements.txt
+- sha: c88c68672b1a51b36758d06864ba0cc216fb8ee0
+  author: ea-rus
+  files:
+  - docker/docker-bake.hcl
+- sha: e4b4a8fb44e3a1839d8f32c5c43b817614b6017b
+  author: ea-rus
+  files:
+  - docker/docker-bake.hcl
+- sha: 5aa3b00b965ba8f51eac46c6d0a82b3113c8c1b5
+  author: ZoranPandovski
+  files:
+  - mindsdb/integrations/handlers/ollama_handler/ollama_handler.py
+- sha: a1f0d09e0cb8263d2ce48dc313a76633f54ffde2
+  author: hamishfagg
+  files:
+  - docker/docker-bake.hcl
+  - mindsdb/integrations/handlers/mssql_handler/README.md
+  - setup.py
+- sha: 73d4d28cb39386efda2bd60469a97d6a9d72ffd0
+  author: Ricram2
+  files:
+  - docs/sql/create/jobs.mdx
+- sha: f5a1b1578e7dd6f3662ace23672443036ee0179f
+  author: chandrevdw31
+  files:
+  - docs/integrations/ai-engines/timegpt.mdx
+  - mindsdb/integrations/handlers/timegpt_handler/README.md
+- sha: bba7587b9330c82cdd66b10b0ce781b115634374
+  author: ZoranPandovski
+  files:
+  - .github/workflows/mindsdb.yml
+- sha: b41a791aa5661600de1c085a8b129076793b2b71
+  author: ZoranPandovski
+  files:
+  - mindsdb/integrations/handlers/youtube_handler/youtube_tables.py
+- sha: 133e440313bbcd9b95816c71a23afc0ad281a1ce
+  author: MinuraPunchihewa
+  files:
+  - mindsdb/integrations/handlers/youtube_handler/youtube_tables.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

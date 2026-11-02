@@ -1,0 +1,50 @@
+repo: NemProject/nem
+run_id: a2b0fc53611f8705640773f18c8dd6a47eed3b7f
+head_sha: a2b0fc53611f8705640773f18c8dd6a47eed3b7f
+run_attempts: []
+commits:
+- sha: a2b0fc53611f8705640773f18c8dd6a47eed3b7f
+  author: dependabot[bot]
+  files:
+  - nis/pom.xml
+- sha: b1cbbddc5a9d98a35b588b2ac53958113f926d52
+  author: dependabot[bot]
+  files:
+  - nis/pom.xml
+- sha: e6cec26127f1d13dd1faa0a8a958dc67fd95993e
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 280c2a7ecf6586c3bed3721f8f3a859f05b69ac7
+  author: dependabot[bot]
+  files:
+  - peer/pom.xml
+- sha: edfdfce5a51485cee17c21fcbcce7be10bd745a9
+  author: dependabot[bot]
+  files:
+  - deploy/pom.xml
+- sha: 69b91b16750c6c9dd86122297c89b171a7d5c67e
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 99de2fc07be625bbf9f012bd6036004dff10890f
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 9f97e612fb10f2f2385209361f3d1ea956eba3b8
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 8b5cdeba19da1c6e3ec6d47939d1d42554a1b458
+  author: dependabot[bot]
+  files:
+  - deploy/pom.xml
+- sha: 85ad937d66f83d5781496f3209de9ede6199ed21
+  author: dependabot[bot]
+  files:
+  - peer/pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

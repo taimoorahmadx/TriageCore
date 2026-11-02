@@ -1,0 +1,719 @@
+2023-07-03T07:28:00.5097570Z Post job cleanup.
+2023-07-03T07:28:00.5134205Z Post job cleanup.
+2023-07-03T07:28:00.5833646Z Cleanup maven setings: /home/runner/.m2/settings.xml - file was removed
+2023-07-03T07:28:00.5930719Z Post job cleanup.
+2023-07-03T07:28:00.7741119Z Post job cleanup.
+2023-07-03T07:28:00.8788395Z [command]/usr/bin/git version
+2023-07-03T07:28:00.8835335Z git version 2.41.0
+2023-07-03T07:28:00.8888541Z Temporarily overriding HOME='/home/runner/work/_temp/95a0ef05-dd5f-42db-b26a-f5eeebe5c96f' before making global git config changes
+2023-07-03T07:28:00.8892174Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-03T07:28:00.8900387Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/incrementals-tools/incrementals-tools
+2023-07-03T07:28:00.8941998Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-03T07:28:00.8979261Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-03T07:28:00.9205990Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-03T07:28:00.9234833Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-07-03T07:27:44.4645964Z ##[group]Run s4u/setup-maven-action@v1.8.0
+2023-07-03T07:27:44.4646292Z with:
+2023-07-03T07:27:44.4646488Z   java-version: 11
+2023-07-03T07:27:44.4646734Z   checkout-persist-credentials: false
+2023-07-03T07:27:44.4646999Z   java-distribution: temurin
+2023-07-03T07:27:44.4647241Z   cache-path: ~/.m2/repository
+2023-07-03T07:27:44.4647456Z   maven-version: 3.9.2
+2023-07-03T07:27:44.4647679Z ##[endgroup]
+2023-07-03T07:27:44.4896410Z ##[group]Run actions/checkout@v3
+2023-07-03T07:27:44.4896658Z with:
+2023-07-03T07:27:44.4896871Z   persist-credentials: false
+2023-07-03T07:27:44.4897141Z   repository: jenkinsci/incrementals-tools
+2023-07-03T07:27:44.4897585Z   token: ***
+2023-07-03T07:27:44.4897781Z   ssh-strict: true
+2023-07-03T07:27:44.4897966Z   clean: true
+2023-07-03T07:27:44.4898194Z   sparse-checkout-cone-mode: true
+2023-07-03T07:27:44.4898416Z   lfs: false
+2023-07-03T07:27:44.4898602Z   submodules: false
+2023-07-03T07:27:44.4898808Z   set-safe-directory: true
+2023-07-03T07:27:44.4899014Z ##[endgroup]
+2023-07-03T07:27:44.7232103Z Syncing repository: jenkinsci/incrementals-tools
+2023-07-03T07:27:44.7233798Z ##[group]Getting Git version info
+2023-07-03T07:27:44.7234314Z Working directory is '/home/runner/work/incrementals-tools/incrementals-tools'
+2023-07-03T07:27:44.7234871Z [command]/usr/bin/git version
+2023-07-03T07:27:44.7346808Z git version 2.41.0
+2023-07-03T07:27:44.7371996Z ##[endgroup]
+2023-07-03T07:27:44.7389154Z Temporarily overriding HOME='/home/runner/work/_temp/39b2ebf3-9a48-4d1b-9c8d-6c16bd803ac8' before making global git config changes
+2023-07-03T07:27:44.7389679Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-03T07:27:44.7395794Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/incrementals-tools/incrementals-tools
+2023-07-03T07:27:44.7436783Z Deleting the contents of '/home/runner/work/incrementals-tools/incrementals-tools'
+2023-07-03T07:27:44.7442667Z ##[group]Initializing the repository
+2023-07-03T07:27:44.7447049Z [command]/usr/bin/git init /home/runner/work/incrementals-tools/incrementals-tools
+2023-07-03T07:27:44.7523967Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-03T07:27:44.7524387Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-03T07:27:44.7524976Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-03T07:27:44.7525290Z hint: 
+2023-07-03T07:27:44.7525741Z hint: 	git config --global init.defaultBranch <name>
+2023-07-03T07:27:44.7525990Z hint: 
+2023-07-03T07:27:44.7526412Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-03T07:27:44.7527041Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-03T07:27:44.7527414Z hint: 
+2023-07-03T07:27:44.7527740Z hint: 	git branch -m <name>
+2023-07-03T07:27:44.7538681Z Initialized empty Git repository in /home/runner/work/incrementals-tools/incrementals-tools/.git/
+2023-07-03T07:27:44.7549170Z [command]/usr/bin/git remote add origin https://github.com/jenkinsci/incrementals-tools
+2023-07-03T07:27:44.7586221Z ##[endgroup]
+2023-07-03T07:27:44.7586745Z ##[group]Disabling automatic garbage collection
+2023-07-03T07:27:44.7590251Z [command]/usr/bin/git config --local gc.auto 0
+2023-07-03T07:27:44.7620112Z ##[endgroup]
+2023-07-03T07:27:44.7620592Z ##[group]Setting up auth
+2023-07-03T07:27:44.7627114Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-03T07:27:44.7658337Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-03T07:27:44.7981449Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-03T07:27:44.8010924Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-03T07:27:44.8236704Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-03T07:27:44.8264511Z ##[endgroup]
+2023-07-03T07:27:44.8265100Z ##[group]Fetching the repository
+2023-07-03T07:27:44.8274212Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +8143e4a9d313915b10d895b9e8b9e4a1a33b9233:refs/remotes/pull/69/merge
+2023-07-03T07:27:45.2440726Z remote: Enumerating objects: 88, done.        
+2023-07-03T07:27:45.2441269Z remote: Counting objects:   1% (1/88)        
+2023-07-03T07:27:45.2441699Z remote: Counting objects:   2% (2/88)        
+2023-07-03T07:27:45.2442054Z remote: Counting objects:   3% (3/88)        
+2023-07-03T07:27:45.2442373Z remote: Counting objects:   4% (4/88)        
+2023-07-03T07:27:45.2442692Z remote: Counting objects:   5% (5/88)        
+2023-07-03T07:27:45.2443022Z remote: Counting objects:   6% (6/88)        
+2023-07-03T07:27:45.2443367Z remote: Counting objects:   7% (7/88)        
+2023-07-03T07:27:45.2443754Z remote: Counting objects:   9% (8/88)        
+2023-07-03T07:27:45.2444080Z remote: Counting objects:  10% (9/88)        
+2023-07-03T07:27:45.2444403Z remote: Counting objects:  11% (10/88)        
+2023-07-03T07:27:45.2444732Z remote: Counting objects:  12% (11/88)        
+2023-07-03T07:27:45.2445320Z remote: Counting objects:  13% (12/88)        
+2023-07-03T07:27:45.2445644Z remote: Counting objects:  14% (13/88)        
+2023-07-03T07:27:45.2445959Z remote: Counting objects:  15% (14/88)        
+2023-07-03T07:27:45.2446268Z remote: Counting objects:  17% (15/88)        
+2023-07-03T07:27:45.2446591Z remote: Counting objects:  18% (16/88)        
+2023-07-03T07:27:45.2446918Z remote: Counting objects:  19% (17/88)        
+2023-07-03T07:27:45.2447235Z remote: Counting objects:  20% (18/88)        
+2023-07-03T07:27:45.2447543Z remote: Counting objects:  21% (19/88)        
+2023-07-03T07:27:45.2447866Z remote: Counting objects:  22% (20/88)        
+2023-07-03T07:27:45.2448185Z remote: Counting objects:  23% (21/88)        
+2023-07-03T07:27:45.2448494Z remote: Counting objects:  25% (22/88)        
+2023-07-03T07:27:45.2448798Z remote: Counting objects:  26% (23/88)        
+2023-07-03T07:27:45.2449110Z remote: Counting objects:  27% (24/88)        
+2023-07-03T07:27:45.2449419Z remote: Counting objects:  28% (25/88)        
+2023-07-03T07:27:45.2449735Z remote: Counting objects:  29% (26/88)        
+2023-07-03T07:27:45.2450042Z remote: Counting objects:  30% (27/88)        
+2023-07-03T07:27:45.2450351Z remote: Counting objects:  31% (28/88)        
+2023-07-03T07:27:45.2450767Z remote: Counting objects:  32% (29/88)        
+2023-07-03T07:27:45.2451090Z remote: Counting objects:  34% (30/88)        
+2023-07-03T07:27:45.2451412Z remote: Counting objects:  35% (31/88)        
+2023-07-03T07:27:45.2451721Z remote: Counting objects:  36% (32/88)        
+2023-07-03T07:27:45.2452032Z remote: Counting objects:  37% (33/88)        
+2023-07-03T07:27:45.2452340Z remote: Counting objects:  38% (34/88)        
+2023-07-03T07:27:45.2452654Z remote: Counting objects:  39% (35/88)        
+2023-07-03T07:27:45.2452964Z remote: Counting objects:  40% (36/88)        
+2023-07-03T07:27:45.2453279Z remote: Counting objects:  42% (37/88)        
+2023-07-03T07:27:45.2453582Z remote: Counting objects:  43% (38/88)        
+2023-07-03T07:27:45.2453904Z remote: Counting objects:  44% (39/88)        
+2023-07-03T07:27:45.2454211Z remote: Counting objects:  45% (40/88)        
+2023-07-03T07:27:45.2454510Z remote: Counting objects:  46% (41/88)        
+2023-07-03T07:27:45.2454825Z remote: Counting objects:  47% (42/88)        
+2023-07-03T07:27:45.2455317Z remote: Counting objects:  48% (43/88)        
+2023-07-03T07:27:45.2455667Z remote: Counting objects:  50% (44/88)        
+2023-07-03T07:27:45.2455970Z remote: Counting objects:  51% (45/88)        
+2023-07-03T07:27:45.2456278Z remote: Counting objects:  52% (46/88)        
+2023-07-03T07:27:45.2456590Z remote: Counting objects:  53% (47/88)        
+2023-07-03T07:27:45.2457048Z remote: Counting objects:  54% (48/88)        
+2023-07-03T07:27:45.2457346Z remote: Counting objects:  55% (49/88)        
+2023-07-03T07:27:45.2457665Z remote: Counting objects:  56% (50/88)        
+2023-07-03T07:27:45.2457979Z remote: Counting objects:  57% (51/88)        
+2023-07-03T07:27:45.2458289Z remote: Counting objects:  59% (52/88)        
+2023-07-03T07:27:45.2458599Z remote: Counting objects:  60% (53/88)        
+2023-07-03T07:27:45.2458936Z remote: Counting objects:  61% (54/88)        
+2023-07-03T07:27:45.2459246Z remote: Counting objects:  62% (55/88)        
+2023-07-03T07:27:45.2459549Z remote: Counting objects:  63% (56/88)        
+2023-07-03T07:27:45.2459866Z remote: Counting objects:  64% (57/88)        
+2023-07-03T07:27:45.2460176Z remote: Counting objects:  65% (58/88)        
+2023-07-03T07:27:45.2460502Z remote: Counting objects:  67% (59/88)        
+2023-07-03T07:27:45.2460802Z remote: Counting objects:  68% (60/88)        
+2023-07-03T07:27:45.2461115Z remote: Counting objects:  69% (61/88)        
+2023-07-03T07:27:45.2461425Z remote: Counting objects:  70% (62/88)        
+2023-07-03T07:27:45.2461748Z remote: Counting objects:  71% (63/88)        
+2023-07-03T07:27:45.2462065Z remote: Counting objects:  72% (64/88)        
+2023-07-03T07:27:45.2462474Z remote: Counting objects:  73% (65/88)        
+2023-07-03T07:27:45.2462918Z remote: Counting objects:  75% (66/88)        
+2023-07-03T07:27:45.2463248Z remote: Counting objects:  76% (67/88)        
+2023-07-03T07:27:45.2463573Z remote: Counting objects:  77% (68/88)        
+2023-07-03T07:27:45.2463894Z remote: Counting objects:  78% (69/88)        
+2023-07-03T07:27:45.2464225Z remote: Counting objects:  79% (70/88)        
+2023-07-03T07:27:45.2464648Z remote: Counting objects:  80% (71/88)        
+2023-07-03T07:27:45.2464967Z remote: Counting objects:  81% (72/88)        
+2023-07-03T07:27:45.2465348Z remote: Counting objects:  82% (73/88)        
+2023-07-03T07:27:45.2465717Z remote: Counting objects:  84% (74/88)        
+2023-07-03T07:27:45.2466093Z remote: Counting objects:  85% (75/88)        
+2023-07-03T07:27:45.2466411Z remote: Counting objects:  86% (76/88)        
+2023-07-03T07:27:45.2466805Z remote: Counting objects:  87% (77/88)        
+2023-07-03T07:27:45.2467136Z remote: Counting objects:  88% (78/88)        
+2023-07-03T07:27:45.2467528Z remote: Counting objects:  89% (79/88)        
+2023-07-03T07:27:45.2467851Z remote: Counting objects:  90% (80/88)        
+2023-07-03T07:27:45.2468198Z remote: Counting objects:  92% (81/88)        
+2023-07-03T07:27:45.2468909Z remote: Counting objects:  93% (82/88)        
+2023-07-03T07:27:45.2469605Z remote: Counting objects:  94% (83/88)        
+2023-07-03T07:27:45.2470343Z remote: Counting objects:  95% (84/88)        
+2023-07-03T07:27:45.2470801Z remote: Counting objects:  96% (85/88)        
+2023-07-03T07:27:45.2471081Z remote: Counting objects:  97% (86/88)        
+2023-07-03T07:27:45.2471310Z remote: Counting objects:  98% (87/88)        
+2023-07-03T07:27:45.2471579Z remote: Counting objects: 100% (88/88)        
+2023-07-03T07:27:45.2472305Z remote: Counting objects: 100% (88/88), done.        
+2023-07-03T07:27:45.2756766Z remote: Compressing objects:   2% (1/42)        
+2023-07-03T07:27:45.2757045Z remote: Compressing objects:   4% (2/42)        
+2023-07-03T07:27:45.2757272Z remote: Compressing objects:   7% (3/42)        
+2023-07-03T07:27:45.2757518Z remote: Compressing objects:   9% (4/42)        
+2023-07-03T07:27:45.2757740Z remote: Compressing objects:  11% (5/42)        
+2023-07-03T07:27:45.2757959Z remote: Compressing objects:  14% (6/42)        
+2023-07-03T07:27:45.2758183Z remote: Compressing objects:  16% (7/42)        
+2023-07-03T07:27:45.2758394Z remote: Compressing objects:  19% (8/42)        
+2023-07-03T07:27:45.2758614Z remote: Compressing objects:  21% (9/42)        
+2023-07-03T07:27:45.2758842Z remote: Compressing objects:  23% (10/42)        
+2023-07-03T07:27:45.2759079Z remote: Compressing objects:  26% (11/42)        
+2023-07-03T07:27:45.2759503Z remote: Compressing objects:  28% (12/42)        
+2023-07-03T07:27:45.2759732Z remote: Compressing objects:  30% (13/42)        
+2023-07-03T07:27:45.2759955Z remote: Compressing objects:  33% (14/42)        
+2023-07-03T07:27:45.2760167Z remote: Compressing objects:  35% (15/42)        
+2023-07-03T07:27:45.2760390Z remote: Compressing objects:  38% (16/42)        
+2023-07-03T07:27:45.2760635Z remote: Compressing objects:  40% (17/42)        
+2023-07-03T07:27:45.2760870Z remote: Compressing objects:  42% (18/42)        
+2023-07-03T07:27:45.2761127Z remote: Compressing objects:  45% (19/42)        
+2023-07-03T07:27:45.2761377Z remote: Compressing objects:  47% (20/42)        
+2023-07-03T07:27:45.2761617Z remote: Compressing objects:  50% (21/42)        
+2023-07-03T07:27:45.2761866Z remote: Compressing objects:  52% (22/42)        
+2023-07-03T07:27:45.2762109Z remote: Compressing objects:  54% (23/42)        
+2023-07-03T07:27:45.2762346Z remote: Compressing objects:  57% (24/42)        
+2023-07-03T07:27:45.2762585Z remote: Compressing objects:  59% (25/42)        
+2023-07-03T07:27:45.2762824Z remote: Compressing objects:  61% (26/42)        
+2023-07-03T07:27:45.2763060Z remote: Compressing objects:  64% (27/42)        
+2023-07-03T07:27:45.2763292Z remote: Compressing objects:  66% (28/42)        
+2023-07-03T07:27:45.2763530Z remote: Compressing objects:  69% (29/42)        
+2023-07-03T07:27:45.2763874Z remote: Compressing objects:  71% (30/42)        
+2023-07-03T07:27:45.2764108Z remote: Compressing objects:  73% (31/42)        
+2023-07-03T07:27:45.2764352Z remote: Compressing objects:  76% (32/42)        
+2023-07-03T07:27:45.2764591Z remote: Compressing objects:  78% (33/42)        
+2023-07-03T07:27:45.2764829Z remote: Compressing objects:  80% (34/42)        
+2023-07-03T07:27:45.2765067Z remote: Compressing objects:  83% (35/42)        
+2023-07-03T07:27:45.2765309Z remote: Compressing objects:  85% (36/42)        
+2023-07-03T07:27:45.2765551Z remote: Compressing objects:  88% (37/42)        
+2023-07-03T07:27:45.2765789Z remote: Compressing objects:  90% (38/42)        
+2023-07-03T07:27:45.2766030Z remote: Compressing objects:  92% (39/42)        
+2023-07-03T07:27:45.2766268Z remote: Compressing objects:  95% (40/42)        
+2023-07-03T07:27:45.2766500Z remote: Compressing objects:  97% (41/42)        
+2023-07-03T07:27:45.2766741Z remote: Compressing objects: 100% (42/42)        
+2023-07-03T07:27:45.2767005Z remote: Compressing objects: 100% (42/42), done.        
+2023-07-03T07:27:45.3501981Z remote: Total 88 (delta 4), reused 64 (delta 0), pack-reused 0        
+2023-07-03T07:27:45.3561247Z From https://github.com/jenkinsci/incrementals-tools
+2023-07-03T07:27:45.3561738Z  * [new ref]         8143e4a9d313915b10d895b9e8b9e4a1a33b9233 -> pull/69/merge
+2023-07-03T07:27:45.3585772Z ##[endgroup]
+2023-07-03T07:27:45.3586166Z ##[group]Determining the checkout info
+2023-07-03T07:27:45.3588156Z ##[endgroup]
+2023-07-03T07:27:45.3588506Z ##[group]Checking out the ref
+2023-07-03T07:27:45.3594134Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/69/merge
+2023-07-03T07:27:45.3705163Z Note: switching to 'refs/remotes/pull/69/merge'.
+2023-07-03T07:27:45.3706284Z 
+2023-07-03T07:27:45.3706616Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-03T07:27:45.3706996Z changes and commit them, and you can discard any commits you make in this
+2023-07-03T07:27:45.3707373Z state without impacting any branches by switching back to a branch.
+2023-07-03T07:27:45.3707568Z 
+2023-07-03T07:27:45.3707725Z If you want to create a new branch to retain commits you create, you may
+2023-07-03T07:27:45.3708124Z do so (now or later) by using -c with the switch command. Example:
+2023-07-03T07:27:45.3708310Z 
+2023-07-03T07:27:45.3708463Z   git switch -c <new-branch-name>
+2023-07-03T07:27:45.3708618Z 
+2023-07-03T07:27:45.3708709Z Or undo this operation with:
+2023-07-03T07:27:45.3708847Z 
+2023-07-03T07:27:45.3708928Z   git switch -
+2023-07-03T07:27:45.3709048Z 
+2023-07-03T07:27:45.3709226Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-03T07:27:45.3709681Z 
+2023-07-03T07:27:45.3709891Z HEAD is now at 8143e4a Merge a047d2d3f9385a25ced0d2ad3c49f9401ea9c624 into 7458f259294981775c9636d2f4e8d63c1c5b598b
+2023-07-03T07:27:45.3710756Z ##[endgroup]
+2023-07-03T07:27:45.3738710Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-03T07:27:45.3764879Z '8143e4a9d313915b10d895b9e8b9e4a1a33b9233'
+2023-07-03T07:27:45.3773509Z ##[group]Removing auth
+2023-07-03T07:27:45.3779042Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-03T07:27:45.3808696Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-03T07:27:45.4074555Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-03T07:27:45.4090372Z http.https://github.com/.extraheader
+2023-07-03T07:27:45.4107523Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+[... 1729 lines removed by TriageCore ...]
+2023-07-03T07:27:44.4122294Z remote: Counting objects:  32% (29/88)        
+2023-07-03T07:27:44.4122653Z remote: Counting objects:  34% (30/88)        
+2023-07-03T07:27:44.4123014Z remote: Counting objects:  35% (31/88)        
+2023-07-03T07:27:44.4123387Z remote: Counting objects:  36% (32/88)        
+2023-07-03T07:27:44.4123767Z remote: Counting objects:  37% (33/88)        
+2023-07-03T07:27:44.4124099Z remote: Counting objects:  38% (34/88)        
+2023-07-03T07:27:44.4124508Z remote: Counting objects:  39% (35/88)        
+2023-07-03T07:27:44.4124894Z remote: Counting objects:  40% (36/88)        
+2023-07-03T07:27:44.4125267Z remote: Counting objects:  42% (37/88)        
+2023-07-03T07:27:44.4125595Z remote: Counting objects:  43% (38/88)        
+2023-07-03T07:27:44.4125968Z remote: Counting objects:  44% (39/88)        
+2023-07-03T07:27:44.4126349Z remote: Counting objects:  45% (40/88)        
+2023-07-03T07:27:44.4126752Z remote: Counting objects:  46% (41/88)        
+2023-07-03T07:27:44.4127128Z remote: Counting objects:  47% (42/88)        
+2023-07-03T07:27:44.4127518Z remote: Counting objects:  48% (43/88)        
+2023-07-03T07:27:44.4127912Z remote: Counting objects:  50% (44/88)        
+2023-07-03T07:27:44.4128301Z remote: Counting objects:  51% (45/88)        
+2023-07-03T07:27:44.4128625Z remote: Counting objects:  52% (46/88)        
+2023-07-03T07:27:44.4140725Z remote: Counting objects:  53% (47/88)        
+2023-07-03T07:27:44.4144286Z remote: Counting objects:  54% (48/88)        
+2023-07-03T07:27:44.4147689Z remote: Counting objects:  55% (49/88)        
+2023-07-03T07:27:44.4150676Z remote: Counting objects:  56% (50/88)        
+2023-07-03T07:27:44.4153949Z remote: Counting objects:  57% (51/88)        
+2023-07-03T07:27:44.4157288Z remote: Counting objects:  59% (52/88)        
+2023-07-03T07:27:44.4160581Z remote: Counting objects:  60% (53/88)        
+2023-07-03T07:27:44.4163893Z remote: Counting objects:  61% (54/88)        
+2023-07-03T07:27:44.4167164Z remote: Counting objects:  62% (55/88)        
+2023-07-03T07:27:44.4170453Z remote: Counting objects:  63% (56/88)        
+2023-07-03T07:27:44.4173783Z remote: Counting objects:  64% (57/88)        
+2023-07-03T07:27:44.4177102Z remote: Counting objects:  65% (58/88)        
+2023-07-03T07:27:44.4181165Z remote: Counting objects:  67% (59/88)        
+2023-07-03T07:27:44.4184949Z remote: Counting objects:  68% (60/88)        
+2023-07-03T07:27:44.4188643Z remote: Counting objects:  69% (61/88)        
+2023-07-03T07:27:44.4192673Z remote: Counting objects:  70% (62/88)        
+2023-07-03T07:27:44.4196577Z remote: Counting objects:  71% (63/88)        
+2023-07-03T07:27:44.4196821Z remote: Counting objects:  72% (64/88)        
+2023-07-03T07:27:44.4199506Z remote: Counting objects:  73% (65/88)        
+2023-07-03T07:27:44.4200227Z remote: Counting objects:  75% (66/88)        
+2023-07-03T07:27:44.4200609Z remote: Counting objects:  76% (67/88)        
+2023-07-03T07:27:44.4200859Z remote: Counting objects:  77% (68/88)        
+2023-07-03T07:27:44.4201101Z remote: Counting objects:  78% (69/88)        
+2023-07-03T07:27:44.4201335Z remote: Counting objects:  79% (70/88)        
+2023-07-03T07:27:44.4201571Z remote: Counting objects:  80% (71/88)        
+2023-07-03T07:27:44.4201802Z remote: Counting objects:  81% (72/88)        
+2023-07-03T07:27:44.4202025Z remote: Counting objects:  82% (73/88)        
+2023-07-03T07:27:44.4202286Z remote: Counting objects:  84% (74/88)        
+2023-07-03T07:27:44.4202518Z remote: Counting objects:  85% (75/88)        
+2023-07-03T07:27:44.4202743Z remote: Counting objects:  86% (76/88)        
+2023-07-03T07:27:44.4202971Z remote: Counting objects:  87% (77/88)        
+2023-07-03T07:27:44.4203201Z remote: Counting objects:  88% (78/88)        
+2023-07-03T07:27:44.4203424Z remote: Counting objects:  89% (79/88)        
+2023-07-03T07:27:44.4203658Z remote: Counting objects:  90% (80/88)        
+2023-07-03T07:27:44.4203895Z remote: Counting objects:  92% (81/88)        
+2023-07-03T07:27:44.4204990Z remote: Counting objects:  93% (82/88)        
+2023-07-03T07:27:44.4205416Z remote: Counting objects:  94% (83/88)        
+2023-07-03T07:27:44.4205673Z remote: Counting objects:  95% (84/88)        
+2023-07-03T07:27:44.4205917Z remote: Counting objects:  96% (85/88)        
+2023-07-03T07:27:44.4206150Z remote: Counting objects:  97% (86/88)        
+2023-07-03T07:27:44.4206400Z remote: Counting objects:  98% (87/88)        
+2023-07-03T07:27:44.4206652Z remote: Counting objects: 100% (88/88)        
+2023-07-03T07:27:44.4206909Z remote: Counting objects: 100% (88/88), done.        
+2023-07-03T07:27:44.4207200Z remote: Compressing objects:   2% (1/42)        
+2023-07-03T07:27:44.4207463Z remote: Compressing objects:   4% (2/42)        
+2023-07-03T07:27:44.4207713Z remote: Compressing objects:   7% (3/42)        
+2023-07-03T07:27:44.4207976Z remote: Compressing objects:   9% (4/42)        
+2023-07-03T07:27:44.4208218Z remote: Compressing objects:  11% (5/42)        
+2023-07-03T07:27:44.4208460Z remote: Compressing objects:  14% (6/42)        
+2023-07-03T07:27:44.4208712Z remote: Compressing objects:  16% (7/42)        
+2023-07-03T07:27:44.4208947Z remote: Compressing objects:  19% (8/42)        
+2023-07-03T07:27:44.4209193Z remote: Compressing objects:  21% (9/42)        
+2023-07-03T07:27:44.4209450Z remote: Compressing objects:  23% (10/42)        
+2023-07-03T07:27:44.4209891Z remote: Compressing objects:  26% (11/42)        
+2023-07-03T07:27:44.4210146Z remote: Compressing objects:  28% (12/42)        
+2023-07-03T07:27:44.4210403Z remote: Compressing objects:  30% (13/42)        
+2023-07-03T07:27:44.4210690Z remote: Compressing objects:  33% (14/42)        
+2023-07-03T07:27:44.4210930Z remote: Compressing objects:  35% (15/42)        
+2023-07-03T07:27:44.4211178Z remote: Compressing objects:  38% (16/42)        
+2023-07-03T07:27:44.4211427Z remote: Compressing objects:  40% (17/42)        
+2023-07-03T07:27:44.4211661Z remote: Compressing objects:  42% (18/42)        
+2023-07-03T07:27:44.4211902Z remote: Compressing objects:  45% (19/42)        
+2023-07-03T07:27:44.4212144Z remote: Compressing objects:  47% (20/42)        
+2023-07-03T07:27:44.4334488Z remote: Compressing objects:  50% (21/42)        
+2023-07-03T07:27:44.4334799Z remote: Compressing objects:  52% (22/42)        
+2023-07-03T07:27:44.4335054Z remote: Compressing objects:  54% (23/42)        
+2023-07-03T07:27:44.4335328Z remote: Compressing objects:  57% (24/42)        
+2023-07-03T07:27:44.4335578Z remote: Compressing objects:  59% (25/42)        
+2023-07-03T07:27:44.4335821Z remote: Compressing objects:  61% (26/42)        
+2023-07-03T07:27:44.4336083Z remote: Compressing objects:  64% (27/42)        
+2023-07-03T07:27:44.4336333Z remote: Compressing objects:  66% (28/42)        
+2023-07-03T07:27:44.4336574Z remote: Compressing objects:  69% (29/42)        
+2023-07-03T07:27:44.4337020Z remote: Compressing objects:  71% (30/42)        
+2023-07-03T07:27:44.4337262Z remote: Compressing objects:  73% (31/42)        
+2023-07-03T07:27:44.4337501Z remote: Compressing objects:  76% (32/42)        
+2023-07-03T07:27:44.4337732Z remote: Compressing objects:  78% (33/42)        
+2023-07-03T07:27:44.4337976Z remote: Compressing objects:  80% (34/42)        
+2023-07-03T07:27:44.4338222Z remote: Compressing objects:  83% (35/42)        
+2023-07-03T07:27:44.4338455Z remote: Compressing objects:  85% (36/42)        
+2023-07-03T07:27:44.4338705Z remote: Compressing objects:  88% (37/42)        
+2023-07-03T07:27:44.4339121Z remote: Compressing objects:  90% (38/42)        
+2023-07-03T07:27:44.4339358Z remote: Compressing objects:  92% (39/42)        
+2023-07-03T07:27:44.4339613Z remote: Compressing objects:  95% (40/42)        
+2023-07-03T07:27:44.4339857Z remote: Compressing objects:  97% (41/42)        
+2023-07-03T07:27:44.4340101Z remote: Compressing objects: 100% (42/42)        
+2023-07-03T07:27:44.4340366Z remote: Compressing objects: 100% (42/42), done.        
+2023-07-03T07:27:44.4749649Z remote: Total 88 (delta 4), reused 64 (delta 0), pack-reused 0        
+2023-07-03T07:27:44.4813664Z From https://github.com/jenkinsci/incrementals-tools
+2023-07-03T07:27:44.4814360Z  * [new ref]         8143e4a9d313915b10d895b9e8b9e4a1a33b9233 -> pull/69/merge
+2023-07-03T07:27:44.4840941Z ##[endgroup]
+2023-07-03T07:27:44.4841524Z ##[group]Determining the checkout info
+2023-07-03T07:27:44.4843994Z ##[endgroup]
+2023-07-03T07:27:44.4844513Z ##[group]Checking out the ref
+2023-07-03T07:27:44.4882487Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/69/merge
+2023-07-03T07:27:44.4954259Z Note: switching to 'refs/remotes/pull/69/merge'.
+2023-07-03T07:27:44.4954451Z 
+2023-07-03T07:27:44.4954698Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-03T07:27:44.4955053Z changes and commit them, and you can discard any commits you make in this
+2023-07-03T07:27:44.4955418Z state without impacting any branches by switching back to a branch.
+2023-07-03T07:27:44.4955608Z 
+2023-07-03T07:27:44.4955774Z If you want to create a new branch to retain commits you create, you may
+2023-07-03T07:27:44.4956172Z do so (now or later) by using -c with the switch command. Example:
+2023-07-03T07:27:44.4956347Z 
+2023-07-03T07:27:44.4956503Z   git switch -c <new-branch-name>
+2023-07-03T07:27:44.4956651Z 
+2023-07-03T07:27:44.4956753Z Or undo this operation with:
+2023-07-03T07:27:44.4956894Z 
+2023-07-03T07:27:44.4956973Z   git switch -
+2023-07-03T07:27:44.4957091Z 
+2023-07-03T07:27:44.4957614Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-03T07:27:44.4957828Z 
+2023-07-03T07:27:44.4958037Z HEAD is now at 8143e4a Merge a047d2d3f9385a25ced0d2ad3c49f9401ea9c624 into 7458f259294981775c9636d2f4e8d63c1c5b598b
+2023-07-03T07:27:44.4958914Z ##[endgroup]
+2023-07-03T07:27:44.4981286Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-03T07:27:44.5007306Z '8143e4a9d313915b10d895b9e8b9e4a1a33b9233'
+2023-07-03T07:27:44.5015243Z ##[group]Removing auth
+2023-07-03T07:27:44.5020707Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-03T07:27:44.5049310Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-03T07:27:44.5314655Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-03T07:27:44.5315090Z http.https://github.com/.extraheader
+2023-07-03T07:27:44.5315880Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-03T07:27:44.5349022Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-03T07:27:44.5560268Z ##[endgroup]
+2023-07-03T07:27:44.5863040Z ##[group]Run actions/setup-java@v3
+2023-07-03T07:27:44.5863262Z with:
+2023-07-03T07:27:44.5863472Z   overwrite-settings: false
+2023-07-03T07:27:44.5863690Z   java-version: 17
+2023-07-03T07:27:44.5863897Z   distribution: temurin
+2023-07-03T07:27:44.5864109Z   java-package: jdk
+2023-07-03T07:27:44.5864305Z   check-latest: false
+2023-07-03T07:27:44.5864514Z   server-id: github
+2023-07-03T07:27:44.5864731Z   server-username: GITHUB_ACTOR
+2023-07-03T07:27:44.5864983Z   server-password: GITHUB_TOKEN
+2023-07-03T07:27:44.5865199Z   job-status: success
+2023-07-03T07:27:44.5865532Z   token: ***
+2023-07-03T07:27:44.5865712Z ##[endgroup]
+2023-07-03T07:27:44.8168730Z ##[group]Installed distributions
+2023-07-03T07:27:44.8228695Z Resolved Java 17.0.7+7 from tool-cache
+2023-07-03T07:27:44.8229153Z Setting Java 17.0.7+7 as the default
+2023-07-03T07:27:44.8248996Z Creating toolchains.xml for JDK version 17 from temurin
+2023-07-03T07:27:44.8377430Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-03T07:27:44.8381912Z 
+2023-07-03T07:27:44.8384636Z Java configuration:
+2023-07-03T07:27:44.8387405Z   Distribution: temurin
+2023-07-03T07:27:44.8390996Z   Version: 17.0.7+7
+2023-07-03T07:27:44.8394017Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:44.8397603Z 
+2023-07-03T07:27:44.8401053Z ##[endgroup]
+2023-07-03T07:27:44.8435299Z Creating settings.xml with server-id: github
+2023-07-03T07:27:44.8491466Z Writing to /home/runner/.m2/settings.xml
+2023-07-03T07:27:44.9888494Z ##[group]Run actions/cache@v3
+2023-07-03T07:27:44.9888697Z with:
+2023-07-03T07:27:44.9888905Z   path: ~/.m2/repository
+
+
+2023-07-03T07:27:44.9889305Z   key: Linux-jdk17-temurin-maven3.9.2-931331b19bb41da0b827f1c00a2819efab032b736a430d3185d932eb7b95e04f
+2023-07-03T07:27:44.9889790Z   restore-keys: Linux-jdk17-temurin-maven3.9.2-
+2023-07-03T07:27:44.9890071Z   enableCrossOsArchive: false
+2023-07-03T07:27:44.9890317Z   fail-on-cache-miss: false
+2023-07-03T07:27:44.9890530Z   lookup-only: false
+2023-07-03T07:27:44.9890743Z env:
+2023-07-03T07:27:44.9891008Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:44.9891363Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:44.9891638Z ##[endgroup]
+2023-07-03T07:27:46.4751304Z Received 60815880 of 65010184 (93.5%), 58.0 MBs/sec
+2023-07-03T07:27:46.5267905Z Received 65010184 of 65010184 (100.0%), 58.9 MBs/sec
+2023-07-03T07:27:46.5270370Z Cache Size: ~62 MB (65010184 B)
+2023-07-03T07:27:46.5300371Z [command]/usr/bin/tar -xf /home/runner/work/_temp/51fe1e27-1886-47fe-a0d0-8f8bbc360d2d/cache.tzst -P -C /home/runner/work/incrementals-tools/incrementals-tools --use-compress-program unzstd
+2023-07-03T07:27:46.7249975Z Cache restored successfully
+2023-07-03T07:27:46.7540191Z Cache restored from key: Linux-jdk17-temurin-maven3.9.2-eb355f93f111911fd1e8744766c10fa576b28ae4574aadcdeb5fbe9a86f453f7
+2023-07-03T07:27:46.7676354Z ##[group]Run echo "version=$(mvn -q -v)" >> $GITHUB_OUTPUT
+2023-07-03T07:27:46.7676750Z [36;1mecho "version=$(mvn -q -v)" >> $GITHUB_OUTPUT[0m
+2023-07-03T07:27:46.7734359Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-03T07:27:46.7734628Z env:
+2023-07-03T07:27:46.7734922Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:46.7735295Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:46.7735588Z ##[endgroup]
+2023-07-03T07:27:47.7312612Z ##[group]Run stCarolas/setup-maven@v4.5
+2023-07-03T07:27:47.7312850Z with:
+2023-07-03T07:27:47.7313072Z   maven-version: 3.9.2
+2023-07-03T07:27:47.7313270Z env:
+2023-07-03T07:27:47.7313546Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:47.7313915Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:47.7314201Z ##[endgroup]
+2023-07-03T07:27:47.8104300Z downloading https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.2/apache-maven-3.9.2-bin.tar.gz
+2023-07-03T07:27:47.9862069Z [command]tar --version
+2023-07-03T07:27:47.9905072Z tar (GNU tar) 1.34
+2023-07-03T07:27:47.9905508Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-07-03T07:27:47.9905967Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-07-03T07:27:47.9906427Z This is free software: you are free to change and redistribute it.
+2023-07-03T07:27:47.9906847Z There is NO WARRANTY, to the extent permitted by law.
+2023-07-03T07:27:47.9907102Z 
+2023-07-03T07:27:47.9907298Z Written by John Gilmore and Jay Fenlason.
+2023-07-03T07:27:47.9915923Z [command]tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/d9d885a6-dcd0-44ca-9bd7-a7a9fdbadc05 -f /home/runner/work/_temp/d837a570-0aad-4c0a-8ec7-d7f10f184f91
+2023-07-03T07:27:48.1359282Z ##[group]Run s4u/maven-settings-action@v2.8.0
+2023-07-03T07:27:48.1359540Z with:
+2023-07-03T07:27:48.1359744Z   apacheSnapshots: false
+2023-07-03T07:27:48.1359970Z   override: true
+2023-07-03T07:27:48.1360187Z   githubServer: true
+2023-07-03T07:27:48.1360406Z   oracleRepo: false
+2023-07-03T07:27:48.1360594Z env:
+2023-07-03T07:27:48.1360891Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:48.1361266Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:48.1361540Z ##[endgroup]
+2023-07-03T07:27:48.2084950Z Prepare maven setings: /home/runner/.m2/settings.xml
+2023-07-03T07:27:48.2088320Z maven settings.xml already exists - override
+2023-07-03T07:27:48.2241044Z ##[group]Run mvn -B -V -ntp -Dstyle.color=always package javadoc:javadoc
+2023-07-03T07:27:48.2241431Z [36;1mmvn -B -V -ntp -Dstyle.color=always package javadoc:javadoc[0m
+2023-07-03T07:27:48.2294638Z shell: /usr/bin/bash -e {0}
+2023-07-03T07:27:48.2294860Z env:
+2023-07-03T07:27:48.2295150Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:48.2295574Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64
+2023-07-03T07:27:48.2295895Z   MAVEN_OPTS: -Djansi.force=true
+2023-07-03T07:27:48.2296118Z ##[endgroup]
+2023-07-03T07:27:48.4099899Z [1mApache Maven 3.9.2 (c9616018c7a021c1c39be70fb2843d6f5f9b8a1c)[m
+2023-07-03T07:27:48.4100615Z Maven home: /opt/hostedtoolcache/maven/3.9.2/x64
+2023-07-03T07:27:48.4101676Z Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-17-jdk-amd64
+2023-07-03T07:27:48.4102117Z Default locale: en, platform encoding: UTF-8
+2023-07-03T07:27:48.4114089Z OS name: "linux", version: "5.15.0-1040-azure", arch: "amd64", family: "unix"
+2023-07-03T07:27:49.6222761Z [[1;34mINFO[m] Scanning for projects...
+2023-07-03T07:27:50.5852720Z [[1;34mINFO[m] Inspecting build with total of 5 modules...
+2023-07-03T07:27:50.5853280Z [[1;34mINFO[m] Installing Nexus Staging features:
+2023-07-03T07:27:50.5853815Z [[1;34mINFO[m]   ... total of 5 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-07-03T07:27:50.5854433Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-07-03T07:27:50.5854924Z [[1;34mINFO[m] [1mReactor Build Order:[m
+2023-07-03T07:27:50.5855269Z [[1;34mINFO[m] 
+2023-07-03T07:27:50.5855694Z [[1;34mINFO[m] Incrementals Tools POM                                             [pom]
+2023-07-03T07:27:50.5856153Z [[1;34mINFO[m] lib                                                                [jar]
+2023-07-03T07:27:50.5856638Z [[1;34mINFO[m] incrementals-maven-plugin                                 [maven-plugin]
+2023-07-03T07:27:50.5857201Z [[1;34mINFO[m] Git Changelist Maven Extension                                     [jar]
+2023-07-03T07:27:50.5857715Z [[1;34mINFO[m] incrementals-enforcer-rules                                        [jar]
+2023-07-03T07:27:50.6374498Z [[1;34mINFO[m] 
+2023-07-03T07:27:50.6378499Z [[1;34mINFO[m] [1m----------------< [0;36mio.jenkins.tools.incrementals:parent[0;1m >----------------[m
+2023-07-03T07:27:50.6382537Z [[1;34mINFO[m] [1mBuilding Incrementals Tools POM 1.8-SNAPSHOT                       [1/5][m
+2023-07-03T07:27:50.6386874Z [[1;34mINFO[m]   from pom.xml
+2023-07-03T07:27:50.6390371Z [[1;34mINFO[m] [1m--------------------------------[ pom ]---------------------------------[m
+2023-07-03T07:27:50.6533541Z [[1;33mWARNING[m] [1;33mParameter '[0;1;33madditionalparam[0;1;33m' is unknown for plugin '[0;1;33mmaven-javadoc-plugin[0;1;33m:[0;1;33m3.5.0[0;1;33m:[0;1;33mjavadoc[0;1;33m ([0;1;33mdefault-cli[0;1;33m)[0;1;33m'[m
+2023-07-03T07:27:50.6588036Z [[1;34mINFO[m] 
+2023-07-03T07:27:50.6592552Z [[1;34mINFO[m] [1m--- [0;32mgroovy:1.4:testCompile[m [1m(default)[m @ [36mparent[0;1m ---[m
+2023-07-03T07:27:51.1423344Z [[1;34mINFO[m] No sources found to compile
+2023-07-03T07:27:51.1425931Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.1428127Z [[1;34mINFO[m] [1m>>> [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mparent[0;1m >>>[m
+2023-07-03T07:27:51.1436126Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.1438134Z [[1;34mINFO[m] [1m<<< [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mparent[0;1m <<<[m
+2023-07-03T07:27:51.1438915Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.1440368Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.1445108Z [[1;34mINFO[m] [1m--- [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[m @ [36mparent[0;1m ---[m
+2023-07-03T07:27:51.8113445Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.8114663Z [[1;34mINFO[m] [1m-----------------< [0;36mio.jenkins.tools.incrementals:lib[0;1m >------------------[m
+2023-07-03T07:27:51.8115554Z [[1;34mINFO[m] [1mBuilding lib 1.8-SNAPSHOT                                          [2/5][m
+2023-07-03T07:27:51.8116221Z [[1;34mINFO[m]   from lib/pom.xml
+2023-07-03T07:27:51.8116833Z [[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+2023-07-03T07:27:51.8441920Z [[1;33mWARNING[m] [1;33mParameter '[0;1;33madditionalparam[0;1;33m' is unknown for plugin '[0;1;33mmaven-javadoc-plugin[0;1;33m:[0;1;33m3.5.0[0;1;33m:[0;1;33mjavadoc[0;1;33m ([0;1;33mdefault-cli[0;1;33m)[0;1;33m'[m
+2023-07-03T07:27:51.8781578Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.8782398Z [[1;34mINFO[m] [1m--- [0;32mresources:3.3.0:resources[m [1m(default-resources)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:51.9279388Z [[1;34mINFO[m] skip non existing resourceDirectory /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/resources
+2023-07-03T07:27:51.9280284Z [[1;34mINFO[m] 
+2023-07-03T07:27:51.9281093Z [[1;34mINFO[m] [1m--- [0;32mcompiler:3.3:compile[m [1m(default-compile)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:52.0529156Z [[1;34mINFO[m] Changes detected - recompiling the module!
+2023-07-03T07:27:52.0570023Z [[1;34mINFO[m] Compiling 1 source file to /home/runner/work/incrementals-tools/incrementals-tools/lib/target/classes
+2023-07-03T07:27:52.9550774Z [[1;34mINFO[m] 
+2023-07-03T07:27:52.9555228Z [[1;34mINFO[m] [1m--- [0;32mresources:3.3.0:testResources[m [1m(default-testResources)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:52.9657721Z [[1;34mINFO[m] skip non existing resourceDirectory /home/runner/work/incrementals-tools/incrementals-tools/lib/src/test/resources
+2023-07-03T07:27:52.9662826Z [[1;34mINFO[m] 
+2023-07-03T07:27:52.9665218Z [[1;34mINFO[m] [1m--- [0;32mcompiler:3.3:testCompile[m [1m(default-testCompile)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:52.9716424Z [[1;34mINFO[m] No sources to compile
+2023-07-03T07:27:52.9719027Z [[1;34mINFO[m] 
+2023-07-03T07:27:52.9724050Z [[1;34mINFO[m] [1m--- [0;32mgroovy:1.4:testCompile[m [1m(default)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:52.9774339Z [[1;34mINFO[m] No sources found to compile
+2023-07-03T07:27:52.9777120Z [[1;34mINFO[m] 
+2023-07-03T07:27:52.9783941Z [[1;34mINFO[m] [1m--- [0;32msurefire:3.0.0:test[m [1m(default-test)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:53.1243145Z [[1;34mINFO[m] No tests to run.
+2023-07-03T07:27:53.1392195Z [[1;34mINFO[m] 
+2023-07-03T07:27:53.1394954Z [[1;34mINFO[m] [1m--- [0;32mjar:3.3.0:jar[m [1m(default-jar)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:53.2939712Z [[1;34mINFO[m] Building jar: /home/runner/work/incrementals-tools/incrementals-tools/lib/target/lib-1.8-SNAPSHOT.jar
+2023-07-03T07:27:53.3384500Z [[1;34mINFO[m] 
+2023-07-03T07:27:53.3387353Z [[1;34mINFO[m] [1m>>> [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mlib[0;1m >>>[m
+2023-07-03T07:27:53.3391074Z [[1;34mINFO[m] 
+2023-07-03T07:27:53.3393352Z [[1;34mINFO[m] [1m<<< [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mlib[0;1m <<<[m
+2023-07-03T07:27:53.3395241Z [[1;34mINFO[m] 
+2023-07-03T07:27:53.3397092Z [[1;34mINFO[m] 
+2023-07-03T07:27:53.3399467Z [[1;34mINFO[m] [1m--- [0;32mjavadoc:3.5.0:javadoc[m [1m(default-cli)[m @ [36mlib[0;1m ---[m
+2023-07-03T07:27:53.4839994Z [[1;34mINFO[m] No previous run data found, generating javadoc.
+2023-07-03T07:27:55.2743034Z [[1;33mWARNING[m] Javadoc Warnings
+2023-07-03T07:27:55.2743928Z [[1;33mWARNING[m] warning: unknown enum constant When.MAYBE
+2023-07-03T07:27:55.2745270Z [[1;33mWARNING[m] reason: class file for javax.annotation.meta.When not found
+2023-07-03T07:27:55.2746160Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:64: warning: no comment
+2023-07-03T07:27:55.2746853Z [[1;33mWARNING[m] public interface Log {
+2023-07-03T07:27:55.2747665Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2748408Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:68: warning: no comment
+2023-07-03T07:27:55.2835300Z [[1;33mWARNING[m] public static final class VersionAndRepo implements Comparable<VersionAndRepo> {
+2023-07-03T07:27:55.2835690Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2836246Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:58: warning: no comment
+2023-07-03T07:27:55.2836807Z [[1;33mWARNING[m] public UpdateChecker(Log log, List<String> repos) {
+2023-07-03T07:27:55.2837119Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2837666Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:112: warning: no comment
+2023-07-03T07:27:55.2838377Z [[1;33mWARNING[m] public @CheckForNull VersionAndRepo find(String groupId, String artifactId, String currentVersion, String branch) throws Exception {
+2023-07-03T07:27:55.2838788Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2839324Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:100: warning: no comment
+2023-07-03T07:27:55.2839960Z [[1;33mWARNING[m] public @CheckForNull String findGroupId(String artifactId) throws IOException, InterruptedException {
+2023-07-03T07:27:55.2840340Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2840865Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:264: warning: no comment
+2023-07-03T07:27:55.2841402Z [[1;33mWARNING[m] public static void main(String... argv) throws Exception {
+2023-07-03T07:27:55.2841704Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2842228Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:65: warning: no comment
+2023-07-03T07:27:55.2842689Z [[1;33mWARNING[m] void info(String message);
+2023-07-03T07:27:55.2842963Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2843472Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:70: warning: no comment
+2023-07-03T07:27:55.2843966Z [[1;33mWARNING[m] public final String artifactId;
+2023-07-03T07:27:55.2844456Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2844985Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:69: warning: no comment
+2023-07-03T07:27:55.2845458Z [[1;33mWARNING[m] public final String groupId;
+2023-07-03T07:27:55.2845733Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2846264Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:72: warning: no comment
+2023-07-03T07:27:55.2846734Z [[1;33mWARNING[m] public final String repo;
+2023-07-03T07:27:55.2847003Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2847512Z [[1;33mWARNING[m] /home/runner/work/incrementals-tools/incrementals-tools/lib/src/main/java/io/jenkins/tools/incrementals/lib/UpdateChecker.java:71: warning: no comment
+2023-07-03T07:27:55.2848011Z [[1;33mWARNING[m] public final ComparableVersion version;
+2023-07-03T07:27:55.2848312Z [[1;33mWARNING[m] ^
+2023-07-03T07:27:55.2848570Z [[1;33mWARNING[m] 12 warnings
+2023-07-03T07:27:55.2848815Z [[1;34mINFO[m] 
+2023-07-03T07:27:55.2849252Z [[1;34mINFO[m] [1m------< [0;36mio.jenkins.tools.incrementals:incrementals-maven-plugin[0;1m >-------[m
+2023-07-03T07:27:55.2849780Z [[1;34mINFO[m] [1mBuilding incrementals-maven-plugin 1.8-SNAPSHOT                    [3/5][m
+2023-07-03T07:27:55.2850167Z [[1;34mINFO[m]   from maven-plugin/pom.xml
+2023-07-03T07:27:55.2850728Z [[1;34mINFO[m] [1m----------------------------[ maven-plugin ]----------------------------[m
+2023-07-03T07:27:55.2915316Z [[1;33mWARNING[m] [1;33mParameter '[0;1;33madditionalparam[0;1;33m' is unknown for plugin '[0;1;33mmaven-javadoc-plugin[0;1;33m:[0;1;33m3.5.0[0;1;33m:[0;1;33mjavadoc[0;1;33m ([0;1;33mdefault-cli[0;1;33m)[0;1;33m'[m
+2023-07-03T07:27:56.3016234Z [[1;34mINFO[m] 
+2023-07-03T07:27:56.3017177Z [[1;34mINFO[m] [1m--- [0;32mplugin:3.8.1:helpmojo[m [1m(help-mojo)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:56.6408075Z [[1;34mINFO[m] 
+2023-07-03T07:27:56.6409042Z [[1;34mINFO[m] [1m--- [0;32mresources:3.3.0:resources[m [1m(default-resources)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:56.6479116Z [[1;34mINFO[m] Copying 1 resource
+2023-07-03T07:27:56.6507121Z [[1;34mINFO[m] 
+2023-07-03T07:27:56.6519532Z [[1;34mINFO[m] [1m--- [0;32mcompiler:3.3:compile[m [1m(default-compile)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:56.6652530Z [[1;34mINFO[m] Changes detected - recompiling the module!
+2023-07-03T07:27:56.6656494Z [[1;34mINFO[m] Compiling 9 source files to /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/target/classes
+2023-07-03T07:27:57.4111288Z [[1;34mINFO[m] /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/src/main/java/io/jenkins/tools/incrementals/maven/IncrementalifyMojo.java: /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/src/main/java/io/jenkins/tools/incrementals/maven/IncrementalifyMojo.java uses or overrides a deprecated API.
+2023-07-03T07:27:57.4115481Z [[1;34mINFO[m] /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/src/main/java/io/jenkins/tools/incrementals/maven/IncrementalifyMojo.java: Recompile with -Xlint:deprecation for details.
+2023-07-03T07:27:57.4120093Z [[1;34mINFO[m] 
+2023-07-03T07:27:57.4123526Z [[1;34mINFO[m] [1m--- [0;32mplugin:3.8.1:descriptor[m [1m(default-descriptor)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:57.4160048Z [[1;34mINFO[m] Using 'UTF-8' encoding to read mojo source files.
+2023-07-03T07:27:59.0717378Z [[1;34mINFO[m] java-annotations mojo extractor found 5 mojo descriptors.
+2023-07-03T07:27:59.1098785Z [[1;34mINFO[m] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-07-03T07:27:59.1117368Z [[1;34mINFO[m] ant mojo extractor found 0 mojo descriptor.
+2023-07-03T07:27:59.1121309Z [[1;34mINFO[m] bsh mojo extractor found 0 mojo descriptor.
+2023-07-03T07:27:59.1552232Z [[1;34mINFO[m] 
+2023-07-03T07:27:59.1556224Z [[1;34mINFO[m] [1m--- [0;32mresources:3.3.0:testResources[m [1m(default-testResources)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:59.1572808Z [[1;34mINFO[m] skip non existing resourceDirectory /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/src/test/resources
+2023-07-03T07:27:59.1577007Z [[1;34mINFO[m] 
+2023-07-03T07:27:59.1580710Z [[1;34mINFO[m] [1m--- [0;32mcompiler:3.3:testCompile[m [1m(default-testCompile)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:59.1607693Z [[1;34mINFO[m] Changes detected - recompiling the module!
+2023-07-03T07:27:59.1613139Z [[1;34mINFO[m] Compiling 1 source file to /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/target/test-classes
+2023-07-03T07:27:59.2734551Z [[1;34mINFO[m] 
+2023-07-03T07:27:59.2738489Z [[1;34mINFO[m] [1m--- [0;32mgroovy:1.4:testCompile[m [1m(default)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:59.2771802Z [[1;34mINFO[m] No sources found to compile
+2023-07-03T07:27:59.2775777Z [[1;34mINFO[m] 
+2023-07-03T07:27:59.2779304Z [[1;34mINFO[m] [1m--- [0;32msurefire:3.0.0:test[m [1m(default-test)[m @ [36mincrementals-maven-plugin[0;1m ---[m
+2023-07-03T07:27:59.2865134Z [[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+2023-07-03T07:27:59.4144849Z [[1;34mINFO[m] 
+2023-07-03T07:27:59.4147522Z [[1;34mINFO[m] -------------------------------------------------------
+2023-07-03T07:27:59.4149267Z [[1;34mINFO[m]  T E S T S
+2023-07-03T07:27:59.4150861Z [[1;34mINFO[m] -------------------------------------------------------
+2023-07-03T07:28:00.2222177Z [[1;31mERROR[m] TestEngine with ID 'junit-vintage' failed to discover tests
+2023-07-03T07:28:00.2311764Z [[1;34mINFO[m] 
+2023-07-03T07:28:00.2312215Z [[1;34mINFO[m] Results:
+2023-07-03T07:28:00.2312559Z [[1;34mINFO[m] 
+2023-07-03T07:28:00.2313015Z [[1;34mINFO[m] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+2023-07-03T07:28:00.2313404Z [[1;34mINFO[m] 
+2023-07-03T07:28:00.2357153Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-07-03T07:28:00.2359591Z [[1;34mINFO[m] [1mReactor Summary for Incrementals Tools POM 1.8-SNAPSHOT:[m
+2023-07-03T07:28:00.2361141Z [[1;34mINFO[m] 
+2023-07-03T07:28:00.2365503Z [[1;34mINFO[m] Incrementals Tools POM ............................. [1;32mSUCCESS[m [  1.174 s]
+2023-07-03T07:28:00.2368024Z [[1;34mINFO[m] lib ................................................ [1;32mSUCCESS[m [  3.465 s]
+2023-07-03T07:28:00.2375565Z [[1;34mINFO[m] incrementals-maven-plugin .......................... [1;31mFAILURE[m [  4.958 s]
+2023-07-03T07:28:00.2377481Z [[1;34mINFO[m] Git Changelist Maven Extension ..................... [1;33mSKIPPED[m
+2023-07-03T07:28:00.2381971Z [[1;34mINFO[m] incrementals-enforcer-rules ........................ [1;33mSKIPPED[m
+2023-07-03T07:28:00.2383930Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-07-03T07:28:00.2388621Z [[1;34mINFO[m] [1;31mBUILD FAILURE[m
+2023-07-03T07:28:00.2390364Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-07-03T07:28:00.2393658Z [[1;34mINFO[m] Total time:  10.640 s
+2023-07-03T07:28:00.2396687Z [[1;34mINFO[m] Finished at: 2023-07-03T07:28:00Z
+2023-07-03T07:28:00.2398359Z [[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+2023-07-03T07:28:00.2405394Z [[1;33mWARNING[m] 
+2023-07-03T07:28:00.2407192Z [[1;33mWARNING[m] Plugin validation issues were detected in 5 plugin(s)
+2023-07-03T07:28:00.2408626Z [[1;33mWARNING[m] 
+2023-07-03T07:28:00.2410435Z [[1;33mWARNING[m]  * org.codehaus.gmaven:gmaven-plugin:1.4
+2023-07-03T07:28:00.2416739Z [[1;33mWARNING[m]  * org.apache.maven.plugins:maven-plugin-plugin:3.8.1
+2023-07-03T07:28:00.2420394Z [[1;33mWARNING[m]  * org.apache.maven.plugins:maven-compiler-plugin:3.3
+2023-07-03T07:28:00.2422473Z [[1;33mWARNING[m]  * org.apache.maven.plugins:maven-javadoc-plugin:3.5.0
+2023-07-03T07:28:00.2424100Z [[1;33mWARNING[m]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+2023-07-03T07:28:00.2425526Z [[1;33mWARNING[m] 
+2023-07-03T07:28:00.2427612Z [[1;33mWARNING[m] For more or less details, use 'maven.plugin.validation' property with one of the values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+2023-07-03T07:28:00.2429123Z [[1;33mWARNING[m] 
+2023-07-03T07:28:00.2448170Z [[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:3.0.0:test[m [1m(default-test)[m on project [36mincrementals-maven-plugin[m: [1;31m[m
+2023-07-03T07:28:00.2449952Z [[1;31mERROR[m] [1;31m[m
+2023-07-03T07:28:00.2452092Z [[1;31mERROR[m] [1;31mPlease refer to /home/runner/work/incrementals-tools/incrementals-tools/maven-plugin/target/surefire-reports for the individual test results.[m
+2023-07-03T07:28:00.2453956Z [[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.[m
+2023-07-03T07:28:00.2455546Z [[1;31mERROR[m] [1;31mThere was an error in the forked process[m
+2023-07-03T07:28:00.2457646Z [[1;31mERROR[m] [1;31mTestEngine with ID 'junit-vintage' failed to discover tests[m
+2023-07-03T07:28:00.2460428Z [[1;31mERROR[m] [1;31morg.apache.maven.surefire.booter.SurefireBooterForkException: There was an error in the forked process[m
+2023-07-03T07:28:00.2462798Z [[1;31mERROR[m] [1;31mTestEngine with ID 'junit-vintage' failed to discover tests[m
+2023-07-03T07:28:00.2464905Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:631)[m
+2023-07-03T07:28:00.2467077Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:285)[m
+2023-07-03T07:28:00.2469231Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:250)[m
+2023-07-03T07:28:00.2471461Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1203)[m
+2023-07-03T07:28:00.2473808Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1055)[m
+2023-07-03T07:28:00.2478196Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:871)[m
+2023-07-03T07:28:00.2480615Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:126)[m
+2023-07-03T07:28:00.2482841Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2(MojoExecutor.java:342)[m
+2023-07-03T07:28:00.2484978Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute(MojoExecutor.java:330)[m
+2023-07-03T07:28:00.2493289Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:213)[m
+2023-07-03T07:28:00.2496061Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:175)[m
+2023-07-03T07:28:00.2498289Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.access$000(MojoExecutor.java:76)[m
+2023-07-03T07:28:00.2501083Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor$1.run(MojoExecutor.java:163)[m
+2023-07-03T07:28:00.2502526Z [[1;31mERROR[m] [1;31m	at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute(DefaultMojosExecutionStrategy.java:39)[m
+2023-07-03T07:28:00.2509890Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:160)[m
+2023-07-03T07:28:00.2511658Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:105)[m
+2023-07-03T07:28:00.2513539Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:73)[m
+2023-07-03T07:28:00.2515229Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:53)[m
+2023-07-03T07:28:00.2516860Z [[1;31mERROR[m] [1;31m	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:118)[m
+2023-07-03T07:28:00.2518311Z [[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:261)[m
+2023-07-03T07:28:00.2519584Z [[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:173)[m
+2023-07-03T07:28:00.2520794Z [[1;31mERROR[m] [1;31m	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:101)[m
+2023-07-03T07:28:00.2521990Z [[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:910)[m
+2023-07-03T07:28:00.2529289Z [[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:283)[m
+2023-07-03T07:28:00.2532429Z [[1;31mERROR[m] [1;31m	at org.apache.maven.cli.MavenCli.main(MavenCli.java:206)[m
+2023-07-03T07:28:00.2534073Z [[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)[m
+2023-07-03T07:28:00.2535510Z [[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)[m
+2023-07-03T07:28:00.2537237Z [[1;31mERROR[m] [1;31m	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)[m
+2023-07-03T07:28:00.2538667Z [[1;31mERROR[m] [1;31m	at java.base/java.lang.reflect.Method.invoke(Method.java:568)[m
+2023-07-03T07:28:00.2540312Z [[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:283)[m
+2023-07-03T07:28:00.2541726Z [[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:226)[m
+2023-07-03T07:28:00.2550056Z [[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:407)[m
+2023-07-03T07:28:00.2551996Z [[1;31mERROR[m] [1;31m	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:348)[m
+2023-07-03T07:28:00.2553356Z [[1;31mERROR[m] [1;31m[m
+2023-07-03T07:28:00.2554576Z [[1;31mERROR[m] -> [1m[Help 1][m
+2023-07-03T07:28:00.2555638Z [[1;31mERROR[m] 
+2023-07-03T07:28:00.2557037Z [[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+2023-07-03T07:28:00.2558386Z [[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+2023-07-03T07:28:00.2559382Z [[1;31mERROR[m] 
+2023-07-03T07:28:00.2560503Z [[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+2023-07-03T07:28:00.2561987Z [[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2023-07-03T07:28:00.2563289Z [[1;31mERROR[m] 
+2023-07-03T07:28:00.2564398Z [[1;31mERROR[m] After correcting the problems, you can resume the build with the command
+2023-07-03T07:28:00.2565742Z [[1;31mERROR[m]   [1mmvn <args> -rf :incrementals-maven-plugin[m
+2023-07-03T07:28:00.2996323Z ##[error]Process completed with exit code 1.
+2023-07-03T07:28:00.3081587Z Post job cleanup.
+2023-07-03T07:28:00.3121119Z Post job cleanup.
+2023-07-03T07:28:00.3817176Z Cleanup maven setings: /home/runner/.m2/settings.xml - file was removed
+2023-07-03T07:28:00.3917521Z Post job cleanup.
+2023-07-03T07:28:00.5759813Z Post job cleanup.
+2023-07-03T07:28:00.6832725Z [command]/usr/bin/git version
+2023-07-03T07:28:00.6881604Z git version 2.41.0
+2023-07-03T07:28:00.6936972Z Temporarily overriding HOME='/home/runner/work/_temp/e79ddbbc-0f0c-4233-96dc-203c198a6e39' before making global git config changes
+2023-07-03T07:28:00.6940820Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-03T07:28:00.6949299Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/incrementals-tools/incrementals-tools
+2023-07-03T07:28:00.6994713Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-03T07:28:00.7061118Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-03T07:28:00.7358846Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-03T07:28:00.7405124Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-03T07:28:00.7867281Z Cleaning up orphan processes

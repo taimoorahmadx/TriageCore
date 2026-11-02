@@ -1,0 +1,53 @@
+repo: spotify/missinglink
+run_id: 78445745997d3ebe5d1e35d9762d95af875c85ec
+head_sha: 78445745997d3ebe5d1e35d9762d95af875c85ec
+run_attempts: []
+commits:
+- sha: 78445745997d3ebe5d1e35d9762d95af875c85ec
+  author: dependabot[bot]
+  files:
+  - maven-plugin/pom.xml
+- sha: 5a670cc1a4c469d4ddb6f5c7b95bcffe0044b152
+  author: caesar-ralf
+  files:
+  - maven-plugin/pom.xml
+- sha: 51ef705ac53117f80ae3f9954c5055efe9429336
+  author: caesar-ralf
+  files:
+  - pom.xml
+- sha: aa87525e09320cc717905236f3c05640d8468482
+  author: caesar-ralf
+  files:
+  - maven-plugin/pom.xml
+- sha: a9bd65a59ce80f071bb364388170144017bce176
+  author: caesar-ralf
+  files:
+  - pom.xml
+- sha: 7e8b35be3ea537c4cefe81d0c1d2b99261fc8d30
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 5f4c7a52de3cdf72de94ab0185ff27d1fd8abb74
+  author: dependabot[bot]
+  files:
+  - maven-plugin/pom.xml
+- sha: baf5edf7e68354a6c4b2176eb1927f951d2eebcf
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 82440fae1860860a21ce2384261229f76e43fb50
+  author: dependabot[bot]
+  files:
+  - maven-plugin/pom.xml
+- sha: d422226d71ceb0fd8170935a6bb076d30dda93ef
+  author: Caesar Ralf
+  files:
+  - benchmarks/pom.xml
+  - core/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory TEST_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

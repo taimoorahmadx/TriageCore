@@ -1,0 +1,112 @@
+repo: hacs/integration
+run_id: '55'
+head_sha: d985231d83ec0cb50784548dae26236dd03bd2a6
+run_attempts: []
+commits:
+- sha: d985231d83ec0cb50784548dae26236dd03bd2a6
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/branches/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/contents/hacs.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/git/trees/1.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/git/trees/2.0.0.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/git/trees/main.json
+  - tests/fixtures/proxy/api.github.com/repos/hacs-test-org/python_script-basic/releases.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/1.0.0/README.md
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/1.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/1.0.0/python_scripts/example.py
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/2.0.0/README.md
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/2.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/hacs-test-org/python_script-basic/2.0.0/python_scripts/example.py
+  - tests/output/proxy_calls.json
+  - tests/repositories/test_remove_repository.py
+  - tests/snapshots/data_client/base/data/python_script.json
+  - tests/snapshots/data_client/base/repositories/python_script.json
+  - tests/snapshots/hacs-test-org/python_script-basic/test_download_repository.json
+  - tests/snapshots/hacs-test-org/python_script-basic/test_remove_repository_pre.json
+  - tests/snapshots/hacs-test-org/python_script-basic/test_update_repository_entity.json
+  - tests/snapshots/hacs-test-org/python_script-basic/test_update_repository_websocket.json
+  - tests/snapshots/scripts/data/generate_category_data/single/python_script/hacs-test-org/python_script-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/python_script/hacs-test-org/python_script-basic/repositories.json
+  - tests/test_data_client.py
+- sha: ae801e18935e08ce4e853418eca9201897dc1325
+  author: ludeeus
+  files:
+  - tests/output/proxy_calls.json
+- sha: fd267481438f217eb819b62ef694e91ae0e6ff3c
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/fixtures/proxy/data-v2.hacs.xyz/appdaemon/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/integration/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/netdaemon/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/plugin/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/python_script/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/template/repositories.json
+  - tests/fixtures/proxy/data-v2.hacs.xyz/theme/repositories.json
+  - tests/snapshots/data_client/base/data/appdaemon.json
+  - tests/snapshots/data_client/base/data/integration.json
+  - tests/snapshots/data_client/base/data/plugin.json
+  - tests/snapshots/data_client/base/data/template.json
+  - tests/snapshots/data_client/base/data/theme.json
+  - tests/snapshots/data_client/base/repositories/appdaemon.json
+  - tests/snapshots/data_client/base/repositories/integration.json
+  - tests/snapshots/data_client/base/repositories/plugin.json
+  - tests/snapshots/data_client/base/repositories/template.json
+  - tests/snapshots/data_client/base/repositories/theme.json
+  - tests/test_data_client.py
+- sha: 80fe5e0569da60818b70a1c999b6a33ba2ee95b6
+  author: ludeeus
+  files:
+  - .github/ISSUE_TEMPLATE/b_frontend.yml
+  - .github/ISSUE_TEMPLATE/config.yml
+- sha: 2627304b61b369f0d8326d2e4f4474d876397420
+  author: ludeeus
+  files:
+  - .github/ISSUE_TEMPLATE/config.yml
+- sha: f4d2d9491fb0927c6c7102583f844ef1989ea0ee
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/output/proxy_calls.json
+  - tests/repositories/test_download_repository.py
+  - tests/repositories/test_remove_repository.py
+  - tests/repositories/test_update_repository.py
+  - tests/scripts/data/test_generate_category_data.py
+  - tests/snapshots/hacs-test-org/appdaemon-basic/test_remove_repository_pre.json
+- sha: 26e406df3594f0bfa4a408600912011856304568
+  author: ludeeus
+  files:
+  - .github/ISSUE_TEMPLATE/b_frontend.yml
+- sha: 9d2e604481cbc89e2af7d569a35abfc5795068f9
+  author: ludeeus
+  files:
+  - .github/ISSUE_TEMPLATE/config.yml
+- sha: 2bc287019709c42935d59f67d9518d84ec420b61
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/fixtures/proxy/data-v2.hacs.xyz/removed/repositories.json
+  - tests/output/proxy_calls.json
+  - tests/scripts/data/test_generate_category_data.py
+  - tests/snapshots/scripts/data/generate_category_data/single/appdaemon/hacs-test-org/appdaemon-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/appdaemon/hacs-test-org/appdaemon-basic/repositories.json
+  - tests/snapshots/scripts/data/generate_category_data/single/integration/hacs-test-org/integration-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/integration/hacs-test-org/integration-basic/repositories.json
+  - tests/snapshots/scripts/data/generate_category_data/single/plugin/hacs-test-org/plugin-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/plugin/hacs-test-org/plugin-basic/repositories.json
+  - tests/snapshots/scripts/data/generate_category_data/single/template/hacs-test-org/template-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/template/hacs-test-org/template-basic/repositories.json
+  - tests/snapshots/scripts/data/generate_category_data/single/theme/hacs-test-org/theme-basic/data.json
+  - tests/snapshots/scripts/data/generate_category_data/single/theme/hacs-test-org/theme-basic/repositories.json
+- sha: f973b31a383d2587edb8c19fb7e1da7e8b0a3478
+  author: ludeeus
+  files:
+  - tests/output/proxy_calls.json
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug

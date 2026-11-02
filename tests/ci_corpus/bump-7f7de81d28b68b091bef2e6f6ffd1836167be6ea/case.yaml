@@ -1,0 +1,51 @@
+repo: 1and1/snmpman
+run_id: 7f7de81d28b68b091bef2e6f6ffd1836167be6ea
+head_sha: 7f7de81d28b68b091bef2e6f6ffd1836167be6ea
+run_attempts: []
+commits:
+- sha: 7f7de81d28b68b091bef2e6f6ffd1836167be6ea
+  author: dependabot[bot]
+  files:
+  - snmpman/pom.xml
+- sha: 6f5495e10ada249f9bebf026956cd0fb2a9438ad
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+  - snmpman-cli/pom.xml
+- sha: 94a95b4f8f94237bce15884a1ae3e681a9b3b469
+  author: Stephan Fuhrmann
+  files:
+  - snmpman-cli/pom.xml
+- sha: 8df78bead3c7e37ea247a30dfcfe5e621cae1a46
+  author: Stephan Fuhrmann
+  files:
+  - snmpman-cli/pom.xml
+- sha: c8e449d57da9978bc2aa13ec8204e54703b0adbf
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: bb91abcfd73d83fc0956135de62e719a686e39fd
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: a562e01343ad2f8888a378ea36578b2089067747
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+- sha: 307abcb2d3604f0ccdd3d2146d277d75a10767ed
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: b6b71ec6d39ff8f06fec4a4f384b8906df111fa5
+  author: dependabot[bot]
+  files:
+  - snmpman-cli/pom.xml
+- sha: fff8244d5e8e43420ccc3a2b9416327381323406
+  author: Stephan Fuhrmann
+  files:
+  - pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

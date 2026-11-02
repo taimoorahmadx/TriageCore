@@ -1,0 +1,54 @@
+repo: jenkinsci/code-coverage-api-plugin
+run_id: 8ab7a7214f9ac1d130b416fae7280cfda533a54f
+head_sha: 8ab7a7214f9ac1d130b416fae7280cfda533a54f
+run_attempts: []
+commits:
+- sha: 8ab7a7214f9ac1d130b416fae7280cfda533a54f
+  author: dependabot[bot]
+  files:
+  - ui-tests/pom.xml
+- sha: 607fc557997983d0620914dd7124c09199a66e1d
+  author: uhafner
+  files:
+  - ui-tests/pom.xml
+- sha: 5558e7becb86a10d3e6bdb8aa8c70e79cf767675
+  author: uhafner
+  files:
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/DeltaComputationITest.java
+  - plugin/src/test/resources/io/jenkins/plugins/coverage/metrics/steps/mutations-codingstyle.xml
+- sha: 93ac7e48cdc13643ef5d15b101811d48765b8dc6
+  author: uhafner
+  files:
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/DeltaComputationITest.java
+  - plugin/src/test/resources/io/jenkins/plugins/coverage/metrics/steps/mutations-codingstyle.xml
+- sha: e35d0bfd9ff3869b91c180f7076bfaebaf8ef1e6
+  author: dependabot[bot]
+  files:
+  - ui-tests/pom.xml
+- sha: 79b87391ade31bacff051c4cc6d862a4d4e984e1
+  author: uhafner
+  files:
+  - .github/workflows/enforce-labels.yml
+- sha: 7f6700f7522a7605cc0eb64bbacbef3203aa2675
+  author: uhafner
+  files:
+  - plugin/pom.xml
+- sha: 21632bd3379aecd89749bd65f67160c433eec81c
+  author: uhafner
+  files:
+  - plugin/pom.xml
+- sha: 3c7f83238976ad32aed2f7a06b9cb20dea0528e4
+  author: uhafner
+  files:
+  - plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluator.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluatorTest.java
+- sha: 2c5fefa4a661af731c97c8b3f3cc802a16da9226
+  author: uhafner
+  files:
+  - plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluator.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluatorTest.java
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

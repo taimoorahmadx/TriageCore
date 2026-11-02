@@ -1,0 +1,101 @@
+repo: premium-minds/billy
+run_id: 8436e73fa0c913774d9792fc986c74309765ab61
+head_sha: 8436e73fa0c913774d9792fc986c74309765ab61
+run_attempts: []
+commits:
+- sha: 8436e73fa0c913774d9792fc986c74309765ab61
+  author: dependabot[bot]
+  files:
+  - billy-portugal/pom.xml
+- sha: 85a6b3fc53651c1f7de4c7fa79ef5a559079443e
+  author: thenmaster
+  files:
+  - CHANGELOG.md
+- sha: 1e5523c5fff2680b292a7e1a299a37ee01a958b0
+  author: Nuno Goncalves
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: 3afa8dab90162cdbf9127cc8ef70a91892069c88
+  author: Nuno Goncalves
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: f927482959ccf277f979b792bd9f1e98739e093f
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: 9341c32e52405b82c2310addd7ab0dfee424f6a5
+  author: froque
+  files:
+  - billy-portugal/pom.xml
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/AuthenticationHandler.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/Client.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/ConsultSeriesRequest.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/CreateSeriesRequest.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/DocumentClass.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/DocumentType.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/FinalizeSeriesRequest.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/MultipleSeriesResponse.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/ResultInfo.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/RevokeJustification.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/RevokeSeriesRequest.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SeriesInfo.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SeriesProcessingMedium.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SeriesState.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SeriesType.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SingleSeriesResponse.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/SslClientCertificate.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/WebserviceCredentials.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/series/webservice/WebserviceKeys.java
+  - billy-portugal/src/main/resources/Comunicacao_Series.wsdl
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/services/series/webservice/ClientTest.java
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/services/series/webservice/StubSeriesWS.java
+  - pom.xml
+- sha: ee63fe9a1afb48c161870ea19d6d237e8cfff4f9
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: 93c52c566d0a5c6800e5218abbb8db9f2154f5bb
+  author: froque
+  files:
+  - billy-portugal/pom.xml
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/AuthenticationHandler.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/Client.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/ClientFactory.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/LineSummaryKey.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/Response.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/SslClientCertificate.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/WebserviceCredentials.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/export/webservice/WebserviceKeys.java
+  - billy-portugal/src/main/resources/Fatcorews.wsdl
+  - billy-portugal/src/main/resources/TesteWebservices.pfx
+  - billy-portugal/src/main/resources/saPubKey.jks
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/services/export/webservice/ClientTest.java
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/services/export/webservice/StubFatcorewsPort.java
+  - pom.xml
+- sha: f1ad9f195875deefe8bcba61ee2a54580381cc28
+  author: froque
+  files:
+  - billy-gin/src/test/java/com/premiumminds/billy/gin/services/impl/pdf/AbstractFOPPDFTransformerTest.java
+- sha: ca6f6e5ab4190961f5832ecec087369d8e70677d
+  author: froque
+  files:
+  - CHANGELOG.md
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

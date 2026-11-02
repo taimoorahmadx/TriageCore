@@ -1,0 +1,85 @@
+repo: python/cpython
+source: mined
+run_id: 41411112686
+head_sha: b89345be49d3c964ed236ab5d19753c9f3d98043
+run_attempts:
+- attempt: 1
+  head_sha: b89345be49d3c964ed236ab5d19753c9f3d98043
+  conclusion: failure
+commits:
+- sha: b89345be49d3c964ed236ab5d19753c9f3d98043
+  author: orsenthil
+  files:
+  - Lib/test/test_ftplib.py
+- sha: 58c326072880df632a1d98bd44976d59b2a05407
+  author: rudy-07
+  files:
+  - Lib/test/test_ftplib.py
+- sha: 1f66a0313ecef57daedeb5f25ba11ec430e4e721
+  author: methane
+  files:
+  - Doc/c-api/init_config.rst
+  - Doc/c-api/interp-lifecycle.rst
+  - Doc/c-api/long.rst
+  - Doc/extending/newtypes.rst
+  - Doc/howto/instrumentation.rst
+  - Doc/library/cmd.rst
+  - Doc/library/configparser.rst
+  - Doc/library/ctypes.rst
+  - Doc/library/optparse.rst
+  - Doc/library/sys.rst
+  - Doc/library/time.rst
+  - Doc/library/tkinter.ttk.rst
+  - Doc/library/unittest.mock-examples.rst
+  - Doc/library/unittest.rst
+  - Doc/library/venv.rst
+  - Doc/library/xml.etree.elementtree.rst
+  - Doc/library/zlib.rst
+  - Doc/using/unix.rst
+  - Doc/whatsnew/2.2.rst
+  - Doc/whatsnew/2.6.rst
+  - Doc/whatsnew/3.2.rst
+  - Doc/whatsnew/3.8.rst
+- sha: 5dcf7f03dfed74a57073b2c0b380deb4650b17ea
+  author: gpshead
+  files:
+  - Lib/shutil.py
+  - Lib/test/test_shutil.py
+  - Misc/NEWS.d/next/Library/2026-10-22-05-24-21.gh-issue-161112.BFrZRw.rst
+- sha: 2ef0a5658438df2cf037732fb85bdc14dfc035fb
+  author: miss-islington
+  files:
+  - Doc/howto/annotations.rst
+- sha: 36305946e9ef012ed5576e9f632f66d14973436b
+  author: gpshead
+  files:
+  - Lib/plistlib.py
+  - Lib/test/test_plistlib.py
+  - Misc/NEWS.d/next/Library/2026-10-22-05-20-44.gh-issue-161106.t0ux5q.rst
+- sha: 98a26e9b7f0cdb094a9276fd72f336711fd8a366
+  author: gpshead
+  files:
+  - Misc/NEWS.d/next/Library/2026-10-22-08-15-57.gh-issue-160518.hZt1Ld.rst
+  - Misc/NEWS.d/next/Library/2026-10-22-16-23-01.gh-issue-159739.CjkR5a.rst
+- sha: b406b4fd47dafa732e0cdbf61ce8be4a2f910ad2
+  author: miss-islington
+  files:
+  - Lib/test/test_builtin.py
+  - Misc/NEWS.d/next/Core_and_Builtins/2026-06-07-22-03-20.gh-issue-151060.tdexEE.rst
+  - Python/bltinmodule.c
+- sha: 78b7068852b42b10e20457174b8da42742488a3b
+  author: gpshead
+  files:
+  - Lib/configparser.py
+  - Lib/test/test_configparser.py
+  - Misc/NEWS.d/next/Library/2026-10-22-05-20-18.gh-issue-161108.xOVsRA.rst
+- sha: 4e2718e2e8c3a05d93c56f9c1de7e1431d7a8ef3
+  author: gpshead
+  files:
+  - Lib/multiprocessing/shared_memory.py
+  - Lib/test/_test_multiprocessing.py
+  - Misc/NEWS.d/next/Library/2026-10-22-05-20-27.gh-issue-161098.voMVnd.rst
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
+risk_tier: medium
+suggested_label: infra

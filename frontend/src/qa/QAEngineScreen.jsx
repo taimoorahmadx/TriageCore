@@ -86,6 +86,8 @@ export function QAEngineScreen() {
   }, []);
 
   const scenario = scenarios.find((s) => s.id === selected);
+  const realAppScenarios = scenarios.filter((s) => s.source === 'Modern TodoMVC');
+  const labScenarios = scenarios.filter((s) => s.source !== 'Modern TodoMVC');
 
   const run = async () => {
     setRunning(true); setRunError(null); setResult(null); setActiveStepTab(0);
@@ -107,7 +109,7 @@ export function QAEngineScreen() {
         <h1 className="text-2xl font-semibold tracking-tight text-white">Should this broken test heal itself, or call a human?</h1>
         <p className="max-w-3xl text-sm text-neutral-400 leading-relaxed">
           Pick a test scenario. A real Chromium browser runs it; when a button can't be found, Groq proposes a replacement,
-          we click it and watch what happens, and the ConfidenceEngine decides from that evidence. Nothing here is pre-scripted.
+          we click it and watch what happens, and the ConfidenceEngine decides from that evidence. The Modern TodoMVC cases use real open-source app code with deterministic test mutations that inject each failure.
         </p>
         <StatusBanner status={status} error={apiError} />
       </div>
@@ -118,26 +120,31 @@ export function QAEngineScreen() {
             <span>Test Scenarios</span>
             <span className="text-neutral-500 font-mono">{scenarios.length}</span>
           </div>
-          {scenarios.map((s) => (
-            <button
-              key={s.id}
-              onClick={() => { setSelected(s.id); setResult(null); setRunError(null); setActiveStepTab(0); }}
-              className={`group w-full rounded-xl border p-4 text-left transition-all cursor-pointer relative overflow-hidden ${
-                s.id === selected 
-                  ? 'border-white/20 bg-white/[0.07] shadow-sm' 
-                  : 'border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04]'
-              }`}
-            >
-              {s.id === selected && (
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0a84ff]" />
-              )}
-              <div className="text-sm font-semibold text-white tracking-tight group-hover:text-neutral-100">{s.title}</div>
-              <div className="mt-1.5 flex items-center gap-2 text-[11px] text-neutral-400 font-mono">
-                <span className="bg-white/[0.04] px-2 py-0.5 rounded border border-white/[0.06]">{s.steps.length} step{s.steps.length > 1 ? 's' : ''}</span>
-                <span>·</span>
-                <span className="capitalize">{[...new Set(s.steps.map((st) => st.risk_tier))].join(', ')} risk</span>
-              </div>
-            </button>
+          {[["Real app · Modern TodoMVC", realAppScenarios], ["Scenario lab", labScenarios]].map(([group, groupScenarios]) => groupScenarios.length > 0 && (
+            <React.Fragment key={group}>
+              <div className="px-1 pt-3 text-[10px] font-mono uppercase tracking-wider text-neutral-500">{group}</div>
+              {groupScenarios.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => { setSelected(s.id); setResult(null); setRunError(null); setActiveStepTab(0); }}
+                  className={`group w-full rounded-xl border p-4 text-left transition-all cursor-pointer relative overflow-hidden ${
+                    s.id === selected
+                      ? 'border-white/20 bg-white/[0.07] shadow-sm'
+                      : 'border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04]'
+                  }`}
+                >
+                  {s.id === selected && (
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0a84ff]" />
+                  )}
+                  <div className="text-sm font-semibold text-white tracking-tight group-hover:text-neutral-100">{s.title}</div>
+                  <div className="mt-1.5 flex items-center gap-2 text-[11px] text-neutral-400 font-mono">
+                    <span className="bg-white/[0.04] px-2 py-0.5 rounded border border-white/[0.06]">{s.steps.length} step{s.steps.length > 1 ? 's' : ''}</span>
+                    <span>·</span>
+                    <span className="capitalize">{[...new Set(s.steps.map((st) => st.risk_tier))].join(', ')} risk</span>
+                  </div>
+                </button>
+              ))}
+            </React.Fragment>
           ))}
         </aside>
 
@@ -153,8 +160,13 @@ export function QAEngineScreen() {
                   </div>
                   <h2 className="text-xl font-semibold text-white tracking-tight">{scenario.title}</h2>
                   <p className="mt-1.5 text-sm text-neutral-400 leading-relaxed">{scenario.description}</p>
+                  {scenario.source === 'Modern TodoMVC' && (
+                    <p className="mt-2 text-xs text-neutral-500">Real app: Modern TodoMVC by TasteJS / Marc Grabanski, CC BY 4.0. This case injects a deterministic test mutation.
+                      {' '}<a className="underline hover:text-white" href="https://github.com/1Marc/modern-todomvc-vanillajs" target="_blank" rel="noreferrer">Source and attribution</a>
+                    </p>
+                  )}
                   <a href={pageUrl(scenario.page)} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
-                    Open the test page <ExternalLink className="h-3 w-3" />
+                    {scenario.source === 'Modern TodoMVC' ? 'Open app' : 'Open the test page'} <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
                 <div className="flex flex-col items-end gap-2.5">

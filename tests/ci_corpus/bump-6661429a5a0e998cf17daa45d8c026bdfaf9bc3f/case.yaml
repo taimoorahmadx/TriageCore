@@ -1,0 +1,56 @@
+repo: jenkinsci/code-coverage-api-plugin
+run_id: 6661429a5a0e998cf17daa45d8c026bdfaf9bc3f
+head_sha: 6661429a5a0e998cf17daa45d8c026bdfaf9bc3f
+run_attempts: []
+commits:
+- sha: 6661429a5a0e998cf17daa45d8c026bdfaf9bc3f
+  author: dependabot[bot]
+  files:
+  - ui-tests/pom.xml
+- sha: 79b87391ade31bacff051c4cc6d862a4d4e984e1
+  author: uhafner
+  files:
+  - .github/workflows/enforce-labels.yml
+- sha: 7f6700f7522a7605cc0eb64bbacbef3203aa2675
+  author: uhafner
+  files:
+  - plugin/pom.xml
+- sha: 21632bd3379aecd89749bd65f67160c433eec81c
+  author: uhafner
+  files:
+  - plugin/pom.xml
+- sha: 3c7f83238976ad32aed2f7a06b9cb20dea0528e4
+  author: uhafner
+  files:
+  - plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluator.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluatorTest.java
+- sha: 2c5fefa4a661af731c97c8b3f3cc802a16da9226
+  author: uhafner
+  files:
+  - plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluator.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageQualityGateEvaluatorTest.java
+- sha: 74a32a770930fd54edc7398b8b37c6b1e61bd2bd
+  author: uhafner
+  files:
+  - README.md
+  - plugin/pom.xml
+  - plugin/src/main/java/io/jenkins/plugins/coverage/metrics/steps/CoverageTokenMacro.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageTokenMacroITest.java
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageTokenMacroTest.java
+- sha: bf9a482cf89eb3c0f550fa2f74ccbe0f03e92004
+  author: uhafner
+  files:
+  - plugin/pom.xml
+- sha: 308d5d160237fd1329d874cfcff24ff352aef642
+  author: uhafner
+  files:
+  - plugin/src/test/java/io/jenkins/plugins/coverage/metrics/steps/CoverageTokenMacroITest.java
+- sha: 4e8d822abb1aa1115dc6d08070dab5440c8bd6c4
+  author: uhafner
+  files:
+  - plugin/pom.xml
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
+risk_tier: medium
+source: bump
+suggested_label: dependency

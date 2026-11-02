@@ -1,0 +1,56 @@
+repo: python/cpython
+source: mined
+run_id: 41396365323
+head_sha: 562ff5a37fb9861047709b31a70b84738466bf00
+run_attempts:
+- attempt: 1
+  head_sha: 562ff5a37fb9861047709b31a70b84738466bf00
+  conclusion: failure
+commits:
+- sha: 562ff5a37fb9861047709b31a70b84738466bf00
+  author: blurb-it[bot]
+  files:
+  - Misc/NEWS.d/next/Core_and_Builtins/2026-11-02-05-50-35.gh-issue-160872.x8NvzN.rst
+- sha: 6e035c7fb1c9a29b1717542c01b44d3b7da9b1d6
+  author: XiaohongGong
+  files:
+  - Objects/longobject.c
+- sha: a9a81b1cdd9329055ce51b388578113c1928edd5
+  author: hoodmane
+  files:
+  - Platforms/emscripten/config.toml
+- sha: f7c39d2316e59f17148d93f9ec2d6c4d2b610029
+  author: brettcannon
+  files:
+  - Platforms/WASI/__main__.py
+- sha: 8e605fe7d80ff715ca813e2c1434da34990c6e18
+  author: brettcannon
+  files:
+  - Platforms/WASI/README.md
+  - Platforms/WASI/__main__.py
+- sha: d85438045f6fce7579f964d82cf8529e338b9d82
+  author: sendaoYan
+  files:
+  - Lib/test/test_urllib2.py
+- sha: af4468863128e6d2593335ca522ee151150a692c
+  author: orsenthil
+  files:
+  - Lib/test/test_urllib2.py
+- sha: 19270d3bbb58c08a97bd9b481655adf42bdfbe3c
+  author: Aurora-NICExq
+  files:
+  - Doc/tools/extensions/lexers/__init__.py
+- sha: 87f8c0d8a3214eafad87d2648102644a501452fa
+  author: orsenthil
+  files:
+  - Doc/library/urllib.request.rst
+- sha: d7ea5ba95e2e6fb821a3dd30ff955fce21b82502
+  author: encukou
+  files:
+  - Doc/c-api/buffer.rst
+  - Doc/c-api/long.rst
+  - Doc/c-api/structures.rst
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
+risk_tier: medium
+suggested_label: infra

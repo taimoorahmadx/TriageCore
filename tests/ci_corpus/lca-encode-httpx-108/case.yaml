@@ -1,0 +1,97 @@
+repo: encode/httpx
+run_id: '108'
+head_sha: 7f351340260c165e18ccd7c83dc783bb371b3797
+run_attempts: []
+commits:
+- sha: 7f351340260c165e18ccd7c83dc783bb371b3797
+  author: karpetrosyan
+  files:
+  - docs/advanced/ssl.md
+  - httpx/_config.py
+- sha: 7346bc25df8dcd915398792f13823534af648716
+  author: karpetrosyan
+  files:
+  - docs/advanced/clients.md
+  - docs/advanced/proxies.md
+  - docs/advanced/transports.md
+  - docs/async.md
+  - docs/compatibility.md
+  - docs/environment_variables.md
+  - docs/index.md
+  - docs/quickstart.md
+  - docs/third_party_packages.md
+  - docs/troubleshooting.md
+- sha: 15f925336c6bad2f5b2711553a6b6763923175de
+  author: lovelydinosaur
+  files:
+  - docs/advanced/transports.md
+- sha: d76607b112bf0bfbc79dc4dd8566101c69dbfa6e
+  author: SigureMo
+  files:
+  - docs/async.md
+- sha: 73e688875a3579b67eee5795839b9660a1cfe5d8
+  author: karpetrosyan
+  files:
+  - docs/advanced/clients.md
+  - docs/advanced/proxies.md
+  - docs/advanced/transports.md
+  - docs/async.md
+  - docs/compatibility.md
+  - docs/environment_variables.md
+  - docs/index.md
+  - docs/quickstart.md
+  - docs/third_party_packages.md
+  - docs/troubleshooting.md
+- sha: 55ec00278fb4fdf987c768743d111b4d687504ea
+  author: lovelydinosaur
+  files:
+  - .github/dependabot.yml
+  - CHANGELOG.md
+  - docs/advanced.md
+  - docs/advanced/authentication.md
+  - docs/advanced/clients.md
+  - docs/advanced/event-hooks.md
+  - docs/advanced/proxies.md
+  - docs/advanced/resource-limits.md
+  - docs/advanced/ssl.md
+  - docs/advanced/text-encodings.md
+  - docs/advanced/timeouts.md
+  - docs/advanced/transports.md
+  - httpx/_auth.py
+  - httpx/_client.py
+  - mkdocs.yml
+  - requirements.txt
+  - tests/test_auth.py
+- sha: 419d3a9d80d0c4072f6cb58eeb306148ae89e2e9
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 8cd952c88fc2d0469cee8f08c2a580652b084375
+  author: lovelydinosaur
+  files:
+  - docs/advanced.md
+  - docs/advanced/authentication.md
+  - docs/advanced/clients.md
+  - docs/advanced/event-hooks.md
+  - docs/advanced/proxies.md
+  - docs/advanced/resource-limits.md
+  - docs/advanced/ssl.md
+  - docs/advanced/text-encodings.md
+  - docs/advanced/timeouts.md
+  - docs/advanced/transports.md
+  - mkdocs.yml
+- sha: ab720d325808e1d092787995c2023c9aeb24aff5
+  author: Kludex
+  files:
+  - .github/dependabot.yml
+- sha: 99cba6ac642b12f0331d069ae324402c54c4c600
+  author: the-ress
+  files:
+  - CHANGELOG.md
+  - httpx/_auth.py
+  - tests/test_auth.py
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
+risk_tier: medium
+source: lca
+suggested_label: bug
