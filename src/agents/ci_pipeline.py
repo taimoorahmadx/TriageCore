@@ -61,6 +61,24 @@ def run_case(
         if len(safe_log) > UI_LOG_EXCERPT_CHARS:
             log_excerpt = "[Earlier log content omitted from the UI excerpt.]\n" + log_excerpt
         facts = extractor.extract(safe_log)
+        extraction_error = getattr(extractor, "last_error", None)
+        if extraction_error:
+            result = {
+                **base, "status": "extraction_failed",
+                "extraction_error": mask_secrets(str(extraction_error)),
+                "classification": None, "recommended_action": "escalate",
+                "confidence_score": None, "score": None,
+                "duration_ms": round((time.perf_counter() - started) * 1000, 3),
+            }
+            if store is not None:
+                store.save_decision({
+                    "created_at": datetime.now(timezone.utc).isoformat(), "source": "ci",
+                    "run_id": str(case.get("run_id", case.get("id", "unknown"))),
+                    "case_id": base["case_id"], "step_id": None, "status": "extraction_failed",
+                    "recommended_action": "escalate", "evidence_json": {},
+                    "error": result["extraction_error"],
+                })
+            return result
         commits = [Commit(str(c["sha"]), str(c.get("author", "")), tuple(c.get("files", []))) for c in case.get("commits", [])]
         trace = attribute(facts.failing_files, commits)
         code_link = "failing_file_touched" if trace.attributed_commit else ("not_touched" if facts.failing_files and commits and not trace.candidates else None)
@@ -107,7 +125,7 @@ def run_case(
         return result
     except Exception as exc:
         result = {
-            **base, "status": "error", "error": f"{type(exc).__name__}: {exc}",
+            **base, "status": "error", "error": mask_secrets(f"{type(exc).__name__}: {exc}"),
             "classification": None, "recommended_action": "escalate", "confidence_score": None,
             "score": score_case("escalate", "error", label),
             "duration_ms": round((time.perf_counter() - started) * 1000, 3),

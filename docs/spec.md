@@ -50,7 +50,7 @@ Field and type details live in `docs/contracts/`; this file says what must happe
 | FR-V1 | QA evaluation judges the same evidence with every policy: `blind_heal`, `penalty_rule`, `simple_rule`, `triagecore`, and `llm_judge` when enabled. | `tests/test_pipeline.py`; tasks Q3, Q4 | Done (fresh all-baseline run pending, B3) |
 | FR-V2 | Reports per policy: acceptable decisions, masked regressions, needless escalations, each with a 95% Wilson interval. | Task B2 | Done |
 | FR-V3 | Saves JSON + CSV to `results/`, and `results/qa_eval_latest.json`. | `make eval` | Done |
-| FR-V4 | CI evaluation compares `triagecore` with `rerun_all` and `keyword_rule` on the corpus, same metrics. | Task C10 | Partial (two fixture cases; extraction failure was not reported separately) |
+| FR-V4 | CI evaluation compares `triagecore` with `rerun_all` and `keyword_rule` on the corpus, same metrics. | Task C10 | Partial (two-fixture preliminary smoke only; failed extractions are reported separately and excluded from ordinary model metrics; C3 real corpus pending) |
 | FR-V5 | At least 10 QA cases come from a real open-source web app, not only the team's pages. | Task B1 | Todo |
 
 ## 5. API and UI

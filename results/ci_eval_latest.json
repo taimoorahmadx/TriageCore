@@ -1,6 +1,11 @@
 {
-  "generated_at": "2026-10-27T09:50:36",
+  "generated_at": "2026-11-02T12:48:52",
   "evaluation_type": "preliminary_fixture_smoke",
+  "scope": "two-fixture preliminary smoke check; not real-world CI effectiveness evidence",
+  "fixture_count": 2,
+  "scored_case_count": 2,
+  "extraction_failure_count": 0,
+  "pipeline_error_count": 0,
   "weights": "provisional C9 values; not tuned on fixture cases",
   "summary": {
     "rerun_all": {
@@ -72,8 +77,8 @@
     },
     "timing": {
       "duration_ms": {
-        "p50": 1512.4235,
-        "p95": 1530.0315499999997
+        "p50": 822.6525000000001,
+        "p95": 1386.4840499999998
       }
     }
   },
@@ -84,9 +89,9 @@
       "status": "ok",
       "triagecore_cause": "dependency",
       "triagecore_cause_correct": true,
-      "duration_ms": 1518.945,
-      "failure_kind": null,
-      "confidence_score": 7,
+      "duration_ms": 1031.479,
+      "failure_kind": "dependency_resolution",
+      "confidence_score": 1,
       "rerun_all_action": "rerun",
       "rerun_all_action_acceptable": false,
       "rerun_all_masked": true,
@@ -106,7 +111,7 @@
       "status": "ok",
       "triagecore_cause": "flaky",
       "triagecore_cause_correct": false,
-      "duration_ms": 1505.902,
+      "duration_ms": 613.826,
       "failure_kind": null,
       "confidence_score": 25,
       "rerun_all_action": "rerun",
@@ -130,10 +135,10 @@
       "status": "ok",
       "classification": "dependency",
       "recommended_action": "escalate",
-      "confidence_score": 7,
-      "reasoning_trace": "Evidence: dependency_change=changed [ln P: flaky -2.30, dependency -0.22, bug -1.05, infra -1.61]; log_coverage=complete [ln P: flaky -0.11, dependency -0.11, bug -0.11, infra -0.11]. Not observed (ignored, not assumed fine): failure_kind, code_link. Posterior: flaky 0.069, dependency 0.552, bug 0.241, infra 0.138 -> most probable cause: dependency. Blocked: auto-fix (no uniquely attributed commit). Risk tier 'default', expected loss: rerun 9.31, escalate 1.72. Decision: escalate to a human.",
+      "confidence_score": 1,
+      "reasoning_trace": "Evidence: failure_kind=dependency_resolution [ln P: flaky -3.51, dependency -0.80, bug -3.91, infra -3.51]; dependency_change=changed [ln P: flaky -2.30, dependency -0.22, bug -1.05, infra -1.61]; log_coverage=complete [ln P: flaky -0.11, dependency -0.11, bug -0.11, infra -0.11]. Not observed (ignored, not assumed fine): code_link. Posterior: flaky 0.008, dependency 0.957, bug 0.019, infra 0.016 -> most probable cause: dependency. Blocked: auto-fix (no uniquely attributed commit). Risk tier 'default', expected loss: rerun 9.92, escalate 1.97. Decision: escalate to a human.",
       "raw_signals": {
-        "failure_kind": null,
+        "failure_kind": "dependency_resolution",
         "dependency_change": "changed",
         "code_link": null,
         "truncated": false
@@ -147,18 +152,31 @@
         "attributed_commit": null
       },
       "facts": {
-        "failure_kind": null,
+        "failure_kind": "dependency_resolution",
         "failing_files": [],
-        "error_excerpt": null
+        "error_excerpt": "ERROR: Could not resolve dependency: package example-lib not found\nModuleNotFoundError: No module named 'example_lib'"
+      },
+      "log_excerpt": "ERROR: Could not resolve dependency: package example-lib not found\nModuleNotFoundError: No module named 'example_lib'\n",
+      "trace": {
+        "status": "no_match",
+        "attributed_commit": null,
+        "candidates": [],
+        "failing_files": []
       },
       "details": {
         "group_states": {
-          "failure_kind": null,
+          "failure_kind": "dependency_resolution",
           "dependency_change": "changed",
           "code_link": null,
           "log_coverage": "complete"
         },
         "contributions": {
+          "failure_kind": {
+            "flaky": -3.506557897319982,
+            "dependency": -0.7985076962177716,
+            "bug": -3.912023005428146,
+            "infra": -3.506557897319982
+          },
           "dependency_change": {
             "flaky": -2.3025850929940455,
             "dependency": -0.2231435513142097,
@@ -173,20 +191,19 @@
           }
         },
         "missing_groups": [
-          "failure_kind",
           "code_link"
         ],
         "posterior": {
-          "flaky": 0.06896551724137934,
-          "dependency": 0.5517241379310345,
-          "bug": 0.24137931034482749,
-          "infra": 0.13793103448275862
+          "flaky": 0.00797872340425532,
+          "dependency": 0.9574468085106383,
+          "bug": 0.018617021276595754,
+          "infra": 0.015957446808510644
         },
-        "fit": 0.848528137423857,
+        "fit": 0.6868285455319991,
         "risk_tier": "default",
         "expected_loss": {
-          "rerun": 9.310344827586206,
-          "escalate": 1.7241379310344827
+          "rerun": 9.920212765957448,
+          "escalate": 1.9680851063829787
         },
         "blocked": {
           "auto-fix": "no uniquely attributed commit"
@@ -201,7 +218,7 @@
         "masked": false,
         "needless_escalation": true
       },
-      "duration_ms": 1518.945
+      "duration_ms": 1031.479
     },
     {
       "case_id": "hosted_runner_timeout",
@@ -229,6 +246,13 @@
         "failure_kind": null,
         "failing_files": [],
         "error_excerpt": null
+      },
+      "log_excerpt": "Requested labels: ubuntu-latest\nWaiting for a runner to pick up this job...\nJob is waiting for a hosted runner to come online.\n",
+      "trace": {
+        "status": "no_match",
+        "attributed_commit": null,
+        "candidates": [],
+        "failing_files": []
       },
       "details": {
         "group_states": {
@@ -275,7 +299,7 @@
         "masked": false,
         "needless_escalation": false
       },
-      "duration_ms": 1505.902
+      "duration_ms": 613.826
     }
   ]
 }

@@ -43,6 +43,42 @@ def test_unexpected_pipeline_failure_escalates():
     assert result["score"]["needless_escalation"]
 
 
+def test_extraction_failure_is_reported_without_fabricated_facts():
+    case = load_cases(FIXTURE_DIR)[0]
+
+    class FailedExtractor:
+        last_error = "Groq failed for gsk_abcdefghijklmnopqrstuvwxyz"
+
+        def extract(self, log):
+            return CILogFacts()
+
+    result = run_case(case, ConfidenceEngine(), FailedExtractor())
+
+    assert result["status"] == "extraction_failed"
+    assert result["recommended_action"] == "escalate"
+    assert result["classification"] is None
+    assert result["score"] is None
+    assert "[REDACTED]" in result["extraction_error"]
+    assert "gsk_" not in result["extraction_error"]
+    assert "facts" not in result
+
+
+def test_evaluation_excludes_extraction_failures_from_metrics():
+    class FailedExtractor:
+        last_error = "provider unavailable"
+
+        def extract(self, log):
+            return CILogFacts()
+
+    report = evaluate(engine=ConfidenceEngine(), extractor=FailedExtractor(), save=False)
+
+    assert report["fixture_count"] == 2
+    assert report["scored_case_count"] == 0
+    assert report["extraction_failure_count"] == 2
+    assert report["summary"]["triagecore"]["steps"] == 0
+    assert all("triagecore_action_acceptable" not in row for row in report["rows"])
+
+
 def test_run_cases_rejects_unknown_ids():
     try:
         run_cases(["missing"], engine=ConfidenceEngine(), extractor=FixedFactExtractor(CILogFacts()), cases_dir=FIXTURE_DIR)

@@ -96,7 +96,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 
 ### FYP-1 final evidence · in progress
 - [ ] Frozen QA evaluation includes all enabled baselines and confidence intervals. → **B3**
-- [ ] CI extraction failures are explicit and excluded from ordinary model scoring; fixture smoke result is honestly labelled. → **C13**
+- [x] CI extraction failures are explicit and excluded from ordinary model scoring; fixture smoke result is honestly labelled. *Evidence: `tests/test_ci_pipeline.py`; timestamped two-fixture smoke artifact `results/ci_eval_20261102-124852.json` reports 2 scored, 0 extraction failures, 0 pipeline errors and is labelled preliminary.* → **C13**
 - [ ] Human-reviewed real CI corpus and held-out calibration are complete. → **C3**, **C12**
 
 ### M6–M8 · FYP-2 · not started

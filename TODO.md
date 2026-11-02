@@ -64,7 +64,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [x] C5 · GitHub webhook endpoint with signature check · after S1
 - [x] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
-- [x] C10 · CI pipeline and preliminary 2-fixture smoke comparison · after C6, C9 (not evidence of real-world CI performance; audit 2026-10-27)
+- [x] C10 · CI pipeline and preliminary 2-fixture smoke comparison · after C6, C9 (smoke check only; extraction failures reported separately by C13; not real-world effectiveness evidence; audit 2026-10-27)
 - [x] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -83,7 +83,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [x] Q5 · Surface the Modern TodoMVC real-app scenarios in QA Engine (live), with a working app preview link · after B1
 - [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
 - [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
-- [ ] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
+- [x] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
 - [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
 - [ ] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
 

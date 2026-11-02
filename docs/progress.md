@@ -6,12 +6,11 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Q5 is complete on `feature/fyp1-final-calibration`. QA Engine labels and groups the ten B1
-  Modern TodoMVC scenarios, identifies the upstream app and deterministic mutations, and opens
-  the selected query-mutated app through the API's `/apps/` static route. Added route/metadata
-  tests; `.venv/bin/python -m pytest -q tests/test_api.py tests/test_pipeline.py` passed (9 tests).
-  Frontend lint and production build passed. TODO.md is current: Q5 is planned for the final demo,
-  though it has not received supervisor approval.
+- C13 is complete on `feature/fyp1-final-calibration`. Extraction failures are explicit, secret-masked,
+  and excluded from ordinary evaluation metrics. The successful two-fixture preliminary smoke run
+  saved `results/ci_eval_20261102-124852.json` and `.csv`: 2 scored, 0 extraction failures, and 0
+  pipeline errors. CI tests (8 passed), touched-file Ruff, and `make weights` passed. The prior run
+  that could not resolve the Groq host is preserved as a separate historical artifact.
 ## Blockers / questions for the team
 - Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
@@ -19,8 +18,6 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
   human changes, verification, and one caught AI error. CI probability values were AI-proposed; do
   not call every probability human-authored.
-- C13 needs a working Groq key for a rerun; the extractor failure cause in the old artifact was not
-  established. Agree who supplies the key and approves any API cost.
 - B3 needs frozen labels/weights and Groq access if `llm_judge` is enabled. Do not fit or tune weights
   on evaluation or holdout results.
 - D1 needs a human-created VM, Docker, an API token, and firewall setup.
