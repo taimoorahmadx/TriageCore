@@ -12,8 +12,8 @@ flowchart LR
     QP --> RU[browser/runner.py]
     RU --> RL[browser/relocator.py · Groq]
   end
-  subgraph CI["CI agent [planned]"]
-    CO[tests/ci_corpus/] --> CP[agents/ci_pipeline.py]
+  subgraph CI["CI agent [built; fixture-evaluated only]"]
+    CO[tests/fixtures/ci_cases/] --> CP[agents/ci_pipeline.py]
     WH[ci/webhooks.py] --> ST
     CP --> TR[ci/truncate.py]
     CP --> FX[ci/facts.py · Groq]
@@ -26,7 +26,7 @@ flowchart LR
   end
   QP --> EN
   CP --> EN
-  QP --> ST[(db/store.py · SQLite [planned])]
+  QP --> ST[(db/store.py · SQLite [built])]
   CP --> ST
   API[api/app.py] --> QP
   API --> CP
@@ -40,20 +40,20 @@ flowchart LR
 `ci` import `core` models only where needed. `agents` import `core`, `browser`, `ci`, `db`. `api`
 and `eval` import `agents`. Nothing imports `archive/`, except `api/app.py` mounting the legacy router.
 
-## 2. Module layout (target after the cleanup tasks)
+## 2. Current module layout
 
 ```text
 src/
   core/      models.py weights.py weights.yaml evidence.py decision.py engine.py sensitivity.py   [built]
   browser/   runner.py relocator.py                                                             [built]
-  ci/        truncate.py webhooks.py facts.py tracing.py corpus.py                              [planned]
-  db/        store.py                                                                           [planned]
-  agents/    qa_pipeline.py [built] · ci_pipeline.py [planned]
-  eval/      evaluate.py [built] · stats.py evaluate_ci.py [planned]
-  api/       app.py [built] · qa_routes.py [built] · ci_routes.py [planned]
+  ci/        truncate.py webhooks.py facts.py tracing.py                                         [built]
+  db/        store.py                                                                           [built]
+  agents/    qa_pipeline.py · ci_pipeline.py                                                     [built]
+  eval/      evaluate.py · stats.py · evaluate_ci.py                                             [built]
+  api/       app.py · qa_routes.py · ci_routes.py                                                [built]
 archive/poc/ poc_recovery.py demo_safe.py demo_trap.py legacy_routes.py   (scripted proposal demo)
 tests/       test_*.py · dummy/ · scenarios/ · fixtures/ · ci_corpus/ [planned]
-frontend/src/ qa/ [built] · ci/ [planned] · legacy/ [planned: moved from components/]
+frontend/src/ qa/ [built] · ci/ [built] · legacy/ [built: moved from components/]
 ```
 
 ## 3. Flows
@@ -65,7 +65,7 @@ frontend/src/ qa/ [built] · ci/ [planned] · legacy/ [planned: moved from compo
 4. Observe: listeners on, click, wait up to 1500 ms for the expected marker, settle 400 ms, read the error marker, listeners off.
 5. `raw_signals` + `context` → engine → decision. Score against ground truth.
 
-### CI case [planned]
+### CI case [built; current evaluation uses two fixture cases]
 1. Load a corpus case: log text, run metadata (attempts, conclusion), the ≤ 10 most recent commits with touched files.
 2. `truncate_log` (16k token budget, head 30% / tail 70%).
 3. `facts.extract` (Groq, schema-validated `CILogFacts`; failure → all `null`).
@@ -73,7 +73,7 @@ frontend/src/ qa/ [built] · ci/ [planned] · legacy/ [planned: moved from compo
 5. `CIAdapter` maps facts + rerun history + tracing to group states; `auto-fix` blocked unless exactly one attributed commit.
 6. Engine → decision → store → score against the case label.
 
-### Webhook [planned]
+### Webhook [built]
 Verify signature → validate payload → accept only failed `workflow_run` → store a job record → 202.
 Fetching logs from GitHub and processing jobs live is FYP-2.
 

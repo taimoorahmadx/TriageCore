@@ -6,16 +6,33 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C11 is complete: the CI Engine tab runs fixture cases and shows the masked log excerpt, extracted
-  facts, commit attribution (including ambiguous candidates), posterior, expected losses, decision,
-  and true label. The API response includes a bounded excerpt and explicit trace status. Frontend lint
-  and production build passed; the browser check rendered both `dependency_failure` and
-  `hosted_runner_timeout` with all evidence sections. No C11 blockers remain.
+- Architecture audit 2026-10-27 found no need for a structural redesign. The main gap is evidence:
+  QA needs a fresh frozen comparison with `simple_rule`/`llm_judge`; CI has only a two-fixture smoke
+  result and both recorded extractions were empty. C10 is now described as preliminary; B3 and C13
+  track the follow-up runs. No implementation was started in this documentation pass.
+- The audit also identified two unapproved contract questions: CI action semantics for `bug` and how
+  to represent an unreliable/no-basis diagnosis. Keep both as blockers until the project owner and
+  supervisor decide. Do not change code or weights based on a proposed option alone.
 
 ## Blockers / questions for the team
 - Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
-- Team review of `docs/spec.md` and `docs/plan.md` (AI-drafted; must be owned).
-- Each member completes their rows in `docs/disclosure.md` §2.
+- Project owner/supervisor decision on CI action vocabulary: `bug` → escalate or a concrete
+  proposal-only action; any loss-policy change needs explicit owner approval.
+- Project owner/supervisor decision on the no-reliable-diagnosis output: `unknown` classification vs
+  a reliability field, plus semantics for no evidence, uniform posterior, and out-of-pattern evidence.
+- Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
+  AI-drafted working documents.
+- Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
+  human changes, verification, and one caught AI error. CI probability values were AI-proposed; do
+  not call every probability human-authored.
+- C13 needs a working Groq key for a rerun; the extractor failure cause in the old artifact was not
+  established. Agree who supplies the key and approves any API cost.
+- B3 needs frozen labels/weights and Groq access if `llm_judge` is enabled. Do not fit or tune weights
+  on evaluation or holdout results.
+- B1 needs a human-selected, licence-compatible static open-source app. D1 needs a human-created VM,
+  Docker, an API token, and firewall setup. See task files for prerequisites and stop conditions.
+- CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
+  commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
 - End-of-FYP-1 C3 needs a suitable dataset or enough real cases with evidence for every cause. The current
   61-folder working corpus must be pruned before completion; C3 still requires 30–40 reviewed cases
   with at least five per cause. This does not block the current implementation branch.

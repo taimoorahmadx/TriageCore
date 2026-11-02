@@ -64,7 +64,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 6. `feature/ci-agent-2` · CI agent, part 2
 - [x] C5 · GitHub webhook endpoint with signature check · after S1
 - [x] C9 · Initial CI weight proposal · after C8 · *agent may propose provisional probabilities; project owner approves policy costs*
-- [x] C10 · CI pipeline and initial evaluation against baselines · after C6, C9 (fixture cases; real corpus deferred)
+- [x] C10 · CI pipeline and preliminary 2-fixture smoke comparison · after C6, C9 (not evidence of real-world CI performance; audit 2026-10-27)
 - [x] C11 · CI screen in the UI · after C10
 
 → Merge into `main`.
@@ -82,6 +82,8 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 ## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
 - [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
 - [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
+- [ ] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
+- [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
 
 → Merge into `main`.
 
@@ -91,9 +93,13 @@ Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 re
 
 ## 10. Human work for FYP-1 Final (not for AI)
 - [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
+- [ ] Decide and approve the CI action policy: `bug` should escalate, or a specific proposal-only action; approve any corresponding loss changes before implementation
+- [ ] Decide whether the shared output adds `classification: unknown`, `diagnosis_reliable`, or another explicit no-reliable-diagnosis representation; approve contract semantics before implementation
 - [ ] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
-- [ ] Fill in `docs/disclosure.md` §2
+- [ ] Each member completes their `docs/disclosure.md` §2 row: owned modules, AI-generated parts, human changes, verification, and one caught AI error; correct the weight-provenance description
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`
 - [ ] Final QA weight calibration using reviewed labeled cases; compare on a held-out set after the initial QA benchmark (keep mistake costs human-set)
 - [ ] Rehearse a walkthrough of every module (what it does, alternatives, what breaks, how to change it)
 - [ ] Report, poster, presentation
+- [ ] CI owner prepares a viva walkthrough of the CI modules and identifies their authored/owned work
+- [ ] Final demo: hide the scripted Proposal PoC tab, and prepare a working-key demo plus a frozen-run fallback

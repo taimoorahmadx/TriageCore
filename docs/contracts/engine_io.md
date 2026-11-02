@@ -63,3 +63,5 @@ Returns `(output, details)`. `details` is used by the API and UI, and is not par
 
 - `flaky` has a per-source meaning (QA: slow to render; CI: intermittent job), defined in the `docs/brief.md` glossary.
 - The legacy `/api/legacy/ci/triage` route (`archive/poc/legacy_routes.py`) returns `recommended_action="rerun"`, which violates this contract. It is scripted and not used by the engine.
+- The engine always returns a named most-probable cause, including with no informative evidence or a uniform posterior. The 2026-10-27 audit recommends an explicit unreliable/unknown diagnosis; output semantics require project-owner approval before changing this v1 contract.
+- The CI action vocabulary currently permits `auto-fix` for both `dependency` and `bug`. The audit recommends a proposal-only vocabulary or escalation for application bugs; this policy decision requires project-owner approval before implementation.

@@ -51,7 +51,7 @@ Apart from `risk_tier`, context fields are **not weighted**. They exist for trac
 | `error_state_selector` | str or null | Error marker for this step, if any |
 | `observation_window_ms` | int | Length of the post-action window |
 | `relocation_latency_ms` | int | Time the LLM relocation took |
-| `risk_tier` | str | **Required, and used by the decision.** It is the only weighted context field: it selects the loss table in `weights.yaml` (`low` = reversible step, e.g. add to cart; `high` = irreversible step, e.g. payment) |
+| `risk_tier` | str | **Required, and used by the decision.** It is the only weighted context field: it selects the loss table in `weights.yaml`. Higher tiers mean the policy assigns greater cost to masking a regression; the collector performs the click before the engine decides, so this tier does not itself make the click reversible or irreversible. |
 
 ## How the engine uses these signals
 

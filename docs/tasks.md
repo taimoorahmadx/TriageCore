@@ -91,8 +91,13 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
 - [x] QA evaluation script with CSV output. *Evidence: `src/eval/evaluate.py`, `results/`.*
 - [x] Confidence intervals and stronger baselines. *Evidence: B2 confidence intervals; `simple_rule` (Q4) and `llm_judge` (Q3) reported by the evaluation script; pipeline tests pass.*
-- [ ] 10–15 real-world baseline cases. → **B1** (QA)
+- [ ] 10–15 real-world baseline cases. → **B1** (QA; audit recommends at least 10)
 - [ ] Running on a remote machine, not localhost. → **D1**
+
+### FYP-1 final evidence · in progress
+- [ ] Frozen QA evaluation includes all enabled baselines and confidence intervals. → **B3**
+- [ ] CI extraction failures are explicit and excluded from ordinary model scoring; fixture smoke result is honestly labelled. → **C13**
+- [ ] Human-reviewed real CI corpus and held-out calibration are complete. → **C3**, **C12**
 
 ### M6–M8 · FYP-2 · not started
 - [ ] M6: agent opens (never merges) a PR with score and trace in the body; dashboard of stored decisions.
@@ -130,6 +135,8 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [C10](tasks/c10.md) | CI pipeline and initial evaluation | Shazil | M5 | C6, C9 |
 | [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 |
 | [C12](tasks/c12.md) | Final CI dataset calibration | Shazil | FYP-1 final dataset work | C3, C10, C11 |
+| [C13](tasks/c13.md) | Mark failed CI extraction and rerun fixture smoke evaluation | Shazil | FYP-1 final evidence | C10 |
+| [B3](tasks/b3.md) | Rerun and freeze QA baseline evaluation | Taimoor | FYP-1 final evidence | B2, Q3, Q4 |
 | [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
 | [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |
 

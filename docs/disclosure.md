@@ -12,7 +12,7 @@ Categories follow the FAST Idea Guide §14: **support** (does not touch the cont
 
 | Component | Used for | Category | Limitations | How its output is validated | Fallback |
 |---|---|---|---|---|---|
-| Groq API, model `openai/gpt-oss-20b` | QA: propose a replacement CSS selector. CI (planned): extract structured facts from logs | Core-assist | Can return wrong, ambiguous or invalid selectors; can misread logs; rate limits; external service | Selector is counted and clicked in the browser; only exactly one match can be healed. Log facts are schema-validated (enums only). The LLM never makes the decision | Relocation/extraction failure → missing evidence → escalate. Another provider can sit behind the same `Relocator` / `FactExtractor` interface |
+| Groq API, model `openai/gpt-oss-20b` | QA: propose a replacement CSS selector. CI: extract structured facts from logs | Core-assist | Can return wrong, ambiguous or invalid selectors; can misread logs; rate limits; external service | Selector is counted and clicked in the browser; only exactly one match can be healed. Log facts are schema-validated (enums only). The LLM never makes the decision | Relocation failure escalates. CI extraction failure currently appears as empty facts and needs explicit reporting (C13). Another provider can sit behind the same `Relocator` / `FactExtractor` interface |
 | Playwright + Chromium | Run browser test steps; observe page errors, console, network, DOM markers | Support | Timing-sensitive; needs browser binaries | Collector tests on known pages (`tests/test_runner.py`) | — |
 | FastAPI, Uvicorn, Pydantic | HTTP API, contract models | Support | — | Contract tests | — |
 | PyYAML | Read weights and scenarios | Support | — | Strict validation in `weights.py` | — |
@@ -36,12 +36,17 @@ locator ladder and the engine would decide the same way.
 | Kiro | Taimoor | L1/L2 | Repository audit, context and planning documents | Team review of every document |
 | UI skills (apple-design, anti-slop) | Taimoor | L1 | Visual styling of the frontend | Visual check |
 
-**Human-owned decisions:** the problem and CCP framing, the choice of method (AI proposed options;
-the team challenged and approved, ADR 004), every weight value (`docs/contracts/weights_elicitation.md`),
-ground-truth labels, scope decisions (`docs/log/changes.md`).
+**Human-owned decisions:** the problem and CCP framing, method choice (ADR 004), ground-truth labels,
+scope decisions (`docs/log/changes.md`), and policy loss costs. The 2026-10-27 audit found the
+previous claim that every probability value was human-owned inaccurate: QA weights were AI-drafted,
+and CI priors/likelihoods were AI-proposed provisionally under C9. The CI owner reviewed the CI cost
+policy. Verify the exact per-member history below and keep proposed probability values distinct from
+human-reviewed values and human-approved costs. Do not describe every probability value as
+human-authored.
 
 **To complete by each member:** which modules you own, which parts AI generated, what you changed,
-and one example where you caught and fixed an AI mistake.
+how you verified the result, and one example where you caught and fixed an AI mistake. Record the
+actual tools and contribution for each person; the table above is not an attested per-member record.
 
 ## 3. Data and privacy
 
