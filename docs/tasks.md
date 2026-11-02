@@ -122,6 +122,7 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [Q3](tasks/q3.md) | `llm_judge` baseline | Abdul | M5.5 | Q4 |
 | [Q2](tasks/q2.md) | Timing NFRs in evaluation | Abdul | M3 | B2 |
 | [Q1](tasks/q1.md) | Suggested selector patch | Abdul | M3 | — |
+| [Q5](tasks/q5.md) | Surface the real QA app in the live demo | Abdul | FYP-1 demo | B1 |
 | [S1](tasks/s1.md) | SQLite decision store | Taimoor | M1 | A1 |
 | [C2](tasks/c2.md) | Add `rerun` to the contract | Shazil | M5 | — |
 | [C1](tasks/c1.md) | CI evidence contract | Shazil | M5 | C2 |
@@ -136,6 +137,7 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [C11](tasks/c11.md) | CI screen | Shazil | M5 | C10 |
 | [C12](tasks/c12.md) | Final CI dataset calibration | Shazil | FYP-1 final dataset work | C3, C10, C11 |
 | [C13](tasks/c13.md) | Mark failed CI extraction and rerun fixture smoke evaluation | Shazil | FYP-1 final evidence | C10 |
+| [C14](tasks/c14.md) | Demo reviewed historical CI runs | Shazil | FYP-1 demo | C3, C11, C13 |
 | [B3](tasks/b3.md) | Rerun and freeze QA baseline evaluation | Taimoor | FYP-1 final evidence | B2, Q3, Q4 |
 | [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
 | [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |

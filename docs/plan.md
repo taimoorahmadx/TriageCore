@@ -11,7 +11,7 @@ flowchart LR
     QP --> RU[browser/runner.py]
     RU --> RL[browser/relocator.py · Groq]
   end
-  subgraph CI["CI agent [built; fixture-evaluated only]"]
+  subgraph CI["CI agent [built; fixture-evaluated, historical-case demo planned]"]
     CO[tests/fixtures/ci_cases/] --> CP[agents/ci_pipeline.py]
     WH[ci/webhooks.py] --> ST
     CP --> TR[ci/truncate.py]
@@ -64,7 +64,7 @@ frontend/src/ qa/ [built] · ci/ [built] · legacy/ [built: moved from component
 4. Observe: listeners on, click, wait up to 1500 ms for the expected marker, settle 400 ms, read the error marker, listeners off.
 5. `raw_signals` + `context` → engine → decision. Score against ground truth.
 
-### CI case [built; current evaluation uses two fixture cases]
+### CI case [built; current evaluation uses two fixture cases; historical-case demo planned]
 1. Load a corpus case: log text, run metadata (attempts, conclusion), the ≤ 10 most recent commits with touched files.
 2. `truncate_log` (16k token budget, head 30% / tail 70%).
 3. `facts.extract` (Groq, schema-validated `CILogFacts`; failure → all `null`).
@@ -130,6 +130,7 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | D7 | One `flaky` label; meaning defined per source in `brief.md` | `brief.md` glossary |
 | D8 | CI `bug` diagnosis should escalate in FYP-1 | Project owner, 2026-11-02; implementation task required |
 | D9 | Add `diagnosis_reliable` to the shared output; false for no evidence, uniform posterior, or fit below the unknown-pattern floor | Project owner, 2026-11-02; implementation task required |
+| D10 | FYP-1 demo adds visible Modern TodoMVC QA scenarios and read-only analysis of reviewed historical CI runs; it does not add live GitHub integration | Project owner request, 2026-11-02; Q5, C14; supervisor review pending |
 
 CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 at the end of FYP-1. The approved D8 policy still needs implementation in the CI loss/action policy before it is enforced.
 

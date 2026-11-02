@@ -80,10 +80,12 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
+- [ ] Q5 · Surface the Modern TodoMVC real-app scenarios in QA Engine (live), with a working app preview link · after B1
 - [ ] C3 · Build and human-review the CI corpus · after C1, C10, C11; run after the CI branch is merged
 - [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
 - [ ] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
 - [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
+- [ ] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
 
 → Merge into `main`.
 

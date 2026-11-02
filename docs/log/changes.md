@@ -19,6 +19,7 @@ what it affects, who decided, approval status.
 | 11 | 2026-10-25 | `heal` returns a suggested patch and never edits test files in FYP-1 | Safety; nothing applied automatically | M3, FR-Q7 | Team | Not needed (design) |
 | 12 | 2026-10-25 | Planning docs moved to the brief / spec / plan / tasks / progress set; `roadmap.md`, `requirements.md`, `architecture.md` folded in | One predictable place per kind of context for every agent | Documentation only | Team | Not needed (docs) |
 | 13 | 2026-11-02 | Approved CI `bug` escalation for FYP-1 and `diagnosis_reliable` in the shared output; supervisor signed off on the X1 hard block and CI pre-rerun evidence | Clarify unsafe/unsupported diagnoses and record method approval | Engine output contract and CI policy; implementation still requires a task | Project owner and supervisor | Approved 2026-11-02 |
+| 14 | 2026-11-02 | Add a visible Modern TodoMVC QA demo and offline UI analysis of reviewed historical CI runs to FYP-1; keep live GitHub ingestion in FYP-2 | Make both real-app and real-CI evidence demonstrable without implying a live integration | FYP-1 demo scope (Q5, C14), FYP-2 M6 | Project owner request | Supervisor review pending |
 
 | 2026-10-25 | X1 | QA hard precondition: block `heal` when `expected_state_reached` is false (ADR 004). | Project owner approved this audit fix. |
 - 2026-10-26 — C3: Removed `verified_by` from corpus review records and counted cases with a label plus evidence; Shazil requested the field removal.

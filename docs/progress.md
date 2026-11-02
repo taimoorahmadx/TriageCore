@@ -18,16 +18,14 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - Architecture audit 2026-10-27 found no need for a structural redesign. The main remaining evidence
   work is a fresh frozen QA comparison and a real CI corpus; C10 remains preliminary, with B3/C13
   tracking follow-up work.
-- The audit also identified two unapproved contract questions: CI action semantics for `bug` and how
-  to represent an unreliable/no-basis diagnosis. Keep both as blockers until the project owner and
-  supervisor decide. Do not change code or weights based on a proposed option alone.
+- The project owner approved CI `bug` escalation and a `diagnosis_reliable` output on 2026-11-02;
+  these are recorded in `docs/plan.md` and still need implementation tasks before they are enforced.
+- The project owner requested Q5 (make the real QA app visible/openable) and C14 (analyze reviewed
+  historical CI cases in the UI) for the FYP-1 demo on 2026-11-02. These are offline/read-only; live
+  GitHub ingestion stays in FYP-2. Supervisor review of this scope adjustment is pending.
 
 ## Blockers / questions for the team
-- Supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) before FYP-1 Final.
-- Project owner/supervisor decision on CI action vocabulary: `bug` → escalate or a concrete
-  proposal-only action; any loss-policy change needs explicit owner approval.
-- Project owner/supervisor decision on the no-reliable-diagnosis output: `unknown` classification vs
-  a reliability field, plus semantics for no evidence, uniform posterior, and out-of-pattern evidence.
+- Supervisor review of the additional FYP-1 demo scope (Q5, C14) before implementation.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
   AI-drafted working documents.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,

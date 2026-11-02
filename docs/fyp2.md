@@ -11,9 +11,11 @@ file replaces its FYP-2 part (M6–M8) and adds the items deferred during FYP-1 
 
 - QA agent and ConfidenceEngine working, evaluated against baselines on team pages and a real app.
 - Offline CI slice: truncation, fact extraction, commit tracing, provisional CI weights, pipeline,
-  fixture-based initial comparison and screen. End-of-FYP-1 work adds the reviewed real CI corpus,
-  full benchmark, and first final calibration pass.
-- SQLite decision store, one Docker deployment on a VM, CI checks on every PR.
+  fixture-based initial comparison, and a demo of reviewed historical CI runs from the real corpus.
+  End-of-FYP-1 work adds the reviewed corpus, full benchmark, and first final calibration pass.
+- SQLite decision store and CI checks on every PR. The VM deployment (D1) is deferred by the owner;
+  localhost operation is sufficient for the current demo, but remote deployment remains outstanding
+  unless the supervisor approves dropping that criterion.
 
 ## M6 · Live CI and autonomous actions
 
@@ -21,7 +23,7 @@ Goal: close the loop on real repositories, with every action human-gated.
 
 | Item | Done when |
 |---|---|
-| Live GitHub App: the webhook (FR-C1) fetches the failed run's log and commits, then queues a job | A failing run in a test repository produces a stored CI decision without manual steps |
+| Live GitHub App: event-driven ingestion fetches the failed run's log and commits, then queues a job | A new failing run in a test repository produces a stored CI decision without manual steps |
 | Background job runner (simple worker or queue; Redis only if needed, ADR 005) | Webhook still answers < 2 s; triage < 30 s (NFR-4, NFR-5) |
 | CI fix PRs: the agent **opens, never merges**, a PR whose body contains `confidence_score` and `reasoning_trace` (FR-C7) | PR visible on GitHub with score and trace; no code path can merge |
 | QA heal as a PR: the suggested selector patch (FR-Q7) is opened as a PR on the test repository | PR contains only the selector change |
