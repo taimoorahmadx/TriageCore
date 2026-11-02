@@ -25,6 +25,7 @@ from dataclasses import dataclass, field
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
+from urllib.parse import unquote, urlsplit
 
 from playwright.sync_api import Error as PlaywrightError
 from playwright.sync_api import Page
@@ -218,10 +219,34 @@ class _QuietHandler(SimpleHTTPRequestHandler):
         pass
 
 
+class _MountedHandler(_QuietHandler):
+    def __init__(self, *args: Any, mounts: dict[str, Path], **kwargs: Any) -> None:
+        self.mounts = {name: path.resolve() for name, path in mounts.items()}
+        super().__init__(*args, **kwargs)
+
+    def translate_path(self, path: str) -> str:
+        components = [unquote(part) for part in urlsplit(path).path.split("/")]
+        if len(components) < 2 or components[1] not in self.mounts:
+            return super().translate_path(path)
+
+        root = self.mounts[components[1]]
+        candidate = root.joinpath(*components[2:]).resolve()
+        try:
+            candidate.relative_to(root)
+        except ValueError:
+            return str(root / "__not_found__")
+        return str(candidate)
+
+
 @contextmanager
-def serve_directory(root: Path) -> Iterator[str]:
-    """Serve a folder over local HTTP (so network requests and 404s behave like a real site)."""
-    handler = functools.partial(_QuietHandler, directory=str(root))
+def serve_directory(root: Path, *, mounts: dict[str, Path] | None = None) -> Iterator[str]:
+    """Serve one folder and optional named static mounts over local HTTP."""
+    handler_cls = _MountedHandler if mounts else _QuietHandler
+    handler = functools.partial(
+        handler_cls,
+        directory=str(root),
+        **({"mounts": mounts} if mounts else {}),
+    )
     server = ThreadingHTTPServer(("127.0.0.1", 0), handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()

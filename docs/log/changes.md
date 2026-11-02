@@ -28,3 +28,4 @@ what it affects, who decided, approval status.
 - 2026-10-27 — Defer C3 real CI corpus and full benchmark to FYP-2/M7 so the FYP-1 CI branch can proceed with fixture-based initial evaluation; remove C3 as a C10 prerequisite.
 
 - 2026-10-27 — Correct task sequencing: defer C3 and final QA/CI calibration to the end of FYP-1, after the CI implementation branch merges; keep them out of FYP-2.
+- 2026-11-02 · B1 · Selected `1Marc/modern-todomvc-vanillajs` at upstream revision `58e4669bd959f1b8f8c63a8b2ab6f55173f6104d` as the static QA fixture; CC BY 4.0 attribution and local HTTP serving recorded in `tests/apps/modern-todomvc/README.md`.

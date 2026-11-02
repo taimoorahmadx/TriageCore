@@ -37,6 +37,7 @@ from src.db.store import DecisionStore
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DUMMY_DIR = REPO_ROOT / "tests" / "dummy"
+APPS_DIR = REPO_ROOT / "tests" / "apps"
 SCENARIOS_FILE = REPO_ROOT / "tests" / "scenarios" / "qa_scenarios.yaml"
 
 AUTONOMOUS_OR_HIDING = {"heal", "flag"}  # actions that let a failing step pass without a human
@@ -254,7 +255,7 @@ def run_scenarios(
 
     if base_url:
         return _run(base_url)
-    with serve_directory(DUMMY_DIR) as url:
+    with serve_directory(DUMMY_DIR, mounts={"apps": APPS_DIR}) as url:
         return _run(url)
 
 

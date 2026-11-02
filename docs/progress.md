@@ -6,10 +6,16 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- Architecture audit 2026-10-27 found no need for a structural redesign. The main gap is evidence:
-  QA needs a fresh frozen comparison with `simple_rule`/`llm_judge`; CI has only a two-fixture smoke
-  result and both recorded extractions were empty. C10 is now described as preliminary; B3 and C13
-  track the follow-up runs. No implementation was started in this documentation pass.
+- B1 is blocked on `feature/real-app-cases`. Copied Modern TodoMVC at upstream revision
+  `58e4669bd959f1b8f8c63a8b2ab6f55173f6104d`, added attribution and a query-driven mutation harness,
+  and added ten owner-approved ground-truth cases. `make eval` ran the scenarios and printed these
+  measured summaries before exiting 2 in the CLI printer: blind_heal 9/22 acceptable, 10/10 masked
+  regressions, 0 needless escalations; penalty_rule 19/22, 0/10, 0; simple_rule 21/22, 0/10, 1;
+  triagecore 22/22, 0/10, 0. The report is generated, but the check did not pass because the printer
+  also iterates over the non-policy `timing` summary and raises `KeyError: 'acceptable_actions'`.
+- Architecture audit 2026-10-27 found no need for a structural redesign. The main remaining evidence
+  work is a fresh frozen QA comparison and a real CI corpus; C10 remains preliminary, with B3/C13
+  tracking follow-up work.
 - The audit also identified two unapproved contract questions: CI action semantics for `bug` and how
   to represent an unreliable/no-basis diagnosis. Keep both as blockers until the project owner and
   supervisor decide. Do not change code or weights based on a proposed option alone.
@@ -29,8 +35,10 @@ History lives in git and `docs/log/ai-usage-log.md`.
   established. Agree who supplies the key and approves any API cost.
 - B3 needs frozen labels/weights and Groq access if `llm_judge` is enabled. Do not fit or tune weights
   on evaluation or holdout results.
-- B1 needs a human-selected, licence-compatible static open-source app. D1 needs a human-created VM,
-  Docker, an API token, and firewall setup. See task files for prerequisites and stop conditions.
+- B1's ten ground-truth labels were approved by the project owner on 2026-11-02; the request-failure
+  mutation is simulated by a local 404. Decide whether to expand B1 scope to fix the evaluator's
+  summary printer, then rerun `make eval` and review the generated report.
+- D1 needs a human-created VM, Docker, an API token, and firewall setup.
 - CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
   commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
 - End-of-FYP-1 C3 needs a suitable dataset or enough real cases with evidence for every cause. The current
