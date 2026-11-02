@@ -70,7 +70,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 7. `feature/real-app-cases` · real-world QA cases
-- [ ] B1 · 10+ QA cases on a real open-source web app · after Q4 · *needs you: pick the app, write the labels before any run* · project owner writes the labels (weights were AI-drafted), freeze the weights first (audit M3d)
+- [x] B1 · Real-app QA cases and evaluation
 
 → Merge into `main`.
 

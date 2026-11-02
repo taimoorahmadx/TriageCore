@@ -206,6 +206,8 @@ if __name__ == "__main__":
     report = evaluate(judge=GroqJudge() if args.llm_judge else None)
     print(f"{'policy':14s} {'acceptable':>11s} {'masked bugs':>12s} {'needless esc.':>14s}")
     for policy, s in report["summary"].items():
+        if policy == "timing":
+            continue
         print(f"{policy:14s} {s['acceptable_actions']:>5d}/{s['steps']:<5d} "
               f"{s['masked_regressions']:>5d}/{s['regressions_total']:<6d} {s['needless_escalations']:>8d}")
     print(f"\nSaved to {RESULTS_DIR / 'qa_eval_latest.json'}", file=sys.stderr)
