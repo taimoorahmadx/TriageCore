@@ -31,11 +31,11 @@ History lives in git and `docs/log/ai-usage-log.md`.
   preparing a dataset; the candidate IDs provided so far are unavailable via GitHub API. Need five
   accessible dependency-failure run URLs/logs (the current corpus has none). Do not assign labels
   based only on `suggested_label`.
-- Before coding C3 steps 7–8, a human verifies: lca fields and lockfile-only vs src fix counts;
-  whether BUMP's GitHub repo has GHA logs; Zheng/Lin Table 3 counts (for priors).
-- Owner decision pending (policy, not applied): define `flaky` by mechanism, and make `rerun`
-  correct for transient `infra`. Needs approval, a `changes.md` row and an ADR 006 addendum
-  before any `weights.yaml` edit. Evidence in the dataset survey.
+- Verified: BUMP has `workflowLogs/`; Zheng/Lin Table 3 counts are recorded in the dataset survey.
+  lca (`default` config, 68 cases) fixes are all code changes: lca gives `bug` only, and BUMP gives
+  `dependency`. All three human checks are done, so C3 importers can be built.
+- Owner approved (2026-11-02, not yet applied): `flaky` is defined by mechanism, and `rerun` is also
+  correct for transient `infra`. Apply it in C12 with an ADR 006 addendum, never earlier.
 - C12 requires reviewed labels and enough cases for a
   training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
   results before evaluation.

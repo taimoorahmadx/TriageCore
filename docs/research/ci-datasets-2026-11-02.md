@@ -62,3 +62,25 @@ TELUS industrial dataset (GitLab, anonymised, CC BY-NC-ND), OpenStack-RCA-Bench 
 not CI), GHALogs and GADFPD (no cause labels), FixFlow (LLM-assigned labels), GitBug-Java (bug only;
 lca already covers bug), LogChunks and other Travis-only sets (wrong platform), workflow-history
 datasets (no failures).
+
+## Verified by a human (2026-11-02)
+
+- **BUMP:** the GitHub repo has `workflowLogs/` at its root, so BUMP is usable for `dependency`
+  without the 150 GB Docker tarball. The agent still checks that the logs are GitHub Actions logs.
+- **Zheng/Lin Table 3 (from the paper, 375 cases):** P1 54, P2 19, P3 33, P4 45, P5 26, P6 15, P7 3,
+  P8 120, W1 2, W2 21, W3 10, W4 13, W5 2, W6 3, W7 3, W8 6. The first NotebookLM answer was right
+  and the second was wrong.
+- **Mapped with the rules above** (P6 excluded): bug = P1+P5+P8 = 200, dependency = P3+P4+W4+W6 = 94,
+  infra = W1+W3+W7 = 15, excluded = P2+P6+P7+W2+W5+W8 = 66. Shares of the 309 mapped cases:
+  bug 64.7%, dependency 30.4%, infra 4.9%. P8 (tests) also contains flaky failures that the paper
+  does not separate, so the `flaky` prior must come from the rerun studies. These are **candidate
+  priors only**: provisional, and C12 must document and approve them before any `weights.yaml` change.
+- **lca:** not yet checked. The Hugging Face rows API returned a 22-byte error from this machine.
+- **Owner decision:** `rerun` should also be correct for transient `infra`. It is approved but not yet
+  applied; it goes into `weights.yaml` with C12, together with an ADR 006 addendum.
+- **lca checked by a human (2026-11-02):** the `default` config has one `test` split with 68 cases
+  (the `old` config was not checked and may be the 212-case version). Fields include `logs`,
+  `repo_owner`, `repo_name`, `sha_fail`, `sha_success`, `diff`, `changed_files`, `difficulty`. All
+  68 fixes touch code files and none is lockfile-only. **So lca supplies `bug` only**, and
+  `dependency` comes from BUMP. Many lca fixes are lint or formatting fixes (low `difficulty`). They
+  still map to `bug` (Zheng/Lin P5), but the human reviewer should confirm each one.
