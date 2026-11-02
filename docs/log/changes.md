@@ -18,6 +18,7 @@ what it affects, who decided, approval status.
 | 10 | 2026-10-25 | LangGraph dropped (plain Python pipelines); SQLite decision store instead of Postgres; Redis deferred | Flows are linear; fewer components to defend | ADR 001 partly superseded (ADR 005) | Team | To record |
 | 11 | 2026-10-25 | `heal` returns a suggested patch and never edits test files in FYP-1 | Safety; nothing applied automatically | M3, FR-Q7 | Team | Not needed (design) |
 | 12 | 2026-10-25 | Planning docs moved to the brief / spec / plan / tasks / progress set; `roadmap.md`, `requirements.md`, `architecture.md` folded in | One predictable place per kind of context for every agent | Documentation only | Team | Not needed (docs) |
+| 13 | 2026-11-02 | Approved CI `bug` escalation for FYP-1 and `diagnosis_reliable` in the shared output; supervisor signed off on the X1 hard block and CI pre-rerun evidence | Clarify unsafe/unsupported diagnoses and record method approval | Engine output contract and CI policy; implementation still requires a task | Project owner and supervisor | Approved 2026-11-02 |
 
 | 2026-10-25 | X1 | QA hard precondition: block `heal` when `expected_state_reached` is false (ADR 004). | Project owner approved this audit fix. |
 - 2026-10-26 — C3: Removed `verified_by` from corpus review records and counted cases with a label plus evidence; Shazil requested the field removal.

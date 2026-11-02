@@ -1,6 +1,6 @@
 # ConfidenceEngine Input/Output Contract
 
-**Status:** v1, implemented. Models: `src/core/models.py`. Engine: `src/core/engine.py`.
+**Status:** v1 implemented; approved `diagnosis_reliable` amendment pending implementation. Models: `src/core/models.py`. Engine: `src/core/engine.py`.
 Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/contracts/raw_signals.md`.
 
 ## Input: `ConfidenceEngineInput`
@@ -25,6 +25,7 @@ Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/cont
 ```json
 {
   "classification": "flaky | dependency | bug | infra | stale_selector | likely_regression",
+  "diagnosis_reliable": "boolean",
   "confidence_score": "integer 0-100",
   "reasoning_trace": "string",
   "recommended_action": "heal | escalate | auto-fix | flag | rerun"
@@ -34,6 +35,7 @@ Design: `docs/adr/004-bayesian-confidence-engine.md`. QA signal keys: `docs/cont
 | Field | Meaning |
 |---|---|
 | `classification` | The most probable cause under Bayes' rule. A diagnosis only, never an action. |
+| `diagnosis_reliable` | Whether evidence supports reporting the most-probable cause as reliable. False when no evidence is observed, the posterior is uniform, or the evidence fit is below `unknown_pattern_floor`; true otherwise. A false value does not replace the diagnosis label and must be presented as unreliable. |
 | `recommended_action` | The action with the lowest expected loss for the step's risk tier. `escalate` is always available. Hard blocks remove actions first: QA `heal` requires exactly one relocated element and `expected_state_reached` must not be `false`. |
 | `confidence_score` | `round(100 × P(the best available autonomous action is correct))`. If the decision is to act, it is the probability that the chosen action is right. If the decision is `escalate`, it is how sure the engine would have been had it acted. **It is not compared against a fixed threshold**, so an escalated step can still show a high score (e.g. a high-risk step that needs P ≥ 0.99). |
 | `reasoning_trace` | Exact account: evidence and log-likelihoods, missing groups, posterior, blocked actions, expected losses, and decision. It omits break-even probabilities because the two-outcome formula can mislead when multiple causes and actions are present. |
@@ -63,5 +65,5 @@ Returns `(output, details)`. `details` is used by the API and UI, and is not par
 
 - `flaky` has a per-source meaning (QA: slow to render; CI: intermittent job), defined in the `docs/brief.md` glossary.
 - The legacy `/api/legacy/ci/triage` route (`archive/poc/legacy_routes.py`) returns `recommended_action="rerun"`, which violates this contract. It is scripted and not used by the engine.
-- The engine always returns a named most-probable cause, including with no informative evidence or a uniform posterior. The 2026-10-27 audit recommends an explicit unreliable/unknown diagnosis; output semantics require project-owner approval before changing this v1 contract.
-- The CI action vocabulary currently permits `auto-fix` for both `dependency` and `bug`. The audit recommends a proposal-only vocabulary or escalation for application bugs; this policy decision requires project-owner approval before implementation.
+- Approved 2026-11-02: add `diagnosis_reliable` with the semantics above. This contract decision is recorded; model/API/UI implementation remains pending an implementation task.
+- Approved 2026-11-02: CI `bug` should escalate in FYP-1. The current loss table still permits `auto-fix` for `bug`; align it in an implementation task before claiming this policy is enforced.

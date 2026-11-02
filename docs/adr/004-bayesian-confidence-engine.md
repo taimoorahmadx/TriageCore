@@ -47,6 +47,16 @@ The engine is built from four parts:
 
 The original QA values remain human-elicited; final QA calibration is planned at the end of FYP-1 after the initial benchmark, using reviewed data and a held-out evaluation. For CI, an agent may propose provisional prior and likelihood values in an explicit task, with rationale and source recorded. C10/C11 use those provisional values for the initial pipeline comparison and screen. C3 and C12 run after the CI implementation branch is merged, at the end of FYP-1; C12 fits tables from human-reviewed training labels and evaluates once on a holdout untouched by fitting. Policy loss costs remain project-owner decisions; an agent may present options but cannot approve them.
 
+### Diagnosis reliability and CI bug policy amendment (2026-11-02)
+
+The project owner approved a shared `diagnosis_reliable` output field. It is false when no evidence
+is observed, the posterior is uniform, or evidence fit is below `unknown_pattern_floor`; otherwise
+it is true. The field qualifies the most-probable cause rather than replacing `classification`.
+The project owner also approved escalation for CI `bug` diagnoses in FYP-1. These contract and
+policy decisions require an implementation task; the current engine output and CI loss table do not
+yet enforce them. The supervisor signed off on the method change (X1 hard block and CI pre-rerun
+evidence) on 2026-11-02.
+
 ## Alternatives considered
 
 | Alternative | Reason rejected |

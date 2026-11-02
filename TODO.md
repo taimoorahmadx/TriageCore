@@ -75,7 +75,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 8. `chore/deploy` · deployment
-- [ ] D1 · Docker deployment on a VM with an API token · after A5, S1 · *needs you: create the VM*
+- [!] D1 · Docker deployment on a VM with an API token · after A5, S1 · deferred by user to focus on local build; resume when ready to create the VM
 
 → Merge into `main`.
 
@@ -92,9 +92,9 @@ FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance
 Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
 
 ## 10. Human work for FYP-1 Final (not for AI)
-- [ ] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence)
-- [ ] Decide and approve the CI action policy: `bug` should escalate, or a specific proposal-only action; approve any corresponding loss changes before implementation
-- [ ] Decide whether the shared output adds `classification: unknown`, `diagnosis_reliable`, or another explicit no-reliable-diagnosis representation; approve contract semantics before implementation
+- [x] Get supervisor sign-off on the method change (X1 hard block, CI pre-rerun evidence) · signed off 2026-11-02
+- [x] Decide and approve the CI action policy: `bug` should escalate, or a specific proposal-only action; approve any corresponding loss changes before implementation · `bug` escalates in FYP-1; loss-table/code alignment needs an implementation task
+- [x] Decide whether the shared output adds `classification: unknown`, `diagnosis_reliable`, or another explicit no-reliable-diagnosis representation; approve contract semantics before implementation · add `diagnosis_reliable`; false for no evidence, uniform posterior, or fit below the unknown-pattern floor
 - [x] Review and rewrite `docs/spec.md` and `docs/plan.md` in your own words
 - [ ] Each member completes their `docs/disclosure.md` §2 row: owned modules, AI-generated parts, human changes, verification, and one caught AI error; correct the weight-provenance description
 - [ ] Check the hand calculation in `test_posterior_matches_hand_calculation`

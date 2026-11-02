@@ -117,7 +117,7 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | CI weights rationale | `docs/contracts/ci_weights_elicitation.md` | task C9 (initial proposal), C12 (dataset calibration) |
 | Decision record (store) | `docs/contracts/decision_record.md` | task S1 |
 
-## 7. Decisions (resolved 2026-10-25)
+## 7. Decisions
 
 | ID | Decision | Record |
 |---|---|---|
@@ -128,8 +128,10 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | D5 | No LangGraph; plain Python pipelines | ADR 005 |
 | D6 | SQLite store; Postgres only if FYP-2 needs it | ADR 005 |
 | D7 | One `flaky` label; meaning defined per source in `brief.md` | `brief.md` glossary |
+| D8 | CI `bug` diagnosis should escalate in FYP-1 | Project owner, 2026-11-02; implementation task required |
+| D9 | Add `diagnosis_reliable` to the shared output; false for no evidence, uniform posterior, or fit below the unknown-pattern floor | Project owner, 2026-11-02; implementation task required |
 
-Still open (owner decides inside the task): CI loss costs (C9). CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 at the end of FYP-1.
+CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 at the end of FYP-1. The approved D8 policy still needs implementation in the CI loss/action policy before it is enforced.
 
 ## 8. Security and data
 
