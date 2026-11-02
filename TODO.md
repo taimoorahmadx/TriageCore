@@ -70,7 +70,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 → Merge into `main`.
 
 ## 7. `feature/real-app-cases` · real-world QA cases
-- [!] B1 · evaluation completed, but `make eval` exits 2 in its summary printer (`KeyError: 'acceptable_actions'` on the `timing` entry); needs a scoped decision before B1 can close
+- [x] B1 · Real-app QA cases and evaluation
 
 → Merge into `main`.
 

@@ -91,7 +91,7 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 ### M5.5 · Preliminary benchmark and deployment · Taimoor + all · started
 - [x] QA evaluation script with CSV output. *Evidence: `src/eval/evaluate.py`, `results/`.*
 - [x] Confidence intervals and stronger baselines. *Evidence: B2 confidence intervals; `simple_rule` (Q4) and `llm_judge` (Q3) reported by the evaluation script; pipeline tests pass.*
-- [ ] 10–15 real-world baseline cases. → **B1** (QA; audit recommends at least 10)
+- [x] 10–15 real-world baseline cases. *Evidence: B1 added 10 labeled Modern TodoMVC steps; `make eval` completed on 22 total steps.*
 - [ ] Running on a remote machine, not localhost. → **D1**
 
 ### FYP-1 final evidence · in progress

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T09:41:49",
+  "generated_at": "2026-11-02T09:48:56",
   "relocator": "GroqRelocator",
   "summary": {
     "blind_heal": {
@@ -93,12 +93,12 @@
     },
     "timing": {
       "duration_ms": {
-        "p50": 6357.0,
-        "p95": 7489.7
+        "p50": 6150.0,
+        "p95": 7484.5
       },
       "dom_extract_ms": {
-        "p50": 11.0,
-        "p95": 27.0
+        "p50": 10.0,
+        "p95": 14.0
       }
     }
   },
@@ -115,8 +115,8 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "#btn-add-cart-primary",
-      "duration_ms": 5918,
-      "dom_extract_ms": 27,
+      "duration_ms": 5868,
+      "dom_extract_ms": 14,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -147,8 +147,8 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "#btn-apply-coupon",
-      "duration_ms": 5512,
-      "dom_extract_ms": 10,
+      "duration_ms": 5589,
+      "dom_extract_ms": 7,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -179,8 +179,8 @@
       "p_flaky": 0.0004,
       "confidence": 0,
       "proposed_selector": "#btn-checkout-pay",
-      "duration_ms": 7179,
-      "dom_extract_ms": 11,
+      "duration_ms": 6718,
+      "dom_extract_ms": 6,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -211,7 +211,7 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 5902,
+      "duration_ms": 5575,
       "dom_extract_ms": 9,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
@@ -243,8 +243,8 @@
       "p_flaky": 0.0072,
       "confidence": 1,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 7120,
-      "dom_extract_ms": 14,
+      "duration_ms": 7096,
+      "dom_extract_ms": 13,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -275,8 +275,8 @@
       "p_flaky": 0.0072,
       "confidence": 1,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 7222,
-      "dom_extract_ms": 10,
+      "duration_ms": 7249,
+      "dom_extract_ms": 9,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -307,8 +307,8 @@
       "p_flaky": 0.0232,
       "confidence": 2,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 7140,
-      "dom_extract_ms": 12,
+      "duration_ms": 7051,
+      "dom_extract_ms": 11,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -339,7 +339,7 @@
       "p_flaky": 0.8896,
       "confidence": 89,
       "proposed_selector": null,
-      "duration_ms": 3012,
+      "duration_ms": 3015,
       "dom_extract_ms": null,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
@@ -371,8 +371,8 @@
       "p_flaky": 0.0248,
       "confidence": 95,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 6796,
-      "dom_extract_ms": 19,
+      "duration_ms": 5837,
+      "dom_extract_ms": 9,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -403,7 +403,7 @@
       "p_flaky": 0.0248,
       "confidence": 95,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 5776,
+      "duration_ms": 5786,
       "dom_extract_ms": 9,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
@@ -435,8 +435,8 @@
       "p_flaky": 0.0174,
       "confidence": 95,
       "proposed_selector": "#btn-add-item-primary",
-      "duration_ms": 5609,
-      "dom_extract_ms": 9,
+      "duration_ms": 5655,
+      "dom_extract_ms": 11,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -467,8 +467,8 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "#product-card button.btn.add-btn",
-      "duration_ms": 5817,
-      "dom_extract_ms": 16,
+      "duration_ms": 6052,
+      "dom_extract_ms": 10,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -499,8 +499,8 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
-      "duration_ms": 5810,
-      "dom_extract_ms": 13,
+      "duration_ms": 6248,
+      "dom_extract_ms": 12,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -531,8 +531,8 @@
       "p_flaky": 0.018,
       "confidence": 98,
       "proposed_selector": "input[data-todo=\"toggle\"]",
-      "duration_ms": 5707,
-      "dom_extract_ms": 11,
+      "duration_ms": 5776,
+      "dom_extract_ms": 10,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": true,
       "blind_heal_masked": false,
@@ -563,8 +563,8 @@
       "p_flaky": 0.0072,
       "confidence": 1,
       "proposed_selector": "button[data-todo=\"destroy\"]",
-      "duration_ms": 7247,
-      "dom_extract_ms": 12,
+      "duration_ms": 7187,
+      "dom_extract_ms": 10,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -595,8 +595,8 @@
       "p_flaky": 0.0072,
       "confidence": 1,
       "proposed_selector": "input[data-todo=\"toggle\"]",
-      "duration_ms": 7158,
-      "dom_extract_ms": 17,
+      "duration_ms": 7141,
+      "dom_extract_ms": 11,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -626,9 +626,9 @@
       "p_regression": 0.1836,
       "p_flaky": 0.0232,
       "confidence": 2,
-      "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
-      "duration_ms": 7411,
-      "dom_extract_ms": 9,
+      "proposed_selector": "button.delete-control-renamed",
+      "duration_ms": 7360,
+      "dom_extract_ms": 13,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -659,8 +659,8 @@
       "p_flaky": 0.0232,
       "confidence": 2,
       "proposed_selector": "input[data-todo=\"toggle\"]",
-      "duration_ms": 7289,
-      "dom_extract_ms": 9,
+      "duration_ms": 7408,
+      "dom_extract_ms": 12,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -691,8 +691,8 @@
       "p_flaky": 0.0022,
       "confidence": 0,
       "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
-      "duration_ms": 7471,
-      "dom_extract_ms": 9,
+      "duration_ms": 7498,
+      "dom_extract_ms": 10,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -722,9 +722,9 @@
       "p_regression": 0.9219,
       "p_flaky": 0.0022,
       "confidence": 0,
-      "proposed_selector": "input[data-todo=\"toggle\"][type=\"checkbox\"]",
-      "duration_ms": 7493,
-      "dom_extract_ms": 8,
+      "proposed_selector": "input.toggle-control-renamed",
+      "duration_ms": 7376,
+      "dom_extract_ms": 9,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
       "blind_heal_masked": true,
@@ -755,7 +755,7 @@
       "p_flaky": 0.8896,
       "confidence": 89,
       "proposed_selector": null,
-      "duration_ms": 3085,
+      "duration_ms": 3006,
       "dom_extract_ms": null,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
@@ -787,7 +787,7 @@
       "p_flaky": 0.8896,
       "confidence": 89,
       "proposed_selector": null,
-      "duration_ms": 3064,
+      "duration_ms": 3006,
       "dom_extract_ms": null,
       "blind_heal_action": "heal",
       "blind_heal_acceptable": false,
@@ -814,7 +814,7 @@
       "title": "ShopFlow checkout journey",
       "description": "Three-step checkout. Every button was renamed in a refactor; the payment handler is also broken.",
       "page": "shopflow_app.html",
-      "duration_ms": 19558,
+      "duration_ms": 18620,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -834,13 +834,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/shopflow_app.html",
+            "page_url": "http://127.0.0.1:35033/shopflow_app.html",
             "original_selector": "#add-to-cart-btn",
             "proposed_selector": "#btn-add-cart-primary",
             "expected_state_selector": "#cart-notification",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 663,
+            "relocation_latency_ms": 634,
             "risk_tier": "low"
           },
           "observations": {
@@ -850,13 +850,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1008,
-            "rewait": 3558,
-            "dom_extract": 27,
-            "relocation": 663,
-            "observation": 682,
-            "total": 5918,
-            "engine": 0.673
+            "first_try": 1005,
+            "rewait": 3551,
+            "dom_extract": 14,
+            "relocation": 634,
+            "observation": 665,
+            "total": 5868,
+            "engine": 0.472
           },
           "truth": {
             "cause": "stale_selector",
@@ -950,13 +950,13 @@
           },
           "context": {
             "step_id": "apply_promo",
-            "page_url": "http://127.0.0.1:44167/shopflow_app.html",
+            "page_url": "http://127.0.0.1:35033/shopflow_app.html",
             "original_selector": "#apply-promo",
             "proposed_selector": "#btn-apply-coupon",
             "expected_state_selector": "#promo-notification",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 416,
+            "relocation_latency_ms": 502,
             "risk_tier": "medium"
           },
           "observations": {
@@ -966,13 +966,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1004,
-            "rewait": 3541,
-            "dom_extract": 10,
-            "relocation": 416,
-            "observation": 543,
-            "total": 5512,
-            "engine": 2.352
+            "first_try": 1003,
+            "rewait": 3543,
+            "dom_extract": 7,
+            "relocation": 502,
+            "observation": 529,
+            "total": 5589,
+            "engine": 0.612
           },
           "truth": {
             "cause": "stale_selector",
@@ -1066,13 +1066,13 @@
           },
           "context": {
             "step_id": "pay",
-            "page_url": "http://127.0.0.1:44167/shopflow_app.html",
+            "page_url": "http://127.0.0.1:35033/shopflow_app.html",
             "original_selector": "#submit-order",
             "proposed_selector": "#btn-checkout-pay",
             "expected_state_selector": "#order-confirmation",
             "error_state_selector": "#payment-error-banner",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 611,
+            "relocation_latency_ms": 208,
             "risk_tier": "high"
           },
           "observations": {
@@ -1086,13 +1086,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1004,
-            "rewait": 3537,
-            "dom_extract": 11,
-            "relocation": 611,
-            "observation": 2020,
-            "total": 7179,
-            "engine": 0.398
+            "first_try": 1002,
+            "rewait": 3527,
+            "dom_extract": 6,
+            "relocation": 208,
+            "observation": 1973,
+            "total": 6718,
+            "engine": 0.38
           },
           "truth": {
             "cause": "likely_regression",
@@ -1175,7 +1175,7 @@
       "title": "Harmless rename",
       "description": "The button's id changed in a refactor; clicking the new one works.",
       "page": "scenario_lab.html?case=rename_ok",
-      "duration_ms": 6170,
+      "duration_ms": 5837,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1195,13 +1195,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=rename_ok",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=rename_ok",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 834,
+            "relocation_latency_ms": 537,
             "risk_tier": "low"
           },
           "observations": {
@@ -1212,12 +1212,12 @@
           "relocation_error": null,
           "timings_ms": {
             "first_try": 1004,
-            "rewait": 3538,
+            "rewait": 3535,
             "dom_extract": 9,
-            "relocation": 834,
-            "observation": 520,
-            "total": 5902,
-            "engine": 0.429
+            "relocation": 537,
+            "observation": 493,
+            "total": 5575,
+            "engine": 0.464
           },
           "truth": {
             "cause": "stale_selector",
@@ -1300,7 +1300,7 @@
       "title": "Rename hiding a crash",
       "description": "The button was renamed AND its click handler calls an undefined function.",
       "page": "scenario_lab.html?case=rename_crash",
-      "duration_ms": 7351,
+      "duration_ms": 7241,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1320,13 +1320,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=rename_crash",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=rename_crash",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 602,
+            "relocation_latency_ms": 578,
             "risk_tier": "low"
           },
           "observations": {
@@ -1338,13 +1338,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1005,
-            "rewait": 3537,
-            "dom_extract": 14,
-            "relocation": 602,
-            "observation": 1969,
-            "total": 7120,
-            "engine": 0.546
+            "first_try": 1002,
+            "rewait": 3534,
+            "dom_extract": 13,
+            "relocation": 578,
+            "observation": 1976,
+            "total": 7096,
+            "engine": 0.692
           },
           "truth": {
             "cause": "likely_regression",
@@ -1427,7 +1427,7 @@
       "title": "Rename hiding a handled failure",
       "description": "Renamed button; clicking shows an \"inventory service unavailable\" banner, with no exception thrown.",
       "page": "scenario_lab.html?case=error_banner",
-      "duration_ms": 7435,
+      "duration_ms": 7418,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1447,13 +1447,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=error_banner",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=error_banner",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 677,
+            "relocation_latency_ms": 734,
             "risk_tier": "medium"
           },
           "observations": {
@@ -1463,13 +1463,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 3533,
-            "dom_extract": 10,
-            "relocation": 677,
-            "observation": 2001,
-            "total": 7222,
-            "engine": 0.631
+            "first_try": 1003,
+            "rewait": 3536,
+            "dom_extract": 9,
+            "relocation": 734,
+            "observation": 1970,
+            "total": 7249,
+            "engine": 0.474
           },
           "truth": {
             "cause": "likely_regression",
@@ -1552,7 +1552,7 @@
       "title": "Rename hiding a silent bug",
       "description": "Renamed button whose handler no longer does anything. No error, no result.",
       "page": "scenario_lab.html?case=silent_noop",
-      "duration_ms": 7415,
+      "duration_ms": 7197,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1572,13 +1572,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=silent_noop",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=silent_noop",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 630,
+            "relocation_latency_ms": 522,
             "risk_tier": "low"
           },
           "observations": {
@@ -1588,13 +1588,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1006,
-            "rewait": 3539,
-            "dom_extract": 12,
-            "relocation": 630,
-            "observation": 1958,
-            "total": 7140,
-            "engine": 0.563
+            "first_try": 1002,
+            "rewait": 3533,
+            "dom_extract": 11,
+            "relocation": 522,
+            "observation": 1985,
+            "total": 7051,
+            "engine": 0.455
           },
           "truth": {
             "cause": "likely_regression",
@@ -1677,7 +1677,7 @@
       "title": "Slow page, nothing renamed",
       "description": "The original button exists but only appears about 1.8 s after load.",
       "page": "scenario_lab.html?case=slow_render",
-      "duration_ms": 3157,
+      "duration_ms": 3233,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1697,7 +1697,7 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=slow_render",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=slow_render",
             "original_selector": "#add-to-cart",
             "proposed_selector": null,
             "expected_state_selector": "#cart-confirmation",
@@ -1713,11 +1713,11 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 1533,
-            "observation": 472,
-            "total": 3012,
-            "engine": 0.362
+            "first_try": 1004,
+            "rewait": 1529,
+            "observation": 477,
+            "total": 3015,
+            "engine": 0.342
           },
           "truth": {
             "cause": "flaky",
@@ -1800,7 +1800,7 @@
       "title": "Harmless rename with third-party console noise (low risk)",
       "description": "Renamed button that works, but a chat widget logs console errors on every click.",
       "page": "scenario_lab.html?case=console_noise",
-      "duration_ms": 6959,
+      "duration_ms": 5971,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1820,13 +1820,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=console_noise",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=console_noise",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 1668,
+            "relocation_latency_ms": 790,
             "risk_tier": "low"
           },
           "observations": {
@@ -1838,13 +1838,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1003,
-            "rewait": 3527,
-            "dom_extract": 19,
-            "relocation": 1668,
-            "observation": 585,
-            "total": 6796,
-            "engine": 0.917
+            "first_try": 1001,
+            "rewait": 3529,
+            "dom_extract": 9,
+            "relocation": 790,
+            "observation": 510,
+            "total": 5837,
+            "engine": 0.507
           },
           "truth": {
             "cause": "stale_selector",
@@ -1927,7 +1927,7 @@
       "title": "Harmless rename with third-party console noise (high risk)",
       "description": "Same page treated as an irreversible step. Escalating is the cautious but acceptable choice.",
       "page": "scenario_lab.html?case=console_noise",
-      "duration_ms": 6071,
+      "duration_ms": 5935,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -1947,13 +1947,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=console_noise",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=console_noise",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 710,
+            "relocation_latency_ms": 740,
             "risk_tier": "high"
           },
           "observations": {
@@ -1965,13 +1965,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1003,
-            "rewait": 3534,
+            "first_try": 1001,
+            "rewait": 3535,
             "dom_extract": 9,
-            "relocation": 710,
-            "observation": 519,
-            "total": 5776,
-            "engine": 0.657
+            "relocation": 740,
+            "observation": 505,
+            "total": 5786,
+            "engine": 0.475
           },
           "truth": {
             "cause": "stale_selector",
@@ -2055,7 +2055,7 @@
       "title": "Harmless rename with a broken tracking pixel",
       "description": "Renamed button that works, but an analytics pixel request returns 404.",
       "page": "scenario_lab.html?case=tracking_404",
-      "duration_ms": 5794,
+      "duration_ms": 5828,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -2075,31 +2075,31 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=tracking_404",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=tracking_404",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#btn-add-item-primary",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 542,
+            "relocation_latency_ms": 626,
             "risk_tier": "low"
           },
           "observations": {
             "page_errors": [],
             "console_errors": [],
             "failed_requests": [
-              "http://127.0.0.1:44167/pixel/track.gif?evt=add_to_cart (HTTP 404)"
+              "http://127.0.0.1:35033/pixel/track.gif?evt=add_to_cart (HTTP 404)"
             ]
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1003,
-            "rewait": 3538,
-            "dom_extract": 9,
-            "relocation": 542,
-            "observation": 521,
-            "total": 5609,
-            "engine": 0.318
+            "first_try": 1002,
+            "rewait": 3528,
+            "dom_extract": 11,
+            "relocation": 626,
+            "observation": 494,
+            "total": 5655,
+            "engine": 0.722
           },
           "truth": {
             "cause": "stale_selector",
@@ -2182,7 +2182,7 @@
       "title": "Rename with two look-alike buttons",
       "description": "Renamed button; a second product has an identical \"Add to cart\" button. Healing is fine only if the right product is added.",
       "page": "scenario_lab.html?case=ambiguous",
-      "duration_ms": 5980,
+      "duration_ms": 6185,
       "steps": [
         {
           "step_id": "add_to_cart",
@@ -2202,13 +2202,13 @@
           },
           "context": {
             "step_id": "add_to_cart",
-            "page_url": "http://127.0.0.1:44167/scenario_lab.html?case=ambiguous",
+            "page_url": "http://127.0.0.1:35033/scenario_lab.html?case=ambiguous",
             "original_selector": "#add-to-cart",
             "proposed_selector": "#product-card button.btn.add-btn",
             "expected_state_selector": "#cart-confirmation",
             "error_state_selector": "#cart-error",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 790,
+            "relocation_latency_ms": 1034,
             "risk_tier": "low"
           },
           "observations": {
@@ -2219,12 +2219,12 @@
           "relocation_error": null,
           "timings_ms": {
             "first_try": 1002,
-            "rewait": 3540,
-            "dom_extract": 16,
-            "relocation": 790,
-            "observation": 480,
-            "total": 5817,
-            "engine": 0.328
+            "rewait": 3532,
+            "dom_extract": 10,
+            "relocation": 1034,
+            "observation": 477,
+            "total": 6052,
+            "engine": 0.605
           },
           "truth": {
             "cause": "stale_selector",
@@ -2308,7 +2308,7 @@
       "title": "Renamed delete control works",
       "description": "A harmless class rename; deleting the seeded completed item succeeds.",
       "page": "apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete",
-      "duration_ms": 6023,
+      "duration_ms": 6476,
       "steps": [
         {
           "step_id": "delete_item",
@@ -2328,13 +2328,13 @@
           },
           "context": {
             "step_id": "delete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=rename&target=delete&item=b1_rename_delete",
             "original_selector": "button.destroy",
             "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 782,
+            "relocation_latency_ms": 1249,
             "risk_tier": "low"
           },
           "observations": {
@@ -2344,13 +2344,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 3532,
-            "dom_extract": 13,
-            "relocation": 782,
-            "observation": 488,
-            "total": 5810,
-            "engine": 0.597
+            "first_try": 1001,
+            "rewait": 3530,
+            "dom_extract": 12,
+            "relocation": 1249,
+            "observation": 463,
+            "total": 6248,
+            "engine": 0.491
           },
           "truth": {
             "cause": "stale_selector",
@@ -2433,7 +2433,7 @@
       "title": "Renamed completion control works",
       "description": "A harmless class rename; completing the seeded active item succeeds.",
       "page": "apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle",
-      "duration_ms": 6007,
+      "duration_ms": 5964,
       "steps": [
         {
           "step_id": "complete_item",
@@ -2453,13 +2453,13 @@
           },
           "context": {
             "step_id": "complete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=rename&target=toggle&item=b1_rename_toggle",
             "original_selector": "input.toggle",
             "proposed_selector": "input[data-todo=\"toggle\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 668,
+            "relocation_latency_ms": 744,
             "risk_tier": "low"
           },
           "observations": {
@@ -2469,13 +2469,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 3533,
-            "dom_extract": 11,
-            "relocation": 668,
-            "observation": 498,
-            "total": 5707,
-            "engine": 0.728
+            "first_try": 1001,
+            "rewait": 3532,
+            "dom_extract": 10,
+            "relocation": 744,
+            "observation": 493,
+            "total": 5776,
+            "engine": 0.402
           },
           "truth": {
             "cause": "stale_selector",
@@ -2558,7 +2558,7 @@
       "title": "Renamed delete control throws",
       "description": "An injected error blocks deletion of the seeded item.",
       "page": "apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete",
-      "duration_ms": 7424,
+      "duration_ms": 7399,
       "steps": [
         {
           "step_id": "delete_item",
@@ -2578,13 +2578,13 @@
           },
           "context": {
             "step_id": "delete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=throw&target=delete&item=b1_throw_delete",
             "original_selector": "button.destroy",
             "proposed_selector": "button[data-todo=\"destroy\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 745,
+            "relocation_latency_ms": 689,
             "risk_tier": "low"
           },
           "observations": {
@@ -2596,13 +2596,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 3534,
-            "dom_extract": 12,
-            "relocation": 745,
-            "observation": 1955,
-            "total": 7247,
-            "engine": 0.302
+            "first_try": 1003,
+            "rewait": 3540,
+            "dom_extract": 10,
+            "relocation": 689,
+            "observation": 1950,
+            "total": 7187,
+            "engine": 0.42
           },
           "truth": {
             "cause": "likely_regression",
@@ -2685,7 +2685,7 @@
       "title": "Renamed completion control throws",
       "description": "An injected error blocks completion of the seeded item.",
       "page": "apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle",
-      "duration_ms": 7457,
+      "duration_ms": 7300,
       "steps": [
         {
           "step_id": "complete_item",
@@ -2705,13 +2705,13 @@
           },
           "context": {
             "step_id": "complete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=throw&target=toggle&item=b1_throw_toggle",
             "original_selector": "input.toggle",
             "proposed_selector": "input[data-todo=\"toggle\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 634,
+            "relocation_latency_ms": 630,
             "risk_tier": "low"
           },
           "observations": {
@@ -2723,13 +2723,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1005,
-            "rewait": 3539,
-            "dom_extract": 17,
-            "relocation": 634,
-            "observation": 1975,
-            "total": 7158,
-            "engine": 0.327
+            "first_try": 1003,
+            "rewait": 3528,
+            "dom_extract": 11,
+            "relocation": 630,
+            "observation": 1973,
+            "total": 7141,
+            "engine": 0.481
           },
           "truth": {
             "cause": "likely_regression",
@@ -2812,7 +2812,7 @@
       "title": "Renamed delete control does nothing",
       "description": "The injected no-op blocks deletion of the seeded item without throwing.",
       "page": "apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete",
-      "duration_ms": 7669,
+      "duration_ms": 7551,
       "steps": [
         {
           "step_id": "delete_item",
@@ -2832,13 +2832,13 @@
           },
           "context": {
             "step_id": "delete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=noop&target=delete&item=b1_noop_delete",
             "original_selector": "button.destroy",
-            "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
+            "proposed_selector": "button.delete-control-renamed",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 876,
+            "relocation_latency_ms": 864,
             "risk_tier": "low"
           },
           "observations": {
@@ -2848,13 +2848,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1002,
-            "rewait": 3532,
-            "dom_extract": 9,
-            "relocation": 876,
-            "observation": 1993,
-            "total": 7411,
-            "engine": 0.891
+            "first_try": 1005,
+            "rewait": 3534,
+            "dom_extract": 13,
+            "relocation": 864,
+            "observation": 1949,
+            "total": 7360,
+            "engine": 0.613
           },
           "truth": {
             "cause": "likely_regression",
@@ -2937,7 +2937,7 @@
       "title": "Renamed completion control does nothing",
       "description": "The injected no-op blocks completion of the seeded item without throwing.",
       "page": "apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle",
-      "duration_ms": 7503,
+      "duration_ms": 7588,
       "steps": [
         {
           "step_id": "complete_item",
@@ -2957,13 +2957,13 @@
           },
           "context": {
             "step_id": "complete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=noop&target=toggle&item=b1_noop_toggle",
             "original_selector": "input.toggle",
             "proposed_selector": "input[data-todo=\"toggle\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": null,
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 788,
+            "relocation_latency_ms": 907,
             "risk_tier": "low"
           },
           "observations": {
@@ -2973,13 +2973,13 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1003,
-            "rewait": 3526,
-            "dom_extract": 9,
-            "relocation": 788,
-            "observation": 1960,
-            "total": 7289,
-            "engine": 3.028
+            "first_try": 1001,
+            "rewait": 3533,
+            "dom_extract": 12,
+            "relocation": 907,
+            "observation": 1959,
+            "total": 7408,
+            "engine": 0.44
           },
           "truth": {
             "cause": "likely_regression",
@@ -3062,7 +3062,7 @@
       "title": "Delete request fails",
       "description": "A local HTTP 404 represents a failed service request; the app handler is blocked.",
       "page": "apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete",
-      "duration_ms": 8010,
+      "duration_ms": 7685,
       "steps": [
         {
           "step_id": "delete_item",
@@ -3082,31 +3082,31 @@
           },
           "context": {
             "step_id": "delete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=request&target=delete&item=b1_request_delete",
             "original_selector": "button.destroy",
             "proposed_selector": "button.delete-control-renamed[data-todo=\"destroy\"]",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": "[data-b1-state=\"error\"]",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 927,
+            "relocation_latency_ms": 979,
             "risk_tier": "low"
           },
           "observations": {
             "page_errors": [],
             "console_errors": [],
             "failed_requests": [
-              "http://127.0.0.1:44167/__b1_missing_resource__?case=b1_request_delete (HTTP 404)"
+              "http://127.0.0.1:35033/__b1_missing_resource__?case=b1_request_delete (HTTP 404)"
             ]
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1006,
-            "rewait": 3546,
-            "dom_extract": 9,
-            "relocation": 927,
-            "observation": 1985,
-            "total": 7471,
-            "engine": 0.701
+            "first_try": 1004,
+            "rewait": 3536,
+            "dom_extract": 10,
+            "relocation": 979,
+            "observation": 1970,
+            "total": 7498,
+            "engine": 0.438
           },
           "truth": {
             "cause": "likely_regression",
@@ -3189,7 +3189,7 @@
       "title": "Completion request fails",
       "description": "A local HTTP 404 represents a failed service request; the app handler is blocked.",
       "page": "apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle",
-      "duration_ms": 7729,
+      "duration_ms": 7556,
       "steps": [
         {
           "step_id": "complete_item",
@@ -3209,31 +3209,31 @@
           },
           "context": {
             "step_id": "complete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=request&target=toggle&item=b1_request_toggle",
             "original_selector": "input.toggle",
-            "proposed_selector": "input[data-todo=\"toggle\"][type=\"checkbox\"]",
+            "proposed_selector": "input.toggle-control-renamed",
             "expected_state_selector": "[data-b1-state=\"success\"]",
             "error_state_selector": "[data-b1-state=\"error\"]",
             "observation_window_ms": 1500,
-            "relocation_latency_ms": 971,
+            "relocation_latency_ms": 847,
             "risk_tier": "low"
           },
           "observations": {
             "page_errors": [],
             "console_errors": [],
             "failed_requests": [
-              "http://127.0.0.1:44167/__b1_missing_resource__?case=b1_request_toggle (HTTP 404)"
+              "http://127.0.0.1:35033/__b1_missing_resource__?case=b1_request_toggle (HTTP 404)"
             ]
           },
           "relocation_error": null,
           "timings_ms": {
             "first_try": 1003,
-            "rewait": 3531,
-            "dom_extract": 8,
-            "relocation": 971,
-            "observation": 1982,
-            "total": 7493,
-            "engine": 0.374
+            "rewait": 3534,
+            "dom_extract": 9,
+            "relocation": 847,
+            "observation": 1984,
+            "total": 7376,
+            "engine": 0.405
           },
           "truth": {
             "cause": "likely_regression",
@@ -3316,7 +3316,7 @@
       "title": "Delete control renders slowly",
       "description": "The app module and seeded item appear after 1.8 seconds; the original selector is unchanged.",
       "page": "apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete",
-      "duration_ms": 3316,
+      "duration_ms": 3175,
       "steps": [
         {
           "step_id": "delete_item",
@@ -3336,7 +3336,7 @@
           },
           "context": {
             "step_id": "delete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=slow&target=delete&item=b1_slow_delete",
             "original_selector": "button.destroy",
             "proposed_selector": null,
             "expected_state_selector": "[data-b1-state=\"success\"]",
@@ -3352,11 +3352,11 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1004,
-            "rewait": 1538,
-            "observation": 536,
-            "total": 3085,
-            "engine": 0.435
+            "first_try": 1001,
+            "rewait": 1527,
+            "observation": 470,
+            "total": 3006,
+            "engine": 0.668
           },
           "truth": {
             "cause": "flaky",
@@ -3439,7 +3439,7 @@
       "title": "Completion control renders slowly",
       "description": "The app module and seeded item appear after 1.8 seconds; the original selector is unchanged.",
       "page": "apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle",
-      "duration_ms": 3490,
+      "duration_ms": 3209,
       "steps": [
         {
           "step_id": "complete_item",
@@ -3459,7 +3459,7 @@
           },
           "context": {
             "step_id": "complete_item",
-            "page_url": "http://127.0.0.1:44167/apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle",
+            "page_url": "http://127.0.0.1:35033/apps/modern-todomvc/index.html?mode=slow&target=toggle&item=b1_slow_toggle",
             "original_selector": "input.toggle",
             "proposed_selector": null,
             "expected_state_selector": "[data-b1-state=\"success\"]",
@@ -3475,11 +3475,11 @@
           },
           "relocation_error": null,
           "timings_ms": {
-            "first_try": 1006,
-            "rewait": 1534,
-            "observation": 515,
-            "total": 3064,
-            "engine": 0.451
+            "first_try": 1003,
+            "rewait": 1527,
+            "observation": 470,
+            "total": 3006,
+            "engine": 0.395
           },
           "truth": {
             "cause": "flaky",
