@@ -4,36 +4,9 @@ Marked **[built]** or **[planned]**. Planned items are specified as tasks in `do
 
 ## 1. Shape
 
-```mermaid
-flowchart LR
-  subgraph QA["QA agent [built]"]
-    SC[qa_scenarios.yaml] --> QP[agents/qa_pipeline.py]
-    QP --> RU[browser/runner.py]
-    RU --> RL[browser/relocator.py · Groq]
-  end
-  subgraph CI["CI agent [built; fixture-evaluated, historical-case demo planned]"]
-    CO[tests/fixtures/ci_cases/] --> CP[agents/ci_pipeline.py]
-    WH[ci/webhooks.py] --> ST
-    CP --> TR[ci/truncate.py]
-    CP --> FX[ci/facts.py · Groq]
-    CP --> TC[ci/tracing.py]
-  end
-  subgraph CORE["core [built, pure]"]
-    EN[engine.py] --> EV[evidence.py · adapters + Bayes]
-    EN --> DE[decision.py · min expected loss]
-    EN --> W[weights.py + weights.yaml]
-  end
-  QP --> EN
-  CP --> EN
-  QP --> ST[(db/store.py · SQLite [built])]
-  CP --> ST
-  API[api/app.py] --> QP
-  API --> CP
-  API --> ST
-  UI[frontend] --> API
-  EVAL[eval/] --> QP
-  EVAL --> CP
-```
+The [architecture diagram](../.github/modernize/assessment/engines/facts/architecture-diagram.md)
+shows the built QA and CI paths and their shared engine; the scripted legacy proposal demo is
+excluded.
 
 **Dependency rule:** `core` imports nothing from the project except its own modules. `browser` and
 `ci` import `core` models only where needed. `agents` import `core`, `browser`, `ci`, `db`. `api`

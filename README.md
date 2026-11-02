@@ -90,6 +90,7 @@ The API has no user authentication; run it on localhost only. The webhook verifi
 
 ## Documentation
 
+- [Architecture diagram](.github/modernize/assessment/engines/facts/architecture-diagram.md)
 - **[TODO](TODO.md)** · [Brief](docs/brief.md) · [Spec](docs/spec.md) · [Plan](docs/plan.md) · [Tasks](docs/tasks.md) · [Progress](docs/progress.md)
 - [Engine contract](docs/contracts/engine_io.md) · [QA evidence contract](docs/contracts/raw_signals.md) · [ADRs](docs/adr/)
 - [Contributing](docs/contributing.md) · [Troubleshooting](docs/troubleshooting.md) · [Tools, AI use and risks](docs/disclosure.md)
