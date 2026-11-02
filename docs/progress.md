@@ -6,26 +6,14 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- B1 is complete on `feature/real-app-cases`. Copied Modern TodoMVC at upstream revision
-  `58e4669bd959f1b8f8c63a8b2ab6f55173f6104d`, added attribution and a query-driven mutation harness,
-  and added ten owner-approved ground-truth cases. After fixing the CLI to skip the non-policy
-  `timing` summary entry, `make eval` passed on 22 steps: blind_heal 9/22 acceptable, 10/10 masked
-  regressions, 0 needless escalations; penalty_rule 19/22, 0/10, 0; simple_rule 21/22, 0/10, 1;
-  triagecore 22/22, 0/10, 0. Report: `results/qa_eval_latest.json`.
-- Updated the pipeline tests after PR CI exposed hard-coded assumptions for the old 12-row dataset.
-  Original-baseline regression checks remain scoped to their four original scenarios; B1 dataset
-  counts are derived from the labeled report. Full `.venv/bin/python -m pytest -q` passes (91 tests).
-- Architecture audit 2026-10-27 found no need for a structural redesign. The main remaining evidence
-  work is a fresh frozen QA comparison and a real CI corpus; C10 remains preliminary, with B3/C13
-  tracking follow-up work.
-- The project owner approved CI `bug` escalation and a `diagnosis_reliable` output on 2026-11-02;
-  these are recorded in `docs/plan.md` and still need implementation tasks before they are enforced.
-- The project owner requested Q5 (make the real QA app visible/openable) and C14 (analyze reviewed
-  historical CI cases in the UI) for the FYP-1 demo on 2026-11-02. These are offline/read-only; live
-  GitHub ingestion stays in FYP-2. Supervisor review of this scope adjustment is pending.
-
+- Q5 is complete on `feature/fyp1-final-calibration`. QA Engine labels and groups the ten B1
+  Modern TodoMVC scenarios, identifies the upstream app and deterministic mutations, and opens
+  the selected query-mutated app through the API's `/apps/` static route. Added route/metadata
+  tests; `.venv/bin/python -m pytest -q tests/test_api.py tests/test_pipeline.py` passed (9 tests).
+  Frontend lint and production build passed. The reviewer-requested supervisor scope review remains
+  listed below.
 ## Blockers / questions for the team
-- Supervisor review of the additional FYP-1 demo scope (Q5, C14) before implementation.
+- Supervisor review of the additional FYP-1 demo scope (Q5, C14) remains pending; confirm before including the additions in the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
   AI-drafted working documents.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,

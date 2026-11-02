@@ -29,6 +29,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.mount("/tests/dummy", StaticFiles(directory=str(REPO_ROOT / "tests" / "dummy")), name="dummy")
+app.mount("/apps", StaticFiles(directory=str(REPO_ROOT / "tests" / "apps")), name="apps")
 app.include_router(qa_router)
 app.include_router(ci_webhook_router)
 app.include_router(ci_router)

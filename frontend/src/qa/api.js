@@ -23,4 +23,6 @@ export const qaApi = {
   latestEvaluation: () => request('/api/qa/evaluation/latest'),
 };
 
-export const pageUrl = (page) => `${API_BASE}/tests/dummy/${page}`;
+export const pageUrl = (page) => page.startsWith('apps/')
+  ? `${API_BASE}/${page}`
+  : `${API_BASE}/tests/dummy/${page}`;
