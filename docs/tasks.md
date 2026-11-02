@@ -95,9 +95,10 @@ done and the evidence. Tick a box only when the evidence column can be shown liv
 - [ ] Running on a remote machine, not localhost. → **D1**
 
 ### FYP-1 final evidence · in progress
-- [ ] Frozen QA evaluation includes all enabled baselines and confidence intervals. → **B3**
+- [x] Frozen QA evaluation includes all enabled baselines and confidence intervals. *Evidence: B3 complete; frozen results recorded in `results/`.* → **B3**
 - [x] CI extraction failures are explicit and excluded from ordinary model scoring; fixture smoke result is honestly labelled. *Evidence: `tests/test_ci_pipeline.py`; timestamped two-fixture smoke artifact `results/ci_eval_20261102-124852.json` reports 2 scored, 0 extraction failures, 0 pipeline errors and is labelled preliminary.* → **C13**
-- [ ] Human-reviewed real CI corpus and held-out calibration are complete. → **C3**, **C12**
+- [x] Human-reviewed real CI corpus is complete. *Evidence: C3, 206 reviewed cases; at least 3 per cause.* → **C3**
+- [ ] CI held-out calibration is complete. *Deferred until after the FYP-1 demo; C12 remains blocked until more human-reviewed flaky cases support a meaningful split.* → **C12**
 
 ### M6–M8 · FYP-2 · not started
 - [ ] M6: agent opens (never merges) a PR with score and trace in the body; dashboard of stored decisions.

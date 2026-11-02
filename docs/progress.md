@@ -6,6 +6,12 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
+- FYP-1 final-calibration branch is ready to merge after review: Q5, C3, C13, B3 and C14 are
+  complete. C12 is intentionally deferred and does not block this merge. Run the FYP-1 final demo
+  after demo preparation; then collect and review more flaky cases.
+  Start C12 on a follow-up branch only when the reviewed corpus can support a meaningful
+  train/holdout split. Keep C12 `[!]` until then so `next` does not select it prematurely.
+- Supervisor confirmed scope sign-off for Q5 and C14.
 - C14 complete (2026-11-02): the CI Engine catalogue includes only corpus cases with both reviewed
   `label` and `label_source`, hides historical labels until analysis, and links safe repository/run
   metadata to GitHub. The offline demo applies the existing `default` CI policy tier to corpus runs
@@ -13,7 +19,6 @@ History lives in git and `docs/log/ai-usage-log.md`.
   Extraction failures remain distinct and show no invented facts. Verified by 12 CI tests, frontend
   lint, frontend build, and ruff. Fixture evaluation remains fixture-only.
 ## Blockers / questions for the team
-- Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
   AI-drafted working documents.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
