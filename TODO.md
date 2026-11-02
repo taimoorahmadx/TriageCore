@@ -85,7 +85,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 - [!] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11 · only 3 reviewed flaky cases, insufficient for a meaningful train/holdout split
 - [x] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
 - [x] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4
-- [ ] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
+- [x] C14 · Demo reviewed historical GitHub Actions runs in CI Engine from the C3 corpus · after C3, C11, C13
 
 → Merge into `main`.
 

@@ -9,7 +9,7 @@ import statistics
 from datetime import datetime
 from typing import Any
 
-from src.agents.ci_pipeline import REPO_ROOT, load_cases, run_cases, score_case
+from src.agents.ci_pipeline import DEFAULT_CASES_DIR, REPO_ROOT, load_cases, run_cases, score_case
 from src.ci.facts import FactExtractor
 from src.core.engine import ConfidenceEngine
 from src.eval.stats import wilson_interval
@@ -66,7 +66,7 @@ def evaluate(
 ) -> dict[str, Any]:
     started = datetime.now()
     cases = load_cases()
-    raw_results = run_cases(engine=engine, extractor=extractor)
+    raw_results = run_cases(engine=engine, extractor=extractor, cases_dir=DEFAULT_CASES_DIR)
     logs = {case["id"]: case["log"] for case in cases}
     rows = []
     for result in raw_results:

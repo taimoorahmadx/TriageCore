@@ -64,11 +64,12 @@ export function CIEngineScreen() {
   return (
     <div className="mx-auto max-w-6xl space-y-6 px-6 py-10">
       <header className="space-y-2">
-        <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">CI agent · fixture cases</div>
+        <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">CI agent · saved cases</div>
         <h1 className="text-2xl font-semibold tracking-tight text-white">Why did this CI run fail?</h1>
         <p className="max-w-3xl text-sm leading-relaxed text-neutral-400">
-          Analyze a fixture log. The pipeline masks secrets, extracts structured facts, traces changed files to commits,
-          then asks the shared ConfidenceEngine whether to rerun, propose an auto-fix, or escalate.
+          Analyze a saved public log or fixture. The pipeline masks secrets, extracts structured facts, traces changed files to commits,
+          then asks the shared ConfidenceEngine whether to rerun, propose an auto-fix, or escalate. Historical analysis is read-only,
+          does not connect to GitHub, and may call the configured fact extractor. Historical runs use the configured default CI policy tier.
         </p>
       </header>
 
@@ -78,7 +79,7 @@ export function CIEngineScreen() {
             <span>CI cases</span><span>{cases.length}</span>
           </div>
           {loadingCases && <p className="px-1 text-xs text-neutral-400">Loading cases…</p>}
-          {!loadingCases && cases.length === 0 && !error && <p className="px-1 text-xs text-neutral-400">No fixture cases found.</p>}
+          {!loadingCases && cases.length === 0 && !error && <p className="px-1 text-xs text-neutral-400">No cases found.</p>}
           {cases.map((item) => (
             <button
               key={item.id}
@@ -89,7 +90,9 @@ export function CIEngineScreen() {
               {selected === item.id && <span className="absolute inset-y-0 left-0 w-1 bg-[#0a84ff]" />}
               <span className="block break-all text-sm font-semibold text-white">{item.id}</span>
               <span className="mt-1 block font-mono text-[11px] text-neutral-400">{item.repo || 'fixture'} · run {item.run_id}</span>
-              <span className="mt-2 inline-flex rounded border border-white/[0.08] bg-white/[0.04] px-2 py-0.5 text-[10px] uppercase tracking-wide text-neutral-300">True label: {item.label || 'unknown'}</span>
+              {item.source_type === 'historical_github_actions'
+                ? <span className="mt-2 inline-flex rounded border border-white/[0.08] bg-white/[0.04] px-2 py-0.5 text-[10px] uppercase tracking-wide text-neutral-300">Historical GitHub Actions run</span>
+                : <span className="mt-2 inline-flex rounded border border-white/[0.08] bg-white/[0.04] px-2 py-0.5 text-[10px] uppercase tracking-wide text-neutral-300">True label: {item.label || 'unknown'}</span>}
             </button>
           ))}
         </aside>
@@ -100,6 +103,7 @@ export function CIEngineScreen() {
               <div>
                 <div className="font-mono text-[11px] uppercase tracking-wider text-neutral-500">{selectedCase.repo} · run {selectedCase.run_id}</div>
                 <h2 className="mt-1 break-all text-lg font-semibold text-white">{selectedCase.id}</h2>
+                {selectedCase.source_type === 'historical_github_actions' && <div className="mt-2 text-xs text-neutral-400">Historical GitHub Actions run · saved public log{selectedCase.source_url && <> · <a className="text-[#0a84ff] underline" href={selectedCase.source_url} target="_blank" rel="noreferrer">View source run</a></>}</div>}
               </div>
               <button type="button" onClick={analyze} disabled={running} className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-sm disabled:opacity-40">
                 {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
@@ -109,7 +113,7 @@ export function CIEngineScreen() {
           )}
 
           {error && <div role="alert" className="flex items-start gap-2 rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 px-4 py-3 text-sm text-neutral-200"><AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-[#ff453a]" />{error}</div>}
-          {!result && !running && selectedCase && !error && <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-sm text-neutral-400">Select <b className="text-neutral-200">Analyze CI case</b> to run the real extraction and decision pipeline for this fixture.</div>}
+          {!result && !running && selectedCase && !error && <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-sm text-neutral-400">Select <b className="text-neutral-200">Analyze CI case</b> to run the extraction and decision pipeline for this saved case.</div>}
           {running && <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 text-sm text-neutral-400">Fact extraction can take a few seconds. The decision will escalate safely if evidence extraction fails.</div>}
 
           {result && (
@@ -118,8 +122,8 @@ export function CIEngineScreen() {
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <div className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-neutral-500">
-                      {result.status === 'error' ? <ShieldAlert className="h-4 w-4 text-[#ff453a]" /> : <CheckCircle2 className="h-4 w-4 text-[#30d158]" />}
-                      Engine decision · {result.status}
+                      {result.status !== 'ok' ? <ShieldAlert className="h-4 w-4 text-[#ff453a]" /> : <CheckCircle2 className="h-4 w-4 text-[#30d158]" />}
+                      {result.status === 'extraction_failed' ? 'Fact extraction failed · safe escalation' : result.status === 'error' ? 'Pipeline error · safe escalation' : `Engine decision · ${result.status}`}
                     </div>
                     <h2 className="mt-2 text-xl font-semibold text-white">{result.classification ? CI_CAUSES[result.classification]?.label || result.classification : 'Could not classify'}</h2>
                     <p className="mt-1 text-sm text-neutral-400">Diagnosis: <b className="text-neutral-200">{result.classification || 'unavailable'}</b>{result.confidence_score != null && <> · confidence {result.confidence_score}%</>}</p>
@@ -133,11 +137,12 @@ export function CIEngineScreen() {
                 {result.reasoning_trace && <details className="mt-4 border-t border-white/[0.06] pt-3"><summary className="cursor-pointer text-xs font-semibold text-neutral-300">Engine reasoning</summary><p className="mt-2 whitespace-pre-wrap text-xs leading-relaxed text-neutral-400">{result.reasoning_trace}</p></details>}
               </div>
 
-              <Panel title="Secret-masked log excerpt">
+              {result.status === 'extraction_failed' && <div role="alert" className="rounded-xl border border-[#ff453a]/30 bg-[#ff453a]/10 p-4 text-sm text-neutral-200">Fact extraction failed. No extracted facts are available; the engine escalated safely.</div>}
+              {result.status === 'ok' && <Panel title="Secret-masked log excerpt">
                 <pre className="max-h-72 overflow-auto whitespace-pre-wrap break-words rounded-lg bg-black/50 p-3 font-mono text-[11px] leading-relaxed text-neutral-300">{result.log_excerpt || 'No log excerpt available.'}</pre>
-              </Panel>
+              </Panel>}
 
-              <div className="grid gap-4 xl:grid-cols-2">
+              {result.status === 'ok' && <div className="grid gap-4 xl:grid-cols-2">
                 <Panel title="Extracted facts">
                   <dl className="space-y-2 text-xs">
                     {FACT_LABELS.map(([key, label]) => (
@@ -158,9 +163,9 @@ export function CIEngineScreen() {
                   {result.trace?.candidates?.length ? <ul className="mt-1 space-y-1">{result.trace.candidates.map((sha) => <li key={sha} className="break-all rounded bg-black/30 px-2 py-1 font-mono text-[11px] text-neutral-300">{sha}</li>)}</ul> : <p className="mt-1 text-xs text-neutral-400">None</p>}
                   <p className="mt-3 text-[11px] text-neutral-500">Failing files: <span className="font-mono text-neutral-300">{result.trace?.failing_files?.join(', ') || 'none identified'}</span></p>
                 </Panel>
-              </div>
+              </div>}
 
-              {result.details?.posterior && (
+              {result.status === 'ok' && result.details?.posterior && (
                 <div className="grid gap-4 xl:grid-cols-2">
                   <Panel title="Posterior by cause">
                     <CauseBars posterior={result.details.posterior} order={CI_CAUSE_ORDER} causes={CI_CAUSES} />
@@ -172,9 +177,9 @@ export function CIEngineScreen() {
               )}
 
               <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.06] bg-white/[0.02] px-4 py-3 text-xs text-neutral-300">
-                <span>True label: <b className="font-mono text-white">{result.label || selectedCase?.label || 'unknown'}</b></span>
+                  <span>Reviewed label: <b className="font-mono text-white">{result.label || selectedCase?.label || 'unknown'}</b></span>
                 <span className={result.score?.action_acceptable ? 'text-[#30d158]' : 'text-[#ff9f0a]'}>
-                  {result.score?.action_acceptable ? '✓ Action matches fixture label' : 'Action differs from fixture expectation'}
+                  {result.score?.action_acceptable ? '✓ Recommendation matches reviewed label' : 'Recommendation differs from reviewed label'}
                 </span>
                 {result.duration_ms != null && <span className="font-mono text-neutral-500">{result.duration_ms.toFixed(0)} ms</span>}
               </div>

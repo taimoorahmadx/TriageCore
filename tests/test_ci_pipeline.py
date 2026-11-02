@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.agents.ci_pipeline import load_cases, run_case, run_cases
+from src.agents.ci_pipeline import load_cases, load_demo_cases, run_case, run_cases
 from src.ci.facts import CILogFacts, FixedFactExtractor
 from src.core.engine import ConfidenceEngine
 from src.eval.evaluate_ci import evaluate, keyword_rule
@@ -86,6 +86,31 @@ def test_run_cases_rejects_unknown_ids():
         assert "missing" in str(exc)
     else:
         raise AssertionError("unknown fixture id was accepted")
+
+
+def test_demo_catalog_includes_only_reviewed_historical_cases():
+    cases = load_demo_cases()
+    historical = [case for case in cases if case["source_type"] == "historical_github_actions"]
+    assert historical
+    assert all(case.get("label") and case.get("label_source") for case in historical)
+    assert {case["id"] for case in cases if case["source_type"] == "fixture"} == {
+        "dependency_failure", "hosted_runner_timeout"
+    }
+
+
+def test_reviewed_historical_case_runs_through_pipeline():
+    case = next(case for case in load_demo_cases() if case["source_type"] == "historical_github_actions")
+    result = run_cases(
+        [case["id"]], engine=ConfidenceEngine(),
+        extractor=FixedFactExtractor(CILogFacts(failure_kind="other")),
+    )[0]
+    assert result["status"] == "ok"
+    assert result["source_type"] == "historical_github_actions"
+    assert result["repo"] == case["repo"]
+    assert result["run_id"] == case["run_id"]
+    assert result["context"]["risk_tier"] == "default"
+    assert result["facts"]["failure_kind"] == "other"
+    assert result["reasoning_trace"]
 
 
 def test_evaluation_reports_policies_intervals_and_preliminary_status():

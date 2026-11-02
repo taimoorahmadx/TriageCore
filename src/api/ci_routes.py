@@ -8,7 +8,7 @@ from typing import Any
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from src.agents.ci_pipeline import load_cases, run_cases
+from src.agents.ci_pipeline import load_demo_cases, run_cases
 from src.api.qa_routes import get_engine
 from src.ci.facts import GroqFactExtractor
 from src.db.store import default_store
@@ -19,10 +19,22 @@ router = APIRouter(prefix="/api/ci", tags=["ci"])
 
 @router.get("/cases")
 def cases() -> list[dict[str, Any]]:
-    return [
-        {"id": case["id"], "repo": case.get("repo"), "run_id": case.get("run_id"), "label": case.get("label")}
-        for case in load_cases()
-    ]
+    result = []
+    for case in load_demo_cases():
+        historical = case.get("source_type") == "historical_github_actions"
+        repo, run_id = case.get("repo"), case.get("run_id")
+        safe_repo = isinstance(repo, str) and all(
+            part and part not in {".", ".."} and part.replace("-", "").replace("_", "").isalnum()
+            for part in repo.split("/")
+        ) and len(repo.split("/")) == 2
+        result.append({
+            "id": case["id"], "repo": repo, "run_id": run_id,
+            "source_type": case.get("source_type", "fixture"),
+            "source_url": f"https://github.com/{repo}/actions/runs/{run_id}"
+            if historical and safe_repo and str(run_id).isdigit() else None,
+            **({} if historical else {"label": case.get("label")}),
+        })
+    return result
 
 
 class RunRequest(BaseModel):

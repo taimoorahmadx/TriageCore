@@ -6,24 +6,12 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C3 is complete under the owner-approved minimum of 3 reviewed cases per cause (2026-11-02): 209
-  cases, 206 reviewed labels (69 `bug`, 66 `dependency`, 3 `flaky`, 68 `infra`). The three `flaky`
-  cases have same-SHA failed-then-passed run-history evidence. Three cases without `suggested_label`
-  remain unlabelled; one BUMP candidate was skipped because GitHub returned 404 for its project
-  repository. Counts by source and label are in the README.
-- 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Fix diffs and BUMP
-  `failureCategory` informed suggestions only; fix-side fields never enter engine evidence. The
-  owner reviewed and approved the suggested labels, which are now recorded with one-line evidence.
-- B3 frozen QA evaluation: `results/frozen/2026-11-02_ef97bea3508c94f6743c74d9eebd47349db00e43.json`
-  and matching CSV. `make eval` ran at 2026-11-02 17:23:15 using source revision
-  `ef97bea3508c94f6743c74d9eebd47349db00e43`; 22 labeled failing steps: 12 team-suite and 10 B1
-  Modern TodoMVC steps (`stale_selector` 9, `likely_regression` 10, `flaky` 3). Enabled policies:
-  `blind_heal`, `penalty_rule`, `simple_rule`, `triagecore`; 95% Wilson intervals are included.
-  `llm_judge` was disabled. QA weights were unchanged (SHA-256
-  `af5ba666d06c67ffaead412fdc1d5880355096f6af78ddf0d23b3729c68f945a`; provenance in
-  `docs/contracts/weights_elicitation.md`). Relocation used Groq model `openai/gpt-oss-20b`.
-  This is a small mixed team-suite/real-app comparison, not a held-out calibration or broad
-  generalisation result; the raw frozen JSON does not embed the source revision or weight hash.
+- C14 complete (2026-11-02): the CI Engine catalogue includes only corpus cases with both reviewed
+  `label` and `label_source`, hides historical labels until analysis, and links safe repository/run
+  metadata to GitHub. The offline demo applies the existing `default` CI policy tier to corpus runs
+  whose recorded tier is `medium`, as approved by the owner; weights and evidence contract unchanged.
+  Extraction failures remain distinct and show no invented facts. Verified by 12 CI tests, frontend
+  lint, frontend build, and ruff. Fixture evaluation remains fixture-only.
 ## Blockers / questions for the team
 - Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
