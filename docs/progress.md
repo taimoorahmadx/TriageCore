@@ -12,6 +12,9 @@ History lives in git and `docs/log/ai-usage-log.md`.
   `timing` summary entry, `make eval` passed on 22 steps: blind_heal 9/22 acceptable, 10/10 masked
   regressions, 0 needless escalations; penalty_rule 19/22, 0/10, 0; simple_rule 21/22, 0/10, 1;
   triagecore 22/22, 0/10, 0. Report: `results/qa_eval_latest.json`.
+- Updated the pipeline tests after PR CI exposed hard-coded assumptions for the old 12-row dataset.
+  Original-baseline regression checks remain scoped to their four original scenarios; B1 dataset
+  counts are derived from the labeled report. Full `.venv/bin/python -m pytest -q` passes (91 tests).
 - Architecture audit 2026-10-27 found no need for a structural redesign. The main remaining evidence
   work is a fresh frozen QA comparison and a real CI corpus; C10 remains preliminary, with B3/C13
   tracking follow-up work.

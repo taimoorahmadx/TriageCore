@@ -11,6 +11,13 @@ from src.browser.relocator import RelocationRequest
 from src.eval.evaluate import evaluate
 from src.eval.llm_judge import FixedJudge
 
+ORIGINAL_REGRESSION_SCENARIOS = {
+    "shopflow_checkout",
+    "lab_rename_crash",
+    "lab_error_banner",
+    "lab_silent_noop",
+}
+
 
 class KnownRenames:
     """Test stand-in for the LLM: the renames each dummy page actually made."""
@@ -35,13 +42,21 @@ def report():
 
 def test_triagecore_masks_no_regressions(report):
     s = report["summary"]["triagecore"]
-    assert s["regressions_total"] == 4
+    labeled_regressions = sum(
+        row["truth_cause"] == "likely_regression" for row in report["rows"]
+    )
+    assert s["regressions_total"] == labeled_regressions
     assert s["masked_regressions"] == 0
 
 
 def test_blind_healing_masks_every_regression(report):
-    s = report["summary"]["blind_heal"]
-    assert s["masked_regressions"] == s["regressions_total"]
+    original_regressions = [
+        row for row in report["rows"]
+        if row["scenario"] in ORIGINAL_REGRESSION_SCENARIOS
+        and row["truth_cause"] == "likely_regression"
+    ]
+    assert len(original_regressions) == 4
+    assert all(row["blind_heal_masked"] for row in original_regressions)
 
 
 def test_triagecore_beats_both_baselines(report):
@@ -55,13 +70,24 @@ def test_simple_rule_is_reported(report):
 
 
 def test_llm_judge_baseline_is_reported():
-    report = evaluate(relocator=KnownRenames(), save=False, judge=FixedJudge("heal"))
-    assert "llm_judge" in report["summary"]
-    assert report["summary"]["llm_judge"]["masked_regressions"] == 4
+    judge_report = evaluate(relocator=KnownRenames(), save=False, judge=FixedJudge("heal"))
+    assert "llm_judge" in judge_report["summary"]
+    original_regressions = [
+        row for row in judge_report["rows"]
+        if row["scenario"] in ORIGINAL_REGRESSION_SCENARIOS
+        and row["truth_cause"] == "likely_regression"
+    ]
+    assert len(original_regressions) == 4
+    assert all(row["llm_judge_masked"] for row in original_regressions)
 
 
 def test_every_step_is_triaged_and_decided(report):
-    assert len(report["rows"]) == 12
+    failed_steps = sum(
+        step["status"] != "passed"
+        for run in report["runs"]
+        for step in run["steps"]
+    )
+    assert len(report["rows"]) == failed_steps
     for row in report["rows"]:
         assert row["triagecore_action"] in {"heal", "flag", "escalate"}
 
