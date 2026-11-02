@@ -81,7 +81,7 @@ No task files. Steps and file:line evidence are in `.agents/tasks/architecture-a
 
 ## 9. `feature/fyp1-final-calibration` · end-of-FYP-1 dataset and calibration
 - [x] Q5 · Surface the Modern TodoMVC real-app scenarios in QA Engine (live), with a working app preview link · after B1
-- [~] C3 · Build and human-review the CI corpus · next: lca (bug) and BUMP (dependency) importers, c3.md steps 6–10
+- [x] C3 · Build and human-review the CI corpus · 206 reviewed cases; at least five per cause
 - [ ] C12 · Final CI weight calibration on reviewed data · after C3, C10, C11
 - [x] C13 · Report CI fact-extraction failures separately and rerun the fixture smoke evaluation · after C10; do before C3 evaluation
 - [ ] B3 · Rerun and freeze the QA baseline evaluation · after B2, Q3, Q4

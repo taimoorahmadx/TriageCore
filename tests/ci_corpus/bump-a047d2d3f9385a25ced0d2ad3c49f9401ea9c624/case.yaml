@@ -68,8 +68,8 @@ commits:
   author: jglick
   files:
   - .github/workflows/maven.yml
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory TEST_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

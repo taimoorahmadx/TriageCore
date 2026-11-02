@@ -44,8 +44,8 @@ commits:
   author: arsaboo
   files:
   - beetsplug/lastimport.py
-label: null
-label_source: null
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
 risk_tier: medium
 source: lca
 suggested_label: bug

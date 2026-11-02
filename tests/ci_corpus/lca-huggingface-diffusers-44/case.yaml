@@ -102,8 +102,8 @@ commits:
   - tests/pipelines/controlnet/test_controlnet.py
   - tests/pipelines/stable_diffusion_xl/test_stable_diffusion_xl_k_diffusion.py
   - tests/pipelines/stable_video_diffusion/test_stable_video_diffusion.py
-label: null
-label_source: null
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
 risk_tier: medium
 source: lca
 suggested_label: bug

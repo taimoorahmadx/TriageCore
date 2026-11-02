@@ -60,8 +60,8 @@ commits:
   - errbot/core_plugins/templates/webserver.md
   - errbot/core_plugins/webserver.py
   - tests/commands_test.py
-label: null
-label_source: null
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
 risk_tier: medium
 source: lca
 suggested_label: bug

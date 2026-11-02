@@ -79,7 +79,7 @@ commits:
   - Lib/multiprocessing/shared_memory.py
   - Lib/test/_test_multiprocessing.py
   - Misc/NEWS.d/next/Library/2026-10-22-05-20-27.gh-issue-161098.voMVnd.rst
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

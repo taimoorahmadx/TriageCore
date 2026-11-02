@@ -893,7 +893,7 @@ commits:
   - tests/components/schedule/test_init.py
   - tests/components/schedule/test_recorder.py
   - tests/components/schedule/test_trigger.py
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

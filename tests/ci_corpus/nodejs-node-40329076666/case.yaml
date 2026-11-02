@@ -79,7 +79,7 @@ commits:
   files:
   - tools/nix/openssl-matrix.nix
   - tools/nix/pkgs.nix
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

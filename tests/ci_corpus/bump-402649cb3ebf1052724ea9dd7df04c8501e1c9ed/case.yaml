@@ -713,8 +713,8 @@ commits:
   - .github/release-note-generation/testdata/java-maps-mapsplatformdatasets/pom.xml
   - .github/release-note-generation/testdata/nested1/nested2/test-java-analytics-admin/pom.xml
   - generation/check_non_release_please_versions.sh
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

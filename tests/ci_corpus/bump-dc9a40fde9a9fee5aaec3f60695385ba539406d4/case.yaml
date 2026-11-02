@@ -203,8 +203,8 @@ commits:
   - arex-instrumentation-foundation/src/main/java/io/arex/foundation/util/AsyncHttpClientUtil.java
   - arex-instrumentation-foundation/src/test/java/io/arex/foundation/util/AsyncHttpClientUtilTest.java
   - arex-instrumentation/dynamic/arex-dynamic-common/src/main/java/io/arex/inst/dynamic/common/DynamicClassExtractor.java
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

@@ -81,8 +81,8 @@ commits:
   - src/main/java/micycle/pgs/PGS_ShapeBoolean.java
   - src/main/java/micycle/pgs/PGS_ShapePredicates.java
   - src/test/java/micycle/pgs/PGS_ShapePredicatesTests.java
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

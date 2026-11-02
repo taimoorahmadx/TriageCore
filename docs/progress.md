@@ -6,14 +6,13 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C3 is in progress. The corpus has 209 cases: 73 mined, 68 lca, and 68 BUMP. The 45 reviewed
-  mined cases remain 41 `infra`, 3 `flaky`, 1 `bug`, and 0 `dependency`; every imported case still
-  has `label: null` and `label_source: null` for human review. One BUMP case was skipped because
-  GitHub returned 404 for its project repository; the importer also excludes records without a
-  matching GitHub Actions log.
+- C3 is complete. The corpus has 209 cases: 73 mined, 68 lca, and 68 BUMP. There are 206
+  human-reviewed labels: 69 `bug`, 66 `dependency`, 3 `flaky`, and 68 `infra`. Three cases without
+  `suggested_label` remain unlabelled. One BUMP candidate was skipped because GitHub returned 404
+  for its project repository. Counts by source and label are in `tests/ci_corpus/README.md`.
 - 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Fix diffs and BUMP
-  `failureCategory` write `suggested_label` only; they never enter engine evidence. Imported cases
-  keep `label` and `label_source` null until human review.
+  `failureCategory` informed suggestions only; fix-side fields never enter engine evidence. The
+  owner reviewed and approved the suggested labels, which are now recorded with one-line evidence.
 ## Blockers / questions for the team
 - Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
@@ -26,12 +25,9 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - D1 needs a human-created VM, Docker, an API token, and firewall setup.
 - CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
   commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
-- C3 still needs at least five reviewed `bug`, `dependency`, and `flaky` cases. The new lca and BUMP
-  cases need human review. Do not assign labels based only on `suggested_label`.
 - Verified: BUMP has `workflowLogs/`; Zheng/Lin Table 3 counts are recorded in the dataset survey.
   lca (`default` config, 68 cases) fixes are all code changes: lca gives `bug` only, and BUMP gives
-  `dependency`. All three human checks are done; importers ran successfully, and imported cases
-  still need human review.
+  `dependency`. Importers ran; the human owner approved the suggestions before labels were set.
 - Owner approved (2026-11-02, not yet applied): `flaky` is defined by mechanism, and `rerun` is also
   correct for transient `infra`. Apply it in C12 with an ADR 006 addendum, never earlier.
 - C12 requires reviewed labels and enough cases for a

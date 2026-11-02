@@ -71,7 +71,7 @@ commits:
   - pandas/_libs/src/vendored/ujson/lib/ultrajsonenc.c
   - pandas/tests/io/json/test_pandas.py
   - pandas/tests/io/json/test_ujson.py
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

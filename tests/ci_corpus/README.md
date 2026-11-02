@@ -106,18 +106,18 @@ excluded from evaluation.
 | Reviewed label | Count |
 |---|---:|
 | `flaky` | 3 |
-| `dependency` | 0 |
-| `bug` | 1 |
-| `infra` | 41 |
-| **Total verified** | **45** |
+| `dependency` | 66 |
+| `bug` | 69 |
+| `infra` | 68 |
+| **Total verified** | **206** |
 
 ## Cases by source
 
 | Source | Cases | Reviewed | flaky | dependency | bug | infra |
 |---|---:|---:|---:|---:|---:|---:|
-| `mined` | 73 | 45 | 3 | 0 | 1 | 41 |
-| `lca` | 68 | 0 | 0 | 0 | 0 | 0 |
-| `bump` | 68 | 0 | 0 | 0 | 0 | 0 |
+| `mined` | 73 | 72 | 3 | 0 | 1 | 68 |
+| `lca` | 68 | 68 | 0 | 0 | 68 | 0 |
+| `bump` | 68 | 66 | 0 | 66 | 0 | 0 |
 | `injected` | 0 | 0 | 0 | 0 | 0 | 0 |
 
 Counts are regenerated whenever the collector runs and include only cases with both a reviewed

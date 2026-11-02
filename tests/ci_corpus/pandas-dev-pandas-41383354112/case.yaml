@@ -72,7 +72,7 @@ commits:
   - pandas/io/common.py
   - pandas/tests/io/parser/test_network.py
   - pandas/tests/io/test_common.py
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

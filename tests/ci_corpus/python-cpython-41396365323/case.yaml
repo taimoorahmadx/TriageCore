@@ -50,7 +50,7 @@ commits:
   - Doc/c-api/buffer.rst
   - Doc/c-api/long.rst
   - Doc/c-api/structures.rst
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

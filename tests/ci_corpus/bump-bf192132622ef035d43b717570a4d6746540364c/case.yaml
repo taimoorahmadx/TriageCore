@@ -75,8 +75,8 @@ commits:
   - optaplanner-wb-ui/pom.xml
   - optaplanner-wb-webapp/pom.xml
   - pom.xml
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory DEPENDENCY_RESOLUTION_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

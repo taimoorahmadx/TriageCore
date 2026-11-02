@@ -117,8 +117,8 @@ commits:
   - src/it/failures/wrong-version/pom.xml
   - src/it/failures/wrong-version/postbuild.groovy
   - src/main/java/se/vandmo/dependencylock/maven/LockedDependencies.java
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory DEPENDENCY_LOCK_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

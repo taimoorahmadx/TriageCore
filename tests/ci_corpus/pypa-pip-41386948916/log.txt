@@ -1,0 +1,10 @@
+===== Check PR template/system.txt =====
+2026-11-02T04:10:14.2920000Z Evaluating check-pr-template.if
+2026-11-02T04:10:14.2920000Z Evaluating: (success() && (!contains(github.event.pull_request.labels.*.name, 'skip PR template check')))
+2026-11-02T04:10:14.2920000Z Expanded: (true && !contains(Array, 'skip PR template check'))
+2026-11-02T04:10:14.2920000Z Result: true
+2026-11-02T04:10:14.5200000Z Requested labels: ubuntu-slim
+2026-11-02T04:10:14.5200000Z Job defined at: pypa/pip/.github/workflows/check-pr-template.yml@refs/pull/14420/merge
+2026-11-02T04:10:14.5200000Z Waiting for a runner to pick up this job...
+2026-11-02T04:10:15.0220000Z Job is waiting for a hosted runner to come online.
+2026-11-02T04:10:15.0230000Z Job is about to start running on the hosted runner: GitHub Actions 1000833477

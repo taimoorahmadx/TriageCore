@@ -61,8 +61,8 @@ commits:
   author: l3r8yJ
   files:
   - src/main/java/com/github/lombrozo/testnames/Assertion.java
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

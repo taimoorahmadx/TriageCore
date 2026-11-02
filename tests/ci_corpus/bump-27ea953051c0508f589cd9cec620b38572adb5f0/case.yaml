@@ -225,8 +225,8 @@ commits:
   - java-essential-contacts/proto-google-cloud-essential-contacts-v1/src/main/java/com/google/cloud/essentialcontacts/v1/Service.java
   - java-essential-contacts/proto-google-cloud-essential-contacts-v1/src/main/proto/google/cloud/essentialcontacts/v1/enums.proto
   - java-essential-contacts/proto-google-cloud-essential-contacts-v1/src/main/proto/google/cloud/essentialcontacts/v1/service.proto
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

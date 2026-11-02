@@ -100,8 +100,8 @@ commits:
   - src/main/java/micycle/pgs/PGS_Contour.java
   - src/main/java/micycle/pgs/PGS_Processing.java
   - src/main/java/micycle/pgs/commons/ShapeInterpolation.java
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory COMPILATION_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

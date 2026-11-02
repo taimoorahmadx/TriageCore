@@ -752,8 +752,8 @@ commits:
   - packages/google-cloud-config/samples/generated_samples/snippet_metadata_google.cloud.config.v1.json
   - packages/google-cloud-config/scripts/fixup_config_v1_keywords.py
   - packages/google-cloud-config/tests/unit/gapic/config_v1/test_config.py
-label: null
-label_source: null
+label: bug
+label_source: "Human approved the lca fix-diff suggestion: code/test files changed."
 risk_tier: medium
 source: lca
 suggested_label: bug

@@ -142,7 +142,7 @@ commits:
   - test/parallel/test-abortsignal-any.mjs
   - test/parallel/test-abortsignal-drop-settled-signals.mjs
   - test/parallel/test-eventtarget.js
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

@@ -162,7 +162,7 @@ commits:
   author: JonathanBrouwer
   files:
   - library/std/src/sys/pal/uefi/helpers.rs
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra

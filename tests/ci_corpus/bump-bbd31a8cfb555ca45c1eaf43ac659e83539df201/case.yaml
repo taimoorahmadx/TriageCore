@@ -54,8 +54,8 @@ commits:
   author: renovate-bot
   files:
   - samples/install-without-bom/pom.xml
-label: null
-label_source: null
+label: dependency
+label_source: "Human approved BUMP failureCategory ENFORCER_FAILURE; this is a breaking dependency update."
 risk_tier: medium
 source: bump
 suggested_label: dependency

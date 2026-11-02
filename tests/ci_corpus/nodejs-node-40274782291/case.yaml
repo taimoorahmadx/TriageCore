@@ -83,7 +83,7 @@ commits:
   - test/parallel/test-tls-set-ciphers-error.js
   - test/parallel/test-tls-set-ciphers.js
   - test/parallel/test-tls13-ciphers.js
-label: null
-label_source: null
+label: infra
+label_source: "Human approved the log-based suggestion: runner, network, or service error."
 risk_tier: medium
 suggested_label: infra
