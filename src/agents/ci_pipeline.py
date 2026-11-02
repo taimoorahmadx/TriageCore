@@ -20,7 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CASES_DIR = REPO_ROOT / "tests" / "fixtures" / "ci_cases"
 CI_CORPUS_DIR = REPO_ROOT / "tests" / "ci_corpus"
 UI_LOG_EXCERPT_CHARS = 6000
-_CORRECT_ACTION = {"flaky": "rerun", "dependency": "auto-fix", "bug": "auto-fix", "infra": "escalate"}
+_CORRECT_ACTION = {"flaky": "rerun", "dependency": "auto-fix", "bug": "escalate", "infra": "escalate"}
 
 
 def load_cases(dir: Path = DEFAULT_CASES_DIR) -> list[dict[str, Any]]:
@@ -87,6 +87,7 @@ def run_case(
                 **base, "status": "extraction_failed",
                 "extraction_error": mask_secrets(str(extraction_error)),
                 "classification": None, "recommended_action": "escalate",
+                "diagnosis_reliable": None,
                 "confidence_score": None, "score": None,
                 "duration_ms": round((time.perf_counter() - started) * 1000, 3),
             }
@@ -122,6 +123,7 @@ def run_case(
         decision = output.model_dump()
         result = {
             **base, "classification": output.classification, "recommended_action": output.recommended_action,
+            "diagnosis_reliable": output.diagnosis_reliable,
             "confidence_score": output.confidence_score, "reasoning_trace": output.reasoning_trace,
             "raw_signals": raw_signals, "context": context, "facts": facts.model_dump(),
             "log_excerpt": log_excerpt,
@@ -150,6 +152,7 @@ def run_case(
         result = {
             **base, "status": "error", "error": mask_secrets(f"{type(exc).__name__}: {exc}"),
             "classification": None, "recommended_action": "escalate", "confidence_score": None,
+            "diagnosis_reliable": None,
             "score": score_case("escalate", "error", label),
             "duration_ms": round((time.perf_counter() - started) * 1000, 3),
         }

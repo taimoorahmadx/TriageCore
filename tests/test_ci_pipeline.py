@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from src.agents.ci_pipeline import load_cases, load_demo_cases, run_case, run_cases
+from src.agents.ci_pipeline import load_cases, load_demo_cases, run_case, run_cases, score_case
 from src.ci.facts import CILogFacts, FixedFactExtractor
 from src.core.engine import ConfidenceEngine
 from src.eval.evaluate_ci import evaluate, keyword_rule
@@ -23,6 +23,7 @@ def test_run_case_builds_ci_evidence_and_decision():
     result = run_case(case, ConfidenceEngine(), extractor)
 
     assert result["status"] == "ok"
+    assert isinstance(result["diagnosis_reliable"], bool)
     assert result["raw_signals"]["failure_kind"] == "dependency_resolution"
     assert result["raw_signals"]["dependency_change"] == "changed"
     assert result["context"]["attributed_commit"] == "dependency-change-1"
@@ -61,6 +62,21 @@ def test_extraction_failure_is_reported_without_fabricated_facts():
     assert "[REDACTED]" in result["extraction_error"]
     assert "gsk_" not in result["extraction_error"]
     assert "facts" not in result
+
+
+def test_bug_ground_truth_requires_escalation():
+    score = score_case("escalate", "bug", "bug")
+
+    assert score["cause_correct"] is True
+    assert score["action_acceptable"] is True
+    assert score["needless_escalation"] is False
+
+
+def test_bug_ground_truth_does_not_accept_auto_fix():
+    score = score_case("auto-fix", "bug", "bug")
+
+    assert score["action_acceptable"] is False
+    assert score["masked"] is False
 
 
 def test_evaluation_excludes_extraction_failures_from_metrics():

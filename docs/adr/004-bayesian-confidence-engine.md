@@ -52,10 +52,10 @@ The original QA values remain human-elicited; final QA calibration is planned at
 The project owner approved a shared `diagnosis_reliable` output field. It is false when no evidence
 is observed, the posterior is uniform, or evidence fit is below `unknown_pattern_floor`; otherwise
 it is true. The field qualifies the most-probable cause rather than replacing `classification`.
-The project owner also approved escalation for CI `bug` diagnoses in FYP-1. These contract and
-policy decisions require an implementation task; the current engine output and CI loss table do not
-yet enforce them. The supervisor signed off on the method change (X1 hard block and CI pre-rerun
-evidence) on 2026-11-02.
+The project owner also approved escalation for CI `bug` diagnoses in FYP-1. C15 implements both
+decisions: unreliable diagnoses are explicit, and a most-probable CI `bug` diagnosis blocks
+autonomous actions and escalates. Existing loss costs and probability values are unchanged. The
+supervisor signed off on the method change (X1 hard block and CI pre-rerun evidence) on 2026-11-02.
 
 ## Alternatives considered
 
