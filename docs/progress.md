@@ -10,10 +10,10 @@ History lives in git and `docs/log/ai-usage-log.md`.
   Modern TodoMVC scenarios, identifies the upstream app and deterministic mutations, and opens
   the selected query-mutated app through the API's `/apps/` static route. Added route/metadata
   tests; `.venv/bin/python -m pytest -q tests/test_api.py tests/test_pipeline.py` passed (9 tests).
-  Frontend lint and production build passed. The reviewer-requested supervisor scope review remains
-  listed below.
+  Frontend lint and production build passed. TODO.md is current: Q5 is planned for the final demo,
+  though it has not received supervisor approval.
 ## Blockers / questions for the team
-- Supervisor review of the additional FYP-1 demo scope (Q5, C14) remains pending; confirm before including the additions in the final demo.
+- Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
   AI-drafted working documents.
 - Each member completes their rows in `docs/disclosure.md` §2, including actual AI contribution,
