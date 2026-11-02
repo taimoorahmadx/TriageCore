@@ -1,4 +1,5 @@
 repo: pydantic/pydantic
+source: mined
 run_id: 40332035476
 head_sha: 7fa40902f85539847a8e9a8eb0889ca88c320cc0
 run_attempts:

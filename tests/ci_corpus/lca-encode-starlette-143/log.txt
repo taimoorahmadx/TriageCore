@@ -1,0 +1,1368 @@
+===== Python 3.9/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.9.18, pytest-7.4.0, pluggy-1.3.0
+rootdir: /home/runner/work/starlette/starlette
+configfile: pyproject.toml
+plugins: anyio-4.0.0
+collected 773 items
+
+tests/test__utils.py ......                                              [  0%]
+tests/test_applications.py ....FF....................FF................. [  6%]
+...                                                                      [  6%]
+tests/test_authentication.py ...........                                 [  8%]
+tests/test_background.py ........                                        [  9%]
+tests/test_concurrency.py ....                                           [  9%]
+tests/test_config.py ....                                                [ 10%]
+tests/test_convertors.py ......                                          [ 11%]
+tests/test_datastructures.py ..............................              [ 15%]
+tests/test_endpoints.py ....................                             [ 17%]
+tests/test_exceptions.py .....................                           [ 20%]
+tests/test_formparsers.py .............................................. [ 26%]
+......................                                                   [ 29%]
+tests/test_requests.py ................................................. [ 35%]
+..............................                                           [ 39%]
+tests/test_responses.py ................................................ [ 45%]
+................                                                         [ 47%]
+tests/test_routing.py F..........F...........FFF..FFF.FF..........F..... [ 54%]
+......FFF..FFF.F.......................                                  [ 59%]
+tests/test_schemas.py ...                                                [ 59%]
+tests/test_staticfiles.py .............................................. [ 65%]
+......                                                                   [ 66%]
+tests/test_status.py ..                                                  [ 66%]
+tests/test_templates.py .......................                          [ 69%]
+tests/test_testclient.py ...........x..................x........         [ 74%]
+tests/test_websockets.py ............................................... [ 80%]
+..................                                                       [ 83%]
+tests/middleware/test_base.py .....x......................x............. [ 88%]
+.....                                                                    [ 89%]
+tests/middleware/test_cors.py ..............................             [ 93%]
+tests/middleware/test_errors.py ............                             [ 94%]
+tests/middleware/test_gzip.py ..........                                 [ 95%]
+tests/middleware/test_https_redirect.py ..                               [ 96%]
+tests/middleware/test_middleware.py .                                    [ 96%]
+tests/middleware/test_session.py ...F......F...                          [ 98%]
+tests/middleware/test_trusted_host.py .....                              [ 98%]
+tests/middleware/test_wsgi.py ..........                                 [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_mounted_route[asyncio] __________________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c33df310>
+
+    def test_mounted_route(client):
+        response = client.get("/users/")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:163: AssertionError
+___________________ test_mounted_route_path_params[asyncio] ____________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c325ae50>
+
+    def test_mounted_route_path_params(client):
+        response = client.get("/users/tomchristie")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:169: AssertionError
+___________________________ test_mounted_route[trio] ___________________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c2f96370>
+
+    def test_mounted_route(client):
+        response = client.get("/users/")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:163: AssertionError
+_____________________ test_mounted_route_path_params[trio] _____________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c2e6f370>
+
+    def test_mounted_route_path_params(client):
+        response = client.get("/users/tomchristie")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:169: AssertionError
+_____________________________ test_router[asyncio] _____________________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c35ee790>
+
+    @pytest.mark.filterwarnings(
+        r"ignore"
+        r":Trying to detect encoding from a tiny portion of \(5\) byte\(s\)\."
+        r":UserWarning"
+        r":charset_normalizer.api"
+    )
+    def test_router(client: TestClient):
+        response = client.get("/")
+        assert response.status_code == 200
+        assert response.text == "Hello, world"
+    
+        response = client.post("/")
+        assert response.status_code == 405
+        assert response.text == "Method Not Allowed"
+        assert set(response.headers["allow"].split(", ")) == {"HEAD", "GET"}
+    
+        response = client.get("/foo")
+        assert response.status_code == 404
+        assert response.text == "Not Found"
+    
+        response = client.get("/users")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:188: AssertionError
+_____________________ test_url_for_with_root_path[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_url_for_with_root_path(test_client_factory):
+        app = Starlette(routes=echo_url_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/sub_path"
+        )
+        response = client.get("/")
+        assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+        response = client.get("/submount/")
+>       assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+
+tests/test_routing.py:572: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_models.py:761: in json
+    return jsonlib.loads(self.content, **kwargs)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7f04c553ea30>, s = 'Not Found'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/decoder.py:355: JSONDecodeError
+_____________________ test_partial_async_endpoint[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_partial_async_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+        response = test_client.get("/partial")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:854: AssertionError
+___________________ test_partial_async_ws_endpoint[asyncio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_partial_async_ws_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+>       with test_client.websocket_connect("/partial/ws") as websocket:
+
+tests/test_routing.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+starlette/testclient.py:94: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.WebSocketTestSession object at 0x7f04c0434790>
+message = {'code': 1000, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -> None:
+        if message["type"] == "websocket.close":
+>           raise WebSocketDisconnect(
+                message.get("code", 1000), message.get("reason", "")
+            )
+E           starlette.websockets.WebSocketDisconnect: (1000, '')
+
+starlette/testclient.py:135: WebSocketDisconnect
+___________________ test_base_route_middleware[asyncio-app0] ___________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+app = <starlette.applications.Starlette object at 0x7f04c35f94c0>
+
+    @pytest.mark.parametrize(
+        "app",
+        [
+            mounted_routes_with_middleware,
+            mounted_app_with_middleware,
+            route_with_middleware,
+        ],
+    )
+    def test_base_route_middleware(
+        test_client_factory: typing.Callable[..., TestClient],
+        app: Starlette,
+    ) -> None:
+        test_client = test_client_factory(app)
+    
+        response = test_client.get("/home")
+        assert response.status_code == 200
+        assert "X-Test" not in response.headers
+    
+        response = test_client.get("/http")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1009: AssertionError
+__________________ test_add_route_to_app_after_mount[asyncio] __________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_add_route_to_app_after_mount(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        """Checks that Mount will pick up routes
+        added to the underlying app after it is mounted
+        """
+        inner_app = Router()
+        app = Mount("/http", app=inner_app)
+        inner_app.add_route(
+            "/inner",
+            endpoint=homepage,
+            methods=["GET"],
+        )
+        client = test_client_factory(app)
+        response = client.get("/http/inner")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1041: AssertionError
+___________________ test_exception_on_mounted_apps[asyncio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_exception_on_mounted_apps(test_client_factory):
+        def exc(request):
+            raise Exception("Exc")
+    
+        sub_app = Starlette(routes=[Route("/", exc)])
+        app = Starlette(routes=[Mount("/sub", app=sub_app)])
+    
+        client = test_client_factory(app)
+        with pytest.raises(Exception) as ctx:
+>           client.get("/sub/")
+E           Failed: DID NOT RAISE <class 'Exception'>
+
+tests/test_routing.py:1053: Failed
+__________ test_mounted_middleware_does_not_catch_exception[asyncio] ___________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_mounted_middleware_does_not_catch_exception(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        # https://github.com/encode/starlette/pull/1649#discussion_r960236107
+        def exc(request: Request) -> Response:
+            raise HTTPException(status_code=403, detail="auth")
+    
+        class NamedMiddleware:
+            def __init__(self, app: ASGIApp, name: str) -> None:
+                self.app = app
+                self.name = name
+    
+            async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+                async def modified_send(msg: Message) -> None:
+                    if msg["type"] == "http.response.start":
+                        msg["headers"].append((f"X-{self.name}".encode(), b"true"))
+                    await send(msg)
+    
+                await self.app(scope, receive, modified_send)
+    
+        app = Starlette(
+            routes=[
+                Mount(
+                    "/mount",
+                    routes=[
+                        Route("/err", exc),
+                        Route("/home", homepage),
+                    ],
+                    middleware=[Middleware(NamedMiddleware, name="Mounted")],
+                ),
+                Route("/err", exc),
+                Route("/home", homepage),
+            ],
+            middleware=[Middleware(NamedMiddleware, name="Outer")],
+        )
+    
+        client = test_client_factory(app)
+    
+        resp = client.get("/home")
+        assert resp.status_code == 200, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/err")
+        assert resp.status_code == 403, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/mount/home")
+>       assert resp.status_code == 200, resp.content
+E       AssertionError: b'Not Found'
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1104: AssertionError
+______________________ test_paths_with_root_path[asyncio] ______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_paths_with_root_path(test_client_factory: typing.Callable[..., TestClient]):
+        app = Starlette(routes=echo_paths_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/root"
+        )
+        response = client.get("/root/path")
+        assert response.status_code == 200
+        assert response.json() == {
+            "name": "path",
+            "path": "/root/path",
+            "root_path": "/root",
+        }
+    
+        response = client.get("/root/root/path")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1281: AssertionError
+______________________________ test_router[trio] _______________________________
+
+client = <starlette.testclient.TestClient object at 0x7f04c301bf10>
+
+    @pytest.mark.filterwarnings(
+        r"ignore"
+        r":Trying to detect encoding from a tiny portion of \(5\) byte\(s\)\."
+        r":UserWarning"
+        r":charset_normalizer.api"
+    )
+    def test_router(client: TestClient):
+        response = client.get("/")
+        assert response.status_code == 200
+        assert response.text == "Hello, world"
+    
+        response = client.post("/")
+        assert response.status_code == 405
+        assert response.text == "Method Not Allowed"
+        assert set(response.headers["allow"].split(", ")) == {"HEAD", "GET"}
+    
+        response = client.get("/foo")
+        assert response.status_code == 404
+        assert response.text == "Not Found"
+    
+        response = client.get("/users")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:188: AssertionError
+______________________ test_url_for_with_root_path[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_url_for_with_root_path(test_client_factory):
+        app = Starlette(routes=echo_url_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/sub_path"
+        )
+        response = client.get("/")
+        assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+        response = client.get("/submount/")
+>       assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+
+tests/test_routing.py:572: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_models.py:761: in json
+    return jsonlib.loads(self.content, **kwargs)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7f04c553ea30>, s = 'Not Found'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/json/decoder.py:355: JSONDecodeError
+______________________ test_partial_async_endpoint[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_partial_async_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+        response = test_client.get("/partial")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:854: AssertionError
+_____________________ test_partial_async_ws_endpoint[trio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_partial_async_ws_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+>       with test_client.websocket_connect("/partial/ws") as websocket:
+
+tests/test_routing.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+starlette/testclient.py:94: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.WebSocketTestSession object at 0x7f04c08242b0>
+message = {'code': 1000, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -> None:
+        if message["type"] == "websocket.close":
+>           raise WebSocketDisconnect(
+                message.get("code", 1000), message.get("reason", "")
+            )
+E           starlette.websockets.WebSocketDisconnect: (1000, '')
+
+starlette/testclient.py:135: WebSocketDisconnect
+____________________ test_base_route_middleware[trio-app0] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+app = <starlette.applications.Starlette object at 0x7f04c35f94c0>
+
+    @pytest.mark.parametrize(
+        "app",
+        [
+            mounted_routes_with_middleware,
+            mounted_app_with_middleware,
+            route_with_middleware,
+        ],
+    )
+    def test_base_route_middleware(
+        test_client_factory: typing.Callable[..., TestClient],
+        app: Starlette,
+    ) -> None:
+        test_client = test_client_factory(app)
+    
+        response = test_client.get("/home")
+        assert response.status_code == 200
+        assert "X-Test" not in response.headers
+    
+        response = test_client.get("/http")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1009: AssertionError
+___________________ test_add_route_to_app_after_mount[trio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_add_route_to_app_after_mount(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        """Checks that Mount will pick up routes
+        added to the underlying app after it is mounted
+        """
+        inner_app = Router()
+        app = Mount("/http", app=inner_app)
+        inner_app.add_route(
+            "/inner",
+            endpoint=homepage,
+            methods=["GET"],
+        )
+        client = test_client_factory(app)
+        response = client.get("/http/inner")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1041: AssertionError
+_____________________ test_exception_on_mounted_apps[trio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_exception_on_mounted_apps(test_client_factory):
+        def exc(request):
+            raise Exception("Exc")
+    
+        sub_app = Starlette(routes=[Route("/", exc)])
+        app = Starlette(routes=[Mount("/sub", app=sub_app)])
+    
+        client = test_client_factory(app)
+        with pytest.raises(Exception) as ctx:
+>           client.get("/sub/")
+E           Failed: DID NOT RAISE <class 'Exception'>
+
+tests/test_routing.py:1053: Failed
+____________ test_mounted_middleware_does_not_catch_exception[trio] ____________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_mounted_middleware_does_not_catch_exception(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        # https://github.com/encode/starlette/pull/1649#discussion_r960236107
+        def exc(request: Request) -> Response:
+            raise HTTPException(status_code=403, detail="auth")
+    
+        class NamedMiddleware:
+            def __init__(self, app: ASGIApp, name: str) -> None:
+                self.app = app
+                self.name = name
+    
+            async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+                async def modified_send(msg: Message) -> None:
+                    if msg["type"] == "http.response.start":
+                        msg["headers"].append((f"X-{self.name}".encode(), b"true"))
+                    await send(msg)
+    
+                await self.app(scope, receive, modified_send)
+    
+        app = Starlette(
+            routes=[
+                Mount(
+                    "/mount",
+                    routes=[
+                        Route("/err", exc),
+                        Route("/home", homepage),
+                    ],
+                    middleware=[Middleware(NamedMiddleware, name="Mounted")],
+                ),
+                Route("/err", exc),
+                Route("/home", homepage),
+            ],
+            middleware=[Middleware(NamedMiddleware, name="Outer")],
+        )
+    
+        client = test_client_factory(app)
+    
+        resp = client.get("/home")
+        assert resp.status_code == 200, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/err")
+        assert resp.status_code == 403, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/mount/home")
+>       assert resp.status_code == 200, resp.content
+E       AssertionError: b'Not Found'
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1104: AssertionError
+_______________________ test_paths_with_root_path[trio] ________________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_paths_with_root_path(test_client_factory: typing.Callable[..., TestClient]):
+        app = Starlette(routes=echo_paths_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/root"
+        )
+        response = client.get("/root/path")
+        assert response.status_code == 200
+        assert response.json() == {
+            "name": "path",
+            "path": "/root/path",
+            "root_path": "/root",
+        }
+    
+        response = client.get("/root/root/path")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1281: AssertionError
+_____________________ test_session_cookie_subpath[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_session_cookie_subpath(test_client_factory):
+        second_app = Starlette(
+            routes=[
+                Route("/update_session", endpoint=update_session, methods=["POST"]),
+            ],
+            middleware=[
+                Middleware(SessionMiddleware, secret_key="example", path="/second_app")
+            ],
+        )
+        app = Starlette(routes=[Mount("/second_app", app=second_app)])
+        client = test_client_factory(app, base_url="http://testserver/second_app")
+        response = client.post("/update_session", json={"some": "data"})
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/middleware/test_session.py:134: AssertionError
+______________________ test_session_cookie_subpath[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_session_cookie_subpath(test_client_factory):
+        second_app = Starlette(
+            routes=[
+                Route("/update_session", endpoint=update_session, methods=["POST"]),
+            ],
+            middleware=[
+                Middleware(SessionMiddleware, secret_key="example", path="/second_app")
+            ],
+        )
+        app = Starlette(routes=[Mount("/second_app", app=second_app)])
+        client = test_client_factory(app, base_url="http://testserver/second_app")
+        response = client.post("/update_session", json={"some": "data"})
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/middleware/test_session.py:134: AssertionError
+=========================== short test summary info ============================
+XFAIL tests/test_testclient.py::test_domain_restricted_cookies[asyncio-testserver-True] - Fails due to domain handling in http.cookiejar module (see #2152)
+XFAIL tests/test_testclient.py::test_domain_restricted_cookies[trio-testserver-True] - Fails due to domain handling in http.cookiejar module (see #2152)
+XFAIL tests/middleware/test_base.py::test_contextvars[asyncio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+XFAIL tests/middleware/test_base.py::test_contextvars[trio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+================== 24 failed, 745 passed, 4 xfailed in 30.92s ==================
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.11/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.0, pluggy-1.3.0
+rootdir: /home/runner/work/starlette/starlette
+configfile: pyproject.toml
+plugins: anyio-4.0.0
+collected 773 items
+
+tests/test__utils.py ......                                              [  0%]
+tests/test_applications.py ....FF....................FF................. [  6%]
+...                                                                      [  6%]
+tests/test_authentication.py ...........                                 [  8%]
+tests/test_background.py ........                                        [  9%]
+tests/test_concurrency.py ....                                           [  9%]
+tests/test_config.py ....                                                [ 10%]
+tests/test_convertors.py ......                                          [ 11%]
+tests/test_datastructures.py ..............................              [ 15%]
+tests/test_endpoints.py ....................                             [ 17%]
+tests/test_exceptions.py .....................                           [ 20%]
+tests/test_formparsers.py .............................................. [ 26%]
+......................                                                   [ 29%]
+tests/test_requests.py ................................................. [ 35%]
+..............................                                           [ 39%]
+tests/test_responses.py ................................................ [ 45%]
+................                                                         [ 47%]
+tests/test_routing.py F..........F...........FFF..FFF.FF..........F..... [ 54%]
+......FFF..FFF.F.......................                                  [ 59%]
+tests/test_schemas.py ...                                                [ 59%]
+tests/test_staticfiles.py .............................................. [ 65%]
+......                                                                   [ 66%]
+tests/test_status.py ..                                                  [ 66%]
+tests/test_templates.py .......................                          [ 69%]
+tests/test_testclient.py .......................................         [ 74%]
+tests/test_websockets.py ............................................... [ 80%]
+..................                                                       [ 83%]
+tests/middleware/test_base.py .....x......................x............. [ 88%]
+.....                                                                    [ 89%]
+tests/middleware/test_cors.py ..............................             [ 93%]
+tests/middleware/test_errors.py ............                             [ 94%]
+tests/middleware/test_gzip.py ..........                                 [ 95%]
+tests/middleware/test_https_redirect.py ..                               [ 96%]
+tests/middleware/test_middleware.py .                                    [ 96%]
+tests/middleware/test_session.py ...F......F...                          [ 98%]
+tests/middleware/test_trusted_host.py .....                              [ 98%]
+tests/middleware/test_wsgi.py ..........                                 [100%]
+
+=================================== FAILURES ===================================
+_________________________ test_mounted_route[asyncio] __________________________
+
+client = <starlette.testclient.TestClient object at 0x7fab39555ed0>
+
+    def test_mounted_route(client):
+        response = client.get("/users/")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:163: AssertionError
+___________________ test_mounted_route_path_params[asyncio] ____________________
+
+client = <starlette.testclient.TestClient object at 0x7fab393e73d0>
+
+    def test_mounted_route_path_params(client):
+        response = client.get("/users/tomchristie")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:169: AssertionError
+___________________________ test_mounted_route[trio] ___________________________
+
+client = <starlette.testclient.TestClient object at 0x7fab3923a5d0>
+
+    def test_mounted_route(client):
+        response = client.get("/users/")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:163: AssertionError
+_____________________ test_mounted_route_path_params[trio] _____________________
+
+client = <starlette.testclient.TestClient object at 0x7fab392e5a10>
+
+    def test_mounted_route_path_params(client):
+        response = client.get("/users/tomchristie")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_applications.py:169: AssertionError
+_____________________________ test_router[asyncio] _____________________________
+
+client = <starlette.testclient.TestClient object at 0x7fab3996fb90>
+
+    @pytest.mark.filterwarnings(
+        r"ignore"
+        r":Trying to detect encoding from a tiny portion of \(5\) byte\(s\)\."
+        r":UserWarning"
+        r":charset_normalizer.api"
+    )
+    def test_router(client: TestClient):
+        response = client.get("/")
+        assert response.status_code == 200
+        assert response.text == "Hello, world"
+    
+        response = client.post("/")
+        assert response.status_code == 405
+        assert response.text == "Method Not Allowed"
+        assert set(response.headers["allow"].split(", ")) == {"HEAD", "GET"}
+    
+        response = client.get("/foo")
+        assert response.status_code == 404
+        assert response.text == "Not Found"
+    
+        response = client.get("/users")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:188: AssertionError
+_____________________ test_url_for_with_root_path[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_url_for_with_root_path(test_client_factory):
+        app = Starlette(routes=echo_url_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/sub_path"
+        )
+        response = client.get("/")
+        assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+        response = client.get("/submount/")
+>       assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+
+tests/test_routing.py:572: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_models.py:761: in json
+    return jsonlib.loads(self.content, **kwargs)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7fab3bb03a90>, s = 'Not Found'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/decoder.py:355: JSONDecodeError
+_____________________ test_partial_async_endpoint[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_partial_async_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+        response = test_client.get("/partial")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:854: AssertionError
+___________________ test_partial_async_ws_endpoint[asyncio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_partial_async_ws_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+>       with test_client.websocket_connect("/partial/ws") as websocket:
+
+tests/test_routing.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+starlette/testclient.py:94: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.WebSocketTestSession object at 0x7fab34c90310>
+message = {'code': 1000, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -> None:
+        if message["type"] == "websocket.close":
+>           raise WebSocketDisconnect(
+                message.get("code", 1000), message.get("reason", "")
+            )
+E           starlette.websockets.WebSocketDisconnect: (1000, '')
+
+starlette/testclient.py:135: WebSocketDisconnect
+___________________ test_base_route_middleware[asyncio-app0] ___________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+app = <starlette.applications.Starlette object at 0x7fab394a5250>
+
+    @pytest.mark.parametrize(
+        "app",
+        [
+            mounted_routes_with_middleware,
+            mounted_app_with_middleware,
+            route_with_middleware,
+        ],
+    )
+    def test_base_route_middleware(
+        test_client_factory: typing.Callable[..., TestClient],
+        app: Starlette,
+    ) -> None:
+        test_client = test_client_factory(app)
+    
+        response = test_client.get("/home")
+        assert response.status_code == 200
+        assert "X-Test" not in response.headers
+    
+        response = test_client.get("/http")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1009: AssertionError
+__________________ test_add_route_to_app_after_mount[asyncio] __________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_add_route_to_app_after_mount(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        """Checks that Mount will pick up routes
+        added to the underlying app after it is mounted
+        """
+        inner_app = Router()
+        app = Mount("/http", app=inner_app)
+        inner_app.add_route(
+            "/inner",
+            endpoint=homepage,
+            methods=["GET"],
+        )
+        client = test_client_factory(app)
+        response = client.get("/http/inner")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1041: AssertionError
+___________________ test_exception_on_mounted_apps[asyncio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_exception_on_mounted_apps(test_client_factory):
+        def exc(request):
+            raise Exception("Exc")
+    
+        sub_app = Starlette(routes=[Route("/", exc)])
+        app = Starlette(routes=[Mount("/sub", app=sub_app)])
+    
+        client = test_client_factory(app)
+>       with pytest.raises(Exception) as ctx:
+E       Failed: DID NOT RAISE <class 'Exception'>
+
+tests/test_routing.py:1052: Failed
+__________ test_mounted_middleware_does_not_catch_exception[asyncio] ___________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_mounted_middleware_does_not_catch_exception(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        # https://github.com/encode/starlette/pull/1649#discussion_r960236107
+        def exc(request: Request) -> Response:
+            raise HTTPException(status_code=403, detail="auth")
+    
+        class NamedMiddleware:
+            def __init__(self, app: ASGIApp, name: str) -> None:
+                self.app = app
+                self.name = name
+    
+            async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+                async def modified_send(msg: Message) -> None:
+                    if msg["type"] == "http.response.start":
+                        msg["headers"].append((f"X-{self.name}".encode(), b"true"))
+                    await send(msg)
+    
+                await self.app(scope, receive, modified_send)
+    
+        app = Starlette(
+            routes=[
+                Mount(
+                    "/mount",
+                    routes=[
+                        Route("/err", exc),
+                        Route("/home", homepage),
+                    ],
+                    middleware=[Middleware(NamedMiddleware, name="Mounted")],
+                ),
+                Route("/err", exc),
+                Route("/home", homepage),
+            ],
+            middleware=[Middleware(NamedMiddleware, name="Outer")],
+        )
+    
+        client = test_client_factory(app)
+    
+        resp = client.get("/home")
+        assert resp.status_code == 200, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/err")
+        assert resp.status_code == 403, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/mount/home")
+>       assert resp.status_code == 200, resp.content
+E       AssertionError: b'Not Found'
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1104: AssertionError
+______________________ test_paths_with_root_path[asyncio] ______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_paths_with_root_path(test_client_factory: typing.Callable[..., TestClient]):
+        app = Starlette(routes=echo_paths_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/root"
+        )
+        response = client.get("/root/path")
+        assert response.status_code == 200
+        assert response.json() == {
+            "name": "path",
+            "path": "/root/path",
+            "root_path": "/root",
+        }
+    
+        response = client.get("/root/root/path")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1281: AssertionError
+______________________________ test_router[trio] _______________________________
+
+client = <starlette.testclient.TestClient object at 0x7fab34ac7790>
+
+    @pytest.mark.filterwarnings(
+        r"ignore"
+        r":Trying to detect encoding from a tiny portion of \(5\) byte\(s\)\."
+        r":UserWarning"
+        r":charset_normalizer.api"
+    )
+    def test_router(client: TestClient):
+        response = client.get("/")
+        assert response.status_code == 200
+        assert response.text == "Hello, world"
+    
+        response = client.post("/")
+        assert response.status_code == 405
+        assert response.text == "Method Not Allowed"
+        assert set(response.headers["allow"].split(", ")) == {"HEAD", "GET"}
+    
+        response = client.get("/foo")
+        assert response.status_code == 404
+        assert response.text == "Not Found"
+    
+        response = client.get("/users")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:188: AssertionError
+______________________ test_url_for_with_root_path[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_url_for_with_root_path(test_client_factory):
+        app = Starlette(routes=echo_url_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/sub_path"
+        )
+        response = client.get("/")
+        assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+        response = client.get("/submount/")
+>       assert response.json() == {
+            "index": "https://www.example.org/sub_path/",
+            "submount": "https://www.example.org/sub_path/submount/",
+        }
+
+tests/test_routing.py:572: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_models.py:761: in json
+    return jsonlib.loads(self.content, **kwargs)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <json.decoder.JSONDecoder object at 0x7fab3bb03a90>, s = 'Not Found'
+idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+>           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/json/decoder.py:355: JSONDecodeError
+______________________ test_partial_async_endpoint[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_partial_async_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+        response = test_client.get("/partial")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:854: AssertionError
+_____________________ test_partial_async_ws_endpoint[trio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_partial_async_ws_endpoint(test_client_factory):
+        test_client = test_client_factory(app)
+>       with test_client.websocket_connect("/partial/ws") as websocket:
+
+tests/test_routing.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+starlette/testclient.py:94: in __enter__
+    self._raise_on_close(message)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <starlette.testclient.WebSocketTestSession object at 0x7fab34b28fd0>
+message = {'code': 1000, 'reason': '', 'type': 'websocket.close'}
+
+    def _raise_on_close(self, message: Message) -> None:
+        if message["type"] == "websocket.close":
+>           raise WebSocketDisconnect(
+                message.get("code", 1000), message.get("reason", "")
+            )
+E           starlette.websockets.WebSocketDisconnect: (1000, '')
+
+starlette/testclient.py:135: WebSocketDisconnect
+____________________ test_base_route_middleware[trio-app0] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+app = <starlette.applications.Starlette object at 0x7fab394a5250>
+
+    @pytest.mark.parametrize(
+        "app",
+        [
+            mounted_routes_with_middleware,
+            mounted_app_with_middleware,
+            route_with_middleware,
+        ],
+    )
+    def test_base_route_middleware(
+        test_client_factory: typing.Callable[..., TestClient],
+        app: Starlette,
+    ) -> None:
+        test_client = test_client_factory(app)
+    
+        response = test_client.get("/home")
+        assert response.status_code == 200
+        assert "X-Test" not in response.headers
+    
+        response = test_client.get("/http")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1009: AssertionError
+___________________ test_add_route_to_app_after_mount[trio] ____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_add_route_to_app_after_mount(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        """Checks that Mount will pick up routes
+        added to the underlying app after it is mounted
+        """
+        inner_app = Router()
+        app = Mount("/http", app=inner_app)
+        inner_app.add_route(
+            "/inner",
+            endpoint=homepage,
+            methods=["GET"],
+        )
+        client = test_client_factory(app)
+        response = client.get("/http/inner")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1041: AssertionError
+_____________________ test_exception_on_mounted_apps[trio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_exception_on_mounted_apps(test_client_factory):
+        def exc(request):
+            raise Exception("Exc")
+    
+        sub_app = Starlette(routes=[Route("/", exc)])
+        app = Starlette(routes=[Mount("/sub", app=sub_app)])
+    
+        client = test_client_factory(app)
+>       with pytest.raises(Exception) as ctx:
+E       Failed: DID NOT RAISE <class 'Exception'>
+
+tests/test_routing.py:1052: Failed
+____________ test_mounted_middleware_does_not_catch_exception[trio] ____________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_mounted_middleware_does_not_catch_exception(
+        test_client_factory: typing.Callable[..., TestClient],
+    ) -> None:
+        # https://github.com/encode/starlette/pull/1649#discussion_r960236107
+        def exc(request: Request) -> Response:
+            raise HTTPException(status_code=403, detail="auth")
+    
+        class NamedMiddleware:
+            def __init__(self, app: ASGIApp, name: str) -> None:
+                self.app = app
+                self.name = name
+    
+            async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+                async def modified_send(msg: Message) -> None:
+                    if msg["type"] == "http.response.start":
+                        msg["headers"].append((f"X-{self.name}".encode(), b"true"))
+                    await send(msg)
+    
+                await self.app(scope, receive, modified_send)
+    
+        app = Starlette(
+            routes=[
+                Mount(
+                    "/mount",
+                    routes=[
+                        Route("/err", exc),
+                        Route("/home", homepage),
+                    ],
+                    middleware=[Middleware(NamedMiddleware, name="Mounted")],
+                ),
+                Route("/err", exc),
+                Route("/home", homepage),
+            ],
+            middleware=[Middleware(NamedMiddleware, name="Outer")],
+        )
+    
+        client = test_client_factory(app)
+    
+        resp = client.get("/home")
+        assert resp.status_code == 200, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/err")
+        assert resp.status_code == 403, resp.content
+        assert "X-Outer" in resp.headers
+    
+        resp = client.get("/mount/home")
+>       assert resp.status_code == 200, resp.content
+E       AssertionError: b'Not Found'
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1104: AssertionError
+_______________________ test_paths_with_root_path[trio] ________________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_paths_with_root_path(test_client_factory: typing.Callable[..., TestClient]):
+        app = Starlette(routes=echo_paths_routes)
+        client = test_client_factory(
+            app, base_url="https://www.example.org/", root_path="/root"
+        )
+        response = client.get("/root/path")
+        assert response.status_code == 200
+        assert response.json() == {
+            "name": "path",
+            "path": "/root/path",
+            "root_path": "/root",
+        }
+    
+        response = client.get("/root/root/path")
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/test_routing.py:1281: AssertionError
+_____________________ test_session_cookie_subpath[asyncio] _____________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='asyncio', backend_options={})
+
+    def test_session_cookie_subpath(test_client_factory):
+        second_app = Starlette(
+            routes=[
+                Route("/update_session", endpoint=update_session, methods=["POST"]),
+            ],
+            middleware=[
+                Middleware(SessionMiddleware, secret_key="example", path="/second_app")
+            ],
+        )
+        app = Starlette(routes=[Mount("/second_app", app=second_app)])
+        client = test_client_factory(app, base_url="http://testserver/second_app")
+        response = client.post("/update_session", json={"some": "data"})
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/middleware/test_session.py:134: AssertionError
+______________________ test_session_cookie_subpath[trio] _______________________
+
+test_client_factory = functools.partial(<class 'starlette.testclient.TestClient'>, backend='trio', backend_options={})
+
+    def test_session_cookie_subpath(test_client_factory):
+        second_app = Starlette(
+            routes=[
+                Route("/update_session", endpoint=update_session, methods=["POST"]),
+            ],
+            middleware=[
+                Middleware(SessionMiddleware, secret_key="example", path="/second_app")
+            ],
+        )
+        app = Starlette(routes=[Mount("/second_app", app=second_app)])
+        client = test_client_factory(app, base_url="http://testserver/second_app")
+        response = client.post("/update_session", json={"some": "data"})
+>       assert response.status_code == 200
+E       assert 404 == 200
+E        +  where 404 = <Response [404 Not Found]>.status_code
+
+tests/middleware/test_session.py:134: AssertionError
+=========================== short test summary info ============================
+XFAIL tests/middleware/test_base.py::test_contextvars[asyncio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+XFAIL tests/middleware/test_base.py::test_contextvars[trio-CustomMiddlewareUsingBaseHTTPMiddleware] - BaseHTTPMiddleware creates a TaskGroup which copies the contextand erases any changes to it made within the TaskGroup
+================== 24 failed, 747 passed, 2 xfailed in 26.24s ==================
+##[error]Process completed with exit code 1.

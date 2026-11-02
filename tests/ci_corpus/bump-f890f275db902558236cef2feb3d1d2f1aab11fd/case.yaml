@@ -1,0 +1,50 @@
+repo: jcabi/jcabi-ssh
+run_id: f890f275db902558236cef2feb3d1d2f1aab11fd
+head_sha: f890f275db902558236cef2feb3d1d2f1aab11fd
+run_attempts: []
+commits:
+- sha: f890f275db902558236cef2feb3d1d2f1aab11fd
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 5f03b07fcf425c4f60c1f2afe02204719ae5ba22
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: e329f45365938d7c693c8689039d0476efe00db0
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 96c9991d52eb7db3b57addfa2f5e13a4ca73f18c
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f9ad9fe58e9751d048dced3e86047a84abc81e0f
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 55b475c00299b2b7a6fae2b2a5f3c165641c77b2
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: bbaf4fea370eafed865d55ac85fb6333b3de57cd
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: cc8e7bc4d6677a59560bb990461191029130230b
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: e632e7ac88db11540e82756ff99a9de177254cb4
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f9f1071251f7dc48b85c104fb7bca3c13c10db35
+  author: rultor
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

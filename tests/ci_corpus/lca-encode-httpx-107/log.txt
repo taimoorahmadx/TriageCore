@@ -1,0 +1,82 @@
+===== Python 3.10/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+httpx/_client.py:1456: error: Unexpected keyword argument "verify" for "AsyncHTTPTransport"  [call-arg]
+httpx/_client.py:1458: error: Name "verify" is not defined  [name-defined]
+httpx/_client.py:1459: error: Name "cert" is not defined  [name-defined]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+httpx/_client.py:1456: error: Unexpected keyword argument "cert" for "AsyncHTTPTransport"  [call-arg]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+Found 4 errors in 1 file (checked 60 source files)
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.11/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+httpx/_client.py:1456: error: Unexpected keyword argument "verify" for "AsyncHTTPTransport"  [call-arg]
+httpx/_client.py:1458: error: Name "verify" is not defined  [name-defined]
+httpx/_client.py:1459: error: Name "cert" is not defined  [name-defined]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+httpx/_client.py:1456: error: Unexpected keyword argument "cert" for "AsyncHTTPTransport"  [call-arg]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+Found 4 errors in 1 file (checked 60 source files)
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.12/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+httpx/_client.py:1456: error: Unexpected keyword argument "verify" for "AsyncHTTPTransport"  [call-arg]
+httpx/_client.py:1458: error: Name "verify" is not defined  [name-defined]
+httpx/_client.py:1459: error: Name "cert" is not defined  [name-defined]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+httpx/_client.py:1456: error: Unexpected keyword argument "cert" for "AsyncHTTPTransport"  [call-arg]
+httpx/_transports/default.py:260: note: "AsyncHTTPTransport" defined here
+Found 4 errors in 1 file (checked 60 source files)
+##[error]Process completed with exit code 1.

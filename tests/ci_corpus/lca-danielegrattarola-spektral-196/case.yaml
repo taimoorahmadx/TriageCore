@@ -1,0 +1,90 @@
+repo: danielegrattarola/spektral
+run_id: '196'
+head_sha: 386bf6f0815368b78261be43bf90e203dfe9c13f
+run_attempts: []
+commits:
+- sha: 386bf6f0815368b78261be43bf90e203dfe9c13f
+  author: danielegrattarola
+  files:
+  - pyproject.toml
+  - spektral/__init__.py
+  - spektral/data/graph.py
+- sha: 74a108eaf593c5456fa73883d62c1f129230dfac
+  author: danielegrattarola
+  files:
+  - spektral/layers/convolutional/gtv_conv.py
+  - spektral/layers/pooling/asym_cheeger_cut_pool.py
+- sha: 2d0e0cfe17985ac2a65a3408a884025e800be673
+  author: danielegrattarola
+  files:
+  - .github/workflows/examples.yml
+  - .github/workflows/style_check.yml
+  - .github/workflows/test.yml
+  - docs/autogen.py
+  - examples/other/node_clustering_tvgnn.py
+  - spektral/layers/convolutional/__init__.py
+  - spektral/layers/convolutional/gtv_conv.py
+  - spektral/layers/pooling/__init__.py
+  - spektral/layers/pooling/asym_cheeger_cut_pool.py
+  - tests/test_layers/convolutional/test_gtv_conv.py
+  - tests/test_layers/pooling/test_asym_cheeger_cut_pool.py
+- sha: aa7866a515425659b13e7a5b10e54a58d67a9437
+  author: danielegrattarola
+  files:
+  - .github/workflows/examples.yml
+  - .github/workflows/style_check.yml
+  - .github/workflows/test.yml
+  - docs/autogen.py
+  - examples/graph_prediction/qm9_ecc.py
+  - examples/other/node_clustering_tvgnn.py
+  - spektral/layers/base.py
+  - spektral/layers/convolutional/__init__.py
+  - spektral/layers/convolutional/gtv_conv.py
+  - spektral/layers/pooling/__init__.py
+  - spektral/layers/pooling/asym_cheeger_cut_pool.py
+  - spektral/layers/pooling/dmon_pool.py
+  - spektral/layers/pooling/global_pool.py
+  - tests/test_layers/convolutional/test_gtv_conv.py
+  - tests/test_layers/pooling/test_asym_cheeger_cut_pool.py
+  - tests/test_utils/test_convolution.py
+- sha: 2a51af90f2e1b60c8aa17063fd7ac60be8846152
+  author: danielegrattarola
+  files:
+  - tests/test_utils/test_convolution.py
+- sha: eebde5bdf7469cd2f91b4905cec056861ff4f416
+  author: danielegrattarola
+  files:
+  - .github/workflows/test.yml
+  - tests/test_utils/test_convolution.py
+- sha: 197adfd51ee1b9c970ea73fe9f76b5f3962a33a9
+  author: danielegrattarola
+  files:
+  - examples/graph_prediction/qm9_ecc.py
+  - examples/other/node_clustering_tvgnn.py
+  - spektral/layers/base.py
+  - spektral/layers/pooling/dmon_pool.py
+  - spektral/layers/pooling/global_pool.py
+- sha: ed62ea19787cde0bdb7b609fb1ee24f067731679
+  author: danielegrattarola
+  files:
+  - .github/workflows/examples.yml
+  - .github/workflows/style_check.yml
+  - .github/workflows/test.yml
+- sha: 356bde9c99fdff30b4dc36b1b1a50cbdb0e3fce4
+  author: danielegrattarola
+  files:
+  - examples/other/node_clustering_tvgnn.py
+  - spektral/layers/convolutional/gtv_conv.py
+  - spektral/layers/pooling/asym_cheeger_cut_pool.py
+  - tests/test_layers/convolutional/test_gtv_conv.py
+  - tests/test_layers/pooling/test_asym_cheeger_cut_pool.py
+- sha: 9172cc90b112001d0970e519c20bdbf3942f4b84
+  author: JonasBergHansen
+  files:
+  - examples/other/node_clustering_tvgnn.py
+  - spektral/layers/convolutional/gtv_conv.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

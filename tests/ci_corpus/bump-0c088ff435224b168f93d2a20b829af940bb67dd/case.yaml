@@ -1,0 +1,50 @@
+repo: fmtn/a
+run_id: 0c088ff435224b168f93d2a20b829af940bb67dd
+head_sha: 0c088ff435224b168f93d2a20b829af940bb67dd
+run_attempts: []
+commits:
+- sha: 0c088ff435224b168f93d2a20b829af940bb67dd
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: ce11efb9368b4f78785404ba293bf0a7af47de3f
+  author: northlander
+  files:
+  - pom.xml
+- sha: b071b94753a0a1cdeeb2547535a8009a0b5dbeab
+  author: northlander
+  files:
+  - pom.xml
+- sha: 6d9071553e6503be7d691533978439db2fb3a1ad
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 51f5d79699be1e000d1f6303a76812c0e0a3d902
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: e69c919903213e8f751a5c04fee1a666dc4bad74
+  author: northlander
+  files:
+  - pom.xml
+- sha: 19c86d083d8ce97eb4b46adcd153fc2f4da223b9
+  author: northlander
+  files:
+  - pom.xml
+- sha: 15d9e512cb8b201a296472c66a7676ee6ab10e76
+  author: northlander
+  files:
+  - pom.xml
+- sha: 653d163b6fd19323321d3e286246f84da20f7ccf
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: d05ee71e4b956c89d65596ca99a4e3a5ec4f6ae8
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

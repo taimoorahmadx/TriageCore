@@ -1,0 +1,886 @@
+2023-08-03T14:15:23.4740993Z Post job cleanup.
+2023-08-03T14:15:23.8728769Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-08-03T14:15:23.9003330Z git version 2.41.0.windows.3
+2023-08-03T14:15:23.9066573Z Temporarily overriding HOME='D:\a\_temp\90aaec5c-ec8a-4ddd-b655-ed4e92303b94' before making global git config changes
+2023-08-03T14:15:23.9067271Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:23.9078069Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jtcop\jtcop
+2023-08-03T14:15:23.9381402Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:23.9682439Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-08-03T14:15:24.4703257Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:24.4977294Z http.https://github.com/.extraheader
+2023-08-03T14:15:24.5019289Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T14:15:24.5337181Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+
+2023-08-03T14:15:03.3838531Z ##[group]Run actions/setup-java@v3
+2023-08-03T14:15:03.3838854Z with:
+2023-08-03T14:15:03.3839152Z   distribution: zulu
+2023-08-03T14:15:03.3839463Z   java-version: 17
+2023-08-03T14:15:03.3839693Z   java-package: jdk
+2023-08-03T14:15:03.3839965Z   check-latest: false
+2023-08-03T14:15:03.3840262Z   server-id: github
+2023-08-03T14:15:03.3840506Z   server-username: GITHUB_ACTOR
+2023-08-03T14:15:03.3840849Z   server-password: GITHUB_TOKEN
+2023-08-03T14:15:03.3841156Z   overwrite-settings: true
+2023-08-03T14:15:03.3841399Z   job-status: success
+2023-08-03T14:15:03.3841873Z   token: ***
+2023-08-03T14:15:03.3842145Z ##[endgroup]
+2023-08-03T14:15:03.5974731Z ##[group]Installed distributions
+2023-08-03T14:15:03.6011152Z Trying to resolve the latest version from remote
+2023-08-03T14:15:03.6805296Z Resolved latest version as 17.0.8+7
+2023-08-03T14:15:03.6806221Z Trying to download...
+2023-08-03T14:15:03.6807773Z Downloading Java 17.0.8+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.44.17-ca-crac-jdk17.0.8-linux_x64.tar.gz ...
+2023-08-03T14:15:04.6483300Z Extracting Java archive...
+2023-08-03T14:15:04.6624780Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/e932d74a-2a38-48a5-9275-29a95824157f -f /home/runner/work/_temp/f18a56aa-c498-4a68-a65c-944419bfb106
+2023-08-03T14:15:09.2511077Z Java 17.0.8+7 was downloaded
+2023-08-03T14:15:09.2514974Z Setting Java 17.0.8+7 as the default
+2023-08-03T14:15:09.2536636Z Creating toolchains.xml for JDK version 17 from zulu
+2023-08-03T14:15:09.2636661Z Writing to /home/runner/.m2/toolchains.xml
+2023-08-03T14:15:09.2640338Z 
+2023-08-03T14:15:09.2640558Z Java configuration:
+2023-08-03T14:15:09.2642984Z   Distribution: zulu
+2023-08-03T14:15:09.2643659Z   Version: 17.0.8+7
+2023-08-03T14:15:09.2646449Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.8-7/x64
+2023-08-03T14:15:09.2646869Z 
+2023-08-03T14:15:09.2647499Z ##[endgroup]
+2023-08-03T14:15:09.2673814Z Creating settings.xml with server-id: github
+2023-08-03T14:15:09.2674703Z Writing to /home/runner/.m2/settings.xml
+
+2023-08-03T14:15:05.9467060Z Current runner version: '2.307.1'
+2023-08-03T14:15:05.9530490Z ##[group]Operating System
+2023-08-03T14:15:05.9531130Z macOS
+2023-08-03T14:15:05.9531340Z 12.6.7
+2023-08-03T14:15:05.9531540Z 21G651
+2023-08-03T14:15:05.9531760Z ##[endgroup]
+2023-08-03T14:15:05.9532010Z ##[group]Runner Image
+2023-08-03T14:15:05.9532270Z Image: macos-12
+2023-08-03T14:15:05.9532510Z Version: 20230709.1
+2023-08-03T14:15:05.9532930Z Included Software: https://github.com/actions/runner-images/blob/macOS-12/20230709.1/images/macos/macos-12-Readme.md
+2023-08-03T14:15:05.9533470Z Image Release: https://github.com/actions/runner-images/releases/tag/macOS-12%2F20230709.1
+2023-08-03T14:15:05.9533840Z ##[endgroup]
+2023-08-03T14:15:05.9534100Z ##[group]Runner Image Provisioner
+2023-08-03T14:15:05.9534350Z 2.0.264.1
+2023-08-03T14:15:05.9534570Z ##[endgroup]
+2023-08-03T14:15:05.9535450Z ##[group]GITHUB_TOKEN Permissions
+2023-08-03T14:15:05.9536000Z Actions: write
+2023-08-03T14:15:05.9536260Z Checks: write
+2023-08-03T14:15:05.9536500Z Contents: write
+2023-08-03T14:15:05.9536970Z Deployments: write
+2023-08-03T14:15:05.9537230Z Discussions: write
+2023-08-03T14:15:05.9537460Z Issues: write
+2023-08-03T14:15:05.9537690Z Metadata: read
+2023-08-03T14:15:05.9537930Z Packages: write
+2023-08-03T14:15:05.9538300Z Pages: write
+2023-08-03T14:15:05.9538560Z PullRequests: write
+2023-08-03T14:15:05.9538840Z RepositoryProjects: write
+2023-08-03T14:15:05.9539110Z SecurityEvents: write
+2023-08-03T14:15:05.9539360Z Statuses: write
+2023-08-03T14:15:05.9539620Z ##[endgroup]
+2023-08-03T14:15:05.9544590Z Secret source: Actions
+2023-08-03T14:15:05.9545050Z Prepare workflow directory
+2023-08-03T14:15:06.0659430Z Prepare all required actions
+2023-08-03T14:15:06.0926260Z Getting action download info
+2023-08-03T14:15:06.3557420Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-03T14:15:09.0994010Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-03T14:15:10.8323440Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-03T14:15:12.9450270Z Complete job name: Tests (macos-12, 17)
+
+2023-08-03T14:15:02.6331390Z ##[group]Run actions/setup-java@v3
+2023-08-03T14:15:02.6331756Z with:
+2023-08-03T14:15:02.6332042Z   distribution: zulu
+2023-08-03T14:15:02.6332334Z   java-version: 11
+2023-08-03T14:15:02.6332649Z   java-package: jdk
+2023-08-03T14:15:02.6332953Z   check-latest: false
+2023-08-03T14:15:02.6333201Z   server-id: github
+2023-08-03T14:15:02.6333509Z   server-username: GITHUB_ACTOR
+2023-08-03T14:15:02.6333898Z   server-password: GITHUB_TOKEN
+2023-08-03T14:15:02.6334181Z   overwrite-settings: true
+2023-08-03T14:15:02.6334490Z   job-status: success
+2023-08-03T14:15:02.6334994Z   token: ***
+2023-08-03T14:15:02.6335231Z ##[endgroup]
+2023-08-03T14:15:02.8422771Z ##[group]Installed distributions
+2023-08-03T14:15:02.8473385Z Trying to resolve the latest version from remote
+2023-08-03T14:15:02.9590986Z Resolved latest version as 11.0.20+8
+2023-08-03T14:15:02.9594462Z Trying to download...
+2023-08-03T14:15:02.9599246Z Downloading Java 11.0.20+8 (Zulu) from https://cdn.azul.com/zulu/bin/zulu11.66.15-ca-jdk11.0.20-linux_x64.tar.gz ...
+2023-08-03T14:15:04.1466789Z Extracting Java archive...
+2023-08-03T14:15:04.1857693Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/7c9424ab-71c9-4084-9958-ac71b62f918f -f /home/runner/work/_temp/d3574c7b-eb26-4301-96c1-3b2150e87291
+2023-08-03T14:15:08.8644041Z Java 11.0.20+8 was downloaded
+2023-08-03T14:15:08.8644661Z Setting Java 11.0.20+8 as the default
+2023-08-03T14:15:08.8668463Z Creating toolchains.xml for JDK version 11 from zulu
+2023-08-03T14:15:08.8767641Z Writing to /home/runner/.m2/toolchains.xml
+2023-08-03T14:15:08.8768338Z 
+2023-08-03T14:15:08.8769384Z Java configuration:
+2023-08-03T14:15:08.8769770Z   Distribution: zulu
+2023-08-03T14:15:08.8770134Z   Version: 11.0.20+8
+2023-08-03T14:15:08.8771029Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-08-03T14:15:08.8771482Z 
+2023-08-03T14:15:08.8772103Z ##[endgroup]
+2023-08-03T14:15:08.8798247Z Creating settings.xml with server-id: github
+2023-08-03T14:15:08.8798747Z Writing to /home/runner/.m2/settings.xml
+
+2023-08-03T14:15:11.1201641Z ##[group]Run actions/setup-java@v3
+2023-08-03T14:15:11.1201941Z with:
+2023-08-03T14:15:11.1202178Z   distribution: zulu
+2023-08-03T14:15:11.1202458Z   java-version: 17
+2023-08-03T14:15:11.1202665Z   java-package: jdk
+2023-08-03T14:15:11.1202912Z   check-latest: false
+2023-08-03T14:15:11.1203159Z   server-id: github
+2023-08-03T14:15:11.1203381Z   server-username: GITHUB_ACTOR
+2023-08-03T14:15:11.1203696Z   server-password: GITHUB_TOKEN
+2023-08-03T14:15:11.1203977Z   overwrite-settings: true
+2023-08-03T14:15:11.1204198Z   job-status: success
+2023-08-03T14:15:11.1204645Z   token: ***
+2023-08-03T14:15:11.1204892Z ##[endgroup]
+2023-08-03T14:15:11.3995731Z ##[group]Installed distributions
+2023-08-03T14:15:11.4037451Z Trying to resolve the latest version from remote
+2023-08-03T14:15:11.6479258Z Resolved latest version as 17.0.8+7
+2023-08-03T14:15:11.6484956Z Trying to download...
+2023-08-03T14:15:11.6485944Z Downloading Java 17.0.8+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.44.15-ca-jdk17.0.8-win_x64.zip ...
+2023-08-03T14:15:12.9853724Z Extracting Java archive...
+2023-08-03T14:15:13.0418826Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\983828d6-11f4-4a43-a2da-794d2737983a', 'D:\a\_temp\fac55229-6ae1-43b1-acc8-4a1c0c8053d8')"
+2023-08-03T14:15:18.5272316Z Java 17.0.8+7 was downloaded
+2023-08-03T14:15:18.5272813Z Setting Java 17.0.8+7 as the default
+2023-08-03T14:15:18.5298509Z Creating toolchains.xml for JDK version 17 from zulu
+2023-08-03T14:15:18.5416757Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-08-03T14:15:18.5424654Z 
+2023-08-03T14:15:18.5424928Z Java configuration:
+2023-08-03T14:15:18.5425315Z   Distribution: zulu
+2023-08-03T14:15:18.5425740Z   Version: 17.0.8+7
+2023-08-03T14:15:18.5426472Z   Path: C:\hostedtoolcache\windows\Java_Zulu_jdk\17.0.8-7\x64
+2023-08-03T14:15:18.5426866Z 
+2023-08-03T14:15:18.5427486Z ##[endgroup]
+2023-08-03T14:15:18.5440783Z Creating settings.xml with server-id: github
+2023-08-03T14:15:18.5449626Z Writing to C:\Users\runneradmin\.m2\settings.xml
+
+2023-08-03T14:15:23.6273440Z Cleaning up orphan processes
+
+2023-08-03T14:15:17.9172112Z Post job cleanup.
+2023-08-03T14:15:18.0217105Z [command]/usr/bin/git version
+2023-08-03T14:15:18.0265820Z git version 2.41.0
+2023-08-03T14:15:18.0335701Z Temporarily overriding HOME='/home/runner/work/_temp/7c36dd7f-3404-484e-a6bd-c4406f07e4fc' before making global git config changes
+2023-08-03T14:15:18.0337035Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:18.0342987Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jtcop/jtcop
+2023-08-03T14:15:18.0386299Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:18.0423152Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-03T14:15:18.0661207Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:18.0690284Z http.https://github.com/.extraheader
+2023-08-03T14:15:18.0704213Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T14:15:18.0740526Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-03T14:15:19.9456990Z ##[group]Run actions/checkout@v3
+2023-08-03T14:15:19.9457450Z with:
+2023-08-03T14:15:19.9457780Z   repository: volodya-lombrozo/jtcop
+2023-08-03T14:15:19.9458410Z   token: ***
+2023-08-03T14:15:19.9458680Z   ssh-strict: true
+2023-08-03T14:15:19.9458970Z   persist-credentials: true
+2023-08-03T14:15:19.9459250Z   clean: true
+2023-08-03T14:15:19.9459540Z   sparse-checkout-cone-mode: true
+2023-08-03T14:15:19.9459830Z   fetch-depth: 1
+2023-08-03T14:15:19.9460100Z   lfs: false
+2023-08-03T14:15:19.9460350Z   submodules: false
+2023-08-03T14:15:19.9460640Z   set-safe-directory: true
+2023-08-03T14:15:19.9460930Z ##[endgroup]
+2023-08-03T14:15:22.2170960Z ##[error]The operation was canceled.
+
+2023-08-03T14:15:24.9506290Z Cleaning up orphan processes
+
+2023-08-03T14:15:09.4264103Z ##[group]Run actions/cache@v3
+2023-08-03T14:15:09.4264415Z with:
+2023-08-03T14:15:09.4264732Z   path: ~/.m2/repository
+2023-08-03T14:15:09.4265162Z   key: Linux-jdk-17-maven-c2aaffdbb35d81e2d45c9bcfc10d1f4fd054e944d1703489bac5dff68e088a9f
+2023-08-03T14:15:09.4265625Z   restore-keys: Linux-jdk-17-maven-
+
+2023-08-03T14:15:09.4265961Z   enableCrossOsArchive: false
+2023-08-03T14:15:09.4266238Z   fail-on-cache-miss: false
+2023-08-03T14:15:09.4266558Z   lookup-only: false
+2023-08-03T14:15:09.4266831Z env:
+2023-08-03T14:15:09.4267106Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.8-7/x64
+2023-08-03T14:15:09.4267492Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.8-7/x64
+2023-08-03T14:15:09.4268026Z ##[endgroup]
+2023-08-03T14:15:10.5621399Z Received 112206040 of 112206040 (100.0%), 149.0 MBs/sec
+2023-08-03T14:15:10.5624288Z Cache Size: ~107 MB (112206040 B)
+2023-08-03T14:15:10.5654999Z [command]/usr/bin/tar -xf /home/runner/work/_temp/722ab0ad-76e0-490c-818d-80e409a8c514/cache.tzst -P -C /home/runner/work/jtcop/jtcop --use-compress-program unzstd
+2023-08-03T14:15:10.9263788Z Cache restored successfully
+2023-08-03T14:15:11.2567939Z Cache restored from key: Linux-jdk-17-maven-7e41892171e38b8e19ff0f26dffcf47efdd62391bcc02a79c8e925a1a6a3da53
+
+2023-08-03T14:15:09.1567102Z ##[group]Run actions/cache@v3
+2023-08-03T14:15:09.1567360Z with:
+2023-08-03T14:15:09.1567574Z   path: ~/.m2/repository
+2023-08-03T14:15:09.1567999Z   key: Linux-jdk-11-maven-c2aaffdbb35d81e2d45c9bcfc10d1f4fd054e944d1703489bac5dff68e088a9f
+2023-08-03T14:15:09.1568457Z   restore-keys: Linux-jdk-11-maven-
+
+2023-08-03T14:15:09.1568745Z   enableCrossOsArchive: false
+2023-08-03T14:15:09.1568997Z   fail-on-cache-miss: false
+2023-08-03T14:15:09.1570228Z   lookup-only: false
+2023-08-03T14:15:09.1570465Z env:
+2023-08-03T14:15:09.1570721Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-08-03T14:15:09.1571077Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.20-8/x64
+2023-08-03T14:15:09.1571386Z ##[endgroup]
+2023-08-03T14:15:10.1236194Z Received 112131379 of 112131379 (100.0%), 158.0 MBs/sec
+2023-08-03T14:15:10.1240233Z Cache Size: ~107 MB (112131379 B)
+2023-08-03T14:15:10.1271346Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c9c702e1-3c42-4810-9f3f-77014cbd3820/cache.tzst -P -C /home/runner/work/jtcop/jtcop --use-compress-program unzstd
+2023-08-03T14:15:10.4723590Z Cache restored successfully
+2023-08-03T14:15:11.5740521Z Cache restored from key: Linux-jdk-11-maven-7e41892171e38b8e19ff0f26dffcf47efdd62391bcc02a79c8e925a1a6a3da53
+
+2023-08-03T14:15:22.3888170Z Post job cleanup.
+2023-08-03T14:15:22.6455210Z Syncing repository: volodya-lombrozo/jtcop
+2023-08-03T14:15:22.6457900Z ##[group]Getting Git version info
+2023-08-03T14:15:22.6458630Z Working directory is '/Users/runner/work/jtcop/jtcop'
+2023-08-03T14:15:22.6459440Z [command]/usr/local/bin/git version
+2023-08-03T14:15:22.9223910Z git version 2.41.0
+2023-08-03T14:15:22.9263180Z ##[endgroup]
+2023-08-03T14:15:22.9290620Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/44e0585b-5fac-4592-876c-e755469a49f3/.gitconfig'
+2023-08-03T14:15:22.9300080Z Temporarily overriding HOME='/Users/runner/work/_temp/44e0585b-5fac-4592-876c-e755469a49f3' before making global git config changes
+2023-08-03T14:15:22.9302470Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:22.9309230Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jtcop/jtcop
+2023-08-03T14:15:22.9725210Z Deleting the contents of '/Users/runner/work/jtcop/jtcop'
+2023-08-03T14:15:22.9734180Z ##[group]Initializing the repository
+2023-08-03T14:15:22.9739460Z [command]/usr/local/bin/git init /Users/runner/work/jtcop/jtcop
+2023-08-03T14:15:23.0614490Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-03T14:15:23.0615880Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-03T14:15:23.0617060Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-03T14:15:23.0617540Z hint: 
+2023-08-03T14:15:23.0618070Z hint: 	git config --global init.defaultBranch <name>
+2023-08-03T14:15:23.0618530Z hint: 
+2023-08-03T14:15:23.0619090Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-03T14:15:23.0619900Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-03T14:15:23.0620310Z hint: 
+2023-08-03T14:15:23.0621480Z hint: 	git branch -m <name>
+2023-08-03T14:15:23.0649220Z Initialized empty Git repository in /Users/runner/work/jtcop/jtcop/.git/
+2023-08-03T14:15:23.0666070Z [command]/usr/local/bin/git remote add origin https://github.com/volodya-lombrozo/jtcop
+2023-08-03T14:15:23.0876390Z ##[endgroup]
+2023-08-03T14:15:23.0877310Z ##[group]Disabling automatic garbage collection
+2023-08-03T14:15:23.0884100Z [command]/usr/local/bin/git config --local gc.auto 0
+2023-08-03T14:15:23.0986010Z ##[endgroup]
+2023-08-03T14:15:23.0986950Z ##[group]Setting up auth
+2023-08-03T14:15:23.1052520Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:23.1101740Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-03T14:15:23.3462720Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:23.3559380Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-03T14:15:23.4663360Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-03T14:15:23.4782760Z ##[endgroup]
+2023-08-03T14:15:23.4783420Z ##[group]Fetching the repository
+2023-08-03T14:15:23.4795910Z [command]/usr/local/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +8c29dc30a6c720fc58ad80cf4726530a99762a13:refs/remotes/pull/258/merge
+2023-08-03T14:15:24.2046700Z remote: Enumerating objects: 280, done.        
+2023-08-03T14:15:24.2057440Z remote: Counting objects:   0% (1/280)        
+2023-08-03T14:15:24.2058520Z remote: Counting objects:   1% (3/280)        
+[... 5681 lines removed by TriageCore ...]
+2023-08-03T14:14:52.4335044Z Evaluating continue on error
+2023-08-03T14:14:52.4335116Z Evaluating target
+2023-08-03T14:14:52.4335772Z Evaluating: matrix.os
+2023-08-03T14:14:52.4335808Z ##[debug]Evaluating Index:
+2023-08-03T14:14:52.4335829Z ##[debug]..Evaluating matrix:
+2023-08-03T14:14:52.4335859Z ##[debug]..=> Object
+2023-08-03T14:14:52.4335882Z ##[debug]..Evaluating String:
+2023-08-03T14:14:52.4335906Z ##[debug]..=> 'os'
+2023-08-03T14:14:52.4335934Z ##[debug]=> 'windows-2022'
+2023-08-03T14:14:52.4335960Z Result: 'windows-2022'
+2023-08-03T14:14:52.4336211Z Creating job 'macos-12_11'
+2023-08-03T14:14:52.4339271Z Evaluating timeout
+2023-08-03T14:14:52.4339341Z Evaluating cancel timeout
+2023-08-03T14:14:52.4339372Z Evaluating continue on error
+2023-08-03T14:14:52.4339408Z Evaluating target
+2023-08-03T14:14:52.4340044Z Evaluating: matrix.os
+2023-08-03T14:14:52.4340096Z ##[debug]Evaluating Index:
+2023-08-03T14:14:52.4340130Z ##[debug]..Evaluating matrix:
+2023-08-03T14:14:52.4340179Z ##[debug]..=> Object
+2023-08-03T14:14:52.4340213Z ##[debug]..Evaluating String:
+2023-08-03T14:14:52.4340252Z ##[debug]..=> 'os'
+2023-08-03T14:14:52.4340308Z ##[debug]=> 'macos-12'
+2023-08-03T14:14:52.4340340Z Result: 'macos-12'
+2023-08-03T14:14:52.4340726Z Creating job 'macos-12_17'
+2023-08-03T14:14:52.4345720Z Evaluating timeout
+2023-08-03T14:14:52.4345838Z Evaluating cancel timeout
+2023-08-03T14:14:52.4345886Z Evaluating continue on error
+2023-08-03T14:14:52.4345937Z Evaluating target
+2023-08-03T14:14:52.4346710Z Evaluating: matrix.os
+2023-08-03T14:14:52.4346769Z ##[debug]Evaluating Index:
+2023-08-03T14:14:52.4346818Z ##[debug]..Evaluating matrix:
+2023-08-03T14:14:52.4346883Z ##[debug]..=> Object
+2023-08-03T14:14:52.4346917Z ##[debug]..Evaluating String:
+2023-08-03T14:14:52.4346953Z ##[debug]..=> 'os'
+2023-08-03T14:14:52.4347024Z ##[debug]=> 'macos-12'
+2023-08-03T14:14:52.4347055Z Result: 'macos-12'
+2023-08-03T14:14:52.4349823Z ##[section]Finishing: Prepare job test
+
+2023-08-03T14:15:22.9242820Z Post job cleanup.
+2023-08-03T14:15:23.0635710Z [command]/usr/local/bin/git version
+2023-08-03T14:15:23.0737180Z git version 2.41.0
+2023-08-03T14:15:23.0796250Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/fc0f28ca-c00b-4ad4-b74c-b08adb2d31e3/.gitconfig'
+2023-08-03T14:15:23.0816140Z Temporarily overriding HOME='/Users/runner/work/_temp/fc0f28ca-c00b-4ad4-b74c-b08adb2d31e3' before making global git config changes
+2023-08-03T14:15:23.0817040Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:23.0825470Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jtcop/jtcop
+2023-08-03T14:15:23.0996980Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:23.1211390Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-03T14:15:23.4253150Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:23.4299840Z http.https://github.com/.extraheader
+2023-08-03T14:15:23.4303040Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T14:15:23.4355050Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-03T14:14:53.3358530Z Requested labels: windows-2022
+2023-08-03T14:14:53.3358781Z Job defined at: volodya-lombrozo/jtcop/.github/workflows/maven.test.yaml@refs/pull/258/merge
+2023-08-03T14:14:53.3358888Z Waiting for a runner to pick up this job...
+2023-08-03T14:14:55.8778962Z Job is waiting for a hosted runner to come online.
+2023-08-03T14:14:58.6967253Z Job is about to start running on the hosted runner: GitHub Actions 7 (hosted)
+2023-08-03T14:15:02.4397893Z Current runner version: '2.307.1'
+2023-08-03T14:15:02.4422761Z ##[group]Operating System
+2023-08-03T14:15:02.4423383Z Microsoft Windows Server 2022
+2023-08-03T14:15:02.4423682Z 10.0.20348
+2023-08-03T14:15:02.4423923Z Datacenter
+2023-08-03T14:15:02.4424195Z ##[endgroup]
+2023-08-03T14:15:02.4424478Z ##[group]Runner Image
+2023-08-03T14:15:02.4424741Z Image: windows-2022
+2023-08-03T14:15:02.4425025Z Version: 20230730.1.0
+2023-08-03T14:15:02.4425505Z Included Software: https://github.com/actions/runner-images/blob/win22/20230730.1/images/win/Windows2022-Readme.md
+2023-08-03T14:15:02.4426038Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230730.1
+2023-08-03T14:15:02.4426423Z ##[endgroup]
+2023-08-03T14:15:02.4426727Z ##[group]Runner Image Provisioner
+2023-08-03T14:15:02.4427044Z 2.0.264.1
+2023-08-03T14:15:02.4427258Z ##[endgroup]
+2023-08-03T14:15:02.4428113Z ##[group]GITHUB_TOKEN Permissions
+2023-08-03T14:15:02.4428640Z Actions: write
+2023-08-03T14:15:02.4429099Z Checks: write
+2023-08-03T14:15:02.4429443Z Contents: write
+2023-08-03T14:15:02.4429731Z Deployments: write
+2023-08-03T14:15:02.4430049Z Discussions: write
+2023-08-03T14:15:02.4430323Z Issues: write
+2023-08-03T14:15:02.4430596Z Metadata: read
+2023-08-03T14:15:02.4430852Z Packages: write
+2023-08-03T14:15:02.4431128Z Pages: write
+2023-08-03T14:15:02.4431457Z PullRequests: write
+2023-08-03T14:15:02.4431731Z RepositoryProjects: write
+2023-08-03T14:15:02.4432044Z SecurityEvents: write
+2023-08-03T14:15:02.4432335Z Statuses: write
+2023-08-03T14:15:02.4432573Z ##[endgroup]
+2023-08-03T14:15:02.4436187Z Secret source: Actions
+2023-08-03T14:15:02.4436685Z Prepare workflow directory
+2023-08-03T14:15:02.5301390Z Prepare all required actions
+2023-08-03T14:15:02.5499425Z Getting action download info
+2023-08-03T14:15:02.7967685Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-03T14:15:03.1333990Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-03T14:15:03.4152972Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-03T14:15:03.8582732Z Complete job name: Tests (windows-2022, 17)
+2023-08-03T14:15:04.0109526Z ##[group]Run actions/checkout@v3
+2023-08-03T14:15:04.0109976Z with:
+2023-08-03T14:15:04.0110260Z   repository: volodya-lombrozo/jtcop
+2023-08-03T14:15:04.0110803Z   token: ***
+2023-08-03T14:15:04.0111043Z   ssh-strict: true
+2023-08-03T14:15:04.0111310Z   persist-credentials: true
+2023-08-03T14:15:04.0111571Z   clean: true
+2023-08-03T14:15:04.0111845Z   sparse-checkout-cone-mode: true
+2023-08-03T14:15:04.0112125Z   fetch-depth: 1
+2023-08-03T14:15:04.0112362Z   lfs: false
+2023-08-03T14:15:04.0112642Z   submodules: false
+2023-08-03T14:15:04.0112907Z   set-safe-directory: true
+2023-08-03T14:15:04.0113166Z ##[endgroup]
+2023-08-03T14:15:05.7609388Z Syncing repository: volodya-lombrozo/jtcop
+2023-08-03T14:15:05.7611312Z ##[group]Getting Git version info
+2023-08-03T14:15:05.7611764Z Working directory is 'D:\a\jtcop\jtcop'
+2023-08-03T14:15:05.7612238Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-08-03T14:15:05.7612490Z git version 2.41.0.windows.3
+2023-08-03T14:15:05.7613485Z ##[endgroup]
+2023-08-03T14:15:05.7639052Z Temporarily overriding HOME='D:\a\_temp\a549b572-3504-4dda-b016-6ec5443c95c1' before making global git config changes
+2023-08-03T14:15:05.7639513Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:05.7640162Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jtcop\jtcop
+2023-08-03T14:15:05.7641139Z Deleting the contents of 'D:\a\jtcop\jtcop'
+2023-08-03T14:15:05.7641792Z ##[group]Initializing the repository
+2023-08-03T14:15:05.7642203Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\jtcop\jtcop
+2023-08-03T14:15:05.7642618Z Initialized empty Git repository in D:/a/jtcop/jtcop/.git/
+2023-08-03T14:15:05.7643567Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/volodya-lombrozo/jtcop
+2023-08-03T14:15:05.7646429Z ##[endgroup]
+2023-08-03T14:15:05.7646804Z ##[group]Disabling automatic garbage collection
+2023-08-03T14:15:05.7647358Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2023-08-03T14:15:05.7648116Z ##[endgroup]
+2023-08-03T14:15:05.7648508Z ##[group]Setting up auth
+2023-08-03T14:15:05.7649006Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:05.7650078Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-08-03T14:15:07.4519762Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:07.4819356Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-08-03T14:15:07.9907442Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2023-08-03T14:15:08.0217310Z ##[endgroup]
+2023-08-03T14:15:08.0217928Z ##[group]Fetching the repository
+2023-08-03T14:15:08.0232685Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +8c29dc30a6c720fc58ad80cf4726530a99762a13:refs/remotes/pull/258/merge
+2023-08-03T14:15:10.6448307Z remote: Enumerating objects: 280, done.        
+2023-08-03T14:15:10.6448721Z remote: Counting objects:   0% (1/280)        
+2023-08-03T14:15:10.6449048Z remote: Counting objects:   1% (3/280)        
+2023-08-03T14:15:10.6449277Z remote: Counting objects:   2% (6/280)        
+2023-08-03T14:15:10.6449548Z remote: Counting objects:   3% (9/280)        
+2023-08-03T14:15:10.6449784Z remote: Counting objects:   4% (12/280)        
+2023-08-03T14:15:10.6450101Z remote: Counting objects:   5% (14/280)        
+2023-08-03T14:15:10.6452191Z remote: Counting objects:   6% (17/280)        
+2023-08-03T14:15:10.6452446Z remote: Counting objects:   7% (20/280)        
+2023-08-03T14:15:10.6452664Z remote: Counting objects:   8% (23/280)        
+2023-08-03T14:15:10.6452891Z remote: Counting objects:   9% (26/280)        
+2023-08-03T14:15:10.6453115Z remote: Counting objects:  10% (28/280)        
+2023-08-03T14:15:10.6453328Z remote: Counting objects:  11% (31/280)        
+2023-08-03T14:15:10.6453553Z remote: Counting objects:  12% (34/280)        
+2023-08-03T14:15:10.6453763Z remote: Counting objects:  13% (37/280)        
+2023-08-03T14:15:10.6453972Z remote: Counting objects:  14% (40/280)        
+2023-08-03T14:15:10.6454191Z remote: Counting objects:  15% (42/280)        
+2023-08-03T14:15:10.6454395Z remote: Counting objects:  16% (45/280)        
+2023-08-03T14:15:10.6454621Z remote: Counting objects:  17% (48/280)        
+2023-08-03T14:15:10.6454833Z remote: Counting objects:  18% (51/280)        
+2023-08-03T14:15:10.6455047Z remote: Counting objects:  19% (54/280)        
+2023-08-03T14:15:10.6455256Z remote: Counting objects:  20% (56/280)        
+2023-08-03T14:15:10.6455466Z remote: Counting objects:  21% (59/280)        
+2023-08-03T14:15:10.6455676Z remote: Counting objects:  22% (62/280)        
+2023-08-03T14:15:10.6455880Z remote: Counting objects:  23% (65/280)        
+2023-08-03T14:15:10.6456149Z remote: Counting objects:  24% (68/280)        
+2023-08-03T14:15:10.6456360Z remote: Counting objects:  25% (70/280)        
+2023-08-03T14:15:10.6456568Z remote: Counting objects:  26% (73/280)        
+2023-08-03T14:15:10.6456768Z remote: Counting objects:  27% (76/280)        
+2023-08-03T14:15:10.6456974Z remote: Counting objects:  28% (79/280)        
+2023-08-03T14:15:10.6457184Z remote: Counting objects:  29% (82/280)        
+2023-08-03T14:15:10.6458133Z remote: Counting objects:  30% (84/280)        
+2023-08-03T14:15:10.6458350Z remote: Counting objects:  31% (87/280)        
+2023-08-03T14:15:10.6458570Z remote: Counting objects:  32% (90/280)        
+2023-08-03T14:15:10.6458786Z remote: Counting objects:  33% (93/280)        
+2023-08-03T14:15:10.6458989Z remote: Counting objects:  34% (96/280)        
+2023-08-03T14:15:10.6459199Z remote: Counting objects:  35% (98/280)        
+2023-08-03T14:15:10.6459425Z remote: Counting objects:  36% (101/280)        
+2023-08-03T14:15:10.6459649Z remote: Counting objects:  37% (104/280)        
+2023-08-03T14:15:10.6459864Z remote: Counting objects:  38% (107/280)        
+2023-08-03T14:15:10.6460100Z remote: Counting objects:  39% (110/280)        
+2023-08-03T14:15:10.6460318Z remote: Counting objects:  40% (112/280)        
+2023-08-03T14:15:10.6460527Z remote: Counting objects:  41% (115/280)        
+2023-08-03T14:15:10.6460759Z remote: Counting objects:  42% (118/280)        
+2023-08-03T14:15:10.6460973Z remote: Counting objects:  43% (121/280)        
+2023-08-03T14:15:10.6461190Z remote: Counting objects:  44% (124/280)        
+2023-08-03T14:15:10.6461403Z remote: Counting objects:  45% (126/280)        
+2023-08-03T14:15:10.6461619Z remote: Counting objects:  46% (129/280)        
+2023-08-03T14:15:10.6461828Z remote: Counting objects:  47% (132/280)        
+2023-08-03T14:15:10.6462046Z remote: Counting objects:  48% (135/280)        
+2023-08-03T14:15:10.6462258Z remote: Counting objects:  49% (138/280)        
+2023-08-03T14:15:10.6462467Z remote: Counting objects:  50% (140/280)        
+2023-08-03T14:15:10.6462676Z remote: Counting objects:  51% (143/280)        
+2023-08-03T14:15:10.6462886Z remote: Counting objects:  52% (146/280)        
+2023-08-03T14:15:10.6463092Z remote: Counting objects:  53% (149/280)        
+2023-08-03T14:15:10.6463300Z remote: Counting objects:  54% (152/280)        
+2023-08-03T14:15:10.6463511Z remote: Counting objects:  55% (154/280)        
+2023-08-03T14:15:10.6463718Z remote: Counting objects:  56% (157/280)        
+2023-08-03T14:15:10.6463931Z remote: Counting objects:  57% (160/280)        
+2023-08-03T14:15:10.6464702Z remote: Counting objects:  58% (163/280)        
+2023-08-03T14:15:10.6464923Z remote: Counting objects:  59% (166/280)        
+2023-08-03T14:15:10.6465130Z remote: Counting objects:  60% (168/280)        
+2023-08-03T14:15:10.6465343Z remote: Counting objects:  61% (171/280)        
+2023-08-03T14:15:10.6465560Z remote: Counting objects:  62% (174/280)        
+2023-08-03T14:15:10.6465762Z remote: Counting objects:  63% (177/280)        
+2023-08-03T14:15:10.6465998Z remote: Counting objects:  64% (180/280)        
+2023-08-03T14:15:10.6466215Z remote: Counting objects:  65% (182/280)        
+2023-08-03T14:15:10.6466434Z remote: Counting objects:  66% (185/280)        
+2023-08-03T14:15:10.6466641Z remote: Counting objects:  67% (188/280)        
+2023-08-03T14:15:10.6466856Z remote: Counting objects:  68% (191/280)        
+2023-08-03T14:15:10.6467066Z remote: Counting objects:  69% (194/280)        
+2023-08-03T14:15:10.6467272Z remote: Counting objects:  70% (196/280)        
+2023-08-03T14:15:10.6467491Z remote: Counting objects:  71% (199/280)        
+2023-08-03T14:15:10.6467703Z remote: Counting objects:  72% (202/280)        
+2023-08-03T14:15:10.6467912Z remote: Counting objects:  73% (205/280)        
+2023-08-03T14:15:10.6468112Z remote: Counting objects:  74% (208/280)        
+2023-08-03T14:15:10.6468320Z remote: Counting objects:  75% (210/280)        
+2023-08-03T14:15:10.6468529Z remote: Counting objects:  76% (213/280)        
+2023-08-03T14:15:10.6468739Z remote: Counting objects:  77% (216/280)        
+2023-08-03T14:15:10.6468950Z remote: Counting objects:  78% (219/280)        
+2023-08-03T14:15:10.6469165Z remote: Counting objects:  79% (222/280)        
+2023-08-03T14:15:10.6469365Z remote: Counting objects:  80% (224/280)        
+2023-08-03T14:15:10.6469573Z remote: Counting objects:  81% (227/280)        
+2023-08-03T14:15:10.6469902Z remote: Counting objects:  82% (230/280)        
+2023-08-03T14:15:10.6470106Z remote: Counting objects:  83% (233/280)        
+2023-08-03T14:15:10.6470326Z remote: Counting objects:  84% (236/280)        
+2023-08-03T14:15:10.6470531Z remote: Counting objects:  85% (238/280)        
+2023-08-03T14:15:10.6470741Z remote: Counting objects:  86% (241/280)        
+2023-08-03T14:15:10.6470942Z remote: Counting objects:  87% (244/280)        
+2023-08-03T14:15:10.6471151Z remote: Counting objects:  88% (247/280)        
+2023-08-03T14:15:10.6471363Z remote: Counting objects:  89% (250/280)        
+2023-08-03T14:15:10.6471561Z remote: Counting objects:  90% (252/280)        
+2023-08-03T14:15:10.6471770Z remote: Counting objects:  91% (255/280)        
+2023-08-03T14:15:10.6471984Z remote: Counting objects:  92% (258/280)        
+2023-08-03T14:15:10.6472184Z remote: Counting objects:  93% (261/280)        
+2023-08-03T14:15:10.6472391Z remote: Counting objects:  94% (264/280)        
+2023-08-03T14:15:10.6472604Z remote: Counting objects:  95% (266/280)        
+2023-08-03T14:15:10.6472807Z remote: Counting objects:  96% (269/280)        
+2023-08-03T14:15:10.6473014Z remote: Counting objects:  97% (272/280)        
+2023-08-03T14:15:10.6473221Z remote: Counting objects:  98% (275/280)        
+2023-08-03T14:15:10.6473427Z remote: Counting objects:  99% (278/280)        
+2023-08-03T14:15:10.6473626Z remote: Counting objects: 100% (280/280)        
+2023-08-03T14:15:10.6473862Z remote: Counting objects: 100% (280/280), done.        
+2023-08-03T14:15:10.6474127Z remote: Compressing objects:   0% (1/201)        
+2023-08-03T14:15:10.6474375Z remote: Compressing objects:   1% (3/201)        
+2023-08-03T14:15:10.6474613Z remote: Compressing objects:   2% (5/201)        
+2023-08-03T14:15:10.6474854Z remote: Compressing objects:   3% (7/201)        
+2023-08-03T14:15:10.6475072Z remote: Compressing objects:   4% (9/201)        
+2023-08-03T14:15:10.6475322Z remote: Compressing objects:   5% (11/201)        
+2023-08-03T14:15:10.6475571Z remote: Compressing objects:   6% (13/201)        
+2023-08-03T14:15:10.6475818Z remote: Compressing objects:   7% (15/201)        
+2023-08-03T14:15:10.6476148Z remote: Compressing objects:   8% (17/201)        
+2023-08-03T14:15:10.6476395Z remote: Compressing objects:   9% (19/201)        
+2023-08-03T14:15:10.6476632Z remote: Compressing objects:  10% (21/201)        
+2023-08-03T14:15:10.6476857Z remote: Compressing objects:  11% (23/201)        
+2023-08-03T14:15:10.6477091Z remote: Compressing objects:  12% (25/201)        
+2023-08-03T14:15:10.6477322Z remote: Compressing objects:  13% (27/201)        
+2023-08-03T14:15:10.6477541Z remote: Compressing objects:  14% (29/201)        
+2023-08-03T14:15:10.6477772Z remote: Compressing objects:  15% (31/201)        
+2023-08-03T14:15:10.6477998Z remote: Compressing objects:  16% (33/201)        
+2023-08-03T14:15:10.6478222Z remote: Compressing objects:  17% (35/201)        
+2023-08-03T14:15:10.6478443Z remote: Compressing objects:  18% (37/201)        
+2023-08-03T14:15:10.6478673Z remote: Compressing objects:  19% (39/201)        
+2023-08-03T14:15:10.6479415Z remote: Compressing objects:  20% (41/201)        
+2023-08-03T14:15:10.6528573Z remote: Compressing objects:  21% (43/201)        
+2023-08-03T14:15:10.6528927Z remote: Compressing objects:  22% (45/201)        
+2023-08-03T14:15:10.6529228Z remote: Compressing objects:  23% (47/201)        
+2023-08-03T14:15:10.6529841Z remote: Compressing objects:  24% (49/201)        
+2023-08-03T14:15:10.6530142Z remote: Compressing objects:  25% (51/201)        
+2023-08-03T14:15:10.6530388Z remote: Compressing objects:  26% (53/201)        
+2023-08-03T14:15:10.6530621Z remote: Compressing objects:  27% (55/201)        
+2023-08-03T14:15:10.6530861Z remote: Compressing objects:  28% (57/201)        
+2023-08-03T14:15:10.6531104Z remote: Compressing objects:  29% (59/201)        
+2023-08-03T14:15:10.6531329Z remote: Compressing objects:  30% (61/201)        
+2023-08-03T14:15:10.6531803Z remote: Compressing objects:  31% (63/201)        
+2023-08-03T14:15:10.6532037Z remote: Compressing objects:  32% (65/201)        
+2023-08-03T14:15:10.6532272Z remote: Compressing objects:  33% (67/201)        
+2023-08-03T14:15:10.6532505Z remote: Compressing objects:  34% (69/201)        
+2023-08-03T14:15:10.6532734Z remote: Compressing objects:  35% (71/201)        
+2023-08-03T14:15:10.6532955Z remote: Compressing objects:  36% (73/201)        
+2023-08-03T14:15:10.6533183Z remote: Compressing objects:  37% (75/201)        
+2023-08-03T14:15:10.6533413Z remote: Compressing objects:  38% (77/201)        
+2023-08-03T14:15:10.6533643Z remote: Compressing objects:  39% (79/201)        
+2023-08-03T14:15:10.6533863Z remote: Compressing objects:  40% (81/201)        
+2023-08-03T14:15:10.6534087Z remote: Compressing objects:  41% (83/201)        
+2023-08-03T14:15:10.6586488Z remote: Compressing objects:  42% (85/201)        
+2023-08-03T14:15:10.6586829Z remote: Compressing objects:  43% (87/201)        
+2023-08-03T14:15:10.6587124Z remote: Compressing objects:  44% (89/201)        
+2023-08-03T14:15:10.6587416Z remote: Compressing objects:  45% (91/201)        
+2023-08-03T14:15:10.6587712Z remote: Compressing objects:  46% (93/201)        
+2023-08-03T14:15:10.6588005Z remote: Compressing objects:  47% (95/201)        
+2023-08-03T14:15:10.6627986Z remote: Compressing objects:  48% (97/201)        
+2023-08-03T14:15:10.6628353Z remote: Compressing objects:  49% (99/201)        
+2023-08-03T14:15:10.6628648Z remote: Compressing objects:  50% (101/201)        
+2023-08-03T14:15:10.6628911Z remote: Compressing objects:  51% (103/201)        
+2023-08-03T14:15:10.6629158Z remote: Compressing objects:  52% (105/201)        
+2023-08-03T14:15:10.6629405Z remote: Compressing objects:  53% (107/201)        
+2023-08-03T14:15:10.6629634Z remote: Compressing objects:  54% (109/201)        
+2023-08-03T14:15:10.6629861Z remote: Compressing objects:  55% (111/201)        
+2023-08-03T14:15:10.6630107Z remote: Compressing objects:  56% (113/201)        
+2023-08-03T14:15:10.6630334Z remote: Compressing objects:  57% (115/201)        
+2023-08-03T14:15:10.6630739Z remote: Compressing objects:  58% (117/201)        
+2023-08-03T14:15:10.6630973Z remote: Compressing objects:  59% (119/201)        
+2023-08-03T14:15:10.6631197Z remote: Compressing objects:  60% (121/201)        
+2023-08-03T14:15:10.6631430Z remote: Compressing objects:  61% (123/201)        
+2023-08-03T14:15:10.6793586Z remote: Compressing objects:  62% (125/201)        
+2023-08-03T14:15:10.6793985Z remote: Compressing objects:  63% (127/201)        
+2023-08-03T14:15:10.6794313Z remote: Compressing objects:  64% (129/201)        
+2023-08-03T14:15:10.6794572Z remote: Compressing objects:  65% (131/201)        
+2023-08-03T14:15:10.6794795Z remote: Compressing objects:  66% (133/201)        
+2023-08-03T14:15:10.6795040Z remote: Compressing objects:  67% (135/201)        
+2023-08-03T14:15:10.6795292Z remote: Compressing objects:  68% (137/201)        
+2023-08-03T14:15:10.6795517Z remote: Compressing objects:  69% (139/201)        
+2023-08-03T14:15:10.6795753Z remote: Compressing objects:  70% (141/201)        
+2023-08-03T14:15:10.6795985Z remote: Compressing objects:  71% (143/201)        
+2023-08-03T14:15:10.6796229Z remote: Compressing objects:  72% (145/201)        
+2023-08-03T14:15:10.6796450Z remote: Compressing objects:  73% (147/201)        
+2023-08-03T14:15:10.6796695Z remote: Compressing objects:  74% (149/201)        
+2023-08-03T14:15:10.6796922Z remote: Compressing objects:  75% (151/201)        
+2023-08-03T14:15:10.6797146Z remote: Compressing objects:  76% (153/201)        
+2023-08-03T14:15:10.6797370Z remote: Compressing objects:  77% (155/201)        
+2023-08-03T14:15:10.6797600Z remote: Compressing objects:  78% (157/201)        
+2023-08-03T14:15:10.6797813Z remote: Compressing objects:  79% (159/201)        
+2023-08-03T14:15:10.6798039Z remote: Compressing objects:  80% (161/201)        
+2023-08-03T14:15:10.6799369Z remote: Compressing objects:  81% (163/201)        
+2023-08-03T14:15:10.6799601Z remote: Compressing objects:  82% (165/201)        
+2023-08-03T14:15:10.6799827Z remote: Compressing objects:  83% (167/201)        
+2023-08-03T14:15:10.6800059Z remote: Compressing objects:  84% (169/201)        
+2023-08-03T14:15:10.6800293Z remote: Compressing objects:  85% (171/201)        
+2023-08-03T14:15:10.6946984Z remote: Compressing objects:  86% (173/201)        
+2023-08-03T14:15:10.6947378Z remote: Compressing objects:  87% (175/201)        
+2023-08-03T14:15:10.6963512Z remote: Compressing objects:  88% (177/201)        
+2023-08-03T14:15:10.6964036Z remote: Compressing objects:  89% (179/201)        
+2023-08-03T14:15:10.6964356Z remote: Compressing objects:  90% (181/201)        
+2023-08-03T14:15:10.6964660Z remote: Compressing objects:  91% (183/201)        
+2023-08-03T14:15:10.6964970Z remote: Compressing objects:  92% (185/201)        
+2023-08-03T14:15:10.6965288Z remote: Compressing objects:  93% (187/201)        
+2023-08-03T14:15:10.6965582Z remote: Compressing objects:  94% (189/201)        
+2023-08-03T14:15:10.6965865Z remote: Compressing objects:  95% (191/201)        
+2023-08-03T14:15:10.6966176Z remote: Compressing objects:  96% (193/201)        
+2023-08-03T14:15:10.6966477Z remote: Compressing objects:  97% (195/201)        
+2023-08-03T14:15:10.6966837Z remote: Compressing objects:  98% (197/201)        
+2023-08-03T14:15:10.6967124Z remote: Compressing objects:  99% (199/201)        
+2023-08-03T14:15:10.6967444Z remote: Compressing objects: 100% (201/201)        
+2023-08-03T14:15:10.6967769Z remote: Compressing objects: 100% (201/201), done.        
+2023-08-03T14:15:10.7563278Z Receiving objects:   0% (1/280)
+2023-08-03T14:15:10.7563878Z Receiving objects:   1% (3/280)
+2023-08-03T14:15:10.7564156Z Receiving objects:   2% (6/280)
+2023-08-03T14:15:10.7564447Z Receiving objects:   3% (9/280)
+2023-08-03T14:15:10.7564712Z Receiving objects:   4% (12/280)
+2023-08-03T14:15:10.7571421Z Receiving objects:   5% (14/280)
+2023-08-03T14:15:10.7571779Z Receiving objects:   6% (17/280)
+2023-08-03T14:15:10.7575623Z Receiving objects:   7% (20/280)
+2023-08-03T14:15:10.7582359Z Receiving objects:   8% (23/280)
+2023-08-03T14:15:10.7582879Z Receiving objects:   9% (26/280)
+2023-08-03T14:15:10.7584697Z Receiving objects:  10% (28/280)
+2023-08-03T14:15:10.7584994Z Receiving objects:  11% (31/280)
+2023-08-03T14:15:10.7585854Z Receiving objects:  12% (34/280)
+2023-08-03T14:15:10.7586123Z Receiving objects:  13% (37/280)
+2023-08-03T14:15:10.7586934Z Receiving objects:  14% (40/280)
+2023-08-03T14:15:10.7587523Z Receiving objects:  15% (42/280)
+2023-08-03T14:15:10.7590232Z Receiving objects:  16% (45/280)
+2023-08-03T14:15:10.7590498Z Receiving objects:  17% (48/280)
+2023-08-03T14:15:10.7590744Z Receiving objects:  18% (51/280)
+2023-08-03T14:15:10.7591879Z Receiving objects:  19% (54/280)
+2023-08-03T14:15:10.7593412Z Receiving objects:  20% (56/280)
+2023-08-03T14:15:10.7594280Z Receiving objects:  21% (59/280)
+2023-08-03T14:15:10.7595955Z Receiving objects:  22% (62/280)
+2023-08-03T14:15:10.7596859Z Receiving objects:  23% (65/280)
+2023-08-03T14:15:10.7597180Z Receiving objects:  24% (68/280)
+2023-08-03T14:15:10.7600809Z Receiving objects:  25% (70/280)
+2023-08-03T14:15:10.7602542Z Receiving objects:  26% (73/280)
+2023-08-03T14:15:10.7603371Z Receiving objects:  27% (76/280)
+2023-08-03T14:15:10.7603668Z Receiving objects:  28% (79/280)
+2023-08-03T14:15:10.7604500Z Receiving objects:  29% (82/280)
+2023-08-03T14:15:10.7605539Z Receiving objects:  30% (84/280)
+2023-08-03T14:15:10.7605800Z Receiving objects:  31% (87/280)
+2023-08-03T14:15:10.7607043Z Receiving objects:  32% (90/280)
+2023-08-03T14:15:10.7607362Z Receiving objects:  33% (93/280)
+2023-08-03T14:15:10.7607603Z Receiving objects:  34% (96/280)
+2023-08-03T14:15:10.7607856Z Receiving objects:  35% (98/280)
+2023-08-03T14:15:10.7608113Z Receiving objects:  36% (101/280)
+2023-08-03T14:15:10.7609416Z Receiving objects:  37% (104/280)
+2023-08-03T14:15:10.7609667Z Receiving objects:  38% (107/280)
+2023-08-03T14:15:10.7610878Z Receiving objects:  39% (110/280)
+2023-08-03T14:15:10.7611163Z Receiving objects:  40% (112/280)
+2023-08-03T14:15:10.7611411Z Receiving objects:  41% (115/280)
+2023-08-03T14:15:10.7612226Z Receiving objects:  42% (118/280)
+2023-08-03T14:15:10.7613405Z Receiving objects:  43% (121/280)
+2023-08-03T14:15:10.7613840Z Receiving objects:  44% (124/280)
+2023-08-03T14:15:10.7617287Z Receiving objects:  45% (126/280)
+2023-08-03T14:15:10.7617610Z Receiving objects:  46% (129/280)
+2023-08-03T14:15:10.7619438Z Receiving objects:  47% (132/280)
+2023-08-03T14:15:10.7620596Z Receiving objects:  48% (135/280)
+2023-08-03T14:15:10.7647250Z Receiving objects:  49% (138/280)
+2023-08-03T14:15:10.7648069Z Receiving objects:  50% (140/280)
+2023-08-03T14:15:10.7648531Z Receiving objects:  51% (143/280)
+2023-08-03T14:15:10.7649361Z Receiving objects:  52% (146/280)
+2023-08-03T14:15:10.7681394Z Receiving objects:  53% (149/280)
+2023-08-03T14:15:10.7711548Z Receiving objects:  54% (152/280)
+2023-08-03T14:15:10.7713004Z Receiving objects:  55% (154/280)
+2023-08-03T14:15:10.7713522Z Receiving objects:  56% (157/280)
+2023-08-03T14:15:10.7713835Z Receiving objects:  57% (160/280)
+2023-08-03T14:15:10.7714287Z Receiving objects:  58% (163/280)
+2023-08-03T14:15:10.7715642Z Receiving objects:  59% (166/280)
+2023-08-03T14:15:10.7716133Z Receiving objects:  60% (168/280)
+2023-08-03T14:15:10.7718159Z Receiving objects:  61% (171/280)
+2023-08-03T14:15:10.7718425Z Receiving objects:  62% (174/280)
+2023-08-03T14:15:10.7718688Z Receiving objects:  63% (177/280)
+2023-08-03T14:15:10.7718933Z Receiving objects:  64% (180/280)
+2023-08-03T14:15:10.7719186Z Receiving objects:  65% (182/280)
+2023-08-03T14:15:10.7719426Z Receiving objects:  66% (185/280)
+2023-08-03T14:15:10.7719670Z Receiving objects:  67% (188/280)
+2023-08-03T14:15:10.7719919Z Receiving objects:  68% (191/280)
+2023-08-03T14:15:10.7720177Z Receiving objects:  69% (194/280)
+2023-08-03T14:15:10.7720411Z Receiving objects:  70% (196/280)
+2023-08-03T14:15:10.7720652Z Receiving objects:  71% (199/280)
+2023-08-03T14:15:10.7721083Z Receiving objects:  72% (202/280)
+2023-08-03T14:15:10.7721334Z Receiving objects:  73% (205/280)
+2023-08-03T14:15:10.7721582Z Receiving objects:  74% (208/280)
+2023-08-03T14:15:10.7721832Z Receiving objects:  75% (210/280)
+2023-08-03T14:15:10.7722168Z Receiving objects:  76% (213/280)
+2023-08-03T14:15:10.7722452Z Receiving objects:  77% (216/280)
+2023-08-03T14:15:10.7722828Z Receiving objects:  78% (219/280)
+2023-08-03T14:15:10.7723103Z Receiving objects:  79% (222/280)
+2023-08-03T14:15:10.7723418Z Receiving objects:  80% (224/280)
+2023-08-03T14:15:10.7723733Z Receiving objects:  81% (227/280)
+2023-08-03T14:15:10.7724060Z Receiving objects:  82% (230/280)
+2023-08-03T14:15:10.7724345Z Receiving objects:  83% (233/280)
+2023-08-03T14:15:10.7724659Z Receiving objects:  84% (236/280)
+2023-08-03T14:15:10.7724988Z Receiving objects:  85% (238/280)
+2023-08-03T14:15:10.7725269Z Receiving objects:  86% (241/280)
+2023-08-03T14:15:10.7725597Z Receiving objects:  87% (244/280)
+2023-08-03T14:15:10.7725921Z Receiving objects:  88% (247/280)
+2023-08-03T14:15:10.7726268Z Receiving objects:  89% (250/280)
+2023-08-03T14:15:10.7726579Z Receiving objects:  90% (252/280)
+2023-08-03T14:15:10.7727239Z remote: Total 280 (delta 139), reused 124 (delta 37), pack-reused 0        
+2023-08-03T14:15:10.7727588Z Receiving objects:  91% (255/280)
+2023-08-03T14:15:10.7727907Z Receiving objects:  92% (258/280)
+2023-08-03T14:15:10.7728226Z Receiving objects:  93% (261/280)
+2023-08-03T14:15:10.7728556Z Receiving objects:  94% (264/280)
+2023-08-03T14:15:10.7729043Z Receiving objects:  95% (266/280)
+2023-08-03T14:15:10.7729417Z Receiving objects:  96% (269/280)
+2023-08-03T14:15:10.7729746Z Receiving objects:  97% (272/280)
+2023-08-03T14:15:10.7730034Z Receiving objects:  98% (275/280)
+2023-08-03T14:15:10.7730365Z Receiving objects:  99% (278/280)
+2023-08-03T14:15:10.7730850Z Receiving objects: 100% (280/280)
+2023-08-03T14:15:10.7731210Z Receiving objects: 100% (280/280), 111.40 KiB | 5.86 MiB/s, done.
+2023-08-03T14:15:10.7731545Z Resolving deltas:   0% (0/139)
+2023-08-03T14:15:10.7731876Z Resolving deltas:   1% (2/139)
+2023-08-03T14:15:10.7732212Z Resolving deltas:   2% (3/139)
+2023-08-03T14:15:10.7732496Z Resolving deltas:   3% (5/139)
+2023-08-03T14:15:10.7732821Z Resolving deltas:   4% (6/139)
+2023-08-03T14:15:10.7733142Z Resolving deltas:   5% (7/139)
+2023-08-03T14:15:10.7733458Z Resolving deltas:   6% (9/139)
+2023-08-03T14:15:10.7733751Z Resolving deltas:   7% (10/139)
+2023-08-03T14:15:10.7734077Z Resolving deltas:   8% (12/139)
+2023-08-03T14:15:10.7734403Z Resolving deltas:   9% (13/139)
+2023-08-03T14:15:10.7734685Z Resolving deltas:  10% (14/139)
+2023-08-03T14:15:10.7735009Z Resolving deltas:  11% (16/139)
+2023-08-03T14:15:10.7735417Z Resolving deltas:  12% (17/139)
+2023-08-03T14:15:10.7735737Z Resolving deltas:  13% (19/139)
+2023-08-03T14:15:10.7736013Z Resolving deltas:  14% (20/139)
+2023-08-03T14:15:10.7736337Z Resolving deltas:  15% (21/139)
+2023-08-03T14:15:10.7736668Z Resolving deltas:  16% (23/139)
+2023-08-03T14:15:10.7736984Z Resolving deltas:  17% (24/139)
+2023-08-03T14:15:10.7737259Z Resolving deltas:  18% (26/139)
+2023-08-03T14:15:10.7737566Z Resolving deltas:  19% (27/139)
+2023-08-03T14:15:10.7737895Z Resolving deltas:  20% (28/139)
+2023-08-03T14:15:10.7738166Z Resolving deltas:  21% (30/139)
+2023-08-03T14:15:10.7738479Z Resolving deltas:  22% (31/139)
+2023-08-03T14:15:10.7738788Z Resolving deltas:  23% (32/139)
+2023-08-03T14:15:10.7739100Z Resolving deltas:  24% (34/139)
+2023-08-03T14:15:10.7739383Z Resolving deltas:  25% (35/139)
+2023-08-03T14:15:10.7739690Z Resolving deltas:  26% (37/139)
+2023-08-03T14:15:10.7740088Z Resolving deltas:  27% (38/139)
+2023-08-03T14:15:10.7740385Z Resolving deltas:  28% (39/139)
+2023-08-03T14:15:10.7741083Z Resolving deltas:  29% (41/139)
+2023-08-03T14:15:10.7741434Z Resolving deltas:  30% (42/139)
+2023-08-03T14:15:10.7741744Z Resolving deltas:  31% (44/139)
+2023-08-03T14:15:10.7742020Z Resolving deltas:  32% (45/139)
+2023-08-03T14:15:10.7742462Z Resolving deltas:  33% (46/139)
+2023-08-03T14:15:10.7742887Z Resolving deltas:  34% (48/139)
+2023-08-03T14:15:10.7743190Z Resolving deltas:  35% (49/139)
+2023-08-03T14:15:10.7743503Z Resolving deltas:  36% (51/139)
+2023-08-03T14:15:10.7743814Z Resolving deltas:  37% (52/139)
+2023-08-03T14:15:10.7744121Z Resolving deltas:  38% (53/139)
+2023-08-03T14:15:10.7744497Z Resolving deltas:  39% (55/139)
+2023-08-03T14:15:10.7744997Z Resolving deltas:  40% (56/139)
+2023-08-03T14:15:10.7745916Z Resolving deltas:  41% (57/139)
+2023-08-03T14:15:10.7746242Z Resolving deltas:  42% (59/139)
+2023-08-03T14:15:10.7746518Z Resolving deltas:  43% (60/139)
+2023-08-03T14:15:10.7746852Z Resolving deltas:  44% (62/139)
+2023-08-03T14:15:10.7747165Z Resolving deltas:  45% (63/139)
+2023-08-03T14:15:10.7747435Z Resolving deltas:  46% (64/139)
+2023-08-03T14:15:10.7747752Z Resolving deltas:  47% (66/139)
+2023-08-03T14:15:10.7748079Z Resolving deltas:  48% (67/139)
+2023-08-03T14:15:10.7748390Z Resolving deltas:  49% (69/139)
+2023-08-03T14:15:10.7748665Z Resolving deltas:  50% (70/139)
+2023-08-03T14:15:10.7748971Z Resolving deltas:  51% (71/139)
+2023-08-03T14:15:10.7749282Z Resolving deltas:  52% (73/139)
+2023-08-03T14:15:10.7749567Z Resolving deltas:  53% (74/139)
+2023-08-03T14:15:10.7749880Z Resolving deltas:  54% (76/139)
+2023-08-03T14:15:10.7750198Z Resolving deltas:  55% (77/139)
+2023-08-03T14:15:10.7750511Z Resolving deltas:  56% (78/139)
+2023-08-03T14:15:10.7750782Z Resolving deltas:  57% (80/139)
+2023-08-03T14:15:10.7751102Z Resolving deltas:  58% (82/139)
+2023-08-03T14:15:10.7751414Z Resolving deltas:  59% (83/139)
+2023-08-03T14:15:10.7751687Z Resolving deltas:  60% (84/139)
+2023-08-03T14:15:10.7752000Z Resolving deltas:  61% (85/139)
+2023-08-03T14:15:10.7752323Z Resolving deltas:  62% (87/139)
+2023-08-03T14:15:10.7752814Z Resolving deltas:  63% (88/139)
+2023-08-03T14:15:10.7753086Z Resolving deltas:  64% (89/139)
+2023-08-03T14:15:10.7753405Z Resolving deltas:  65% (91/139)
+2023-08-03T14:15:10.7753817Z Resolving deltas:  66% (92/139)
+2023-08-03T14:15:10.7754200Z Resolving deltas:  67% (94/139)
+2023-08-03T14:15:10.7754474Z Resolving deltas:  68% (95/139)
+2023-08-03T14:15:10.7754814Z Resolving deltas:  69% (96/139)
+2023-08-03T14:15:10.7755152Z Resolving deltas:  70% (98/139)
+2023-08-03T14:15:10.7755447Z Resolving deltas:  71% (99/139)
+2023-08-03T14:15:10.7755780Z Resolving deltas:  72% (101/139)
+2023-08-03T14:15:10.7756132Z Resolving deltas:  73% (102/139)
+2023-08-03T14:15:10.7756418Z Resolving deltas:  74% (103/139)
+2023-08-03T14:15:10.7756709Z Resolving deltas:  75% (105/139)
+2023-08-03T14:15:10.7757017Z Resolving deltas:  76% (106/139)
+2023-08-03T14:15:10.7757283Z Resolving deltas:  77% (108/139)
+2023-08-03T14:15:10.7757502Z Resolving deltas:  78% (109/139)
+2023-08-03T14:15:10.7757763Z Resolving deltas:  79% (110/139)
+2023-08-03T14:15:10.7758104Z Resolving deltas:  80% (112/139)
+2023-08-03T14:15:10.7758320Z Resolving deltas:  81% (113/139)
+2023-08-03T14:15:10.7759577Z Resolving deltas:  82% (114/139)
+2023-08-03T14:15:10.7759930Z Resolving deltas:  83% (116/139)
+2023-08-03T14:15:10.7760255Z Resolving deltas:  84% (117/139)
+2023-08-03T14:15:10.7760565Z Resolving deltas:  85% (119/139)
+2023-08-03T14:15:10.7760900Z Resolving deltas:  86% (120/139)
+2023-08-03T14:15:10.7761227Z Resolving deltas:  87% (121/139)
+2023-08-03T14:15:10.7761546Z Resolving deltas:  88% (123/139)
+2023-08-03T14:15:10.7761826Z Resolving deltas:  89% (124/139)
+2023-08-03T14:15:10.7762162Z Resolving deltas:  90% (126/139)
+2023-08-03T14:15:10.7762478Z Resolving deltas:  91% (127/139)
+2023-08-03T14:15:10.7762755Z Resolving deltas:  92% (128/139)
+2023-08-03T14:15:10.7763077Z Resolving deltas:  93% (130/139)
+2023-08-03T14:15:10.7763416Z Resolving deltas:  94% (131/139)
+2023-08-03T14:15:10.7763731Z Resolving deltas:  95% (133/139)
+2023-08-03T14:15:10.7764011Z Resolving deltas:  96% (134/139)
+2023-08-03T14:15:10.7764335Z Resolving deltas:  97% (135/139)
+2023-08-03T14:15:10.7764655Z Resolving deltas:  98% (137/139)
+2023-08-03T14:15:10.7765148Z Resolving deltas:  99% (138/139)
+2023-08-03T14:15:10.7765436Z Resolving deltas: 100% (139/139)
+2023-08-03T14:15:10.7765775Z Resolving deltas: 100% (139/139), done.
+2023-08-03T14:15:10.8505729Z From https://github.com/volodya-lombrozo/jtcop
+2023-08-03T14:15:10.8506641Z  * [new ref]         8c29dc30a6c720fc58ad80cf4726530a99762a13 -> pull/258/merge
+2023-08-03T14:15:10.8755838Z ##[endgroup]
+2023-08-03T14:15:10.8756355Z ##[group]Determining the checkout info
+2023-08-03T14:15:10.8758701Z ##[endgroup]
+2023-08-03T14:15:10.8759221Z ##[group]Checking out the ref
+2023-08-03T14:15:10.8769240Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/258/merge
+2023-08-03T14:15:10.9909585Z ##[endgroup]
+2023-08-03T14:15:11.0394822Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format='%H'
+2023-08-03T14:15:11.0664321Z '8c29dc30a6c720fc58ad80cf4726530a99762a13'
+2023-08-03T14:15:11.1201668Z ##[group]Run actions/setup-java@v3
+2023-08-03T14:15:11.1201944Z with:
+2023-08-03T14:15:11.1202183Z   distribution: zulu
+2023-08-03T14:15:11.1202462Z   java-version: 17
+2023-08-03T14:15:11.1202668Z   java-package: jdk
+2023-08-03T14:15:11.1202916Z   check-latest: false
+2023-08-03T14:15:11.1203162Z   server-id: github
+2023-08-03T14:15:11.1203384Z   server-username: GITHUB_ACTOR
+2023-08-03T14:15:11.1203700Z   server-password: GITHUB_TOKEN
+2023-08-03T14:15:11.1203980Z   overwrite-settings: true
+2023-08-03T14:15:11.1204201Z   job-status: success
+2023-08-03T14:15:11.1204650Z   token: ***
+2023-08-03T14:15:11.1204895Z ##[endgroup]
+2023-08-03T14:15:11.3995766Z ##[group]Installed distributions
+2023-08-03T14:15:11.4037460Z Trying to resolve the latest version from remote
+2023-08-03T14:15:11.6479302Z Resolved latest version as 17.0.8+7
+2023-08-03T14:15:11.6484977Z Trying to download...
+2023-08-03T14:15:11.6486073Z Downloading Java 17.0.8+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.44.15-ca-jdk17.0.8-win_x64.zip ...
+2023-08-03T14:15:12.9853765Z Extracting Java archive...
+2023-08-03T14:15:13.0418871Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\983828d6-11f4-4a43-a2da-794d2737983a', 'D:\a\_temp\fac55229-6ae1-43b1-acc8-4a1c0c8053d8')"
+2023-08-03T14:15:18.5272360Z Java 17.0.8+7 was downloaded
+2023-08-03T14:15:18.5272818Z Setting Java 17.0.8+7 as the default
+2023-08-03T14:15:18.5298516Z Creating toolchains.xml for JDK version 17 from zulu
+2023-08-03T14:15:18.5416784Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-08-03T14:15:18.5424663Z 
+2023-08-03T14:15:18.5424933Z Java configuration:
+2023-08-03T14:15:18.5425320Z   Distribution: zulu
+2023-08-03T14:15:18.5425744Z   Version: 17.0.8+7
+2023-08-03T14:15:18.5426510Z   Path: C:\hostedtoolcache\windows\Java_Zulu_jdk\17.0.8-7\x64
+2023-08-03T14:15:18.5426869Z 
+2023-08-03T14:15:18.5427490Z ##[endgroup]
+2023-08-03T14:15:18.5440800Z Creating settings.xml with server-id: github
+2023-08-03T14:15:18.5449633Z Writing to C:\Users\runneradmin\.m2\settings.xml
+2023-08-03T14:15:18.8488033Z ##[group]Run actions/cache@v3
+2023-08-03T14:15:18.8488409Z with:
+2023-08-03T14:15:18.8488652Z   path: ~/.m2/repository
+2023-08-03T14:15:18.8489043Z   key: Windows-jdk-17-maven-c2aaffdbb35d81e2d45c9bcfc10d1f4fd054e944d1703489bac5dff68e088a9f
+2023-08-03T14:15:18.8489537Z   restore-keys: Windows-jdk-17-maven-
+
+2023-08-03T14:15:18.8489846Z   enableCrossOsArchive: false
+2023-08-03T14:15:18.8490123Z   fail-on-cache-miss: false
+2023-08-03T14:15:18.8490342Z   lookup-only: false
+2023-08-03T14:15:18.8490594Z env:
+2023-08-03T14:15:18.8490914Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Zulu_jdk\17.0.8-7\x64
+2023-08-03T14:15:18.8491283Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Zulu_jdk\17.0.8-7\x64
+2023-08-03T14:15:18.8491589Z ##[endgroup]
+2023-08-03T14:15:20.2746548Z Received 111350138 of 111350138 (100.0%), 136.7 MBs/sec
+2023-08-03T14:15:20.2749705Z Cache Size: ~106 MB (111350138 B)
+2023-08-03T14:15:20.2928084Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/31b3a8db-fd38-40cc-b94a-22fb6b753578/cache.tzst -P -C D:/a/jtcop/jtcop --force-local --use-compress-program "zstd -d"
+2023-08-03T14:15:22.1768657Z ##[error]The operation was canceled.
+2023-08-03T14:15:22.2907016Z Post job cleanup.
+2023-08-03T14:15:23.4741027Z Post job cleanup.
+2023-08-03T14:15:23.8728804Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-08-03T14:15:23.9003363Z git version 2.41.0.windows.3
+2023-08-03T14:15:23.9066605Z Temporarily overriding HOME='D:\a\_temp\90aaec5c-ec8a-4ddd-b655-ed4e92303b94' before making global git config changes
+2023-08-03T14:15:23.9067297Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T14:15:23.9078077Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jtcop\jtcop
+2023-08-03T14:15:23.9381439Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T14:15:23.9682474Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-08-03T14:15:24.4703384Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T14:15:24.4977334Z http.https://github.com/.extraheader
+2023-08-03T14:15:24.5019313Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T14:15:24.5337231Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-08-03T14:15:25.0458265Z Cleaning up orphan processes

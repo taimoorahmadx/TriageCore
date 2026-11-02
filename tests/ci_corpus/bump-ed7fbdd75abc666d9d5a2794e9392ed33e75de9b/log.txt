@@ -1,0 +1,800 @@
+2023-08-03T10:20:14.2047587Z Cleaning up orphan processes
+2023-08-03T10:20:14.2414956Z Terminate orphan process: pid (1825) (java)
+
+2023-08-03T10:20:00.8745307Z Post job cleanup.
+
+2023-08-03T10:20:02.8785667Z Cleaning up orphan processes
+
+2023-08-03T10:19:22.0973945Z Requested labels: windows-2022
+2023-08-03T10:19:22.0974278Z Job defined at: jcabi/jcabi-maven-plugin/.github/workflows/mvn.yml@refs/pull/129/merge
+2023-08-03T10:19:22.0974396Z Waiting for a runner to pick up this job...
+2023-08-03T10:19:24.7111273Z Job is waiting for a hosted runner to come online.
+2023-08-03T10:19:30.7301959Z Job is about to start running on the hosted runner: GitHub Actions 8 (hosted)
+2023-08-03T10:19:35.2822878Z Current runner version: '2.307.1'
+2023-08-03T10:19:35.2856443Z ##[group]Operating System
+2023-08-03T10:19:35.2857099Z Microsoft Windows Server 2022
+2023-08-03T10:19:35.2857379Z 10.0.20348
+2023-08-03T10:19:35.2857661Z Datacenter
+2023-08-03T10:19:35.2857971Z ##[endgroup]
+2023-08-03T10:19:35.2858231Z ##[group]Runner Image
+2023-08-03T10:19:35.2858569Z Image: windows-2022
+2023-08-03T10:19:35.2858885Z Version: 20230724.1.0
+2023-08-03T10:19:35.2859392Z Included Software: https://github.com/actions/runner-images/blob/win22/20230724.1/images/win/Windows2022-Readme.md
+2023-08-03T10:19:35.2859953Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230724.1
+2023-08-03T10:19:35.2860379Z ##[endgroup]
+2023-08-03T10:19:35.2860710Z ##[group]Runner Image Provisioner
+2023-08-03T10:19:35.2860993Z 2.0.264.1
+2023-08-03T10:19:35.2861313Z ##[endgroup]
+2023-08-03T10:19:35.2862282Z ##[group]GITHUB_TOKEN Permissions
+2023-08-03T10:19:35.2862907Z Actions: write
+2023-08-03T10:19:35.2863397Z Checks: write
+2023-08-03T10:19:35.2863754Z Contents: write
+2023-08-03T10:19:35.2864066Z Deployments: write
+2023-08-03T10:19:35.2864374Z Discussions: write
+2023-08-03T10:19:35.2864692Z Issues: write
+2023-08-03T10:19:35.2864944Z Metadata: read
+2023-08-03T10:19:35.2865247Z Packages: write
+2023-08-03T10:19:35.2865544Z Pages: write
+2023-08-03T10:19:35.2865807Z PullRequests: write
+2023-08-03T10:19:35.2866170Z RepositoryProjects: write
+2023-08-03T10:19:35.2866522Z SecurityEvents: write
+2023-08-03T10:19:35.2866792Z Statuses: write
+2023-08-03T10:19:35.2867086Z ##[endgroup]
+2023-08-03T10:19:35.2870704Z Secret source: Actions
+2023-08-03T10:19:35.2871147Z Prepare workflow directory
+2023-08-03T10:19:35.3749185Z Prepare all required actions
+2023-08-03T10:19:35.3939190Z Getting action download info
+2023-08-03T10:19:35.6196646Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-08-03T10:19:36.0643768Z Download action repository 'actions/setup-java@v3' (SHA:cd89f46ac9d01407894225f350157564c9c7cee2)
+2023-08-03T10:19:36.4633443Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-08-03T10:19:36.8577957Z Complete job name: mvn (windows-2022, 11)
+2023-08-03T10:19:37.0449612Z ##[group]Run actions/checkout@v3
+2023-08-03T10:19:37.0450040Z with:
+2023-08-03T10:19:37.0450323Z   repository: jcabi/jcabi-maven-plugin
+2023-08-03T10:19:37.0450822Z   token: ***
+2023-08-03T10:19:37.0451052Z   ssh-strict: true
+2023-08-03T10:19:37.0451315Z   persist-credentials: true
+2023-08-03T10:19:37.0451554Z   clean: true
+2023-08-03T10:19:37.0451816Z   sparse-checkout-cone-mode: true
+2023-08-03T10:19:37.0452089Z   fetch-depth: 1
+2023-08-03T10:19:37.0452307Z   lfs: false
+2023-08-03T10:19:37.0452530Z   submodules: false
+2023-08-03T10:19:37.0452783Z   set-safe-directory: true
+2023-08-03T10:19:37.0453030Z ##[endgroup]
+2023-08-03T10:19:38.9400203Z Syncing repository: jcabi/jcabi-maven-plugin
+2023-08-03T10:19:38.9403900Z ##[group]Getting Git version info
+2023-08-03T10:19:38.9404739Z Working directory is 'D:\a\jcabi-maven-plugin\jcabi-maven-plugin'
+2023-08-03T10:19:38.9405535Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-08-03T10:19:39.0231801Z git version 2.41.0.windows.3
+2023-08-03T10:19:39.0278461Z ##[endgroup]
+2023-08-03T10:19:39.0303270Z Temporarily overriding HOME='D:\a\_temp\56151eab-7d1e-43ed-b2c0-e41e1bf38a8a' before making global git config changes
+2023-08-03T10:19:39.0303950Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T10:19:39.0314585Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-maven-plugin\jcabi-maven-plugin
+2023-08-03T10:19:39.2719105Z Deleting the contents of 'D:\a\jcabi-maven-plugin\jcabi-maven-plugin'
+2023-08-03T10:19:39.2741930Z ##[group]Initializing the repository
+2023-08-03T10:19:39.2768104Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\jcabi-maven-plugin\jcabi-maven-plugin
+2023-08-03T10:19:39.4825720Z Initialized empty Git repository in D:/a/jcabi-maven-plugin/jcabi-maven-plugin/.git/
+2023-08-03T10:19:39.4866435Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jcabi/jcabi-maven-plugin
+2023-08-03T10:19:39.5852803Z ##[endgroup]
+2023-08-03T10:19:39.5858803Z ##[group]Disabling automatic garbage collection
+2023-08-03T10:19:39.5880989Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2023-08-03T10:19:39.6128535Z ##[endgroup]
+2023-08-03T10:19:39.6129075Z ##[group]Setting up auth
+2023-08-03T10:19:39.6140512Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T10:19:39.6435492Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-08-03T10:19:43.6793369Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T10:19:43.7094999Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-08-03T10:19:44.4016972Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2023-08-03T10:19:44.4318522Z ##[endgroup]
+2023-08-03T10:19:44.4319205Z ##[group]Fetching the repository
+2023-08-03T10:19:44.4329778Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +6de480211608520dc0d0e4df52f395ef32393a1d:refs/remotes/pull/129/merge
+2023-08-03T10:19:48.2293786Z remote: Enumerating objects: 106, done.        
+2023-08-03T10:19:48.2294355Z remote: Counting objects:   0% (1/106)        
+2023-08-03T10:19:48.2297804Z remote: Counting objects:   1% (2/106)        
+2023-08-03T10:19:48.2298323Z remote: Counting objects:   2% (3/106)        
+2023-08-03T10:19:48.2298659Z remote: Counting objects:   3% (4/106)        
+2023-08-03T10:19:48.2302736Z remote: Counting objects:   4% (5/106)        
+2023-08-03T10:19:48.2310639Z remote: Counting objects:   5% (6/106)        
+2023-08-03T10:19:48.2311088Z remote: Counting objects:   6% (7/106)        
+2023-08-03T10:19:48.2311401Z remote: Counting objects:   7% (8/106)        
+2023-08-03T10:19:48.2312416Z remote: Counting objects:   8% (9/106)        
+2023-08-03T10:19:48.2312779Z remote: Counting objects:   9% (10/106)        
+2023-08-03T10:19:48.2313174Z remote: Counting objects:  10% (11/106)        
+2023-08-03T10:19:48.2313492Z remote: Counting objects:  11% (12/106)        
+2023-08-03T10:19:48.2313793Z remote: Counting objects:  12% (13/106)        
+2023-08-03T10:19:48.2314102Z remote: Counting objects:  13% (14/106)        
+2023-08-03T10:19:48.2316677Z remote: Counting objects:  14% (15/106)        
+2023-08-03T10:19:48.2317309Z remote: Counting objects:  15% (16/106)        
+2023-08-03T10:19:48.2317898Z remote: Counting objects:  16% (17/106)        
+2023-08-03T10:19:48.2318763Z remote: Counting objects:  17% (19/106)        
+2023-08-03T10:19:48.2319066Z remote: Counting objects:  18% (20/106)        
+2023-08-03T10:19:48.2319384Z remote: Counting objects:  19% (21/106)        
+2023-08-03T10:19:48.2319690Z remote: Counting objects:  20% (22/106)        
+2023-08-03T10:19:48.2322281Z remote: Counting objects:  21% (23/106)        
+2023-08-03T10:19:48.2322576Z remote: Counting objects:  22% (24/106)        
+2023-08-03T10:19:48.2322892Z remote: Counting objects:  23% (25/106)        
+2023-08-03T10:19:48.2323200Z remote: Counting objects:  24% (26/106)        
+2023-08-03T10:19:48.2323501Z remote: Counting objects:  25% (27/106)        
+2023-08-03T10:19:48.2323816Z remote: Counting objects:  26% (28/106)        
+2023-08-03T10:19:48.2324125Z remote: Counting objects:  27% (29/106)        
+2023-08-03T10:19:48.2325527Z remote: Counting objects:  28% (30/106)        
+2023-08-03T10:19:48.2325834Z remote: Counting objects:  29% (31/106)        
+2023-08-03T10:19:48.2328492Z remote: Counting objects:  30% (32/106)        
+2023-08-03T10:19:48.2333880Z remote: Counting objects:  31% (33/106)        
+2023-08-03T10:19:48.2334193Z remote: Counting objects:  32% (34/106)        
+2023-08-03T10:19:48.2334520Z remote: Counting objects:  33% (35/106)        
+2023-08-03T10:19:48.2337004Z remote: Counting objects:  34% (37/106)        
+2023-08-03T10:19:48.2337386Z remote: Counting objects:  35% (38/106)        
+2023-08-03T10:19:48.2337700Z remote: Counting objects:  36% (39/106)        
+2023-08-03T10:19:48.2338069Z remote: Counting objects:  37% (40/106)        
+2023-08-03T10:19:48.2338366Z remote: Counting objects:  38% (41/106)        
+2023-08-03T10:19:48.2338673Z remote: Counting objects:  39% (42/106)        
+2023-08-03T10:19:48.2338983Z remote: Counting objects:  40% (43/106)        
+2023-08-03T10:19:48.2339550Z remote: Counting objects:  41% (44/106)        
+2023-08-03T10:19:48.2340118Z remote: Counting objects:  42% (45/106)        
+2023-08-03T10:19:48.2340475Z remote: Counting objects:  43% (46/106)        
+2023-08-03T10:19:48.2340786Z remote: Counting objects:  44% (47/106)        
+2023-08-03T10:19:48.2341113Z remote: Counting objects:  45% (48/106)        
+2023-08-03T10:19:48.2341415Z remote: Counting objects:  46% (49/106)        
+2023-08-03T10:19:48.2341716Z remote: Counting objects:  47% (50/106)        
+2023-08-03T10:19:48.2342010Z remote: Counting objects:  48% (51/106)        
+2023-08-03T10:19:48.2342530Z remote: Counting objects:  49% (52/106)        
+2023-08-03T10:19:48.2343067Z remote: Counting objects:  50% (53/106)        
+2023-08-03T10:19:48.2343375Z remote: Counting objects:  51% (55/106)        
+2023-08-03T10:19:48.2343677Z remote: Counting objects:  52% (56/106)        
+2023-08-03T10:19:48.2343984Z remote: Counting objects:  53% (57/106)        
+2023-08-03T10:19:48.2344447Z remote: Counting objects:  54% (58/106)        
+2023-08-03T10:19:48.2345363Z remote: Counting objects:  55% (59/106)        
+2023-08-03T10:19:48.2345670Z remote: Counting objects:  56% (60/106)        
+2023-08-03T10:19:48.2349242Z remote: Counting objects:  57% (61/106)        
+2023-08-03T10:19:48.2349669Z remote: Counting objects:  58% (62/106)        
+2023-08-03T10:19:48.2349979Z remote: Counting objects:  59% (63/106)        
+2023-08-03T10:19:48.2350299Z remote: Counting objects:  60% (64/106)        
+2023-08-03T10:19:48.2350592Z remote: Counting objects:  61% (65/106)        
+2023-08-03T10:19:48.2350897Z remote: Counting objects:  62% (66/106)        
+2023-08-03T10:19:48.2351203Z remote: Counting objects:  63% (67/106)        
+2023-08-03T10:19:48.2351538Z remote: Counting objects:  64% (68/106)        
+2023-08-03T10:19:48.2351829Z remote: Counting objects:  65% (69/106)        
+2023-08-03T10:19:48.2352133Z remote: Counting objects:  66% (70/106)        
+2023-08-03T10:19:48.2352452Z remote: Counting objects:  67% (72/106)        
+2023-08-03T10:19:48.2352739Z remote: Counting objects:  68% (73/106)        
+2023-08-03T10:19:48.2353038Z remote: Counting objects:  69% (74/106)        
+2023-08-03T10:19:48.2353347Z remote: Counting objects:  70% (75/106)        
+2023-08-03T10:19:48.2353655Z remote: Counting objects:  71% (76/106)        
+2023-08-03T10:19:48.2353942Z remote: Counting objects:  72% (77/106)        
+2023-08-03T10:19:48.2354244Z remote: Counting objects:  73% (78/106)        
+2023-08-03T10:19:48.2354543Z remote: Counting objects:  74% (79/106)        
+2023-08-03T10:19:48.2354833Z remote: Counting objects:  75% (80/106)        
+2023-08-03T10:19:48.2355131Z remote: Counting objects:  76% (81/106)        
+2023-08-03T10:19:48.2355437Z remote: Counting objects:  77% (82/106)        
+2023-08-03T10:19:48.2355732Z remote: Counting objects:  78% (83/106)        
+2023-08-03T10:19:48.2356038Z remote: Counting objects:  79% (84/106)        
+2023-08-03T10:19:48.2356338Z remote: Counting objects:  80% (85/106)        
+2023-08-03T10:19:48.2356790Z remote: Counting objects:  81% (86/106)        
+2023-08-03T10:19:48.2358005Z remote: Counting objects:  82% (87/106)        
+2023-08-03T10:19:48.2358830Z remote: Counting objects:  83% (88/106)        
+2023-08-03T10:19:48.2359222Z remote: Counting objects:  84% (90/106)        
+2023-08-03T10:19:48.2359526Z remote: Counting objects:  85% (91/106)        
+2023-08-03T10:19:48.2359840Z remote: Counting objects:  86% (92/106)        
+2023-08-03T10:19:48.2360155Z remote: Counting objects:  87% (93/106)        
+2023-08-03T10:19:48.2360450Z remote: Counting objects:  88% (94/106)        
+2023-08-03T10:19:48.2360755Z remote: Counting objects:  89% (95/106)        
+2023-08-03T10:19:48.2361064Z remote: Counting objects:  90% (96/106)        
+2023-08-03T10:19:48.2361361Z remote: Counting objects:  91% (97/106)        
+2023-08-03T10:19:48.2361662Z remote: Counting objects:  92% (98/106)        
+2023-08-03T10:19:48.2361967Z remote: Counting objects:  93% (99/106)        
+2023-08-03T10:19:48.2362271Z remote: Counting objects:  94% (100/106)        
+2023-08-03T10:19:48.2362591Z remote: Counting objects:  95% (101/106)        
+2023-08-03T10:19:48.2362912Z remote: Counting objects:  96% (102/106)        
+2023-08-03T10:19:48.2363224Z remote: Counting objects:  97% (103/106)        
+2023-08-03T10:19:48.2364861Z remote: Counting objects:  98% (104/106)        
+2023-08-03T10:19:48.2365188Z remote: Counting objects:  99% (105/106)        
+2023-08-03T10:19:48.2365499Z remote: Counting objects: 100% (106/106)        
+2023-08-03T10:19:48.2365819Z remote: Counting objects: 100% (106/106), done.        
+2023-08-03T10:19:48.2366173Z remote: Compressing objects:   1% (1/54)        
+2023-08-03T10:19:48.2366505Z remote: Compressing objects:   3% (2/54)        
+2023-08-03T10:19:48.2366816Z remote: Compressing objects:   5% (3/54)        
+2023-08-03T10:19:48.2367142Z remote: Compressing objects:   7% (4/54)        
+2023-08-03T10:19:48.2367461Z remote: Compressing objects:   9% (5/54)        
+2023-08-03T10:19:48.2368415Z remote: Compressing objects:  11% (6/54)        
+2023-08-03T10:19:48.2368805Z remote: Compressing objects:  12% (7/54)        
+2023-08-03T10:19:48.2369354Z remote: Compressing objects:  14% (8/54)        
+2023-08-03T10:19:48.2369684Z remote: Compressing objects:  16% (9/54)        
+2023-08-03T10:19:48.2370001Z remote: Compressing objects:  18% (10/54)        
+2023-08-03T10:19:48.2370342Z remote: Compressing objects:  20% (11/54)        
+2023-08-03T10:19:48.2370670Z remote: Compressing objects:  22% (12/54)        
+2023-08-03T10:19:48.2370982Z remote: Compressing objects:  24% (13/54)        
+2023-08-03T10:19:48.2371305Z remote: Compressing objects:  25% (14/54)        
+2023-08-03T10:19:48.2371632Z remote: Compressing objects:  27% (15/54)        
+2023-08-03T10:19:48.2371937Z remote: Compressing objects:  29% (16/54)        
+2023-08-03T10:19:48.2373013Z remote: Compressing objects:  31% (17/54)        
+2023-08-03T10:19:48.2373348Z remote: Compressing objects:  33% (18/54)        
+2023-08-03T10:19:48.2373679Z remote: Compressing objects:  35% (19/54)        
+2023-08-03T10:19:48.2373984Z remote: Compressing objects:  37% (20/54)        
+2023-08-03T10:19:48.2375220Z remote: Compressing objects:  38% (21/54)        
+2023-08-03T10:19:48.2375549Z remote: Compressing objects:  40% (22/54)        
+2023-08-03T10:19:48.2375856Z remote: Compressing objects:  42% (23/54)        
+2023-08-03T10:19:48.2376183Z remote: Compressing objects:  44% (24/54)        
+2023-08-03T10:19:48.2376927Z remote: Compressing objects:  46% (25/54)        
+2023-08-03T10:19:48.2377361Z remote: Compressing objects:  48% (26/54)        
+2023-08-03T10:19:48.2377635Z remote: Compressing objects:  50% (27/54)        
+2023-08-03T10:19:48.2377921Z remote: Compressing objects:  51% (28/54)        
+2023-08-03T10:19:48.2378200Z remote: Compressing objects:  53% (29/54)        
+2023-08-03T10:19:48.2378470Z remote: Compressing objects:  55% (30/54)        
+2023-08-03T10:19:48.2378972Z remote: Compressing objects:  57% (31/54)        
+2023-08-03T10:19:48.2379252Z remote: Compressing objects:  59% (32/54)        
+2023-08-03T10:19:48.2379528Z remote: Compressing objects:  61% (33/54)        
+2023-08-03T10:19:48.2379817Z remote: Compressing objects:  62% (34/54)        
+2023-08-03T10:19:48.2380095Z remote: Compressing objects:  64% (35/54)        
+2023-08-03T10:19:48.2380374Z remote: Compressing objects:  66% (36/54)        
+2023-08-03T10:19:48.2380641Z remote: Compressing objects:  68% (37/54)        
+2023-08-03T10:19:48.2380915Z remote: Compressing objects:  70% (38/54)        
+2023-08-03T10:19:48.2381195Z remote: Compressing objects:  72% (39/54)        
+2023-08-03T10:19:48.2381458Z remote: Compressing objects:  74% (40/54)        
+2023-08-03T10:19:48.2381735Z remote: Compressing objects:  75% (41/54)        
+2023-08-03T10:19:48.2382022Z remote: Compressing objects:  77% (42/54)        
+2023-08-03T10:19:48.2382284Z remote: Compressing objects:  79% (43/54)        
+2023-08-03T10:19:48.2382565Z remote: Compressing objects:  81% (44/54)        
+2023-08-03T10:19:48.2382842Z remote: Compressing objects:  83% (45/54)        
+2023-08-03T10:19:48.2383109Z remote: Compressing objects:  85% (46/54)        
+2023-08-03T10:19:48.2383447Z remote: Compressing objects:  87% (47/54)        
+2023-08-03T10:19:48.2383725Z remote: Compressing objects:  88% (48/54)        
+2023-08-03T10:19:48.2384004Z remote: Compressing objects:  90% (49/54)        
+2023-08-03T10:19:48.2384270Z remote: Compressing objects:  92% (50/54)        
+2023-08-03T10:19:48.2384560Z remote: Compressing objects:  94% (51/54)        
+2023-08-03T10:19:48.2384848Z remote: Compressing objects:  96% (52/54)        
+2023-08-03T10:19:48.2385113Z remote: Compressing objects:  98% (53/54)        
+2023-08-03T10:19:48.2385391Z remote: Compressing objects: 100% (54/54)        
+2023-08-03T10:19:48.2385682Z remote: Compressing objects: 100% (54/54), done.        
+2023-08-03T10:19:48.3804832Z Receiving objects:   0% (1/106)
+2023-08-03T10:19:48.3805310Z Receiving objects:   1% (2/106)
+2023-08-03T10:19:48.3808007Z Receiving objects:   2% (3/106)
+2023-08-03T10:19:48.3808875Z Receiving objects:   3% (4/106)
+2023-08-03T10:19:48.3813347Z Receiving objects:   4% (5/106)
+[... 6415 lines removed by TriageCore ...]
+2023-08-03T10:19:40.5420380Z remote: Compressing objects:  72% (39/54)        
+2023-08-03T10:19:40.5420670Z remote: Compressing objects:  74% (40/54)        
+2023-08-03T10:19:40.5421130Z remote: Compressing objects:  75% (41/54)        
+2023-08-03T10:19:40.5421580Z remote: Compressing objects:  77% (42/54)        
+2023-08-03T10:19:40.5421890Z remote: Compressing objects:  79% (43/54)        
+2023-08-03T10:19:40.5422240Z remote: Compressing objects:  81% (44/54)        
+2023-08-03T10:19:40.5422580Z remote: Compressing objects:  83% (45/54)        
+2023-08-03T10:19:40.5423010Z remote: Compressing objects:  85% (46/54)        
+2023-08-03T10:19:40.5423330Z remote: Compressing objects:  87% (47/54)        
+2023-08-03T10:19:40.5423680Z remote: Compressing objects:  88% (48/54)        
+2023-08-03T10:19:40.5424020Z remote: Compressing objects:  90% (49/54)        
+2023-08-03T10:19:40.5424340Z remote: Compressing objects:  92% (50/54)        
+2023-08-03T10:19:40.5425270Z remote: Compressing objects:  94% (51/54)        
+2023-08-03T10:19:40.5425700Z remote: Compressing objects:  96% (52/54)        
+2023-08-03T10:19:40.5426000Z remote: Compressing objects:  98% (53/54)        
+2023-08-03T10:19:40.5426350Z remote: Compressing objects: 100% (54/54)        
+2023-08-03T10:19:40.5426710Z remote: Compressing objects: 100% (54/54), done.        
+2023-08-03T10:19:40.5427540Z remote: Total 106 (delta 25), reused 77 (delta 12), pack-reused 0        
+2023-08-03T10:19:40.5427880Z Receiving objects:   0% (1/106)
+2023-08-03T10:19:40.5428190Z Receiving objects:   1% (2/106)
+2023-08-03T10:19:40.5428510Z Receiving objects:   2% (3/106)
+2023-08-03T10:19:40.5428780Z Receiving objects:   3% (4/106)
+2023-08-03T10:19:40.5429190Z Receiving objects:   4% (5/106)
+2023-08-03T10:19:40.5429510Z Receiving objects:   5% (6/106)
+2023-08-03T10:19:40.5429780Z Receiving objects:   6% (7/106)
+2023-08-03T10:19:40.5430090Z Receiving objects:   7% (8/106)
+2023-08-03T10:19:40.5430480Z Receiving objects:   8% (9/106)
+2023-08-03T10:19:40.5430780Z Receiving objects:   9% (10/106)
+2023-08-03T10:19:40.5431100Z Receiving objects:  10% (11/106)
+2023-08-03T10:19:40.5431420Z Receiving objects:  11% (12/106)
+2023-08-03T10:19:40.5431680Z Receiving objects:  12% (13/106)
+2023-08-03T10:19:40.5491610Z Receiving objects:  13% (14/106)
+2023-08-03T10:19:40.5492130Z Receiving objects:  14% (15/106)
+2023-08-03T10:19:40.5492430Z Receiving objects:  15% (16/106)
+2023-08-03T10:19:40.5492710Z Receiving objects:  16% (17/106)
+2023-08-03T10:19:40.5492960Z Receiving objects:  17% (19/106)
+2023-08-03T10:19:40.5493400Z Receiving objects:  18% (20/106)
+2023-08-03T10:19:40.5493720Z Receiving objects:  19% (21/106)
+2023-08-03T10:19:40.5493960Z Receiving objects:  20% (22/106)
+2023-08-03T10:19:40.5494250Z Receiving objects:  21% (23/106)
+2023-08-03T10:19:40.5494540Z Receiving objects:  22% (24/106)
+2023-08-03T10:19:40.5494820Z Receiving objects:  23% (25/106)
+2023-08-03T10:19:40.5496010Z Receiving objects:  24% (26/106)
+2023-08-03T10:19:40.5496280Z Receiving objects:  25% (27/106)
+2023-08-03T10:19:40.5496510Z Receiving objects:  26% (28/106)
+2023-08-03T10:19:40.5496760Z Receiving objects:  27% (29/106)
+2023-08-03T10:19:40.5497040Z Receiving objects:  28% (30/106)
+2023-08-03T10:19:40.5497300Z Receiving objects:  29% (31/106)
+2023-08-03T10:19:40.5497530Z Receiving objects:  30% (32/106)
+2023-08-03T10:19:40.5497770Z Receiving objects:  31% (33/106)
+2023-08-03T10:19:40.5498020Z Receiving objects:  32% (34/106)
+2023-08-03T10:19:40.5498270Z Receiving objects:  33% (35/106)
+2023-08-03T10:19:40.5498550Z Receiving objects:  34% (37/106)
+2023-08-03T10:19:40.5498820Z Receiving objects:  35% (38/106)
+2023-08-03T10:19:40.5499030Z Receiving objects:  36% (39/106)
+2023-08-03T10:19:40.5499240Z Receiving objects:  37% (40/106)
+2023-08-03T10:19:40.5499450Z Receiving objects:  38% (41/106)
+2023-08-03T10:19:40.5499700Z Receiving objects:  39% (42/106)
+2023-08-03T10:19:40.5499980Z Receiving objects:  40% (43/106)
+2023-08-03T10:19:40.5500250Z Receiving objects:  41% (44/106)
+2023-08-03T10:19:40.5500490Z Receiving objects:  42% (45/106)
+2023-08-03T10:19:40.5500780Z Receiving objects:  43% (46/106)
+2023-08-03T10:19:40.5501070Z Receiving objects:  44% (47/106)
+2023-08-03T10:19:40.5501340Z Receiving objects:  45% (48/106)
+2023-08-03T10:19:40.5501590Z Receiving objects:  46% (49/106)
+2023-08-03T10:19:40.5501860Z Receiving objects:  47% (50/106)
+2023-08-03T10:19:40.5502140Z Receiving objects:  48% (51/106)
+2023-08-03T10:19:40.5502380Z Receiving objects:  49% (52/106)
+2023-08-03T10:19:40.5502660Z Receiving objects:  50% (53/106)
+2023-08-03T10:19:40.5502950Z Receiving objects:  51% (55/106)
+2023-08-03T10:19:40.5503190Z Receiving objects:  52% (56/106)
+2023-08-03T10:19:40.5503470Z Receiving objects:  53% (57/106)
+2023-08-03T10:19:40.5503800Z Receiving objects:  54% (58/106)
+2023-08-03T10:19:40.5504050Z Receiving objects:  55% (59/106)
+2023-08-03T10:19:40.5504300Z Receiving objects:  56% (60/106)
+2023-08-03T10:19:40.5504550Z Receiving objects:  57% (61/106)
+2023-08-03T10:19:40.5504800Z Receiving objects:  58% (62/106)
+2023-08-03T10:19:40.5505640Z Receiving objects:  59% (63/106)
+2023-08-03T10:19:40.5505970Z Receiving objects:  60% (64/106)
+2023-08-03T10:19:40.5506230Z Receiving objects:  61% (65/106)
+2023-08-03T10:19:40.5506500Z Receiving objects:  62% (66/106)
+2023-08-03T10:19:40.5506750Z Receiving objects:  63% (67/106)
+2023-08-03T10:19:40.5507030Z Receiving objects:  64% (68/106)
+2023-08-03T10:19:40.5507290Z Receiving objects:  65% (69/106)
+2023-08-03T10:19:40.5507580Z Receiving objects:  66% (70/106)
+2023-08-03T10:19:40.5507850Z Receiving objects:  67% (72/106)
+2023-08-03T10:19:40.5508130Z Receiving objects:  68% (73/106)
+2023-08-03T10:19:40.5508360Z Receiving objects:  69% (74/106)
+2023-08-03T10:19:40.5508630Z Receiving objects:  70% (75/106)
+2023-08-03T10:19:40.5508900Z Receiving objects:  71% (76/106)
+2023-08-03T10:19:40.5509130Z Receiving objects:  72% (77/106)
+2023-08-03T10:19:40.5509420Z Receiving objects:  73% (78/106)
+2023-08-03T10:19:40.5509660Z Receiving objects:  74% (79/106)
+2023-08-03T10:19:40.5509910Z Receiving objects:  75% (80/106)
+2023-08-03T10:19:40.5510150Z Receiving objects:  76% (81/106)
+2023-08-03T10:19:40.5510410Z Receiving objects:  77% (82/106)
+2023-08-03T10:19:40.5510660Z Receiving objects:  78% (83/106)
+2023-08-03T10:19:40.5511010Z Receiving objects:  79% (84/106)
+2023-08-03T10:19:40.5511260Z Receiving objects:  80% (85/106)
+2023-08-03T10:19:40.5511510Z Receiving objects:  81% (86/106)
+2023-08-03T10:19:40.5511760Z Receiving objects:  82% (87/106)
+2023-08-03T10:19:40.5512250Z Receiving objects:  83% (88/106)
+2023-08-03T10:19:40.5512690Z Receiving objects:  84% (90/106)
+2023-08-03T10:19:40.5512970Z Receiving objects:  85% (91/106)
+2023-08-03T10:19:40.5513260Z Receiving objects:  86% (92/106)
+2023-08-03T10:19:40.5513540Z Receiving objects:  87% (93/106)
+2023-08-03T10:19:40.5513780Z Receiving objects:  88% (94/106)
+2023-08-03T10:19:40.5514200Z Receiving objects:  89% (95/106)
+2023-08-03T10:19:40.5515110Z Receiving objects:  90% (96/106)
+2023-08-03T10:19:40.5515350Z Receiving objects:  91% (97/106)
+2023-08-03T10:19:40.5515650Z Receiving objects:  92% (98/106)
+2023-08-03T10:19:40.5515930Z Receiving objects:  93% (99/106)
+2023-08-03T10:19:40.5516150Z Receiving objects:  94% (100/106)
+2023-08-03T10:19:40.5516430Z Receiving objects:  95% (101/106)
+2023-08-03T10:19:40.5516700Z Receiving objects:  96% (102/106)
+2023-08-03T10:19:40.5516950Z Receiving objects:  97% (103/106)
+2023-08-03T10:19:40.5517190Z Receiving objects:  98% (104/106)
+2023-08-03T10:19:40.5517460Z Receiving objects:  99% (105/106)
+2023-08-03T10:19:40.5517770Z Receiving objects: 100% (106/106)
+2023-08-03T10:19:40.5518050Z Receiving objects: 100% (106/106), 33.12 KiB | 11.04 MiB/s, done.
+2023-08-03T10:19:40.5518350Z Resolving deltas:   0% (0/25)
+2023-08-03T10:19:40.5518600Z Resolving deltas:   4% (1/25)
+2023-08-03T10:19:40.5518810Z Resolving deltas:   8% (2/25)
+2023-08-03T10:19:40.5519100Z Resolving deltas:  12% (3/25)
+2023-08-03T10:19:40.5519360Z Resolving deltas:  16% (4/25)
+2023-08-03T10:19:40.5519600Z Resolving deltas:  20% (5/25)
+2023-08-03T10:19:40.5520000Z Resolving deltas:  24% (6/25)
+2023-08-03T10:19:40.5520310Z Resolving deltas:  28% (7/25)
+2023-08-03T10:19:40.5520590Z Resolving deltas:  32% (8/25)
+2023-08-03T10:19:40.5520920Z Resolving deltas:  36% (9/25)
+2023-08-03T10:19:40.5521220Z Resolving deltas:  40% (10/25)
+2023-08-03T10:19:40.5521470Z Resolving deltas:  44% (11/25)
+2023-08-03T10:19:40.5521710Z Resolving deltas:  48% (12/25)
+2023-08-03T10:19:40.5521960Z Resolving deltas:  52% (13/25)
+2023-08-03T10:19:40.5522240Z Resolving deltas:  56% (14/25)
+2023-08-03T10:19:40.5522470Z Resolving deltas:  60% (15/25)
+2023-08-03T10:19:40.5522720Z Resolving deltas:  64% (16/25)
+2023-08-03T10:19:40.5522930Z Resolving deltas:  68% (17/25)
+2023-08-03T10:19:40.5523140Z Resolving deltas:  72% (18/25)
+2023-08-03T10:19:40.5523350Z Resolving deltas:  76% (19/25)
+2023-08-03T10:19:40.5523560Z Resolving deltas:  80% (20/25)
+2023-08-03T10:19:40.5523770Z Resolving deltas:  84% (21/25)
+2023-08-03T10:19:40.5523980Z Resolving deltas:  88% (22/25)
+2023-08-03T10:19:40.5524760Z Resolving deltas:  92% (23/25)
+2023-08-03T10:19:40.5525030Z Resolving deltas:  96% (24/25)
+2023-08-03T10:19:40.5525240Z Resolving deltas: 100% (25/25)
+2023-08-03T10:19:40.5525460Z Resolving deltas: 100% (25/25), done.
+2023-08-03T10:19:40.5526020Z From https://github.com/jcabi/jcabi-maven-plugin
+2023-08-03T10:19:40.5526490Z  * [new ref]         6de480211608520dc0d0e4df52f395ef32393a1d -> pull/129/merge
+2023-08-03T10:19:40.5527360Z ##[endgroup]
+2023-08-03T10:19:40.5527730Z ##[group]Determining the checkout info
+2023-08-03T10:19:40.5528120Z ##[endgroup]
+2023-08-03T10:19:40.5528480Z ##[group]Checking out the ref
+2023-08-03T10:19:40.5528940Z [command]/usr/local/bin/git checkout --progress --force refs/remotes/pull/129/merge
+2023-08-03T10:19:40.5529330Z HEAD is now at 6de4802 Merge 15051fcf229396637495ed66264c302f78dce7ac into 82321e6781b73d981af5cc1fbd1b590a2c6874c8
+2023-08-03T10:19:40.5530070Z ##[endgroup]
+2023-08-03T10:19:40.5530950Z [command]/usr/local/bin/git log -1 --format='%H'
+2023-08-03T10:19:40.5531340Z '6de480211608520dc0d0e4df52f395ef32393a1d'
+2023-08-03T10:19:40.5996050Z ##[group]Run actions/setup-java@v3
+2023-08-03T10:19:40.5996340Z with:
+2023-08-03T10:19:40.5996520Z   distribution: temurin
+2023-08-03T10:19:40.5996710Z   java-version: 17
+2023-08-03T10:19:40.5996900Z   java-package: jdk
+2023-08-03T10:19:40.5997100Z   check-latest: false
+2023-08-03T10:19:40.5997280Z   server-id: github
+2023-08-03T10:19:40.5997490Z   server-username: GITHUB_ACTOR
+2023-08-03T10:19:40.5997730Z   server-password: GITHUB_TOKEN
+2023-08-03T10:19:40.5997950Z   overwrite-settings: true
+2023-08-03T10:19:40.5998150Z   job-status: success
+2023-08-03T10:19:40.5998520Z   token: ***
+2023-08-03T10:19:40.5998710Z ##[endgroup]
+2023-08-03T10:19:40.9804690Z ##[group]Installed distributions
+2023-08-03T10:19:40.9979170Z Resolved Java 17.0.7+7 from tool-cache
+2023-08-03T10:19:40.9983610Z Setting Java 17.0.7+7 as the default
+2023-08-03T10:19:41.0034830Z Creating toolchains.xml for JDK version 17 from temurin
+2023-08-03T10:19:41.0238470Z Writing to /Users/runner/.m2/toolchains.xml
+2023-08-03T10:19:41.0251400Z 
+2023-08-03T10:19:41.0253560Z Java configuration:
+2023-08-03T10:19:41.0254340Z   Distribution: temurin
+2023-08-03T10:19:41.0256180Z   Version: 17.0.7+7
+2023-08-03T10:19:41.0258960Z   Path: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:41.0295840Z 
+2023-08-03T10:19:41.0296630Z ##[endgroup]
+2023-08-03T10:19:41.0331460Z Creating settings.xml with server-id: github
+2023-08-03T10:19:41.0333850Z Writing to /Users/runner/.m2/settings.xml
+2023-08-03T10:19:41.2731370Z ##[group]Run actions/cache@v3
+2023-08-03T10:19:41.2731790Z with:
+2023-08-03T10:19:41.2732030Z   path: ~/.m2/repository
+2023-08-03T10:19:41.2732550Z   key: macOS-jdk-17-maven-f1480a1cc047746fd09ce51cd8825cc7e7363039a1407583702d4b4faf247cc9
+2023-08-03T10:19:41.2732960Z   restore-keys: macOS-jdk-17-maven-
+
+2023-08-03T10:19:41.2733490Z   enableCrossOsArchive: false
+2023-08-03T10:19:41.2733780Z   fail-on-cache-miss: false
+2023-08-03T10:19:41.2734020Z   lookup-only: false
+2023-08-03T10:19:41.2734410Z env:
+2023-08-03T10:19:41.2734780Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:41.2735190Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:41.2735530Z ##[endgroup]
+2023-08-03T10:19:43.4753020Z Received 0 of 153207723 (0.0%), 0.0 MBs/sec
+2023-08-03T10:19:44.5340540Z Received 37748736 of 153207723 (24.6%), 17.5 MBs/sec
+2023-08-03T10:19:45.5329580Z Received 83886080 of 153207723 (54.8%), 26.1 MBs/sec
+2023-08-03T10:19:46.5346580Z Received 125829120 of 153207723 (82.1%), 29.5 MBs/sec
+2023-08-03T10:19:47.5341890Z Received 136430507 of 153207723 (89.0%), 25.7 MBs/sec
+2023-08-03T10:19:47.9239510Z Received 153207723 of 153207723 (100.0%), 26.8 MBs/sec
+2023-08-03T10:19:47.9547770Z Cache Size: ~146 MB (153207723 B)
+2023-08-03T10:19:47.9610180Z [command]/usr/local/bin/gtar -xf /Users/runner/work/_temp/ce42b86b-bdc4-417a-89dc-e0086d2d8195/cache.tzst -P -C /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin --delay-directory-restore --use-compress-program unzstd
+2023-08-03T10:19:51.1129660Z Cache restored successfully
+2023-08-03T10:19:51.1357970Z Cache restored from key: macOS-jdk-17-maven-b83d881f71ad1aec8dc64c12c419e6c78b62ee1bae594afd4c30a51cf62bf463
+2023-08-03T10:19:51.1658890Z ##[group]Run java -version
+2023-08-03T10:19:51.1659370Z [36;1mjava -version[0m
+2023-08-03T10:19:51.1953990Z shell: /bin/bash -e {0}
+2023-08-03T10:19:51.1954690Z env:
+2023-08-03T10:19:51.1955060Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.1955780Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.1956200Z ##[endgroup]
+2023-08-03T10:19:51.7244670Z openjdk version "17.0.7" 2023-04-18
+2023-08-03T10:19:51.7263310Z OpenJDK Runtime Environment Temurin-17.0.7+7 (build 17.0.7+7)
+2023-08-03T10:19:51.7371620Z OpenJDK 64-Bit Server VM Temurin-17.0.7+7 (build 17.0.7+7, mixed mode, sharing)
+2023-08-03T10:19:51.7546400Z ##[group]Run mvn -version
+2023-08-03T10:19:51.7546960Z [36;1mmvn -version[0m
+2023-08-03T10:19:51.7777520Z shell: /bin/bash -e {0}
+2023-08-03T10:19:51.7778010Z env:
+2023-08-03T10:19:51.7778390Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.7779050Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.7779840Z ##[endgroup]
+2023-08-03T10:19:52.9617170Z Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+2023-08-03T10:19:52.9632240Z Maven home: /usr/local/Cellar/maven/3.9.3/libexec
+2023-08-03T10:19:52.9661750Z Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:52.9664910Z Default locale: en_US, platform encoding: UTF-8
+2023-08-03T10:19:52.9665990Z OS name: "mac os x", version: "12.6.7", arch: "x86_64", family: "mac"
+2023-08-03T10:19:52.9752110Z ##[group]Run mvn --errors --batch-mode clean install -Pqulice
+2023-08-03T10:19:52.9752640Z [36;1mmvn --errors --batch-mode clean install -Pqulice[0m
+2023-08-03T10:19:52.9969470Z shell: /bin/bash -e {0}
+2023-08-03T10:19:52.9969790Z env:
+2023-08-03T10:19:52.9970180Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:52.9970670Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:52.9971110Z ##[endgroup]
+2023-08-03T10:19:55.2702470Z [INFO] Error stacktraces are turned on.
+2023-08-03T10:19:55.3597450Z [INFO] Scanning for projects...
+2023-08-03T10:19:58.7642420Z [INFO] 
+2023-08-03T10:19:58.7743500Z [INFO] --------------------< com.jcabi:jcabi-maven-plugin >--------------------
+2023-08-03T10:19:58.7838950Z [INFO] Building jcabi-maven-plugin 1.0-SNAPSHOT
+2023-08-03T10:19:58.7907290Z [INFO]   from pom.xml
+2023-08-03T10:19:58.8009330Z [INFO] ----------------------------[ maven-plugin ]----------------------------
+2023-08-03T10:19:59.2558270Z [WARNING] Parameter 'createChecksum' is unknown for plugin 'maven-install-plugin:3.0.1:install (default-install)'
+2023-08-03T10:20:00.9522330Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.pom
+2023-08-03T10:20:01.7971150Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.pom (2.3 kB at 2.7 kB/s)
+2023-08-03T10:20:01.8403430Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.9.4/maven-3.9.4.pom
+2023-08-03T10:20:01.8912700Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.9.4/maven-3.9.4.pom (30 kB at 584 kB/s)
+2023-08-03T10:20:02.1830260Z [WARNING] The artifact org.slf4j:slf4j-log4j12:jar:2.0.7 has been relocated to org.slf4j:slf4j-reload4j:jar:2.0.7
+2023-08-03T10:20:02.2323310Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.jar
+2023-08-03T10:20:02.2727570Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.jar (59 kB at 1.5 MB/s)
+2023-08-03T10:20:02.2842480Z [INFO] 
+2023-08-03T10:20:02.2843790Z [INFO] --- clean:3.2.0:clean (default-clean) @ jcabi-maven-plugin ---
+2023-08-03T10:20:02.3791130Z [INFO] 
+2023-08-03T10:20:02.3811850Z [INFO] --- enforcer:1.3.1:enforce (enforce-maven) @ jcabi-maven-plugin ---
+2023-08-03T10:20:02.7284200Z [INFO] 
+2023-08-03T10:20:02.7304880Z [INFO] --- enforcer:1.3.1:enforce (enforce-maven-same-versions) @ jcabi-maven-plugin ---
+2023-08-03T10:20:02.7406230Z [INFO] 
+2023-08-03T10:20:02.7508040Z [INFO] --- buildnumber:3.0.0:create (jcabi-build-number) @ jcabi-maven-plugin ---
+2023-08-03T10:20:03.0924770Z [INFO] ShortRevision tag detected. The value is '7'.
+2023-08-03T10:20:03.1217420Z [INFO] Executing: /bin/sh -c cd '/Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin' && 'git' 'rev-parse' '--verify' '--short=7' 'HEAD'
+2023-08-03T10:20:03.1259440Z [INFO] Working directory: /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin
+2023-08-03T10:20:03.2951310Z [INFO] Storing buildNumber: 6de4802 at timestamp: 2023-08-03T10:20:03
+2023-08-03T10:20:03.3112990Z [WARNING] Cannot get the branch information from the git repository: 
+2023-08-03T10:20:03.3131920Z Detecting the current branch failed: fatal: ref HEAD is not a symbolic ref
+2023-08-03T10:20:03.3132880Z 
+2023-08-03T10:20:03.3184430Z [INFO] ShortRevision tag detected. The value is '7'.
+2023-08-03T10:20:03.3193860Z [INFO] Executing: /bin/sh -c cd '/Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin' && 'git' 'rev-parse' '--verify' '--short=7' 'HEAD'
+2023-08-03T10:20:03.3196080Z [INFO] Working directory: /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin
+2023-08-03T10:20:03.3327020Z [INFO] Storing buildScmBranch: UNKNOWN
+2023-08-03T10:20:03.3357420Z [INFO] 
+2023-08-03T10:20:03.3358790Z [INFO] --- buildnumber:3.0.0:create-timestamp (jcabi-build-number) @ jcabi-maven-plugin ---
+2023-08-03T10:20:03.3365200Z [INFO] Skipping because we are not in root module.
+2023-08-03T10:20:03.3366430Z [INFO] 
+2023-08-03T10:20:03.3368010Z [INFO] --- resources:3.2.0:resources (default-resources) @ jcabi-maven-plugin ---
+2023-08-03T10:20:03.5654630Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-03T10:20:03.5656100Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-03T10:20:03.5691240Z [INFO] Copying 1 resource
+2023-08-03T10:20:03.6692160Z [INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+2023-08-03T10:20:03.6764370Z [INFO] 
+2023-08-03T10:20:03.6766550Z [INFO] --- compiler:3.10.1:compile (default-compile) @ jcabi-maven-plugin ---
+2023-08-03T10:20:03.7558460Z [WARNING]  Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-08-03T10:20:03.7910770Z [INFO] Changes detected - recompiling the module!
+2023-08-03T10:20:03.7937420Z [INFO] Compiling 4 source files to /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/target/classes
+2023-08-03T10:20:06.2504950Z [INFO] 
+2023-08-03T10:20:06.2513310Z [INFO] --- compiler:3.10.1:compile (compile-helpmojo) @ jcabi-maven-plugin ---
+2023-08-03T10:20:06.2615080Z [WARNING]  Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-08-03T10:20:06.2652910Z [INFO] Changes detected - recompiling the module!
+2023-08-03T10:20:06.2663820Z [INFO] Compiling 4 source files to /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/target/classes
+2023-08-03T10:20:07.2607110Z [INFO] 
+2023-08-03T10:20:07.2708220Z [INFO] --- plugin:3.6.4:descriptor (default-descriptor) @ jcabi-maven-plugin ---
+2023-08-03T10:20:08.2321010Z [ERROR] 
+2023-08-03T10:20:08.2438570Z 
+2023-08-03T10:20:08.2463500Z Some dependencies of Maven Plugins are expected to be in provided scope.
+2023-08-03T10:20:08.2464640Z Please make sure that dependencies listed below declared in POM
+2023-08-03T10:20:08.2465730Z have set '<scope>provided</scope>' as well.
+2023-08-03T10:20:08.2467590Z 
+2023-08-03T10:20:08.2468090Z The following dependencies are in wrong scope:
+2023-08-03T10:20:08.2578120Z  * org.apache.maven:maven-plugin-api:jar:3.9.3:compile
+2023-08-03T10:20:08.2693320Z  * org.apache.maven:maven-model:jar:3.9.3:compile
+2023-08-03T10:20:08.2807790Z  * org.apache.maven:maven-core:jar:3.9.3:compile
+2023-08-03T10:20:08.2961260Z  * org.apache.maven:maven-settings:jar:3.9.3:compile
+2023-08-03T10:20:08.3077360Z  * org.apache.maven:maven-settings-builder:jar:3.9.3:compile
+2023-08-03T10:20:08.3113030Z  * org.apache.maven:maven-builder-support:jar:3.9.3:compile
+2023-08-03T10:20:08.3214840Z  * org.apache.maven:maven-repository-metadata:jar:3.9.3:compile
+2023-08-03T10:20:08.3316550Z  * org.apache.maven:maven-model-builder:jar:3.9.3:compile
+2023-08-03T10:20:08.3349270Z  * org.apache.maven:maven-resolver-provider:jar:3.9.3:compile
+2023-08-03T10:20:08.3450910Z  * org.apache.maven:maven-artifact:jar:3.9.4:compile
+2023-08-03T10:20:08.3551740Z 
+2023-08-03T10:20:08.3568920Z 
+2023-08-03T10:20:08.3572240Z 
+2023-08-03T10:20:08.3573760Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-08-03T10:20:08.3575080Z [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:08.3700500Z [INFO] ant mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:08.3801140Z [INFO] bsh mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:10.2972630Z [INFO] java-annotations mojo extractor found 2 mojo descriptors.
+2023-08-03T10:20:11.1185370Z [INFO] 
+2023-08-03T10:20:11.1308050Z [INFO] --- plugin:3.6.4:descriptor (mojo-descriptor) @ jcabi-maven-plugin ---
+2023-08-03T10:20:11.1417620Z [ERROR] 
+2023-08-03T10:20:11.1526880Z 
+2023-08-03T10:20:11.1636190Z Some dependencies of Maven Plugins are expected to be in provided scope.
+2023-08-03T10:20:11.1738600Z Please make sure that dependencies listed below declared in POM
+2023-08-03T10:20:11.1848790Z have set '<scope>provided</scope>' as well.
+2023-08-03T10:20:11.1949770Z 
+2023-08-03T10:20:11.2050890Z The following dependencies are in wrong scope:
+2023-08-03T10:20:11.2134540Z  * org.apache.maven:maven-plugin-api:jar:3.9.3:compile
+2023-08-03T10:20:11.2142130Z  * org.apache.maven:maven-model:jar:3.9.3:compile
+2023-08-03T10:20:11.2143200Z  * org.apache.maven:maven-core:jar:3.9.3:compile
+2023-08-03T10:20:11.2244490Z  * org.apache.maven:maven-settings:jar:3.9.3:compile
+2023-08-03T10:20:11.2345750Z  * org.apache.maven:maven-settings-builder:jar:3.9.3:compile
+2023-08-03T10:20:11.2448080Z  * org.apache.maven:maven-builder-support:jar:3.9.3:compile
+2023-08-03T10:20:11.2464320Z  * org.apache.maven:maven-repository-metadata:jar:3.9.3:compile
+2023-08-03T10:20:11.2465470Z  * org.apache.maven:maven-model-builder:jar:3.9.3:compile
+2023-08-03T10:20:11.2466550Z  * org.apache.maven:maven-resolver-provider:jar:3.9.3:compile
+2023-08-03T10:20:11.2467850Z  * org.apache.maven:maven-artifact:jar:3.9.4:compile
+2023-08-03T10:20:11.2469820Z 
+2023-08-03T10:20:11.2470260Z 
+2023-08-03T10:20:11.2570870Z 
+2023-08-03T10:20:11.2672050Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-08-03T10:20:11.2672750Z [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:11.2773650Z [INFO] ant mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:11.2817430Z [INFO] bsh mojo extractor found 0 mojo descriptor.
+2023-08-03T10:20:12.5125820Z [INFO] java-annotations mojo extractor found 2 mojo descriptors.
+2023-08-03T10:20:12.5703660Z [INFO] 
+2023-08-03T10:20:12.5808350Z [INFO] --- resources:3.2.0:testResources (default-testResources) @ jcabi-maven-plugin ---
+2023-08-03T10:20:12.5909980Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-03T10:20:12.5926880Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2023-08-03T10:20:12.5931970Z [INFO] Copying 4 resources
+2023-08-03T10:20:12.6059810Z [INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+2023-08-03T10:20:12.6161430Z [INFO] 
+2023-08-03T10:20:12.6254560Z [INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ jcabi-maven-plugin ---
+2023-08-03T10:20:12.6362270Z [WARNING]  Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-08-03T10:20:12.6402290Z [INFO] Changes detected - recompiling the module!
+2023-08-03T10:20:12.6503720Z [INFO] Compiling 4 source files to /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/target/test-classes
+2023-08-03T10:20:13.1057580Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.1157700Z [WARNING] COMPILATION WARNING : 
+2023-08-03T10:20:13.1259150Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.1360010Z [WARNING] /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/test/java/com/jcabi/maven/plugin/AjcMojoTest.java:[43,44] org.apache.maven.artifact.repository.ArtifactRepository in org.apache.maven.artifact.repository has been deprecated
+2023-08-03T10:20:13.1461480Z [WARNING] /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/test/java/com/jcabi/maven/plugin/AjcMojoTest.java:[43,44] org.apache.maven.artifact.repository.ArtifactRepository in org.apache.maven.artifact.repository has been deprecated
+2023-08-03T10:20:13.1562800Z [INFO] 2 warnings 
+2023-08-03T10:20:13.1664270Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.1764780Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.1865990Z [ERROR] COMPILATION ERROR : 
+2023-08-03T10:20:13.1967640Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.2068870Z [ERROR] warnings found and -Werror specified
+2023-08-03T10:20:13.2102500Z [INFO] 1 error
+2023-08-03T10:20:13.2103660Z [INFO] -------------------------------------------------------------
+2023-08-03T10:20:13.2105390Z [INFO] ------------------------------------------------------------------------
+2023-08-03T10:20:13.2106040Z [INFO] BUILD FAILURE
+2023-08-03T10:20:13.2106580Z [INFO] ------------------------------------------------------------------------
+2023-08-03T10:20:13.2106970Z [INFO] Total time:  17.801 s
+2023-08-03T10:20:13.2107570Z [INFO] Finished at: 2023-08-03T10:20:13Z
+2023-08-03T10:20:13.2108170Z [INFO] ------------------------------------------------------------------------
+2023-08-03T10:20:13.2109390Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:testCompile (default-testCompile) on project jcabi-maven-plugin: Compilation failure
+2023-08-03T10:20:13.2110150Z [ERROR] warnings found and -Werror specified
+2023-08-03T10:20:13.2110510Z [ERROR] -> [Help 1]
+2023-08-03T10:20:13.2111350Z org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:testCompile (default-testCompile) on project jcabi-maven-plugin: Compilation failure
+2023-08-03T10:20:13.2112450Z warnings found and -Werror specified
+2023-08-03T10:20:13.2112790Z 
+2023-08-03T10:20:13.2113080Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:333)
+2023-08-03T10:20:13.2113670Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+2023-08-03T10:20:13.2114230Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+2023-08-03T10:20:13.2114770Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+2023-08-03T10:20:13.2115430Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+2023-08-03T10:20:13.2115970Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+2023-08-03T10:20:13.2116560Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-08-03T10:20:13.2117170Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+2023-08-03T10:20:13.2117920Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-08-03T10:20:13.2118660Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-08-03T10:20:13.2119410Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-08-03T10:20:13.2120070Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-08-03T10:20:13.2120590Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-08-03T10:20:13.2121200Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-08-03T10:20:13.2121650Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-08-03T10:20:13.2122090Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+2023-08-03T10:20:13.2122520Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-08-03T10:20:13.2123120Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-08-03T10:20:13.2123600Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-08-03T10:20:13.2125000Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-08-03T10:20:13.2126950Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-08-03T10:20:13.2127800Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-08-03T10:20:13.2128350Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-08-03T10:20:13.2128890Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-08-03T10:20:13.2129470Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-08-03T10:20:13.2130040Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-08-03T10:20:13.2130770Z Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+2023-08-03T10:20:13.2131410Z warnings found and -Werror specified
+2023-08-03T10:20:13.2131600Z 
+2023-08-03T10:20:13.2132020Z     at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1310)
+2023-08-03T10:20:13.2132710Z     at org.apache.maven.plugin.compiler.TestCompilerMojo.execute (TestCompilerMojo.java:183)
+2023-08-03T10:20:13.2133440Z     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+2023-08-03T10:20:13.2134060Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:328)
+2023-08-03T10:20:13.2134620Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:316)
+2023-08-03T10:20:13.2135170Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:212)
+2023-08-03T10:20:13.2135850Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:174)
+2023-08-03T10:20:13.2136420Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:75)
+2023-08-03T10:20:13.2136960Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:162)
+2023-08-03T10:20:13.2137510Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-08-03T10:20:13.2138120Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:159)
+2023-08-03T10:20:13.2138910Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-08-03T10:20:13.2139710Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-08-03T10:20:13.2140460Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-08-03T10:20:13.2141150Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-08-03T10:20:13.2141830Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-08-03T10:20:13.2142260Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-08-03T10:20:13.2142710Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-08-03T10:20:13.2143150Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:906)
+2023-08-03T10:20:13.2143710Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-08-03T10:20:13.2144150Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-08-03T10:20:13.2144610Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-08-03T10:20:13.2145110Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-08-03T10:20:13.2145720Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-08-03T10:20:13.2146370Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-08-03T10:20:13.2146860Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-08-03T10:20:13.2148090Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-08-03T10:20:13.2149140Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-08-03T10:20:13.2149930Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-08-03T10:20:13.2150290Z [ERROR] 
+2023-08-03T10:20:13.2150780Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-03T10:20:13.2151100Z [ERROR] 
+2023-08-03T10:20:13.2151610Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-03T10:20:13.2152130Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-03T10:20:13.2858690Z ##[error]The operation was canceled.
+2023-08-03T10:20:13.2996550Z Post job cleanup.
+2023-08-03T10:20:13.5841130Z Post job cleanup.
+2023-08-03T10:20:13.7713030Z [command]/usr/local/bin/git version
+2023-08-03T10:20:13.7855580Z git version 2.41.0
+2023-08-03T10:20:13.8180940Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/39b6e5f1-11ae-4ca3-8ba6-22157b9eab85/.gitconfig'
+2023-08-03T10:20:13.8183660Z Temporarily overriding HOME='/Users/runner/work/_temp/39b6e5f1-11ae-4ca3-8ba6-22157b9eab85' before making global git config changes
+2023-08-03T10:20:13.8211630Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T10:20:13.8214510Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin
+2023-08-03T10:20:13.8287510Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T10:20:13.8400250Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-03T10:20:13.9938020Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T10:20:14.0037820Z http.https://github.com/.extraheader
+2023-08-03T10:20:14.0058870Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T10:20:14.0187700Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-03T10:20:14.2070660Z Cleaning up orphan processes
+
+2023-08-03T10:19:51.7546370Z ##[group]Run mvn -version
+2023-08-03T10:19:51.7546950Z [36;1mmvn -version[0m
+2023-08-03T10:19:51.7777490Z shell: /bin/bash -e {0}
+2023-08-03T10:19:51.7777990Z env:
+2023-08-03T10:19:51.7778380Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.7779040Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:51.7779820Z ##[endgroup]
+2023-08-03T10:19:52.9616760Z Apache Maven 3.9.3 (21122926829f1ead511c958d89bd2f672198ae9f)
+2023-08-03T10:19:52.9632220Z Maven home: /usr/local/Cellar/maven/3.9.3/libexec
+2023-08-03T10:19:52.9661720Z Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-08-03T10:19:52.9664900Z Default locale: en_US, platform encoding: UTF-8
+2023-08-03T10:19:52.9665980Z OS name: "mac os x", version: "12.6.7", arch: "x86_64", family: "mac"
+
+2023-08-03T10:19:44.3529860Z ##[group]Run actions/cache@v3
+2023-08-03T10:19:44.3530199Z with:
+2023-08-03T10:19:44.3530492Z   path: ~/.m2/repository
+2023-08-03T10:19:44.3530902Z   key: Windows-jdk-17-maven-f1480a1cc047746fd09ce51cd8825cc7e7363039a1407583702d4b4faf247cc9
+2023-08-03T10:19:44.3531291Z   restore-keys: Windows-jdk-17-maven-
+
+2023-08-03T10:19:44.3531592Z   enableCrossOsArchive: false
+2023-08-03T10:19:44.3531895Z   fail-on-cache-miss: false
+2023-08-03T10:19:44.3532153Z   lookup-only: false
+2023-08-03T10:19:44.3532437Z env:
+2023-08-03T10:19:44.3532782Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.8-7\x64
+2023-08-03T10:19:44.3533255Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.8-7\x64
+2023-08-03T10:19:44.3533560Z ##[endgroup]
+2023-08-03T10:19:46.3805028Z Received 4194304 of 152441522 (2.8%), 4.0 MBs/sec
+2023-08-03T10:19:47.3809134Z Received 92274688 of 152441522 (60.5%), 43.9 MBs/sec
+2023-08-03T10:19:48.6390703Z Received 134217728 of 152441522 (88.0%), 39.4 MBs/sec
+2023-08-03T10:19:49.0347861Z Received 152441522 of 152441522 (100.0%), 39.8 MBs/sec
+2023-08-03T10:19:49.0351054Z Cache Size: ~145 MB (152441522 B)
+2023-08-03T10:19:49.0387513Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/a4f5dca2-e369-4e6d-9a28-a251eae24940/cache.tzst -P -C D:/a/jcabi-maven-plugin/jcabi-maven-plugin --force-local --use-compress-program "zstd -d"
+2023-08-03T10:19:57.2672109Z Cache restored successfully
+2023-08-03T10:19:57.6810745Z Cache restored from key: Windows-jdk-17-maven-b83d881f71ad1aec8dc64c12c419e6c78b62ee1bae594afd4c30a51cf62bf463
+
+2023-08-03T10:19:54.4002730Z ##[group]Run java -version
+2023-08-03T10:19:54.4003800Z [36;1mjava -version[0m
+2023-08-03T10:19:54.4227980Z shell: /bin/bash -e {0}
+2023-08-03T10:19:54.4228470Z env:
+2023-08-03T10:19:54.4228830Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-08-03T10:19:54.4229300Z   JAVA_HOME_11_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-08-03T10:19:54.4229650Z ##[endgroup]
+2023-08-03T10:19:55.1909750Z openjdk version "11.0.19" 2023-04-18
+2023-08-03T10:19:55.1911390Z OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+2023-08-03T10:19:55.1912480Z OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+
+2023-08-03T10:20:13.8755786Z Post job cleanup.
+2023-08-03T10:20:14.0399177Z [command]/usr/bin/git version
+2023-08-03T10:20:14.0477150Z git version 2.41.0
+2023-08-03T10:20:14.0561422Z Temporarily overriding HOME='/home/runner/work/_temp/1bf8fb12-d517-47bc-b24f-c880d8030ff2' before making global git config changes
+2023-08-03T10:20:14.0567018Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-03T10:20:14.0579555Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/jcabi-maven-plugin/jcabi-maven-plugin
+2023-08-03T10:20:14.0765464Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-03T10:20:14.0812625Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-03T10:20:14.1124558Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-03T10:20:14.1161615Z http.https://github.com/.extraheader
+2023-08-03T10:20:14.1178604Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-03T10:20:14.1252795Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-08-03T10:19:32.4220246Z ##[group]Run actions/setup-java@v3
+2023-08-03T10:19:32.4220529Z with:
+2023-08-03T10:19:32.4220745Z   distribution: temurin
+2023-08-03T10:19:32.4221153Z   java-version: 11
+2023-08-03T10:19:32.4221380Z   java-package: jdk
+2023-08-03T10:19:32.4222310Z   check-latest: false
+2023-08-03T10:19:32.4222578Z   server-id: github
+2023-08-03T10:19:32.4222824Z   server-username: GITHUB_ACTOR
+2023-08-03T10:19:32.4223121Z   server-password: GITHUB_TOKEN
+2023-08-03T10:19:32.4223400Z   overwrite-settings: true
+2023-08-03T10:19:32.4223641Z   job-status: success
+2023-08-03T10:19:32.4224077Z   token: ***
+2023-08-03T10:19:32.4224289Z ##[endgroup]
+2023-08-03T10:19:32.6341911Z ##[group]Installed distributions
+2023-08-03T10:19:32.6399604Z Resolved Java 11.0.19+7 from tool-cache
+2023-08-03T10:19:32.6400347Z Setting Java 11.0.19+7 as the default
+2023-08-03T10:19:32.6421362Z Creating toolchains.xml for JDK version 11 from temurin
+2023-08-03T10:19:32.6527782Z Writing to /home/runner/.m2/toolchains.xml
+2023-08-03T10:19:32.6529475Z 
+2023-08-03T10:19:32.6529893Z Java configuration:
+2023-08-03T10:19:32.6530688Z   Distribution: temurin
+2023-08-03T10:19:32.6531117Z   Version: 11.0.19+7
+2023-08-03T10:19:32.6532174Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-08-03T10:19:32.6532605Z 
+2023-08-03T10:19:32.6533442Z ##[endgroup]
+2023-08-03T10:19:32.6559610Z Creating settings.xml with server-id: github
+2023-08-03T10:19:32.6560058Z Writing to /home/runner/.m2/settings.xml

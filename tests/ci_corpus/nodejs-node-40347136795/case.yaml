@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40347136795
 head_sha: 89aee6f99224fc7ea8887c1a73a30483f9be51ed
 run_attempts:
@@ -36,7 +37,9 @@ commits:
 - sha: 79239a48f1999c7ffa6b0a37ffb823485587d0b0
   author: nodejs-github-bot
   files: []
-label: null
-label_source: null
+label: bug
+label_source: >-
+  The JavaScript lint job reports two source/test lint errors: an unused eslint-disable directive
+  and `send` used before definition.
 risk_tier: medium
 suggested_label: infra

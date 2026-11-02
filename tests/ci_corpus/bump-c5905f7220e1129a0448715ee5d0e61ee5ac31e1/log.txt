@@ -1,0 +1,459 @@
+2023-06-15T22:57:20.0895576Z Current runner version: '2.304.0'
+2023-06-15T22:57:20.0923865Z ##[group]Operating System
+2023-06-15T22:57:20.0924890Z Ubuntu
+2023-06-15T22:57:20.0925275Z 22.04.2
+2023-06-15T22:57:20.0925656Z LTS
+2023-06-15T22:57:20.0926015Z ##[endgroup]
+2023-06-15T22:57:20.0926402Z ##[group]Runner Image
+2023-06-15T22:57:20.0926831Z Image: ubuntu-22.04
+2023-06-15T22:57:20.0927163Z Version: 20230611.1
+2023-06-15T22:57:20.0927809Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-15T22:57:20.0928566Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-15T22:57:20.0929056Z ##[endgroup]
+2023-06-15T22:57:20.0929461Z ##[group]Runner Image Provisioner
+2023-06-15T22:57:20.0929898Z 2.0.236.1
+2023-06-15T22:57:20.0930196Z ##[endgroup]
+2023-06-15T22:57:20.0931355Z ##[group]GITHUB_TOKEN Permissions
+2023-06-15T22:57:20.0932074Z Actions: read
+2023-06-15T22:57:20.0932486Z Checks: read
+2023-06-15T22:57:20.0932809Z Contents: read
+2023-06-15T22:57:20.0933567Z Deployments: read
+2023-06-15T22:57:20.0933972Z Discussions: read
+2023-06-15T22:57:20.0934350Z Issues: read
+2023-06-15T22:57:20.0934736Z Metadata: read
+2023-06-15T22:57:20.0935061Z Packages: read
+2023-06-15T22:57:20.0935424Z Pages: read
+2023-06-15T22:57:20.0935835Z PullRequests: read
+2023-06-15T22:57:20.0936215Z RepositoryProjects: read
+2023-06-15T22:57:20.0936643Z SecurityEvents: read
+2023-06-15T22:57:20.0937030Z Statuses: read
+2023-06-15T22:57:20.0937344Z ##[endgroup]
+2023-06-15T22:57:20.0941553Z Secret source: Dependabot
+2023-06-15T22:57:20.0942171Z Prepare workflow directory
+2023-06-15T22:57:20.1833493Z Prepare all required actions
+2023-06-15T22:57:20.2045263Z Getting action download info
+2023-06-15T22:57:20.4469162Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-15T22:57:21.1409076Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-15T22:57:21.7523841Z Download action repository 'codecov/codecov-action@v3' (SHA:eaaf4bedf32dbdc6b720b63067d99c4d77d6047d)
+2023-06-15T22:57:22.4481156Z Complete job name: build
+
+2023-06-15T22:57:30.1666195Z ##[group]Run mvn -B clean install com.mycila:license-maven-plugin:check
+2023-06-15T22:57:30.1666724Z [36;1mmvn -B clean install com.mycila:license-maven-plugin:check[0m
+2023-06-15T22:57:30.1735583Z shell: /usr/bin/bash -e {0}
+2023-06-15T22:57:30.1735884Z env:
+2023-06-15T22:57:30.1736187Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-06-15T22:57:30.1736587Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-06-15T22:57:30.1736914Z ##[endgroup]
+2023-06-15T22:57:31.6517429Z [INFO] Scanning for projects...
+2023-06-15T22:57:31.9684779Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/camunda/community/community-hub-release-parent/1.4.2/community-hub-release-parent-1.4.2.pom
+2023-06-15T22:57:32.3006139Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/camunda/community/community-hub-release-parent/1.4.2/community-hub-release-parent-1.4.2.pom (15 kB at 46 kB/s)
+2023-06-15T22:57:32.3496215Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/camunda/bpm/camunda-bom/7.19.0/camunda-bom-7.19.0.pom
+2023-06-15T22:57:32.3745856Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/camunda/bpm/camunda-bom/7.19.0/camunda-bom-7.19.0.pom (10 kB at 387 kB/s)
+2023-06-15T22:57:32.3780929Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/camunda/bpm/camunda-root/7.19.0/camunda-root-7.19.0.pom
+2023-06-15T22:57:32.4066412Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/camunda/bpm/camunda-root/7.19.0/camunda-root-7.19.0.pom (11 kB at 355 kB/s)
+2023-06-15T22:57:32.4097828Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.6/camunda-bpm-release-parent-2.2.6.pom
+2023-06-15T22:57:32.4328833Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.6/camunda-bpm-release-parent-2.2.6.pom (10 kB at 454 kB/s)
+2023-06-15T22:57:32.4353016Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/camunda/camunda-release-parent/3.7.2/camunda-release-parent-3.7.2.pom
+2023-06-15T22:57:32.4587868Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/camunda/camunda-release-parent/3.7.2/camunda-release-parent-3.7.2.pom (15 kB at 631 kB/s)
+2023-06-15T22:57:32.4638366Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/commons/camunda-commons-bom/1.12.0/camunda-commons-bom-1.12.0.pom
+2023-06-15T22:57:32.5521222Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/commons/camunda-commons-bom/1.12.0/camunda-commons-bom-1.12.0.pom (1.6 kB at 19 kB/s)
+2023-06-15T22:57:32.5529450Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.2/camunda-bpm-release-parent-2.2.2.pom
+2023-06-15T22:57:32.5819732Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.2/camunda-bpm-release-parent-2.2.2.pom (10 kB at 383 kB/s)
+2023-06-15T22:57:32.5847413Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-release-parent/3.7/camunda-release-parent-3.7.pom
+2023-06-15T22:57:32.6123736Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-release-parent/3.7/camunda-release-parent-3.7.pom (15 kB at 538 kB/s)
+2023-06-15T22:57:32.6210953Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/connect/camunda-connect-bom/1.5.6/camunda-connect-bom-1.5.6.pom
+2023-06-15T22:57:32.6522171Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/connect/camunda-connect-bom/1.5.6/camunda-connect-bom-1.5.6.pom (1.8 kB at 59 kB/s)
+2023-06-15T22:57:32.6558981Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.1/camunda-bpm-release-parent-2.2.1.pom
+2023-06-15T22:57:32.6787625Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.1/camunda-bpm-release-parent-2.2.1.pom (10 kB at 445 kB/s)
+2023-06-15T22:57:32.6886357Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/spin/camunda-spin-bom/1.19.0/camunda-spin-bom-1.19.0.pom
+2023-06-15T22:57:32.7139378Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/spin/camunda-spin-bom/1.19.0/camunda-spin-bom-1.19.0.pom (2.8 kB at 99 kB/s)
+2023-06-15T22:57:32.7164894Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.5/camunda-bpm-release-parent-2.2.5.pom
+2023-06-15T22:57:32.7409534Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.2.5/camunda-bpm-release-parent-2.2.5.pom (10 kB at 413 kB/s)
+2023-06-15T22:57:32.7517080Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/template-engines/camunda-template-engines-bom/2.1.0/camunda-template-engines-bom-2.1.0.pom
+2023-06-15T22:57:32.7806214Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/template-engines/camunda-template-engines-bom/2.1.0/camunda-template-engines-bom-2.1.0.pom (1.8 kB at 58 kB/s)
+2023-06-15T22:57:32.7831374Z [INFO] Downloading from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.0.0/camunda-bpm-release-parent-2.0.0.pom
+2023-06-15T22:57:32.8083534Z [INFO] Downloaded from maven-central: https://repo1.maven.org/maven2/org/camunda/camunda-bpm-release-parent/2.0.0/camunda-bpm-release-parent-2.0.0.pom (5.2 kB at 200 kB/s)
+2023-06-15T22:57:32.8292466Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/maven-metadata.xml
+2023-06-15T22:57:32.8562207Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/maven-metadata.xml (937 B at 33 kB/s)
+2023-06-15T22:57:32.8619897Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.pom
+2023-06-15T22:57:32.8845860Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.pom (9.7 kB at 424 kB/s)
+2023-06-15T22:57:32.8932020Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin-parent/4.2/license-maven-plugin-parent-4.2.pom
+2023-06-15T22:57:32.9158127Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin-parent/4.2/license-maven-plugin-parent-4.2.pom (17 kB at 746 kB/s)
+2023-06-15T22:57:32.9192578Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/10/mycila-pom-10.pom
+2023-06-15T22:57:32.9417581Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/10/mycila-pom-10.pom (15 kB at 698 kB/s)
+2023-06-15T22:57:32.9529392Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.jar
+2023-06-15T22:57:32.9902741Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.jar (143 kB at 3.8 MB/s)
+2023-06-15T22:57:33.0066809Z [INFO] 
+2023-06-15T22:57:33.0067872Z [INFO] ------< org.camunda.community.mockito:camunda-platform-7-mockito >------
+2023-06-15T22:57:33.0068735Z [INFO] Building camunda-platform-7-mockito 6.19.1-SNAPSHOT
+2023-06-15T22:57:33.0069398Z [INFO]   from pom.xml
+2023-06-15T22:57:33.0070189Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-15T22:57:33.0080635Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.10/jacoco-maven-plugin-0.8.10.pom
+2023-06-15T22:57:33.0308394Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.10/jacoco-maven-plugin-0.8.10.pom (3.8 kB at 165 kB/s)
+2023-06-15T22:57:33.0333420Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.10/org.jacoco.build-0.8.10.pom
+2023-06-15T22:57:33.0555730Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.10/org.jacoco.build-0.8.10.pom (44 kB at 2.0 MB/s)
+2023-06-15T22:57:33.0624976Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-bom/9.5/asm-bom-9.5.pom
+2023-06-15T22:57:33.0838136Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-bom/9.5/asm-bom-9.5.pom (3.2 kB at 154 kB/s)
+2023-06-15T22:57:33.0860456Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
+2023-06-15T22:57:33.1066841Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/ow2/1.5.1/ow2-1.5.1.pom (11 kB at 538 kB/s)
+2023-06-15T22:57:33.1104407Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.10/jacoco-maven-plugin-0.8.10.jar
+2023-06-15T22:57:33.1346454Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.10/jacoco-maven-plugin-0.8.10.jar (56 kB at 2.3 MB/s)
+2023-06-15T22:57:33.1413616Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom
+2023-06-15T22:57:33.1630995Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.pom (5.3 kB at 253 kB/s)
+2023-06-15T22:57:33.1664372Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom
+2023-06-15T22:57:33.1882485Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/35/maven-plugins-35.pom (9.9 kB at 472 kB/s)
+2023-06-15T22:57:33.1904336Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom
+2023-06-15T22:57:33.2113927Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/35/maven-parent-35.pom (45 kB at 2.2 MB/s)
+2023-06-15T22:57:33.2152594Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom
+2023-06-15T22:57:33.2401784Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/25/apache-25.pom (21 kB at 856 kB/s)
+2023-06-15T22:57:33.2487192Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar
+2023-06-15T22:57:33.2747454Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/3.2.0/maven-clean-plugin-3.2.0.jar (36 kB at 1.4 MB/s)
+2023-06-15T22:57:33.2786730Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.pom
+2023-06-15T22:57:33.3001888Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.pom (8.5 kB at 405 kB/s)
+2023-06-15T22:57:33.3027910Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom
+2023-06-15T22:57:33.3229911Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom (9.9 kB at 521 kB/s)
+2023-06-15T22:57:33.3299951Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom
+2023-06-15T22:57:33.3501349Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/36/maven-parent-36.pom (45 kB at 2.3 MB/s)
+2023-06-15T22:57:33.3574873Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom
+2023-06-15T22:57:33.3762314Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/26/apache-26.pom (21 kB at 978 kB/s)
+2023-06-15T22:57:33.3804780Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.jar
+2023-06-15T22:57:33.4041847Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.3.0/maven-resources-plugin-3.3.0.jar (32 kB at 1.4 MB/s)
+2023-06-15T22:57:33.4075781Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-06-15T22:57:33.4338599Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 378 kB/s)
+2023-06-15T22:57:33.4383939Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-06-15T22:57:33.4616200Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 352 kB/s)
+2023-06-15T22:57:33.4635629Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-06-15T22:57:33.4851655Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 2.3 MB/s)
+2023-06-15T22:57:33.4879920Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-06-15T22:57:33.5060818Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 1.2 MB/s)
+2023-06-15T22:57:33.5101567Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+2023-06-15T22:57:33.5465332Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 2.1 MB/s)
+2023-06-15T22:57:33.5466677Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.2/maven-surefire-plugin-2.22.2.pom
+2023-06-15T22:57:33.5646075Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.2/maven-surefire-plugin-2.22.2.pom (5.0 kB at 263 kB/s)
+2023-06-15T22:57:33.5666811Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.22.2/surefire-2.22.2.pom
+2023-06-15T22:57:33.5854981Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.22.2/surefire-2.22.2.pom (26 kB at 1.4 MB/s)
+2023-06-15T22:57:33.5878094Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/33/maven-parent-33.pom
+2023-06-15T22:57:33.6078922Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/33/maven-parent-33.pom (44 kB at 2.2 MB/s)
+2023-06-15T22:57:33.6140230Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom
+2023-06-15T22:57:33.6338134Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/21/apache-21.pom (17 kB at 855 kB/s)
+2023-06-15T22:57:33.6398305Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.2/maven-surefire-plugin-2.22.2.jar
+2023-06-15T22:57:33.6616377Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.22.2/maven-surefire-plugin-2.22.2.jar (41 kB at 1.8 MB/s)
+2023-06-15T22:57:33.6680146Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.5/maven-jar-plugin-2.5.pom
+2023-06-15T22:57:33.6920862Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.5/maven-jar-plugin-2.5.pom (7.4 kB at 307 kB/s)
+[... 2281 lines removed by TriageCore ...]
+2023-06-15T22:57:41.0940552Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.pom (2.4 kB at 118 kB/s)
+2023-06-15T22:57:41.0958657Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.pom
+2023-06-15T22:57:41.1137391Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.pom (2.8 kB at 155 kB/s)
+2023-06-15T22:57:41.1163763Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.pom
+2023-06-15T22:57:41.1359485Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.pom (2.6 kB at 136 kB/s)
+2023-06-15T22:57:41.1380418Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.10/org.jacoco.report-0.8.10.pom
+2023-06-15T22:57:41.1606225Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.10/org.jacoco.report-0.8.10.pom (1.9 kB at 99 kB/s)
+2023-06-15T22:57:41.1639625Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.24/plexus-utils-3.0.24.jar
+2023-06-15T22:57:41.1651121Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar
+2023-06-15T22:57:41.1662202Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar
+2023-06-15T22:57:41.1675972Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-io/1.1/maven-shared-io-1.1.jar
+2023-06-15T22:57:41.1692027Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.2/maven-artifact-2.0.2.jar
+2023-06-15T22:57:41.1869904Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar (13 kB at 643 kB/s)
+2023-06-15T22:57:41.1871405Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.2/maven-artifact-manager-2.0.2.jar
+2023-06-15T22:57:41.1915456Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.24/plexus-utils-3.0.24.jar (247 kB at 8.2 MB/s)
+2023-06-15T22:57:41.1918572Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.2/maven-repository-metadata-2.0.2.jar
+2023-06-15T22:57:41.1934608Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-io/1.1/maven-shared-io-1.1.jar (39 kB at 1.5 MB/s)
+2023-06-15T22:57:41.1935954Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-6/wagon-provider-api-1.0-alpha-6.jar
+2023-06-15T22:57:41.2028912Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/2.0.2/maven-artifact-2.0.2.jar (78 kB at 2.2 MB/s)
+2023-06-15T22:57:41.2030348Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar
+2023-06-15T22:57:41.2048755Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/file-management/1.2.1/file-management-1.2.1.jar (38 kB at 916 kB/s)
+2023-06-15T22:57:41.2049867Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/junit/junit/4.13.1/junit-4.13.1.jar
+2023-06-15T22:57:41.2071293Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact-manager/2.0.2/maven-artifact-manager-2.0.2.jar (49 kB at 1.3 MB/s)
+2023-06-15T22:57:41.2072485Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2023-06-15T22:57:41.2166211Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-repository-metadata/2.0.2/maven-repository-metadata-2.0.2.jar (20 kB at 410 kB/s)
+2023-06-15T22:57:41.2167492Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+2023-06-15T22:57:41.2214045Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/wagon/wagon-provider-api/1.0-alpha-6/wagon-provider-api-1.0-alpha-6.jar (43 kB at 806 kB/s)
+2023-06-15T22:57:41.2215335Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar
+2023-06-15T22:57:41.2295248Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar (45 kB at 750 kB/s)
+2023-06-15T22:57:41.2296394Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0.jar
+2023-06-15T22:57:41.2372756Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.jar (195 kB at 2.8 MB/s)
+2023-06-15T22:57:41.2374130Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar
+2023-06-15T22:57:41.2471772Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar (11 kB at 140 kB/s)
+2023-06-15T22:57:41.2473214Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.10/org.jacoco.core-0.8.10.jar
+2023-06-15T22:57:41.2480938Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar (38 kB at 475 kB/s)
+2023-06-15T22:57:41.2482333Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar
+2023-06-15T22:57:41.2531121Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/junit/junit/4.13.1/junit-4.13.1.jar (383 kB at 4.6 MB/s)
+2023-06-15T22:57:41.2532199Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar
+2023-06-15T22:57:41.2666617Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar (299 kB at 3.0 MB/s)
+2023-06-15T22:57:41.2667915Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar
+2023-06-15T22:57:41.2695488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar (122 kB at 1.2 MB/s)
+2023-06-15T22:57:41.2696641Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.10/org.jacoco.report-0.8.10.jar
+2023-06-15T22:57:41.2762350Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/1.0/doxia-sink-api-1.0.jar (10 kB at 93 kB/s)
+2023-06-15T22:57:41.2775582Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.10/org.jacoco.core-0.8.10.jar (204 kB at 1.9 MB/s)
+2023-06-15T22:57:41.2780466Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar (72 kB at 662 kB/s)
+2023-06-15T22:57:41.2885185Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar (52 kB at 433 kB/s)
+2023-06-15T22:57:41.2918403Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.10/org.jacoco.report-0.8.10.jar (131 kB at 1.1 MB/s)
+2023-06-15T22:57:41.3454296Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/target/jacoco.exec
+2023-06-15T22:57:41.3455598Z [INFO] 
+2023-06-15T22:57:41.3456558Z [INFO] --- maven-resources-plugin:3.3.0:resources (default-resources) @ camunda-platform-7-mockito ---
+2023-06-15T22:57:41.3489744Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom
+2023-06-15T22:57:41.3668182Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom (2.7 kB at 148 kB/s)
+2023-06-15T22:57:41.3702189Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom
+2023-06-15T22:57:41.3851373Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom (23 kB at 1.3 MB/s)
+2023-06-15T22:57:41.3874170Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.0/maven-filtering-3.3.0.pom
+2023-06-15T22:57:41.4058120Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.0/maven-filtering-3.3.0.pom (6.9 kB at 385 kB/s)
+2023-06-15T22:57:41.4073340Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/36/maven-shared-components-36.pom
+2023-06-15T22:57:41.4243205Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/36/maven-shared-components-36.pom (4.9 kB at 306 kB/s)
+2023-06-15T22:57:41.4272351Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom
+2023-06-15T22:57:41.4466781Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom (3.2 kB at 160 kB/s)
+2023-06-15T22:57:41.4479939Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom
+2023-06-15T22:57:41.5102498Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/spice/spice-parent/15/spice-parent-15.pom (8.4 kB at 135 kB/s)
+2023-06-15T22:57:41.5119240Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom
+2023-06-15T22:57:41.5422817Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/forge/forge-parent/5/forge-parent-5.pom (8.4 kB at 279 kB/s)
+2023-06-15T22:57:41.5443133Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.pom
+2023-06-15T22:57:41.5624706Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.pom (5.2 kB at 288 kB/s)
+2023-06-15T22:57:41.5652559Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom
+2023-06-15T22:57:41.5818222Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom (20 kB at 1.2 MB/s)
+2023-06-15T22:57:41.5852327Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom
+2023-06-15T22:57:41.6060822Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom (5.1 kB at 283 kB/s)
+2023-06-15T22:57:41.6088199Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.0/maven-filtering-3.3.0.jar
+2023-06-15T22:57:41.6094496Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar
+2023-06-15T22:57:41.6181590Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+2023-06-15T22:57:41.6245878Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar
+2023-06-15T22:57:41.6287817Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+2023-06-15T22:57:41.6307169Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar (85 kB at 3.4 MB/s)
+2023-06-15T22:57:41.6308362Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar
+2023-06-15T22:57:41.6331423Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.0/maven-filtering-3.3.0.jar (55 kB at 2.3 MB/s)
+2023-06-15T22:57:41.6505971Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar (41 kB at 979 kB/s)
+2023-06-15T22:57:41.6507248Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar (8.5 kB at 212 kB/s)
+2023-06-15T22:57:41.6592908Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar (263 kB at 6.6 MB/s)
+2023-06-15T22:57:41.6600324Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar (327 kB at 8.4 MB/s)
+2023-06-15T22:57:41.7048897Z [INFO] skip non existing resourceDirectory /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/resources
+2023-06-15T22:57:41.7053651Z [INFO] 
+2023-06-15T22:57:41.7056152Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ camunda-platform-7-mockito ---
+2023-06-15T22:57:41.7093096Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2023-06-15T22:57:41.7265996Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 279 kB/s)
+2023-06-15T22:57:41.7296209Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2023-06-15T22:57:41.7461901Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 397 kB/s)
+2023-06-15T22:57:41.7463105Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom
+2023-06-15T22:57:41.7620498Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/23/maven-parent-23.pom (33 kB at 2.0 MB/s)
+2023-06-15T22:57:41.7639020Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+2023-06-15T22:57:41.7802930Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom (14 kB at 822 kB/s)
+2023-06-15T22:57:41.7826644Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2023-06-15T22:57:41.8010273Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 45 kB/s)
+2023-06-15T22:57:41.8023142Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2023-06-15T22:57:41.8210331Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 236 kB/s)
+2023-06-15T22:57:41.8223562Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom
+2023-06-15T22:57:41.8392435Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom (17 kB at 1.0 MB/s)
+2023-06-15T22:57:41.8432432Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom
+2023-06-15T22:57:41.8610737Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom (5.0 kB at 292 kB/s)
+2023-06-15T22:57:41.8627480Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom
+2023-06-15T22:57:41.8799645Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom (4.1 kB at 244 kB/s)
+2023-06-15T22:57:41.8808744Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+2023-06-15T22:57:41.8971724Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 1.6 MB/s)
+2023-06-15T22:57:41.8993786Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom
+2023-06-15T22:57:41.9154722Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.pom (2.4 kB at 148 kB/s)
+2023-06-15T22:57:41.9170593Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+2023-06-15T22:57:41.9333668Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 1.0 MB/s)
+2023-06-15T22:57:41.9351426Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+2023-06-15T22:57:41.9523181Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom (6.6 kB at 365 kB/s)
+2023-06-15T22:57:41.9554278Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom
+2023-06-15T22:57:41.9709980Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom (1.1 kB at 62 kB/s)
+2023-06-15T22:57:41.9723351Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom
+2023-06-15T22:57:41.9889141Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom (8.4 kB at 524 kB/s)
+2023-06-15T22:57:41.9901896Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom
+2023-06-15T22:57:42.0066845Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom (2.7 kB at 158 kB/s)
+2023-06-15T22:57:42.0088840Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+2023-06-15T22:57:42.0258515Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 471 kB/s)
+2023-06-15T22:57:42.0281334Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom
+2023-06-15T22:57:42.0448268Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom (1.1 kB at 67 kB/s)
+2023-06-15T22:57:42.0478103Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom
+2023-06-15T22:57:42.0644375Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom (770 B at 43 kB/s)
+2023-06-15T22:57:42.0656666Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom
+2023-06-15T22:57:42.0825134Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom (6.0 kB at 355 kB/s)
+2023-06-15T22:57:42.0838399Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom
+2023-06-15T22:57:42.1009819Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom (26 kB at 1.5 MB/s)
+2023-06-15T22:57:42.1041579Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom
+2023-06-15T22:57:42.1213964Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom (1.2 kB at 67 kB/s)
+2023-06-15T22:57:42.1236154Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom
+2023-06-15T22:57:42.1408930Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom (1.3 kB at 78 kB/s)
+2023-06-15T22:57:42.1505985Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2023-06-15T22:57:42.1511877Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2023-06-15T22:57:42.1519730Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar
+2023-06-15T22:57:42.1530456Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar
+2023-06-15T22:57:42.1550027Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+2023-06-15T22:57:42.1674834Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 796 kB/s)
+2023-06-15T22:57:42.1676321Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar
+2023-06-15T22:57:42.1697495Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar (55 kB at 2.9 MB/s)
+2023-06-15T22:57:42.1698515Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+2023-06-15T22:57:42.1708337Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 201 kB/s)
+2023-06-15T22:57:42.1709523Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar
+2023-06-15T22:57:42.1836433Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 11 MB/s)
+2023-06-15T22:57:42.1837485Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar
+2023-06-15T22:57:42.1855634Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar (27 kB at 844 kB/s)
+2023-06-15T22:57:42.1895004Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar (4.7 kB at 129 kB/s)
+2023-06-15T22:57:42.1918002Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 7.0 MB/s)
+2023-06-15T22:57:42.1951391Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.4/asm-9.4.jar (122 kB at 2.8 MB/s)
+2023-06-15T22:57:42.2011845Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar (23 kB at 485 kB/s)
+2023-06-15T22:57:42.3160240Z [INFO] Changes detected - recompiling the module! :dependency
+2023-06-15T22:57:42.3177963Z [INFO] Compiling 95 source files with javac [debug target 11] to target/classes
+2023-06-15T22:57:44.6327752Z [INFO] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/delegate/DelegateFake.java: Some input files use unchecked or unsafe operations.
+2023-06-15T22:57:44.6329303Z [INFO] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/delegate/DelegateFake.java: Recompile with -Xlint:unchecked for details.
+2023-06-15T22:57:44.6330303Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6331219Z [WARNING] COMPILATION WARNING : 
+2023-06-15T22:57:44.6332007Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6409494Z [WARNING] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/service/RuntimeServiceFluentMock.java:[62,120] non-varargs call of varargs method with inexact argument type for last parameter;
+2023-06-15T22:57:44.6410423Z   cast to java.lang.Object for a varargs call
+2023-06-15T22:57:44.6410916Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+2023-06-15T22:57:44.6411881Z [WARNING] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/service/RuntimeServiceFluentMock.java:[77,97] non-varargs call of varargs method with inexact argument type for last parameter;
+2023-06-15T22:57:44.6412528Z   cast to java.lang.Object for a varargs call
+2023-06-15T22:57:44.6412994Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+2023-06-15T22:57:44.6413957Z [WARNING] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/service/RuntimeServiceFluentMock.java:[87,115] non-varargs call of varargs method with inexact argument type for last parameter;
+2023-06-15T22:57:44.6414587Z   cast to java.lang.Object for a varargs call
+2023-06-15T22:57:44.6415049Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+2023-06-15T22:57:44.6416003Z [WARNING] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/service/RuntimeServiceFluentMock.java:[102,92] non-varargs call of varargs method with inexact argument type for last parameter;
+2023-06-15T22:57:44.6416640Z   cast to java.lang.Object for a varargs call
+2023-06-15T22:57:44.6417265Z   cast to java.lang.Object[] for a non-varargs call and to suppress this warning
+2023-06-15T22:57:44.6417612Z [INFO] 4 warnings 
+2023-06-15T22:57:44.6418144Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6418593Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6418915Z [ERROR] COMPILATION ERROR : 
+2023-06-15T22:57:44.6419324Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6420298Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[5,35] cannot access org.springframework.context.ApplicationContext
+2023-06-15T22:57:44.6421341Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar(/org/springframework/context/ApplicationContext.class)
+2023-06-15T22:57:44.6421861Z     class file has wrong version 61.0, should be 55.0
+2023-06-15T22:57:44.6422252Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-06-15T22:57:44.6423293Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[6,35] cannot access org.springframework.context.ConfigurableApplicationContext
+2023-06-15T22:57:44.6424435Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar(/org/springframework/context/ConfigurableApplicationContext.class)
+2023-06-15T22:57:44.6424987Z     class file has wrong version 61.0, should be 55.0
+2023-06-15T22:57:44.6425370Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-06-15T22:57:44.6426222Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[33,11] cannot find symbol
+2023-06-15T22:57:44.6426771Z   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6427448Z   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6428481Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[48,73] cannot find symbol
+2023-06-15T22:57:44.6429204Z   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6429810Z   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6430838Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[52,65] cannot find symbol
+2023-06-15T22:57:44.6431471Z   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6431988Z   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6433117Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[41,5] reference to CallActivityMockForSpringContext is ambiguous
+2023-06-15T22:57:44.6435758Z   both constructor CallActivityMockForSpringContext(java.lang.String,org.camunda.community.mockito.process.CallActivityMock.MockedModelConfigurer,org.springframework.beans.factory.config.SingletonBeanRegistry) in org.camunda.community.mockito.process.CallActivityMockForSpringContext and constructor CallActivityMockForSpringContext(java.lang.String,org.camunda.community.mockito.process.CallActivityMock.MockedModelConfigurer,ApplicationContext) in org.camunda.community.mockito.process.CallActivityMockForSpringContext match
+2023-06-15T22:57:44.6438481Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[53,41] cannot find symbol
+2023-06-15T22:57:44.6439124Z   symbol:   class ConfigurableApplicationContext
+2023-06-15T22:57:44.6439680Z   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6440839Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[56,14] cannot find symbol
+2023-06-15T22:57:44.6441442Z   symbol:   class ConfigurableApplicationContext
+2023-06-15T22:57:44.6441961Z   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6442396Z [INFO] 8 errors 
+2023-06-15T22:57:44.6442774Z [INFO] -------------------------------------------------------------
+2023-06-15T22:57:44.6443271Z [INFO] ------------------------------------------------------------------------
+2023-06-15T22:57:44.6443596Z [INFO] BUILD FAILURE
+2023-06-15T22:57:44.6472233Z [INFO] ------------------------------------------------------------------------
+2023-06-15T22:57:44.6472772Z [INFO] Total time:  13.009 s
+2023-06-15T22:57:44.6473265Z [INFO] Finished at: 2023-06-15T22:57:44Z
+2023-06-15T22:57:44.6473749Z [INFO] ------------------------------------------------------------------------
+2023-06-15T22:57:44.6474698Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project camunda-platform-7-mockito: Compilation failure: Compilation failure: 
+2023-06-15T22:57:44.6475996Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[5,35] cannot access org.springframework.context.ApplicationContext
+2023-06-15T22:57:44.6477166Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar(/org/springframework/context/ApplicationContext.class)
+2023-06-15T22:57:44.6477749Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-06-15T22:57:44.6478169Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-06-15T22:57:44.6479300Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[6,35] cannot access org.springframework.context.ConfigurableApplicationContext
+2023-06-15T22:57:44.6480832Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-context/6.0.10/spring-context-6.0.10.jar(/org/springframework/context/ConfigurableApplicationContext.class)
+2023-06-15T22:57:44.6481588Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-06-15T22:57:44.6482026Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-06-15T22:57:44.6482936Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[33,11] cannot find symbol
+2023-06-15T22:57:44.6483565Z [ERROR]   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6484296Z [ERROR]   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6485350Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[48,73] cannot find symbol
+2023-06-15T22:57:44.6485971Z [ERROR]   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6486516Z [ERROR]   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6487554Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[52,65] cannot find symbol
+2023-06-15T22:57:44.6488172Z [ERROR]   symbol:   class ApplicationContext
+2023-06-15T22:57:44.6488697Z [ERROR]   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6489853Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[41,5] reference to CallActivityMockForSpringContext is ambiguous
+2023-06-15T22:57:44.6492507Z [ERROR]   both constructor CallActivityMockForSpringContext(java.lang.String,org.camunda.community.mockito.process.CallActivityMock.MockedModelConfigurer,org.springframework.beans.factory.config.SingletonBeanRegistry) in org.camunda.community.mockito.process.CallActivityMockForSpringContext and constructor CallActivityMockForSpringContext(java.lang.String,org.camunda.community.mockito.process.CallActivityMock.MockedModelConfigurer,ApplicationContext) in org.camunda.community.mockito.process.CallActivityMockForSpringContext match
+2023-06-15T22:57:44.6495247Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[53,41] cannot find symbol
+2023-06-15T22:57:44.6495915Z [ERROR]   symbol:   class ConfigurableApplicationContext
+2023-06-15T22:57:44.6496473Z [ERROR]   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6497512Z [ERROR] /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito/src/main/java/org/camunda/community/mockito/process/CallActivityMockForSpringContext.java:[56,14] cannot find symbol
+2023-06-15T22:57:44.6498173Z [ERROR]   symbol:   class ConfigurableApplicationContext
+2023-06-15T22:57:44.6498744Z [ERROR]   location: class org.camunda.community.mockito.process.CallActivityMockForSpringContext
+2023-06-15T22:57:44.6520778Z [ERROR] -> [Help 1]
+2023-06-15T22:57:44.6521053Z [ERROR] 
+2023-06-15T22:57:44.6521607Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-15T22:57:44.6522088Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-15T22:57:44.6522387Z [ERROR] 
+2023-06-15T22:57:44.6522753Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-15T22:57:44.6523276Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-15T22:57:44.6790184Z ##[error]Process completed with exit code 1.
+2023-06-15T22:57:44.6866536Z Post job cleanup.
+2023-06-15T22:57:44.8973602Z Post job cleanup.
+2023-06-15T22:57:45.0201113Z [command]/usr/bin/git version
+2023-06-15T22:57:45.0257873Z git version 2.40.1
+2023-06-15T22:57:45.0332816Z Temporarily overriding HOME='/home/runner/work/_temp/56cc0e2c-de4a-4c58-9c04-c3bbd421ba26' before making global git config changes
+2023-06-15T22:57:45.0337724Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-15T22:57:45.0347119Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito
+2023-06-15T22:57:45.0402378Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-15T22:57:45.0455377Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-15T22:57:45.0741887Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-15T22:57:45.0769363Z http.https://github.com/.extraheader
+2023-06-15T22:57:45.0783781Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-15T22:57:45.0826282Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-15T22:57:45.1345239Z Cleaning up orphan processes
+
+2023-06-15T22:57:44.6866522Z Post job cleanup.
+
+2023-06-15T22:57:13.3641332Z ##[section]Starting: Prepare job build
+2023-06-15T22:57:13.3644169Z Evaluating strategy
+2023-06-15T22:57:13.3649825Z Creating job '__default'
+2023-06-15T22:57:13.3653111Z Evaluating timeout
+2023-06-15T22:57:13.3653191Z Evaluating cancel timeout
+2023-06-15T22:57:13.3653227Z Evaluating continue on error
+2023-06-15T22:57:13.3653265Z Evaluating target
+2023-06-15T22:57:13.3654759Z ##[section]Finishing: Prepare job build
+
+2023-06-15T22:57:23.5038171Z ##[group]Run actions/setup-java@v3
+2023-06-15T22:57:23.5038527Z with:
+2023-06-15T22:57:23.5038859Z   java-version: 11
+2023-06-15T22:57:23.5039205Z   distribution: zulu
+2023-06-15T22:57:23.5039481Z   cache: maven
+2023-06-15T22:57:23.5039843Z   java-package: jdk
+2023-06-15T22:57:23.5040220Z   check-latest: false
+2023-06-15T22:57:23.5040502Z   server-id: github
+2023-06-15T22:57:23.5040858Z   server-username: GITHUB_ACTOR
+2023-06-15T22:57:23.5041258Z   server-password: GITHUB_TOKEN
+2023-06-15T22:57:23.5041615Z   overwrite-settings: true
+2023-06-15T22:57:23.5041984Z   job-status: success
+2023-06-15T22:57:23.5042548Z   token: ***
+2023-06-15T22:57:23.5042817Z ##[endgroup]
+2023-06-15T22:57:23.7583023Z ##[group]Installed distributions
+2023-06-15T22:57:23.7655872Z Trying to resolve the latest version from remote
+2023-06-15T22:57:23.8679856Z Resolved latest version as 11.0.19+7
+2023-06-15T22:57:23.8725722Z Trying to download...
+2023-06-15T22:57:23.8726759Z Downloading Java 11.0.19+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu11.64.19-ca-jdk11.0.19-linux_x64.tar.gz ...
+2023-06-15T22:57:25.0931519Z Extracting Java archive...
+2023-06-15T22:57:25.1066873Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/669e63a8-7306-45b4-8866-bbc5f0ebf722 -f /home/runner/work/_temp/1a2baa4d-30a5-44d4-8d69-2a503c7a3e89
+2023-06-15T22:57:29.7644233Z Java 11.0.19+7 was downloaded
+2023-06-15T22:57:29.7645487Z Setting Java 11.0.19+7 as the default
+2023-06-15T22:57:29.7670022Z Creating toolchains.xml for JDK version 11 from zulu
+2023-06-15T22:57:29.7778645Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-15T22:57:29.7780411Z 
+2023-06-15T22:57:29.7780744Z Java configuration:
+2023-06-15T22:57:29.7781395Z   Distribution: zulu
+2023-06-15T22:57:29.7781813Z   Version: 11.0.19+7
+2023-06-15T22:57:29.7782769Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/11.0.19-7/x64
+2023-06-15T22:57:29.7783149Z 
+2023-06-15T22:57:29.7783910Z ##[endgroup]
+2023-06-15T22:57:29.7811428Z Creating settings.xml with server-id: github
+2023-06-15T22:57:29.7830148Z Writing to /home/runner/.m2/settings.xml
+2023-06-15T22:57:30.1461959Z maven cache is not found
+
+2023-06-15T22:57:44.8973583Z Post job cleanup.
+2023-06-15T22:57:45.0201063Z [command]/usr/bin/git version
+2023-06-15T22:57:45.0257839Z git version 2.40.1
+2023-06-15T22:57:45.0332793Z Temporarily overriding HOME='/home/runner/work/_temp/56cc0e2c-de4a-4c58-9c04-c3bbd421ba26' before making global git config changes
+2023-06-15T22:57:45.0337671Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-15T22:57:45.0347098Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/camunda-platform-7-mockito/camunda-platform-7-mockito
+2023-06-15T22:57:45.0402355Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-15T22:57:45.0455352Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-15T22:57:45.0741752Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-15T22:57:45.0769329Z http.https://github.com/.extraheader
+2023-06-15T22:57:45.0783763Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-15T22:57:45.0826260Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+
+2023-06-15T22:57:45.1345217Z Cleaning up orphan processes

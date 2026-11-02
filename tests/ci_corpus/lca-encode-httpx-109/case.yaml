@@ -1,0 +1,71 @@
+repo: encode/httpx
+run_id: '109'
+head_sha: 897a5deb406b53ea2f4675cdf0c2f1fa93fc6238
+run_attempts: []
+commits:
+- sha: 897a5deb406b53ea2f4675cdf0c2f1fa93fc6238
+  author: karpetrosyan
+  files:
+  - httpx/__init__.py
+- sha: 88f2ab747c4630e1c8c4454974e4a6e29757e55a
+  author: karpetrosyan
+  files:
+  - httpx/__init__.py
+  - httpx/_api.py
+  - httpx/_client.py
+  - httpx/_config.py
+  - httpx/_main.py
+  - httpx/_transports/default.py
+  - httpx/_types.py
+  - httpx/_utils.py
+  - tests/conftest.py
+  - tests/test_config.py
+  - tests/test_utils.py
+- sha: 1d526a018060d158e7548366216491c413756872
+  author: mtelka
+  files:
+  - requirements.txt
+- sha: 08eff926a6011ac84961fd2cee22d9fd4d4b1a88
+  author: karpetrosyan
+  files:
+  - CHANGELOG.md
+  - httpx/__version__.py
+- sha: b4b27ff6777c8906c2b31dd879bd4cc1d9e4f6ce
+  author: karpetrosyan
+  files:
+  - httpx/_utils.py
+- sha: a11fc3849b94157274c98d99501acad05cbfb221
+  author: lovelydinosaur
+  files:
+  - httpx/_urlparse.py
+  - tests/models/test_url.py
+- sha: 3b9060ee1121b48669e0b30045c9344065f4f2ae
+  author: karpetrosyan
+  files:
+  - CHANGELOG.md
+  - httpx/_utils.py
+  - tests/test_utils.py
+- sha: 2318fd822cdb16435ccb5cabcba16c0b7969c1e4
+  author: jamesbraza
+  files:
+  - httpx/_content.py
+  - httpx/_utils.py
+  - tests/client/test_redirects.py
+  - tests/models/test_requests.py
+  - tests/models/test_responses.py
+  - tests/test_content.py
+- sha: 2c51edd0c0d4124423661eb5678ae1a94a107260
+  author: lovelydinosaur
+  files:
+  - CHANGELOG.md
+- sha: 1e110964736a95d822144390b99d7ecf17fca527
+  author: jamesbraza
+  files:
+  - httpx/_decoders.py
+  - httpx/_models.py
+  - tests/test_decoders.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

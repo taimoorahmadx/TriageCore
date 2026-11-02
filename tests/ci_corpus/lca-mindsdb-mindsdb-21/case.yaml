@@ -1,0 +1,66 @@
+repo: mindsdb/mindsdb
+run_id: '21'
+head_sha: 102f918deb2532bb7b825f00258f2c1414cf94da
+run_attempts: []
+commits:
+- sha: 102f918deb2532bb7b825f00258f2c1414cf94da
+  author: StpMax
+  files:
+  - mindsdb/integrations/handlers/autogluon_handler/requirements.txt
+  - mindsdb/integrations/handlers/autosklearn_handler/requirements.txt
+  - mindsdb/integrations/handlers/flaml_handler/requirements.txt
+  - mindsdb/integrations/handlers/lightwood_handler/requirements.txt
+  - mindsdb/integrations/handlers/tpot_handler/requirements.txt
+  - requirements/requirements.txt
+- sha: 7e4c17dc97db651b77ac2d3ddc12f0e4d6d50f1c
+  author: StpMax
+  files:
+  - mindsdb/integrations/handlers/lightwood_handler/requirements.txt
+- sha: e31fc733cb627665520a458a8d831d4c6e415281
+  author: StpMax
+  files:
+  - mindsdb/integrations/handlers/lightwood_handler/requirements.txt
+- sha: 09613ea5bddd2d69e7872bc9be09faf7c698634d
+  author: StpMax
+  files:
+  - mindsdb/integrations/handlers/autogluon_handler/requirements.txt
+  - mindsdb/integrations/handlers/autosklearn_handler/requirements.txt
+  - mindsdb/integrations/handlers/flaml_handler/requirements.txt
+  - mindsdb/integrations/handlers/lightwood_handler/requirements.txt
+  - mindsdb/integrations/handlers/tpot_handler/requirements.txt
+- sha: e9634efd25dc93a183c633886f3e5f52a8defe1a
+  author: StpMax
+  files:
+  - mindsdb/__about__.py
+  - requirements/requirements.txt
+- sha: 315914ec4d2f4a9cd0c1fc2713459082f66696d7
+  author: someshfengde
+  files:
+  - mindsdb/integrations/handlers/google_gemini_handler/README.md
+  - mindsdb/integrations/handlers/google_gemini_handler/__about__.py
+  - mindsdb/integrations/handlers/google_gemini_handler/__init__.py
+  - mindsdb/integrations/handlers/google_gemini_handler/google_gemini_handler.py
+  - mindsdb/integrations/handlers/google_gemini_handler/requirements.txt
+  - tests/unit/executor_test_base.py
+  - tests/unit/ml_handlers/test_google_gemini.py
+- sha: b223e77a9ab7d49203696ca0eb54390055c0bdce
+  author: ZoranPandovski
+  files:
+  - .github/workflows/add_to_pr_review.yml
+- sha: 3642c66d56d5a148e623da73309e781262b0b462
+  author: ZoranPandovski
+  files:
+  - mindsdb/integrations/handlers/mongodb_handler/mongodb_handler.py
+- sha: 9ee705700267100bad9b1238be2969f10071b410
+  author: ZoranPandovski
+  files:
+  - mindsdb/integrations/handlers/mongodb_handler/mongodb_handler.py
+- sha: 8efbe9b1121aeddee5c572c40311fbcf56c7732a
+  author: StpMax
+  files:
+  - .github/workflows/add_to_pr_review.yml
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

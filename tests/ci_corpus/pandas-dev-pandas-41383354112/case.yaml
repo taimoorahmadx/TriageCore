@@ -1,0 +1,78 @@
+repo: pandas-dev/pandas
+source: mined
+run_id: 41383354112
+head_sha: 11f0a53821c39417fe1812d81e981216babcd039
+run_attempts:
+- attempt: 1
+  head_sha: 11f0a53821c39417fe1812d81e981216babcd039
+  conclusion: failure
+commits:
+- sha: 11f0a53821c39417fe1812d81e981216babcd039
+  author: jbrockmendel
+  files:
+  - pandas/plotting/_matplotlib/core.py
+  - pandas/plotting/_matplotlib/hist.py
+  - pandas/tests/plotting/test_hist_method.py
+- sha: 3a1f6593b5fd14e8327d249132784b131c245fff
+  author: jbrockmendel
+  files:
+  - doc/source/reference/series.rst
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/core/indexes/accessors.py
+  - pandas/tests/series/accessors/test_dt_accessor.py
+- sha: a85a699f7c7ae3a3b53f158215da0af6339349d7
+  author: jbrockmendel
+  files:
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/core/computation/ops.py
+  - pandas/tests/computation/test_eval.py
+- sha: 225bc0138c25b1dc0d691ddbb5f2798251c65c74
+  author: fangchenli
+  files:
+  - README.md
+- sha: 6151d7baf5e3613e2232843a4d4ebb886bb0bf98
+  author: Abhishek1106kr
+  files:
+  - doc/source/index.rst.template
+- sha: ab97a2eca59ae3143bad77edccda8dc41c77d483
+  author: jbrockmendel
+  files:
+  - doc/source/user_guide/timeseries.rst
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/core/arrays/datetimelike.py
+  - pandas/core/arrays/datetimes.py
+  - pandas/core/indexes/datetimes.py
+  - pandas/tests/indexes/datetimes/methods/test_snap.py
+- sha: 7dcbc5ab6096f82c30cdc37f2b67a2d4744d7e25
+  author: jbrockmendel
+  files:
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/core/indexes/base.py
+  - pandas/tests/indexes/multi/test_analytics.py
+- sha: ab75b464b23122e4f2d7b3da6c2ac8422f38a5d0
+  author: jbrockmendel
+  files:
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/core/generic.py
+  - pandas/core/missing.py
+  - pandas/core/resample.py
+  - pandas/tests/frame/methods/test_interpolate.py
+  - pandas/tests/series/methods/test_interpolate.py
+- sha: 1d8a7acff1e118c6eb05b9cbb8e6b4580cca9f26
+  author: jbrockmendel
+  files:
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/_libs/src/vendored/ujson/lib/ultrajsonenc.c
+  - pandas/tests/io/json/test_pandas.py
+  - pandas/tests/io/json/test_ujson.py
+- sha: 98d6988f8942bab3601c0e7b7c8b7ef5d25f28a2
+  author: jbrockmendel
+  files:
+  - doc/source/whatsnew/v3.2.0.rst
+  - pandas/io/common.py
+  - pandas/tests/io/parser/test_network.py
+  - pandas/tests/io/test_common.py
+label: null
+label_source: null
+risk_tier: medium
+suggested_label: infra

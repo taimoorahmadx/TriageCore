@@ -1,0 +1,76 @@
+repo: beetbox/beets
+run_id: '38'
+head_sha: 0d26cc1482ff5080ec579b17b29f22657a20c562
+run_attempts: []
+commits:
+- sha: 0d26cc1482ff5080ec579b17b29f22657a20c562
+  author: niacdoial
+  files:
+  - beetsplug/edit.py
+- sha: 9a11a58404006e429e9a4f98d4f7e49e42631c51
+  author: niacdoial
+  files:
+  - beetsplug/edit.py
+- sha: bcf180d14dd14604e1d82414fac28d41c275e1c9
+  author: JOJ0
+  files:
+  - beets/config_default.yaml
+  - docs/changelog.rst
+- sha: d927262bd51154b9860d55eabf66dd7d4eba2890
+  author: RollingStar
+  files:
+  - beets/plugins.py
+  - beets/ui/__init__.py
+  - beets/ui/commands.py
+  - beetsplug/advancedrewrite.py
+  - beetsplug/mbsubmit.py
+  - beetsplug/smartplaylist.py
+  - beetsplug/spotify.py
+  - docs/changelog.rst
+  - docs/plugins/advancedrewrite.rst
+  - docs/plugins/mbsubmit.rst
+  - docs/plugins/smartplaylist.rst
+  - docs/reference/cli.rst
+  - test/plugins/test_advancedrewrite.py
+  - test/plugins/test_mbsubmit.py
+  - test/plugins/test_smartplaylist.py
+- sha: 9f958b886efc274942a6d9e8b950e2cff0ad2e2f
+  author: RollingStar
+  files:
+  - docs/changelog.rst
+- sha: 3ea4a0ba46e2b535cbb67f5fb34521df11d0a8c8
+  author: sampsyo
+  files:
+  - beets/plugins.py
+  - docs/changelog.rst
+- sha: 3165d5dec0d4e18d0879a8856cff9359ecb935ac
+  author: sampsyo
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+- sha: e64ee0b0cd38c205a06c366a9fbeeb65b273b257
+  author: Maxr1998
+  files:
+  - beets/plugins.py
+  - docs/changelog.rst
+- sha: 58e5b029297719d9411b0122df47e3682768b062
+  author: mgoltzsche
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+- sha: adf4b9779ac465e35d6ee2d9c9db4c81eec319cf
+  author: Serene-Arc
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

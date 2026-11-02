@@ -1,0 +1,50 @@
+repo: quarkiverse/quarkus-micrometer-registry
+run_id: fb40f5e5fc20ca31cf9fdadd5ace53f7de5ea093
+head_sha: fb40f5e5fc20ca31cf9fdadd5ace53f7de5ea093
+run_attempts: []
+commits:
+- sha: fb40f5e5fc20ca31cf9fdadd5ace53f7de5ea093
+  author: dependabot[bot]
+  files:
+  - micrometer-registry-stackdriver/runtime/pom.xml
+- sha: cf761b508facf9e27e1f2020b4c4fc628fb26a02
+  author: ebullient
+  files:
+  - pom.xml
+- sha: 8c02a2c25f1ea0e75dd733d6e6daa8ae074ea2a0
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 549480183ba31741f632b8fa64733b2cafcd51af
+  author: ebullient
+  files:
+  - docs/pom.xml
+- sha: 2df56cb77093b133f4eac8063a992fc970d8049b
+  author: dependabot[bot]
+  files:
+  - docs/pom.xml
+- sha: 4df7ebf9163d341a41fc134d2b260697d09f3994
+  author: ebullient
+  files:
+  - docs/pom.xml
+- sha: 6e4f6e14abe57f750c85d9610cb133f0c87276f0
+  author: dependabot[bot]
+  files:
+  - docs/pom.xml
+- sha: c606681eddc29b6f7c9a9bd280ffaa11e66a657d
+  author: ebullient
+  files:
+  - pom.xml
+- sha: 230cc888fa63740accd31df1ef4f92166763eedf
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 9edf9296a698df2c0b2fa94a501bc97c4f20aa58
+  author: ebullient
+  files:
+  - docs/pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

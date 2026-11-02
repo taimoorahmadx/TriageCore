@@ -1,0 +1,71 @@
+repo: mosaicml/composer
+run_id: '96'
+head_sha: 4410203c56984c613d23f29a81ecd1b96c57b1ee
+run_attempts: []
+commits:
+- sha: 4410203c56984c613d23f29a81ecd1b96c57b1ee
+  author: bmosaicml
+  files:
+  - .github/workflows/pr-docker.yaml
+  - .github/workflows/release-docker.yaml
+  - composer/callbacks/checkpoint_saver.py
+  - composer/loggers/mlflow_logger.py
+  - composer/loggers/mosaicml_logger.py
+  - composer/loggers/remote_uploader_downloader.py
+  - composer/profiler/torch_profiler.py
+  - composer/trainer/dist_strategy.py
+  - composer/trainer/trainer.py
+  - composer/utils/object_store/s3_object_store.py
+  - docker/Dockerfile
+  - docker/build_matrix.yaml
+  - docker/generate_build_matrix.py
+  - tests/loggers/test_mosaicml_logger.py
+  - tests/loggers/test_remote_uploader_downloader.py
+  - tests/trainer/test_fsdp.py
+  - tests/trainer/test_fsdp_checkpoint.py
+  - tests/utils/eval_client/test_local_eval_client.py
+  - tests/utils/object_store/test_s3_object_store.py
+- sha: 4dcbc2b47691cf6cd63c940a298a3b6e09a670c2
+  author: cli99
+  files:
+  - composer/trainer/dist_strategy.py
+  - tests/trainer/test_fsdp.py
+  - tests/utils/eval_client/test_local_eval_client.py
+- sha: a1931159951bf3e1fb6393c46242d3326d85dd78
+  author: j316chuck
+  files:
+  - composer/profiler/torch_profiler.py
+- sha: 71960287089474f1625a37713fb4b2364ba191ff
+  author: tbarton16
+  files:
+  - composer/callbacks/eval_output_logging_callback.py
+- sha: 57133a4de6a853a86334be11d1fd11be06fa5e43
+  author: tbarton16
+  files:
+  - composer/callbacks/eval_output_logging_callback.py
+- sha: 92d983a3d617975dc70364a564a8f22758e92fc0
+  author: mvpatel2000
+  files:
+  - composer/loggers/mosaicml_logger.py
+- sha: 2cf73b4006da6e6daa45630650084936a32cfc38
+  author: nik-mosaic
+  files:
+  - composer/utils/object_store/s3_object_store.py
+  - tests/utils/object_store/test_s3_object_store.py
+- sha: 1a4e67f6964355be7faf9789efeffe22315fdc5a
+  author: eracah
+  files:
+  - tests/trainer/test_fsdp_checkpoint.py
+- sha: ea2ceff66a696e47c9679771042b52f3496b70ea
+  author: irenedea
+  files:
+  - composer/callbacks/checkpoint_saver.py
+- sha: 1b28293e9bd32566e3a9c0140721cfea31c238a8
+  author: aspfohl
+  files:
+  - composer/loggers/mlflow_logger.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

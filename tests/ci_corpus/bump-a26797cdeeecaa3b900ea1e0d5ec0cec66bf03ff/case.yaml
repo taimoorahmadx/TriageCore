@@ -1,0 +1,50 @@
+repo: alphagov/pay-adminusers
+run_id: a26797cdeeecaa3b900ea1e0d5ec0cec66bf03ff
+head_sha: a26797cdeeecaa3b900ea1e0d5ec0cec66bf03ff
+run_attempts: []
+commits:
+- sha: a26797cdeeecaa3b900ea1e0d5ec0cec66bf03ff
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 4f68a603a58c0911f06fadec0e0b50ff24bde4e6
+  author: SandorArpa
+  files:
+  - m1/arm64.Dockerfile
+- sha: 8735ce116ba278c1807be81472c876b99880d18b
+  author: SandorArpa
+  files:
+  - pom.xml
+- sha: 2d2dcead9a5dc3712f66e0e57b6dbad0e8e30535
+  author: SandorArpa
+  files:
+  - pom.xml
+- sha: 5c23240d7be0b2ba4ea66c8b523aff6376fe53f8
+  author: dependabot[bot]
+  files:
+  - m1/arm64.Dockerfile
+- sha: cc42c4302fc0bb10d0daa40bd8053a6c8833e754
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 8767328cfa69acda05f9c8454b56791773eb1d59
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 7106b814a2a5fd55491cb5b0df5c765c01d050a0
+  author: SandorArpa
+  files:
+  - pom.xml
+- sha: 6d25c4b0eb9746883d1ba3c3b32e89c018eaa12d
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 0bc8a06f11f5544c611b316abe9999ee108a5542
+  author: SandorArpa
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

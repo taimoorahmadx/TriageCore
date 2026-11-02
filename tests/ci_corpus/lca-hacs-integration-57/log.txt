@@ -1,0 +1,38 @@
+===== Run pyupgrade/5_🏃 Run the check (pyupgrade).txt =====
+##[group]Run pre-commit run --hook-stage manual pyupgrade --all-files --config .github/pre-commit-config.yaml
+[36;1mpre-commit run --hook-stage manual pyupgrade --all-files --config .github/pre-commit-config.yaml[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
+pyupgrade................................................................Failed
+- hook id: pyupgrade
+- exit code: 1
+- files were modified by this hook
+
+Rewriting tests/common.py
+
+##[error]Process completed with exit code 1.
+
+
+===== Run black/5_🏃 Run the check (black).txt =====
+##[group]Run pre-commit run --hook-stage manual black --all-files --config .github/pre-commit-config.yaml
+[36;1mpre-commit run --hook-stage manual black --all-files --config .github/pre-commit-config.yaml[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
+black....................................................................Failed
+- hook id: black
+- files were modified by this hook
+##[error]Process completed with exit code 1.

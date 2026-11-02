@@ -1,0 +1,74 @@
+repo: encode/starlette
+run_id: '144'
+head_sha: 58c7cde15084b1c07373c00028dbd19b85fd5e1b
+run_attempts: []
+commits:
+- sha: 58c7cde15084b1c07373c00028dbd19b85fd5e1b
+  author: gi0baro
+  files:
+  - tests/test_responses.py
+- sha: 88f4835ce040257f635c422ca5ba1a930b558f8b
+  author: gi0baro
+  files:
+  - starlette/responses.py
+- sha: 6bfe9fea04fe129d20dce25d29ee112e0f60cb43
+  author: Kludex
+  files:
+  - starlette/_exception_handler.py
+  - starlette/_utils.py
+  - starlette/applications.py
+  - starlette/authentication.py
+  - starlette/background.py
+  - starlette/concurrency.py
+  - starlette/config.py
+  - starlette/datastructures.py
+  - starlette/endpoints.py
+  - starlette/exceptions.py
+  - starlette/formparsers.py
+  - starlette/middleware/__init__.py
+  - starlette/requests.py
+  - starlette/responses.py
+  - starlette/routing.py
+  - starlette/schemas.py
+  - starlette/staticfiles.py
+  - starlette/status.py
+  - starlette/templating.py
+  - starlette/testclient.py
+  - starlette/types.py
+  - starlette/websockets.py
+- sha: b5126b2063dbd6fa46d3e60b4a7117c99dcdbe6e
+  author: Kludex
+  files:
+  - starlette/websockets.py
+  - tests/test_websockets.py
+- sha: 3ae161ed8f94a1e4871c4aa11581868065b175b5
+  author: Kludex
+  files:
+  - starlette/testclient.py
+  - tests/test_testclient.py
+- sha: 13c66c929428424daeb711b46623f47fb9ca36ee
+  author: mathause
+  files:
+  - starlette/config.py
+  - tests/test_config.py
+- sha: d2d9192966a7719747c04ce992b4a7df098cf82f
+  author: Kludex
+  files:
+  - README.md
+- sha: 363e4fb1940f0eb6e290755fddd7ea6666ce18ae
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 53808c4b26c8111f0fb033ee39bab5e6103158b6
+  author: Kludex
+  files:
+  - .github/dependabot.yml
+- sha: 8d7630bda107ebbc58a4130b605ee6481067100e
+  author: Kludex
+  files:
+  - tests/test_websockets.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,158 @@
+repo: ASSERT-KTH/sorald
+run_id: 65200df71d5f6ab1c5502f74a5dc7bcbda459563
+head_sha: 65200df71d5f6ab1c5502f74a5dc7bcbda459563
+run_attempts: []
+commits:
+- sha: 65200df71d5f6ab1c5502f74a5dc7bcbda459563
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 7a21ea903584634c52b2f0b015866c30e78e21b8
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: a2c9c011eb5a3e9d2a2778d3b803e8bbb319cf50
+  author: algomaster99
+  files:
+  - .github/workflows/deploy.yml
+  - .github/workflows/jreleaser.yml
+  - .github/workflows/tests.yml
+  - README.md
+  - sorald/pom.xml
+- sha: f4eb5c7f56a40782a3f8ebc620d71a331b55b213
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 37b31853784204de21b57415aad9e86790e3d682
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 4e13410de69315ab509ed5be7f06b320e6980a1d
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 0ed80a64be5bdba534f64b0bb1eb08d8f657806d
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 664d0d6d652a0293e2e5c20e72b200d08b5a301c
+  author: renovate[bot]
+  files:
+  - sorald-api/pom.xml
+  - sorald/pom.xml
+- sha: 490c8d7baefa99f518c51ed45ce8343d3ce6537d
+  author: renovate[bot]
+  files: []
+- sha: 8fee29eaa2cb2cf9b845499801d92c4d5109cbdf
+  author: github-actions[bot]
+  files:
+  - pom.xml
+  - sorald-api/pom.xml
+  - sorald-api/src/main/java/sorald/api/ProcessorRepository.java
+  - sorald-api/src/main/java/sorald/api/RuleRepository.java
+  - sorald-api/src/main/java/sorald/event/models/CrashEvent.java
+  - sorald-api/src/main/java/sorald/event/models/RepairEvent.java
+  - sorald-api/src/main/java/sorald/processor/SoraldAbstractProcessor.java
+  - sorald-api/src/main/java/sorald/rule/RuleViolation.java
+  - sorald-api/src/main/java/sorald/rule/StaticAnalyzer.java
+  - sorald/pom.xml
+  - sorald/src/main/java/sorald/CodeGenerator.java
+  - sorald/src/main/java/sorald/FileUtils.java
+  - sorald/src/main/java/sorald/Processors.java
+  - sorald/src/main/java/sorald/Repair.java
+  - sorald/src/main/java/sorald/SelectiveForceImport.java
+  - sorald/src/main/java/sorald/SoraldConfig.java
+  - sorald/src/main/java/sorald/cli/BaseCommand.java
+  - sorald/src/main/java/sorald/cli/Cli.java
+  - sorald/src/main/java/sorald/cli/MineCommand.java
+  - sorald/src/main/java/sorald/cli/RealFileConverter.java
+  - sorald/src/main/java/sorald/cli/RepairCommand.java
+  - sorald/src/main/java/sorald/cli/SoraldVersionProvider.java
+  - sorald/src/main/java/sorald/cli/SpecifiedViolation.java
+  - sorald/src/main/java/sorald/event/collectors/CompilationUnitCollector.java
+  - sorald/src/main/java/sorald/event/collectors/MinerStatisticsCollector.java
+  - sorald/src/main/java/sorald/event/collectors/RepairStatisticsCollector.java
+  - sorald/src/main/java/sorald/event/models/WarningLocation.java
+  - sorald/src/main/java/sorald/event/models/miner/MinedRule.java
+  - sorald/src/main/java/sorald/event/models/miner/MinedViolationEvent.java
+  - sorald/src/main/java/sorald/event/models/repair/RuleRepairStatistics.java
+  - sorald/src/main/java/sorald/miner/MineSonarWarnings.java
+  - sorald/src/main/java/sorald/miner/StatsOutputAnalyzer.java
+  - sorald/src/main/java/sorald/processor/ArrayHashCodeAndToStringProcessor.java
+  - sorald/src/main/java/sorald/processor/BigDecimalDoubleConstructorProcessor.java
+  - sorald/src/main/java/sorald/processor/CastArithmeticOperandProcessor.java
+  - sorald/src/main/java/sorald/processor/CollectionIsEmptyProcessor.java
+  - sorald/src/main/java/sorald/processor/CollectionsEmptyConstantsProcessor.java
+  - sorald/src/main/java/sorald/processor/CompareStringsBoxedTypesWithEqualsProcessor.java
+  - sorald/src/main/java/sorald/processor/CompareToReturnValueProcessor.java
+  - sorald/src/main/java/sorald/processor/DeadStoreProcessor.java
+  - sorald/src/main/java/sorald/processor/EqualsArgumentTypeProcessor.java
+  - sorald/src/main/java/sorald/processor/EqualsOnAtomicClassProcessor.java
+  - sorald/src/main/java/sorald/processor/GetClassLoaderProcessor.java
+  - sorald/src/main/java/sorald/processor/InterruptedExceptionProcessor.java
+  - sorald/src/main/java/sorald/processor/IteratorNextExceptionProcessor.java
+  - sorald/src/main/java/sorald/processor/MathOnFloatProcessor.java
+  - sorald/src/main/java/sorald/processor/PublicStaticFieldShouldBeFinalProcessor.java
+  - sorald/src/main/java/sorald/processor/SelfAssignementProcessor.java
+  - sorald/src/main/java/sorald/processor/SerialVersionUidProcessor.java
+  - sorald/src/main/java/sorald/processor/SerializableFieldInSerializableClassProcessor.java
+  - sorald/src/main/java/sorald/processor/StringLiteralInsideEqualsProcessor.java
+  - sorald/src/main/java/sorald/processor/SynchronizationOnGetClassProcessor.java
+  - sorald/src/main/java/sorald/processor/SynchronizationOnStringOrBoxedProcessor.java
+  - sorald/src/main/java/sorald/processor/ThreadLocalWithInitial.java
+  - sorald/src/main/java/sorald/processor/ThreadRunProcessor.java
+  - sorald/src/main/java/sorald/processor/ToStringReturningNullProcessor.java
+  - sorald/src/main/java/sorald/processor/UnclosedResourcesProcessor.java
+  - sorald/src/main/java/sorald/processor/UnusedLocalVariableProcessor.java
+  - sorald/src/main/java/sorald/processor/UnusedPrivateFieldProcessor.java
+  - sorald/src/main/java/sorald/processor/UnusedThrowableProcessor.java
+  - sorald/src/main/java/sorald/processor/UtilityClassWithPublicConstructorProcessor.java
+  - sorald/src/main/java/sorald/processor/XxeProcessingProcessor.java
+  - sorald/src/main/java/sorald/rule/RuleProvider.java
+  - sorald/src/main/java/sorald/segment/SoraldTreeBuilderAlgorithm.java
+  - sorald/src/main/java/sorald/sonar/BestFitScanner.java
+  - sorald/src/main/java/sorald/sonar/JavaInputFile.java
+  - sorald/src/main/java/sorald/sonar/ProcessorsClassGenerator.java
+  - sorald/src/main/java/sorald/sonar/ProjectScanner.java
+  - sorald/src/main/java/sorald/sonar/ScannedViolation.java
+  - sorald/src/main/java/sorald/sonar/SonarLintEngine.java
+  - sorald/src/main/java/sorald/sonar/SonarProcessorRepository.java
+  - sorald/src/main/java/sorald/sonar/SonarRule.java
+  - sorald/src/main/java/sorald/sonar/SonarRuleRepository.java
+  - sorald/src/main/java/sorald/sonar/SonarStaticAnalyzer.java
+  - sorald/src/main/java/sorald/util/MavenUtils.java
+  - sorald/src/test/java/sorald/Assertions.java
+  - sorald/src/test/java/sorald/ClasspathModeTest.java
+  - sorald/src/test/java/sorald/CodeGeneratorTest.java
+  - sorald/src/test/java/sorald/FileUtilsTest.java
+  - sorald/src/test/java/sorald/GatherStatsTest.java
+  - sorald/src/test/java/sorald/MavenHelper.java
+  - sorald/src/test/java/sorald/MavenLauncherTest.java
+  - sorald/src/test/java/sorald/RepairTest.java
+  - sorald/src/test/java/sorald/SegmentStrategyTest.java
+  - sorald/src/test/java/sorald/SystemExitHandler.java
+  - sorald/src/test/java/sorald/TargetedRepairTest.java
+  - sorald/src/test/java/sorald/cli/CliTest.java
+  - sorald/src/test/java/sorald/cli/SoraldVersionProviderTest.java
+  - sorald/src/test/java/sorald/event/collectors/CompilationUnitCollectorTest.java
+  - sorald/src/test/java/sorald/it/MineMojoIT.java
+  - sorald/src/test/java/sorald/it/RepairMojoIT.java
+  - sorald/src/test/java/sorald/miner/WarningMinerTest.java
+  - sorald/src/test/java/sorald/processor/BestFitScannerTest.java
+  - sorald/src/test/java/sorald/processor/MaxFixesPerRuleTest.java
+  - sorald/src/test/java/sorald/processor/NoSonarTest.java
+  - sorald/src/test/java/sorald/processor/ProcessorDescriptionTest.java
+  - sorald/src/test/java/sorald/processor/ProcessorTest.java
+  - sorald/src/test/java/sorald/processor/ProcessorTestFilesCompileTest.java
+  - sorald/src/test/java/sorald/processor/ProcessorTestHelper.java
+  - sorald/src/test/java/sorald/processor/SoraldAbstractProcessorTest.java
+  - sorald/src/test/java/sorald/segment/FirstFitSegmentationAlgorithmTest.java
+  - sorald/src/test/java/sorald/segment/SoraldTreeBuilderAlgorithmTest.java
+  - sorald/src/test/java/sorald/sonar/RuleViolationTest.java
+  - sorald/src/test/java/sorald/sonar/SonarLintEngineTest.java
+  - sorald/src/test/java/sorald/sonar/SonarRulesTest.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

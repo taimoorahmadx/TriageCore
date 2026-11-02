@@ -1,0 +1,52 @@
+repo: camunda-community-hub/camunda-platform-7-mockito
+run_id: 11c09e31119c28ea91a9777b2ce8893bca483493
+head_sha: 11c09e31119c28ea91a9777b2ce8893bca483493
+run_attempts: []
+commits:
+- sha: 11c09e31119c28ea91a9777b2ce8893bca483493
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 89102096e4ebf23a99a3568af3640376f93234a5
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 0b88047ea615c857eaede32c2a2e02afef23b35e
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 323568064415090eee294c1a2a06d33b9a0b9139
+  author: sebeichholz
+  files:
+  - README.md
+- sha: b47f2669a27be7b26170ed4c5b6f4ff0b876945b
+  author: actions-user
+  files:
+  - pom.xml
+- sha: 3ce377969e38216696db50f3003df013c0e02e10
+  author: actions-user
+  files:
+  - pom.xml
+- sha: 94c3b98500a49241fff1610ba58dbdf65bad94ff
+  author: dependabot[bot]
+  files:
+  - README.md
+  - pom.xml
+  - src/main/java/org/camunda/community/mockito/delegate/DelegateTaskFake.java
+- sha: 5737f82563cdcc0f54825acce2c4a91b6739242a
+  author: jangalinski
+  files:
+  - README.md
+- sha: cb4c3f2269607aeb3f41f29e25f1c7424dfa5e7e
+  author: jangalinski
+  files:
+  - README.md
+- sha: cdf4448820f789ee13be223e02cdf762dbead6e7
+  author: jangalinski
+  files:
+  - README.md
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

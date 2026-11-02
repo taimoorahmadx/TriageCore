@@ -1,0 +1,574 @@
+2023-06-07T19:19:02.6435894Z Cleaning up orphan processes
+
+2023-06-07T19:19:00.8762875Z Post job cleanup.
+2023-06-07T19:19:01.2392812Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-06-07T19:19:01.2755927Z git version 2.40.1.windows.1
+2023-06-07T19:19:01.2850049Z Temporarily overriding HOME='D:\a\_temp\930ff65f-36e4-4688-8c98-006535cdbd88' before making global git config changes
+2023-06-07T19:19:01.2863081Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-07T19:19:01.2865857Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-maven-plugin\jcabi-maven-plugin
+2023-06-07T19:19:01.3229364Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-06-07T19:19:01.3603063Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-06-07T19:19:01.9232067Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-07T19:19:01.9565662Z http.https://github.com/.extraheader
+2023-06-07T19:19:01.9613925Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2023-06-07T19:19:02.0036426Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+
+2023-06-07T19:19:04.4918886Z Cleaning up orphan processes
+
+2023-06-07T19:18:15.6923026Z Requested labels: windows-2022
+2023-06-07T19:18:15.6923287Z Job defined at: jcabi/jcabi-maven-plugin/.github/workflows/mvn.yml@refs/pull/145/merge
+2023-06-07T19:18:15.6923399Z Waiting for a runner to pick up this job...
+2023-06-07T19:18:18.1383420Z Job is waiting for a hosted runner to come online.
+2023-06-07T19:18:21.6435040Z Job is about to start running on the hosted runner: GitHub Actions 7 (hosted)
+2023-06-07T19:18:26.1588185Z Current runner version: '2.304.0'
+2023-06-07T19:18:26.1617699Z ##[group]Operating System
+2023-06-07T19:18:26.1618378Z Microsoft Windows Server 2022
+2023-06-07T19:18:26.1618662Z 10.0.20348
+2023-06-07T19:18:26.1618950Z Datacenter
+2023-06-07T19:18:26.1619243Z ##[endgroup]
+2023-06-07T19:18:26.1619542Z ##[group]Runner Image
+2023-06-07T19:18:26.1619895Z Image: windows-2022
+2023-06-07T19:18:26.1620201Z Version: 20230517.1
+2023-06-07T19:18:26.1620628Z Included Software: https://github.com/actions/runner-images/blob/win22/20230517.1/images/win/Windows2022-Readme.md
+2023-06-07T19:18:26.1621199Z Image Release: https://github.com/actions/runner-images/releases/tag/win22%2F20230517.1
+2023-06-07T19:18:26.1621657Z ##[endgroup]
+2023-06-07T19:18:26.1622024Z ##[group]Runner Image Provisioner
+2023-06-07T19:18:26.1622304Z 2.0.177.1
+2023-06-07T19:18:26.1622575Z ##[endgroup]
+2023-06-07T19:18:26.1623531Z ##[group]GITHUB_TOKEN Permissions
+2023-06-07T19:18:26.1624256Z Actions: write
+2023-06-07T19:18:26.1624722Z Checks: write
+2023-06-07T19:18:26.1625160Z Contents: write
+2023-06-07T19:18:26.1625433Z Deployments: write
+2023-06-07T19:18:26.1625731Z Discussions: write
+2023-06-07T19:18:26.1626045Z Issues: write
+2023-06-07T19:18:26.1626292Z Metadata: read
+2023-06-07T19:18:26.1626659Z Packages: write
+2023-06-07T19:18:26.1626948Z Pages: write
+2023-06-07T19:18:26.1627203Z PullRequests: write
+2023-06-07T19:18:26.1627527Z RepositoryProjects: write
+2023-06-07T19:18:26.1627851Z SecurityEvents: write
+2023-06-07T19:18:26.1628133Z Statuses: write
+2023-06-07T19:18:26.1628423Z ##[endgroup]
+2023-06-07T19:18:26.1632222Z Secret source: Actions
+2023-06-07T19:18:26.1632684Z Prepare workflow directory
+2023-06-07T19:18:26.2585110Z Prepare all required actions
+2023-06-07T19:18:26.2781077Z Getting action download info
+2023-06-07T19:18:26.5448318Z Download action repository 'actions/checkout@v3' (SHA:8e5e7e5ab8b370d6c329ec480221332ada57f0ab)
+2023-06-07T19:18:27.2818076Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-07T19:18:27.9622620Z Download action repository 'actions/cache@v3' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-06-07T19:18:28.7825266Z Complete job name: mvn (windows-2022, 11)
+2023-06-07T19:18:28.9440042Z ##[group]Run actions/checkout@v3
+2023-06-07T19:18:28.9440392Z with:
+2023-06-07T19:18:28.9440612Z   repository: jcabi/jcabi-maven-plugin
+2023-06-07T19:18:28.9440994Z   token: ***
+2023-06-07T19:18:28.9441187Z   ssh-strict: true
+2023-06-07T19:18:28.9441385Z   persist-credentials: true
+2023-06-07T19:18:28.9441595Z   clean: true
+2023-06-07T19:18:28.9441773Z   fetch-depth: 1
+2023-06-07T19:18:28.9441939Z   lfs: false
+2023-06-07T19:18:28.9442120Z   submodules: false
+2023-06-07T19:18:28.9442322Z   set-safe-directory: true
+2023-06-07T19:18:28.9442520Z ##[endgroup]
+2023-06-07T19:18:29.3959373Z Syncing repository: jcabi/jcabi-maven-plugin
+2023-06-07T19:18:29.3961084Z ##[group]Getting Git version info
+2023-06-07T19:18:29.3961596Z Working directory is 'D:\a\jcabi-maven-plugin\jcabi-maven-plugin'
+2023-06-07T19:18:29.6776120Z [command]"C:\Program Files\Git\bin\git.exe" version
+2023-06-07T19:18:29.7160820Z git version 2.40.1.windows.1
+2023-06-07T19:18:29.7208200Z ##[endgroup]
+2023-06-07T19:18:29.7237126Z Temporarily overriding HOME='D:\a\_temp\6eda6eb9-7417-4d71-afd5-1faac988b422' before making global git config changes
+2023-06-07T19:18:29.7238235Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-07T19:18:29.7250135Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\jcabi-maven-plugin\jcabi-maven-plugin
+2023-06-07T19:18:29.7919738Z Deleting the contents of 'D:\a\jcabi-maven-plugin\jcabi-maven-plugin'
+2023-06-07T19:18:30.5114963Z ##[group]Initializing the repository
+2023-06-07T19:18:30.5115764Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\jcabi-maven-plugin\jcabi-maven-plugin
+2023-06-07T19:18:30.5116353Z Initialized empty Git repository in D:/a/jcabi-maven-plugin/jcabi-maven-plugin/.git/
+2023-06-07T19:18:30.5142879Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/jcabi/jcabi-maven-plugin
+2023-06-07T19:18:30.5144624Z ##[endgroup]
+2023-06-07T19:18:30.5145183Z ##[group]Disabling automatic garbage collection
+2023-06-07T19:18:30.5145752Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2023-06-07T19:18:30.5146598Z ##[endgroup]
+2023-06-07T19:18:30.5146995Z ##[group]Setting up auth
+2023-06-07T19:18:30.5147646Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2023-06-07T19:18:30.5148865Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2023-06-07T19:18:31.3933965Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-07T19:18:31.4252768Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2023-06-07T19:18:31.9028399Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2023-06-07T19:18:31.9392639Z ##[endgroup]
+2023-06-07T19:18:31.9423279Z ##[group]Fetching the repository
+2023-06-07T19:18:31.9432667Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +7ee9df84ac42426de69b8dcd9eb08d61dd532463:refs/remotes/pull/145/merge
+2023-06-07T19:18:33.2319137Z remote: Enumerating objects: 106, done.        
+2023-06-07T19:18:33.2319636Z remote: Counting objects:   0% (1/106)        
+2023-06-07T19:18:33.2319986Z remote: Counting objects:   1% (2/106)        
+2023-06-07T19:18:33.2320434Z remote: Counting objects:   2% (3/106)        
+2023-06-07T19:18:33.2321000Z remote: Counting objects:   3% (4/106)        
+2023-06-07T19:18:33.2321322Z remote: Counting objects:   4% (5/106)        
+2023-06-07T19:18:33.2323918Z remote: Counting objects:   5% (6/106)        
+2023-06-07T19:18:33.2324515Z remote: Counting objects:   6% (7/106)        
+2023-06-07T19:18:33.2324872Z remote: Counting objects:   7% (8/106)        
+2023-06-07T19:18:33.2326248Z remote: Counting objects:   8% (9/106)        
+2023-06-07T19:18:33.2326540Z remote: Counting objects:   9% (10/106)        
+2023-06-07T19:18:33.2326846Z remote: Counting objects:  10% (11/106)        
+2023-06-07T19:18:33.2327233Z remote: Counting objects:  11% (12/106)        
+2023-06-07T19:18:33.2327496Z remote: Counting objects:  12% (13/106)        
+2023-06-07T19:18:33.2327749Z remote: Counting objects:  13% (14/106)        
+2023-06-07T19:18:33.2328006Z remote: Counting objects:  14% (15/106)        
+2023-06-07T19:18:33.2328241Z remote: Counting objects:  15% (16/106)        
+2023-06-07T19:18:33.2328517Z remote: Counting objects:  16% (17/106)        
+2023-06-07T19:18:33.2328909Z remote: Counting objects:  17% (19/106)        
+2023-06-07T19:18:33.2329187Z remote: Counting objects:  18% (20/106)        
+2023-06-07T19:18:33.2329632Z remote: Counting objects:  19% (21/106)        
+2023-06-07T19:18:33.2330002Z remote: Counting objects:  20% (22/106)        
+2023-06-07T19:18:33.2330296Z remote: Counting objects:  21% (23/106)        
+2023-06-07T19:18:33.2330626Z remote: Counting objects:  22% (24/106)        
+2023-06-07T19:18:33.2330966Z remote: Counting objects:  23% (25/106)        
+2023-06-07T19:18:33.2331265Z remote: Counting objects:  24% (26/106)        
+2023-06-07T19:18:33.2331596Z remote: Counting objects:  25% (27/106)        
+2023-06-07T19:18:33.2331944Z remote: Counting objects:  26% (28/106)        
+2023-06-07T19:18:33.2332230Z remote: Counting objects:  27% (29/106)        
+2023-06-07T19:18:33.2332681Z remote: Counting objects:  28% (30/106)        
+2023-06-07T19:18:33.2334303Z remote: Counting objects:  29% (31/106)        
+2023-06-07T19:18:33.2334577Z remote: Counting objects:  30% (32/106)        
+2023-06-07T19:18:33.2334920Z remote: Counting objects:  31% (33/106)        
+2023-06-07T19:18:33.2335243Z remote: Counting objects:  32% (34/106)        
+2023-06-07T19:18:33.2335577Z remote: Counting objects:  33% (35/106)        
+2023-06-07T19:18:33.2335848Z remote: Counting objects:  34% (37/106)        
+2023-06-07T19:18:33.2336160Z remote: Counting objects:  35% (38/106)        
+2023-06-07T19:18:33.2336486Z remote: Counting objects:  36% (39/106)        
+2023-06-07T19:18:33.2336753Z remote: Counting objects:  37% (40/106)        
+2023-06-07T19:18:33.2337082Z remote: Counting objects:  38% (41/106)        
+2023-06-07T19:18:33.2337420Z remote: Counting objects:  39% (42/106)        
+2023-06-07T19:18:33.2337694Z remote: Counting objects:  40% (43/106)        
+2023-06-07T19:18:33.2338020Z remote: Counting objects:  41% (44/106)        
+2023-06-07T19:18:33.2338356Z remote: Counting objects:  42% (45/106)        
+2023-06-07T19:18:33.2338639Z remote: Counting objects:  43% (46/106)        
+2023-06-07T19:18:33.2338962Z remote: Counting objects:  44% (47/106)        
+2023-06-07T19:18:33.2339287Z remote: Counting objects:  45% (48/106)        
+2023-06-07T19:18:33.2339615Z remote: Counting objects:  46% (49/106)        
+2023-06-07T19:18:33.2339890Z remote: Counting objects:  47% (50/106)        
+2023-06-07T19:18:33.2340374Z remote: Counting objects:  48% (51/106)        
+2023-06-07T19:18:33.2340722Z remote: Counting objects:  49% (52/106)        
+2023-06-07T19:18:33.2341004Z remote: Counting objects:  50% (53/106)        
+2023-06-07T19:18:33.2341349Z remote: Counting objects:  51% (55/106)        
+2023-06-07T19:18:33.2341695Z remote: Counting objects:  52% (56/106)        
+2023-06-07T19:18:33.2341979Z remote: Counting objects:  53% (57/106)        
+2023-06-07T19:18:33.2342312Z remote: Counting objects:  54% (58/106)        
+2023-06-07T19:18:33.2342655Z remote: Counting objects:  55% (59/106)        
+2023-06-07T19:18:33.2342932Z remote: Counting objects:  56% (60/106)        
+2023-06-07T19:18:33.2344076Z remote: Counting objects:  57% (61/106)        
+2023-06-07T19:18:33.2344490Z remote: Counting objects:  58% (62/106)        
+2023-06-07T19:18:33.2344816Z remote: Counting objects:  59% (63/106)        
+2023-06-07T19:18:33.2345084Z remote: Counting objects:  60% (64/106)        
+2023-06-07T19:18:33.2345396Z remote: Counting objects:  61% (65/106)        
+2023-06-07T19:18:33.2345754Z remote: Counting objects:  62% (66/106)        
+2023-06-07T19:18:33.2346016Z remote: Counting objects:  63% (67/106)        
+2023-06-07T19:18:33.2346353Z remote: Counting objects:  64% (68/106)        
+2023-06-07T19:18:33.2346668Z remote: Counting objects:  65% (69/106)        
+2023-06-07T19:18:33.2347019Z remote: Counting objects:  66% (70/106)        
+2023-06-07T19:18:33.2347288Z remote: Counting objects:  67% (72/106)        
+2023-06-07T19:18:33.2347619Z remote: Counting objects:  68% (73/106)        
+2023-06-07T19:18:33.2347935Z remote: Counting objects:  69% (74/106)        
+2023-06-07T19:18:33.2348198Z remote: Counting objects:  70% (75/106)        
+2023-06-07T19:18:33.2348548Z remote: Counting objects:  71% (76/106)        
+2023-06-07T19:18:33.2348867Z remote: Counting objects:  72% (77/106)        
+2023-06-07T19:18:33.2349181Z remote: Counting objects:  73% (78/106)        
+2023-06-07T19:18:33.2349444Z remote: Counting objects:  74% (79/106)        
+2023-06-07T19:18:33.2349774Z remote: Counting objects:  75% (80/106)        
+2023-06-07T19:18:33.2350105Z remote: Counting objects:  76% (81/106)        
+2023-06-07T19:18:33.2350366Z remote: Counting objects:  77% (82/106)        
+2023-06-07T19:18:33.2350829Z remote: Counting objects:  78% (83/106)        
+2023-06-07T19:18:33.2351242Z remote: Counting objects:  79% (84/106)        
+2023-06-07T19:18:33.2351816Z remote: Counting objects:  80% (85/106)        
+2023-06-07T19:18:33.2352535Z remote: Counting objects:  81% (86/106)        
+2023-06-07T19:18:33.2353014Z remote: Counting objects:  82% (87/106)        
+2023-06-07T19:18:33.2353311Z remote: Counting objects:  83% (88/106)        
+2023-06-07T19:18:33.2353668Z remote: Counting objects:  84% (90/106)        
+2023-06-07T19:18:33.2355063Z remote: Counting objects:  85% (91/106)        
+2023-06-07T19:18:33.2355657Z remote: Counting objects:  86% (92/106)        
+2023-06-07T19:18:33.2356105Z remote: Counting objects:  87% (93/106)        
+2023-06-07T19:18:33.2356649Z remote: Counting objects:  88% (94/106)        
+2023-06-07T19:18:33.2357314Z remote: Counting objects:  89% (95/106)        
+2023-06-07T19:18:33.2359769Z remote: Counting objects:  90% (96/106)        
+2023-06-07T19:18:33.2360158Z remote: Counting objects:  91% (97/106)        
+2023-06-07T19:18:33.2360534Z remote: Counting objects:  92% (98/106)        
+2023-06-07T19:18:33.2362290Z remote: Counting objects:  93% (99/106)        
+2023-06-07T19:18:33.2362796Z remote: Counting objects:  94% (100/106)        
+2023-06-07T19:18:33.2363235Z remote: Counting objects:  95% (101/106)        
+2023-06-07T19:18:33.2363561Z remote: Counting objects:  96% (102/106)        
+2023-06-07T19:18:33.2363944Z remote: Counting objects:  97% (103/106)        
+2023-06-07T19:18:33.2364302Z remote: Counting objects:  98% (104/106)        
+2023-06-07T19:18:33.2364675Z remote: Counting objects:  99% (105/106)        
+2023-06-07T19:18:33.2364982Z remote: Counting objects: 100% (106/106)        
+2023-06-07T19:18:33.2365360Z remote: Counting objects: 100% (106/106), done.        
+2023-06-07T19:18:33.2365758Z remote: Compressing objects:   1% (1/54)        
+2023-06-07T19:18:33.2366074Z remote: Compressing objects:   3% (2/54)        
+2023-06-07T19:18:33.2366579Z remote: Compressing objects:   5% (3/54)        
+2023-06-07T19:18:33.2367189Z remote: Compressing objects:   7% (4/54)        
+2023-06-07T19:18:33.2367477Z remote: Compressing objects:   9% (5/54)        
+2023-06-07T19:18:33.2367821Z remote: Compressing objects:  11% (6/54)        
+2023-06-07T19:18:33.2368146Z remote: Compressing objects:  12% (7/54)        
+2023-06-07T19:18:33.2368483Z remote: Compressing objects:  14% (8/54)        
+2023-06-07T19:18:33.2370025Z remote: Compressing objects:  16% (9/54)        
+2023-06-07T19:18:33.2370469Z remote: Compressing objects:  18% (10/54)        
+2023-06-07T19:18:33.2370806Z remote: Compressing objects:  20% (11/54)        
+2023-06-07T19:18:33.2371164Z remote: Compressing objects:  22% (12/54)        
+2023-06-07T19:18:33.2371521Z remote: Compressing objects:  24% (13/54)        
+2023-06-07T19:18:33.2371858Z remote: Compressing objects:  25% (14/54)        
+2023-06-07T19:18:33.2372245Z remote: Compressing objects:  27% (15/54)        
+2023-06-07T19:18:33.2372529Z remote: Compressing objects:  29% (16/54)        
+2023-06-07T19:18:33.2372878Z remote: Compressing objects:  31% (17/54)        
+2023-06-07T19:18:33.2373317Z remote: Compressing objects:  33% (18/54)        
+2023-06-07T19:18:33.2373626Z remote: Compressing objects:  35% (19/54)        
+2023-06-07T19:18:33.2373975Z remote: Compressing objects:  37% (20/54)        
+2023-06-07T19:18:33.2374586Z remote: Compressing objects:  38% (21/54)        
+2023-06-07T19:18:33.2374876Z remote: Compressing objects:  40% (22/54)        
+2023-06-07T19:18:33.2375216Z remote: Compressing objects:  42% (23/54)        
+2023-06-07T19:18:33.2375558Z remote: Compressing objects:  44% (24/54)        
+2023-06-07T19:18:33.2375881Z remote: Compressing objects:  46% (25/54)        
+2023-06-07T19:18:33.2376176Z remote: Compressing objects:  48% (26/54)        
+2023-06-07T19:18:33.2376520Z remote: Compressing objects:  50% (27/54)        
+2023-06-07T19:18:33.2376848Z remote: Compressing objects:  51% (28/54)        
+2023-06-07T19:18:33.2377127Z remote: Compressing objects:  53% (29/54)        
+2023-06-07T19:18:33.2377450Z remote: Compressing objects:  55% (30/54)        
+2023-06-07T19:18:33.2378848Z remote: Compressing objects:  57% (31/54)        
+2023-06-07T19:18:33.2379533Z remote: Compressing objects:  59% (32/54)        
+2023-06-07T19:18:33.2379900Z remote: Compressing objects:  61% (33/54)        
+2023-06-07T19:18:33.2380275Z remote: Compressing objects:  62% (34/54)        
+2023-06-07T19:18:33.2380590Z remote: Compressing objects:  64% (35/54)        
+2023-06-07T19:18:33.2381010Z remote: Compressing objects:  66% (36/54)        
+2023-06-07T19:18:33.2381370Z remote: Compressing objects:  68% (37/54)        
+2023-06-07T19:18:33.2381973Z remote: Compressing objects:  70% (38/54)        
+2023-06-07T19:18:33.2382267Z remote: Compressing objects:  72% (39/54)        
+2023-06-07T19:18:33.2382640Z remote: Compressing objects:  74% (40/54)        
+2023-06-07T19:18:33.2382958Z remote: Compressing objects:  75% (41/54)        
+[... 15320 lines removed by TriageCore ...]
+2023-06-07T19:18:53.5014490Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom
+2023-06-07T19:18:53.5068400Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom (20 kB at 1.8 MB/s)
+2023-06-07T19:18:53.5075000Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-artifact/3.1.0/maven-artifact-3.1.0.pom
+2023-06-07T19:18:53.5084190Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-artifact/3.1.0/maven-artifact-3.1.0.pom (1.6 kB at 63 kB/s)
+2023-06-07T19:18:53.5130230Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.pom
+2023-06-07T19:18:53.5162920Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.pom (5.9 kB at 347 kB/s)
+2023-06-07T19:18:53.5241760Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/sisu-plexus/0.0.0.M2a/sisu-plexus-0.0.0.M2a.pom
+2023-06-07T19:18:53.5309190Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/sisu-plexus/0.0.0.M2a/sisu-plexus-0.0.0.M2a.pom (7.9 kB at 360 kB/s)
+2023-06-07T19:18:53.5394870Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava/10.0.1/guava-10.0.1.pom
+2023-06-07T19:18:53.5534200Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava/10.0.1/guava-10.0.1.pom (5.4 kB at 158 kB/s)
+2023-06-07T19:18:53.5557020Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava-parent/10.0.1/guava-parent-10.0.1.pom
+2023-06-07T19:18:53.5771320Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava-parent/10.0.1/guava-parent-10.0.1.pom (2.0 kB at 89 kB/s)
+2023-06-07T19:18:53.5854370Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.pom
+2023-06-07T19:18:53.6103400Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.pom (5.0 kB at 216 kB/s)
+2023-06-07T19:18:53.6122880Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/sisu-inject/0.0.0.M2a/sisu-inject-0.0.0.M2a.pom
+2023-06-07T19:18:53.6385230Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/sisu-inject/0.0.0.M2a/sisu-inject-0.0.0.M2a.pom (7.8 kB at 355 kB/s)
+2023-06-07T19:18:53.6491300Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm/3.3.1/asm-3.3.1.pom
+2023-06-07T19:18:53.6843930Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm/3.3.1/asm-3.3.1.pom (266 B at 6.0 kB/s)
+2023-06-07T19:18:53.6887950Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm-parent/3.3.1/asm-parent-3.3.1.pom
+2023-06-07T19:18:53.7018070Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm-parent/3.3.1/asm-parent-3.3.1.pom (4.3 kB at 309 kB/s)
+2023-06-07T19:18:53.7045700Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom
+2023-06-07T19:18:53.7130330Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom (750 B at 83 kB/s)
+2023-06-07T19:18:53.7154140Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom
+2023-06-07T19:18:53.7327000Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom (4.8 kB at 267 kB/s)
+2023-06-07T19:18:53.7379950Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-core/3.1.0/maven-core-3.1.0.pom
+2023-06-07T19:18:53.7489320Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-core/3.1.0/maven-core-3.1.0.pom (6.9 kB at 630 kB/s)
+2023-06-07T19:18:53.7513620Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings/3.1.0/maven-settings-3.1.0.pom
+2023-06-07T19:18:53.7715960Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings/3.1.0/maven-settings-3.1.0.pom (1.8 kB at 122 kB/s)
+2023-06-07T19:18:53.7773060Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings-builder/3.1.0/maven-settings-builder-3.1.0.pom
+2023-06-07T19:18:53.8020080Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings-builder/3.1.0/maven-settings-builder-3.1.0.pom (2.3 kB at 90 kB/s)
+2023-06-07T19:18:53.8121990Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-interpolation/1.16/plexus-interpolation-1.16.pom
+2023-06-07T19:18:53.8212310Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-interpolation/1.16/plexus-interpolation-1.16.pom (1.0 kB at 103 kB/s)
+2023-06-07T19:18:53.8314520Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-components/1.3/plexus-components-1.3.pom
+2023-06-07T19:18:53.8315540Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-components/1.3/plexus-components-1.3.pom (3.1 kB at 255 kB/s)
+2023-06-07T19:18:53.8344150Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-repository-metadata/3.1.0/maven-repository-metadata-3.1.0.pom
+2023-06-07T19:18:53.8462500Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-repository-metadata/3.1.0/maven-repository-metadata-3.1.0.pom (1.9 kB at 172 kB/s)
+2023-06-07T19:18:53.8471350Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model-builder/3.1.0/maven-model-builder-3.1.0.pom
+2023-06-07T19:18:53.8586640Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model-builder/3.1.0/maven-model-builder-3.1.0.pom (2.5 kB at 275 kB/s)
+2023-06-07T19:18:53.8595600Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-aether-provider/3.1.0/maven-aether-provider-3.1.0.pom
+2023-06-07T19:18:53.8733740Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-aether-provider/3.1.0/maven-aether-provider-3.1.0.pom (3.5 kB at 353 kB/s)
+2023-06-07T19:18:53.8745090Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.pom
+2023-06-07T19:18:53.8866290Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.pom (1.7 kB at 174 kB/s)
+2023-06-07T19:18:53.8871040Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-spi/0.9.0.M2/aether-spi-0.9.0.M2.pom
+2023-06-07T19:18:53.9153560Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-spi/0.9.0.M2/aether-spi-0.9.0.M2.pom (1.8 kB at 70 kB/s)
+2023-06-07T19:18:53.9158730Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.pom
+2023-06-07T19:18:53.9302730Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.pom (3.3 kB at 279 kB/s)
+2023-06-07T19:18:53.9308500Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.pom
+2023-06-07T19:18:53.9453160Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.pom (3.5 kB at 319 kB/s)
+2023-06-07T19:18:53.9459030Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.pom
+2023-06-07T19:18:53.9595260Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.pom (6.8 kB at 619 kB/s)
+2023-06-07T19:18:53.9601240Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.pom
+2023-06-07T19:18:53.9708680Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.pom (5.8 kB at 525 kB/s)
+2023-06-07T19:18:53.9827070Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-plugin-api/3.1.0/maven-plugin-api-3.1.0.jar
+2023-06-07T19:18:53.9972860Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-plugin-api/3.1.0/maven-plugin-api-3.1.0.jar (50 kB at 4.5 MB/s)
+2023-06-07T19:18:54.0014030Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-artifact/3.1.0/maven-artifact-3.1.0.jar
+2023-06-07T19:18:54.0099880Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-core/3.1.0/maven-core-3.1.0.jar
+2023-06-07T19:18:54.0113120Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings/3.1.0/maven-settings-3.1.0.jar
+2023-06-07T19:18:54.0226380Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings-builder/3.1.0/maven-settings-builder-3.1.0.jar
+2023-06-07T19:18:54.0339130Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-repository-metadata/3.1.0/maven-repository-metadata-3.1.0.jar
+2023-06-07T19:18:54.0450130Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-artifact/3.1.0/maven-artifact-3.1.0.jar (52 kB at 4.0 MB/s)
+2023-06-07T19:18:54.0555240Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model-builder/3.1.0/maven-model-builder-3.1.0.jar
+2023-06-07T19:18:54.0669370Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-repository-metadata/3.1.0/maven-repository-metadata-3.1.0.jar (30 kB at 2.3 MB/s)
+2023-06-07T19:18:54.0730140Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-aether-provider/3.1.0/maven-aether-provider-3.1.0.jar
+2023-06-07T19:18:54.0775300Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings-builder/3.1.0/maven-settings-builder-3.1.0.jar (41 kB at 3.0 MB/s)
+2023-06-07T19:18:54.0783820Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-spi/0.9.0.M2/aether-spi-0.9.0.M2.jar
+2023-06-07T19:18:54.0802650Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-settings/3.1.0/maven-settings-3.1.0.jar (47 kB at 3.1 MB/s)
+2023-06-07T19:18:54.0904480Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.jar
+2023-06-07T19:18:54.0957790Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-spi/0.9.0.M2/aether-spi-0.9.0.M2.jar (18 kB at 770 kB/s)
+2023-06-07T19:18:54.1018340Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar
+2023-06-07T19:18:54.1028420Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model-builder/3.1.0/maven-model-builder-3.1.0.jar (159 kB at 6.6 MB/s)
+2023-06-07T19:18:54.1037860Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar
+2023-06-07T19:18:54.1093780Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-aether-provider/3.1.0/maven-aether-provider-3.1.0.jar (60 kB at 2.3 MB/s)
+2023-06-07T19:18:54.1107200Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.jar
+2023-06-07T19:18:54.1150660Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.jar (145 kB at 5.4 MB/s)
+2023-06-07T19:18:54.1167520Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.jar
+2023-06-07T19:18:54.1175310Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-core/3.1.0/maven-core-3.1.0.jar (563 kB at 16 MB/s)
+2023-06-07T19:18:54.1182110Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar
+2023-06-07T19:18:54.1191780Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.jar (47 kB at 1.2 MB/s)
+2023-06-07T19:18:54.1202980Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.jar
+2023-06-07T19:18:54.1214610Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar (134 kB at 3.4 MB/s)
+2023-06-07T19:18:54.1219920Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava/10.0.1/guava-10.0.1.jar
+2023-06-07T19:18:54.1228080Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.jar (164 kB at 3.9 MB/s)
+2023-06-07T19:18:54.1231630Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar
+2023-06-07T19:18:54.1233030Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar (231 kB at 5.2 MB/s)
+2023-06-07T19:18:54.1234300Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.jar
+2023-06-07T19:18:54.1235640Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar (4.2 kB at 88 kB/s)
+2023-06-07T19:18:54.1236850Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm/3.3.1/asm-3.3.1.jar
+2023-06-07T19:18:54.1238170Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.jar (202 kB at 4.0 MB/s)
+2023-06-07T19:18:54.1239470Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.jar
+2023-06-07T19:18:54.1240800Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.jar (202 kB at 3.5 MB/s)
+2023-06-07T19:18:54.1242090Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar
+2023-06-07T19:18:54.1243740Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar (357 kB at 5.7 MB/s)
+2023-06-07T19:18:54.1245040Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar
+2023-06-07T19:18:54.1246180Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/asm/asm/3.3.1/asm-3.3.1.jar (44 kB at 670 kB/s)
+2023-06-07T19:18:54.1247400Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.jar (52 kB at 782 kB/s)
+2023-06-07T19:18:54.1248620Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/google/guava/guava/10.0.1/guava-10.0.1.jar (1.5 MB at 21 MB/s)
+2023-06-07T19:18:54.1256810Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar (154 kB at 1.7 MB/s)
+2023-06-07T19:18:54.1263460Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar (502 kB at 5.2 MB/s)
+2023-06-07T19:18:54.2462640Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-07T19:18:54.2563180Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2023-06-07T19:18:54.2581530Z [INFO] Copying 1 resource
+2023-06-07T19:18:54.2646240Z [INFO] The encoding used to copy filtered properties files have not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+2023-06-07T19:18:54.2647750Z [INFO] 
+2023-06-07T19:18:54.2648880Z [INFO] --- compiler:3.10.1:compile (default-compile) @ jcabi-maven-plugin ---
+2023-06-07T19:18:54.2650350Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2023-06-07T19:18:54.2783820Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 316 kB/s)
+2023-06-07T19:18:54.2822490Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-java/1.1.1/plexus-java-1.1.1.pom
+2023-06-07T19:18:54.2973470Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-java/1.1.1/plexus-java-1.1.1.pom (5.0 kB at 311 kB/s)
+2023-06-07T19:18:54.3002460Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-languages/1.1.1/plexus-languages-1.1.1.pom
+2023-06-07T19:18:54.3133230Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-languages/1.1.1/plexus-languages-1.1.1.pom (4.6 kB at 330 kB/s)
+2023-06-07T19:18:54.3213650Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/asm/asm/9.2/asm-9.2.pom
+2023-06-07T19:18:54.3315500Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/asm/asm/9.2/asm-9.2.pom (2.4 kB at 197 kB/s)
+2023-06-07T19:18:54.3334550Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/ow2/1.5/ow2-1.5.pom
+2023-06-07T19:18:54.3448630Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/ow2/1.5/ow2-1.5.pom (11 kB at 936 kB/s)
+2023-06-07T19:18:54.3531200Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/thoughtworks/qdox/qdox/2.0.1/qdox-2.0.1.pom
+2023-06-07T19:18:54.3646700Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/thoughtworks/qdox/qdox/2.0.1/qdox-2.0.1.pom (16 kB at 942 kB/s)
+2023-06-07T19:18:54.3682280Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.11.1/plexus-compiler-api-2.11.1.pom
+2023-06-07T19:18:54.3804140Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.11.1/plexus-compiler-api-2.11.1.pom (1.1 kB at 81 kB/s)
+2023-06-07T19:18:54.3845880Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler/2.11.1/plexus-compiler-2.11.1.pom
+2023-06-07T19:18:54.3967430Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler/2.11.1/plexus-compiler-2.11.1.pom (8.1 kB at 580 kB/s)
+2023-06-07T19:18:54.4031000Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-components/6.6/plexus-components-6.6.pom
+2023-06-07T19:18:54.4221510Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-components/6.6/plexus-components-6.6.pom (2.7 kB at 141 kB/s)
+2023-06-07T19:18:54.4263660Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+2023-06-07T19:18:54.4366830Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 469 kB/s)
+2023-06-07T19:18:54.4393140Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.11.1/plexus-compiler-manager-2.11.1.pom
+2023-06-07T19:18:54.4564650Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.11.1/plexus-compiler-manager-2.11.1.pom (1.1 kB at 67 kB/s)
+2023-06-07T19:18:54.4599240Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.11.1/plexus-compiler-javac-2.11.1.pom
+2023-06-07T19:18:54.4721500Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.11.1/plexus-compiler-javac-2.11.1.pom (1.2 kB at 100 kB/s)
+2023-06-07T19:18:54.4750730Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compilers/2.11.1/plexus-compilers-2.11.1.pom
+2023-06-07T19:18:54.4932940Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compilers/2.11.1/plexus-compilers-2.11.1.pom (1.3 kB at 70 kB/s)
+2023-06-07T19:18:54.4992680Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2023-06-07T19:18:54.5145670Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 846 kB/s)
+2023-06-07T19:18:54.5165960Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-java/1.1.1/plexus-java-1.1.1.jar
+2023-06-07T19:18:54.5166990Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/asm/asm/9.2/asm-9.2.jar
+2023-06-07T19:18:54.5167940Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/thoughtworks/qdox/qdox/2.0.1/qdox-2.0.1.jar
+2023-06-07T19:18:54.5168980Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.11.1/plexus-compiler-api-2.11.1.jar
+2023-06-07T19:18:54.5170700Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.11.1/plexus-compiler-manager-2.11.1.jar
+2023-06-07T19:18:54.5250240Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.11.1/plexus-compiler-manager-2.11.1.jar (4.7 kB at 517 kB/s)
+2023-06-07T19:18:54.5253060Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.11.1/plexus-compiler-api-2.11.1.jar (27 kB at 3.0 MB/s)
+2023-06-07T19:18:54.5254230Z [INFO] Downloading from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.11.1/plexus-compiler-javac-2.11.1.jar
+2023-06-07T19:18:54.5292040Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/ow2/asm/asm/9.2/asm-9.2.jar (122 kB at 8.7 MB/s)
+2023-06-07T19:18:54.5317250Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-java/1.1.1/plexus-java-1.1.1.jar (54 kB at 3.6 MB/s)
+2023-06-07T19:18:54.5360150Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/com/thoughtworks/qdox/qdox/2.0.1/qdox-2.0.1.jar (334 kB at 20 MB/s)
+2023-06-07T19:18:54.5361320Z [INFO] Downloaded from oss.sonatype.org: https://oss.sonatype.org/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.11.1/plexus-compiler-javac-2.11.1.jar (23 kB at 1.3 MB/s)
+2023-06-07T19:18:54.6304750Z [INFO] Changes detected - recompiling the module!
+2023-06-07T19:18:54.6358800Z [INFO] Compiling 4 source files to /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/target/classes
+2023-06-07T19:18:55.9322300Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9331660Z [WARNING] COMPILATION WARNING : 
+2023-06-07T19:18:55.9368310Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9370800Z [WARNING] /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/main/java/com/jcabi/maven/plugin/VersionalizeMojo.java:[195,35] WildcardFileFilter(java.lang.String) in org.apache.commons.io.filefilter.WildcardFileFilter has been deprecated
+2023-06-07T19:18:55.9373340Z [INFO] 1 warning
+2023-06-07T19:18:55.9376850Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9377580Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9378100Z [ERROR] COMPILATION ERROR : 
+2023-06-07T19:18:55.9378690Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9379590Z [ERROR] /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/main/java/com/jcabi/maven/plugin/VersionalizeMojo.java: warnings found and -Werror specified
+2023-06-07T19:18:55.9380220Z [INFO] 1 error
+2023-06-07T19:18:55.9380820Z [INFO] -------------------------------------------------------------
+2023-06-07T19:18:55.9381540Z [INFO] ------------------------------------------------------------------------
+2023-06-07T19:18:55.9389770Z [INFO] BUILD FAILURE
+2023-06-07T19:18:55.9390610Z [INFO] ------------------------------------------------------------------------
+2023-06-07T19:18:55.9391150Z [INFO] Total time:  18.230 s
+2023-06-07T19:18:55.9391710Z [INFO] Finished at: 2023-06-07T19:18:55Z
+2023-06-07T19:18:55.9392400Z [INFO] ------------------------------------------------------------------------
+2023-06-07T19:18:55.9392910Z [WARNING] 
+2023-06-07T19:18:55.9393380Z [WARNING] Plugin validation issues were detected in 4 plugin(s)
+2023-06-07T19:18:55.9393830Z [WARNING] 
+2023-06-07T19:18:55.9394450Z [WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.2.0
+2023-06-07T19:18:55.9395190Z [WARNING]  * org.codehaus.mojo:buildnumber-maven-plugin:3.0.0
+2023-06-07T19:18:55.9395890Z [WARNING]  * org.apache.maven.plugins:maven-compiler-plugin:3.10.1
+2023-06-07T19:18:55.9397110Z [WARNING]  * org.apache.maven.plugins:maven-enforcer-plugin:1.3.1
+2023-06-07T19:18:55.9397690Z [WARNING] 
+2023-06-07T19:18:55.9398460Z [WARNING] For more or less details, use 'maven.plugin.validation' property with one of the values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+2023-06-07T19:18:55.9399020Z [WARNING] 
+2023-06-07T19:18:55.9399840Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project jcabi-maven-plugin: Compilation failure
+2023-06-07T19:18:55.9400940Z [ERROR] /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/main/java/com/jcabi/maven/plugin/VersionalizeMojo.java: warnings found and -Werror specified
+2023-06-07T19:18:55.9401660Z [ERROR] -> [Help 1]
+2023-06-07T19:18:55.9402650Z org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project jcabi-maven-plugin: Compilation failure
+2023-06-07T19:18:55.9404160Z /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/main/java/com/jcabi/maven/plugin/VersionalizeMojo.java: warnings found and -Werror specified
+2023-06-07T19:18:55.9404700Z 
+2023-06-07T19:18:55.9405130Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:347)
+2023-06-07T19:18:55.9405840Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:330)
+2023-06-07T19:18:55.9406530Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+2023-06-07T19:18:55.9407210Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:175)
+2023-06-07T19:18:55.9407910Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:76)
+2023-06-07T19:18:55.9408700Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:163)
+2023-06-07T19:18:55.9409270Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-06-07T19:18:55.9409920Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:160)
+2023-06-07T19:18:55.9410480Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-06-07T19:18:55.9411110Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-06-07T19:18:55.9411780Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-06-07T19:18:55.9412450Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-06-07T19:18:55.9412890Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-06-07T19:18:55.9413260Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-06-07T19:18:55.9413650Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-06-07T19:18:55.9414010Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:910)
+2023-06-07T19:18:55.9414350Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-06-07T19:18:55.9414690Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-06-07T19:18:55.9415080Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-07T19:18:55.9415550Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-06-07T19:18:55.9416080Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-07T19:18:55.9416510Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-06-07T19:18:55.9416930Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-06-07T19:18:55.9417420Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-06-07T19:18:55.9417920Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-06-07T19:18:55.9418780Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-06-07T19:18:55.9419310Z Caused by: org.apache.maven.plugin.compiler.CompilationFailureException: Compilation failure
+2023-06-07T19:18:55.9420880Z /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin/src/main/java/com/jcabi/maven/plugin/VersionalizeMojo.java: warnings found and -Werror specified
+2023-06-07T19:18:55.9421220Z 
+2023-06-07T19:18:55.9421490Z     at org.apache.maven.plugin.compiler.AbstractCompilerMojo.execute (AbstractCompilerMojo.java:1310)
+2023-06-07T19:18:55.9422000Z     at org.apache.maven.plugin.compiler.CompilerMojo.execute (CompilerMojo.java:198)
+2023-06-07T19:18:55.9422510Z     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+2023-06-07T19:18:55.9423410Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:342)
+2023-06-07T19:18:55.9423900Z     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:330)
+2023-06-07T19:18:55.9424380Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+2023-06-07T19:18:55.9424840Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:175)
+2023-06-07T19:18:55.9425300Z     at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:76)
+2023-06-07T19:18:55.9425750Z     at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:163)
+2023-06-07T19:18:55.9426260Z     at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+2023-06-07T19:18:55.9426790Z     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:160)
+2023-06-07T19:18:55.9427340Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+2023-06-07T19:18:55.9427970Z     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+2023-06-07T19:18:55.9428630Z     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+2023-06-07T19:18:55.9429260Z     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+2023-06-07T19:18:55.9429700Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+2023-06-07T19:18:55.9430080Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+2023-06-07T19:18:55.9430440Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+2023-06-07T19:18:55.9430800Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:910)
+2023-06-07T19:18:55.9431150Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:283)
+2023-06-07T19:18:55.9431490Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:206)
+2023-06-07T19:18:55.9431870Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-07T19:18:55.9432350Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:77)
+2023-06-07T19:18:55.9432880Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-07T19:18:55.9433310Z     at java.lang.reflect.Method.invoke (Method.java:568)
+2023-06-07T19:18:55.9433720Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:283)
+2023-06-07T19:18:55.9434210Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:226)
+2023-06-07T19:18:55.9434710Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:407)
+2023-06-07T19:18:55.9435200Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:348)
+2023-06-07T19:18:55.9435510Z [ERROR] 
+2023-06-07T19:18:55.9435940Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-07T19:18:55.9436180Z [ERROR] 
+2023-06-07T19:18:55.9436760Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-07T19:18:55.9437250Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-07T19:18:55.9707760Z ##[error]Process completed with exit code 1.
+2023-06-07T19:18:55.9829250Z Post job cleanup.
+2023-06-07T19:18:56.2715370Z Post job cleanup.
+2023-06-07T19:18:56.4469750Z [command]/usr/local/bin/git version
+2023-06-07T19:18:56.4603560Z git version 2.40.1
+2023-06-07T19:18:56.4675530Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/351ca482-b28c-41e0-865f-f908e76b3829/.gitconfig'
+2023-06-07T19:18:56.4710540Z Temporarily overriding HOME='/Users/runner/work/_temp/351ca482-b28c-41e0-865f-f908e76b3829' before making global git config changes
+2023-06-07T19:18:56.4717310Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-07T19:18:56.4737280Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/jcabi-maven-plugin/jcabi-maven-plugin
+2023-06-07T19:18:56.4961790Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-07T19:18:56.5076790Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-07T19:18:56.6739330Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-07T19:18:56.6865150Z http.https://github.com/.extraheader
+2023-06-07T19:18:56.6910970Z [command]/usr/local/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-07T19:18:56.7032970Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-07T19:18:57.0858910Z Cleaning up orphan processes
+
+2023-06-07T19:18:57.0858880Z Cleaning up orphan processes
+
+2023-06-07T19:18:55.9829230Z Post job cleanup.
+
+2023-06-07T19:18:34.1683160Z ##[group]Run mvn -version
+2023-06-07T19:18:34.1683740Z [36;1mmvn -version[0m
+2023-06-07T19:18:34.1892890Z shell: /bin/bash -e {0}
+2023-06-07T19:18:34.1893190Z env:
+2023-06-07T19:18:34.1893520Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-07T19:18:34.1893970Z   JAVA_HOME_17_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-07T19:18:34.1894310Z ##[endgroup]
+2023-06-07T19:18:35.3425420Z Apache Maven 3.9.2 (c9616018c7a021c1c39be70fb2843d6f5f9b8a1c)
+2023-06-07T19:18:35.3431750Z Maven home: /usr/local/Cellar/maven/3.9.2/libexec
+2023-06-07T19:18:35.3433150Z Java version: 17.0.7, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.7-7/x64/Contents/Home
+2023-06-07T19:18:35.3434280Z Default locale: en_US, platform encoding: UTF-8
+2023-06-07T19:18:35.3435040Z OS name: "mac os x", version: "12.6.5", arch: "x86_64", family: "mac"
+
+2023-06-07T19:18:35.0882274Z ##[group]Run actions/cache@v3
+2023-06-07T19:18:35.0882692Z with:
+2023-06-07T19:18:35.0882904Z   path: ~/.m2/repository
+2023-06-07T19:18:35.0883302Z   key: Windows-jdk-17-maven-0f3d80b7b7017a15826ed9d289c083169f8e21874843d12c56a0173741a21c52
+2023-06-07T19:18:35.0883763Z   restore-keys: Windows-jdk-17-maven-
+
+2023-06-07T19:18:35.0884060Z   enableCrossOsArchive: false
+2023-06-07T19:18:35.0884308Z   fail-on-cache-miss: false
+2023-06-07T19:18:35.0884549Z   lookup-only: false
+2023-06-07T19:18:35.0884782Z env:
+2023-06-07T19:18:35.0885076Z   JAVA_HOME: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-06-07T19:18:35.0885532Z   JAVA_HOME_17_X64: C:\hostedtoolcache\windows\Java_Temurin-Hotspot_jdk\17.0.7-7\x64
+2023-06-07T19:18:35.0885911Z ##[endgroup]
+2023-06-07T19:18:35.8654111Z Cache not found for input keys: Windows-jdk-17-maven-0f3d80b7b7017a15826ed9d289c083169f8e21874843d12c56a0173741a21c52, Windows-jdk-17-maven-
+
+2023-06-07T19:18:34.3464120Z ##[group]Run java -version
+2023-06-07T19:18:34.3464520Z [36;1mjava -version[0m
+2023-06-07T19:18:34.3672680Z shell: /bin/bash -e {0}
+2023-06-07T19:18:34.3672970Z env:
+2023-06-07T19:18:34.3673300Z   JAVA_HOME: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-06-07T19:18:34.3673690Z   JAVA_HOME_11_X64: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/Contents/Home
+2023-06-07T19:18:34.3674030Z ##[endgroup]
+2023-06-07T19:18:34.8669820Z openjdk version "11.0.19" 2023-04-18
+2023-06-07T19:18:34.8671770Z OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+2023-06-07T19:18:34.8673150Z OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+
+2023-06-07T19:18:27.8797660Z ##[group]Run actions/setup-java@v3
+2023-06-07T19:18:27.8798165Z with:
+2023-06-07T19:18:27.8798349Z   distribution: temurin
+2023-06-07T19:18:27.8798601Z   java-version: 11
+2023-06-07T19:18:27.8798829Z   java-package: jdk
+2023-06-07T19:18:27.8799164Z   check-latest: false
+2023-06-07T19:18:27.8799375Z   server-id: github
+2023-06-07T19:18:27.8799614Z   server-username: GITHUB_ACTOR
+2023-06-07T19:18:27.8799868Z   server-password: GITHUB_TOKEN
+2023-06-07T19:18:27.8800103Z   overwrite-settings: true
+2023-06-07T19:18:27.8800329Z   job-status: success
+2023-06-07T19:18:27.8800734Z   token: ***
+2023-06-07T19:18:27.8800931Z ##[endgroup]
+2023-06-07T19:18:28.1707936Z ##[group]Installed distributions
+2023-06-07T19:18:28.1818044Z Resolved Java 11.0.19+7 from tool-cache
+2023-06-07T19:18:28.1818565Z Setting Java 11.0.19+7 as the default
+2023-06-07T19:18:28.1853667Z Creating toolchains.xml for JDK version 11 from temurin
+2023-06-07T19:18:28.2007813Z Writing to /home/runner/.m2/toolchains.xml
+2023-06-07T19:18:28.2010704Z 
+2023-06-07T19:18:28.2011020Z Java configuration:
+2023-06-07T19:18:28.2011639Z   Distribution: temurin
+2023-06-07T19:18:28.2014704Z   Version: 11.0.19+7
+2023-06-07T19:18:28.2015537Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-07T19:18:28.2015986Z 
+2023-06-07T19:18:28.2019323Z ##[endgroup]
+2023-06-07T19:18:28.2052506Z Creating settings.xml with server-id: github
+2023-06-07T19:18:28.2082177Z Writing to /home/runner/.m2/settings.xml

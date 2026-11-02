@@ -1,10 +1,14 @@
 repo: nodejs/node
+source: mined
 run_id: 40347066401
 head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
 run_attempts:
 - attempt: 1
   head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
   conclusion: failure
+- attempt: 2
+  head_sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
+  conclusion: success
 commits:
 - sha: 7e9e05aee6a76d42d040e1b41c82a58078f12c98
   author: dependabot[bot]
@@ -36,7 +40,7 @@ commits:
 - sha: 79239a48f1999c7ffa6b0a37ffb823485587d0b0
   author: nodejs-github-bot
   files: []
-label: null
-label_source: null
+label: flaky
+label_source: GitHub run history confirms attempt 1 failed and attempt 2 passed on the same head SHA.
 risk_tier: medium
 suggested_label: infra

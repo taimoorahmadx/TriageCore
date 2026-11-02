@@ -1,0 +1,61 @@
+repo: encode/uvicorn
+run_id: '145'
+head_sha: 0b93d2da3b721c80dcb6a2993a23876a97498dd5
+run_attempts: []
+commits:
+- sha: 0b93d2da3b721c80dcb6a2993a23876a97498dd5
+  author: Kludex
+  files:
+  - tests/protocols/test_websocket.py
+- sha: 140242fdee5e510a2ea0eeabf03c472f77834185
+  author: Kludex
+  files:
+  - tests/protocols/test_websocket.py
+- sha: b4c3cc4640e0cdf83224f10b86ab4c5de4f074b2
+  author: Kludex
+  files:
+  - tests/conftest.py
+  - tests/protocols/test_websocket.py
+  - uvicorn/protocols/utils.py
+  - uvicorn/protocols/websockets/websockets_impl.py
+  - uvicorn/protocols/websockets/wsproto_impl.py
+- sha: 99fafb3c3b15e32dbaa504993161cb0c6898227f
+  author: Kludex
+  files:
+  - CHANGELOG.md
+  - uvicorn/__init__.py
+- sha: 4af46c931c64a4e32c37faec9ce531cca57e4cf7
+  author: tiangolo
+  files:
+  - tests/middleware/test_wsgi.py
+  - tests/protocols/test_http.py
+  - uvicorn/middleware/wsgi.py
+  - uvicorn/protocols/http/h11_impl.py
+  - uvicorn/protocols/http/httptools_impl.py
+  - uvicorn/protocols/websockets/websockets_impl.py
+  - uvicorn/protocols/websockets/wsproto_impl.py
+- sha: ebcd996c6959a293851034ee1560706efe6f829a
+  author: Kludex
+  files:
+  - .github/dependabot.yml
+- sha: 3dd0d44445cc2d96c77037ba1f7bfefd288f370e
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: fc1de0109a4364b91dc898300d282a9eaac552fd
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 274d9afb8f9decacec3574320cde1a5dcc8fcf8b
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+- sha: 1cce88d8e892fc7399be64b927b5894e92bbb55b
+  author: dependabot[bot]
+  files:
+  - requirements.txt
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

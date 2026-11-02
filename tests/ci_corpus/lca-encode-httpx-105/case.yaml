@@ -1,0 +1,73 @@
+repo: encode/httpx
+run_id: '105'
+head_sha: aa8a42bcf03f3b89575a9cce2f8af715a5121c59
+run_attempts: []
+commits:
+- sha: aa8a42bcf03f3b89575a9cce2f8af715a5121c59
+  author: MarkWine
+  files:
+  - tests/client/test_cookies.py
+- sha: aa90dcb636ef541fdaea785816c480037330cce0
+  author: MarkWine
+  files:
+  - tests/client/test_cookies.py
+- sha: 5d12a8585ad2912489a6d35bd21403dd48e9405a
+  author: MarkWine
+  files:
+  - httpx/_client.py
+  - tests/client/test_cookies.py
+- sha: a11fc3849b94157274c98d99501acad05cbfb221
+  author: lovelydinosaur
+  files:
+  - httpx/_urlparse.py
+  - tests/models/test_url.py
+- sha: 3b9060ee1121b48669e0b30045c9344065f4f2ae
+  author: karpetrosyan
+  files:
+  - CHANGELOG.md
+  - httpx/_utils.py
+  - tests/test_utils.py
+- sha: 2318fd822cdb16435ccb5cabcba16c0b7969c1e4
+  author: jamesbraza
+  files:
+  - httpx/_content.py
+  - httpx/_utils.py
+  - tests/client/test_redirects.py
+  - tests/models/test_requests.py
+  - tests/models/test_responses.py
+  - tests/test_content.py
+- sha: 2c51edd0c0d4124423661eb5678ae1a94a107260
+  author: lovelydinosaur
+  files:
+  - CHANGELOG.md
+- sha: 1e110964736a95d822144390b99d7ecf17fca527
+  author: jamesbraza
+  files:
+  - httpx/_decoders.py
+  - httpx/_models.py
+  - tests/test_decoders.py
+- sha: 90538a3b4610ba49ce16c997bcfdb9101f9503be
+  author: lovelydinosaur
+  files:
+  - CHANGELOG.md
+  - httpx/_transports/asgi.py
+  - tests/test_asgi.py
+- sha: f8981f3d124f9b8db9073fd5c8afa11acb55a738
+  author: karpetrosyan
+  files:
+  - CHANGELOG.md
+  - docs/advanced.md
+  - docs/compatibility.md
+  - docs/contributing.md
+  - docs/troubleshooting.md
+  - httpx/_api.py
+  - httpx/_client.py
+  - httpx/_main.py
+  - httpx/_transports/default.py
+  - httpx/_types.py
+  - tests/client/test_proxies.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

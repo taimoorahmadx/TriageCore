@@ -1,0 +1,57 @@
+repo: huggingface/diffusers
+run_id: '45'
+head_sha: ba66fb81a0c8db48fed7abe833409f447b95708b
+run_attempts: []
+commits:
+- sha: ba66fb81a0c8db48fed7abe833409f447b95708b
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file.py
+- sha: a371c3b3827e2083beb4f6814ab0b93e831f4854
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 153e746b705ab3554292e7a164de6bb787eef1ed
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file.py
+- sha: 7395283f23a66b634d0d316fdceadf17ed5f4f97
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 68ddb2559e616656301858d441a523ebd64a710f
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: dab7f014a8a4cae1c6afea990ea302904b909adf
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 2483d516abfa3b535fb95f8524cd16451e7f6cc5
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file_utils.py
+- sha: 480a4b4ae42aecef198a9a30fdc793e059b565fa
+  author: DN6
+  files:
+  - src/diffusers/loaders/single_file.py
+  - src/diffusers/loaders/single_file_utils.py
+  - src/diffusers/pipelines/stable_diffusion_xl/pipeline_stable_diffusion_xl_img2img.py
+- sha: bb8d317c7ed7a04f7fd35cfd3ee285e60cb873ad
+  author: DN6
+  files:
+  - src/diffusers/loaders/__init__.py
+  - src/diffusers/models/autoencoders/autoencoder_kl_temporal_decoder.py
+- sha: 2fb9baf934629db718f00d4eaeeddd9dac80dfdd
+  author: DN6
+  files:
+  - src/diffusers/loaders/autoencoder.py
+  - src/diffusers/loaders/controlnet.py
+  - src/diffusers/loaders/single_file.py
+  - src/diffusers/loaders/single_file_utils.py
+  - src/diffusers/models/autoencoders/autoencoder_kl.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

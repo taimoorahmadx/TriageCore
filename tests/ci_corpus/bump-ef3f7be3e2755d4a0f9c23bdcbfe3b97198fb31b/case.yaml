@@ -1,0 +1,107 @@
+repo: micycle1/PGS
+run_id: ef3f7be3e2755d4a0f9c23bdcbfe3b97198fb31b
+head_sha: ef3f7be3e2755d4a0f9c23bdcbfe3b97198fb31b
+run_attempts: []
+commits:
+- sha: ef3f7be3e2755d4a0f9c23bdcbfe3b97198fb31b
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: fa8fa14d7bf5b5eb4a3094de7fdae605dd346cdc
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/color/Colors.java
+- sha: bf9cfa8402c9e06e5648adb33a2db71d9f0b9fc3
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS.java
+  - src/main/java/micycle/pgs/PGS_Coloring.java
+  - src/main/java/micycle/pgs/PGS_Construction.java
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/PGS_Morphology.java
+  - src/main/java/micycle/pgs/PGS_Optimisation.java
+  - src/main/java/micycle/pgs/PGS_Processing.java
+  - src/main/java/micycle/pgs/PGS_SegmentSet.java
+  - src/main/java/micycle/pgs/PGS_Tiling.java
+  - src/main/java/micycle/pgs/PGS_Triangulation.java
+  - src/main/java/micycle/pgs/PGS_Voronoi.java
+  - src/main/java/micycle/pgs/color/ColorUtils.java
+  - src/main/java/micycle/pgs/commons/CornerRounding.java
+  - src/main/java/micycle/pgs/commons/FastPolygonizer.java
+  - src/main/java/micycle/pgs/commons/IncrementalTinDual.java
+  - src/main/java/micycle/pgs/commons/PenroseTiling.java
+  - src/main/java/micycle/pgs/commons/SquareTriangleTiling.java
+  - src/main/java/micycle/pgs/commons/TriangleSubdivision.java
+  - src/test/java/micycle/pgs/PGS_ConversionTests.java
+- sha: 2fc35ae972abdea58ced576f9997564e7b0ec699
+  author: micycle1
+  files:
+  - pom.xml
+  - src/test/java/micycle/pgs/FastPolygonizerTests.java
+  - src/test/java/micycle/pgs/PGS_MeshingTests.java
+  - src/test/java/micycle/pgs/PGS_MorphologyGroupShapeTests.java
+  - src/test/java/micycle/pgs/PGS_ProcessingGroupShapeTests.java
+- sha: 39bf261cce638d37e613da295c2816d589135bba
+  author: micycle1
+  files:
+  - pom.xml
+  - src/main/java/micycle/pgs/color/RGB.java
+- sha: 69c92430f99733cc16c988f2cabe66deb7788f5a
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - pom.xml
+  - src/main/java/micycle/pgs/PGS_CirclePacking.java
+  - src/main/java/micycle/pgs/PGS_Construction.java
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/PGS_Morphology.java
+  - src/main/java/micycle/pgs/PGS_Optimisation.java
+  - src/main/java/micycle/pgs/PGS_PointSet.java
+  - src/main/java/micycle/pgs/PGS_Processing.java
+  - src/main/java/micycle/pgs/PGS_SegmentSet.java
+  - src/main/java/micycle/pgs/PGS_ShapeBoolean.java
+  - src/main/java/micycle/pgs/PGS_ShapePredicates.java
+  - src/main/java/micycle/pgs/PGS_Transformation.java
+  - src/main/java/micycle/pgs/PGS_Triangulation.java
+  - src/main/java/micycle/pgs/commons/PMesh.java
+- sha: af901f545637c7444f45c3aca0de12b4fc9f278e
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_SegmentSet.java
+  - src/main/java/micycle/pgs/PGS_Transformation.java
+  - src/main/java/micycle/pgs/commons/AreaMerge.java
+- sha: 4edb64bfd540dc35ec9c4fa21e46ba55e6500c89
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - pom.xml
+  - resources/contour/centerLine.gif
+  - src/main/java/micycle/pgs/PGS_Contour.java
+- sha: 741ce892038fde44ae63366ba0d0c866e61410ea
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - resources/meshing/innerEdges.gif
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+- sha: 10432b2dcfc2eec2a21ae71a3244581d632212b0
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Construction.java
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_Processing.java
+  - src/main/java/micycle/pgs/commons/ShapeInterpolation.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

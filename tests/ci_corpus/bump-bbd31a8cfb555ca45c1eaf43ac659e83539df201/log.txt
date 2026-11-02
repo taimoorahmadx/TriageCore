@@ -1,0 +1,664 @@
+2023-06-14T22:52:00.1265003Z Cleaning up orphan processes
+
+2023-06-14T22:55:14.0836320Z Post job cleanup.
+
+2023-06-14T22:50:49.7966705Z Current runner version: '2.304.0'
+2023-06-14T22:50:49.8000676Z ##[group]Operating System
+2023-06-14T22:50:49.8001432Z Ubuntu
+2023-06-14T22:50:49.8001807Z 22.04.2
+2023-06-14T22:50:49.8002143Z LTS
+2023-06-14T22:50:49.8002633Z ##[endgroup]
+2023-06-14T22:50:49.8003086Z ##[group]Runner Image
+2023-06-14T22:50:49.8003538Z Image: ubuntu-22.04
+2023-06-14T22:50:49.8003918Z Version: 20230611.1
+2023-06-14T22:50:49.8004592Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-14T22:50:49.8005479Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-14T22:50:49.8006011Z ##[endgroup]
+2023-06-14T22:50:49.8006467Z ##[group]Runner Image Provisioner
+2023-06-14T22:50:49.8006935Z 2.0.236.1
+2023-06-14T22:50:49.8007257Z ##[endgroup]
+2023-06-14T22:50:49.8008580Z ##[group]GITHUB_TOKEN Permissions
+2023-06-14T22:50:49.8009378Z Actions: read
+2023-06-14T22:50:49.8009785Z Checks: read
+2023-06-14T22:50:49.8010137Z Contents: read
+2023-06-14T22:50:49.8010954Z Deployments: read
+2023-06-14T22:50:49.8011400Z Discussions: read
+2023-06-14T22:50:49.8011823Z Issues: read
+2023-06-14T22:50:49.8012250Z Metadata: read
+2023-06-14T22:50:49.8012617Z Packages: read
+2023-06-14T22:50:49.8013015Z Pages: read
+2023-06-14T22:50:49.8013424Z PullRequests: read
+2023-06-14T22:50:49.8013878Z RepositoryProjects: read
+2023-06-14T22:50:49.8014364Z SecurityEvents: read
+2023-06-14T22:50:49.8014804Z Statuses: read
+2023-06-14T22:50:49.8015155Z ##[endgroup]
+2023-06-14T22:50:49.8019621Z Secret source: Dependabot
+2023-06-14T22:50:49.8020377Z Prepare workflow directory
+2023-06-14T22:50:49.8895632Z Prepare all required actions
+2023-06-14T22:50:49.9118551Z Getting action download info
+2023-06-14T22:50:50.1467751Z Download action repository 'actions/checkout@v3' (SHA:c85c95e3d7251135ab7dc9ce3241c5835cc595a9)
+2023-06-14T22:50:50.8137892Z Download action repository 'actions/setup-java@v3' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-14T22:50:51.5595778Z Complete job name: lint
+
+2023-06-14T22:50:39.5987923Z ##[section]Starting: Prepare job dependencies
+2023-06-14T22:50:39.5990420Z Evaluating strategy
+2023-06-14T22:50:39.5999417Z Creating job '_8'
+2023-06-14T22:50:39.6001941Z Evaluating timeout
+2023-06-14T22:50:39.6001983Z Evaluating cancel timeout
+2023-06-14T22:50:39.6002008Z Evaluating continue on error
+2023-06-14T22:50:39.6002032Z Evaluating target
+2023-06-14T22:50:39.6002575Z Creating job '_11'
+2023-06-14T22:50:39.6004930Z Evaluating timeout
+2023-06-14T22:50:39.6004964Z Evaluating cancel timeout
+2023-06-14T22:50:39.6004995Z Evaluating continue on error
+2023-06-14T22:50:39.6005027Z Evaluating target
+2023-06-14T22:50:39.6005765Z Creating job '_17'
+2023-06-14T22:50:39.6008319Z Evaluating timeout
+2023-06-14T22:50:39.6008352Z Evaluating cancel timeout
+2023-06-14T22:50:39.6008373Z Evaluating continue on error
+2023-06-14T22:50:39.6008395Z Evaluating target
+2023-06-14T22:50:39.6009956Z ##[section]Finishing: Prepare job dependencies
+
+2023-06-14T22:55:14.0718097Z Cleaning up orphan processes
+
+2023-06-14T22:50:51.5678156Z ##[group]Run actions/checkout@v3
+2023-06-14T22:50:51.5678490Z with:
+2023-06-14T22:50:51.5678756Z   repository: googleapis/java-storage-nio
+2023-06-14T22:50:51.5679189Z   token: ***
+2023-06-14T22:50:51.5679399Z   ssh-strict: true
+2023-06-14T22:50:51.5679650Z   persist-credentials: true
+2023-06-14T22:50:51.5679891Z   clean: true
+2023-06-14T22:50:51.5680147Z   sparse-checkout-cone-mode: true
+2023-06-14T22:50:51.5680416Z   fetch-depth: 1
+2023-06-14T22:50:51.5680630Z   lfs: false
+2023-06-14T22:50:51.5680826Z   submodules: false
+2023-06-14T22:50:51.5681079Z   set-safe-directory: true
+2023-06-14T22:50:51.5681318Z ##[endgroup]
+2023-06-14T22:50:51.7953680Z Syncing repository: googleapis/java-storage-nio
+2023-06-14T22:50:51.7955569Z ##[group]Getting Git version info
+2023-06-14T22:50:51.7956149Z Working directory is '/home/runner/work/java-storage-nio/java-storage-nio'
+2023-06-14T22:50:51.7956760Z [command]/usr/bin/git version
+2023-06-14T22:50:51.7992087Z git version 2.40.1
+2023-06-14T22:50:51.8023991Z ##[endgroup]
+2023-06-14T22:50:51.8044632Z Temporarily overriding HOME='/home/runner/work/_temp/6018560c-6dd4-4ab2-910a-9dc53fa87549' before making global git config changes
+2023-06-14T22:50:51.8045197Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-14T22:50:51.8045799Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/java-storage-nio/java-storage-nio
+2023-06-14T22:50:51.8089757Z Deleting the contents of '/home/runner/work/java-storage-nio/java-storage-nio'
+2023-06-14T22:50:51.8098577Z ##[group]Initializing the repository
+2023-06-14T22:50:51.8106303Z [command]/usr/bin/git init /home/runner/work/java-storage-nio/java-storage-nio
+2023-06-14T22:50:51.8179961Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-14T22:50:51.8180650Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-14T22:50:51.8181374Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-14T22:50:51.8182210Z hint: 
+2023-06-14T22:50:51.8182691Z hint: 	git config --global init.defaultBranch <name>
+2023-06-14T22:50:51.8183055Z hint: 
+2023-06-14T22:50:51.8183567Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-14T22:50:51.8184142Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-14T22:50:51.8184532Z hint: 
+2023-06-14T22:50:51.8184888Z hint: 	git branch -m <name>
+2023-06-14T22:50:51.8194212Z Initialized empty Git repository in /home/runner/work/java-storage-nio/java-storage-nio/.git/
+2023-06-14T22:50:51.8208826Z [command]/usr/bin/git remote add origin https://github.com/googleapis/java-storage-nio
+2023-06-14T22:50:51.8250329Z ##[endgroup]
+2023-06-14T22:50:51.8251010Z ##[group]Disabling automatic garbage collection
+2023-06-14T22:50:51.8254653Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-14T22:50:51.8286098Z ##[endgroup]
+2023-06-14T22:50:51.8286705Z ##[group]Setting up auth
+2023-06-14T22:50:51.8293409Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-14T22:50:51.8325621Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-14T22:50:51.8658278Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-14T22:50:51.8681604Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-14T22:50:51.8924178Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-14T22:50:51.8970637Z ##[endgroup]
+2023-06-14T22:50:51.8971243Z ##[group]Fetching the repository
+2023-06-14T22:50:51.8972309Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1ce304ae1d1bcf77aaf8238148585b387e1576d5:refs/remotes/pull/1197/merge
+2023-06-14T22:50:52.3023806Z remote: Enumerating objects: 214, done.        
+2023-06-14T22:50:52.3024722Z remote: Counting objects:   0% (1/214)        
+2023-06-14T22:50:52.3025466Z remote: Counting objects:   1% (3/214)        
+2023-06-14T22:50:52.3025994Z remote: Counting objects:   2% (5/214)        
+2023-06-14T22:50:52.3026419Z remote: Counting objects:   3% (7/214)        
+2023-06-14T22:50:52.3026917Z remote: Counting objects:   4% (9/214)        
+2023-06-14T22:50:52.3027507Z remote: Counting objects:   5% (11/214)        
+2023-06-14T22:50:52.3027924Z remote: Counting objects:   6% (13/214)        
+2023-06-14T22:50:52.3028399Z remote: Counting objects:   7% (15/214)        
+2023-06-14T22:50:52.3029148Z remote: Counting objects:   8% (18/214)        
+2023-06-14T22:50:52.3029559Z remote: Counting objects:   9% (20/214)        
+2023-06-14T22:50:52.3033564Z remote: Counting objects:  10% (22/214)        
+2023-06-14T22:50:52.3046544Z remote: Counting objects:  11% (24/214)        
+2023-06-14T22:50:52.3047457Z remote: Counting objects:  12% (26/214)        
+2023-06-14T22:50:52.3047896Z remote: Counting objects:  13% (28/214)        
+2023-06-14T22:50:52.3048715Z remote: Counting objects:  14% (30/214)        
+2023-06-14T22:50:52.3049148Z remote: Counting objects:  15% (33/214)        
+2023-06-14T22:50:52.3049905Z remote: Counting objects:  16% (35/214)        
+2023-06-14T22:50:52.3050316Z remote: Counting objects:  17% (37/214)        
+2023-06-14T22:50:52.3051126Z remote: Counting objects:  18% (39/214)        
+2023-06-14T22:50:52.3051533Z remote: Counting objects:  19% (41/214)        
+2023-06-14T22:50:52.3052283Z remote: Counting objects:  20% (43/214)        
+2023-06-14T22:50:52.3052691Z remote: Counting objects:  21% (45/214)        
+2023-06-14T22:50:52.3053450Z remote: Counting objects:  22% (48/214)        
+2023-06-14T22:50:52.3053843Z remote: Counting objects:  23% (50/214)        
+2023-06-14T22:50:52.3054930Z remote: Counting objects:  24% (52/214)        
+2023-06-14T22:50:52.3055348Z remote: Counting objects:  25% (54/214)        
+2023-06-14T22:50:52.3056105Z remote: Counting objects:  26% (56/214)        
+2023-06-14T22:50:52.3056494Z remote: Counting objects:  27% (58/214)        
+2023-06-14T22:50:52.3174360Z remote: Counting objects:  28% (60/214)        
+2023-06-14T22:50:52.3174683Z remote: Counting objects:  29% (63/214)        
+2023-06-14T22:50:52.3174932Z remote: Counting objects:  30% (65/214)        
+2023-06-14T22:50:52.3175168Z remote: Counting objects:  31% (67/214)        
+2023-06-14T22:50:52.3175417Z remote: Counting objects:  32% (69/214)        
+2023-06-14T22:50:52.3175661Z remote: Counting objects:  33% (71/214)        
+2023-06-14T22:50:52.3175900Z remote: Counting objects:  34% (73/214)        
+2023-06-14T22:50:52.3176130Z remote: Counting objects:  35% (75/214)        
+2023-06-14T22:50:52.3176372Z remote: Counting objects:  36% (78/214)        
+2023-06-14T22:50:52.3176636Z remote: Counting objects:  37% (80/214)        
+2023-06-14T22:50:52.3176880Z remote: Counting objects:  38% (82/214)        
+2023-06-14T22:50:52.3177116Z remote: Counting objects:  39% (84/214)        
+2023-06-14T22:50:52.3177354Z remote: Counting objects:  40% (86/214)        
+2023-06-14T22:50:52.3177580Z remote: Counting objects:  41% (88/214)        
+2023-06-14T22:50:52.3177812Z remote: Counting objects:  42% (90/214)        
+2023-06-14T22:50:52.3178050Z remote: Counting objects:  43% (93/214)        
+2023-06-14T22:50:52.3178276Z remote: Counting objects:  44% (95/214)        
+2023-06-14T22:50:52.3178510Z remote: Counting objects:  45% (97/214)        
+2023-06-14T22:50:52.3178740Z remote: Counting objects:  46% (99/214)        
+2023-06-14T22:50:52.3178983Z remote: Counting objects:  47% (101/214)        
+2023-06-14T22:50:52.3179231Z remote: Counting objects:  48% (103/214)        
+2023-06-14T22:50:52.3179470Z remote: Counting objects:  49% (105/214)        
+2023-06-14T22:50:52.3179718Z remote: Counting objects:  50% (107/214)        
+2023-06-14T22:50:52.3180231Z remote: Counting objects:  51% (110/214)        
+2023-06-14T22:50:52.3180470Z remote: Counting objects:  52% (112/214)        
+2023-06-14T22:50:52.3180717Z remote: Counting objects:  53% (114/214)        
+2023-06-14T22:50:52.3180951Z remote: Counting objects:  54% (116/214)        
+2023-06-14T22:50:52.3181187Z remote: Counting objects:  55% (118/214)        
+2023-06-14T22:50:52.3181430Z remote: Counting objects:  56% (120/214)        
+2023-06-14T22:50:52.3181661Z remote: Counting objects:  57% (122/214)        
+2023-06-14T22:50:52.3181901Z remote: Counting objects:  58% (125/214)        
+2023-06-14T22:50:52.3182137Z remote: Counting objects:  59% (127/214)        
+2023-06-14T22:50:52.3182373Z remote: Counting objects:  60% (129/214)        
+2023-06-14T22:50:52.3182610Z remote: Counting objects:  61% (131/214)        
+2023-06-14T22:50:52.3182848Z remote: Counting objects:  62% (133/214)        
+2023-06-14T22:50:52.3183086Z remote: Counting objects:  63% (135/214)        
+2023-06-14T22:50:52.3183324Z remote: Counting objects:  64% (137/214)        
+2023-06-14T22:50:52.3183557Z remote: Counting objects:  65% (140/214)        
+2023-06-14T22:50:52.3183792Z remote: Counting objects:  66% (142/214)        
+2023-06-14T22:50:52.3184016Z remote: Counting objects:  67% (144/214)        
+2023-06-14T22:50:52.3184253Z remote: Counting objects:  68% (146/214)        
+2023-06-14T22:50:52.3184486Z remote: Counting objects:  69% (148/214)        
+2023-06-14T22:50:52.3184717Z remote: Counting objects:  70% (150/214)        
+2023-06-14T22:50:52.3184943Z remote: Counting objects:  71% (152/214)        
+2023-06-14T22:50:52.3185178Z remote: Counting objects:  72% (155/214)        
+2023-06-14T22:50:52.3185412Z remote: Counting objects:  73% (157/214)        
+2023-06-14T22:50:52.3185639Z remote: Counting objects:  74% (159/214)        
+2023-06-14T22:50:52.3286239Z remote: Counting objects:  75% (161/214)        
+2023-06-14T22:50:52.3286589Z remote: Counting objects:  76% (163/214)        
+2023-06-14T22:50:52.3287127Z remote: Counting objects:  77% (165/214)        
+2023-06-14T22:50:52.3287395Z remote: Counting objects:  78% (167/214)        
+2023-06-14T22:50:52.3287647Z remote: Counting objects:  79% (170/214)        
+2023-06-14T22:50:52.3287892Z remote: Counting objects:  80% (172/214)        
+2023-06-14T22:50:52.3288132Z remote: Counting objects:  81% (174/214)        
+2023-06-14T22:50:52.3288377Z remote: Counting objects:  82% (176/214)        
+2023-06-14T22:50:52.3288608Z remote: Counting objects:  83% (178/214)        
+2023-06-14T22:50:52.3288842Z remote: Counting objects:  84% (180/214)        
+2023-06-14T22:50:52.3289086Z remote: Counting objects:  85% (182/214)        
+2023-06-14T22:50:52.3289312Z remote: Counting objects:  86% (185/214)        
+2023-06-14T22:50:52.3289550Z remote: Counting objects:  87% (187/214)        
+2023-06-14T22:50:52.3289791Z remote: Counting objects:  88% (189/214)        
+2023-06-14T22:50:52.3290018Z remote: Counting objects:  89% (191/214)        
+2023-06-14T22:50:52.3290264Z remote: Counting objects:  90% (193/214)        
+2023-06-14T22:50:52.3290504Z remote: Counting objects:  91% (195/214)        
+2023-06-14T22:50:52.3290741Z remote: Counting objects:  92% (197/214)        
+2023-06-14T22:50:52.3290972Z remote: Counting objects:  93% (200/214)        
+2023-06-14T22:50:52.3291207Z remote: Counting objects:  94% (202/214)        
+2023-06-14T22:50:52.3291445Z remote: Counting objects:  95% (204/214)        
+2023-06-14T22:50:52.3291675Z remote: Counting objects:  96% (206/214)        
+2023-06-14T22:50:52.3291905Z remote: Counting objects:  97% (208/214)        
+2023-06-14T22:50:52.3292138Z remote: Counting objects:  98% (210/214)        
+2023-06-14T22:50:52.3292364Z remote: Counting objects:  99% (212/214)        
+2023-06-14T22:50:52.3292603Z remote: Counting objects: 100% (214/214)        
+2023-06-14T22:50:52.3292859Z remote: Counting objects: 100% (214/214), done.        
+2023-06-14T22:50:52.3293141Z remote: Compressing objects:   0% (1/145)        
+2023-06-14T22:50:52.3293411Z remote: Compressing objects:   1% (2/145)        
+2023-06-14T22:50:52.3293806Z remote: Compressing objects:   2% (3/145)        
+2023-06-14T22:50:52.3294065Z remote: Compressing objects:   3% (5/145)        
+2023-06-14T22:50:52.3294309Z remote: Compressing objects:   4% (6/145)        
+2023-06-14T22:50:52.3294561Z remote: Compressing objects:   5% (8/145)        
+2023-06-14T22:50:52.3294812Z remote: Compressing objects:   6% (9/145)        
+2023-06-14T22:50:52.3295063Z remote: Compressing objects:   7% (11/145)        
+2023-06-14T22:50:52.3295332Z remote: Compressing objects:   8% (12/145)        
+2023-06-14T22:50:52.3295598Z remote: Compressing objects:   9% (14/145)        
+2023-06-14T22:50:52.3295852Z remote: Compressing objects:  10% (15/145)        
+2023-06-14T22:50:52.3296106Z remote: Compressing objects:  11% (16/145)        
+2023-06-14T22:50:52.3296367Z remote: Compressing objects:  12% (18/145)        
+2023-06-14T22:50:52.3296626Z remote: Compressing objects:  13% (19/145)        
+2023-06-14T22:50:52.3296878Z remote: Compressing objects:  14% (21/145)        
+2023-06-14T22:50:52.3297137Z remote: Compressing objects:  15% (22/145)        
+2023-06-14T22:50:52.3297386Z remote: Compressing objects:  16% (24/145)        
+2023-06-14T22:50:52.3297630Z remote: Compressing objects:  17% (25/145)        
+2023-06-14T22:50:52.3297879Z remote: Compressing objects:  18% (27/145)        
+2023-06-14T22:50:52.3298130Z remote: Compressing objects:  19% (28/145)        
+2023-06-14T22:50:52.3298373Z remote: Compressing objects:  20% (29/145)        
+2023-06-14T22:50:52.3298622Z remote: Compressing objects:  21% (31/145)        
+2023-06-14T22:50:52.3298870Z remote: Compressing objects:  22% (32/145)        
+2023-06-14T22:50:52.3299107Z remote: Compressing objects:  23% (34/145)        
+2023-06-14T22:50:52.3299356Z remote: Compressing objects:  24% (35/145)        
+2023-06-14T22:50:52.3299608Z remote: Compressing objects:  25% (37/145)        
+2023-06-14T22:50:52.3299858Z remote: Compressing objects:  26% (38/145)        
+2023-06-14T22:50:52.3300196Z remote: Compressing objects:  27% (40/145)        
+2023-06-14T22:50:52.3300446Z remote: Compressing objects:  28% (41/145)        
+2023-06-14T22:50:52.3300696Z remote: Compressing objects:  29% (43/145)        
+2023-06-14T22:50:52.3300934Z remote: Compressing objects:  30% (44/145)        
+2023-06-14T22:50:52.3301184Z remote: Compressing objects:  31% (45/145)        
+2023-06-14T22:50:52.3301434Z remote: Compressing objects:  32% (47/145)        
+2023-06-14T22:50:52.3301673Z remote: Compressing objects:  33% (48/145)        
+2023-06-14T22:50:52.3301922Z remote: Compressing objects:  34% (50/145)        
+2023-06-14T22:50:52.3302169Z remote: Compressing objects:  35% (51/145)        
+2023-06-14T22:50:52.3302422Z remote: Compressing objects:  36% (53/145)        
+2023-06-14T22:50:52.3302664Z remote: Compressing objects:  37% (54/145)        
+2023-06-14T22:50:52.3302909Z remote: Compressing objects:  38% (56/145)        
+2023-06-14T22:50:52.3303155Z remote: Compressing objects:  39% (57/145)        
+2023-06-14T22:50:52.3303402Z remote: Compressing objects:  40% (58/145)        
+2023-06-14T22:50:52.3303651Z remote: Compressing objects:  41% (60/145)        
+2023-06-14T22:50:52.3303898Z remote: Compressing objects:  42% (61/145)        
+2023-06-14T22:50:52.3304137Z remote: Compressing objects:  43% (63/145)        
+2023-06-14T22:50:52.3304385Z remote: Compressing objects:  44% (64/145)        
+2023-06-14T22:50:52.3304632Z remote: Compressing objects:  45% (66/145)        
+2023-06-14T22:50:52.3304882Z remote: Compressing objects:  46% (67/145)        
+[... 30110 lines removed by TriageCore ...]
+2023-06-14T22:51:19.9162602Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/.flattened-pom.xml to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio-examples/0.126.18-SNAPSHOT/google-cloud-nio-examples-0.126.18-SNAPSHOT.pom
+2023-06-14T22:51:19.9175577Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/target/google-cloud-nio-examples-0.126.18-SNAPSHOT-tests.jar to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio-examples/0.126.18-SNAPSHOT/google-cloud-nio-examples-0.126.18-SNAPSHOT-tests.jar
+2023-06-14T22:51:20.5018029Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageObjectAttributes.java:[49,13] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:20.5022297Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageObjectAttributes.java:[52,36] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:20.5026180Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java: /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java uses unchecked or unsafe operations.
+2023-06-14T22:51:20.5030210Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java: Recompile with -Xlint:unchecked for details.
+2023-06-14T22:51:20.5034648Z [INFO] 
+2023-06-14T22:51:20.5038036Z [INFO] --- build-helper-maven-plugin:3.4.0:add-test-resource (add-test-proto-resources) @ google-cloud-nio ---
+2023-06-14T22:51:20.5052031Z [INFO] 
+2023-06-14T22:51:20.5055354Z [INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ google-cloud-nio ---
+2023-06-14T22:51:20.5065607Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-14T22:51:20.5072206Z [INFO] Copying 1 resource
+2023-06-14T22:51:20.5077503Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/proto
+2023-06-14T22:51:20.5081143Z [INFO] 
+2023-06-14T22:51:20.5084275Z [INFO] --- maven-compiler-plugin:3.11.0:testCompile (default-testCompile) @ google-cloud-nio ---
+2023-06-14T22:51:20.5129317Z [INFO] Changes detected - recompiling the module! :dependency
+2023-06-14T22:51:20.5134731Z [INFO] Compiling 21 source files with javac [debug deprecation target 1.8] to target/test-classes
+2023-06-14T22:51:21.4648386Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/java/com/google/cloud/storage/contrib/nio/testing/LocalStorageHelperTest.java:[115,19] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:21.4652729Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/java/com/google/cloud/storage/contrib/nio/testing/LocalStorageHelperTest.java:[123,19] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:21.4656968Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/java/com/google/cloud/storage/contrib/nio/CloudStorageIsDirectoryTest.java: /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/java/com/google/cloud/storage/contrib/nio/CloudStorageIsDirectoryTest.java uses unchecked or unsafe operations.
+2023-06-14T22:51:21.4660673Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/test/java/com/google/cloud/storage/contrib/nio/CloudStorageIsDirectoryTest.java: Recompile with -Xlint:unchecked for details.
+2023-06-14T22:51:21.4664910Z [INFO] 
+2023-06-14T22:51:21.4668124Z [INFO] --- animal-sniffer-maven-plugin:1.23:check (java8) @ google-cloud-nio ---
+2023-06-14T22:51:21.4690068Z [INFO] Checking unresolved references to org.codehaus.mojo.signature:java18:1.0
+2023-06-14T22:51:21.9504290Z [INFO] 
+2023-06-14T22:51:21.9506126Z [INFO] --- maven-surefire-plugin:3.1.0:test (default-test) @ google-cloud-nio ---
+2023-06-14T22:51:21.9530731Z [INFO] Tests are skipped.
+2023-06-14T22:51:21.9531462Z [INFO] 
+2023-06-14T22:51:21.9532176Z [INFO] --- jacoco-maven-plugin:0.8.10:report (report) @ google-cloud-nio ---
+2023-06-14T22:51:21.9554226Z [INFO] Skipping JaCoCo execution due to missing execution data file.
+2023-06-14T22:51:21.9554907Z [INFO] 
+2023-06-14T22:51:21.9556066Z [INFO] --- maven-jar-plugin:3.3.0:jar (default-jar) @ google-cloud-nio ---
+2023-06-14T22:51:21.9832517Z [INFO] Building jar: /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/google-cloud-nio-0.126.18-SNAPSHOT.jar
+2023-06-14T22:51:22.0537340Z [INFO] 
+2023-06-14T22:51:22.0538611Z [INFO] --- maven-jar-plugin:3.3.0:test-jar (default) @ google-cloud-nio ---
+2023-06-14T22:51:22.0649845Z [INFO] Building jar: /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/google-cloud-nio-0.126.18-SNAPSHOT-tests.jar
+2023-06-14T22:51:22.0836836Z [INFO] 
+2023-06-14T22:51:22.0840484Z [INFO] --- maven-shade-plugin:3.2.4:shade (default) @ google-cloud-nio ---
+2023-06-14T22:51:22.8363354Z [INFO] Including com.google.cloud:google-cloud-storage:jar:2.22.4 in the shaded jar.
+2023-06-14T22:51:22.8364321Z [INFO] Including com.google.guava:failureaccess:jar:1.0.1 in the shaded jar.
+2023-06-14T22:51:22.8365262Z [INFO] Including com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava in the shaded jar.
+2023-06-14T22:51:22.8366077Z [INFO] Including com.google.errorprone:error_prone_annotations:jar:2.18.0 in the shaded jar.
+2023-06-14T22:51:22.8368564Z [INFO] Including com.google.j2objc:j2objc-annotations:jar:1.3 in the shaded jar.
+2023-06-14T22:51:22.8369269Z [INFO] Including io.opencensus:opencensus-contrib-http-util:jar:0.31.1 in the shaded jar.
+2023-06-14T22:51:22.8370637Z [INFO] Including com.google.http-client:google-http-client-jackson2:jar:1.43.1 in the shaded jar.
+2023-06-14T22:51:22.8371378Z [INFO] Including com.google.api-client:google-api-client:jar:2.2.0 in the shaded jar.
+2023-06-14T22:51:22.8371946Z [INFO] Including commons-codec:commons-codec:jar:1.15 in the shaded jar.
+2023-06-14T22:51:22.8372451Z [INFO] Including com.google.oauth-client:google-oauth-client:jar:1.34.1 in the shaded jar.
+2023-06-14T22:51:22.8373055Z [INFO] Including com.google.http-client:google-http-client-apache-v2:jar:1.43.1 in the shaded jar.
+2023-06-14T22:51:22.8373584Z [INFO] Including com.google.code.gson:gson:jar:2.10.1 in the shaded jar.
+2023-06-14T22:51:22.8374119Z [INFO] Including com.google.cloud:google-cloud-core-http:jar:2.19.0 in the shaded jar.
+2023-06-14T22:51:22.8374663Z [INFO] Including com.google.http-client:google-http-client-appengine:jar:1.43.1 in the shaded jar.
+2023-06-14T22:51:22.8375207Z [INFO] Including com.google.api:gax-httpjson:jar:0.114.0 in the shaded jar.
+2023-06-14T22:51:22.8375784Z [INFO] Including com.google.cloud:google-cloud-core-grpc:jar:2.19.0 in the shaded jar.
+2023-06-14T22:51:22.8376288Z [INFO] Including com.google.api:gax-grpc:jar:2.29.0 in the shaded jar.
+2023-06-14T22:51:22.8376982Z [INFO] Including io.grpc:grpc-alts:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8377445Z [INFO] Including io.grpc:grpc-grpclb:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8377968Z [INFO] Including org.conscrypt:conscrypt-openjdk-uber:jar:2.5.2 in the shaded jar.
+2023-06-14T22:51:22.8378449Z [INFO] Including io.grpc:grpc-auth:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8380407Z [INFO] Including io.grpc:grpc-protobuf:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8383566Z [INFO] Including io.grpc:grpc-protobuf-lite:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8386941Z [INFO] Including com.google.auth:google-auth-library-oauth2-http:jar:1.17.0 in the shaded jar.
+2023-06-14T22:51:22.8412746Z [INFO] Including com.google.api:api-common:jar:2.12.0 in the shaded jar.
+2023-06-14T22:51:22.8418947Z [INFO] Including javax.annotation:javax.annotation-api:jar:1.3.2 in the shaded jar.
+2023-06-14T22:51:22.8419779Z [INFO] Including io.opencensus:opencensus-api:jar:0.31.1 in the shaded jar.
+2023-06-14T22:51:22.8421130Z [INFO] Including io.grpc:grpc-context:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8421771Z [INFO] Including com.google.api.grpc:proto-google-iam-v1:jar:1.15.0 in the shaded jar.
+2023-06-14T22:51:22.8422506Z [INFO] Including com.google.protobuf:protobuf-java:jar:3.23.2 in the shaded jar.
+2023-06-14T22:51:22.8423208Z [INFO] Including com.google.protobuf:protobuf-java-util:jar:3.23.2 in the shaded jar.
+2023-06-14T22:51:22.8425006Z [INFO] Including com.google.api.grpc:proto-google-common-protos:jar:2.20.0 in the shaded jar.
+2023-06-14T22:51:22.8425662Z [INFO] Including org.threeten:threetenbp:jar:1.6.8 in the shaded jar.
+2023-06-14T22:51:22.8426413Z [INFO] Including com.google.api.grpc:proto-google-cloud-storage-v2:jar:2.22.4-alpha in the shaded jar.
+2023-06-14T22:51:22.8427251Z [INFO] Including com.google.api.grpc:grpc-google-cloud-storage-v2:jar:2.22.4-alpha in the shaded jar.
+2023-06-14T22:51:22.8429889Z [INFO] Including com.google.api.grpc:gapic-google-cloud-storage-v2:jar:2.22.4-alpha in the shaded jar.
+2023-06-14T22:51:22.8430577Z [INFO] Including com.fasterxml.jackson.core:jackson-core:jar:2.14.2 in the shaded jar.
+2023-06-14T22:51:22.8431044Z [INFO] Including io.grpc:grpc-api:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8431619Z [INFO] Including io.grpc:grpc-netty-shaded:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8432129Z [INFO] Including io.perfmark:perfmark-api:jar:0.26.0 in the shaded jar.
+2023-06-14T22:51:22.8432603Z [INFO] Including io.grpc:grpc-core:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8432983Z [INFO] Including com.google.android:annotations:jar:4.1.1.4 in the shaded jar.
+2023-06-14T22:51:22.8433576Z [INFO] Including org.codehaus.mojo:animal-sniffer-annotations:jar:1.23 in the shaded jar.
+2023-06-14T22:51:22.8434120Z [INFO] Including io.grpc:grpc-stub:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8434548Z [INFO] Including io.grpc:grpc-googleapis:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8435070Z [INFO] Including org.checkerframework:checker-qual:jar:3.32.0 in the shaded jar.
+2023-06-14T22:51:22.8435543Z [INFO] Including io.grpc:grpc-xds:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8436064Z [INFO] Including io.opencensus:opencensus-proto:jar:0.2.0 in the shaded jar.
+2023-06-14T22:51:22.8436508Z [INFO] Including io.grpc:grpc-services:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8436903Z [INFO] Including com.google.re2j:re2j:jar:1.6 in the shaded jar.
+2023-06-14T22:51:22.8437354Z [INFO] Including io.grpc:grpc-rls:jar:1.55.1 in the shaded jar.
+2023-06-14T22:51:22.8437867Z [INFO] Including com.google.apis:google-api-services-storage:jar:v1-rev20230301-2.0.0 in the shaded jar.
+2023-06-14T22:51:22.8438442Z [INFO] Including com.google.guava:guava:jar:31.1-jre in the shaded jar.
+2023-06-14T22:51:22.8438854Z [INFO] Including com.google.api:gax:jar:2.29.0 in the shaded jar.
+2023-06-14T22:51:22.8439350Z [INFO] Including com.google.cloud:google-cloud-core:jar:2.19.0 in the shaded jar.
+2023-06-14T22:51:22.8440212Z [INFO] Including com.google.http-client:google-http-client:jar:1.43.1 in the shaded jar.
+2023-06-14T22:51:22.8440727Z [INFO] Including org.apache.httpcomponents:httpclient:jar:4.5.14 in the shaded jar.
+2023-06-14T22:51:22.8441252Z [INFO] Including commons-logging:commons-logging:jar:1.2 in the shaded jar.
+2023-06-14T22:51:22.8441655Z [INFO] Including org.apache.httpcomponents:httpcore:jar:4.4.16 in the shaded jar.
+2023-06-14T22:51:22.8442213Z [INFO] Including com.google.http-client:google-http-client-gson:jar:1.43.1 in the shaded jar.
+2023-06-14T22:51:22.8442680Z [INFO] Including javax.inject:javax.inject:jar:1 in the shaded jar.
+2023-06-14T22:51:22.8443130Z [INFO] Including com.google.code.findbugs:jsr305:jar:3.0.2 in the shaded jar.
+2023-06-14T22:51:53.8528144Z [WARNING] animal-sniffer-annotations-1.23.jar, annotations-4.1.1.4.jar, api-common-2.12.0.jar, checker-qual-3.32.0.jar, commons-codec-1.15.jar, commons-logging-1.2.jar, conscrypt-openjdk-uber-2.5.2.jar, error_prone_annotations-2.18.0.jar, failureaccess-1.0.1.jar, gapic-google-cloud-storage-v2-2.22.4-alpha.jar, gax-2.29.0.jar, gax-grpc-2.29.0.jar, gax-httpjson-0.114.0.jar, google-api-client-2.2.0.jar, google-api-services-storage-v1-rev20230301-2.0.0.jar, google-auth-library-oauth2-http-1.17.0.jar, google-cloud-core-2.19.0.jar, google-cloud-core-grpc-2.19.0.jar, google-cloud-core-http-2.19.0.jar, google-cloud-nio-0.126.18-SNAPSHOT.jar, google-cloud-storage-2.22.4.jar, google-http-client-1.43.1.jar, google-http-client-apache-v2-1.43.1.jar, google-http-client-appengine-1.43.1.jar, google-http-client-gson-1.43.1.jar, google-http-client-jackson2-1.43.1.jar, google-oauth-client-1.34.1.jar, grpc-alts-1.55.1.jar, grpc-api-1.55.1.jar, grpc-auth-1.55.1.jar, grpc-context-1.55.1.jar, grpc-core-1.55.1.jar, grpc-google-cloud-storage-v2-2.22.4-alpha.jar, grpc-googleapis-1.55.1.jar, grpc-grpclb-1.55.1.jar, grpc-netty-shaded-1.55.1.jar, grpc-protobuf-1.55.1.jar, grpc-protobuf-lite-1.55.1.jar, grpc-rls-1.55.1.jar, grpc-services-1.55.1.jar, grpc-stub-1.55.1.jar, grpc-xds-1.55.1.jar, gson-2.10.1.jar, guava-31.1-jre.jar, httpclient-4.5.14.jar, httpcore-4.4.16.jar, j2objc-annotations-1.3.jar, jackson-core-2.14.2.jar, javax.annotation-api-1.3.2.jar, jsr305-3.0.2.jar, listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar, opencensus-api-0.31.1.jar, opencensus-contrib-http-util-0.31.1.jar, opencensus-proto-0.2.0.jar, perfmark-api-0.26.0.jar, proto-google-cloud-storage-v2-2.22.4-alpha.jar, proto-google-common-protos-2.20.0.jar, proto-google-iam-v1-1.15.0.jar, protobuf-java-3.23.2.jar, protobuf-java-util-3.23.2.jar, re2j-1.6.jar, threetenbp-1.6.8.jar define 1 overlapping resource: 
+2023-06-14T22:51:53.8532215Z [WARNING]   - META-INF/MANIFEST.MF
+2023-06-14T22:51:53.8536655Z [WARNING] checker-qual-3.32.0.jar, commons-codec-1.15.jar, commons-logging-1.2.jar, grpc-netty-shaded-1.55.1.jar, javax.annotation-api-1.3.2.jar, threetenbp-1.6.8.jar define 1 overlapping resource: 
+2023-06-14T22:51:53.8538969Z [WARNING]   - META-INF/LICENSE.txt
+2023-06-14T22:51:53.8539648Z [WARNING] commons-codec-1.15.jar, commons-logging-1.2.jar, grpc-netty-shaded-1.55.1.jar define 1 overlapping resource: 
+2023-06-14T22:51:53.8548538Z [WARNING]   - META-INF/NOTICE.txt
+2023-06-14T22:51:53.8549672Z [WARNING] gson-2.10.1.jar, jackson-core-2.14.2.jar define 1 overlapping classes: 
+2023-06-14T22:51:53.8550197Z [WARNING]   - META-INF.versions.9.module-info
+2023-06-14T22:51:53.8550856Z [WARNING] httpclient-4.5.14.jar, httpcore-4.4.16.jar, jackson-core-2.14.2.jar define 2 overlapping resources: 
+2023-06-14T22:51:53.8551273Z [WARNING]   - META-INF/LICENSE
+2023-06-14T22:51:53.8551637Z [WARNING]   - META-INF/NOTICE
+2023-06-14T22:51:53.8552114Z [WARNING] httpclient-4.5.14.jar, httpcore-4.4.16.jar define 1 overlapping resource: 
+2023-06-14T22:51:53.8552509Z [WARNING]   - META-INF/DEPENDENCIES
+2023-06-14T22:51:53.8553013Z [WARNING] maven-shade-plugin has detected that some class files are
+2023-06-14T22:51:53.8553444Z [WARNING] present in two or more JARs. When this happens, only one
+2023-06-14T22:51:53.8554004Z [WARNING] single version of the class is copied to the uber jar.
+2023-06-14T22:51:53.8554394Z [WARNING] Usually this is not harmful and you can skip these warnings,
+2023-06-14T22:51:53.8554837Z [WARNING] otherwise try to manually exclude artifacts based on
+2023-06-14T22:51:53.8555321Z [WARNING] mvn dependency:tree -Ddetail=true and the above output.
+2023-06-14T22:51:53.8555782Z [WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
+2023-06-14T22:51:53.8682389Z [INFO] Attaching shaded artifact.
+2023-06-14T22:51:53.8685167Z [INFO] 
+2023-06-14T22:51:53.8686538Z [INFO] --- maven-failsafe-plugin:3.1.0:integration-test (default) @ google-cloud-nio ---
+2023-06-14T22:51:53.8721259Z [INFO] Tests are skipped.
+2023-06-14T22:51:53.8722416Z [INFO] 
+2023-06-14T22:51:53.8723739Z [INFO] --- maven-failsafe-plugin:3.1.0:verify (default) @ google-cloud-nio ---
+2023-06-14T22:51:53.8727454Z [INFO] Tests are skipped.
+2023-06-14T22:51:53.8728542Z [INFO] 
+2023-06-14T22:51:53.8729693Z [INFO] >>> clirr-maven-plugin:2.8:check (default) > compile @ google-cloud-nio >>>
+2023-06-14T22:51:53.8846041Z [INFO] 
+2023-06-14T22:51:53.8847977Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio ---
+2023-06-14T22:51:53.8855220Z [INFO] Skipping Rule Enforcement.
+2023-06-14T22:51:53.8857245Z [INFO] 
+2023-06-14T22:51:53.8858976Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio ---
+2023-06-14T22:51:53.8867264Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/jacoco.exec
+2023-06-14T22:51:53.8869851Z [INFO] 
+2023-06-14T22:51:53.8871575Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio ---
+2023-06-14T22:51:53.8880187Z [INFO] 
+2023-06-14T22:51:53.8882136Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio ---
+2023-06-14T22:51:53.8888871Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-14T22:51:53.8908405Z [INFO] Copying 2 resources
+2023-06-14T22:51:53.8910974Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/proto
+2023-06-14T22:51:53.8912944Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/proto
+2023-06-14T22:51:53.8915147Z [INFO] 
+2023-06-14T22:51:53.8918958Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio ---
+2023-06-14T22:51:53.9015893Z [INFO] Changes detected - recompiling the module! :dependency
+2023-06-14T22:51:53.9035369Z [INFO] Compiling 33 source files with javac [debug deprecation target 1.8] to target/classes
+2023-06-14T22:51:54.4301251Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageObjectAttributes.java:[49,13] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:54.4305138Z [WARNING] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageObjectAttributes.java:[52,36] getUpdateTime() in com.google.cloud.storage.BlobInfo has been deprecated
+2023-06-14T22:51:54.4309595Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java: /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java uses unchecked or unsafe operations.
+2023-06-14T22:51:54.4313214Z [INFO] /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/java/com/google/cloud/storage/contrib/nio/CloudStorageConfiguration.java: Recompile with -Xlint:unchecked for details.
+2023-06-14T22:51:54.4317174Z [INFO] 
+2023-06-14T22:51:54.4320849Z [INFO] <<< clirr-maven-plugin:2.8:check (default) < compile @ google-cloud-nio <<<
+2023-06-14T22:51:54.4354658Z [INFO] 
+2023-06-14T22:51:54.4356770Z [INFO] 
+2023-06-14T22:51:54.4358776Z [INFO] --- clirr-maven-plugin:2.8:check (default) @ google-cloud-nio ---
+2023-06-14T22:51:54.4369524Z [INFO] Skipping execution
+2023-06-14T22:51:54.4372669Z [INFO] 
+2023-06-14T22:51:54.4375355Z [INFO] --- maven-install-plugin:2.4:install (default-install) @ google-cloud-nio ---
+2023-06-14T22:51:54.4386567Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/google-cloud-nio-0.126.18-SNAPSHOT.jar to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio/0.126.18-SNAPSHOT/google-cloud-nio-0.126.18-SNAPSHOT.jar
+2023-06-14T22:51:54.4395514Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/pom.xml to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio/0.126.18-SNAPSHOT/google-cloud-nio-0.126.18-SNAPSHOT.pom
+2023-06-14T22:51:54.4408368Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/google-cloud-nio-0.126.18-SNAPSHOT-tests.jar to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio/0.126.18-SNAPSHOT/google-cloud-nio-0.126.18-SNAPSHOT-tests.jar
+2023-06-14T22:51:54.4422512Z [INFO] Installing /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/google-cloud-nio-0.126.18-SNAPSHOT-shaded.jar to /home/runner/.m2/repository/com/google/cloud/google-cloud-nio/0.126.18-SNAPSHOT/google-cloud-nio-0.126.18-SNAPSHOT-shaded.jar
+2023-06-14T22:51:54.4925517Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:54.4926410Z [INFO] Reactor Summary for Storage Parent 0.126.18-SNAPSHOT:
+2023-06-14T22:51:54.4926888Z [INFO] 
+2023-06-14T22:51:54.4927757Z [INFO] Storage Parent ..................................... SUCCESS [  7.349 s]
+2023-06-14T22:51:54.4928253Z [INFO] Google Cloud NIO ................................... SUCCESS [ 39.643 s]
+2023-06-14T22:51:54.4928862Z [INFO] Google Cloud NIO Retrofit Example .................. SUCCESS [  4.141 s]
+2023-06-14T22:51:54.4929376Z [INFO] Google Cloud NIO Examples .......................... SUCCESS [  0.931 s]
+2023-06-14T22:51:54.4929918Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:54.4930337Z [INFO] BUILD SUCCESS
+2023-06-14T22:51:54.4985521Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:54.4985861Z [INFO] Total time:  56.243 s (Wall Clock)
+2023-06-14T22:51:54.4986176Z [INFO] Finished at: 2023-06-14T22:51:54Z
+2023-06-14T22:51:54.4986545Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:55.5380475Z [INFO] Scanning for projects...
+2023-06-14T22:51:56.3837103Z [INFO] Inspecting build with total of 4 modules...
+2023-06-14T22:51:56.3844821Z [INFO] Installing Nexus Staging features:
+2023-06-14T22:51:56.3849621Z [INFO]   ... total of 4 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-06-14T22:51:56.3856481Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:56.3859585Z [INFO] Reactor Build Order:
+2023-06-14T22:51:56.3862297Z [INFO] 
+2023-06-14T22:51:56.3874983Z [INFO] Storage Parent                                                     [pom]
+2023-06-14T22:51:56.3878103Z [INFO] Google Cloud NIO                                                   [jar]
+2023-06-14T22:51:56.3881226Z [INFO] Google Cloud NIO Retrofit Example                                  [jar]
+2023-06-14T22:51:56.3884324Z [INFO] Google Cloud NIO Examples                                          [jar]
+2023-06-14T22:51:56.7637303Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.pom
+2023-06-14T22:51:57.1290026Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.pom (20 kB at 54 kB/s)
+2023-06-14T22:51:57.1349319Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom
+2023-06-14T22:51:57.1604542Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/36/maven-plugins-36.pom (9.9 kB at 381 kB/s)
+2023-06-14T22:51:57.1656633Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.jar
+2023-06-14T22:51:57.2181072Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-site-plugin/3.12.1/maven-site-plugin-3.12.1.jar (119 kB at 2.3 MB/s)
+2023-06-14T22:51:57.2396216Z [INFO] 
+2023-06-14T22:51:57.2398264Z [INFO] --------------< com.google.cloud:google-cloud-nio-parent >--------------
+2023-06-14T22:51:57.2400524Z [INFO] Building Storage Parent 0.126.18-SNAPSHOT                          [1/4]
+2023-06-14T22:51:57.2421749Z [INFO]   from pom.xml
+2023-06-14T22:51:57.2422292Z [INFO] --------------------------------[ pom ]---------------------------------
+2023-06-14T22:51:57.2458401Z [INFO] 
+2023-06-14T22:51:57.2459313Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-parent >>>
+2023-06-14T22:51:57.2493245Z [INFO] 
+2023-06-14T22:51:57.2494081Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-parent ---
+2023-06-14T22:51:57.4105495Z [INFO] Skipping Rule Enforcement.
+2023-06-14T22:51:57.4108635Z [INFO] 
+2023-06-14T22:51:57.4110847Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-parent ---
+2023-06-14T22:51:57.5108160Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/target/jacoco.exec
+2023-06-14T22:51:57.5111411Z [INFO] 
+2023-06-14T22:51:57.5113425Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-parent ---
+2023-06-14T22:51:57.5491534Z [INFO] 
+2023-06-14T22:51:57.5494000Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-parent <<<
+2023-06-14T22:51:57.5495510Z [INFO] 
+2023-06-14T22:51:57.5518618Z [INFO] 
+2023-06-14T22:51:57.5520791Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-parent ---
+2023-06-14T22:51:57.7127667Z [INFO] Not generating Clirr report as there are no classes generated by the project
+2023-06-14T22:51:57.7129901Z [INFO] 
+2023-06-14T22:51:57.7130717Z [INFO] -----------------< com.google.cloud:google-cloud-nio >------------------
+2023-06-14T22:51:57.7131331Z [INFO] Building Google Cloud NIO 0.126.18-SNAPSHOT                        [2/4]
+2023-06-14T22:51:57.7132061Z [INFO]   from google-cloud-nio/pom.xml
+2023-06-14T22:51:57.7132572Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-14T22:51:57.7225859Z [INFO] 
+2023-06-14T22:51:57.7226632Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio >>>
+2023-06-14T22:51:57.8934608Z [INFO] 
+2023-06-14T22:51:57.8936869Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio ---
+2023-06-14T22:51:57.8968814Z [INFO] Skipping Rule Enforcement.
+2023-06-14T22:51:57.8971039Z [INFO] 
+2023-06-14T22:51:57.8971716Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio ---
+2023-06-14T22:51:57.8987397Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/target/jacoco.exec
+2023-06-14T22:51:57.8990875Z [INFO] 
+2023-06-14T22:51:57.8991694Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio ---
+2023-06-14T22:51:57.9001747Z [INFO] 
+2023-06-14T22:51:57.9002599Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio ---
+2023-06-14T22:51:57.9512846Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-14T22:51:57.9593403Z [INFO] Copying 2 resources
+2023-06-14T22:51:57.9620862Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio/src/main/proto
+2023-06-14T22:51:57.9622508Z [INFO] 
+2023-06-14T22:51:57.9625966Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio ---
+2023-06-14T22:51:58.0748273Z [INFO] Nothing to compile - all classes are up to date
+2023-06-14T22:51:58.0751180Z [INFO] 
+2023-06-14T22:51:58.0760331Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio <<<
+2023-06-14T22:51:58.0761259Z [INFO] 
+2023-06-14T22:51:58.0902938Z [INFO] 
+2023-06-14T22:51:58.0903637Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio ---
+2023-06-14T22:51:58.0934917Z [INFO] artifact com.google.cloud:google-cloud-nio: checking for updates from central
+2023-06-14T22:51:58.1400956Z [INFO] Comparing to version: 0.126.17
+2023-06-14T22:51:58.1417749Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.jar
+2023-06-14T22:51:58.1780187Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.jar (111 kB at 3.1 MB/s)
+2023-06-14T22:51:58.1827429Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.pom
+2023-06-14T22:51:58.2062007Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio/0.126.17/google-cloud-nio-0.126.17.pom (5.9 kB at 237 kB/s)
+2023-06-14T22:51:58.2079695Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-parent/0.126.17/google-cloud-nio-parent-0.126.17.pom
+2023-06-14T22:51:58.2388942Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-parent/0.126.17/google-cloud-nio-parent-0.126.17.pom (4.2 kB at 136 kB/s)
+2023-06-14T22:51:58.4246553Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom
+2023-06-14T22:51:58.4363480Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.14/jackson-parent-2.14.pom (0 B at 0 B/s)
+2023-06-14T22:51:58.4382635Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom
+2023-06-14T22:51:58.4499229Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/48/oss-parent-48.pom (0 B at 0 B/s)
+2023-06-14T22:51:58.4815057Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom
+2023-06-14T22:51:58.5028583Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.pom (2.1 kB at 100 kB/s)
+2023-06-14T22:51:58.5042810Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom
+2023-06-14T22:51:58.5249591Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.pom (2.2 kB at 108 kB/s)
+2023-06-14T22:51:58.5268890Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom
+2023-06-14T22:51:58.5493025Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.11.0/error_prone_parent-2.11.0.pom (11 kB at 467 kB/s)
+2023-06-14T22:51:58.6730138Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.pom
+2023-06-14T22:51:58.6962699Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/30.1.1-android/guava-30.1.1-android.pom (12 kB at 509 kB/s)
+2023-06-14T22:51:58.6981489Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/30.1.1-android/guava-parent-30.1.1-android.pom
+2023-06-14T22:51:58.7213661Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava-parent/30.1.1-android/guava-parent-30.1.1-android.pom (14 kB at 584 kB/s)
+2023-06-14T22:51:58.7511124Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.19.1/error_prone_annotations-2.19.1.pom
+2023-06-14T22:51:58.7831250Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_annotations/2.19.1/error_prone_annotations-2.19.1.pom (2.2 kB at 67 kB/s)
+2023-06-14T22:51:58.7847127Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.19.1/error_prone_parent-2.19.1.pom
+2023-06-14T22:51:58.8116365Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/errorprone/error_prone_parent/2.19.1/error_prone_parent-2.19.1.pom (12 kB at 437 kB/s)
+2023-06-14T22:51:58.9926332Z [INFO] Succeeded with 0 errors; 0 warnings; and 0 other changes.
+2023-06-14T22:51:58.9927435Z [INFO] 
+2023-06-14T22:51:58.9928181Z [INFO] -------------< com.google.cloud:google-cloud-nio-retrofit >-------------
+2023-06-14T22:51:58.9928778Z [INFO] Building Google Cloud NIO Retrofit Example 0.126.18-SNAPSHOT       [3/4]
+2023-06-14T22:51:58.9930938Z [INFO]   from google-cloud-nio-retrofit/pom.xml
+2023-06-14T22:51:58.9931373Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-14T22:51:58.9982548Z [INFO] 
+2023-06-14T22:51:58.9983225Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-retrofit >>>
+2023-06-14T22:51:58.9996691Z [INFO] 
+2023-06-14T22:51:58.9997367Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.0022697Z [INFO] Skipping Rule Enforcement.
+2023-06-14T22:51:59.0023382Z [INFO] 
+2023-06-14T22:51:59.0024075Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.0042579Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/target/jacoco.exec
+2023-06-14T22:51:59.0043511Z [INFO] 
+2023-06-14T22:51:59.0044016Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.0049363Z [INFO] 
+2023-06-14T22:51:59.0050028Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.0099918Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-14T22:51:59.0109204Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/src/main/resources
+2023-06-14T22:51:59.0111335Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-retrofit/src/main/proto
+2023-06-14T22:51:59.0111988Z [INFO] 
+2023-06-14T22:51:59.0112576Z [INFO] --- flatten-maven-plugin:1.3.0:flatten (flatten) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.1322473Z [INFO] Generating flattened POM of project com.google.cloud:google-cloud-nio-retrofit:jar:0.126.18-SNAPSHOT...
+2023-06-14T22:51:59.1878558Z [INFO] 
+2023-06-14T22:51:59.1879441Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.1922236Z [INFO] Nothing to compile - all classes are up to date
+2023-06-14T22:51:59.1922645Z [INFO] 
+2023-06-14T22:51:59.1923099Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-retrofit <<<
+2023-06-14T22:51:59.1923771Z [INFO] 
+2023-06-14T22:51:59.1923966Z [INFO] 
+2023-06-14T22:51:59.1924409Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-retrofit ---
+2023-06-14T22:51:59.1961799Z [INFO] artifact com.google.cloud:google-cloud-nio-retrofit: checking for updates from central
+2023-06-14T22:51:59.2786560Z [INFO] Comparing to version: 0.126.17
+2023-06-14T22:51:59.2794927Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.jar
+2023-06-14T22:51:59.5093956Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.jar (3.9 kB at 17 kB/s)
+2023-06-14T22:51:59.5113926Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.pom
+2023-06-14T22:51:59.6072387Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/cloud/google-cloud-nio-retrofit/0.126.17/google-cloud-nio-retrofit-0.126.17.pom (2.3 kB at 24 kB/s)
+2023-06-14T22:51:59.6128063Z [INFO] Succeeded with 0 errors; 0 warnings; and 0 other changes.
+2023-06-14T22:51:59.6132073Z [INFO] 
+2023-06-14T22:51:59.6135268Z [INFO] -------------< com.google.cloud:google-cloud-nio-examples >-------------
+2023-06-14T22:51:59.6138358Z [INFO] Building Google Cloud NIO Examples 0.126.18-SNAPSHOT               [4/4]
+2023-06-14T22:51:59.6141691Z [INFO]   from google-cloud-nio-examples/pom.xml
+2023-06-14T22:51:59.6144675Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-14T22:51:59.6163758Z [INFO] 
+2023-06-14T22:51:59.6167083Z [INFO] >>> clirr-maven-plugin:2.8:check (default-cli) > compile @ google-cloud-nio-examples >>>
+2023-06-14T22:51:59.6235176Z [INFO] 
+2023-06-14T22:51:59.6238579Z [INFO] --- maven-enforcer-plugin:3.3.0:enforce (enforce) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6257021Z [INFO] Skipping Rule Enforcement.
+2023-06-14T22:51:59.6260425Z [INFO] 
+2023-06-14T22:51:59.6265490Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6290668Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/target/jacoco.exec
+2023-06-14T22:51:59.6295413Z [INFO] 
+2023-06-14T22:51:59.6299760Z [INFO] --- build-helper-maven-plugin:3.4.0:add-resource (add-main-proto-resources) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6325912Z [INFO] 
+2023-06-14T22:51:59.6329093Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6341668Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-06-14T22:51:59.6342283Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/src/main/resources
+2023-06-14T22:51:59.6343232Z [INFO] skip non existing resourceDirectory /home/runner/work/java-storage-nio/java-storage-nio/google-cloud-nio-examples/src/main/proto
+2023-06-14T22:51:59.6347452Z [INFO] 
+2023-06-14T22:51:59.6350681Z [INFO] --- flatten-maven-plugin:1.3.0:flatten (flatten) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6362150Z [INFO] Generating flattened POM of project com.google.cloud:google-cloud-nio-examples:jar:0.126.18-SNAPSHOT...
+2023-06-14T22:51:59.6616493Z [INFO] 
+2023-06-14T22:51:59.6617384Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6646447Z [INFO] Nothing to compile - all classes are up to date
+2023-06-14T22:51:59.6646838Z [INFO] 
+2023-06-14T22:51:59.6647538Z [INFO] <<< clirr-maven-plugin:2.8:check (default-cli) < compile @ google-cloud-nio-examples <<<
+2023-06-14T22:51:59.6647865Z [INFO] 
+2023-06-14T22:51:59.6667521Z [INFO] 
+2023-06-14T22:51:59.6668177Z [INFO] --- clirr-maven-plugin:2.8:check (default-cli) @ google-cloud-nio-examples ---
+2023-06-14T22:51:59.6668821Z [INFO] Skipping execution
+2023-06-14T22:51:59.6669226Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:59.6669639Z [INFO] Reactor Summary for Storage Parent 0.126.18-SNAPSHOT:
+2023-06-14T22:51:59.6669891Z [INFO] 
+2023-06-14T22:51:59.6672834Z [INFO] Storage Parent ..................................... SUCCESS [  0.473 s]
+2023-06-14T22:51:59.6676168Z [INFO] Google Cloud NIO ................................... SUCCESS [  1.280 s]
+2023-06-14T22:51:59.6679244Z [INFO] Google Cloud NIO Retrofit Example .................. SUCCESS [  0.621 s]
+2023-06-14T22:51:59.6682478Z [INFO] Google Cloud NIO Examples .......................... SUCCESS [  0.053 s]
+2023-06-14T22:51:59.6685951Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:59.6689110Z [INFO] BUILD SUCCESS
+2023-06-14T22:51:59.6692095Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:59.6695806Z [INFO] Total time:  4.152 s
+2023-06-14T22:51:59.6700752Z [INFO] Finished at: 2023-06-14T22:51:59Z
+2023-06-14T22:51:59.6703778Z [INFO] ------------------------------------------------------------------------
+2023-06-14T22:51:59.7063288Z basename: missing operand
+2023-06-14T22:51:59.7064202Z Try 'basename --help' for more information.
+2023-06-14T22:51:59.7065934Z exiting with 0
+
+2023-06-14T22:50:54.9958994Z ##[group]Run java -version
+2023-06-14T22:50:54.9959352Z [36;1mjava -version[0m
+2023-06-14T22:50:55.0021079Z shell: /usr/bin/bash -e {0}
+2023-06-14T22:50:55.0021349Z env:
+2023-06-14T22:50:55.0021621Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-06-14T22:50:55.0021975Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.7-7/x64
+2023-06-14T22:50:55.0022267Z ##[endgroup]
+2023-06-14T22:50:55.0512167Z openjdk version "17.0.7" 2023-04-18 LTS
+2023-06-14T22:50:55.0513346Z OpenJDK Runtime Environment Zulu17.42+21-CRaC-CA (build 17.0.7+7-LTS)
+2023-06-14T22:50:55.0514793Z OpenJDK 64-Bit Server VM Zulu17.42+21-CRaC-CA (build 17.0.7+7-LTS, mixed mode, sharing)
+
+2023-06-14T22:50:57.5370326Z ##[group]Run actions/setup-java@v3
+2023-06-14T22:50:57.5370748Z with:
+2023-06-14T22:50:57.5370986Z   distribution: zulu
+2023-06-14T22:50:57.5371228Z   java-version: 8
+2023-06-14T22:50:57.5371484Z   java-package: jdk
+2023-06-14T22:50:57.5371744Z   check-latest: false
+2023-06-14T22:50:57.5371982Z   server-id: github
+2023-06-14T22:50:57.5372255Z   server-username: GITHUB_ACTOR
+2023-06-14T22:50:57.5372583Z   server-password: GITHUB_TOKEN
+2023-06-14T22:50:57.5372864Z   overwrite-settings: true
+2023-06-14T22:50:57.5373142Z   job-status: success
+2023-06-14T22:50:57.5373580Z   token: ***
+2023-06-14T22:50:57.5373812Z ##[endgroup]
+2023-06-14T22:50:57.8767825Z ##[group]Installed distributions
+2023-06-14T22:50:57.8824062Z Trying to resolve the latest version from remote
+2023-06-14T22:50:58.0545069Z Resolved latest version as 8.0.372+7
+2023-06-14T22:50:58.0545773Z Trying to download...
+2023-06-14T22:50:58.0547800Z Downloading Java 8.0.372+7 (Zulu) from https://cdn.azul.com/zulu/bin/zulu8.70.0.23-ca-jdk8.0.372-win_x64.zip ...
+2023-06-14T22:50:59.2260920Z Extracting Java archive...
+2023-06-14T22:50:59.2960525Z [command]C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoLogo -Sta -NoProfile -NonInteractive -ExecutionPolicy Unrestricted -Command "$ErrorActionPreference = 'Stop' ; try { Add-Type -AssemblyName System.IO.Compression.FileSystem } catch { } ; [System.IO.Compression.ZipFile]::ExtractToDirectory('D:\a\_temp\370d8ec6-ef3b-4eef-9782-325520d19d75', 'D:\a\_temp\3c03892f-bd54-42de-b9a9-bad5a383fe5b')"
+2023-06-14T22:51:02.8818758Z Java 8.0.372+7 was downloaded
+2023-06-14T22:51:02.8824382Z Setting Java 8.0.372+7 as the default
+2023-06-14T22:51:02.8855081Z Creating toolchains.xml for JDK version 8 from zulu
+2023-06-14T22:51:02.8991338Z Writing to C:\Users\runneradmin\.m2\toolchains.xml
+2023-06-14T22:51:02.8996301Z 
+2023-06-14T22:51:02.8996626Z Java configuration:
+2023-06-14T22:51:02.8997115Z   Distribution: zulu
+2023-06-14T22:51:02.8997524Z   Version: 8.0.372+7
+2023-06-14T22:51:02.8998347Z   Path: C:\hostedtoolcache\windows\Java_Zulu_jdk\8.0.372-7\x64
+2023-06-14T22:51:02.8998793Z 
+2023-06-14T22:51:02.9000029Z ##[endgroup]
+2023-06-14T22:51:02.9014975Z Creating settings.xml with server-id: github
+2023-06-14T22:51:02.9025732Z Writing to C:\Users\runneradmin\.m2\settings.xml

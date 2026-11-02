@@ -1,0 +1,26 @@
+===== format (3.8)/5_Running yapf.txt =====
+##[group]Run yapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \
+[36;1myapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/gcp/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/azure/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/ibm/**'[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+--- ./docs/source/conf.py	(original)
++++ ./docs/source/conf.py	(reformatted)
+@@ -94,7 +94,6 @@
+ # of the sidebar.
+ html_logo = '_static/SkyPilot_wide_light.svg'
+ 
+-
+ # The name of an image file (within the static path) to use as favicon of the
+ # docs. This file should be a Windows icon file (.ico), 16x16 or 32x32 pixels.
+ html_favicon = '_static/favicon.ico'
+##[error]Process completed with exit code 1.

@@ -1,4 +1,5 @@
 repo: rust-lang/rust
+source: mined
 run_id: 40350517930
 head_sha: e321e9f3a12fcfb707a886d30846610e41843a48
 run_attempts:

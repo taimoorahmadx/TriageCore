@@ -1,0 +1,19 @@
+===== pylint (3.8)/5_Analysing the code with pylint.txt =====
+##[group]Run pylint --load-plugins pylint_quotes sky
+[36;1mpylint --load-plugins pylint_quotes sky[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+************* Module sky.resources
+sky/resources.py:839:0: C0301: Line too long (81/80) (line-too-long)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.

@@ -1,0 +1,56 @@
+repo: jenkinsci/amazon-ecr-plugin
+run_id: 17cc92fc964c1aaf486ed815c60725b6f65714d2
+head_sha: 17cc92fc964c1aaf486ed815c60725b6f65714d2
+run_attempts: []
+commits:
+- sha: 17cc92fc964c1aaf486ed815c60725b6f65714d2
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: f416b43623e91947cafbd832f3f246b6196dc829
+  author: TobiX
+  files:
+  - .mvn_exec_spotless
+  - pom.xml
+- sha: 49729b180ac268a45293ee3994fdc71868063136
+  author: TobiX
+  files:
+  - .mvn_exec_spotless
+  - pom.xml
+- sha: 3584fd074a929a8fd67293dec49c2b9d836e5221
+  author: TobiX
+  files:
+  - .git-blame-ignore-revs
+- sha: 95904a4e7ced02c2856a1d91b49a7cc0a540a780
+  author: TobiX
+  files:
+  - .mvn_exec_spotless
+  - pom.xml
+  - src/main/java/com/cloudbees/jenkins/plugins/amazonecr/AmazonECSRegistryCredential.java
+  - src/main/java/com/cloudbees/jenkins/plugins/amazonecr/AmazonECSRegistryCredentialsProvider.java
+  - src/main/java/com/cloudbees/jenkins/plugins/amazonecr/AmazonECSRegistryTokenSource.java
+- sha: 5881e714fc0462ae919380c0a0dd20226802fc73
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 18eaad42ed07d708ccbc734c4a775638ec5c58b9
+  author: TobiX
+  files:
+  - pom.xml
+- sha: a1218c2c3cb668a00099c10cbc60a360f1e0ffc0
+  author: TobiX
+  files:
+  - pom.xml
+- sha: 6211c8dd960874eb4fb3ff84d443f30346002ba7
+  author: TobiX
+  files:
+  - .mvn/extensions.xml
+- sha: 89e2e899638a2db09796eacf19a2233ac0579f9c
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

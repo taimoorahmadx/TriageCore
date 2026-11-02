@@ -1,0 +1,70 @@
+repo: beetbox/beets
+run_id: '40'
+head_sha: b94b7e71f74eb6e8c4ef7f299c24a20f5cded2f8
+run_attempts: []
+commits:
+- sha: b94b7e71f74eb6e8c4ef7f299c24a20f5cded2f8
+  author: mgoltzsche
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+- sha: 60ad1ba0d2ba9bf117f5dacd798f184e77b881c7
+  author: Serene-Arc
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+- sha: b07a2e42f4efa6c43c86b1ff65ad0f514ee5235b
+  author: mgoltzsche
+  files:
+  - beetsplug/smartplaylist.py
+  - docs/changelog.rst
+  - docs/plugins/smartplaylist.rst
+  - test/plugins/test_smartplaylist.py
+- sha: c1a232ec7be13f710fa764d39e13483b093fad9a
+  author: JOJ0
+  files:
+  - docs/changelog.rst
+- sha: 0604aeadc1d4fd77d3df64b6f14d4c43a21a2294
+  author: sampsyo
+  files:
+  - beets/ui/commands.py
+  - docs/changelog.rst
+  - docs/reference/cli.rst
+- sha: e5d10004ae08bcbbaa4ee1397a4d889e8b3b52de
+  author: JOJ0
+  files:
+  - beetsplug/mbsubmit.py
+  - docs/changelog.rst
+  - docs/plugins/mbsubmit.rst
+  - test/plugins/test_mbsubmit.py
+- sha: 9357448bdeadb5f8a8a2b7a8fc55e432dd4aa906
+  author: doronbehar
+  files:
+  - docs/changelog.rst
+  - docs/plugins/mbsubmit.rst
+- sha: 729a11e211078c4d9df4b660ae5b4e6e27d6e4fa
+  author: doronbehar
+  files:
+  - beetsplug/mbsubmit.py
+  - test/plugins/test_mbsubmit.py
+- sha: 177f284d401979b3024bbbb87e585297188c8e1b
+  author: mgoltzsche
+  files:
+  - beets/ui/commands.py
+  - docs/changelog.rst
+  - docs/reference/cli.rst
+- sha: a384bee6bfb97c8b07fd9435a00a3641cbb21e49
+  author: Serene-Arc
+  files:
+  - beets/ui/commands.py
+  - docs/changelog.rst
+  - docs/reference/cli.rst
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

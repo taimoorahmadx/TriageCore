@@ -1,0 +1,448 @@
+===== docs/5_Run docs.txt =====
+##[group]Run ci/run_conditional_tests.sh
+[36;1mci/run_conditional_tests.sh[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+  BUILD_TYPE: presubmit
+  TEST_TYPE: docs
+  PY_VERSION: 3.10
+##[endgroup]
+From https://github.com/googleapis/google-cloud-python
+ * branch              main       -> FETCH_HEAD
+ * [new branch]        main       -> origin/main
+checking changes with 'git diff --quiet origin/main... packages/google-ai-generativelanguage/'
+change detected in packages/google-ai-generativelanguage/
+running test in packages/google-ai-generativelanguage/
+~/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage ~/work/google-cloud-python/google-cloud-python
+nox > Running session docs
+nox > Creating virtual environment (virtualenv) using python3.10 in .nox/docs
+nox > python -m pip install -e .
+nox > python -m pip install sphinxcontrib-applehelp==1.0.4 sphinxcontrib-devhelp==1.0.2 sphinxcontrib-htmlhelp==2.0.1 sphinxcontrib-qthelp==1.0.3 sphinxcontrib-serializinghtml==1.1.5 sphinx==4.5.0 alabaster recommonmark
+nox > sphinx-build -W -T -N -b html -d docs/_build/doctrees/ docs/ docs/_build/html/
+Running Sphinx v4.5.0
+making output directory... done
+[autosummary] generating autosummary for: CHANGELOG.md, README.rst, generativelanguage_v1/generative_service.rst, generativelanguage_v1/model_service.rst, generativelanguage_v1/services_.rst, generativelanguage_v1/types_.rst, generativelanguage_v1beta/discuss_service.rst, generativelanguage_v1beta/generative_service.rst, generativelanguage_v1beta/model_service.rst, generativelanguage_v1beta/permission_service.rst, ..., generativelanguage_v1beta2/text_service.rst, generativelanguage_v1beta2/types_.rst, generativelanguage_v1beta3/discuss_service.rst, generativelanguage_v1beta3/model_service.rst, generativelanguage_v1beta3/permission_service.rst, generativelanguage_v1beta3/services_.rst, generativelanguage_v1beta3/text_service.rst, generativelanguage_v1beta3/types_.rst, index.rst, multiprocessing.rst
+loading intersphinx inventory from https://python.readthedocs.org/en/latest/objects.inv...
+loading intersphinx inventory from https://googleapis.dev/python/google-auth/latest/objects.inv...
+loading intersphinx inventory from https://googleapis.dev/python/google-api-core/latest/objects.inv...
+loading intersphinx inventory from https://grpc.github.io/grpc/python/objects.inv...
+loading intersphinx inventory from https://proto-plus-python.readthedocs.io/en/latest/objects.inv...
+loading intersphinx inventory from https://googleapis.dev/python/protobuf/latest/objects.inv...
+intersphinx inventory has moved: https://python.readthedocs.org/en/latest/objects.inv -> https://python.readthedocs.io/en/latest/objects.inv
+building [mo]: targets for 0 po files that are out of date
+building [html]: targets for 27 source files that are out of date
+updating environment: [new config] 27 added, 0 changed, 0 removed
+reading sources... [  3%] CHANGELOG
+/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/recommonmark/parser.py:75: UserWarning: Container node skipped: type=document
+  warn("Container node skipped: type={0}".format(mdnode.t))
+reading sources... [  7%] README
+reading sources... [ 11%] generativelanguage_v1/generative_service
+reading sources... [ 14%] generativelanguage_v1/model_service
+reading sources... [ 18%] generativelanguage_v1/services_
+reading sources... [ 22%] generativelanguage_v1/types_
+reading sources... [ 25%] generativelanguage_v1beta/discuss_service
+reading sources... [ 29%] generativelanguage_v1beta/generative_service
+reading sources... [ 33%] generativelanguage_v1beta/model_service
+reading sources... [ 37%] generativelanguage_v1beta/permission_service
+reading sources... [ 40%] generativelanguage_v1beta/retriever_service
+reading sources... [ 44%] generativelanguage_v1beta/services_
+reading sources... [ 48%] generativelanguage_v1beta/text_service
+reading sources... [ 51%] generativelanguage_v1beta/types_
+reading sources... [ 55%] generativelanguage_v1beta2/discuss_service
+reading sources... [ 59%] generativelanguage_v1beta2/model_service
+reading sources... [ 62%] generativelanguage_v1beta2/services_
+reading sources... [ 66%] generativelanguage_v1beta2/text_service
+reading sources... [ 70%] generativelanguage_v1beta2/types_
+reading sources... [ 74%] generativelanguage_v1beta3/discuss_service
+reading sources... [ 77%] generativelanguage_v1beta3/model_service
+reading sources... [ 81%] generativelanguage_v1beta3/permission_service
+reading sources... [ 85%] generativelanguage_v1beta3/services_
+reading sources... [ 88%] generativelanguage_v1beta3/text_service
+reading sources... [ 92%] generativelanguage_v1beta3/types_
+reading sources... [ 96%] index
+reading sources... [100%] multiprocessing
+
+
+Traceback (most recent call last):
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/cmd/build.py", line 276, in build_main
+    app.build(args.force_all, filenames)
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/application.py", line 330, in build
+    self.builder.build_update()
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 286, in build_update
+    self.build(to_build,
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/builders/__init__.py", line 299, in build
+    with logging.pending_warnings():
+  File "/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/util/logging.py", line 217, in pending_warnings
+    memhandler.flushTo(logger)
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/util/logging.py", line 182, in flushTo
+    logger.handle(record)
+  File "/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/logging/__init__.py", line 964, in handle
+    rv = self.filter(record)
+  File "/opt/hostedtoolcache/Python/3.10.13/x64/lib/python3.10/logging/__init__.py", line 821, in filter
+    result = f.filter(record)
+  File "/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/.nox/docs/lib/python3.10/site-packages/sphinx/util/logging.py", line 425, in filter
+    raise exc
+sphinx.errors.SphinxWarning: /home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/google/ai/generativelanguage_v1beta/types/retriever.py:docstring of google.ai.generativelanguage_v1beta.types.retriever.Document:6:Inline emphasis start-string without end-string.
+
+Warning, treated as error:
+/home/runner/work/google-cloud-python/google-cloud-python/packages/google-ai-generativelanguage/google/ai/generativelanguage_v1beta/types/retriever.py:docstring of google.ai.generativelanguage_v1beta.types.retriever.Document:6:Inline emphasis start-string without end-string.
+nox > Command sphinx-build -W -T -N -b html -d docs/_build/doctrees/ docs/ docs/_build/html/ failed with exit code 2
+nox > Session docs failed.
+~/work/google-cloud-python/google-cloud-python
+checking changes with 'git diff --quiet origin/main... packages/google-analytics-admin/'
+no change detected in packages/google-analytics-admin/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-analytics-data/'
+no change detected in packages/google-analytics-data/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-apps-meet/'
+no change detected in packages/google-apps-meet/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-apps-script-type/'
+no change detected in packages/google-apps-script-type/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-area120-tables/'
+no change detected in packages/google-area120-tables/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-access-approval/'
+no change detected in packages/google-cloud-access-approval/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-advisorynotifications/'
+no change detected in packages/google-cloud-advisorynotifications/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-alloydb-connectors/'
+no change detected in packages/google-cloud-alloydb-connectors/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-alloydb/'
+no change detected in packages/google-cloud-alloydb/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-api-gateway/'
+no change detected in packages/google-cloud-api-gateway/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-api-keys/'
+no change detected in packages/google-cloud-api-keys/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-apigee-connect/'
+no change detected in packages/google-cloud-apigee-connect/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-apigee-registry/'
+no change detected in packages/google-cloud-apigee-registry/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-appengine-admin/'
+no change detected in packages/google-cloud-appengine-admin/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-appengine-logging/'
+no change detected in packages/google-cloud-appengine-logging/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-artifact-registry/'
+no change detected in packages/google-cloud-artifact-registry/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-asset/'
+no change detected in packages/google-cloud-asset/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-assured-workloads/'
+no change detected in packages/google-cloud-assured-workloads/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-automl/'
+no change detected in packages/google-cloud-automl/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bare-metal-solution/'
+no change detected in packages/google-cloud-bare-metal-solution/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-batch/'
+no change detected in packages/google-cloud-batch/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-beyondcorp-appconnections/'
+no change detected in packages/google-cloud-beyondcorp-appconnections/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-beyondcorp-appconnectors/'
+no change detected in packages/google-cloud-beyondcorp-appconnectors/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-beyondcorp-appgateways/'
+no change detected in packages/google-cloud-beyondcorp-appgateways/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-beyondcorp-clientconnectorservices/'
+no change detected in packages/google-cloud-beyondcorp-clientconnectorservices/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-beyondcorp-clientgateways/'
+no change detected in packages/google-cloud-beyondcorp-clientgateways/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-analyticshub/'
+no change detected in packages/google-cloud-bigquery-analyticshub/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-biglake/'
+no change detected in packages/google-cloud-bigquery-biglake/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-connection/'
+no change detected in packages/google-cloud-bigquery-connection/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-data-exchange/'
+no change detected in packages/google-cloud-bigquery-data-exchange/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-datapolicies/'
+no change detected in packages/google-cloud-bigquery-datapolicies/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-datatransfer/'
+no change detected in packages/google-cloud-bigquery-datatransfer/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-logging/'
+no change detected in packages/google-cloud-bigquery-logging/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-migration/'
+no change detected in packages/google-cloud-bigquery-migration/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-bigquery-reservation/'
+no change detected in packages/google-cloud-bigquery-reservation/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-billing-budgets/'
+no change detected in packages/google-cloud-billing-budgets/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-billing/'
+no change detected in packages/google-cloud-billing/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-binary-authorization/'
+no change detected in packages/google-cloud-binary-authorization/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-build/'
+no change detected in packages/google-cloud-build/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-certificate-manager/'
+no change detected in packages/google-cloud-certificate-manager/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-channel/'
+no change detected in packages/google-cloud-channel/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-cloudquotas/'
+no change detected in packages/google-cloud-cloudquotas/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-commerce-consumer-procurement/'
+no change detected in packages/google-cloud-commerce-consumer-procurement/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-common/'
+no change detected in packages/google-cloud-common/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-compute/'
+no change detected in packages/google-cloud-compute/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-confidentialcomputing/'
+no change detected in packages/google-cloud-confidentialcomputing/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-config/'
+no change detected in packages/google-cloud-config/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-contact-center-insights/'
+no change detected in packages/google-cloud-contact-center-insights/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-container/'
+no change detected in packages/google-cloud-container/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-containeranalysis/'
+no change detected in packages/google-cloud-containeranalysis/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-contentwarehouse/'
+no change detected in packages/google-cloud-contentwarehouse/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-data-fusion/'
+no change detected in packages/google-cloud-data-fusion/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-data-qna/'
+no change detected in packages/google-cloud-data-qna/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-datacatalog-lineage/'
+no change detected in packages/google-cloud-datacatalog-lineage/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-datacatalog/'
+no change detected in packages/google-cloud-datacatalog/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dataflow-client/'
+no change detected in packages/google-cloud-dataflow-client/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dataform/'
+no change detected in packages/google-cloud-dataform/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-datalabeling/'
+no change detected in packages/google-cloud-datalabeling/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dataplex/'
+no change detected in packages/google-cloud-dataplex/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dataproc-metastore/'
+no change detected in packages/google-cloud-dataproc-metastore/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dataproc/'
+no change detected in packages/google-cloud-dataproc/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-datastream/'
+no change detected in packages/google-cloud-datastream/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-deploy/'
+no change detected in packages/google-cloud-deploy/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dialogflow-cx/'
+no change detected in packages/google-cloud-dialogflow-cx/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dialogflow/'
+no change detected in packages/google-cloud-dialogflow/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-discoveryengine/'
+no change detected in packages/google-cloud-discoveryengine/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dlp/'
+no change detected in packages/google-cloud-dlp/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-dms/'
+no change detected in packages/google-cloud-dms/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-documentai/'
+no change detected in packages/google-cloud-documentai/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-domains/'
+no change detected in packages/google-cloud-domains/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-edgecontainer/'
+no change detected in packages/google-cloud-edgecontainer/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-edgenetwork/'
+no change detected in packages/google-cloud-edgenetwork/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-enterpriseknowledgegraph/'
+no change detected in packages/google-cloud-enterpriseknowledgegraph/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-essential-contacts/'
+no change detected in packages/google-cloud-essential-contacts/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-eventarc-publishing/'
+no change detected in packages/google-cloud-eventarc-publishing/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-eventarc/'
+no change detected in packages/google-cloud-eventarc/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-filestore/'
+no change detected in packages/google-cloud-filestore/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-functions/'
+no change detected in packages/google-cloud-functions/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-gke-backup/'
+no change detected in packages/google-cloud-gke-backup/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-gke-connect-gateway/'
+no change detected in packages/google-cloud-gke-connect-gateway/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-gke-hub/'
+no change detected in packages/google-cloud-gke-hub/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-gke-multicloud/'
+no change detected in packages/google-cloud-gke-multicloud/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-gsuiteaddons/'
+no change detected in packages/google-cloud-gsuiteaddons/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-iam-logging/'
+no change detected in packages/google-cloud-iam-logging/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-iam/'
+no change detected in packages/google-cloud-iam/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-iap/'
+no change detected in packages/google-cloud-iap/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-ids/'
+no change detected in packages/google-cloud-ids/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-kms-inventory/'
+no change detected in packages/google-cloud-kms-inventory/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-kms/'
+no change detected in packages/google-cloud-kms/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-language/'
+no change detected in packages/google-cloud-language/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-life-sciences/'
+no change detected in packages/google-cloud-life-sciences/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-managed-identities/'
+no change detected in packages/google-cloud-managed-identities/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-media-translation/'
+no change detected in packages/google-cloud-media-translation/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-memcache/'
+no change detected in packages/google-cloud-memcache/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-migrationcenter/'
+no change detected in packages/google-cloud-migrationcenter/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-monitoring-dashboards/'
+no change detected in packages/google-cloud-monitoring-dashboards/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-monitoring-metrics-scopes/'
+no change detected in packages/google-cloud-monitoring-metrics-scopes/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-monitoring/'
+no change detected in packages/google-cloud-monitoring/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-netapp/'
+no change detected in packages/google-cloud-netapp/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-network-connectivity/'
+no change detected in packages/google-cloud-network-connectivity/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-network-management/'
+no change detected in packages/google-cloud-network-management/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-network-security/'
+no change detected in packages/google-cloud-network-security/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-network-services/'
+no change detected in packages/google-cloud-network-services/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-notebooks/'
+no change detected in packages/google-cloud-notebooks/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-optimization/'
+no change detected in packages/google-cloud-optimization/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-orchestration-airflow/'
+no change detected in packages/google-cloud-orchestration-airflow/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-os-config/'
+no change detected in packages/google-cloud-os-config/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-os-login/'
+no change detected in packages/google-cloud-os-login/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-phishing-protection/'
+no change detected in packages/google-cloud-phishing-protection/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-policy-troubleshooter/'
+no change detected in packages/google-cloud-policy-troubleshooter/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-policysimulator/'
+no change detected in packages/google-cloud-policysimulator/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-policytroubleshooter-iam/'
+no change detected in packages/google-cloud-policytroubleshooter-iam/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-private-ca/'
+no change detected in packages/google-cloud-private-ca/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-private-catalog/'
+no change detected in packages/google-cloud-private-catalog/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-public-ca/'
+no change detected in packages/google-cloud-public-ca/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-rapidmigrationassessment/'
+no change detected in packages/google-cloud-rapidmigrationassessment/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-recaptcha-enterprise/'
+no change detected in packages/google-cloud-recaptcha-enterprise/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-recommendations-ai/'
+no change detected in packages/google-cloud-recommendations-ai/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-recommender/'
+no change detected in packages/google-cloud-recommender/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-redis-cluster/'
+no change detected in packages/google-cloud-redis-cluster/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-redis/'
+no change detected in packages/google-cloud-redis/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-resource-manager/'
+no change detected in packages/google-cloud-resource-manager/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-resource-settings/'
+no change detected in packages/google-cloud-resource-settings/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-retail/'
+no change detected in packages/google-cloud-retail/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-run/'
+no change detected in packages/google-cloud-run/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-scheduler/'
+no change detected in packages/google-cloud-scheduler/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-secret-manager/'
+no change detected in packages/google-cloud-secret-manager/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-securesourcemanager/'
+no change detected in packages/google-cloud-securesourcemanager/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-securitycenter/'
+no change detected in packages/google-cloud-securitycenter/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-securitycentermanagement/'
+no change detected in packages/google-cloud-securitycentermanagement/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-service-control/'
+no change detected in packages/google-cloud-service-control/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-service-directory/'
+no change detected in packages/google-cloud-service-directory/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-service-management/'
+no change detected in packages/google-cloud-service-management/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-service-usage/'
+no change detected in packages/google-cloud-service-usage/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-servicehealth/'
+no change detected in packages/google-cloud-servicehealth/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-shell/'
+no change detected in packages/google-cloud-shell/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-source-context/'
+no change detected in packages/google-cloud-source-context/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-speech/'
+no change detected in packages/google-cloud-speech/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-storage-transfer/'
+no change detected in packages/google-cloud-storage-transfer/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-storageinsights/'
+no change detected in packages/google-cloud-storageinsights/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-support/'
+no change detected in packages/google-cloud-support/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-talent/'
+no change detected in packages/google-cloud-talent/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-tasks/'
+no change detected in packages/google-cloud-tasks/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-telcoautomation/'
+no change detected in packages/google-cloud-telcoautomation/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-texttospeech/'
+no change detected in packages/google-cloud-texttospeech/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-tpu/'
+no change detected in packages/google-cloud-tpu/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-trace/'
+no change detected in packages/google-cloud-trace/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-translate/'
+no change detected in packages/google-cloud-translate/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-video-live-stream/'
+no change detected in packages/google-cloud-video-live-stream/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-video-stitcher/'
+no change detected in packages/google-cloud-video-stitcher/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-video-transcoder/'
+no change detected in packages/google-cloud-video-transcoder/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-videointelligence/'
+no change detected in packages/google-cloud-videointelligence/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-vision/'
+no change detected in packages/google-cloud-vision/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-vm-migration/'
+no change detected in packages/google-cloud-vm-migration/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-vmwareengine/'
+no change detected in packages/google-cloud-vmwareengine/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-vpc-access/'
+no change detected in packages/google-cloud-vpc-access/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-webrisk/'
+no change detected in packages/google-cloud-webrisk/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-websecurityscanner/'
+no change detected in packages/google-cloud-websecurityscanner/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-workflows/'
+no change detected in packages/google-cloud-workflows/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-cloud-workstations/'
+no change detected in packages/google-cloud-workstations/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-geo-type/'
+no change detected in packages/google-geo-type/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-addressvalidation/'
+no change detected in packages/google-maps-addressvalidation/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-fleetengine-delivery/'
+no change detected in packages/google-maps-fleetengine-delivery/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-fleetengine/'
+no change detected in packages/google-maps-fleetengine/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-mapsplatformdatasets/'
+no change detected in packages/google-maps-mapsplatformdatasets/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-places/'
+no change detected in packages/google-maps-places/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-maps-routing/'
+no change detected in packages/google-maps-routing/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-shopping-css/'
+no change detected in packages/google-shopping-css/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-shopping-merchant-inventories/'
+no change detected in packages/google-shopping-merchant-inventories/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-shopping-merchant-reports/'
+no change detected in packages/google-shopping-merchant-reports/, skipping
+checking changes with 'git diff --quiet origin/main... packages/google-shopping-type/'
+no change detected in packages/google-shopping-type/, skipping
+checking changes with 'git diff --quiet origin/main... packages/grafeas/'
+no change detected in packages/grafeas/, skipping
+##[error]Process completed with exit code 1.

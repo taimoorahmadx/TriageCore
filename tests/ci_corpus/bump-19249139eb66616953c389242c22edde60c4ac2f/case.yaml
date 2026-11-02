@@ -1,0 +1,50 @@
+repo: s4u/pgpverify-maven-plugin
+run_id: 19249139eb66616953c389242c22edde60c4ac2f
+head_sha: 19249139eb66616953c389242c22edde60c4ac2f
+run_attempts: []
+commits:
+- sha: 19249139eb66616953c389242c22edde60c4ac2f
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 10abdde0e14f196e65f9bb97852a7daac839eaf0
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: ea9681cf90ce10421e5e74c9d1f7d73eb60db383
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: a3a27257109cdd86953bb433a8c1a61916a769f2
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: e471c02de5bb8e8309c3b4fd1116ed024c9484c2
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: a7135101dd4443672868278987f4a1ba2d8121bf
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 3afd4a42fc1989ec988745bdc04e1996c6cb4dc2
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 7833356619c9733d146c93f55063a9d12bd7b3b1
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 283fa0eea206382661eb81683b511a44e93faa23
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 9eb7732efe32ffbff3069f37abe45579ba11f8da
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,23 @@
+===== quality/5_Run Quality check.txt =====
+##[group]Run make quality
+[36;1mmake quality[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+black --required-version 23 --check tests src examples benchmarks utils
+All done! ✨ 🍰 ✨
+118 files would be left unchanged.
+ruff tests src examples benchmarks utils
+doc-builder style src/accelerate docs/source --max_len 119 --check_only
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/bin/doc-builder", line 8, in <module>
+    sys.exit(main())
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/doc_builder/commands/doc_builder_cli.py", line 47, in main
+    args.func(args)
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/doc_builder/commands/style.py", line 28, in style_command
+    raise ValueError(f"{len(changed)} files should be restyled!")
+ValueError: 1 files should be restyled!
+make: *** [Makefile:17: quality] Error 1
+##[error]Process completed with exit code 2.

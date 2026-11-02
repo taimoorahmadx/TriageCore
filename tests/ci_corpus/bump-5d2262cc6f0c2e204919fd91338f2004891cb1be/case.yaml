@@ -1,0 +1,124 @@
+repo: vandmo/dependency-lock-maven-plugin
+run_id: 5d2262cc6f0c2e204919fd91338f2004891cb1be
+head_sha: 5d2262cc6f0c2e204919fd91338f2004891cb1be
+run_attempts: []
+commits:
+- sha: 5d2262cc6f0c2e204919fd91338f2004891cb1be
+  author: dependabot[bot]
+  files:
+  - .dependency-lock/pom.xml
+- sha: 39ad8fcef81655f93c17218fc4b9d7c28ad4b5c3
+  author: vandmo
+  files:
+  - README.md
+- sha: eae867e60b56ad2a0fea29428455a334b5c22cb8
+  author: vandmo
+  files:
+  - SECURITY.md
+- sha: e2780ef7989dbe8d637ce913fd55d7a709454e9b
+  author: vandmo
+  files:
+  - .dependency-lock-0.x/README.md
+  - .dependency-lock-0.x/pom.xml
+- sha: 3bb2fe19a32ab8dbc9fec1d0e3e9024ce9903d10
+  author: vandmo
+  files:
+  - README.md
+- sha: 76ebdd0960bf08da913e004dff3cdebce0dfcb71
+  author: vandmo
+  files:
+  - README.md
+  - src/it/configuration/snapshot-version/dependencies-lock.json
+  - src/it/configuration/snapshot-version/invoker.properties
+  - src/it/configuration/snapshot-version/pom.xml
+  - src/it/setup/dependencies/a-snapshot-leaf-1.5-SNAPSHOT.jar
+  - src/it/setup/dependencies/a-snapshot-leaf-1.5-SNAPSHOT.pom
+  - src/it/setup/dependencies/pom.xml
+  - src/main/java/se/vandmo/dependencylock/maven/DependencySetConfiguration.java
+  - src/main/java/se/vandmo/dependencylock/maven/Filters.java
+  - src/main/java/se/vandmo/dependencylock/maven/LockedDependencies.java
+  - src/main/java/se/vandmo/dependencylock/maven/lang/Strings.java
+  - src/main/java/se/vandmo/dependencylock/maven/mojos/CheckMojo.java
+  - src/test/java/se/vandmo/dependencylock/maven/LockedDependenciesTests.java
+  - tasks/create-test-dependencies
+- sha: 0eedd905580b8cd8315563a561c49444fe32c457
+  author: vandmo
+  files:
+  - README.md
+  - src/it/failures/everything/dependencies-lock.json
+  - src/it/failures/everything/invoker.properties
+  - src/it/failures/everything/pom.xml
+  - src/it/failures/everything/postbuild.groovy
+  - src/it/failures/not-project-version/dependencies-lock.json
+  - src/it/failures/not-project-version/invoker.properties
+  - src/it/failures/not-project-version/pom.xml
+  - src/it/failures/not-project-version/postbuild.groovy
+  - src/main/java/se/vandmo/dependencylock/maven/Filters.java
+  - src/main/java/se/vandmo/dependencylock/maven/LockedDependencies.java
+  - src/main/java/se/vandmo/dependencylock/maven/lang/Strings.java
+  - src/main/java/se/vandmo/dependencylock/maven/mojos/CheckMojo.java
+  - src/test/java/se/vandmo/dependencylock/maven/LockedDependenciesTests.java
+  - src/test/java/se/vandmo/dependencylock/maven/lang/StringsTests.java
+  - tasks/create-test-dependencies
+  - tasks/list-checksum-for-test-dependencies
+- sha: db24cb6b0b514ddf0b23fc632ed7e389a10dde6c
+  author: vandmo
+  files:
+  - it-disabled/dependencies-lock.json
+  - it-disabled/invoker.properties
+  - it-disabled/pom.xml
+  - it-disabled/postbuild.groovy
+- sha: c158914b033146f6a966db9855bc5bdb86317c39
+  author: vandmo
+  files:
+  - src/it/failures/extraneous/postbuild.groovy
+  - src/main/java/se/vandmo/dependencylock/maven/Artifact.java
+  - src/main/java/se/vandmo/dependencylock/maven/ArtifactIdentifier.java
+  - src/main/java/se/vandmo/dependencylock/maven/LockedDependencies.java
+  - src/test/java/ArtifactTests.java
+  - src/test/java/se/vandmo/dependencylock/maven/LockedDependenciesTests.java
+- sha: 19b7e908ec67524f64c031799c567bc0b4f97c95
+  author: vandmo
+  files:
+  - README.md
+  - src/it-disabled/pom-check-failure/.dependency-lock/pom.xml
+  - src/it-disabled/pom-check-failure/invoker.properties
+  - src/it-disabled/pom-check-failure/postbuild.groovy
+  - src/it/configuration/filename-check/anothername.json
+  - src/it/configuration/filename-check/invoker.properties
+  - src/it/configuration/filename-check/pom.xml
+  - src/it/configuration/filename-check/postbuild.groovy
+  - src/it/configuration/filename-lock/invoker.properties
+  - src/it/configuration/filename-lock/pom.xml
+  - src/it/configuration/filename-lock/postbuild.groovy
+  - src/it/configuration/ignore-version/pom.xml
+  - src/it/failures/extraneous/dependencies-lock.json
+  - src/it/failures/extraneous/invoker.properties
+  - src/it/failures/extraneous/pom.xml
+  - src/it/failures/extraneous/postbuild.groovy
+  - src/it/failures/missing/dependencies-lock.json
+  - src/it/failures/missing/invoker.properties
+  - src/it/failures/missing/pom.xml
+  - src/it/failures/missing/postbuild.groovy
+  - src/it/failures/wrong-integrity/dependencies-lock.json
+  - src/it/failures/wrong-integrity/invoker.properties
+  - src/it/failures/wrong-integrity/pom.xml
+  - src/it/failures/wrong-integrity/postbuild.groovy
+  - src/it/failures/wrong-optional/dependencies-lock.json
+  - src/it/failures/wrong-optional/invoker.properties
+  - src/it/failures/wrong-optional/pom.xml
+  - src/it/failures/wrong-optional/postbuild.groovy
+  - src/it/failures/wrong-scope/dependencies-lock.json
+  - src/it/failures/wrong-scope/invoker.properties
+  - src/it/failures/wrong-scope/pom.xml
+  - src/it/failures/wrong-scope/postbuild.groovy
+  - src/it/failures/wrong-version/dependencies-lock.json
+  - src/it/failures/wrong-version/invoker.properties
+  - src/it/failures/wrong-version/pom.xml
+  - src/it/failures/wrong-version/postbuild.groovy
+  - src/main/java/se/vandmo/dependencylock/maven/LockedDependencies.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

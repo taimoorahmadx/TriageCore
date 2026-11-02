@@ -1,0 +1,800 @@
+2023-06-20T03:56:37.5558041Z Requested labels: ubuntu-latest
+2023-06-20T03:56:37.5558294Z Job defined at: alphagov/pay-cardid/.github/workflows/run-tests.yml@refs/pull/1035/merge
+2023-06-20T03:56:37.5558404Z Waiting for a runner to pick up this job...
+2023-06-20T03:56:37.8075359Z Job is waiting for a hosted runner to come online.
+2023-06-20T03:56:40.9391679Z Job is about to start running on the hosted runner: GitHub Actions 7 (hosted)
+2023-06-20T03:56:43.1871181Z Current runner version: '2.305.0'
+2023-06-20T03:56:43.1898450Z ##[group]Operating System
+2023-06-20T03:56:43.1899100Z Ubuntu
+2023-06-20T03:56:43.1899400Z 22.04.2
+2023-06-20T03:56:43.1899659Z LTS
+2023-06-20T03:56:43.1899964Z ##[endgroup]
+2023-06-20T03:56:43.1900305Z ##[group]Runner Image
+2023-06-20T03:56:43.1900651Z Image: ubuntu-22.04
+2023-06-20T03:56:43.1900990Z Version: 20230611.1
+2023-06-20T03:56:43.1901525Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-20T03:56:43.1902193Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-20T03:56:43.1902610Z ##[endgroup]
+2023-06-20T03:56:43.1902997Z ##[group]Runner Image Provisioner
+2023-06-20T03:56:43.1903340Z 2.0.236.1
+2023-06-20T03:56:43.1903594Z ##[endgroup]
+2023-06-20T03:56:43.1904272Z ##[group]GITHUB_TOKEN Permissions
+2023-06-20T03:56:43.1904834Z Contents: read
+2023-06-20T03:56:43.1905115Z Metadata: read
+2023-06-20T03:56:43.1905668Z ##[endgroup]
+2023-06-20T03:56:43.1909250Z Secret source: Dependabot
+2023-06-20T03:56:43.1909779Z Prepare workflow directory
+2023-06-20T03:56:43.2641696Z Prepare all required actions
+2023-06-20T03:56:43.2831195Z Getting action download info
+2023-06-20T03:56:43.5247367Z Download action repository 'actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab' (SHA:8e5e7e5ab8b370d6c329ec480221332ada57f0ab)
+2023-06-20T03:56:43.8838930Z Download action repository 'actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-06-20T03:56:44.1700525Z Download action repository 'actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8' (SHA:88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8)
+2023-06-20T03:56:44.6106621Z Complete job name: Unit and Integration tests
+2023-06-20T03:56:44.7051559Z ##[group]Run actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+2023-06-20T03:56:44.7052033Z with:
+2023-06-20T03:56:44.7052352Z   repository: alphagov/pay-cardid
+2023-06-20T03:56:44.7052976Z   token: ***
+2023-06-20T03:56:44.7053257Z   ssh-strict: true
+2023-06-20T03:56:44.7053577Z   persist-credentials: true
+2023-06-20T03:56:44.7053889Z   clean: true
+2023-06-20T03:56:44.7054145Z   fetch-depth: 1
+2023-06-20T03:56:44.7054416Z   lfs: false
+2023-06-20T03:56:44.7054686Z   submodules: false
+2023-06-20T03:56:44.7054982Z   set-safe-directory: true
+2023-06-20T03:56:44.7055289Z ##[endgroup]
+2023-06-20T03:56:44.9762756Z Syncing repository: alphagov/pay-cardid
+2023-06-20T03:56:44.9765652Z ##[group]Getting Git version info
+2023-06-20T03:56:44.9766294Z Working directory is '/home/runner/work/pay-cardid/pay-cardid'
+2023-06-20T03:56:44.9767000Z [command]/usr/bin/git version
+2023-06-20T03:56:44.9871572Z git version 2.40.1
+2023-06-20T03:56:44.9889546Z ##[endgroup]
+2023-06-20T03:56:44.9905151Z Temporarily overriding HOME='/home/runner/work/_temp/2e9f1395-9276-4164-93e8-3488af082705' before making global git config changes
+2023-06-20T03:56:44.9905821Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-20T03:56:44.9910645Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pay-cardid/pay-cardid
+2023-06-20T03:56:44.9950726Z Deleting the contents of '/home/runner/work/pay-cardid/pay-cardid'
+2023-06-20T03:56:44.9956067Z ##[group]Initializing the repository
+2023-06-20T03:56:44.9959724Z [command]/usr/bin/git init /home/runner/work/pay-cardid/pay-cardid
+2023-06-20T03:56:45.0053826Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-20T03:56:45.0089687Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-20T03:56:45.0090242Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-20T03:56:45.0090619Z hint: 
+2023-06-20T03:56:45.0091141Z hint: 	git config --global init.defaultBranch <name>
+2023-06-20T03:56:45.0091866Z hint: 
+2023-06-20T03:56:45.0092329Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-20T03:56:45.0092926Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-20T03:56:45.0093600Z hint: 
+2023-06-20T03:56:45.0093922Z hint: 	git branch -m <name>
+2023-06-20T03:56:45.0094468Z Initialized empty Git repository in /home/runner/work/pay-cardid/pay-cardid/.git/
+2023-06-20T03:56:45.0095853Z [command]/usr/bin/git remote add origin https://github.com/alphagov/pay-cardid
+2023-06-20T03:56:45.0135213Z ##[endgroup]
+2023-06-20T03:56:45.0135820Z ##[group]Disabling automatic garbage collection
+2023-06-20T03:56:45.0139885Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-20T03:56:45.0174637Z ##[endgroup]
+2023-06-20T03:56:45.0175180Z ##[group]Setting up auth
+2023-06-20T03:56:45.0189202Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-20T03:56:45.0233380Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-20T03:56:45.0664496Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-20T03:56:45.0690006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-20T03:56:45.0920945Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-20T03:56:45.0951990Z ##[endgroup]
+2023-06-20T03:56:45.0953024Z ##[group]Fetching the repository
+2023-06-20T03:56:45.0964823Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1673fcdeaa3038657fe169820b58ff98327a8cc9:refs/remotes/pull/1035/merge
+2023-06-20T03:56:45.3460879Z remote: Enumerating objects: 92, done.        
+2023-06-20T03:56:45.3461863Z remote: Counting objects:   1% (1/92)        
+2023-06-20T03:56:45.3463080Z remote: Counting objects:   2% (2/92)        
+2023-06-20T03:56:45.3549541Z remote: Counting objects:   3% (3/92)        
+2023-06-20T03:56:45.3550028Z remote: Counting objects:   4% (4/92)        
+2023-06-20T03:56:45.3550441Z remote: Counting objects:   5% (5/92)        
+2023-06-20T03:56:45.3550897Z remote: Counting objects:   6% (6/92)        
+2023-06-20T03:56:45.3551315Z remote: Counting objects:   7% (7/92)        
+2023-06-20T03:56:45.3551720Z remote: Counting objects:   8% (8/92)        
+2023-06-20T03:56:45.3552134Z remote: Counting objects:   9% (9/92)        
+2023-06-20T03:56:45.3552551Z remote: Counting objects:  10% (10/92)        
+2023-06-20T03:56:45.3552956Z remote: Counting objects:  11% (11/92)        
+2023-06-20T03:56:45.3553372Z remote: Counting objects:  13% (12/92)        
+2023-06-20T03:56:45.3553811Z remote: Counting objects:  14% (13/92)        
+2023-06-20T03:56:45.3554234Z remote: Counting objects:  15% (14/92)        
+2023-06-20T03:56:45.3554632Z remote: Counting objects:  16% (15/92)        
+2023-06-20T03:56:45.3555044Z remote: Counting objects:  17% (16/92)        
+2023-06-20T03:56:45.3555471Z remote: Counting objects:  18% (17/92)        
+2023-06-20T03:56:45.3555872Z remote: Counting objects:  19% (18/92)        
+2023-06-20T03:56:45.3556285Z remote: Counting objects:  20% (19/92)        
+2023-06-20T03:56:45.3556703Z remote: Counting objects:  21% (20/92)        
+2023-06-20T03:56:45.3557098Z remote: Counting objects:  22% (21/92)        
+2023-06-20T03:56:45.3557507Z remote: Counting objects:  23% (22/92)        
+2023-06-20T03:56:45.3557923Z remote: Counting objects:  25% (23/92)        
+2023-06-20T03:56:45.3558320Z remote: Counting objects:  26% (24/92)        
+2023-06-20T03:56:45.3558735Z remote: Counting objects:  27% (25/92)        
+2023-06-20T03:56:45.3559148Z remote: Counting objects:  28% (26/92)        
+2023-06-20T03:56:45.3559573Z remote: Counting objects:  29% (27/92)        
+2023-06-20T03:56:45.3559975Z remote: Counting objects:  30% (28/92)        
+2023-06-20T03:56:45.3560387Z remote: Counting objects:  31% (29/92)        
+2023-06-20T03:56:45.3561177Z remote: Counting objects:  32% (30/92)        
+2023-06-20T03:56:45.3561582Z remote: Counting objects:  33% (31/92)        
+2023-06-20T03:56:45.3561997Z remote: Counting objects:  34% (32/92)        
+2023-06-20T03:56:45.3562424Z remote: Counting objects:  35% (33/92)        
+2023-06-20T03:56:45.3562846Z remote: Counting objects:  36% (34/92)        
+2023-06-20T03:56:45.3563261Z remote: Counting objects:  38% (35/92)        
+2023-06-20T03:56:45.3563674Z remote: Counting objects:  39% (36/92)        
+2023-06-20T03:56:45.3564108Z remote: Counting objects:  40% (37/92)        
+2023-06-20T03:56:45.3564515Z remote: Counting objects:  41% (38/92)        
+2023-06-20T03:56:45.3564928Z remote: Counting objects:  42% (39/92)        
+2023-06-20T03:56:45.3565350Z remote: Counting objects:  43% (40/92)        
+2023-06-20T03:56:45.3565992Z remote: Counting objects:  44% (41/92)        
+2023-06-20T03:56:45.3566416Z remote: Counting objects:  45% (42/92)        
+2023-06-20T03:56:45.3566839Z remote: Counting objects:  46% (43/92)        
+2023-06-20T03:56:45.3567268Z remote: Counting objects:  47% (44/92)        
+2023-06-20T03:56:45.3567670Z remote: Counting objects:  48% (45/92)        
+2023-06-20T03:56:45.3568085Z remote: Counting objects:  50% (46/92)        
+2023-06-20T03:56:45.3568500Z remote: Counting objects:  51% (47/92)        
+2023-06-20T03:56:45.3568901Z remote: Counting objects:  52% (48/92)        
+2023-06-20T03:56:45.3569317Z remote: Counting objects:  53% (49/92)        
+2023-06-20T03:56:45.3569731Z remote: Counting objects:  54% (50/92)        
+2023-06-20T03:56:45.3570129Z remote: Counting objects:  55% (51/92)        
+2023-06-20T03:56:45.3570537Z remote: Counting objects:  56% (52/92)        
+2023-06-20T03:56:45.3571106Z remote: Counting objects:  57% (53/92)        
+2023-06-20T03:56:45.3571631Z remote: Counting objects:  58% (54/92)        
+2023-06-20T03:56:45.3572051Z remote: Counting objects:  59% (55/92)        
+2023-06-20T03:56:45.3572465Z remote: Counting objects:  60% (56/92)        
+2023-06-20T03:56:45.3572891Z remote: Counting objects:  61% (57/92)        
+2023-06-20T03:56:45.3573294Z remote: Counting objects:  63% (58/92)        
+2023-06-20T03:56:45.3573806Z remote: Counting objects:  64% (59/92)        
+2023-06-20T03:56:45.3574222Z remote: Counting objects:  65% (60/92)        
+2023-06-20T03:56:45.3574621Z remote: Counting objects:  66% (61/92)        
+2023-06-20T03:56:45.3575033Z remote: Counting objects:  67% (62/92)        
+2023-06-20T03:56:45.3575449Z remote: Counting objects:  68% (63/92)        
+2023-06-20T03:56:45.3575847Z remote: Counting objects:  69% (64/92)        
+2023-06-20T03:56:45.3576258Z remote: Counting objects:  70% (65/92)        
+2023-06-20T03:56:45.3576674Z remote: Counting objects:  71% (66/92)        
+2023-06-20T03:56:45.3577078Z remote: Counting objects:  72% (67/92)        
+2023-06-20T03:56:45.3577496Z remote: Counting objects:  73% (68/92)        
+2023-06-20T03:56:45.3577904Z remote: Counting objects:  75% (69/92)        
+2023-06-20T03:56:45.3578314Z remote: Counting objects:  76% (70/92)        
+2023-06-20T03:56:45.3578720Z remote: Counting objects:  77% (71/92)        
+2023-06-20T03:56:45.3579129Z remote: Counting objects:  78% (72/92)        
+2023-06-20T03:56:45.3579538Z remote: Counting objects:  79% (73/92)        
+2023-06-20T03:56:45.3579937Z remote: Counting objects:  80% (74/92)        
+2023-06-20T03:56:45.3580344Z remote: Counting objects:  81% (75/92)        
+2023-06-20T03:56:45.3580755Z remote: Counting objects:  82% (76/92)        
+2023-06-20T03:56:45.3581167Z remote: Counting objects:  83% (77/92)        
+2023-06-20T03:56:45.3581577Z remote: Counting objects:  84% (78/92)        
+2023-06-20T03:56:45.3581991Z remote: Counting objects:  85% (79/92)        
+2023-06-20T03:56:45.3582394Z remote: Counting objects:  86% (80/92)        
+2023-06-20T03:56:45.3582808Z remote: Counting objects:  88% (81/92)        
+2023-06-20T03:56:45.3583218Z remote: Counting objects:  89% (82/92)        
+2023-06-20T03:56:45.3583633Z remote: Counting objects:  90% (83/92)        
+2023-06-20T03:56:45.3584182Z remote: Counting objects:  91% (84/92)        
+2023-06-20T03:56:45.3584597Z remote: Counting objects:  92% (85/92)        
+2023-06-20T03:56:45.3585013Z remote: Counting objects:  93% (86/92)        
+2023-06-20T03:56:45.3585412Z remote: Counting objects:  94% (87/92)        
+2023-06-20T03:56:45.3585823Z remote: Counting objects:  95% (88/92)        
+2023-06-20T03:56:45.3586239Z remote: Counting objects:  96% (89/92)        
+2023-06-20T03:56:45.3586637Z remote: Counting objects:  97% (90/92)        
+2023-06-20T03:56:45.3587050Z remote: Counting objects:  98% (91/92)        
+2023-06-20T03:56:45.3587464Z remote: Counting objects: 100% (92/92)        
+2023-06-20T03:56:45.3587884Z remote: Counting objects: 100% (92/92), done.        
+2023-06-20T03:56:45.3588354Z remote: Compressing objects:   1% (1/74)        
+2023-06-20T03:56:45.3588799Z remote: Compressing objects:   2% (2/74)        
+2023-06-20T03:56:45.3589244Z remote: Compressing objects:   4% (3/74)        
+2023-06-20T03:56:45.3589691Z remote: Compressing objects:   5% (4/74)        
+2023-06-20T03:56:45.3590119Z remote: Compressing objects:   6% (5/74)        
+2023-06-20T03:56:45.3590558Z remote: Compressing objects:   8% (6/74)        
+2023-06-20T03:56:45.3590994Z remote: Compressing objects:   9% (7/74)        
+2023-06-20T03:56:45.3591418Z remote: Compressing objects:  10% (8/74)        
+2023-06-20T03:56:45.3591852Z remote: Compressing objects:  12% (9/74)        
+2023-06-20T03:56:45.3592295Z remote: Compressing objects:  13% (10/74)        
+2023-06-20T03:56:45.3592724Z remote: Compressing objects:  14% (11/74)        
+2023-06-20T03:56:45.3593165Z remote: Compressing objects:  16% (12/74)        
+2023-06-20T03:56:45.3593604Z remote: Compressing objects:  17% (13/74)        
+2023-06-20T03:56:45.3594178Z remote: Compressing objects:  18% (14/74)        
+2023-06-20T03:56:45.3594611Z remote: Compressing objects:  20% (15/74)        
+2023-06-20T03:56:45.3595048Z remote: Compressing objects:  21% (16/74)        
+2023-06-20T03:56:45.3595492Z remote: Compressing objects:  22% (17/74)        
+2023-06-20T03:56:45.3595915Z remote: Compressing objects:  24% (18/74)        
+2023-06-20T03:56:45.3596350Z remote: Compressing objects:  25% (19/74)        
+2023-06-20T03:56:45.3596793Z remote: Compressing objects:  27% (20/74)        
+2023-06-20T03:56:45.3597216Z remote: Compressing objects:  28% (21/74)        
+2023-06-20T03:56:45.3597650Z remote: Compressing objects:  29% (22/74)        
+2023-06-20T03:56:45.3598086Z remote: Compressing objects:  31% (23/74)        
+2023-06-20T03:56:45.3598507Z remote: Compressing objects:  32% (24/74)        
+2023-06-20T03:56:45.3598943Z remote: Compressing objects:  33% (25/74)        
+2023-06-20T03:56:45.3599378Z remote: Compressing objects:  35% (26/74)        
+2023-06-20T03:56:45.3599816Z remote: Compressing objects:  36% (27/74)        
+2023-06-20T03:56:45.3600239Z remote: Compressing objects:  37% (28/74)        
+2023-06-20T03:56:45.3600676Z remote: Compressing objects:  39% (29/74)        
+2023-06-20T03:56:45.3601115Z remote: Compressing objects:  40% (30/74)        
+2023-06-20T03:56:45.3601534Z remote: Compressing objects:  41% (31/74)        
+2023-06-20T03:56:45.3601972Z remote: Compressing objects:  43% (32/74)        
+2023-06-20T03:56:45.3602407Z remote: Compressing objects:  44% (33/74)        
+2023-06-20T03:56:45.3602827Z remote: Compressing objects:  45% (34/74)        
+2023-06-20T03:56:45.3603260Z remote: Compressing objects:  47% (35/74)        
+2023-06-20T03:56:45.3603692Z remote: Compressing objects:  48% (36/74)        
+2023-06-20T03:56:45.3604109Z remote: Compressing objects:  50% (37/74)        
+2023-06-20T03:56:45.3604541Z remote: Compressing objects:  51% (38/74)        
+2023-06-20T03:56:45.3604973Z remote: Compressing objects:  52% (39/74)        
+2023-06-20T03:56:45.3605415Z remote: Compressing objects:  54% (40/74)        
+2023-06-20T03:56:45.3605835Z remote: Compressing objects:  55% (41/74)        
+2023-06-20T03:56:45.3606286Z remote: Compressing objects:  56% (42/74)        
+2023-06-20T03:56:45.3606847Z remote: Compressing objects:  58% (43/74)        
+2023-06-20T03:56:45.3607268Z remote: Compressing objects:  59% (44/74)        
+2023-06-20T03:56:45.3607700Z remote: Compressing objects:  60% (45/74)        
+2023-06-20T03:56:45.3608139Z remote: Compressing objects:  62% (46/74)        
+2023-06-20T03:56:45.3608652Z remote: Compressing objects:  63% (47/74)        
+2023-06-20T03:56:45.3609036Z remote: Compressing objects:  64% (48/74)        
+2023-06-20T03:56:45.3609418Z remote: Compressing objects:  66% (49/74)        
+2023-06-20T03:56:45.3609795Z remote: Compressing objects:  67% (50/74)        
+2023-06-20T03:56:45.3610170Z remote: Compressing objects:  68% (51/74)        
+2023-06-20T03:56:45.3610551Z remote: Compressing objects:  70% (52/74)        
+2023-06-20T03:56:45.3610935Z remote: Compressing objects:  71% (53/74)        
+2023-06-20T03:56:45.3611412Z remote: Compressing objects:  72% (54/74)        
+2023-06-20T03:56:45.3611803Z remote: Compressing objects:  74% (55/74)        
+2023-06-20T03:56:45.3612191Z remote: Compressing objects:  75% (56/74)        
+2023-06-20T03:56:45.3612560Z remote: Compressing objects:  77% (57/74)        
+2023-06-20T03:56:45.3612945Z remote: Compressing objects:  78% (58/74)        
+2023-06-20T03:56:45.3613329Z remote: Compressing objects:  79% (59/74)        
+2023-06-20T03:56:45.3613707Z remote: Compressing objects:  81% (60/74)        
+2023-06-20T03:56:45.3614089Z remote: Compressing objects:  82% (61/74)        
+2023-06-20T03:56:45.3614465Z remote: Compressing objects:  83% (62/74)        
+2023-06-20T03:56:45.3614846Z remote: Compressing objects:  85% (63/74)        
+2023-06-20T03:56:45.3615207Z remote: Compressing objects:  86% (64/74)        
+2023-06-20T03:56:45.3615585Z remote: Compressing objects:  87% (65/74)        
+2023-06-20T03:56:45.3616079Z remote: Compressing objects:  89% (66/74)        
+2023-06-20T03:56:45.3616452Z remote: Compressing objects:  90% (67/74)        
+2023-06-20T03:56:45.3616833Z remote: Compressing objects:  91% (68/74)        
+2023-06-20T03:56:45.3617221Z remote: Compressing objects:  93% (69/74)        
+2023-06-20T03:56:45.3617588Z remote: Compressing objects:  94% (70/74)        
+2023-06-20T03:56:45.3617974Z remote: Compressing objects:  95% (71/74)        
+[... 1573 lines removed by TriageCore ...]
+2023-06-20T03:56:45.3557919Z remote: Counting objects:  25% (23/92)        
+2023-06-20T03:56:45.3558316Z remote: Counting objects:  26% (24/92)        
+2023-06-20T03:56:45.3558731Z remote: Counting objects:  27% (25/92)        
+2023-06-20T03:56:45.3559144Z remote: Counting objects:  28% (26/92)        
+2023-06-20T03:56:45.3559560Z remote: Counting objects:  29% (27/92)        
+2023-06-20T03:56:45.3559971Z remote: Counting objects:  30% (28/92)        
+2023-06-20T03:56:45.3560383Z remote: Counting objects:  31% (29/92)        
+2023-06-20T03:56:45.3561172Z remote: Counting objects:  32% (30/92)        
+2023-06-20T03:56:45.3561578Z remote: Counting objects:  33% (31/92)        
+2023-06-20T03:56:45.3561993Z remote: Counting objects:  34% (32/92)        
+2023-06-20T03:56:45.3562420Z remote: Counting objects:  35% (33/92)        
+2023-06-20T03:56:45.3562842Z remote: Counting objects:  36% (34/92)        
+2023-06-20T03:56:45.3563257Z remote: Counting objects:  38% (35/92)        
+2023-06-20T03:56:45.3563670Z remote: Counting objects:  39% (36/92)        
+2023-06-20T03:56:45.3564104Z remote: Counting objects:  40% (37/92)        
+2023-06-20T03:56:45.3564511Z remote: Counting objects:  41% (38/92)        
+2023-06-20T03:56:45.3564924Z remote: Counting objects:  42% (39/92)        
+2023-06-20T03:56:45.3565339Z remote: Counting objects:  43% (40/92)        
+2023-06-20T03:56:45.3565982Z remote: Counting objects:  44% (41/92)        
+2023-06-20T03:56:45.3566412Z remote: Counting objects:  45% (42/92)        
+2023-06-20T03:56:45.3566834Z remote: Counting objects:  46% (43/92)        
+2023-06-20T03:56:45.3567249Z remote: Counting objects:  47% (44/92)        
+2023-06-20T03:56:45.3567666Z remote: Counting objects:  48% (45/92)        
+2023-06-20T03:56:45.3568081Z remote: Counting objects:  50% (46/92)        
+2023-06-20T03:56:45.3568496Z remote: Counting objects:  51% (47/92)        
+2023-06-20T03:56:45.3568897Z remote: Counting objects:  52% (48/92)        
+2023-06-20T03:56:45.3569313Z remote: Counting objects:  53% (49/92)        
+2023-06-20T03:56:45.3569727Z remote: Counting objects:  54% (50/92)        
+2023-06-20T03:56:45.3570124Z remote: Counting objects:  55% (51/92)        
+2023-06-20T03:56:45.3570534Z remote: Counting objects:  56% (52/92)        
+2023-06-20T03:56:45.3570946Z remote: Counting objects:  57% (53/92)        
+2023-06-20T03:56:45.3571625Z remote: Counting objects:  58% (54/92)        
+2023-06-20T03:56:45.3572046Z remote: Counting objects:  59% (55/92)        
+2023-06-20T03:56:45.3572461Z remote: Counting objects:  60% (56/92)        
+2023-06-20T03:56:45.3572886Z remote: Counting objects:  61% (57/92)        
+2023-06-20T03:56:45.3573290Z remote: Counting objects:  63% (58/92)        
+2023-06-20T03:56:45.3573801Z remote: Counting objects:  64% (59/92)        
+2023-06-20T03:56:45.3574218Z remote: Counting objects:  65% (60/92)        
+2023-06-20T03:56:45.3574617Z remote: Counting objects:  66% (61/92)        
+2023-06-20T03:56:45.3575029Z remote: Counting objects:  67% (62/92)        
+2023-06-20T03:56:45.3575445Z remote: Counting objects:  68% (63/92)        
+2023-06-20T03:56:45.3575843Z remote: Counting objects:  69% (64/92)        
+2023-06-20T03:56:45.3576254Z remote: Counting objects:  70% (65/92)        
+2023-06-20T03:56:45.3576670Z remote: Counting objects:  71% (66/92)        
+2023-06-20T03:56:45.3577068Z remote: Counting objects:  72% (67/92)        
+2023-06-20T03:56:45.3577491Z remote: Counting objects:  73% (68/92)        
+2023-06-20T03:56:45.3577900Z remote: Counting objects:  75% (69/92)        
+2023-06-20T03:56:45.3578310Z remote: Counting objects:  76% (70/92)        
+2023-06-20T03:56:45.3578716Z remote: Counting objects:  77% (71/92)        
+2023-06-20T03:56:45.3579125Z remote: Counting objects:  78% (72/92)        
+2023-06-20T03:56:45.3579534Z remote: Counting objects:  79% (73/92)        
+2023-06-20T03:56:45.3579933Z remote: Counting objects:  80% (74/92)        
+2023-06-20T03:56:45.3580339Z remote: Counting objects:  81% (75/92)        
+2023-06-20T03:56:45.3580751Z remote: Counting objects:  82% (76/92)        
+2023-06-20T03:56:45.3581163Z remote: Counting objects:  83% (77/92)        
+2023-06-20T03:56:45.3581572Z remote: Counting objects:  84% (78/92)        
+2023-06-20T03:56:45.3581986Z remote: Counting objects:  85% (79/92)        
+2023-06-20T03:56:45.3582383Z remote: Counting objects:  86% (80/92)        
+2023-06-20T03:56:45.3582803Z remote: Counting objects:  88% (81/92)        
+2023-06-20T03:56:45.3583214Z remote: Counting objects:  89% (82/92)        
+2023-06-20T03:56:45.3583628Z remote: Counting objects:  90% (83/92)        
+2023-06-20T03:56:45.3584177Z remote: Counting objects:  91% (84/92)        
+2023-06-20T03:56:45.3584593Z remote: Counting objects:  92% (85/92)        
+2023-06-20T03:56:45.3585009Z remote: Counting objects:  93% (86/92)        
+2023-06-20T03:56:45.3585407Z remote: Counting objects:  94% (87/92)        
+2023-06-20T03:56:45.3585819Z remote: Counting objects:  95% (88/92)        
+2023-06-20T03:56:45.3586235Z remote: Counting objects:  96% (89/92)        
+2023-06-20T03:56:45.3586632Z remote: Counting objects:  97% (90/92)        
+2023-06-20T03:56:45.3587046Z remote: Counting objects:  98% (91/92)        
+2023-06-20T03:56:45.3587460Z remote: Counting objects: 100% (92/92)        
+2023-06-20T03:56:45.3587878Z remote: Counting objects: 100% (92/92), done.        
+2023-06-20T03:56:45.3588342Z remote: Compressing objects:   1% (1/74)        
+2023-06-20T03:56:45.3588795Z remote: Compressing objects:   2% (2/74)        
+2023-06-20T03:56:45.3589239Z remote: Compressing objects:   4% (3/74)        
+2023-06-20T03:56:45.3589686Z remote: Compressing objects:   5% (4/74)        
+2023-06-20T03:56:45.3590114Z remote: Compressing objects:   6% (5/74)        
+2023-06-20T03:56:45.3590553Z remote: Compressing objects:   8% (6/74)        
+2023-06-20T03:56:45.3590989Z remote: Compressing objects:   9% (7/74)        
+2023-06-20T03:56:45.3591414Z remote: Compressing objects:  10% (8/74)        
+2023-06-20T03:56:45.3591848Z remote: Compressing objects:  12% (9/74)        
+2023-06-20T03:56:45.3592290Z remote: Compressing objects:  13% (10/74)        
+2023-06-20T03:56:45.3592719Z remote: Compressing objects:  14% (11/74)        
+2023-06-20T03:56:45.3593160Z remote: Compressing objects:  16% (12/74)        
+2023-06-20T03:56:45.3593600Z remote: Compressing objects:  17% (13/74)        
+2023-06-20T03:56:45.3594030Z remote: Compressing objects:  18% (14/74)        
+2023-06-20T03:56:45.3594607Z remote: Compressing objects:  20% (15/74)        
+2023-06-20T03:56:45.3595044Z remote: Compressing objects:  21% (16/74)        
+2023-06-20T03:56:45.3595488Z remote: Compressing objects:  22% (17/74)        
+2023-06-20T03:56:45.3595911Z remote: Compressing objects:  24% (18/74)        
+2023-06-20T03:56:45.3596346Z remote: Compressing objects:  25% (19/74)        
+2023-06-20T03:56:45.3596789Z remote: Compressing objects:  27% (20/74)        
+2023-06-20T03:56:45.3597211Z remote: Compressing objects:  28% (21/74)        
+2023-06-20T03:56:45.3597646Z remote: Compressing objects:  29% (22/74)        
+2023-06-20T03:56:45.3598082Z remote: Compressing objects:  31% (23/74)        
+2023-06-20T03:56:45.3598502Z remote: Compressing objects:  32% (24/74)        
+2023-06-20T03:56:45.3598939Z remote: Compressing objects:  33% (25/74)        
+2023-06-20T03:56:45.3599373Z remote: Compressing objects:  35% (26/74)        
+2023-06-20T03:56:45.3599807Z remote: Compressing objects:  36% (27/74)        
+2023-06-20T03:56:45.3600236Z remote: Compressing objects:  37% (28/74)        
+2023-06-20T03:56:45.3600672Z remote: Compressing objects:  39% (29/74)        
+2023-06-20T03:56:45.3601111Z remote: Compressing objects:  40% (30/74)        
+2023-06-20T03:56:45.3601530Z remote: Compressing objects:  41% (31/74)        
+2023-06-20T03:56:45.3601968Z remote: Compressing objects:  43% (32/74)        
+2023-06-20T03:56:45.3602403Z remote: Compressing objects:  44% (33/74)        
+2023-06-20T03:56:45.3602822Z remote: Compressing objects:  45% (34/74)        
+2023-06-20T03:56:45.3603257Z remote: Compressing objects:  47% (35/74)        
+2023-06-20T03:56:45.3603688Z remote: Compressing objects:  48% (36/74)        
+2023-06-20T03:56:45.3604105Z remote: Compressing objects:  50% (37/74)        
+2023-06-20T03:56:45.3604537Z remote: Compressing objects:  51% (38/74)        
+2023-06-20T03:56:45.3604969Z remote: Compressing objects:  52% (39/74)        
+2023-06-20T03:56:45.3605405Z remote: Compressing objects:  54% (40/74)        
+2023-06-20T03:56:45.3605831Z remote: Compressing objects:  55% (41/74)        
+2023-06-20T03:56:45.3606282Z remote: Compressing objects:  56% (42/74)        
+2023-06-20T03:56:45.3606840Z remote: Compressing objects:  58% (43/74)        
+2023-06-20T03:56:45.3607264Z remote: Compressing objects:  59% (44/74)        
+2023-06-20T03:56:45.3607696Z remote: Compressing objects:  60% (45/74)        
+2023-06-20T03:56:45.3608136Z remote: Compressing objects:  62% (46/74)        
+2023-06-20T03:56:45.3608648Z remote: Compressing objects:  63% (47/74)        
+2023-06-20T03:56:45.3609032Z remote: Compressing objects:  64% (48/74)        
+2023-06-20T03:56:45.3609414Z remote: Compressing objects:  66% (49/74)        
+2023-06-20T03:56:45.3609791Z remote: Compressing objects:  67% (50/74)        
+2023-06-20T03:56:45.3610166Z remote: Compressing objects:  68% (51/74)        
+2023-06-20T03:56:45.3610548Z remote: Compressing objects:  70% (52/74)        
+2023-06-20T03:56:45.3610926Z remote: Compressing objects:  71% (53/74)        
+2023-06-20T03:56:45.3611407Z remote: Compressing objects:  72% (54/74)        
+2023-06-20T03:56:45.3611799Z remote: Compressing objects:  74% (55/74)        
+2023-06-20T03:56:45.3612187Z remote: Compressing objects:  75% (56/74)        
+2023-06-20T03:56:45.3612556Z remote: Compressing objects:  77% (57/74)        
+2023-06-20T03:56:45.3612941Z remote: Compressing objects:  78% (58/74)        
+2023-06-20T03:56:45.3613326Z remote: Compressing objects:  79% (59/74)        
+2023-06-20T03:56:45.3613704Z remote: Compressing objects:  81% (60/74)        
+2023-06-20T03:56:45.3614085Z remote: Compressing objects:  82% (61/74)        
+2023-06-20T03:56:45.3614462Z remote: Compressing objects:  83% (62/74)        
+2023-06-20T03:56:45.3614843Z remote: Compressing objects:  85% (63/74)        
+2023-06-20T03:56:45.3615204Z remote: Compressing objects:  86% (64/74)        
+2023-06-20T03:56:45.3615581Z remote: Compressing objects:  87% (65/74)        
+2023-06-20T03:56:45.3615962Z remote: Compressing objects:  89% (66/74)        
+2023-06-20T03:56:45.3616448Z remote: Compressing objects:  90% (67/74)        
+2023-06-20T03:56:45.3616830Z remote: Compressing objects:  91% (68/74)        
+2023-06-20T03:56:45.3617217Z remote: Compressing objects:  93% (69/74)        
+2023-06-20T03:56:45.3617585Z remote: Compressing objects:  94% (70/74)        
+2023-06-20T03:56:45.3617970Z remote: Compressing objects:  95% (71/74)        
+2023-06-20T03:56:45.3618353Z remote: Compressing objects:  97% (72/74)        
+2023-06-20T03:56:45.3618718Z remote: Compressing objects:  98% (73/74)        
+2023-06-20T03:56:45.3619102Z remote: Compressing objects: 100% (74/74)        
+2023-06-20T03:56:45.3619508Z remote: Compressing objects: 100% (74/74), done.        
+2023-06-20T03:56:45.3648808Z remote: Total 92 (delta 8), reused 54 (delta 3), pack-reused 0        
+2023-06-20T03:56:45.3784138Z From https://github.com/alphagov/pay-cardid
+2023-06-20T03:56:45.3784833Z  * [new ref]         1673fcdeaa3038657fe169820b58ff98327a8cc9 -> pull/1035/merge
+2023-06-20T03:56:45.3813207Z ##[endgroup]
+2023-06-20T03:56:45.3813859Z ##[group]Determining the checkout info
+2023-06-20T03:56:45.3814419Z ##[endgroup]
+2023-06-20T03:56:45.3830475Z ##[group]Checking out the ref
+2023-06-20T03:56:45.3831609Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1035/merge
+2023-06-20T03:56:45.3910542Z Note: switching to 'refs/remotes/pull/1035/merge'.
+2023-06-20T03:56:45.3910886Z 
+2023-06-20T03:56:45.3911218Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-06-20T03:56:45.3911743Z changes and commit them, and you can discard any commits you make in this
+2023-06-20T03:56:45.3912235Z state without impacting any branches by switching back to a branch.
+2023-06-20T03:56:45.3912519Z 
+2023-06-20T03:56:45.3912752Z If you want to create a new branch to retain commits you create, you may
+2023-06-20T03:56:45.3913305Z do so (now or later) by using -c with the switch command. Example:
+2023-06-20T03:56:45.3913571Z 
+2023-06-20T03:56:45.3913799Z   git switch -c <new-branch-name>
+2023-06-20T03:56:45.3914005Z 
+2023-06-20T03:56:45.3914150Z Or undo this operation with:
+2023-06-20T03:56:45.3914352Z 
+2023-06-20T03:56:45.3914466Z   git switch -
+2023-06-20T03:56:45.3914977Z 
+2023-06-20T03:56:45.3915239Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-06-20T03:56:45.3915548Z 
+2023-06-20T03:56:45.3915870Z HEAD is now at 1673fcd Merge ae0c985ae9bd343310b66c5d9895aa068b5ef505 into b21dcc379e9cb7a9c12729b55057aa32019a8a6e
+2023-06-20T03:56:45.3919636Z ##[endgroup]
+2023-06-20T03:56:45.3963498Z [command]/usr/bin/git log -1 --format='%H'
+2023-06-20T03:56:45.3992641Z '1673fcdeaa3038657fe169820b58ff98327a8cc9'
+
+2023-06-20T03:56:51.2413192Z ##[group]Run actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8
+2023-06-20T03:56:51.2413605Z with:
+2023-06-20T03:56:51.2413836Z   path: ~/.m2
+2023-06-20T03:56:51.2414281Z   key: Linux-m2-0c22fff4a13e2d6baf540048de9add19ce9f901494ae9c5826ec67b9497894b3
+2023-06-20T03:56:51.2414764Z   restore-keys: Linux-m2
+2023-06-20T03:56:51.2415044Z   enableCrossOsArchive: false
+2023-06-20T03:56:51.2415399Z   fail-on-cache-miss: false
+2023-06-20T03:56:51.2415732Z   lookup-only: false
+2023-06-20T03:56:51.2415980Z env:
+2023-06-20T03:56:51.2416346Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-20T03:56:51.2416775Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-20T03:56:51.2417140Z ##[endgroup]
+2023-06-20T03:56:52.5334407Z Received 92521474 of 105104386 (88.0%), 88.1 MBs/sec
+2023-06-20T03:56:52.6862056Z Received 105104386 of 105104386 (100.0%), 86.9 MBs/sec
+2023-06-20T03:56:52.6863128Z Cache Size: ~100 MB (105104386 B)
+2023-06-20T03:56:52.6892824Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0f6ac9f4-943d-4c74-8d87-7bc33d2420c6/cache.tzst -P -C /home/runner/work/pay-cardid/pay-cardid --use-compress-program unzstd
+2023-06-20T03:56:53.0373186Z Cache restored successfully
+2023-06-20T03:56:54.0217796Z Cache restored from key: Linux-m2-49a162bf520401598400ba0cbb1237edf7a27cc47982f7407bc6b015642ca85e
+
+2023-06-20T03:56:54.1067312Z ##[group]Run alphagov/pay-ci/actions/detect-secrets@master
+2023-06-20T03:56:54.1067706Z ##[endgroup]
+2023-06-20T03:56:54.1389342Z ##[command]/usr/bin/docker run --name a6c8cdc6ae43882c54fa5b026df2faf3bf408_d284f3 --label 2a6c8c --workdir /github/workspace --rm -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/pay-cardid/pay-cardid":"/github/workspace" 2a6c8c:dc6ae43882c54fa5b026df2faf3bf408
+2023-06-20T03:56:54.5714355Z .secrets.baseline found
+
+2023-06-20T03:57:11.7885719Z Cleaning up orphan processes
+
+2023-06-20T03:56:37.5408568Z Requested labels: ubuntu-latest
+2023-06-20T03:56:37.5410437Z Job defined at: alphagov/pay-cardid/.github/workflows/run-tests.yml@refs/pull/1035/merge
+2023-06-20T03:56:37.5410583Z Waiting for a runner to pick up this job...
+2023-06-20T03:56:37.8408097Z Job is waiting for a hosted runner to come online.
+2023-06-20T03:56:41.4605706Z Job is about to start running on the hosted runner: GitHub Actions 6 (hosted)
+2023-06-20T03:56:44.3925100Z Current runner version: '2.305.0'
+2023-06-20T03:56:44.3963116Z ##[group]Operating System
+2023-06-20T03:56:44.3963818Z Ubuntu
+2023-06-20T03:56:44.3965126Z 22.04.2
+2023-06-20T03:56:44.3965797Z LTS
+2023-06-20T03:56:44.3966136Z ##[endgroup]
+2023-06-20T03:56:44.3966533Z ##[group]Runner Image
+2023-06-20T03:56:44.3966995Z Image: ubuntu-22.04
+2023-06-20T03:56:44.3967386Z Version: 20230611.1
+2023-06-20T03:56:44.3968006Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230611.1/images/linux/Ubuntu2204-Readme.md
+2023-06-20T03:56:44.3968776Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230611.1
+2023-06-20T03:56:44.3969327Z ##[endgroup]
+2023-06-20T03:56:44.3969692Z ##[group]Runner Image Provisioner
+2023-06-20T03:56:44.3970115Z 2.0.236.1
+2023-06-20T03:56:44.3970530Z ##[endgroup]
+2023-06-20T03:56:44.3971287Z ##[group]GITHUB_TOKEN Permissions
+2023-06-20T03:56:44.3972212Z Contents: read
+2023-06-20T03:56:44.3972613Z Metadata: read
+2023-06-20T03:56:44.3973322Z ##[endgroup]
+2023-06-20T03:56:44.3977986Z Secret source: Dependabot
+2023-06-20T03:56:44.3978601Z Prepare workflow directory
+2023-06-20T03:56:44.4963376Z Prepare all required actions
+2023-06-20T03:56:44.5213991Z Getting action download info
+2023-06-20T03:56:44.7874427Z Download action repository 'actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab' (SHA:8e5e7e5ab8b370d6c329ec480221332ada57f0ab)
+2023-06-20T03:56:45.6368087Z Download action repository 'alphagov/pay-ci@master' (SHA:06f184596f6f252b486a154ea1012f08caed889c)
+2023-06-20T03:56:46.3883891Z Complete job name: detect-secrets
+2023-06-20T03:56:46.5023790Z ##[group]Build container for action use: '/home/runner/work/_actions/alphagov/pay-ci/master/actions/detect-secrets/Dockerfile'.
+2023-06-20T03:56:46.5123719Z ##[command]/usr/bin/docker build -t 2a6c8c:dc6ae43882c54fa5b026df2faf3bf408 -f "/home/runner/work/_actions/alphagov/pay-ci/master/actions/detect-secrets/Dockerfile" "/home/runner/work/_actions/alphagov/pay-ci/master/actions/detect-secrets"
+2023-06-20T03:56:46.7303098Z Sending build context to Docker daemon  7.168kB
+2023-06-20T03:56:46.7308206Z 
+2023-06-20T03:56:46.7862482Z Step 1/3 : FROM governmentdigitalservice/pay-detect-secrets:latest
+2023-06-20T03:56:47.4730036Z latest: Pulling from governmentdigitalservice/pay-detect-secrets
+2023-06-20T03:56:47.4744787Z 213ec9aee27d: Pulling fs layer
+2023-06-20T03:56:47.4748364Z 47858aee13bf: Pulling fs layer
+2023-06-20T03:56:47.4755474Z 975aa27f4e8a: Pulling fs layer
+2023-06-20T03:56:47.4758064Z 6a71c7b1785e: Pulling fs layer
+2023-06-20T03:56:47.4758448Z 0002f9a00c2b: Pulling fs layer
+2023-06-20T03:56:47.4759060Z 2609bc0a9b96: Pulling fs layer
+2023-06-20T03:56:47.4759357Z bb6fa6f41f8d: Pulling fs layer
+2023-06-20T03:56:47.4759955Z 78fbc1d08ecf: Pulling fs layer
+2023-06-20T03:56:47.4760378Z 0002f9a00c2b: Waiting
+2023-06-20T03:56:47.4760688Z 2609bc0a9b96: Waiting
+2023-06-20T03:56:47.4761008Z bb6fa6f41f8d: Waiting
+2023-06-20T03:56:47.4761324Z 78fbc1d08ecf: Waiting
+2023-06-20T03:56:47.4761599Z 6a71c7b1785e: Waiting
+2023-06-20T03:56:47.7545638Z 47858aee13bf: Verifying Checksum
+2023-06-20T03:56:47.7561671Z 47858aee13bf: Download complete
+2023-06-20T03:56:47.7678181Z 213ec9aee27d: Verifying Checksum
+2023-06-20T03:56:47.7683453Z 213ec9aee27d: Download complete
+2023-06-20T03:56:47.9002704Z 975aa27f4e8a: Verifying Checksum
+2023-06-20T03:56:47.9003336Z 975aa27f4e8a: Download complete
+2023-06-20T03:56:47.9863117Z 6a71c7b1785e: Verifying Checksum
+2023-06-20T03:56:47.9863820Z 6a71c7b1785e: Download complete
+2023-06-20T03:56:48.0640367Z 0002f9a00c2b: Verifying Checksum
+2023-06-20T03:56:48.0648870Z 0002f9a00c2b: Download complete
+2023-06-20T03:56:48.2294210Z 2609bc0a9b96: Verifying Checksum
+2023-06-20T03:56:48.2326049Z 213ec9aee27d: Pull complete
+2023-06-20T03:56:48.2326417Z 2609bc0a9b96: Download complete
+2023-06-20T03:56:48.2805911Z bb6fa6f41f8d: Verifying Checksum
+2023-06-20T03:56:48.2822762Z bb6fa6f41f8d: Download complete
+2023-06-20T03:56:48.4776160Z 78fbc1d08ecf: Download complete
+2023-06-20T03:56:48.6669488Z 47858aee13bf: Pull complete
+2023-06-20T03:56:49.4222127Z 975aa27f4e8a: Pull complete
+2023-06-20T03:56:49.4926630Z 6a71c7b1785e: Pull complete
+2023-06-20T03:56:49.8704380Z 0002f9a00c2b: Pull complete
+2023-06-20T03:56:50.3323326Z 2609bc0a9b96: Pull complete
+2023-06-20T03:56:50.6580897Z bb6fa6f41f8d: Pull complete
+2023-06-20T03:56:51.1994408Z 78fbc1d08ecf: Pull complete
+2023-06-20T03:56:51.2049462Z Digest: sha256:1870ccde7b6919638144301f3e2626874586227fffa03ff67a4fa176af0cd005
+2023-06-20T03:56:51.2100305Z Status: Downloaded newer image for governmentdigitalservice/pay-detect-secrets:latest
+2023-06-20T03:56:51.2120310Z  ---> 26e4384fc6cc
+2023-06-20T03:56:51.2121691Z Step 2/3 : COPY entrypoint.sh /entrypoint.sh
+2023-06-20T03:56:52.0254695Z  ---> fb9f99a245af
+2023-06-20T03:56:52.0259501Z Step 3/3 : ENTRYPOINT ["/entrypoint.sh"]
+2023-06-20T03:56:52.0559165Z  ---> Running in 0344ac0b4b6c
+2023-06-20T03:56:53.0229296Z Removing intermediate container 0344ac0b4b6c
+2023-06-20T03:56:53.0229659Z  ---> f558d348d961
+2023-06-20T03:56:53.0264155Z Successfully built f558d348d961
+2023-06-20T03:56:53.0291328Z Successfully tagged 2a6c8c:dc6ae43882c54fa5b026df2faf3bf408
+2023-06-20T03:56:53.0319609Z ##[endgroup]
+2023-06-20T03:56:53.0892056Z ##[group]Run actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab
+2023-06-20T03:56:53.0892450Z with:
+2023-06-20T03:56:53.0892707Z   repository: alphagov/pay-cardid
+2023-06-20T03:56:53.0893194Z   token: ***
+2023-06-20T03:56:53.0893594Z   ssh-strict: true
+2023-06-20T03:56:53.0893837Z   persist-credentials: true
+2023-06-20T03:56:53.0894412Z   clean: true
+2023-06-20T03:56:53.0894636Z   fetch-depth: 1
+2023-06-20T03:56:53.0894838Z   lfs: false
+2023-06-20T03:56:53.0895057Z   submodules: false
+2023-06-20T03:56:53.0895309Z   set-safe-directory: true
+2023-06-20T03:56:53.0895538Z ##[endgroup]
+2023-06-20T03:56:53.4575488Z Syncing repository: alphagov/pay-cardid
+2023-06-20T03:56:53.4578001Z ##[group]Getting Git version info
+2023-06-20T03:56:53.4579110Z Working directory is '/home/runner/work/pay-cardid/pay-cardid'
+2023-06-20T03:56:53.4580461Z [command]/usr/bin/git version
+2023-06-20T03:56:53.4748995Z git version 2.40.1
+2023-06-20T03:56:53.4790933Z ##[endgroup]
+2023-06-20T03:56:53.4816675Z Temporarily overriding HOME='/home/runner/work/_temp/3a8d9522-95b7-4cf0-b482-d3580df030d0' before making global git config changes
+2023-06-20T03:56:53.4817238Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-20T03:56:53.4820518Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pay-cardid/pay-cardid
+2023-06-20T03:56:53.4874791Z Deleting the contents of '/home/runner/work/pay-cardid/pay-cardid'
+2023-06-20T03:56:53.4882360Z ##[group]Initializing the repository
+2023-06-20T03:56:53.4888246Z [command]/usr/bin/git init /home/runner/work/pay-cardid/pay-cardid
+2023-06-20T03:56:53.5007063Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-06-20T03:56:53.5007881Z hint: is subject to change. To configure the initial branch name to use in all
+2023-06-20T03:56:53.5008667Z hint: of your new repositories, which will suppress this warning, call:
+2023-06-20T03:56:53.5009088Z hint: 
+2023-06-20T03:56:53.5009618Z hint: 	git config --global init.defaultBranch <name>
+2023-06-20T03:56:53.5010002Z hint: 
+2023-06-20T03:56:53.5010503Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-06-20T03:56:53.5011135Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-06-20T03:56:53.5011578Z hint: 
+2023-06-20T03:56:53.5011967Z hint: 	git branch -m <name>
+2023-06-20T03:56:53.5027748Z Initialized empty Git repository in /home/runner/work/pay-cardid/pay-cardid/.git/
+2023-06-20T03:56:53.5040450Z [command]/usr/bin/git remote add origin https://github.com/alphagov/pay-cardid
+2023-06-20T03:56:53.5100221Z ##[endgroup]
+2023-06-20T03:56:53.5100813Z ##[group]Disabling automatic garbage collection
+2023-06-20T03:56:53.5104196Z [command]/usr/bin/git config --local gc.auto 0
+2023-06-20T03:56:53.5144659Z ##[endgroup]
+2023-06-20T03:56:53.5145566Z ##[group]Setting up auth
+2023-06-20T03:56:53.5155581Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-20T03:56:53.5199631Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-20T03:56:53.5771326Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-20T03:56:53.5814368Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-20T03:56:53.6118707Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-06-20T03:56:53.6166641Z ##[endgroup]
+2023-06-20T03:56:53.6167464Z ##[group]Fetching the repository
+2023-06-20T03:56:53.6179626Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +1673fcdeaa3038657fe169820b58ff98327a8cc9:refs/remotes/pull/1035/merge
+2023-06-20T03:56:53.9692358Z remote: Enumerating objects: 92, done.        
+2023-06-20T03:56:53.9693555Z remote: Counting objects:   1% (1/92)        
+2023-06-20T03:56:53.9694667Z remote: Counting objects:   2% (2/92)        
+2023-06-20T03:56:53.9695028Z remote: Counting objects:   3% (3/92)        
+2023-06-20T03:56:53.9697278Z remote: Counting objects:   4% (4/92)        
+2023-06-20T03:56:53.9698312Z remote: Counting objects:   5% (5/92)        
+2023-06-20T03:56:53.9706693Z remote: Counting objects:   6% (6/92)        
+2023-06-20T03:56:53.9707299Z remote: Counting objects:   7% (7/92)        
+2023-06-20T03:56:53.9708041Z remote: Counting objects:   8% (8/92)        
+2023-06-20T03:56:53.9727483Z remote: Counting objects:   9% (9/92)        
+2023-06-20T03:56:53.9728377Z remote: Counting objects:  10% (10/92)        
+2023-06-20T03:56:53.9731067Z remote: Counting objects:  11% (11/92)        
+2023-06-20T03:56:53.9731379Z remote: Counting objects:  13% (12/92)        
+2023-06-20T03:56:53.9731687Z remote: Counting objects:  14% (13/92)        
+2023-06-20T03:56:53.9732034Z remote: Counting objects:  15% (14/92)        
+2023-06-20T03:56:53.9732305Z remote: Counting objects:  16% (15/92)        
+2023-06-20T03:56:53.9732588Z remote: Counting objects:  17% (16/92)        
+2023-06-20T03:56:53.9732867Z remote: Counting objects:  18% (17/92)        
+2023-06-20T03:56:53.9733133Z remote: Counting objects:  19% (18/92)        
+2023-06-20T03:56:53.9733415Z remote: Counting objects:  20% (19/92)        
+2023-06-20T03:56:53.9733699Z remote: Counting objects:  21% (20/92)        
+2023-06-20T03:56:53.9733962Z remote: Counting objects:  22% (21/92)        
+2023-06-20T03:56:53.9734240Z remote: Counting objects:  23% (22/92)        
+2023-06-20T03:56:53.9734519Z remote: Counting objects:  25% (23/92)        
+2023-06-20T03:56:53.9734782Z remote: Counting objects:  26% (24/92)        
+2023-06-20T03:56:53.9735256Z remote: Counting objects:  27% (25/92)        
+2023-06-20T03:56:53.9735542Z remote: Counting objects:  28% (26/92)        
+2023-06-20T03:56:53.9735847Z remote: Counting objects:  29% (27/92)        
+2023-06-20T03:56:53.9736120Z remote: Counting objects:  30% (28/92)        
+2023-06-20T03:56:53.9737674Z remote: Counting objects:  31% (29/92)        
+2023-06-20T03:56:53.9738133Z remote: Counting objects:  32% (30/92)        
+2023-06-20T03:56:53.9738408Z remote: Counting objects:  33% (31/92)        
+2023-06-20T03:56:53.9738698Z remote: Counting objects:  34% (32/92)        
+2023-06-20T03:56:53.9738988Z remote: Counting objects:  35% (33/92)        
+2023-06-20T03:56:53.9739598Z remote: Counting objects:  36% (34/92)        
+2023-06-20T03:56:53.9739961Z remote: Counting objects:  38% (35/92)        
+2023-06-20T03:56:53.9740249Z remote: Counting objects:  39% (36/92)        
+2023-06-20T03:56:53.9740519Z remote: Counting objects:  40% (37/92)        
+2023-06-20T03:56:53.9741231Z remote: Counting objects:  41% (38/92)        
+2023-06-20T03:56:53.9741518Z remote: Counting objects:  42% (39/92)        
+2023-06-20T03:56:53.9741813Z remote: Counting objects:  43% (40/92)        
+2023-06-20T03:56:53.9742085Z remote: Counting objects:  44% (41/92)        
+2023-06-20T03:56:53.9742375Z remote: Counting objects:  45% (42/92)        
+2023-06-20T03:56:53.9742661Z remote: Counting objects:  46% (43/92)        
+2023-06-20T03:56:53.9742936Z remote: Counting objects:  47% (44/92)        
+2023-06-20T03:56:53.9743224Z remote: Counting objects:  48% (45/92)        
+2023-06-20T03:56:53.9743513Z remote: Counting objects:  50% (46/92)        
+2023-06-20T03:56:53.9743786Z remote: Counting objects:  51% (47/92)        
+2023-06-20T03:56:53.9744071Z remote: Counting objects:  52% (48/92)        
+2023-06-20T03:56:53.9744359Z remote: Counting objects:  53% (49/92)        
+2023-06-20T03:56:53.9744814Z remote: Counting objects:  54% (50/92)        
+2023-06-20T03:56:53.9745114Z remote: Counting objects:  55% (51/92)        
+2023-06-20T03:56:53.9745417Z remote: Counting objects:  56% (52/92)        
+2023-06-20T03:56:53.9745908Z remote: Counting objects:  57% (53/92)        
+2023-06-20T03:56:53.9746211Z remote: Counting objects:  58% (54/92)        
+2023-06-20T03:56:53.9746510Z remote: Counting objects:  59% (55/92)        
+2023-06-20T03:56:53.9746808Z remote: Counting objects:  60% (56/92)        
+2023-06-20T03:56:53.9747094Z remote: Counting objects:  61% (57/92)        
+2023-06-20T03:56:53.9747391Z remote: Counting objects:  63% (58/92)        
+2023-06-20T03:56:53.9747687Z remote: Counting objects:  64% (59/92)        
+2023-06-20T03:56:53.9748159Z remote: Counting objects:  65% (60/92)        
+2023-06-20T03:56:53.9748446Z remote: Counting objects:  66% (61/92)        
+2023-06-20T03:56:53.9748736Z remote: Counting objects:  67% (62/92)        
+2023-06-20T03:56:53.9749024Z remote: Counting objects:  68% (63/92)        
+2023-06-20T03:56:53.9749297Z remote: Counting objects:  69% (64/92)        
+2023-06-20T03:56:53.9749614Z remote: Counting objects:  70% (65/92)        
+2023-06-20T03:56:53.9749904Z remote: Counting objects:  71% (66/92)        
+2023-06-20T03:56:53.9750199Z remote: Counting objects:  72% (67/92)        
+2023-06-20T03:56:53.9750471Z remote: Counting objects:  73% (68/92)        
+2023-06-20T03:56:53.9750758Z remote: Counting objects:  75% (69/92)        
+2023-06-20T03:56:53.9751045Z remote: Counting objects:  76% (70/92)        
+2023-06-20T03:56:53.9751319Z remote: Counting objects:  77% (71/92)        
+2023-06-20T03:56:53.9751789Z remote: Counting objects:  78% (72/92)        
+2023-06-20T03:56:53.9752092Z remote: Counting objects:  79% (73/92)        
+2023-06-20T03:56:53.9752374Z remote: Counting objects:  80% (74/92)        
+2023-06-20T03:56:53.9752671Z remote: Counting objects:  81% (75/92)        
+2023-06-20T03:56:53.9752974Z remote: Counting objects:  82% (76/92)        
+2023-06-20T03:56:53.9753253Z remote: Counting objects:  83% (77/92)        
+2023-06-20T03:56:53.9753553Z remote: Counting objects:  84% (78/92)        
+2023-06-20T03:56:53.9753858Z remote: Counting objects:  85% (79/92)        
+2023-06-20T03:56:53.9754161Z remote: Counting objects:  86% (80/92)        
+2023-06-20T03:56:53.9754440Z remote: Counting objects:  88% (81/92)        
+2023-06-20T03:56:53.9754735Z remote: Counting objects:  89% (82/92)        
+2023-06-20T03:56:53.9755030Z remote: Counting objects:  90% (83/92)        
+2023-06-20T03:56:53.9755314Z remote: Counting objects:  91% (84/92)        
+2023-06-20T03:56:53.9755819Z remote: Counting objects:  92% (85/92)        
+2023-06-20T03:56:53.9756145Z remote: Counting objects:  93% (86/92)        
+2023-06-20T03:56:53.9756424Z remote: Counting objects:  94% (87/92)        
+2023-06-20T03:56:53.9756715Z remote: Counting objects:  95% (88/92)        
+2023-06-20T03:56:53.9757012Z remote: Counting objects:  96% (89/92)        
+2023-06-20T03:56:53.9757309Z remote: Counting objects:  97% (90/92)        
+2023-06-20T03:56:53.9757591Z remote: Counting objects:  98% (91/92)        
+2023-06-20T03:56:53.9758087Z remote: Counting objects: 100% (92/92)        
+2023-06-20T03:56:53.9758401Z remote: Counting objects: 100% (92/92), done.        
+2023-06-20T03:56:53.9808371Z remote: Compressing objects:   1% (1/74)        
+2023-06-20T03:56:53.9808743Z remote: Compressing objects:   2% (2/74)        
+2023-06-20T03:56:53.9809065Z remote: Compressing objects:   4% (3/74)        
+2023-06-20T03:56:53.9810779Z remote: Compressing objects:   5% (4/74)        
+2023-06-20T03:56:53.9811141Z remote: Compressing objects:   6% (5/74)        
+2023-06-20T03:56:53.9811458Z remote: Compressing objects:   8% (6/74)        
+2023-06-20T03:56:53.9811782Z remote: Compressing objects:   9% (7/74)        
+2023-06-20T03:56:53.9812078Z remote: Compressing objects:  10% (8/74)        
+2023-06-20T03:56:53.9812392Z remote: Compressing objects:  12% (9/74)        
+2023-06-20T03:56:53.9812715Z remote: Compressing objects:  13% (10/74)        
+2023-06-20T03:56:53.9813024Z remote: Compressing objects:  14% (11/74)        
+2023-06-20T03:56:53.9813363Z remote: Compressing objects:  16% (12/74)        
+2023-06-20T03:56:53.9813679Z remote: Compressing objects:  17% (13/74)        
+2023-06-20T03:56:53.9814411Z remote: Compressing objects:  18% (14/74)        
+2023-06-20T03:56:53.9814774Z remote: Compressing objects:  20% (15/74)        
+2023-06-20T03:56:53.9815088Z remote: Compressing objects:  21% (16/74)        
+2023-06-20T03:56:53.9815398Z remote: Compressing objects:  22% (17/74)        
+2023-06-20T03:56:53.9815695Z remote: Compressing objects:  24% (18/74)        
+2023-06-20T03:56:53.9816339Z remote: Compressing objects:  25% (19/74)        
+2023-06-20T03:56:53.9816651Z remote: Compressing objects:  27% (20/74)        
+2023-06-20T03:56:53.9816948Z remote: Compressing objects:  28% (21/74)        
+2023-06-20T03:56:53.9817258Z remote: Compressing objects:  29% (22/74)        
+2023-06-20T03:56:53.9817567Z remote: Compressing objects:  31% (23/74)        
+2023-06-20T03:56:53.9817863Z remote: Compressing objects:  32% (24/74)        
+2023-06-20T03:56:53.9818187Z remote: Compressing objects:  33% (25/74)        
+2023-06-20T03:56:53.9818493Z remote: Compressing objects:  35% (26/74)        
+2023-06-20T03:56:53.9818810Z remote: Compressing objects:  36% (27/74)        
+2023-06-20T03:56:53.9819109Z remote: Compressing objects:  37% (28/74)        
+2023-06-20T03:56:53.9819417Z remote: Compressing objects:  39% (29/74)        
+2023-06-20T03:56:53.9819727Z remote: Compressing objects:  40% (30/74)        
+2023-06-20T03:56:53.9820024Z remote: Compressing objects:  41% (31/74)        
+2023-06-20T03:56:53.9821189Z remote: Compressing objects:  43% (32/74)        
+2023-06-20T03:56:53.9821577Z remote: Compressing objects:  44% (33/74)        
+2023-06-20T03:56:53.9821875Z remote: Compressing objects:  45% (34/74)        
+2023-06-20T03:56:53.9822183Z remote: Compressing objects:  47% (35/74)        
+2023-06-20T03:56:53.9822492Z remote: Compressing objects:  48% (36/74)        
+2023-06-20T03:56:53.9822786Z remote: Compressing objects:  50% (37/74)        
+2023-06-20T03:56:53.9823116Z remote: Compressing objects:  51% (38/74)        
+2023-06-20T03:56:53.9823427Z remote: Compressing objects:  52% (39/74)        
+2023-06-20T03:56:53.9823745Z remote: Compressing objects:  54% (40/74)        
+2023-06-20T03:56:53.9824041Z remote: Compressing objects:  55% (41/74)        
+2023-06-20T03:56:53.9824512Z remote: Compressing objects:  56% (42/74)        
+2023-06-20T03:56:53.9919463Z remote: Compressing objects:  58% (43/74)        
+2023-06-20T03:56:53.9919808Z remote: Compressing objects:  59% (44/74)        
+2023-06-20T03:56:53.9920100Z remote: Compressing objects:  60% (45/74)        
+2023-06-20T03:56:53.9920627Z remote: Compressing objects:  62% (46/74)        
+2023-06-20T03:56:53.9920945Z remote: Compressing objects:  63% (47/74)        
+2023-06-20T03:56:53.9921245Z remote: Compressing objects:  64% (48/74)        
+2023-06-20T03:56:53.9921558Z remote: Compressing objects:  66% (49/74)        
+2023-06-20T03:56:53.9921873Z remote: Compressing objects:  67% (50/74)        
+2023-06-20T03:56:53.9922552Z remote: Compressing objects:  68% (51/74)        
+2023-06-20T03:56:53.9922869Z remote: Compressing objects:  70% (52/74)        
+2023-06-20T03:56:53.9923193Z remote: Compressing objects:  71% (53/74)        
+2023-06-20T03:56:53.9923492Z remote: Compressing objects:  72% (54/74)        
+2023-06-20T03:56:53.9923811Z remote: Compressing objects:  74% (55/74)        
+2023-06-20T03:56:53.9924563Z remote: Compressing objects:  75% (56/74)        
+2023-06-20T03:56:53.9925031Z remote: Compressing objects:  77% (57/74)        
+2023-06-20T03:56:53.9925319Z remote: Compressing objects:  78% (58/74)        
+2023-06-20T03:56:53.9925616Z remote: Compressing objects:  79% (59/74)        
+2023-06-20T03:56:53.9925918Z remote: Compressing objects:  81% (60/74)        
+2023-06-20T03:56:53.9926206Z remote: Compressing objects:  82% (61/74)        
+2023-06-20T03:56:53.9926692Z remote: Compressing objects:  83% (62/74)        
+2023-06-20T03:56:53.9927005Z remote: Compressing objects:  85% (63/74)        
+2023-06-20T03:56:53.9927465Z remote: Compressing objects:  86% (64/74)        
+2023-06-20T03:56:53.9927970Z remote: Compressing objects:  87% (65/74)        
+2023-06-20T03:56:53.9928428Z remote: Compressing objects:  89% (66/74)        
+2023-06-20T03:56:53.9928890Z remote: Compressing objects:  90% (67/74)        
+2023-06-20T03:56:53.9929176Z remote: Compressing objects:  91% (68/74)        
+2023-06-20T03:56:53.9929464Z remote: Compressing objects:  93% (69/74)        
+2023-06-20T03:56:53.9929753Z remote: Compressing objects:  94% (70/74)        
+2023-06-20T03:56:53.9930219Z remote: Compressing objects:  95% (71/74)        
+2023-06-20T03:56:53.9930690Z remote: Compressing objects:  97% (72/74)        
+2023-06-20T03:56:53.9930998Z remote: Compressing objects:  98% (73/74)        
+2023-06-20T03:56:53.9931451Z remote: Compressing objects: 100% (74/74)        
+2023-06-20T03:56:53.9931768Z remote: Compressing objects: 100% (74/74), done.        
+2023-06-20T03:56:54.0312805Z remote: Total 92 (delta 8), reused 54 (delta 3), pack-reused 0        
+2023-06-20T03:56:54.0407053Z From https://github.com/alphagov/pay-cardid
+2023-06-20T03:56:54.0408127Z  * [new ref]         1673fcdeaa3038657fe169820b58ff98327a8cc9 -> pull/1035/merge
+2023-06-20T03:56:54.0444804Z ##[endgroup]
+2023-06-20T03:56:54.0446134Z ##[group]Determining the checkout info
+2023-06-20T03:56:54.0452016Z ##[endgroup]
+2023-06-20T03:56:54.0453988Z ##[group]Checking out the ref
+2023-06-20T03:56:54.0454812Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1035/merge
+2023-06-20T03:56:54.0588011Z Note: switching to 'refs/remotes/pull/1035/merge'.
+2023-06-20T03:56:54.0588870Z 
+2023-06-20T03:56:54.0589802Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-06-20T03:56:54.0591060Z changes and commit them, and you can discard any commits you make in this
+2023-06-20T03:56:54.0592043Z state without impacting any branches by switching back to a branch.
+2023-06-20T03:56:54.0592607Z 
+2023-06-20T03:56:54.0593042Z If you want to create a new branch to retain commits you create, you may
+2023-06-20T03:56:54.0593864Z do so (now or later) by using -c with the switch command. Example:
+2023-06-20T03:56:54.0594455Z 
+2023-06-20T03:56:54.0595020Z   git switch -c <new-branch-name>
+2023-06-20T03:56:54.0595495Z 
+2023-06-20T03:56:54.0597070Z Or undo this operation with:
+2023-06-20T03:56:54.0602220Z 
+2023-06-20T03:56:54.0602731Z   git switch -
+2023-06-20T03:56:54.0603178Z 
+2023-06-20T03:56:54.0603656Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-06-20T03:56:54.0604189Z 
+2023-06-20T03:56:54.0604751Z HEAD is now at 1673fcd Merge ae0c985ae9bd343310b66c5d9895aa068b5ef505 into b21dcc379e9cb7a9c12729b55057aa32019a8a6e
+2023-06-20T03:56:54.0606640Z ##[endgroup]
+2023-06-20T03:56:54.0672599Z [command]/usr/bin/git log -1 --format='%H'
+2023-06-20T03:56:54.0698698Z '1673fcdeaa3038657fe169820b58ff98327a8cc9'
+2023-06-20T03:56:54.1067339Z ##[group]Run alphagov/pay-ci/actions/detect-secrets@master
+2023-06-20T03:56:54.1067710Z ##[endgroup]
+2023-06-20T03:56:54.1389457Z ##[command]/usr/bin/docker run --name a6c8cdc6ae43882c54fa5b026df2faf3bf408_d284f3 --label 2a6c8c --workdir /github/workspace --rm -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/pay-cardid/pay-cardid":"/github/workspace" 2a6c8c:dc6ae43882c54fa5b026df2faf3bf408
+2023-06-20T03:56:54.5714408Z .secrets.baseline found
+2023-06-20T03:56:55.8609510Z Post job cleanup.
+2023-06-20T03:56:56.0059665Z [command]/usr/bin/git version
+2023-06-20T03:56:56.0118328Z git version 2.40.1
+2023-06-20T03:56:56.0186664Z Temporarily overriding HOME='/home/runner/work/_temp/63ad78ab-4aac-4b43-a256-3390e3d1c4dc' before making global git config changes
+2023-06-20T03:56:56.0188325Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-20T03:56:56.0198653Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pay-cardid/pay-cardid
+2023-06-20T03:56:56.0247495Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-20T03:56:56.0302439Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-20T03:56:56.0601757Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-20T03:56:56.0676250Z http.https://github.com/.extraheader
+2023-06-20T03:56:56.0691520Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-20T03:56:56.0759472Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-20T03:56:56.1395383Z Cleaning up orphan processes
+
+2023-06-20T03:57:11.4072895Z Post job cleanup.

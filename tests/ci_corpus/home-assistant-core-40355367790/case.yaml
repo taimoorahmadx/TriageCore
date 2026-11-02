@@ -1,4 +1,5 @@
 repo: home-assistant/core
+source: mined
 run_id: 40355367790
 head_sha: 38f982e7bf491ff094b3523bc8e0fab62aca3d63
 run_attempts:

@@ -1,0 +1,49 @@
+repo: pholser/junit-quickcheck
+run_id: 4631885da3cfd6601de5d24133fa3828a590ca9e
+head_sha: 4631885da3cfd6601de5d24133fa3828a590ca9e
+run_attempts: []
+commits:
+- sha: 4631885da3cfd6601de5d24133fa3828a590ca9e
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: f49643f41291860c6a07622bb8ecbdf6e116330e
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: c4ff705abf9bfd11787bd8de2332f6675a8783dc
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: ed4b3972acf283848f3ddfb4682678c92156718f
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 09fed876cd509539aae5bdc3babf356219dcfa63
+  author: dependabot[bot]
+  files: []
+- sha: 27415d26ee5232b8e8f6c315ccd2bd7bd81433bd
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 4fed8ad4e855deffb3d72fa8975317d22352160a
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 43a1c3fc189c6dd117666b834de35430abd9ed6d
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: e14c78ee96537f108497010c0bb16d14fd9e86ce
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: aea2b5b443b06f5948d963bb2f558c3661b3b0dd
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

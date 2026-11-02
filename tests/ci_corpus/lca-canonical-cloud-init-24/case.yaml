@@ -1,0 +1,83 @@
+repo: canonical/cloud-init
+run_id: '24'
+head_sha: f18f82de3e0270f6dfddf22f1f487104b2428e35
+run_attempts: []
+commits:
+- sha: f18f82de3e0270f6dfddf22f1f487104b2428e35
+  author: CarlosNihelton
+  files:
+  - cloudinit/sources/DataSourceWSL.py
+  - tests/unittests/sources/test_wsl.py
+- sha: f8fb69b7ac6b8f81546bc9dbf286579b57666e54
+  author: CarlosNihelton
+  files:
+  - cloudinit/sources/DataSourceWSL.py
+  - tests/unittests/sources/test_wsl.py
+- sha: c5260b18dba6dc3c18d651c78f35713a884d0fb8
+  author: CarlosNihelton
+  files:
+  - cloudinit/sources/DataSourceWSL.py
+  - tests/unittests/sources/test_wsl.py
+- sha: 4940351013f5c60149cb8cfd2f3c1debcb937122
+  author: TheRealFalcon
+  files:
+  - integration-requirements.txt
+  - tests/integration_tests/assets/enable_coverage.py
+  - tests/integration_tests/conftest.py
+  - tests/integration_tests/instances.py
+  - tests/integration_tests/integration_settings.py
+  - tests/integration_tests/util.py
+  - tox.ini
+- sha: f1ca01c5bc7f8cf6eb2536465b47a22d44001751
+  author: TheRealFalcon
+  files:
+  - tests/helpers.py
+  - tests/unittests/config/test_cc_chef.py
+  - tests/unittests/config/test_cc_resolv_conf.py
+  - tests/unittests/config/test_modules.py
+  - tests/unittests/config/test_schema.py
+  - tests/unittests/helpers.py
+  - tests/unittests/sources/vmware/test_vmware_config_file.py
+  - tests/unittests/test_ds_identify.py
+  - tests/unittests/test_helpers.py
+  - tests/unittests/test_render_template.py
+  - tests/unittests/test_subp.py
+- sha: 1c5726b1cc8d49752ad438cb4d831410326a6c35
+  author: TheRealFalcon
+  files:
+  - tests/integration_tests/bugs/test_lp1835584.py
+  - tests/integration_tests/conftest.py
+  - tests/integration_tests/instances.py
+  - tests/integration_tests/test_kernel_commandline_match.py
+  - tests/integration_tests/test_upgrade.py
+- sha: 5b5eb8bd88aa1577ed37524be7c1b67c2f78f02d
+  author: TheRealFalcon
+  files:
+  - doc/rtd/reference/cli.rst
+- sha: 5b6d08deb1e54615ca321b1da7af032676adb6b8
+  author: dermotbradley
+  files:
+  - cloudinit/distros/alpine.py
+  - tests/unittests/net/test_dhcp.py
+- sha: 034a5cdf10582da0492321f861b2b8b42182a54e
+  author: holmanb
+  files:
+  - requirements.txt
+  - test-requirements.txt
+- sha: 1baa9ff060b549391fd6e29028ac78311b5df58b
+  author: phsm
+  files:
+  - cloudinit/distros/__init__.py
+  - cloudinit/distros/amazon.py
+  - cloudinit/distros/debian.py
+  - cloudinit/distros/freebsd.py
+  - cloudinit/distros/rhel.py
+  - cloudinit/net/dhcp.py
+  - cloudinit/sources/DataSourceCloudStack.py
+  - tests/unittests/net/test_dhcp.py
+  - tests/unittests/sources/test_cloudstack.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

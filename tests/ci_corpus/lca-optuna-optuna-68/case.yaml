@@ -1,0 +1,58 @@
+repo: optuna/optuna
+run_id: '68'
+head_sha: 0b08b8e82f8e67d89dd4335e63ecd95ab6f5f048
+run_attempts: []
+commits:
+- sha: 0b08b8e82f8e67d89dd4335e63ecd95ab6f5f048
+  author: nabenabe0928
+  files:
+  - optuna/samplers/_tpe/sampler.py
+- sha: 770a412f5d01cdb2cd8486ab2e9696e112da2ae4
+  author: nabenabe0928
+  files:
+  - .github/workflows/mac-tests.yml
+  - .github/workflows/tests-integration.yml
+  - .github/workflows/tests-mpi.yml
+  - .github/workflows/tests-storage.yml
+  - .github/workflows/tests-with-minimum-versions.yml
+  - .github/workflows/tests.yml
+  - .github/workflows/windows-tests.yml
+- sha: d63d0cc00dd103d7f79fe18135d463d29979fe0d
+  author: nabenabe0928
+  files:
+  - optuna/multi_objective/samplers/_motpe.py
+  - optuna/samplers/_tpe/sampler.py
+- sha: 804fb71ecb2005473af178052d8b847739bd9c51
+  author: nabenabe0928
+  files:
+  - optuna/multi_objective/samplers/_motpe.py
+  - optuna/samplers/_tpe/sampler.py
+- sha: e54ae1f54979e1b916b801b8993ec075be4b9757
+  author: not522
+  files:
+  - optuna/study/_dataframe.py
+- sha: ae83e247a44fba0aba5716d87b201bf3ab6ba053
+  author: eukaryo
+  files:
+  - docs/source/faq.rst
+- sha: 75c23ae2cd8c03c7e2a84b69c961c1d29c40835a
+  author: not522
+  files:
+  - docs/source/reference/samplers/index.rst
+- sha: 524a4f9b30eef4d85547065193f1845289d3eedb
+  author: not522
+  files:
+  - pyproject.toml
+- sha: 3dc1338d517e4c9cde7d23504974ccf10ad43655
+  author: not522
+  files:
+  - optuna/study/_study_summary.py
+- sha: 57b54708c27da8da98952a7a57b7a0a35560c5fc
+  author: not522
+  files:
+  - optuna/study/_frozen.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

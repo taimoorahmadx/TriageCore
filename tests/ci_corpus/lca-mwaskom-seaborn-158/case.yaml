@@ -1,0 +1,73 @@
+repo: mwaskom/seaborn
+run_id: '158'
+head_sha: 6cbb12e47665eda2c687b4431d6ce789e74ea4a4
+run_attempts: []
+commits:
+- sha: 6cbb12e47665eda2c687b4431d6ce789e74ea4a4
+  author: mwaskom
+  files:
+  - seaborn/_base.py
+  - seaborn/_core/plot.py
+- sha: e9c20f0b4b7421fe27f71757b71adbb446a82935
+  author: mwaskom
+  files:
+  - pyproject.toml
+  - seaborn/_base.py
+  - seaborn/_compat.py
+  - seaborn/_core/plot.py
+  - seaborn/categorical.py
+  - seaborn/relational.py
+  - tests/_stats/test_density.py
+  - tests/test_categorical.py
+- sha: a3cb0f1b33551eb25fed1907d0abdd0237fac215
+  author: aalok-sathe
+  files:
+  - seaborn/categorical.py
+- sha: 6890b315d00b74f372bc91f3929c803837b2ddf1
+  author: mwaskom
+  files:
+  - doc/whatsnew/v0.13.1.rst
+- sha: 1771d8e2c903847d4274963638fbae32c52bd2d8
+  author: mwaskom
+  files:
+  - doc/conf.py
+  - doc/whatsnew/index.rst
+  - doc/whatsnew/v0.13.1.rst
+- sha: 785708f4a4b5a4497958fa611df78da96b311879
+  author: hamdanal
+  files:
+  - seaborn/_base.py
+  - seaborn/_compat.py
+  - seaborn/_core/plot.py
+  - seaborn/_core/properties.py
+  - seaborn/_statistics.py
+  - seaborn/categorical.py
+  - seaborn/distributions.py
+  - seaborn/relational.py
+  - seaborn/utils.py
+  - tests/_core/test_plot.py
+  - tests/_core/test_properties.py
+  - tests/test_matrix.py
+- sha: 45a098fd254b6b7385e708b29a556017808ecd40
+  author: MaozGelbart
+  files:
+  - seaborn/_core/plot.py
+  - tests/_core/test_plot.py
+- sha: 2c115ed7626a236c772ee8a4eacdfa300c570e68
+  author: mwaskom
+  files:
+  - seaborn/categorical.py
+  - tests/test_categorical.py
+- sha: 1617be03dc8f6c2977dbb31714e3ea9029ea3c9a
+  author: mwaskom
+  files:
+  - doc/whatsnew/v0.13.1.rst
+- sha: 9a0842d3a8449bc4d034792789495bd16a0f1615
+  author: mwaskom
+  files:
+  - .github/workflows/ci.yaml
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

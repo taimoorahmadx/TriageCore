@@ -1,0 +1,80 @@
+repo: hacs/integration
+run_id: '60'
+head_sha: 5fea24b4a3fc4952e83474db5e7dc05af9ec76f6
+run_attempts: []
+commits:
+- sha: 5fea24b4a3fc4952e83474db5e7dc05af9ec76f6
+  author: ludeeus
+  files:
+  - tests/common.py
+  - tests/fixtures/proxy/raw.githubusercontent.com/octocat/integration/1.0.0/README.md
+  - tests/fixtures/proxy/raw.githubusercontent.com/octocat/integration/1.0.0/hacs.json
+  - tests/fixtures/proxy/raw.githubusercontent.com/octocat/integration/2.0.0/README.md
+  - tests/fixtures/proxy/raw.githubusercontent.com/octocat/integration/2.0.0/hacs.json
+  - tests/repositories/test_get_documentation.py
+  - tests/repositories/test_get_hacs_json.py
+- sha: a746614296c4ed4f7585ed110697a65c3ab567dc
+  author: ludeeus
+  files:
+  - custom_components/hacs/repositories/base.py
+  - custom_components/hacs/update.py
+- sha: 09ec6844359469b7ad739c3702879bddb563a550
+  author: ludeeus
+  files:
+  - custom_components/hacs/repositories/base.py
+  - tests/common.py
+  - tests/conftest.py
+  - tests/utils/test_validate.py
+  - tests/validate/test_hacsjson_check.py
+- sha: 8f0c7cf1fc7bbb458fdadd2d817cade3e1cdf85c
+  author: ludeeus
+  files:
+  - action/action.py
+  - custom_components/hacs/enums.py
+  - custom_components/hacs/repositories/__init__.py
+  - custom_components/hacs/repositories/base.py
+  - custom_components/hacs/repositories/blueprint.py
+  - custom_components/hacs/update.py
+  - custom_components/hacs/utils/data.py
+  - custom_components/hacs/utils/path.py
+  - custom_components/hacs/utils/validate.py
+  - tests/conftest.py
+- sha: 38f136e4a3515262f63c2a954c40e78966564178
+  author: dependabot[bot]
+  files:
+  - .github/workflows/codeql-analysis.yml
+- sha: 90fcc9acbe2de8e554ad80c193c40dfae7b76add
+  author: dependabot[bot]
+  files:
+  - .github/workflows/action-container.yml
+  - .github/workflows/codeql-analysis.yml
+  - .github/workflows/generate-hacs-data.yml
+  - .github/workflows/lint.yaml
+  - .github/workflows/publish.yml
+  - .github/workflows/pull_requests_labels.yml
+  - .github/workflows/pytest.yml
+  - .github/workflows/validate.yml
+- sha: 1d7ed45c1f9152452308c094cf05f07884e65758
+  author: dependabot[bot]
+  files:
+  - requirements_test.txt
+- sha: 63b2c414fa2e643bff1f61921b22ab704a4749a0
+  author: ludeeus
+  files:
+  - custom_components/hacs/repositories/base.py
+  - custom_components/hacs/update.py
+- sha: 8c56abe6da45b6c73650ad9c49d610846111a44a
+  author: ludeeus
+  files:
+  - .github/workflows/lint.yaml
+  - .github/workflows/publish.yml
+  - .github/workflows/validate.yml
+- sha: ad64bc7ac19a03c2d4d0a28c78bd693a8b799d65
+  author: ludeeus
+  files:
+  - .github/workflows/generate-hacs-data.yml
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

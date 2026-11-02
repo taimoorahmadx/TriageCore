@@ -1,0 +1,370 @@
+2023-06-10T09:19:08.4293811Z ##[group]Run sudo apt-get update
+2023-06-10T09:19:08.4294198Z [36;1msudo apt-get update[0m
+2023-06-10T09:19:08.4294573Z [36;1msudo apt-get install jq[0m
+2023-06-10T09:19:08.4359841Z shell: /usr/bin/bash -e {0}
+2023-06-10T09:19:08.4360178Z ##[endgroup]
+2023-06-10T09:19:08.9184466Z Hit:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+2023-06-10T09:19:08.9185564Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+2023-06-10T09:19:08.9186415Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+2023-06-10T09:19:08.9187089Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+2023-06-10T09:19:08.9187900Z Get:5 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3611 B]
+2023-06-10T09:19:09.3222625Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [672 kB]
+2023-06-10T09:19:09.3348602Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [182 kB]
+2023-06-10T09:19:09.3384860Z Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [15.0 kB]
+2023-06-10T09:19:09.3404762Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [350 kB]
+2023-06-10T09:19:09.3449894Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [52.8 kB]
+2023-06-10T09:19:09.3469934Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [920 kB]
+2023-06-10T09:19:09.3588780Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [194 kB]
+2023-06-10T09:19:09.3629260Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [20.0 kB]
+2023-06-10T09:19:09.4545567Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [40.9 kB]
+2023-06-10T09:19:09.4565008Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+2023-06-10T09:19:09.5013590Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [23.4 kB]
+2023-06-10T09:19:09.5021240Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [548 B]
+2023-06-10T09:19:09.6337741Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [455 kB]
+2023-06-10T09:19:09.6384989Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [122 kB]
+2023-06-10T09:19:09.6398506Z Get:20 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [10.1 kB]
+2023-06-10T09:19:09.6437479Z Get:21 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [349 kB]
+2023-06-10T09:19:09.6471056Z Get:22 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [52.6 kB]
+2023-06-10T09:19:09.6488107Z Get:23 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [732 kB]
+2023-06-10T09:19:09.6585730Z Get:24 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [129 kB]
+2023-06-10T09:19:09.6618284Z Get:25 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [15.6 kB]
+2023-06-10T09:19:09.7358957Z Hit:26 https://ppa.launchpadcontent.net/ubuntu-toolchain-r/test/ubuntu jammy InRelease
+2023-06-10T09:19:09.7646178Z Get:27 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [65.9 kB]
+2023-06-10T09:19:09.7677928Z Get:28 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [14.3 kB]
+2023-06-10T09:19:09.7701239Z Get:29 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main armhf Packages [7488 B]
+2023-06-10T09:19:20.9944902Z Fetched 4764 kB in 1s (3684 kB/s)
+2023-06-10T09:19:21.9138478Z Reading package lists...
+2023-06-10T09:19:21.9972149Z Reading package lists...
+2023-06-10T09:19:22.1985889Z Building dependency tree...
+2023-06-10T09:19:22.2001076Z Reading state information...
+2023-06-10T09:19:22.3865670Z jq is already the newest version (1.6-2.1ubuntu3).
+2023-06-10T09:19:22.3867047Z 0 upgraded, 0 newly installed, 0 to remove and 109 not upgraded.
+
+2023-06-10T09:18:48.4249520Z ##[group]Run jenkins-infra/fetch-codeql-action@v1
+2023-06-10T09:18:48.4249855Z with:
+2023-06-10T09:18:48.4250074Z   version: v2.12.2
+2023-06-10T09:18:48.4250312Z ##[endgroup]
+2023-06-10T09:18:48.4614016Z ##[group]Run gh release download --repo https://github.com/github/codeql-cli-binaries --pattern codeql-linux64.zip "v2.12.2"
+2023-06-10T09:18:48.4614757Z [36;1mgh release download --repo https://github.com/github/codeql-cli-binaries --pattern codeql-linux64.zip "v2.12.2"[0m
+2023-06-10T09:18:48.4615271Z [36;1munzip -q -d "${RUNNER_TEMP}" codeql-linux64.zip[0m
+2023-06-10T09:18:48.4615642Z [36;1mecho "${RUNNER_TEMP}/codeql" >> "${GITHUB_PATH}"[0m
+2023-06-10T09:18:48.4683758Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-06-10T09:18:48.4684085Z env:
+2023-06-10T09:18:48.4684513Z   GITHUB_TOKEN: ***
+2023-06-10T09:18:48.4684912Z ##[endgroup]
+
+2023-06-10T09:21:30.4572552Z Cleaning up orphan processes
+
+2023-06-10T09:19:23.0055149Z ##[group]Run set -o errexit
+2023-06-10T09:19:23.0055511Z [36;1mset -o errexit[0m
+2023-06-10T09:19:23.0055770Z [36;1mset -o nounset[0m
+2023-06-10T09:19:23.0056014Z [36;1mset -o pipefail[0m
+2023-06-10T09:19:23.0056275Z [36;1m[0m
+2023-06-10T09:19:23.0056558Z [36;1mcodeql pack install "$CODEQL_RULES_DIR/src/"[0m
+2023-06-10T09:19:23.0056907Z [36;1mcodeql pack download codeql/java-queries@0.5.2[0m
+2023-06-10T09:19:23.0057203Z [36;1m[0m
+2023-06-10T09:19:23.0057466Z [36;1mecho "::group::Create Database"[0m
+2023-06-10T09:19:23.0057987Z [36;1mLGTM_INDEX_XML_MODE=all codeql database create --language=java --source-root="$CHECKOUT_DIR" "$GITHUB_WORKSPACE/database" || { echo "Failed to create database" >&2 ; exit 1 ; }[0m
+2023-06-10T09:19:23.0058488Z [36;1mecho "::endgroup::"[0m
+2023-06-10T09:19:23.0058734Z [36;1m[0m
+2023-06-10T09:19:23.0059000Z [36;1mecho "::group::Analyze Database"[0m
+2023-06-10T09:19:23.0059782Z [36;1mcodeql database analyze --sarif-add-query-help --format=sarifv2.1.0 --output=jenkins-security-scan-raw.sarif "$GITHUB_WORKSPACE/database" "$CODEQL_RULES_DIR/src/" codeql/java-queries:AlertSuppression.ql codeql/java-queries:AlertSuppressionAnnotations.ql || { echo "Failed to analyze database" >&2 ; exit 1 ; }[0m
+2023-06-10T09:19:23.0060811Z [36;1mecho "::endgroup::"[0m
+2023-06-10T09:19:23.0061058Z [36;1m[0m
+2023-06-10T09:19:23.0061331Z [36;1m# Process the generated SARIF file:[0m
+2023-06-10T09:19:23.0061732Z [36;1m# 1. Prevent conflicts with otherwise set up CodeQL scan by renaming the tool driver[0m
+2023-06-10T09:19:23.0062219Z [36;1m# 2. Remove suppressed warnings because GitHub Code Scanning does not support inline suppressions[0m
+2023-06-10T09:19:23.0063199Z [36;1mjq 'setpath(path(.runs[].tool.driver.name); "Jenkins Security Scan") | setpath(path(.runs[].tool.driver.organization); "Jenkins Project") | del(.runs[].results[] | select( .suppressions | length != 0 ))' jenkins-security-scan-raw.sarif > jenkins-security-scan.sarif[0m
+2023-06-10T09:19:23.0127282Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-06-10T09:19:23.0127549Z env:
+2023-06-10T09:19:23.0127823Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-10T09:19:23.0128197Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-10T09:19:23.0128644Z   GITHUB_TOKEN: ***
+2023-06-10T09:19:23.0128995Z   CODEQL_RULES_DIR: /home/runner/work/file-operations-plugin/file-operations-plugin/jenkins-security-scan-rules
+2023-06-10T09:19:23.0129455Z   CHECKOUT_DIR: /home/runner/work/file-operations-plugin/file-operations-plugin
+2023-06-10T09:19:23.0129755Z ##[endgroup]
+2023-06-10T09:19:23.9188630Z Dependencies resolved. Installing packages...
+2023-06-10T09:19:23.9195368Z Install location: /home/runner/.codeql/packages
+2023-06-10T09:19:27.5301560Z Package install location: /home/runner/.codeql/packages
+2023-06-10T09:19:27.5308663Z Installed fresh codeql/java-all@0.5.2 (library)
+2023-06-10T09:19:27.5309336Z Installed fresh codeql/regex@0.0.6 (library)
+2023-06-10T09:19:27.5310928Z Installed fresh codeql/tutorial@0.0.3 (library)
+2023-06-10T09:19:27.5314019Z Installed fresh codeql/typetracking@0.0.3 (library)
+2023-06-10T09:19:27.5314596Z Installed fresh codeql/util@0.0.3 (library)
+2023-06-10T09:19:28.0777863Z Package specifications to check for download: codeql/java-queries@0.5.2
+2023-06-10T09:19:30.5763649Z Package install location: /home/runner/.codeql/packages
+2023-06-10T09:19:30.5765756Z Installed fresh codeql/java-queries@0.5.2
+2023-06-10T09:19:30.5972778Z ##[group]Create Database
+2023-06-10T09:19:31.2083548Z Initializing database at /home/runner/work/file-operations-plugin/file-operations-plugin/database.
+2023-06-10T09:19:32.1589720Z Running build command: [/home/runner/work/_temp/codeql/java/tools/autobuild.sh]
+2023-06-10T09:19:32.6334780Z [2023-06-10 09:19:32] [build-stdout] [2023-06-10 09:19:32] Build directory is .
+2023-06-10T09:19:32.8305682Z [2023-06-10 09:19:32] [build-stdout] [2023-06-10 09:19:32] [autobuild] > mvn clean package -f "pom.xml" -B -V -e -Dfindbugs.skip -Dcheckstyle.skip -Dpmd.skip=true -Dspotbugs.skip -Denforcer.skip -Dmaven.javadoc.skip -DskipTests -Dmaven.test.skip.exec -Dlicense.skip=true -Drat.skip=true -Dspotless.check.skip=true  -t /home/runner/.m2/toolchains.xml
+2023-06-10T09:19:35.7967741Z [2023-06-10 09:19:35] [build-stdout] [2023-06-10 09:19:35] [autobuild] Apache Maven 3.8.8 (4c87b05d9aedce574290d1acc98575ed5eb6cd39)
+2023-06-10T09:19:35.7968922Z [2023-06-10 09:19:35] [build-stdout] [2023-06-10 09:19:35] [autobuild] Maven home: /usr/share/apache-maven-3.8.8
+2023-06-10T09:19:35.7969806Z [2023-06-10 09:19:35] [build-stdout] [2023-06-10 09:19:35] [autobuild] Java version: 11.0.19, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-11-jdk-amd64
+2023-06-10T09:19:35.7970608Z [2023-06-10 09:19:35] [build-stdout] [2023-06-10 09:19:35] [autobuild] Default locale: en, platform encoding: UTF-8
+2023-06-10T09:19:35.8059220Z [2023-06-10 09:19:35] [build-stdout] [2023-06-10 09:19:35] [autobuild] OS name: "linux", version: "5.15.0-1038-azure", arch: "amd64", family: "unix"
+2023-06-10T09:19:38.7890133Z [2023-06-10 09:19:38] [build-stdout] [2023-06-10 09:19:38] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jenkins/tools/incrementals/git-changelist-maven-extension/1.6/git-changelist-maven-extension-1.6.pom
+2023-06-10T09:19:39.4688616Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jenkins/tools/incrementals/git-changelist-maven-extension/1.6/git-changelist-maven-extension-1.6.pom (1.8 kB at 2.6 kB/s)
+2023-06-10T09:19:39.5435254Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/jenkins/tools/incrementals/parent/1.6/parent-1.6.pom
+2023-06-10T09:19:39.5809275Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/jenkins/tools/incrementals/parent/1.6/parent-1.6.pom (3.9 kB at 105 kB/s)
+2023-06-10T09:19:39.5921194Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/kohsuke/pom/19/pom-19.pom
+2023-06-10T09:19:39.6200723Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/kohsuke/pom/19/pom-19.pom (6.1 kB at 217 kB/s)
+2023-06-10T09:19:39.6614739Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.9.0/maven-core-3.9.0.pom
+2023-06-10T09:19:39.6785794Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-core/3.9.0/maven-core-3.9.0.pom (7.7 kB at 427 kB/s)
+2023-06-10T09:19:39.6836636Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.9.0/maven-3.9.0.pom
+2023-06-10T09:19:39.7163827Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.9.0/maven-3.9.0.pom (28 kB at 848 kB/s)
+2023-06-10T09:19:39.7315462Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-06-10T09:19:39.7638181Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.5 MB/s)
+2023-06-10T09:19:39.7875500Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-06-10T09:19:39.8027780Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 1.2 MB/s)
+2023-06-10T09:19:39.8244833Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.9.0/maven-model-3.9.0.pom
+2023-06-10T09:19:39.8465711Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.9.0/maven-model-3.9.0.pom (2.7 kB at 123 kB/s)
+2023-06-10T09:19:39.8643988Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.pom
+2023-06-10T09:19:39.8965180Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.2/plexus-utils-3.4.2.pom (8.2 kB at 242 kB/s)
+2023-06-10T09:19:39.8989436Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom
+2023-06-10T09:19:39.9125911Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/8/plexus-8.pom (25 kB at 2.0 MB/s)
+2023-06-10T09:19:39.9217394Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.9.0/maven-settings-3.9.0.pom
+2023-06-10T09:19:39.9446470Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings/3.9.0/maven-settings-3.9.0.pom (1.8 kB at 80 kB/s)
+2023-06-10T09:19:39.9614977Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.9.0/maven-settings-builder-3.9.0.pom
+2023-06-10T09:19:39.9840067Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-settings-builder/3.9.0/maven-settings-builder-3.9.0.pom (2.5 kB at 98 kB/s)
+2023-06-10T09:19:39.9914316Z [2023-06-10 09:19:39] [build-stdout] [2023-06-10 09:19:39] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.9.0/maven-builder-support-3.9.0.pom
+2023-06-10T09:19:40.0122433Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-builder-support/3.9.0/maven-builder-support-3.9.0.pom (1.4 kB at 65 kB/s)
+2023-06-10T09:19:40.0226631Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom
+2023-06-10T09:19:40.0396402Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom (612 B at 32 kB/s)
+2023-06-10T09:19:40.0484637Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom
+2023-06-10T09:19:40.0597067Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.pom (2.7 kB at 190 kB/s)
+2023-06-10T09:19:40.0654351Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom
+2023-06-10T09:19:40.0805162Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/5.1/plexus-5.1.pom (23 kB at 1.4 MB/s)
+2023-06-10T09:19:40.0860298Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.pom
+2023-06-10T09:19:40.0968200Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.pom (3.2 kB at 294 kB/s)
+2023-06-10T09:19:40.1041193Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom
+2023-06-10T09:19:40.1161668Z [2023-06-10 09:19:40] [build-stdout] [2023-06-10 09:19:40] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.4.1/plexus-utils-3.4.1.pom (8.0 kB at 569 kB/s)
+[... 5501 lines removed by TriageCore ...]
+2023-06-10T09:21:24.6085631Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/log4j-over-slf4j/2.0.6/log4j-over-slf4j-2.0.6.jar
+2023-06-10T09:21:24.7105166Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/ow2/asm/asm-tree/9.4/asm-tree-9.4.jar (53 kB at 9.2 kB/s)
+2023-06-10T09:21:24.7107996Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-web/5.8.1/spring-security-web-5.8.1.jar
+2023-06-10T09:21:24.7241085Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/ow2/asm/asm-util/9.4/asm-util-9.4.jar (92 kB at 16 kB/s)
+2023-06-10T09:21:24.7242321Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-core/5.8.1/spring-security-core-5.8.1.jar
+2023-06-10T09:21:24.7309666Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/jcl-over-slf4j/2.0.6/jcl-over-slf4j-2.0.6.jar (17 kB at 3.0 kB/s)
+2023-06-10T09:21:24.7311031Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-crypto/5.8.1/spring-security-crypto-5.8.1.jar
+2023-06-10T09:21:24.7392676Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar (63 kB at 11 kB/s)
+2023-06-10T09:21:24.7394153Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-core/5.3.24/spring-core-5.3.24.jar
+2023-06-10T09:21:24.7674894Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/log4j-over-slf4j/2.0.6/log4j-over-slf4j-2.0.6.jar (26 kB at 4.4 kB/s)
+2023-06-10T09:21:24.7676215Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-aop/5.3.24/spring-aop-5.3.24.jar
+2023-06-10T09:21:24.8924771Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-crypto/5.8.1/spring-security-crypto-5.8.1.jar (83 kB at 14 kB/s)
+2023-06-10T09:21:24.8927196Z [2023-06-10 09:21:24] [build-stdout] [2023-06-10 09:21:24] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-beans/5.3.24/spring-beans-5.3.24.jar
+2023-06-10T09:21:25.0601731Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-core/5.3.24/spring-core-5.3.24.jar (1.5 MB at 245 kB/s)
+2023-06-10T09:21:25.0603608Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-context/5.3.24/spring-context-5.3.24.jar
+2023-06-10T09:21:25.0628964Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-core/5.8.1/spring-security-core-5.8.1.jar (494 kB at 81 kB/s)
+2023-06-10T09:21:25.0630374Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-expression/5.3.24/spring-expression-5.3.24.jar
+2023-06-10T09:21:25.0744143Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/security/spring-security-web/5.8.1/spring-security-web-5.8.1.jar (719 kB at 118 kB/s)
+2023-06-10T09:21:25.0745538Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-web/5.3.24/spring-web-5.3.24.jar
+2023-06-10T09:21:25.1113275Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-aop/5.3.24/spring-aop-5.3.24.jar (383 kB at 63 kB/s)
+2023-06-10T09:21:25.1119670Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar
+2023-06-10T09:21:25.2784750Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-beans/5.3.24/spring-beans-5.3.24.jar (703 kB at 112 kB/s)
+2023-06-10T09:21:25.2786206Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.387.1/jenkins-war-2.387.1.war
+2023-06-10T09:21:25.2788098Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/xpp3/xpp3/1.1.4c/xpp3-1.1.4c.jar (120 kB at 19 kB/s)
+2023-06-10T09:21:25.2789582Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-jetty10/2.387.1/websocket-jetty10-2.387.1.jar
+2023-06-10T09:21:25.4004298Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-expression/5.3.24/spring-expression-5.3.24.jar (289 kB at 45 kB/s)
+2023-06-10T09:21:25.4005751Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/kohsuke/metainf-services/metainf-services/1.9/metainf-services-1.9.jar
+2023-06-10T09:21:25.4341372Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-context/5.3.24/spring-context-5.3.24.jar (1.3 MB at 198 kB/s)
+2023-06-10T09:21:25.4344069Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-jetty9/2.387.1/websocket-jetty9-2.387.1.jar
+2023-06-10T09:21:25.4346258Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-jetty10/2.387.1/websocket-jetty10-2.387.1.jar (9.0 kB at 1.4 kB/s)
+2023-06-10T09:21:25.4348813Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/slf4j-jdk14/2.0.6/slf4j-jdk14-2.0.6.jar
+2023-06-10T09:21:25.5565531Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/springframework/spring-web/5.3.24/spring-web-5.3.24.jar (1.6 MB at 251 kB/s)
+2023-06-10T09:21:25.5568042Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar
+2023-06-10T09:21:25.5891087Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/websocket-jetty9/2.387.1/websocket-jetty9-2.387.1.jar (8.1 kB at 1.2 kB/s)
+2023-06-10T09:21:25.5892575Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-test-harness/2010.v1888f1a_cd45a_/jenkins-test-harness-2010.v1888f1a_cd45a_.jar
+2023-06-10T09:21:25.5922773Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/slf4j/slf4j-jdk14/2.0.6/slf4j-jdk14-2.0.6.jar (9.6 kB at 1.5 kB/s)
+2023-06-10T09:21:25.5924237Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-test-harness-htmlunit/144.v5c640e68276e/jenkins-test-harness-htmlunit-144.v5c640e68276e.jar
+2023-06-10T09:21:25.6675305Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/kohsuke/metainf-services/metainf-services/1.9/metainf-services-1.9.jar (7.5 kB at 1.1 kB/s)
+2023-06-10T09:21:25.6678060Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit/3.3.0/htmlunit-3.3.0.jar
+2023-06-10T09:21:25.7200736Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar (83 kB at 12 kB/s)
+2023-06-10T09:21:25.7203794Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar
+2023-06-10T09:21:25.8827905Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-test-harness/2010.v1888f1a_cd45a_/jenkins-test-harness-2010.v1888f1a_cd45a_.jar (454 kB at 66 kB/s)
+2023-06-10T09:21:25.8829238Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-core-js/3.3.0/htmlunit-core-js-3.3.0.jar
+2023-06-10T09:21:25.9094142Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-test-harness-htmlunit/144.v5c640e68276e/jenkins-test-harness-htmlunit-144.v5c640e68276e.jar (2.0 MB at 290 kB/s)
+2023-06-10T09:21:25.9095477Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/neko-htmlunit/3.3.0/neko-htmlunit-3.3.0.jar
+2023-06-10T09:21:25.9685765Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit/3.3.0/htmlunit-3.3.0.jar (2.1 MB at 302 kB/s)
+2023-06-10T09:21:25.9687666Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-cssparser/3.3.0/htmlunit-cssparser-3.3.0.jar
+2023-06-10T09:21:25.9802535Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar (238 kB at 34 kB/s)
+2023-06-10T09:21:25.9805431Z [2023-06-10 09:21:25] [build-stdout] [2023-06-10 09:21:25] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-xpath/3.3.0/htmlunit-xpath-3.3.0.jar
+2023-06-10T09:21:26.2154068Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/neko-htmlunit/3.3.0/neko-htmlunit-3.3.0.jar (551 kB at 76 kB/s)
+2023-06-10T09:21:26.2161100Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar
+2023-06-10T09:21:26.2629599Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-core-js/3.3.0/htmlunit-core-js-3.3.0.jar (1.3 MB at 183 kB/s)
+2023-06-10T09:21:26.2635547Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/brotli/dec/0.1.2/dec-0.1.2.jar
+2023-06-10T09:21:26.2637103Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-cssparser/3.3.0/htmlunit-cssparser-3.3.0.jar (211 kB at 29 kB/s)
+2023-06-10T09:21:26.2638579Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/com/shapesecurity/salvation2/3.0.1/salvation2-3.0.1.jar
+2023-06-10T09:21:26.4277060Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/brotli/dec/0.1.2/dec-0.1.2.jar (98 kB at 13 kB/s)
+2023-06-10T09:21:26.4306494Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/junit/junit/4.13.2/junit-4.13.2.jar
+2023-06-10T09:21:26.4308413Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/com/shapesecurity/salvation2/3.0.1/salvation2-3.0.1.jar (66 kB at 8.9 kB/s)
+2023-06-10T09:21:26.4310298Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2023-06-10T09:21:26.5043161Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-net/commons-net/3.9.0/commons-net-3.9.0.jar (316 kB at 42 kB/s)
+2023-06-10T09:21:26.5044294Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar
+2023-06-10T09:21:26.5891306Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar (45 kB at 5.9 kB/s)
+2023-06-10T09:21:26.5892854Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar
+2023-06-10T09:21:26.6639121Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar (123 kB at 16 kB/s)
+2023-06-10T09:21:26.6640490Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
+2023-06-10T09:21:26.7071803Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/junit/junit/4.13.2/junit-4.13.2.jar (385 kB at 50 kB/s)
+2023-06-10T09:21:26.7073022Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar
+2023-06-10T09:21:26.7728303Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/htmlunit/htmlunit-xpath/3.3.0/htmlunit-xpath-3.3.0.jar (266 kB at 34 kB/s)
+2023-06-10T09:21:26.7729563Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/netbeans/modules/org-netbeans-insane/RELEASE180/org-netbeans-insane-RELEASE180.jar
+2023-06-10T09:21:26.8243336Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar (7.7 kB at 978 B/s)
+2023-06-10T09:21:26.8244436Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/openjdk/jmh/jmh-core/1.36/jmh-core-1.36.jar
+2023-06-10T09:21:26.8732926Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar (103 kB at 13 kB/s)
+2023-06-10T09:21:26.8734121Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar
+2023-06-10T09:21:26.8930291Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar (208 kB at 26 kB/s)
+2023-06-10T09:21:26.8931491Z [2023-06-10 09:21:26] [build-stdout] [2023-06-10 09:21:26] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar
+2023-06-10T09:21:27.0365008Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar (78 kB at 9.7 kB/s)
+2023-06-10T09:21:27.0366519Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/openjdk/jmh/jmh-generator-annprocess/1.36/jmh-generator-annprocess-1.36.jar
+2023-06-10T09:21:27.1461597Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/openjdk/jmh/jmh-core/1.36/jmh-core-1.36.jar (537 kB at 66 kB/s)
+2023-06-10T09:21:27.1463834Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/test-annotations/1.4/test-annotations-1.4.jar
+2023-06-10T09:21:27.1786347Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/netbeans/modules/org-netbeans-insane/RELEASE180/org-netbeans-insane-RELEASE180.jar (318 kB at 39 kB/s)
+2023-06-10T09:21:27.1787636Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar
+2023-06-10T09:21:27.1968570Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/openjdk/jmh/jmh-generator-annprocess/1.36/jmh-generator-annprocess-1.36.jar (31 kB at 3.7 kB/s)
+2023-06-10T09:21:27.1969865Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar
+2023-06-10T09:21:27.2243397Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apache/commons/commons-math3/3.2/commons-math3-3.2.jar (1.7 MB at 206 kB/s)
+2023-06-10T09:21:27.2246014Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar
+2023-06-10T09:21:27.3048006Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/test-annotations/1.4/test-annotations-1.4.jar (4.5 kB at 546 B/s)
+2023-06-10T09:21:27.3050890Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/vintage/junit-vintage-engine/5.9.3/junit-vintage-engine-5.9.3.jar
+2023-06-10T09:21:27.3380272Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar (6.4 kB at 762 B/s)
+2023-06-10T09:21:27.3381828Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar
+2023-06-10T09:21:27.4666867Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/vintage/junit-vintage-engine/5.9.3/junit-vintage-engine-5.9.3.jar (67 kB at 7.9 kB/s)
+2023-06-10T09:21:27.4668241Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar
+2023-06-10T09:21:27.4787422Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar (580 kB at 68 kB/s)
+2023-06-10T09:21:27.5032190Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar (189 kB at 22 kB/s)
+2023-06-10T09:21:27.5258406Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar (247 kB at 29 kB/s)
+2023-06-10T09:21:27.6289308Z [2023-06-10 09:21:27] [build-stdout] [2023-06-10 09:21:27] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar (6.8 kB at 788 B/s)
+2023-06-10T09:21:28.3468345Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/2.387.1/jenkins-war-2.387.1.war (98 MB at 11 MB/s)
+2023-06-10T09:21:28.3831062Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] 
+2023-06-10T09:21:28.3862101Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ file-operations ---
+2023-06-10T09:21:28.3906214Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-io/commons-io/2.6/commons-io-2.6.pom
+2023-06-10T09:21:28.5551586Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 87 kB/s)
+2023-06-10T09:21:28.5593796Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] Downloading from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-io/commons-io/2.6/commons-io-2.6.jar
+2023-06-10T09:21:28.8650690Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] Downloaded from repo.jenkins-ci.org: https://repo.jenkins-ci.org/public/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 702 kB/s)
+2023-06-10T09:21:28.9059642Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] 
+2023-06-10T09:21:28.9060379Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] --- maven-hpi-plugin:3.46:validate (default-validate) @ file-operations ---
+2023-06-10T09:21:28.9297638Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] 
+2023-06-10T09:21:28.9305064Z [2023-06-10 09:21:28] [build-stdout] [2023-06-10 09:21:28] [autobuild] [INFO] --- maven-hpi-plugin:3.46:validate-hpi (default-validate-hpi) @ file-operations ---
+2023-06-10T09:21:29.1198143Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom
+2023-06-10T09:21:29.1261961Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom (5.6 kB at 938 kB/s)
+2023-06-10T09:21:29.6189702Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] ------------------------------------------------------------------------
+2023-06-10T09:21:29.6190582Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] BUILD FAILURE
+2023-06-10T09:21:29.6193149Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] ------------------------------------------------------------------------
+2023-06-10T09:21:29.6209171Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] Total time:  01:47 min
+2023-06-10T09:21:29.6212656Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] Finished at: 2023-06-10T09:21:29Z
+2023-06-10T09:21:29.6214736Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [INFO] ------------------------------------------------------------------------
+2023-06-10T09:21:29.6229545Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] Failed to execute goal org.jenkins-ci.tools:maven-hpi-plugin:3.46:validate-hpi (default-validate-hpi) on project file-operations: Dependency org.jenkins-ci.plugins:branch-api:jar:2.1109.vdf225489a_16d requires Jenkins 2.387.3 or higher. -> [Help 1]
+2023-06-10T09:21:29.6233527Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.jenkins-ci.tools:maven-hpi-plugin:3.46:validate-hpi (default-validate-hpi) on project file-operations: Dependency org.jenkins-ci.plugins:branch-api:jar:2.1109.vdf225489a_16d requires Jenkins 2.387.3 or higher.
+2023-06-10T09:21:29.6239582Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:375)
+2023-06-10T09:21:29.6243970Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+2023-06-10T09:21:29.6246170Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-10T09:21:29.6248513Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-10T09:21:29.6258255Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-10T09:21:29.6261279Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-10T09:21:29.6264170Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-10T09:21:29.6266813Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-10T09:21:29.6269013Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-10T09:21:29.6271620Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-10T09:21:29.6275029Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-10T09:21:29.6277344Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-10T09:21:29.6279986Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-10T09:21:29.6282070Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-10T09:21:29.6284383Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-10T09:21:29.6286729Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-10T09:21:29.6289178Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-10T09:21:29.6291631Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-10T09:21:29.6293800Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-10T09:21:29.6296160Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-10T09:21:29.6298354Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-10T09:21:29.6300806Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-10T09:21:29.6303229Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-10T09:21:29.6308296Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] Caused by: org.apache.maven.plugin.MojoExecutionException: Dependency org.jenkins-ci.plugins:branch-api:jar:2.1109.vdf225489a_16d requires Jenkins 2.387.3 or higher.
+2023-06-10T09:21:29.6311020Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.jenkinsci.maven.plugins.hpi.ValidateHpiMojo.execute (ValidateHpiMojo.java:44)
+2023-06-10T09:21:29.6313525Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+2023-06-10T09:21:29.6315838Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+2023-06-10T09:21:29.6318205Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+2023-06-10T09:21:29.6320489Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+2023-06-10T09:21:29.6322913Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+2023-06-10T09:21:29.6325043Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+2023-06-10T09:21:29.6327422Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+2023-06-10T09:21:29.6329625Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+2023-06-10T09:21:29.6385281Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+2023-06-10T09:21:29.6388030Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+2023-06-10T09:21:29.6388880Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+2023-06-10T09:21:29.6389613Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+2023-06-10T09:21:29.6390342Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+2023-06-10T09:21:29.6391047Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+2023-06-10T09:21:29.6391735Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+2023-06-10T09:21:29.6392635Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+2023-06-10T09:21:29.6393445Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-10T09:21:29.6394555Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-10T09:21:29.6395564Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-10T09:21:29.6396406Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-10T09:21:29.6397271Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-10T09:21:29.6399241Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-10T09:21:29.6400769Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-10T09:21:29.6405376Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild]     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-10T09:21:29.6406104Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] 
+2023-06-10T09:21:29.6406747Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-10T09:21:29.6407317Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] 
+2023-06-10T09:21:29.6408051Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-10T09:21:29.6408874Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [autobuild] [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+2023-06-10T09:21:29.7072857Z [2023-06-10 09:21:29] [build-stdout] [2023-06-10 09:21:29] [ERROR] Spawned process exited abnormally (code 1; tried to run: [mvn, clean, package, -f, pom.xml, -B, -V, -e, -Dfindbugs.skip, -Dcheckstyle.skip, -Dpmd.skip=true, -Dspotbugs.skip, -Denforcer.skip, -Dmaven.javadoc.skip, -DskipTests, -Dmaven.test.skip.exec, -Dlicense.skip=true, -Drat.skip=true, -Dspotless.check.skip=true, -t, /home/runner/.m2/toolchains.xml])
+2023-06-10T09:21:29.7157559Z [2023-06-10 09:21:29] [ERROR] Spawned process exited abnormally (code 1; tried to run: [/home/runner/work/_temp/codeql/tools/linux64/preload_tracer, /home/runner/work/_temp/codeql/java/tools/autobuild.sh])
+2023-06-10T09:21:29.7192635Z A fatal error occurred: Exit status 1 from command: [/home/runner/work/_temp/codeql/java/tools/autobuild.sh]
+2023-06-10T09:21:29.7264901Z Failed to create database
+2023-06-10T09:21:29.7280844Z ##[error]Process completed with exit code 1.
+2023-06-10T09:21:29.7363332Z Post job cleanup.
+2023-06-10T09:21:29.9513402Z Post job cleanup.
+2023-06-10T09:21:30.0869001Z [command]/usr/bin/git version
+2023-06-10T09:21:30.0926541Z git version 2.40.1
+2023-06-10T09:21:30.0990946Z Temporarily overriding HOME='/home/runner/work/_temp/b956ee0e-43e3-41c8-9878-e3bedf8b92ed' before making global git config changes
+2023-06-10T09:21:30.0991937Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-10T09:21:30.0998685Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/file-operations-plugin/file-operations-plugin/jenkins-security-scan-rules
+2023-06-10T09:21:30.1082826Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-10T09:21:30.1124915Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-10T09:21:30.1520762Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-10T09:21:30.1550214Z http.https://github.com/.extraheader
+2023-06-10T09:21:30.1565183Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-10T09:21:30.1605672Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-10T09:21:30.2010568Z Post job cleanup.
+2023-06-10T09:21:30.3313426Z [command]/usr/bin/git version
+2023-06-10T09:21:30.3379402Z git version 2.40.1
+2023-06-10T09:21:30.3440778Z Temporarily overriding HOME='/home/runner/work/_temp/686391e4-1a88-4d9b-af1e-990c3bdbfad0' before making global git config changes
+2023-06-10T09:21:30.3446511Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-10T09:21:30.3457129Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/file-operations-plugin/file-operations-plugin
+2023-06-10T09:21:30.3526267Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-10T09:21:30.3569330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-10T09:21:30.3837180Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-10T09:21:30.3866460Z http.https://github.com/.extraheader
+2023-06-10T09:21:30.3880968Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-10T09:21:30.3920504Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-10T09:21:30.4572572Z Cleaning up orphan processes
+
+2023-06-10T09:18:30.8840318Z ##[section]Starting: Prepare job scan
+2023-06-10T09:18:30.8842959Z Evaluating workflow phase display name
+2023-06-10T09:18:30.8843074Z Evaluating inputs
+2023-06-10T09:18:30.8852193Z Evaluating strategy
+2023-06-10T09:18:30.8856879Z Creating job '__default'
+2023-06-10T09:18:30.8859916Z Evaluating timeout
+2023-06-10T09:18:30.8859969Z Evaluating cancel timeout
+2023-06-10T09:18:30.8860000Z Evaluating continue on error
+2023-06-10T09:18:30.8860023Z Evaluating target
+2023-06-10T09:18:30.8861453Z ##[section]Finishing: Prepare job scan
+
+2023-06-10T09:21:29.7363318Z Post job cleanup.
+
+2023-06-10T09:21:30.2010551Z Post job cleanup.
+2023-06-10T09:21:30.3313371Z [command]/usr/bin/git version
+2023-06-10T09:21:30.3379355Z git version 2.40.1
+2023-06-10T09:21:30.3440741Z Temporarily overriding HOME='/home/runner/work/_temp/686391e4-1a88-4d9b-af1e-990c3bdbfad0' before making global git config changes
+2023-06-10T09:21:30.3446487Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-10T09:21:30.3457105Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/file-operations-plugin/file-operations-plugin
+2023-06-10T09:21:30.3526244Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-10T09:21:30.3569310Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-10T09:21:30.3837047Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-10T09:21:30.3866433Z http.https://github.com/.extraheader
+2023-06-10T09:21:30.3880950Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-10T09:21:30.3920482Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"

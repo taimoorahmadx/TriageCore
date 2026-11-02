@@ -1,0 +1,88 @@
+repo: micycle1/PGS
+run_id: 17f2bcaaba4805b218743f575919360c5aec5da4
+head_sha: 17f2bcaaba4805b218743f575919360c5aec5da4
+run_attempts: []
+commits:
+- sha: 17f2bcaaba4805b218743f575919360c5aec5da4
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 3ce7aa528c99b8ac3b5e769028ef301698c6a690
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - resources/pgs/randomBezierShape.gif
+  - src/main/java/micycle/pgs/PGS_Construction.java
+  - src/main/java/micycle/pgs/commons/BezierShapeGenerator.java
+- sha: 5c6c9512dab6291d2883f15358a1f53f9238976d
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS_Triangulation.java
+- sha: 71467bdfc1f697e9a7d17865a4da19da817f77f3
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - resources/circle_packing/obstaclePack.gif
+  - src/main/java/micycle/pgs/PGS_CirclePacking.java
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_ShapePredicates.java
+- sha: 9173acbc557c1edfb5a7f6ddc033d6bd97f3d369
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/commons/PEdge.java
+  - src/main/java/micycle/pgs/commons/PMesh.java
+- sha: 83ee6abb85b5d897857d246f19c6f8efc44f8a59
+  author: micycle1
+  files:
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_Conversion.java
+  - src/main/java/micycle/pgs/PGS_Morphology.java
+  - src/main/java/micycle/pgs/PGS_Optimisation.java
+  - src/main/java/micycle/pgs/PGS_SegmentSet.java
+  - src/main/java/micycle/pgs/PGS_Transformation.java
+  - src/main/java/micycle/pgs/commons/DiscreteCurveEvolution.java
+  - src/main/java/micycle/pgs/commons/LargestEmptyCircles.java
+  - src/main/java/micycle/pgs/commons/SpiralQuadrangulation.java
+  - src/main/java/uk/osgb/algorithm/minkowski_sum/MinkowskiSum.java
+  - src/test/java/micycle/pgs/PGS_TriangulationTests.java
+- sha: 3048e1c35c37082db33640819967968e964736ef
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_Contour.java
+  - src/main/java/micycle/pgs/PGS_SegmentSet.java
+  - src/test/java/micycle/pgs/PGS_SegmentSetTests.java
+- sha: 4b33480d2358a5ca107107f5c77af3e8a2ae6db1
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - pom.xml
+  - resources/pgs/srpg.gif
+  - src/main/java/micycle/pgs/PGS_Construction.java
+- sha: e2c5290e86d817fcd569659179997a66ac34622b
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - README.md
+  - resources/meshing/areaMerge.gif
+  - resources/meshing/simplifyMesh.gif
+  - src/main/java/micycle/pgs/PGS_Meshing.java
+  - src/main/java/micycle/pgs/commons/AreaMerge.java
+  - src/test/java/micycle/pgs/PGS_MeshingTests.java
+- sha: ff89e560374b3e0a82d5083a44720c170fcc35cb
+  author: micycle1
+  files:
+  - CHANGELOG.md
+  - src/main/java/micycle/pgs/PGS_ShapeBoolean.java
+  - src/main/java/micycle/pgs/PGS_ShapePredicates.java
+  - src/test/java/micycle/pgs/PGS_ShapePredicatesTests.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

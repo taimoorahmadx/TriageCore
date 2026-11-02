@@ -1,0 +1,442 @@
+===== build/7_Run all examples.txt =====
+##[group]Run cd examples/node_prediction/
+[36;1mcd examples/node_prediction/[0m
+[36;1mfor f in *.py; do[0m
+[36;1m  echo "##### $f #####"[0m
+[36;1m  python $f[0m
+[36;1mdone[0m
+[36;1mcd ..[0m
+[36;1mcd graph_prediction/[0m
+[36;1mfor f in *.py; do[0m
+[36;1m  echo "##### $f #####"[0m
+[36;1m  python $f[0m
+[36;1mdone[0m
+[36;1mcd ..[0m
+[36;1mcd other/[0m
+[36;1mfor f in *.py; do[0m
+[36;1m  echo "##### $f #####"[0m
+[36;1m  python $f[0m
+[36;1mdone[0m
+[36;1mcd ..[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
+##### citation_arma.py #####
+2024-01-21 16:14:04.697281: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:04.697333: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:04.698603: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:04.704823: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:05.946659: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/keras/src/initializers/initializers.py:120: UserWarning: The initializer GlorotUniform is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+Downloading cora dataset.
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 1433)]               0         []                            
+                                                                                                  
+ input_2 (InputLayer)        [(None, 2708)]               0         []                            
+                                                                                                  
+ arma_conv (ARMAConv)        (None, 16)                   91744     ['input_1[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ dropout (Dropout)           (None, 16)                   0         ['arma_conv[0][0]']           
+                                                                                                  
+ arma_conv_1 (ARMAConv)      (None, 7)                    231       ['dropout[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 91975 (359.28 KB)
+Trainable params: 91975 (359.28 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+
+1/1 [==============================] - ETA: 0s - loss: 0.1167 - acc: 0.1714
+1/1 [==============================] - 1s 938ms/step - loss: 0.1167 - acc: 0.1714 - val_loss: 0.3394 - val_acc: 0.3080
+Evaluating model.
+
+1/1 [==============================] - ETA: 0s - loss: 0.6695 - acc: 0.3360
+1/1 [==============================] - 0s 12ms/step - loss: 0.6695 - acc: 0.3360
+Done.
+Test loss: 0.6695395708084106
+Test accuracy: 0.335999995470047
+##### citation_cheby.py #####
+2024-01-21 16:14:13.031828: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:13.031877: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:13.033233: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:13.039361: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:13.892745: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 1433)]               0         []                            
+                                                                                                  
+ dropout (Dropout)           (None, 1433)                 0         ['input_1[0][0]']             
+                                                                                                  
+ input_2 (InputLayer)        [(None, 2708)]               0         []                            
+                                                                                                  
+ cheb_conv (ChebConv)        (None, 16)                   45856     ['dropout[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ dropout_1 (Dropout)         (None, 16)                   0         ['cheb_conv[0][0]']           
+                                                                                                  
+ cheb_conv_1 (ChebConv)      (None, 7)                    224       ['dropout_1[0][0]',           
+                                                                     'input_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 46080 (180.00 KB)
+Trainable params: 46080 (180.00 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+
+1/1 [==============================] - ETA: 0s - loss: 1.9901 - acc: 0.1357
+1/1 [==============================] - 0s 492ms/step - loss: 1.9901 - acc: 0.1357 - val_loss: 1.9229 - val_acc: 0.2740
+Evaluating model.
+
+1/1 [==============================] - ETA: 0s - loss: 1.9236 - acc: 0.2650
+1/1 [==============================] - 0s 15ms/step - loss: 1.9236 - acc: 0.2650
+Done.
+Test loss: 1.9235953092575073
+Test accuracy: 0.26499998569488525
+##### citation_gat.py #####
+2024-01-21 16:14:17.870770: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:17.870818: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:17.872219: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:17.878280: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:18.689165: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/keras/src/initializers/initializers.py:120: UserWarning: The initializer GlorotUniform is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+Pre-processing node features
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 1433)]               0         []                            
+                                                                                                  
+ dropout (Dropout)           (None, 1433)                 0         ['input_1[0][0]']             
+                                                                                                  
+ input_2 (InputLayer)        [(None, 2708)]               0         []                            
+                                                                                                  
+ gat_conv (GATConv)          (None, 64)                   91904     ['dropout[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ dropout_1 (Dropout)         (None, 64)                   0         ['gat_conv[0][0]']            
+                                                                                                  
+ gat_conv_1 (GATConv)        (None, 7)                    469       ['dropout_1[0][0]',           
+                                                                     'input_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 92373 (360.83 KB)
+Trainable params: 92373 (360.83 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+
+1/1 [==============================] - ETA: 0s - loss: 1.9498 - acc: 0.1429
+1/1 [==============================] - 2s 2s/step - loss: 1.9498 - acc: 0.1429 - val_loss: 1.9496 - val_acc: 0.2020
+Evaluating model.
+
+1/1 [==============================] - ETA: 0s - loss: 1.9495 - acc: 0.2120
+1/1 [==============================] - 0s 15ms/step - loss: 1.9495 - acc: 0.2120
+Done.
+Test loss: 1.9495328664779663
+Test accuracy: 0.21199998259544373
+##### citation_gat_custom.py #####
+2024-01-21 16:14:24.090507: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:24.090565: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:24.092222: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:24.098707: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:24.924070: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/keras/src/initializers/initializers.py:120: UserWarning: The initializer GlorotUniform is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+Pre-processing node features
+Loss tr: 1.9471, Acc tr: 0.3214, Loss va: 1.9493, Acc va: 0.1920, Loss te: 1.9494, Acc te: 0.1790
+Improved
+GAT (1 epochs)
+Elapsed: 2.46s
+##### citation_gcn.py #####
+2024-01-21 16:14:30.891866: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:30.891915: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:30.893225: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:30.899400: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:31.735939: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Pre-processing node features
+
+1/1 [==============================] - ETA: 0s - loss: 1.9535 - acc: 0.1286
+1/1 [==============================] - 1s 1s/step - loss: 1.9535 - acc: 0.1286 - val_loss: 1.9469 - val_acc: 0.4000
+Evaluating model.
+
+1/1 [==============================] - ETA: 0s - loss: 1.9470 - acc: 0.3910
+1/1 [==============================] - 0s 9ms/step - loss: 1.9470 - acc: 0.3910
+Done.
+Test loss: 1.946979284286499
+Test accuracy: 0.390999972820282
+##### citation_gcn_custom.py #####
+2024-01-21 16:14:35.783612: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:35.783669: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:35.785139: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:35.791466: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:36.608646: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Pre-processing node features
+Spektral - GCN (200 epochs)
+Elapsed: 2.85s
+Final loss = 0.617151141166687
+##### citation_simple_gc.py #####
+2024-01-21 16:14:43.435717: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:43.435759: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:43.437049: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:43.443159: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:44.284258: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/scipy/sparse/_index.py:145: SparseEfficiencyWarning: Changing the sparsity structure of a csr_matrix is expensive. lil_matrix is more efficient.
+  self._set_arrayXarray(i, j, x)
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 1433)]               0         []                            
+                                                                                                  
+ input_2 (InputLayer)        [(None, 2708)]               0         []                            
+                                                                                                  
+ gcn_conv (GCNConv)          (None, 7)                    10031     ['input_1[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 10031 (39.18 KB)
+Trainable params: 10031 (39.18 KB)
+Non-trainable params: 0 (0.00 Byte)
+__________________________________________________________________________________________________
+
+1/1 [==============================] - ETA: 0s - loss: 0.1008 - acc: 0.1357
+1/1 [==============================] - 0s 355ms/step - loss: 0.1008 - acc: 0.1357 - val_loss: 0.2166 - val_acc: 0.6780
+Evaluating model.
+
+1/1 [==============================] - ETA: 0s - loss: 0.4094 - acc: 0.7070
+1/1 [==============================] - 0s 12ms/step - loss: 0.4094 - acc: 0.7070
+Done.
+Test loss: 0.40943244099617004
+Test accuracy: 0.7070000171661377
+##### ogbn-arxiv_gcn.py #####
+2024-01-21 16:14:47.998765: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:14:47.998814: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:14:48.000133: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:14:48.006402: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:14:48.837666: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading http://snap.stanford.edu/ogb/data/nodeproppred/arxiv.zip
+
+  0%|          | 0/81 [00:00<?, ?it/s]
+Downloaded 0.00 GB:   0%|          | 0/81 [00:00<?, ?it/s]
+Downloaded 0.00 GB:   1%|          | 1/81 [00:00<01:13,  1.09it/s]
+Downloaded 0.00 GB:   1%|          | 1/81 [00:01<01:13,  1.09it/s]
+Downloaded 0.00 GB:   2%|▏         | 2/81 [00:01<00:40,  1.95it/s]
+Downloaded 0.00 GB:   2%|▏         | 2/81 [00:01<00:40,  1.95it/s]
+Downloaded 0.00 GB:   2%|▏         | 2/81 [00:01<00:40,  1.95it/s]
+Downloaded 0.00 GB:   5%|▍         | 4/81 [00:01<00:20,  3.81it/s]
+Downloaded 0.00 GB:   5%|▍         | 4/81 [00:01<00:20,  3.81it/s]
+Downloaded 0.01 GB:   5%|▍         | 4/81 [00:01<00:20,  3.81it/s]
+Downloaded 0.01 GB:   5%|▍         | 4/81 [00:01<00:20,  3.81it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:   9%|▊         | 7/81 [00:01<00:10,  7.06it/s]
+Downloaded 0.01 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.01 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.01 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.01 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.02 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.02 GB:  15%|█▍        | 12/81 [00:01<00:05, 12.81it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  21%|██        | 17/81 [00:01<00:03, 17.75it/s]
+Downloaded 0.02 GB:  28%|██▊       | 23/81 [00:01<00:02, 23.06it/s]
+Downloaded 0.02 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.02 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.03 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.03 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.03 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.03 GB:  28%|██▊       | 23/81 [00:02<00:02, 23.06it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  36%|███▌      | 29/81 [00:02<00:01, 27.07it/s]
+Downloaded 0.03 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  43%|████▎     | 35/81 [00:02<00:01, 30.04it/s]
+Downloaded 0.04 GB:  49%|████▉     | 40/81 [00:02<00:01, 33.77it/s]
+Downloaded 0.04 GB:  49%|████▉     | 40/81 [00:02<00:01, 33.77it/s]
+Downloaded 0.04 GB:  49%|████▉     | 40/81 [00:02<00:01, 33.77it/s]
+Downloaded 0.04 GB:  49%|████▉     | 40/81 [00:02<00:01, 33.77it/s]
+Downloaded 0.04 GB:  49%|████▉     | 40/81 [00:02<00:01, 33.77it/s]
+Downloaded 0.04 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.04 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.04 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.05 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.05 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.05 GB:  54%|█████▍    | 44/81 [00:02<00:01, 32.84it/s]
+Downloaded 0.05 GB:  60%|██████    | 49/81 [00:02<00:00, 35.51it/s]
+Downloaded 0.05 GB:  60%|██████    | 49/81 [00:02<00:00, 35.51it/s]
+Downloaded 0.05 GB:  60%|██████    | 49/81 [00:02<00:00, 35.51it/s]
+Downloaded 0.05 GB:  60%|██████    | 49/81 [00:02<00:00, 35.51it/s]
+Downloaded 0.05 GB:  60%|██████    | 49/81 [00:02<00:00, 35.51it/s]
+Downloaded 0.05 GB:  65%|██████▌   | 53/81 [00:02<00:00, 35.14it/s]
+Downloaded 0.05 GB:  65%|██████▌   | 53/81 [00:02<00:00, 35.14it/s]
+Downloaded 0.05 GB:  65%|██████▌   | 53/81 [00:02<00:00, 35.14it/s]
+Downloaded 0.05 GB:  65%|██████▌   | 53/81 [00:02<00:00, 35.14it/s]
+Downloaded 0.06 GB:  65%|██████▌   | 53/81 [00:02<00:00, 35.14it/s]
+Downloaded 0.06 GB:  70%|███████   | 57/81 [00:02<00:00, 36.16it/s]
+Downloaded 0.06 GB:  70%|███████   | 57/81 [00:02<00:00, 36.16it/s]
+Downloaded 0.06 GB:  70%|███████   | 57/81 [00:02<00:00, 36.16it/s]
+Downloaded 0.06 GB:  70%|███████   | 57/81 [00:02<00:00, 36.16it/s]
+Downloaded 0.06 GB:  70%|███████   | 57/81 [00:02<00:00, 36.16it/s]
+Downloaded 0.06 GB:  75%|███████▌  | 61/81 [00:02<00:00, 37.12it/s]
+Downloaded 0.06 GB:  75%|███████▌  | 61/81 [00:03<00:00, 37.12it/s]
+Downloaded 0.06 GB:  75%|███████▌  | 61/81 [00:03<00:00, 37.12it/s]
+Downloaded 0.06 GB:  75%|███████▌  | 61/81 [00:03<00:00, 37.12it/s]
+Downloaded 0.06 GB:  75%|███████▌  | 61/81 [00:03<00:00, 37.12it/s]
+Downloaded 0.06 GB:  80%|████████  | 65/81 [00:03<00:00, 37.16it/s]
+Downloaded 0.06 GB:  80%|████████  | 65/81 [00:03<00:00, 37.16it/s]
+Downloaded 0.07 GB:  80%|████████  | 65/81 [00:03<00:00, 37.16it/s]
+Downloaded 0.07 GB:  80%|████████  | 65/81 [00:03<00:00, 37.16it/s]
+Downloaded 0.07 GB:  80%|████████  | 65/81 [00:03<00:00, 37.16it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  85%|████████▌ | 69/81 [00:03<00:00, 36.70it/s]
+Downloaded 0.07 GB:  91%|█████████▏| 74/81 [00:03<00:00, 38.00it/s]
+Downloaded 0.07 GB:  91%|█████████▏| 74/81 [00:03<00:00, 38.00it/s]
+Downloaded 0.07 GB:  91%|█████████▏| 74/81 [00:03<00:00, 38.00it/s]
+Downloaded 0.08 GB:  91%|█████████▏| 74/81 [00:03<00:00, 38.00it/s]
+Downloaded 0.08 GB:  91%|█████████▏| 74/81 [00:03<00:00, 38.00it/s]
+Downloaded 0.08 GB:  96%|█████████▋| 78/81 [00:03<00:00, 36.73it/s]
+Downloaded 0.08 GB:  96%|█████████▋| 78/81 [00:03<00:00, 36.73it/s]
+Downloaded 0.08 GB:  96%|█████████▋| 78/81 [00:03<00:00, 36.73it/s]
+Downloaded 0.08 GB:  96%|█████████▋| 78/81 [00:03<00:00, 36.73it/s]
+Downloaded 0.08 GB: 100%|██████████| 81/81 [00:03<00:00, 23.38it/s]
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+100%|██████████| 1/1 [00:00<00:00, 21076.90it/s]
+Extracting dataset/arxiv.zip
+Loading necessary files...
+This might take a while.
+Processing graphs...
+Saving...
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ input_1 (InputLayer)        [(None, 128)]                0         []                            
+                                                                                                  
+ input_2 (InputLayer)        [(None, 169343)]             0         []                            
+                                                                                                  
+ gcn_conv (GCNConv)          (None, 256)                  33024     ['input_1[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ batch_normalization (Batch  (None, 256)                  1024      ['gcn_conv[0][0]']            
+ Normalization)                                                                                   
+                                                                                                  
+ dropout (Dropout)           (None, 256)                  0         ['batch_normalization[0][0]'] 
+                                                                                                  
+ gcn_conv_1 (GCNConv)        (None, 256)                  65792     ['dropout[0][0]',             
+                                                                     'input_2[0][0]']             
+                                                                                                  
+ batch_normalization_1 (Bat  (None, 256)                  1024      ['gcn_conv_1[0][0]']          
+ chNormalization)                                                                                 
+                                                                                                  
+ dropout_1 (Dropout)         (None, 256)                  0         ['batch_normalization_1[0][0]'
+                                                                    ]                             
+                                                                                                  
+ gcn_conv_2 (GCNConv)        (None, 40)                   10280     ['dropout_1[0][0]',           
+                                                                     'input_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 111144 (434.16 KB)
+Trainable params: 110120 (430.16 KB)
+Non-trainable params: 1024 (4.00 KB)
+__________________________________________________________________________________________________
+Ep. 1 - Loss: 5.289 - Acc: 0.109 - Val acc: 0.177 - Test acc: 0.241
+Evaluating model.
+Done! - Test acc: 0.241
+##### custom_dataset.py #####
+2024-01-21 16:15:07.319425: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:15:07.319469: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:15:07.320948: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:15:07.327116: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:15:08.139878: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/data/utils.py:221: UserWarning: you are shuffling a 'MyDataset' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  np.random.shuffle(a)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/keras/src/initializers/initializers.py:120: UserWarning: The initializer GlorotUniform is unseeded and being called multiple times, which will return identical values each time (even if the initializer is unseeded). Please update your code to provide a seed to the initializer, or avoid using the same initializer instance more than once.
+  warnings.warn(
+Ep. 1 - Loss: 0.729 - Acc: 0.694 - Val loss: 0.334 - Val acc: 0.880
+New best val_loss 0.334
+Done. Test loss: 0.4293. Test acc: 0.84
+##### general_gnn.py #####
+2024-01-21 16:15:13.211838: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-01-21 16:15:13.211888: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-01-21 16:15:13.213185: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-01-21 16:15:13.219400: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-01-21 16:15:14.044203: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Downloading PROTEINS dataset.
+
+  0%|                                                | 0.00/447k [00:00<?, ?B/s]
+  7%|██▊                                     | 32.0k/447k [00:00<00:01, 249kB/s]
+ 21%|████████▌                               | 96.0k/447k [00:00<00:00, 419kB/s]
+ 50%|████████████████████▌                    | 224k/447k [00:00<00:00, 777kB/s]
+100%|████████████████████████████████████████| 447k/447k [00:00<00:00, 1.02MB/s]
+Traceback (most recent call last):
+  File "/home/runner/work/spektral/spektral/examples/graph_prediction/general_gnn.py", line 39, in <module>
+    data = TUDataset("PROTEINS")
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/datasets/tudataset.py", line 66, in __init__
+    super().__init__(**kwargs)
+  File "/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/data/dataset.py", line 118, in __init__
+    self.graphs = self.read()
+                  ^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/datasets/tudataset.py", line 128, in read
+    [_normalize(xl_[:, None], "ohe") for xl_ in x_labs.T], -1
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/datasets/tudataset.py", line 128, in <listcomp>
+    [_normalize(xl_[:, None], "ohe") for xl_ in x_labs.T], -1
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/spektral/datasets/tudataset.py", line 219, in _normalize
+    fnorm = OneHotEncoder(sparse=False, categories="auto")
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: OneHotEncoder.__init__() got an unexpected keyword argument 'sparse'
+##[error]Process completed with exit code 1.

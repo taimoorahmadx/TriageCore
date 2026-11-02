@@ -1,0 +1,69 @@
+repo: Samsung/LPVS
+run_id: 433fbc0ee1192ca4aa69f337fd3b530ec94906e9
+head_sha: 433fbc0ee1192ca4aa69f337fd3b530ec94906e9
+run_attempts: []
+commits:
+- sha: 433fbc0ee1192ca4aa69f337fd3b530ec94906e9
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 7bb1da3d6e4c8c441dd6b1869501385588f6a4d8
+  author: o-kopysov
+  files:
+  - src/main/java/com/lpvs/entity/LPVSPullRequest.java
+  - src/test/java/com/lpvs/entity/LPVSPullRequestFilesUrlResponseTest.java
+  - src/test/java/com/lpvs/entity/LPVSPullRequestTest.java
+- sha: d78687131ff67303539635701af5ae3deb685ebd
+  author: o-kopysov
+  files:
+  - .github/CONTRIBUTING.md
+  - .github/SECURITY.md
+  - README.md
+  - src/main/java/com/lpvs/controller/GitHubWebhooksController.java
+- sha: 4d6bc0148b1f6c540a42e4217641b17b07c8ff90
+  author: tdrozdovsky
+  files:
+  - .github/Docker_Usage.md
+  - .gitignore
+  - README.md
+  - docker-compose.yml
+  - pom.xml
+- sha: 2a1dac70ebb64b7a8de5544639b364cf826536a0
+  author: tiokim
+  files:
+  - Dockerfile
+- sha: 12789a240c60486607db70e7112efe35147d860b
+  author: o-konoval
+  files:
+  - .github/Docker_Usage.md
+  - README.md
+  - docker-compose.yml
+- sha: d6751f3c74dfcea2c4c83f37f47205b3ab748339
+  author: o-kopysov
+  files:
+  - .github/Docker_Usage.md
+  - README.md
+  - docker-compose.yml
+  - src/main/java/com/lpvs/repository/LPVSLicenseConflictRepository.java
+  - src/main/java/com/lpvs/repository/LPVSLicenseRepository.java
+  - src/main/java/com/lpvs/repository/LPVSQueueRepository.java
+  - src/main/java/com/lpvs/service/LPVSQueueService.java
+  - src/main/resources/application.properties
+  - src/main/resources/database_dump.sql
+- sha: 3c8aeb47d66b3dd4ec90426fd2c7c4abc00fa3a1
+  author: tiokim
+  files:
+  - docker-compose.yml
+- sha: 998b9c744bfa267bb9ab2a18bc2ff350cadbe62c
+  author: m-rudyk
+  files:
+  - pom.xml
+- sha: c27685892a419d44cfb73ea8f9a79ee140e229ec
+  author: dependabot[bot]
+  files:
+  - .github/workflows/publish.yml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

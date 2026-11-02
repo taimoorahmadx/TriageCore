@@ -1,0 +1,112 @@
+repo: huggingface/diffusers
+run_id: '5'
+head_sha: db6550a228941b538f340fb5b65ed16c43a21b88
+run_attempts: []
+commits:
+- sha: db6550a228941b538f340fb5b65ed16c43a21b88
+  author: fabiorigano
+  files:
+  - src/diffusers/loaders/ip_adapter.py
+- sha: 40f626d5fb85aeb2d1429add195989cd4873287b
+  author: fabiorigano
+  files:
+  - docs/source/en/using-diffusers/loading_adapters.md
+- sha: d1f147a9b7273322b5bd19f2743d498a3a37a570
+  author: sayakpaul
+  files:
+  - docs/source/en/_toctree.yml
+  - docs/source/en/api/pipelines/amused.md
+  - docs/source/en/api/pipelines/stable_diffusion/ldm3d_diffusion.md
+  - examples/amused/README.md
+  - examples/amused/train_amused.py
+  - examples/community/README.md
+  - examples/community/marigold_depth_estimation.py
+  - examples/dreambooth/train_dreambooth_lora.py
+  - examples/dreambooth/train_dreambooth_lora_sdxl.py
+  - examples/research_projects/realfill/requirements.txt
+  - examples/text_to_image/train_text_to_image_lora.py
+  - examples/text_to_image/train_text_to_image_lora_sdxl.py
+  - scripts/convert_amused.py
+  - src/diffusers/__init__.py
+  - src/diffusers/loaders/lora.py
+  - src/diffusers/models/__init__.py
+  - src/diffusers/models/attention.py
+  - src/diffusers/models/autoencoders/vae.py
+  - src/diffusers/models/downsampling.py
+  - src/diffusers/models/embeddings.py
+  - src/diffusers/models/normalization.py
+  - src/diffusers/models/upsampling.py
+  - src/diffusers/models/uvit_2d.py
+  - src/diffusers/models/vq_model.py
+  - src/diffusers/pipelines/__init__.py
+  - src/diffusers/pipelines/amused/__init__.py
+  - src/diffusers/pipelines/amused/pipeline_amused.py
+  - src/diffusers/pipelines/amused/pipeline_amused_img2img.py
+  - src/diffusers/pipelines/amused/pipeline_amused_inpaint.py
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet.py
+  - src/diffusers/pipelines/stable_diffusion/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_attend_and_excite/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_attend_and_excite/pipeline_stable_diffusion_attend_and_excite.py
+  - src/diffusers/pipelines/stable_diffusion_diffedit/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_diffedit/pipeline_stable_diffusion_diffedit.py
+  - src/diffusers/pipelines/stable_diffusion_gligen/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_gligen/pipeline_stable_diffusion_gligen.py
+  - src/diffusers/pipelines/stable_diffusion_gligen/pipeline_stable_diffusion_gligen_text_image.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_k_diffusion/pipeline_stable_diffusion_k_diffusion.py
+  - src/diffusers/pipelines/stable_diffusion_ldm3d/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_ldm3d/pipeline_stable_diffusion_ldm3d.py
+  - src/diffusers/pipelines/stable_diffusion_panorama/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_panorama/pipeline_stable_diffusion_panorama.py
+  - src/diffusers/pipelines/stable_diffusion_sag/__init__.py
+  - src/diffusers/pipelines/stable_diffusion_sag/pipeline_stable_diffusion_sag.py
+  - src/diffusers/schedulers/__init__.py
+  - src/diffusers/schedulers/scheduling_amused.py
+  - src/diffusers/utils/dummy_pt_objects.py
+  - src/diffusers/utils/dummy_torch_and_transformers_objects.py
+  - src/diffusers/utils/torch_utils.py
+  - tests/lora/test_lora_layers_peft.py
+  - tests/pipelines/amused/__init__.py
+  - tests/pipelines/amused/test_amused.py
+  - tests/pipelines/amused/test_amused_img2img.py
+  - tests/pipelines/amused/test_amused_inpaint.py
+  - tests/pipelines/stable_diffusion/test_onnx_stable_diffusion_inpaint_legacy.py
+  - tests/pipelines/test_pipelines_common.py
+- sha: 2d43094ffc9b1ee377651c6c8a358c81f0c96005
+  author: mwkldeveloper
+  files:
+  - examples/text_to_image/train_text_to_image_lora.py
+- sha: 7c05b975b79df39875959494020e4b5eedd2c4c8
+  author: celestialphineas
+  files:
+  - src/diffusers/pipelines/controlnet/pipeline_controlnet.py
+- sha: fe574c8b29297f4b9a562f21a88e9de3e4fda856
+  author: DN6
+  files:
+  - tests/lora/test_lora_layers_peft.py
+- sha: 90b9479903dcf3b053dc2461d4d6266eed0c27ea
+  author: sayakpaul
+  files:
+  - examples/dreambooth/train_dreambooth_lora.py
+  - examples/dreambooth/train_dreambooth_lora_sdxl.py
+  - examples/text_to_image/train_text_to_image_lora.py
+  - examples/text_to_image/train_text_to_image_lora_sdxl.py
+  - tests/lora/test_lora_layers_peft.py
+- sha: df76a39e1bc1de5bec647ce56a7fe4d8d1b6a643
+  author: apolinario
+  files:
+  - examples/dreambooth/train_dreambooth_lora_sdxl.py
+- sha: 3369bc810a09a52521bbf8cc1ec77df3a8c682a8
+  author: markkua
+  files:
+  - examples/community/README.md
+  - examples/community/marigold_depth_estimation.py
+- sha: 7fe47596af40ea900318e6a2a773a00ff3f3a115
+  author: pcuenca
+  files:
+  - src/diffusers/utils/torch_utils.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

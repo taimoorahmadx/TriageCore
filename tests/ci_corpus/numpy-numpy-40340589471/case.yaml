@@ -1,4 +1,5 @@
 repo: numpy/numpy
+source: mined
 run_id: 40340589471
 head_sha: 033498ec137c2c8b35bc125ba0968b487d952f26
 run_attempts:

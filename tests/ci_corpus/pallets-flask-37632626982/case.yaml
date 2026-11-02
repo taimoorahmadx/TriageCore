@@ -1,4 +1,5 @@
 repo: pallets/flask
+source: mined
 run_id: 37632626982
 head_sha: 41cb747cd5a9b43da43bf809ad974722542603db
 run_attempts:

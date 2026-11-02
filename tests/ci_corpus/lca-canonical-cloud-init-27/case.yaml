@@ -1,0 +1,82 @@
+repo: canonical/cloud-init
+run_id: '27'
+head_sha: 4d5898b8a73c93e1ed4434744c2fa7c3f7fbd501
+run_attempts: []
+commits:
+- sha: 4d5898b8a73c93e1ed4434744c2fa7c3f7fbd501
+  author: holmanb
+  files:
+  - cloudinit/distros/__init__.py
+  - cloudinit/net/dhcp.py
+  - cloudinit/sources/DataSourceCloudStack.py
+  - cloudinit/util.py
+  - tests/unittests/net/test_dhcp.py
+  - tests/unittests/sources/test_cloudstack.py
+- sha: baa1b783e871ffa76ba97f44efc5ac8988286d2a
+  author: holmanb
+  files:
+  - cloudinit/net/dhcp.py
+  - cloudinit/net/ephemeral.py
+  - cloudinit/sources/DataSourceCloudStack.py
+  - tests/unittests/net/test_dhcp.py
+  - tests/unittests/sources/test_aliyun.py
+  - tests/unittests/sources/test_azure.py
+  - tests/unittests/sources/test_cloudstack.py
+  - tests/unittests/sources/test_ec2.py
+  - tests/unittests/sources/test_openstack.py
+  - tests/unittests/sources/test_upcloud.py
+  - tests/unittests/util.py
+- sha: 85a71c8e379b1ac3e188010ca4aa3cf16940d19e
+  author: holmanb
+  files:
+  - cloudinit/distros/__init__.py
+  - cloudinit/net/dhcp.py
+  - cloudinit/net/ephemeral.py
+  - tests/unittests/net/test_dhcp.py
+- sha: f0914da77e86bb0626da9c2a50304ebfac0262e6
+  author: holmanb
+  files:
+  - cloudinit/net/dhcp.py
+  - tests/unittests/net/test_dhcp.py
+- sha: c1f9752bf856ca36f1ee24ff4e62ff52bc8118fb
+  author: holmanb
+  files:
+  - cloudinit/net/dhcp.py
+  - tests/unittests/net/test_dhcp.py
+- sha: 1baa9ff060b549391fd6e29028ac78311b5df58b
+  author: phsm
+  files:
+  - cloudinit/distros/__init__.py
+  - cloudinit/distros/amazon.py
+  - cloudinit/distros/debian.py
+  - cloudinit/distros/freebsd.py
+  - cloudinit/distros/rhel.py
+  - cloudinit/net/dhcp.py
+  - cloudinit/sources/DataSourceCloudStack.py
+  - tests/unittests/net/test_dhcp.py
+  - tests/unittests/sources/test_cloudstack.py
+- sha: b729a4c4aa32d2bdfdd84fb24b9be5fc9c1eb293
+  author: Carlos Nihelton
+  files:
+  - tests/unittests/test_ds_identify.py
+  - tools/.github-cla-signers
+  - tools/ds-identify
+- sha: f79505db9fe1b07f55a4a2d00fdba2f5ece3576f
+  author: TheRealFalcon
+  files:
+  - tests/integration_tests/modules/test_set_hostname.py
+- sha: 901a9a6954249665ef1cdf2ac54d0f7c2d4e9e3b
+  author: TheRealFalcon
+  files:
+  - tests/integration_tests/releases.py
+- sha: 436e6f5ce3fbb8b391a2158538873644058904e6
+  author: TheRealFalcon
+  files:
+  - cloudinit/net/network_state.py
+  - cloudinit/net/networkd.py
+  - tests/unittests/net/test_network_state.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,102 @@
+===== Python 3.8/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+Success: no issues found in 60 source files
++ ruff check httpx tests
+httpx/__init__.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.9/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+Success: no issues found in 60 source files
++ ruff check httpx tests
+httpx/__init__.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.10/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
++ ruff format httpx tests --diff
+VERSION: 0.26.0
+60 files left unchanged
++ mypy httpx tests
+Success: no issues found in 60 source files
++ ruff check httpx tests
+httpx/__init__.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.11/5_Run linting checks.txt =====
+##[group]Run scripts/check
+[36;1mscripts/check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ ./scripts/sync-version
+CHANGELOG_VERSION: 0.26.0
+VERSION: 0.26.0
++ ruff format httpx tests --diff
+60 files left unchanged
++ mypy httpx tests
+Success: no issues found in 60 source files
++ ruff check httpx tests
+httpx/__init__.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 1 error.
+[*] 1 fixable with the `--fix` option.
+##[error]Process completed with exit code 1.

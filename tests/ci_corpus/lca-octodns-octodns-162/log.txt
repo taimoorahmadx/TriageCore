@@ -1,0 +1,1025 @@
+===== setup-py/4_CI setup.py.txt =====
+##[group]Run ./script/cibuild-setup-py
+[36;1m./script/cibuild-setup-py[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.0/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+##[endgroup]
+## create test venv ############################################################
+Collecting setuptools
+  Obtaining dependency information for setuptools from https://files.pythonhosted.org/packages/bb/e1/ed2dd0850446b8697ad28d118df885ad04140c64ace06c4bd559f7c8a94f/setuptools-69.0.2-py3-none-any.whl.metadata
+  Downloading setuptools-69.0.2-py3-none-any.whl.metadata (6.3 kB)
+Downloading setuptools-69.0.2-py3-none-any.whl (819 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.5/819.5 kB 22.3 MB/s eta 0:00:00
+Installing collected packages: setuptools
+Successfully installed setuptools-69.0.2
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+## environment & versions ######################################################
+Python 3.12.0
+pip 23.2.1 from /tmp/ci-9dr3sWv5MQ/lib/python3.12/site-packages/pip (python 3.12)
+## validate setup.py build #####################################################
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/octodns
+copying octodns/context.py -> build/lib/octodns
+copying octodns/deprecation.py -> build/lib/octodns
+copying octodns/equality.py -> build/lib/octodns
+copying octodns/__init__.py -> build/lib/octodns
+copying octodns/zone.py -> build/lib/octodns
+copying octodns/idna.py -> build/lib/octodns
+copying octodns/yaml.py -> build/lib/octodns
+copying octodns/manager.py -> build/lib/octodns
+creating build/lib/octodns/source
+copying octodns/source/base.py -> build/lib/octodns/source
+copying octodns/source/__init__.py -> build/lib/octodns/source
+copying octodns/source/tinydns.py -> build/lib/octodns/source
+copying octodns/source/envvar.py -> build/lib/octodns/source
+creating build/lib/octodns/cmds
+copying octodns/cmds/sync.py -> build/lib/octodns/cmds
+copying octodns/cmds/report.py -> build/lib/octodns/cmds
+copying octodns/cmds/dump.py -> build/lib/octodns/cmds
+copying octodns/cmds/args.py -> build/lib/octodns/cmds
+copying octodns/cmds/__init__.py -> build/lib/octodns/cmds
+copying octodns/cmds/versions.py -> build/lib/octodns/cmds
+copying octodns/cmds/compare.py -> build/lib/octodns/cmds
+copying octodns/cmds/validate.py -> build/lib/octodns/cmds
+creating build/lib/octodns/record
+copying octodns/record/base.py -> build/lib/octodns/record
+copying octodns/record/txt.py -> build/lib/octodns/record
+copying octodns/record/naptr.py -> build/lib/octodns/record
+copying octodns/record/alias.py -> build/lib/octodns/record
+copying octodns/record/geo_data.py -> build/lib/octodns/record
+copying octodns/record/ptr.py -> build/lib/octodns/record
+copying octodns/record/ns.py -> build/lib/octodns/record
+copying octodns/record/cname.py -> build/lib/octodns/record
+copying octodns/record/urlfwd.py -> build/lib/octodns/record
+copying octodns/record/rr.py -> build/lib/octodns/record
+copying octodns/record/target.py -> build/lib/octodns/record
+copying octodns/record/exception.py -> build/lib/octodns/record
+copying octodns/record/__init__.py -> build/lib/octodns/record
+copying octodns/record/tlsa.py -> build/lib/octodns/record
+copying octodns/record/srv.py -> build/lib/octodns/record
+copying octodns/record/caa.py -> build/lib/octodns/record
+copying octodns/record/dynamic.py -> build/lib/octodns/record
+copying octodns/record/loc.py -> build/lib/octodns/record
+copying octodns/record/chunked.py -> build/lib/octodns/record
+copying octodns/record/ip.py -> build/lib/octodns/record
+copying octodns/record/ds.py -> build/lib/octodns/record
+copying octodns/record/spf.py -> build/lib/octodns/record
+copying octodns/record/aaaa.py -> build/lib/octodns/record
+copying octodns/record/a.py -> build/lib/octodns/record
+copying octodns/record/subnet.py -> build/lib/octodns/record
+copying octodns/record/change.py -> build/lib/octodns/record
+copying octodns/record/geo.py -> build/lib/octodns/record
+copying octodns/record/dname.py -> build/lib/octodns/record
+copying octodns/record/sshfp.py -> build/lib/octodns/record
+copying octodns/record/mx.py -> build/lib/octodns/record
+creating build/lib/octodns/processor
+copying octodns/processor/meta.py -> build/lib/octodns/processor
+copying octodns/processor/base.py -> build/lib/octodns/processor
+copying octodns/processor/ownership.py -> build/lib/octodns/processor
+copying octodns/processor/filter.py -> build/lib/octodns/processor
+copying octodns/processor/__init__.py -> build/lib/octodns/processor
+copying octodns/processor/restrict.py -> build/lib/octodns/processor
+copying octodns/processor/acme.py -> build/lib/octodns/processor
+copying octodns/processor/spf.py -> build/lib/octodns/processor
+copying octodns/processor/arpa.py -> build/lib/octodns/processor
+creating build/lib/octodns/provider
+copying octodns/provider/base.py -> build/lib/octodns/provider
+copying octodns/provider/plan.py -> build/lib/octodns/provider
+copying octodns/provider/__init__.py -> build/lib/octodns/provider
+copying octodns/provider/yaml.py -> build/lib/octodns/provider
+## validate setup.py install ###################################################
+running install
+/tmp/ci-9dr3sWv5MQ/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/tmp/ci-9dr3sWv5MQ/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:66: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running bdist_egg
+running egg_info
+creating octodns.egg-info
+writing octodns.egg-info/PKG-INFO
+writing dependency_links to octodns.egg-info/dependency_links.txt
+writing entry points to octodns.egg-info/entry_points.txt
+writing requirements to octodns.egg-info/requires.txt
+writing top-level names to octodns.egg-info/top_level.txt
+writing manifest file 'octodns.egg-info/SOURCES.txt'
+reading manifest file 'octodns.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching '*.json' under directory 'tests'
+warning: no files found matching '*.txt' under directory 'tests'
+adding license file 'LICENSE'
+writing manifest file 'octodns.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-x86_64/egg
+running install_lib
+running build_py
+copying octodns/context.py -> build/lib/octodns
+copying octodns/deprecation.py -> build/lib/octodns
+copying octodns/equality.py -> build/lib/octodns
+copying octodns/__init__.py -> build/lib/octodns
+copying octodns/zone.py -> build/lib/octodns
+copying octodns/idna.py -> build/lib/octodns
+copying octodns/yaml.py -> build/lib/octodns
+copying octodns/manager.py -> build/lib/octodns
+copying octodns/source/base.py -> build/lib/octodns/source
+copying octodns/source/__init__.py -> build/lib/octodns/source
+copying octodns/source/tinydns.py -> build/lib/octodns/source
+copying octodns/source/envvar.py -> build/lib/octodns/source
+copying octodns/cmds/sync.py -> build/lib/octodns/cmds
+copying octodns/cmds/report.py -> build/lib/octodns/cmds
+copying octodns/cmds/dump.py -> build/lib/octodns/cmds
+copying octodns/cmds/args.py -> build/lib/octodns/cmds
+copying octodns/cmds/__init__.py -> build/lib/octodns/cmds
+copying octodns/cmds/versions.py -> build/lib/octodns/cmds
+copying octodns/cmds/compare.py -> build/lib/octodns/cmds
+copying octodns/cmds/validate.py -> build/lib/octodns/cmds
+copying octodns/record/base.py -> build/lib/octodns/record
+copying octodns/record/txt.py -> build/lib/octodns/record
+copying octodns/record/naptr.py -> build/lib/octodns/record
+copying octodns/record/alias.py -> build/lib/octodns/record
+copying octodns/record/geo_data.py -> build/lib/octodns/record
+copying octodns/record/ptr.py -> build/lib/octodns/record
+copying octodns/record/ns.py -> build/lib/octodns/record
+copying octodns/record/cname.py -> build/lib/octodns/record
+copying octodns/record/urlfwd.py -> build/lib/octodns/record
+copying octodns/record/rr.py -> build/lib/octodns/record
+copying octodns/record/target.py -> build/lib/octodns/record
+copying octodns/record/exception.py -> build/lib/octodns/record
+copying octodns/record/__init__.py -> build/lib/octodns/record
+copying octodns/record/tlsa.py -> build/lib/octodns/record
+copying octodns/record/srv.py -> build/lib/octodns/record
+copying octodns/record/caa.py -> build/lib/octodns/record
+copying octodns/record/dynamic.py -> build/lib/octodns/record
+copying octodns/record/loc.py -> build/lib/octodns/record
+copying octodns/record/chunked.py -> build/lib/octodns/record
+copying octodns/record/ip.py -> build/lib/octodns/record
+copying octodns/record/ds.py -> build/lib/octodns/record
+copying octodns/record/spf.py -> build/lib/octodns/record
+copying octodns/record/aaaa.py -> build/lib/octodns/record
+copying octodns/record/a.py -> build/lib/octodns/record
+copying octodns/record/subnet.py -> build/lib/octodns/record
+copying octodns/record/change.py -> build/lib/octodns/record
+copying octodns/record/geo.py -> build/lib/octodns/record
+copying octodns/record/dname.py -> build/lib/octodns/record
+copying octodns/record/sshfp.py -> build/lib/octodns/record
+copying octodns/record/mx.py -> build/lib/octodns/record
+copying octodns/processor/meta.py -> build/lib/octodns/processor
+copying octodns/processor/base.py -> build/lib/octodns/processor
+copying octodns/processor/ownership.py -> build/lib/octodns/processor
+copying octodns/processor/filter.py -> build/lib/octodns/processor
+copying octodns/processor/__init__.py -> build/lib/octodns/processor
+copying octodns/processor/restrict.py -> build/lib/octodns/processor
+copying octodns/processor/acme.py -> build/lib/octodns/processor
+copying octodns/processor/spf.py -> build/lib/octodns/processor
+copying octodns/processor/arpa.py -> build/lib/octodns/processor
+copying octodns/provider/base.py -> build/lib/octodns/provider
+copying octodns/provider/plan.py -> build/lib/octodns/provider
+copying octodns/provider/__init__.py -> build/lib/octodns/provider
+copying octodns/provider/yaml.py -> build/lib/octodns/provider
+creating build/bdist.linux-x86_64
+creating build/bdist.linux-x86_64/egg
+creating build/bdist.linux-x86_64/egg/octodns
+creating build/bdist.linux-x86_64/egg/octodns/source
+copying build/lib/octodns/source/base.py -> build/bdist.linux-x86_64/egg/octodns/source
+copying build/lib/octodns/source/__init__.py -> build/bdist.linux-x86_64/egg/octodns/source
+copying build/lib/octodns/source/tinydns.py -> build/bdist.linux-x86_64/egg/octodns/source
+copying build/lib/octodns/source/envvar.py -> build/bdist.linux-x86_64/egg/octodns/source
+creating build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/sync.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/report.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/dump.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/args.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/__init__.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/versions.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/compare.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/cmds/validate.py -> build/bdist.linux-x86_64/egg/octodns/cmds
+copying build/lib/octodns/context.py -> build/bdist.linux-x86_64/egg/octodns
+copying build/lib/octodns/deprecation.py -> build/bdist.linux-x86_64/egg/octodns
+creating build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/base.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/txt.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/naptr.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/alias.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/geo_data.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/ptr.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/ns.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/cname.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/urlfwd.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/rr.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/target.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/exception.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/__init__.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/tlsa.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/srv.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/caa.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/dynamic.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/loc.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/chunked.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/ip.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/ds.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/spf.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/aaaa.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/a.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/subnet.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/change.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/geo.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/dname.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/sshfp.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/record/mx.py -> build/bdist.linux-x86_64/egg/octodns/record
+copying build/lib/octodns/equality.py -> build/bdist.linux-x86_64/egg/octodns
+copying build/lib/octodns/__init__.py -> build/bdist.linux-x86_64/egg/octodns
+creating build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/meta.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/base.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/ownership.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/filter.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/__init__.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/restrict.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/acme.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/spf.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/processor/arpa.py -> build/bdist.linux-x86_64/egg/octodns/processor
+copying build/lib/octodns/zone.py -> build/bdist.linux-x86_64/egg/octodns
+copying build/lib/octodns/idna.py -> build/bdist.linux-x86_64/egg/octodns
+creating build/bdist.linux-x86_64/egg/octodns/provider
+copying build/lib/octodns/provider/base.py -> build/bdist.linux-x86_64/egg/octodns/provider
+copying build/lib/octodns/provider/plan.py -> build/bdist.linux-x86_64/egg/octodns/provider
+copying build/lib/octodns/provider/__init__.py -> build/bdist.linux-x86_64/egg/octodns/provider
+copying build/lib/octodns/provider/yaml.py -> build/bdist.linux-x86_64/egg/octodns/provider
+copying build/lib/octodns/yaml.py -> build/bdist.linux-x86_64/egg/octodns
+copying build/lib/octodns/manager.py -> build/bdist.linux-x86_64/egg/octodns
+byte-compiling build/bdist.linux-x86_64/egg/octodns/source/base.py to base.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/source/__init__.py to __init__.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/source/tinydns.py to tinydns.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/source/envvar.py to envvar.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/sync.py to sync.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/report.py to report.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/dump.py to dump.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/args.py to args.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/__init__.py to __init__.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/versions.py to versions.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/compare.py to compare.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/cmds/validate.py to validate.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/context.py to context.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/deprecation.py to deprecation.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/base.py to base.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/txt.py to txt.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/naptr.py to naptr.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/alias.py to alias.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/geo_data.py to geo_data.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/ptr.py to ptr.cpython-312.pyc
+byte-compiling build/bdist.linux-x86_64/egg/octodns/record/ns.py to ns.cpython-312.pyc
+[... 1744 lines removed by TriageCore ...]
+Downloading build-1.0.3-py3-none-any.whl (18 kB)
+Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.5/162.5 kB 50.4 MB/s eta 0:00:00
+Downloading cffi-1.16.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (464 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.8/464.8 kB 79.6 MB/s eta 0:00:00
+Downloading charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (140 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.3/140.3 kB 45.9 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 34.3 MB/s eta 0:00:00
+Downloading coverage-7.3.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (231 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.4/231.4 kB 59.5 MB/s eta 0:00:00
+Downloading docutils-0.20.1-py3-none-any.whl (572 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 572.7/572.7 kB 89.8 MB/s eta 0:00:00
+Downloading exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Downloading importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+Downloading jaraco.classes-3.3.0-py3-none-any.whl (5.9 kB)
+Downloading keyring-24.3.0-py3-none-any.whl (38 kB)
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 28.4 MB/s eta 0:00:00
+Downloading more_itertools-10.1.0-py3-none-any.whl (55 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 18.3 MB/s eta 0:00:00
+Downloading nh3-0.2.14-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 110.3 MB/s eta 0:00:00
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 18.6 MB/s eta 0:00:00
+Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Downloading pluggy-1.3.0-py3-none-any.whl (18 kB)
+Downloading pyflakes-3.1.0-py2.py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 22.0 MB/s eta 0:00:00
+Downloading pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Downloading pytest_mock-3.12.0-py3-none-any.whl (9.8 kB)
+Downloading pytest-7.4.3-py3-none-any.whl (325 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.1/325.1 kB 69.5 MB/s eta 0:00:00
+Downloading readme_renderer-42.0-py3-none-any.whl (13 kB)
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 23.6 MB/s eta 0:00:00
+Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 56.7 MB/s eta 0:00:00
+Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Downloading urllib3-2.1.0-py3-none-any.whl (104 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 36.4 MB/s eta 0:00:00
+Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Using cached wheel-0.42.0-py3-none-any.whl (65 kB)
+Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 122.6 MB/s eta 0:00:00
+Building wheels for collected packages: pycountry, pytest-network
+  Building wheel for pycountry (pyproject.toml): started
+  Building wheel for pycountry (pyproject.toml): finished with status 'done'
+  Created wheel for pycountry: filename=pycountry-22.3.5-py2.py3-none-any.whl size=10681832 sha256=1f3a135bad4f2c47c4971b5f2047ef7f47088363de2713410a07b63b56ef76bc
+  Stored in directory: /home/runner/.cache/pip/wheels/cd/29/8b/617685ed7942656b36efb06ff9247dbe832e3f4f7724fffc09
+  Building wheel for pytest-network (pyproject.toml): started
+  Building wheel for pytest-network (pyproject.toml): finished with status 'done'
+  Created wheel for pytest-network: filename=pytest_network-0.0.1-py3-none-any.whl size=2960 sha256=44cf2c353b920c5984e64d21fe75a9c219f4d219a8a908b71a8f7b84da2d8afb
+  Stored in directory: /home/runner/.cache/pip/wheels/da/cb/c3/504bc4a9f8dadada066a674b01af36cd6144a159cab93c8c85
+Successfully built pycountry pytest-network
+Installing collected packages: repoze.lru, pprintpp, nh3, zipp, wheel, urllib3, typing_extensions, tomli, rfc3986, pyproject_hooks, Pygments, pyflakes, pycparser, pycountry, pluggy, platformdirs, pkginfo, pathspec, packaging, mypy-extensions, more-itertools, mdurl, jeepney, isort, iniconfig, exceptiongroup, docutils, coverage, click, charset-normalizer, certifi, requests, readme-renderer, pytest, markdown-it-py, jaraco.classes, importlib-metadata, cffi, build, black, rich, requests-toolbelt, pytest-network, pytest-mock, pytest-cov, cryptography, cmarkgfm, SecretStorage, pycountry-convert, keyring, twine
+Successfully installed Pygments-2.17.2 SecretStorage-3.3.3 black-23.11.0 build-1.0.3 certifi-2023.11.17 cffi-1.16.0 charset-normalizer-3.3.2 click-8.1.7 cmarkgfm-2022.10.27 coverage-7.3.2 cryptography-41.0.7 docutils-0.20.1 exceptiongroup-1.2.0 importlib-metadata-6.8.0 iniconfig-2.0.0 isort-5.12.0 jaraco.classes-3.3.0 jeepney-0.8.0 keyring-24.3.0 markdown-it-py-3.0.0 mdurl-0.1.2 more-itertools-10.1.0 mypy-extensions-1.0.0 nh3-0.2.14 packaging-23.2 pathspec-0.11.2 pkginfo-1.9.6 platformdirs-4.0.0 pluggy-1.3.0 pprintpp-0.4.0 pycountry-22.3.5 pycountry-convert-0.7.2 pycparser-2.21 pyflakes-3.1.0 pyproject_hooks-1.0.0 pytest-7.4.3 pytest-cov-4.1.0 pytest-mock-3.12.0 pytest-network-0.0.1 readme-renderer-42.0 repoze.lru-0.7 requests-2.31.0 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-13.7.0 tomli-2.0.1 twine-4.0.2 typing_extensions-4.8.0 urllib3-2.1.0 wheel-0.42.0 zipp-3.17.0
+
+Setting blame.ignoreRevsFile to .git-blame-ingore-revs
+
+Installing pre-commit hook
+
+Run source env/bin/activate to get your shell in to the virtualenv
+See README.md for more information.
+
+## environment & versions ######################################################
+Python 3.11.7
+pip 23.3.1 from /home/runner/work/octodns/octodns/env/lib/python3.11/site-packages/pip (python 3.11)
+## modules: 
+black==23.11.0
+build==1.0.3
+certifi==2023.11.17
+cffi==1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+cmarkgfm==2022.10.27
+coverage==7.3.2
+cryptography==41.0.7
+dnspython==2.4.2
+docutils==0.20.1
+exceptiongroup==1.2.0
+fqdn==1.5.1
+idna==3.4
+importlib-metadata==6.8.0
+iniconfig==2.0.0
+isort==5.12.0
+jaraco.classes==3.3.0
+jeepney==0.8.0
+keyring==24.3.0
+markdown-it-py==3.0.0
+mdurl==0.1.2
+more-itertools==10.1.0
+mypy-extensions==1.0.0
+natsort==8.4.0
+nh3==0.2.14
+packaging==23.2
+pathspec==0.11.2
+pkginfo==1.9.6
+platformdirs==4.0.0
+pluggy==1.3.0
+pprintpp==0.4.0
+pycountry==22.3.5
+pycountry-convert==0.7.2
+pycparser==2.21
+pyflakes==3.1.0
+Pygments==2.17.2
+pyproject_hooks==1.0.0
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-network==0.0.1
+python-dateutil==2.8.2
+PyYAML==6.0.1
+readme-renderer==42.0
+repoze.lru==0.7
+requests==2.31.0
+requests-toolbelt==1.0.0
+rfc3986==2.0.0
+rich==13.7.0
+SecretStorage==3.3.3
+six==1.16.0
+tomli==2.0.1
+twine==4.0.2
+typing_extensions==4.8.0
+urllib3==2.1.0
+zipp==3.17.0
+## clean up ####################################################################
+## begin #######################################################################
+## lint ########################################################################
+## formatting ##################################################################
+All done! ✨ 🍰 ✨
+110 files would be left unchanged.
+## tests/coverage ##############################################################
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/octodns/octodns
+configfile: pyproject.toml
+plugins: mock-3.12.0, network-0.0.1, cov-4.1.0
+collected 294 items
+
+tests/test_octodns_equality.py ..                                        [  0%]
+tests/test_octodns_idna.py .........                                     [  3%]
+tests/test_octodns_manager.py ...........................F.............. [ 18%]
+                                                                         [ 18%]
+tests/test_octodns_plan.py ..........                                    [ 21%]
+tests/test_octodns_processor_acme.py .                                   [ 21%]
+tests/test_octodns_processor_arpa.py .........                           [ 24%]
+tests/test_octodns_processor_filter.py ................                  [ 30%]
+tests/test_octodns_processor_meta.py ......                              [ 32%]
+tests/test_octodns_processor_ownership.py ...                            [ 33%]
+tests/test_octodns_processor_restrict.py .                               [ 33%]
+tests/test_octodns_processor_spf.py .......                              [ 36%]
+tests/test_octodns_provider_base.py ................................     [ 46%]
+tests/test_octodns_provider_yaml.py ...................                  [ 53%]
+tests/test_octodns_record.py .........................                   [ 61%]
+tests/test_octodns_record_a.py ..                                        [ 62%]
+tests/test_octodns_record_aaaa.py ...                                    [ 63%]
+tests/test_octodns_record_alias.py ...                                   [ 64%]
+tests/test_octodns_record_caa.py ....                                    [ 65%]
+tests/test_octodns_record_change.py ..                                   [ 66%]
+tests/test_octodns_record_chunked.py .                                   [ 67%]
+tests/test_octodns_record_cname.py ...                                   [ 68%]
+tests/test_octodns_record_dname.py ...                                   [ 69%]
+tests/test_octodns_record_ds.py .                                        [ 69%]
+tests/test_octodns_record_dynamic.py ................                    [ 74%]
+tests/test_octodns_record_geo.py .......                                 [ 77%]
+tests/test_octodns_record_ip.py .                                        [ 77%]
+tests/test_octodns_record_loc.py ....                                    [ 78%]
+tests/test_octodns_record_mx.py ....                                     [ 80%]
+tests/test_octodns_record_naptr.py ...                                   [ 81%]
+tests/test_octodns_record_ns.py ...                                      [ 82%]
+tests/test_octodns_record_ptr.py ...                                     [ 83%]
+tests/test_octodns_record_spf.py ..                                      [ 84%]
+tests/test_octodns_record_srv.py ....                                    [ 85%]
+tests/test_octodns_record_sshfp.py ....                                  [ 86%]
+tests/test_octodns_record_target.py .                                    [ 87%]
+tests/test_octodns_record_tlsa.py ...                                    [ 88%]
+tests/test_octodns_record_txt.py ....                                    [ 89%]
+tests/test_octodns_record_urlfwd.py ..                                   [ 90%]
+tests/test_octodns_source_envvar.py ..                                   [ 90%]
+tests/test_octodns_source_tinydns.py .....                               [ 92%]
+tests/test_octodns_yaml.py ..                                            [ 93%]
+tests/test_octodns_zone.py ....................                          [100%]
+
+=================================== FAILURES ===================================
+________________________ TestManager.test_missing_zone _________________________
+
+self = <test_octodns_manager.TestManager testMethod=test_missing_zone>
+
+    def test_missing_zone(self):
+        with self.assertRaises(ManagerException) as ctx:
+            Manager(get_config_filename('dynamic-config.yaml')).sync(
+                ['missing.zones.']
+            )
+>       self.assertTrue('Requested zone:' in str(ctx.exception))
+E       AssertionError: False is not true
+
+tests/test_octodns_manager.py:87: AssertionError
+
+---------- coverage: platform linux, python 3.11.7-final-0 -----------
+Name                             Stmts   Miss Branch BrPart  Cover
+------------------------------------------------------------------
+octodns/__init__.py                  1      0      0      0   100%
+octodns/context.py                   4      0      0      0   100%
+octodns/deprecation.py               3      0      0      0   100%
+octodns/equality.py                 15      0      0      0   100%
+octodns/idna.py                     53      0     13      0   100%
+octodns/manager.py                 509      0    216      0   100%
+octodns/processor/__init__.py        0      0      0      0   100%
+octodns/processor/acme.py           22      0      8      0   100%
+octodns/processor/arpa.py           40      0     20      0   100%
+octodns/processor/base.py           13      0      0      0   100%
+octodns/processor/filter.py        134      0     46      0   100%
+octodns/processor/meta.py           48      0     16      0   100%
+octodns/processor/ownership.py      45      0     20      0   100%
+octodns/processor/restrict.py       21      0     10      0   100%
+octodns/processor/spf.py            59      0     26      0   100%
+octodns/provider/__init__.py         4      0      0      0   100%
+octodns/provider/base.py           147      0     72      0   100%
+octodns/provider/plan.py           203      0     65      0   100%
+octodns/provider/yaml.py           177      0     88      0   100%
+octodns/record/__init__.py          73      0      0      0   100%
+octodns/record/a.py                 13      0      0      0   100%
+octodns/record/aaaa.py              13      0      0      0   100%
+octodns/record/alias.py             15      0      4      0   100%
+octodns/record/base.py             268      0    118      0   100%
+octodns/record/caa.py               71      0     34      0   100%
+octodns/record/change.py            28      0      2      0   100%
+octodns/record/chunked.py           49      0     28      0   100%
+octodns/record/cname.py             16      0      4      0   100%
+octodns/record/dname.py              9      0      0      0   100%
+octodns/record/ds.py               121      0     52      0   100%
+octodns/record/dynamic.py          270      0    124      0   100%
+octodns/record/exception.py         17      0      4      0   100%
+octodns/record/geo.py              117      0     50      0   100%
+octodns/record/geo_data.py           1      0      0      0   100%
+octodns/record/ip.py                33      0     22      0   100%
+octodns/record/loc.py              184      0     82      0   100%
+octodns/record/mx.py                88      0     32      0   100%
+octodns/record/naptr.py            109      0     50      0   100%
+octodns/record/ns.py                 8      0      0      0   100%
+octodns/record/ptr.py               11      0      2      0   100%
+octodns/record/rr.py                12      0      0      0   100%
+octodns/record/spf.py               10      0      0      0   100%
+octodns/record/srv.py              117      0     48      0   100%
+octodns/record/sshfp.py             86      0     38      0   100%
+octodns/record/subnet.py            13      0      4      0   100%
+octodns/record/target.py            57      0     38      0   100%
+octodns/record/tlsa.py              97      0     44      0   100%
+octodns/record/txt.py                8      0      0      0   100%
+octodns/record/urlfwd.py            85      0     46      0   100%
+octodns/source/__init__.py           0      0      0      0   100%
+octodns/source/base.py              22      0      8      0   100%
+octodns/source/envvar.py            36      0      2      0   100%
+octodns/source/tinydns.py          239      0    132      0   100%
+octodns/yaml.py                     48      0     10      0   100%
+octodns/zone.py                    168      0     97      0   100%
+------------------------------------------------------------------
+TOTAL                             4010      0   1675      0   100%
+Coverage HTML written to dir htmlcov
+Coverage XML written to file coverage.xml
+
+Required test coverage of 100% reached. Total coverage: 100.00%
+=========================== short test summary info ============================
+FAILED tests/test_octodns_manager.py::TestManager::test_missing_zone - AssertionError: False is not true
+======================== 1 failed, 293 passed in 5.45s =========================
+##[error]Process completed with exit code 1.
+
+
+===== ci (3.12)/5_CI Build.txt =====
+##[group]Run ./script/cibuild
+[36;1m./script/cibuild[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.12.1/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.1/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.1/x64/lib
+##[endgroup]
+## bootstrap ###################################################################
+Requirement already satisfied: pip>=10.0.1 in ./env/lib/python3.12/site-packages (23.2.1)
+Collecting pip>=10.0.1
+  Obtaining dependency information for pip>=10.0.1 from https://files.pythonhosted.org/packages/47/6a/453160888fab7c6a432a6e25f8afe6256d0d9f2cbd25971021da6491d899/pip-23.3.1-py3-none-any.whl.metadata
+  Downloading pip-23.3.1-py3-none-any.whl.metadata (3.5 kB)
+Downloading pip-23.3.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 42.9 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.2.1
+    Uninstalling pip-23.2.1:
+      Successfully uninstalled pip-23.2.1
+Successfully installed pip-23.3.1
+Collecting PyYAML==6.0.1 (from -r requirements.txt (line 2))
+  Using cached PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting dnspython==2.4.2 (from -r requirements.txt (line 3))
+  Using cached dnspython-2.4.2-py3-none-any.whl.metadata (4.9 kB)
+Collecting fqdn==1.5.1 (from -r requirements.txt (line 4))
+  Using cached fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+Collecting idna==3.4 (from -r requirements.txt (line 5))
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting natsort==8.4.0 (from -r requirements.txt (line 6))
+  Using cached natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting python-dateutil==2.8.2 (from -r requirements.txt (line 7))
+  Using cached python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+Collecting six==1.16.0 (from -r requirements.txt (line 8))
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached PyYAML-6.0.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (724 kB)
+Using cached dnspython-2.4.2-py3-none-any.whl (300 kB)
+Using cached natsort-8.4.0-py3-none-any.whl (38 kB)
+Installing collected packages: six, PyYAML, natsort, idna, fqdn, dnspython, python-dateutil
+Successfully installed PyYAML-6.0.1 dnspython-2.4.2 fqdn-1.5.1 idna-3.4 natsort-8.4.0 python-dateutil-2.8.2 six-1.16.0
+Collecting Pygments==2.17.2 (from -r requirements-dev.txt (line 2))
+  Downloading pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting black==23.11.0 (from -r requirements-dev.txt (line 3))
+  Downloading black-23.11.0-py3-none-any.whl.metadata (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.9/66.9 kB 3.5 MB/s eta 0:00:00
+Collecting build==1.0.3 (from -r requirements-dev.txt (line 4))
+  Downloading build-1.0.3-py3-none-any.whl.metadata (4.2 kB)
+Collecting certifi==2023.11.17 (from -r requirements-dev.txt (line 5))
+  Downloading certifi-2023.11.17-py3-none-any.whl.metadata (2.2 kB)
+Collecting cffi==1.16.0 (from -r requirements-dev.txt (line 6))
+  Downloading cffi-1.16.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting charset-normalizer==3.3.2 (from -r requirements-dev.txt (line 7))
+  Downloading charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+Collecting click==8.1.7 (from -r requirements-dev.txt (line 8))
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting cmarkgfm==2022.10.27 (from -r requirements-dev.txt (line 9))
+  Downloading cmarkgfm-2022.10.27.tar.gz (141 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.2/141.2 kB 29.2 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting coverage==7.3.2 (from -r requirements-dev.txt (line 10))
+  Downloading coverage-7.3.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.1 kB)
+Collecting docutils==0.20.1 (from -r requirements-dev.txt (line 11))
+  Downloading docutils-0.20.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting exceptiongroup==1.2.0 (from -r requirements-dev.txt (line 12))
+  Downloading exceptiongroup-1.2.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting importlib-metadata==6.8.0 (from -r requirements-dev.txt (line 13))
+  Downloading importlib_metadata-6.8.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting iniconfig==2.0.0 (from -r requirements-dev.txt (line 14))
+  Downloading iniconfig-2.0.0-py3-none-any.whl (5.9 kB)
+Collecting isort==5.12.0 (from -r requirements-dev.txt (line 15))
+  Downloading isort-5.12.0-py3-none-any.whl (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 19.2 MB/s eta 0:00:00
+Collecting jaraco.classes==3.3.0 (from -r requirements-dev.txt (line 16))
+  Downloading jaraco.classes-3.3.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting keyring==24.3.0 (from -r requirements-dev.txt (line 17))
+  Downloading keyring-24.3.0-py3-none-any.whl.metadata (20 kB)
+Collecting markdown-it-py==3.0.0 (from -r requirements-dev.txt (line 18))
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting mdurl==0.1.2 (from -r requirements-dev.txt (line 19))
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting more-itertools==10.1.0 (from -r requirements-dev.txt (line 20))
+  Downloading more_itertools-10.1.0-py3-none-any.whl.metadata (33 kB)
+Collecting mypy-extensions==1.0.0 (from -r requirements-dev.txt (line 21))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting nh3==0.2.14 (from -r requirements-dev.txt (line 22))
+  Downloading nh3-0.2.14-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.6 kB)
+Collecting packaging==23.2 (from -r requirements-dev.txt (line 23))
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pathspec==0.11.2 (from -r requirements-dev.txt (line 24))
+  Downloading pathspec-0.11.2-py3-none-any.whl.metadata (19 kB)
+Collecting pkginfo==1.9.6 (from -r requirements-dev.txt (line 25))
+  Downloading pkginfo-1.9.6-py3-none-any.whl (30 kB)
+Collecting platformdirs==4.0.0 (from -r requirements-dev.txt (line 26))
+  Downloading platformdirs-4.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting pluggy==1.3.0 (from -r requirements-dev.txt (line 27))
+  Downloading pluggy-1.3.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting pprintpp==0.4.0 (from -r requirements-dev.txt (line 28))
+  Downloading pprintpp-0.4.0-py2.py3-none-any.whl (16 kB)
+Collecting pycountry-convert==0.7.2 (from -r requirements-dev.txt (line 29))
+  Downloading pycountry_convert-0.7.2-py3-none-any.whl (13 kB)
+Collecting pycountry==22.3.5 (from -r requirements-dev.txt (line 30))
+  Downloading pycountry-22.3.5.tar.gz (10.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.1/10.1 MB 104.7 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pycparser==2.21 (from -r requirements-dev.txt (line 31))
+  Using cached pycparser-2.21-py2.py3-none-any.whl (118 kB)
+Collecting pyflakes==3.1.0 (from -r requirements-dev.txt (line 32))
+  Downloading pyflakes-3.1.0-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting pyproject_hooks==1.0.0 (from -r requirements-dev.txt (line 33))
+  Downloading pyproject_hooks-1.0.0-py3-none-any.whl (9.3 kB)
+Collecting pytest-cov==4.1.0 (from -r requirements-dev.txt (line 34))
+  Downloading pytest_cov-4.1.0-py3-none-any.whl.metadata (26 kB)
+Collecting pytest-mock==3.12.0 (from -r requirements-dev.txt (line 35))
+  Downloading pytest_mock-3.12.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting pytest-network==0.0.1 (from -r requirements-dev.txt (line 36))
+  Downloading pytest_network-0.0.1.tar.gz (2.8 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pytest==7.4.3 (from -r requirements-dev.txt (line 37))
+  Downloading pytest-7.4.3-py3-none-any.whl.metadata (7.9 kB)
+Collecting readme-renderer==42.0 (from -r requirements-dev.txt (line 38))
+  Downloading readme_renderer-42.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting repoze.lru==0.7 (from -r requirements-dev.txt (line 39))
+  Downloading repoze.lru-0.7-py3-none-any.whl (10 kB)
+Collecting requests-toolbelt==1.0.0 (from -r requirements-dev.txt (line 40))
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 15.2 MB/s eta 0:00:00
+Collecting requests==2.31.0 (from -r requirements-dev.txt (line 41))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting rfc3986==2.0.0 (from -r requirements-dev.txt (line 42))
+  Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+Collecting rich==13.7.0 (from -r requirements-dev.txt (line 43))
+  Downloading rich-13.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting tomli==2.0.1 (from -r requirements-dev.txt (line 44))
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting twine==4.0.2 (from -r requirements-dev.txt (line 45))
+  Downloading twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting typing_extensions==4.8.0 (from -r requirements-dev.txt (line 46))
+  Downloading typing_extensions-4.8.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting urllib3==2.1.0 (from -r requirements-dev.txt (line 47))
+  Downloading urllib3-2.1.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting zipp==3.17.0 (from -r requirements-dev.txt (line 48))
+  Downloading zipp-3.17.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting SecretStorage>=3.2 (from keyring==24.3.0->-r requirements-dev.txt (line 17))
+  Downloading SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2 (from keyring==24.3.0->-r requirements-dev.txt (line 17))
+  Downloading jeepney-0.8.0-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.4/48.4 kB 13.3 MB/s eta 0:00:00
+Collecting wheel>=0.30.0 (from pycountry-convert==0.7.2->-r requirements-dev.txt (line 29))
+  Using cached wheel-0.42.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting setuptools (from pycountry==22.3.5->-r requirements-dev.txt (line 30))
+  Using cached setuptools-69.0.2-py3-none-any.whl.metadata (6.3 kB)
+Requirement already satisfied: idna<4,>=2.5 in ./env/lib/python3.12/site-packages (from requests==2.31.0->-r requirements-dev.txt (line 41)) (3.4)
+Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring==24.3.0->-r requirements-dev.txt (line 17))
+  Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 93.6 MB/s eta 0:00:00
+Downloading black-23.11.0-py3-none-any.whl (191 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 192.0/192.0 kB 31.4 MB/s eta 0:00:00
+Downloading build-1.0.3-py3-none-any.whl (18 kB)
+Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.5/162.5 kB 39.5 MB/s eta 0:00:00
+Using cached cffi-1.16.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (477 kB)
+Downloading charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (141 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 141.9/141.9 kB 38.7 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 29.8 MB/s eta 0:00:00
+Downloading coverage-7.3.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (232 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.3/232.3 kB 48.7 MB/s eta 0:00:00
+Downloading docutils-0.20.1-py3-none-any.whl (572 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 572.7/572.7 kB 74.1 MB/s eta 0:00:00
+Downloading exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Downloading importlib_metadata-6.8.0-py3-none-any.whl (22 kB)
+Downloading jaraco.classes-3.3.0-py3-none-any.whl (5.9 kB)
+Downloading keyring-24.3.0-py3-none-any.whl (38 kB)
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 23.7 MB/s eta 0:00:00
+Downloading more_itertools-10.1.0-py3-none-any.whl (55 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 17.8 MB/s eta 0:00:00
+Downloading nh3-0.2.14-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 98.1 MB/s eta 0:00:00
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 16.2 MB/s eta 0:00:00
+Downloading pathspec-0.11.2-py3-none-any.whl (29 kB)
+Downloading platformdirs-4.0.0-py3-none-any.whl (17 kB)
+Downloading pluggy-1.3.0-py3-none-any.whl (18 kB)
+Downloading pyflakes-3.1.0-py2.py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 21.7 MB/s eta 0:00:00
+Downloading pytest_cov-4.1.0-py3-none-any.whl (21 kB)
+Downloading pytest_mock-3.12.0-py3-none-any.whl (9.8 kB)
+Downloading pytest-7.4.3-py3-none-any.whl (325 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 325.1/325.1 kB 57.9 MB/s eta 0:00:00
+Downloading readme_renderer-42.0-py3-none-any.whl (13 kB)
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 16.5 MB/s eta 0:00:00
+Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 47.6 MB/s eta 0:00:00
+Downloading typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Downloading urllib3-2.1.0-py3-none-any.whl (104 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 23.3 MB/s eta 0:00:00
+Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Using cached wheel-0.42.0-py3-none-any.whl (65 kB)
+Using cached setuptools-69.0.2-py3-none-any.whl (819 kB)
+Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 107.6 MB/s eta 0:00:00
+Building wheels for collected packages: cmarkgfm, pycountry, pytest-network
+  Building wheel for cmarkgfm (pyproject.toml): started
+  Building wheel for cmarkgfm (pyproject.toml): finished with status 'done'
+  Created wheel for cmarkgfm: filename=cmarkgfm-2022.10.27-cp312-cp312-linux_x86_64.whl size=438506 sha256=fdbb533fe00677616961eda92dc6f504f84259d4ff1cc2e0c8c49eb757e59b28
+  Stored in directory: /home/runner/.cache/pip/wheels/6c/1d/0d/bc5293f7edd716c8f7a9b25a5f502bd38e1c55571911c11061
+  Building wheel for pycountry (pyproject.toml): started
+  Building wheel for pycountry (pyproject.toml): finished with status 'done'
+  Created wheel for pycountry: filename=pycountry-22.3.5-py2.py3-none-any.whl size=10681832 sha256=b3b721e2fbf3c359615fd74198aeb99ce8f19c4ba021148a3fd45761cf5b0eac
+  Stored in directory: /home/runner/.cache/pip/wheels/d6/29/9b/b87113e87dc952ca6b3cf003fca8372f7bd12295acf65992eb
+  Building wheel for pytest-network (pyproject.toml): started
+  Building wheel for pytest-network (pyproject.toml): finished with status 'done'
+  Created wheel for pytest-network: filename=pytest_network-0.0.1-py3-none-any.whl size=2960 sha256=994e926858a63d0e463602aa11c5e011a31c647010ee4498f67d409c1c4d53b5
+  Stored in directory: /home/runner/.cache/pip/wheels/e9/6b/5a/3160ef803b88264fbb8882984c076ae87b75c5297a401103e4
+Successfully built cmarkgfm pycountry pytest-network
+Installing collected packages: repoze.lru, pprintpp, nh3, zipp, wheel, urllib3, typing_extensions, tomli, setuptools, rfc3986, pyproject_hooks, Pygments, pyflakes, pycparser, pluggy, platformdirs, pkginfo, pathspec, packaging, mypy-extensions, more-itertools, mdurl, jeepney, isort, iniconfig, exceptiongroup, docutils, coverage, click, charset-normalizer, certifi, requests, readme-renderer, pytest, pycountry, markdown-it-py, jaraco.classes, importlib-metadata, cffi, build, black, rich, requests-toolbelt, pytest-network, pytest-mock, pytest-cov, cryptography, cmarkgfm, SecretStorage, pycountry-convert, keyring, twine
+Successfully installed Pygments-2.17.2 SecretStorage-3.3.3 black-23.11.0 build-1.0.3 certifi-2023.11.17 cffi-1.16.0 charset-normalizer-3.3.2 click-8.1.7 cmarkgfm-2022.10.27 coverage-7.3.2 cryptography-41.0.7 docutils-0.20.1 exceptiongroup-1.2.0 importlib-metadata-6.8.0 iniconfig-2.0.0 isort-5.12.0 jaraco.classes-3.3.0 jeepney-0.8.0 keyring-24.3.0 markdown-it-py-3.0.0 mdurl-0.1.2 more-itertools-10.1.0 mypy-extensions-1.0.0 nh3-0.2.14 packaging-23.2 pathspec-0.11.2 pkginfo-1.9.6 platformdirs-4.0.0 pluggy-1.3.0 pprintpp-0.4.0 pycountry-22.3.5 pycountry-convert-0.7.2 pycparser-2.21 pyflakes-3.1.0 pyproject_hooks-1.0.0 pytest-7.4.3 pytest-cov-4.1.0 pytest-mock-3.12.0 pytest-network-0.0.1 readme-renderer-42.0 repoze.lru-0.7 requests-2.31.0 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-13.7.0 setuptools-69.0.2 tomli-2.0.1 twine-4.0.2 typing_extensions-4.8.0 urllib3-2.1.0 wheel-0.42.0 zipp-3.17.0
+
+Setting blame.ignoreRevsFile to .git-blame-ingore-revs
+
+Installing pre-commit hook
+
+Run source env/bin/activate to get your shell in to the virtualenv
+See README.md for more information.
+
+## environment & versions ######################################################
+Python 3.12.1
+pip 23.3.1 from /home/runner/work/octodns/octodns/env/lib/python3.12/site-packages/pip (python 3.12)
+## modules: 
+black==23.11.0
+build==1.0.3
+certifi==2023.11.17
+cffi==1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+cmarkgfm==2022.10.27
+coverage==7.3.2
+cryptography==41.0.7
+dnspython==2.4.2
+docutils==0.20.1
+exceptiongroup==1.2.0
+fqdn==1.5.1
+idna==3.4
+importlib-metadata==6.8.0
+iniconfig==2.0.0
+isort==5.12.0
+jaraco.classes==3.3.0
+jeepney==0.8.0
+keyring==24.3.0
+markdown-it-py==3.0.0
+mdurl==0.1.2
+more-itertools==10.1.0
+mypy-extensions==1.0.0
+natsort==8.4.0
+nh3==0.2.14
+packaging==23.2
+pathspec==0.11.2
+pkginfo==1.9.6
+platformdirs==4.0.0
+pluggy==1.3.0
+pprintpp==0.4.0
+pycountry==22.3.5
+pycountry-convert==0.7.2
+pycparser==2.21
+pyflakes==3.1.0
+Pygments==2.17.2
+pyproject_hooks==1.0.0
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+pytest-network==0.0.1
+python-dateutil==2.8.2
+PyYAML==6.0.1
+readme-renderer==42.0
+repoze.lru==0.7
+requests==2.31.0
+requests-toolbelt==1.0.0
+rfc3986==2.0.0
+rich==13.7.0
+SecretStorage==3.3.3
+setuptools==69.0.2
+six==1.16.0
+tomli==2.0.1
+twine==4.0.2
+typing_extensions==4.8.0
+urllib3==2.1.0
+wheel==0.42.0
+zipp==3.17.0
+## clean up ####################################################################
+## begin #######################################################################
+## lint ########################################################################
+## formatting ##################################################################
+All done! ✨ 🍰 ✨
+110 files would be left unchanged.
+## tests/coverage ##############################################################
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/octodns/octodns
+configfile: pyproject.toml
+plugins: mock-3.12.0, network-0.0.1, cov-4.1.0
+collected 294 items
+
+tests/test_octodns_equality.py ..                                        [  0%]
+tests/test_octodns_idna.py .........                                     [  3%]
+tests/test_octodns_manager.py ...........................F.............. [ 18%]
+                                                                         [ 18%]
+tests/test_octodns_plan.py ..........                                    [ 21%]
+tests/test_octodns_processor_acme.py .                                   [ 21%]
+tests/test_octodns_processor_arpa.py .........                           [ 24%]
+tests/test_octodns_processor_filter.py ................                  [ 30%]
+tests/test_octodns_processor_meta.py ......                              [ 32%]
+tests/test_octodns_processor_ownership.py ...                            [ 33%]
+tests/test_octodns_processor_restrict.py .                               [ 33%]
+tests/test_octodns_processor_spf.py .......                              [ 36%]
+tests/test_octodns_provider_base.py ................................     [ 46%]
+tests/test_octodns_provider_yaml.py ...................                  [ 53%]
+tests/test_octodns_record.py .........................                   [ 61%]
+tests/test_octodns_record_a.py ..                                        [ 62%]
+tests/test_octodns_record_aaaa.py ...                                    [ 63%]
+tests/test_octodns_record_alias.py ...                                   [ 64%]
+tests/test_octodns_record_caa.py ....                                    [ 65%]
+tests/test_octodns_record_change.py ..                                   [ 66%]
+tests/test_octodns_record_chunked.py .                                   [ 67%]
+tests/test_octodns_record_cname.py ...                                   [ 68%]
+tests/test_octodns_record_dname.py ...                                   [ 69%]
+tests/test_octodns_record_ds.py .                                        [ 69%]
+tests/test_octodns_record_dynamic.py ................                    [ 74%]
+tests/test_octodns_record_geo.py .......                                 [ 77%]
+tests/test_octodns_record_ip.py .                                        [ 77%]
+tests/test_octodns_record_loc.py ....                                    [ 78%]
+tests/test_octodns_record_mx.py ....                                     [ 80%]
+tests/test_octodns_record_naptr.py ...                                   [ 81%]
+tests/test_octodns_record_ns.py ...                                      [ 82%]
+tests/test_octodns_record_ptr.py ...                                     [ 83%]
+tests/test_octodns_record_spf.py ..                                      [ 84%]
+tests/test_octodns_record_srv.py ....                                    [ 85%]
+tests/test_octodns_record_sshfp.py ....                                  [ 86%]
+tests/test_octodns_record_target.py .                                    [ 87%]
+tests/test_octodns_record_tlsa.py ...                                    [ 88%]
+tests/test_octodns_record_txt.py ....                                    [ 89%]
+tests/test_octodns_record_urlfwd.py ..                                   [ 90%]
+tests/test_octodns_source_envvar.py ..                                   [ 90%]
+tests/test_octodns_source_tinydns.py .....                               [ 92%]
+tests/test_octodns_yaml.py ..                                            [ 93%]
+tests/test_octodns_zone.py ....................                          [100%]
+
+=================================== FAILURES ===================================
+________________________ TestManager.test_missing_zone _________________________
+
+self = <test_octodns_manager.TestManager testMethod=test_missing_zone>
+
+    def test_missing_zone(self):
+        with self.assertRaises(ManagerException) as ctx:
+            Manager(get_config_filename('dynamic-config.yaml')).sync(
+                ['missing.zones.']
+            )
+>       self.assertTrue('Requested zone:' in str(ctx.exception))
+E       AssertionError: False is not true
+
+tests/test_octodns_manager.py:87: AssertionError
+
+---------- coverage: platform linux, python 3.12.1-final-0 -----------
+Name                             Stmts   Miss Branch BrPart  Cover
+------------------------------------------------------------------
+octodns/__init__.py                  1      0      0      0   100%
+octodns/context.py                   4      0      0      0   100%
+octodns/deprecation.py               3      0      0      0   100%
+octodns/equality.py                 15      0      0      0   100%
+octodns/idna.py                     53      0     13      0   100%
+octodns/manager.py                 509      0    195      0   100%
+octodns/processor/__init__.py        0      0      0      0   100%
+octodns/processor/acme.py           22      0      8      0   100%
+octodns/processor/arpa.py           40      0     20      0   100%
+octodns/processor/base.py           13      0      0      0   100%
+octodns/processor/filter.py        134      0     44      0   100%
+octodns/processor/meta.py           48      0     16      0   100%
+octodns/processor/ownership.py      45      0     20      0   100%
+octodns/processor/restrict.py       21      0     10      0   100%
+octodns/processor/spf.py            59      0     24      0   100%
+octodns/provider/__init__.py         4      0      0      0   100%
+octodns/provider/base.py           147      0     68      0   100%
+octodns/provider/plan.py           203      0     61      0   100%
+octodns/provider/yaml.py           177      0     86      0   100%
+octodns/record/__init__.py          73      0      0      0   100%
+octodns/record/a.py                 13      0      0      0   100%
+octodns/record/aaaa.py              13      0      0      0   100%
+octodns/record/alias.py             15      0      4      0   100%
+octodns/record/base.py             268      0    108      0   100%
+octodns/record/caa.py               71      0     32      0   100%
+octodns/record/change.py            28      0      2      0   100%
+octodns/record/chunked.py           49      0     26      0   100%
+octodns/record/cname.py             16      0      4      0   100%
+octodns/record/dname.py              9      0      0      0   100%
+octodns/record/ds.py               121      0     50      0   100%
+octodns/record/dynamic.py          270      0    122      0   100%
+octodns/record/exception.py         17      0      4      0   100%
+octodns/record/geo.py              117      0     50      0   100%
+octodns/record/geo_data.py           1      0      0      0   100%
+octodns/record/ip.py                33      0     18      0   100%
+octodns/record/loc.py              184      0     80      0   100%
+octodns/record/mx.py                88      0     30      0   100%
+octodns/record/naptr.py            109      0     48      0   100%
+octodns/record/ns.py                 8      0      0      0   100%
+octodns/record/ptr.py               11      0      2      0   100%
+octodns/record/rr.py                12      0      0      0   100%
+octodns/record/spf.py               10      0      0      0   100%
+octodns/record/srv.py              117      0     46      0   100%
+octodns/record/sshfp.py             86      0     36      0   100%
+octodns/record/subnet.py            13      0      4      0   100%
+octodns/record/target.py            57      0     36      0   100%
+octodns/record/tlsa.py              97      0     42      0   100%
+octodns/record/txt.py                8      0      0      0   100%
+octodns/record/urlfwd.py            85      0     44      0   100%
+octodns/source/__init__.py           0      0      0      0   100%
+octodns/source/base.py              22      0      8      0   100%
+octodns/source/envvar.py            36      0      2      0   100%
+octodns/source/tinydns.py          239      0    122      0   100%
+octodns/yaml.py                     48      0      8      0   100%
+octodns/zone.py                    168      0     90      0   100%
+------------------------------------------------------------------
+TOTAL                             4010      0   1583      0   100%
+Coverage HTML written to dir htmlcov
+Coverage XML written to file coverage.xml
+
+Required test coverage of 100% reached. Total coverage: 100.00%
+=========================== short test summary info ============================
+FAILED tests/test_octodns_manager.py::TestManager::test_missing_zone - AssertionError: False is not true
+======================== 1 failed, 293 passed in 7.61s =========================
+##[error]Process completed with exit code 1.

@@ -1,0 +1,51 @@
+repo: ASSERT-KTH/depclean
+run_id: 2f01c46b96a8edf437edf20e6dbd848edcb27085
+head_sha: 2f01c46b96a8edf437edf20e6dbd848edcb27085
+run_attempts: []
+commits:
+- sha: 2f01c46b96a8edf437edf20e6dbd848edcb27085
+  author: renovate[bot]
+  files:
+  - depclean-core/pom.xml
+- sha: 72cab442cdca92c7f6886e2d81143c4ddfd1d8c6
+  author: renovate[bot]
+  files:
+  - depclean-gradle-plugin/build.gradle
+- sha: 9cd46376ec144770bc3029db05db7b9521c915c5
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: d14f8ee4891b96d377f570e00a79cebc1794b552
+  author: renovate[bot]
+  files:
+  - depclean-core/pom.xml
+- sha: a56ef0df8522414bb53ebd69c6d622383ab6563a
+  author: renovate[bot]
+  files:
+  - depclean-core/pom.xml
+  - depclean-maven-plugin/pom.xml
+- sha: 65caca4ed21eee7291ff34f6d5ee227d1ee6cdf9
+  author: renovate[bot]
+  files:
+  - depclean-maven-plugin/pom.xml
+- sha: a129b901915e61d96e8d1d65f180b617ad9f5957
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 23a82cedbcef73e48c274cd6d0492cdb1d32d5f7
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: a724b36ffd3e4e6c3b51093f96af3ba1e3ea20b1
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: bdf5f87b0e463013ed238bdf9358fe7009a07e92
+  author: renovate[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

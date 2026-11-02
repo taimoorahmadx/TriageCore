@@ -1,0 +1,405 @@
+2023-06-14T04:57:28.0067940Z Cleaning up orphan processes
+
+2023-06-14T04:57:27.7309716Z Post job cleanup.
+
+2023-06-14T04:57:06.3096971Z ##[group]Run mvn -B package --file pom.xml
+2023-06-14T04:57:06.3097337Z [36;1mmvn -B package --file pom.xml[0m
+2023-06-14T04:57:06.3155548Z shell: /usr/bin/bash -e {0}
+2023-06-14T04:57:06.3155778Z env:
+2023-06-14T04:57:06.3156029Z   JAVA_HOME_11.0.19_x64: /opt/hostedtoolcache/jdk/11.0.19/x64
+2023-06-14T04:57:06.3156333Z   JAVA_HOME: /opt/hostedtoolcache/jdk/11.0.19/x64
+2023-06-14T04:57:06.3156620Z   JAVA_HOME_11_0_19_X64: /opt/hostedtoolcache/jdk/11.0.19/x64
+2023-06-14T04:57:06.3156859Z ##[endgroup]
+2023-06-14T04:57:08.1522174Z [INFO] Scanning for projects...
+2023-06-14T04:57:08.2280340Z [INFO] 
+2023-06-14T04:57:08.2294438Z [INFO] -------------------------< co.nordlander.a:a >--------------------------
+2023-06-14T04:57:08.2298025Z [INFO] Building a 1.6.1-SNAPSHOT
+2023-06-14T04:57:08.2301699Z [INFO]   from pom.xml
+2023-06-14T04:57:08.2305045Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-06-14T04:57:08.5368888Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2023-06-14T04:57:08.7944708Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom (8.1 kB at 31 kB/s)
+2023-06-14T04:57:08.8160732Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom
+2023-06-14T04:57:08.8481006Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom (9.2 kB at 287 kB/s)
+2023-06-14T04:57:08.8589394Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom
+2023-06-14T04:57:08.8912676Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/22/maven-parent-22.pom (30 kB at 901 kB/s)
+2023-06-14T04:57:08.8993470Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom
+2023-06-14T04:57:08.9247040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/11/apache-11.pom (15 kB at 592 kB/s)
+2023-06-14T04:57:08.9417267Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2023-06-14T04:57:08.9695162Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar (30 kB at 1.1 MB/s)
+2023-06-14T04:57:08.9844406Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-06-14T04:57:09.0096237Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 393 kB/s)
+2023-06-14T04:57:09.0213713Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-06-14T04:57:09.0478983Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 311 kB/s)
+2023-06-14T04:57:09.0518807Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-06-14T04:57:09.0864993Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.3 MB/s)
+2023-06-14T04:57:09.0903795Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-06-14T04:57:09.1136112Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 901 kB/s)
+2023-06-14T04:57:09.1259916Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar
+2023-06-14T04:57:09.1538882Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.jar (66 kB at 2.0 MB/s)
+2023-06-14T04:57:09.1675957Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom
+2023-06-14T04:57:09.1961050Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom (10 kB at 374 kB/s)
+2023-06-14T04:57:09.2009908Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom
+2023-06-14T04:57:09.2261940Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom (14 kB at 530 kB/s)
+2023-06-14T04:57:09.2309054Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar
+2023-06-14T04:57:09.2544437Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar (30 kB at 1.3 MB/s)
+2023-06-14T04:57:09.2612768Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom
+2023-06-14T04:57:09.2978539Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom (5.8 kB at 154 kB/s)
+2023-06-14T04:57:09.3000500Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom
+2023-06-14T04:57:09.3310582Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom (13 kB at 421 kB/s)
+2023-06-14T04:57:09.3337290Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom
+2023-06-14T04:57:09.3592056Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/21/maven-parent-21.pom (26 kB at 1.0 MB/s)
+2023-06-14T04:57:09.3641726Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom
+2023-06-14T04:57:09.3889810Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/10/apache-10.pom (15 kB at 592 kB/s)
+2023-06-14T04:57:09.3929687Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+2023-06-14T04:57:09.4161099Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar (34 kB at 1.5 MB/s)
+2023-06-14T04:57:09.4201240Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.2-beta-5/maven-assembly-plugin-2.2-beta-5.pom
+2023-06-14T04:57:09.4437517Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.2-beta-5/maven-assembly-plugin-2.2-beta-5.pom (15 kB at 632 kB/s)
+2023-06-14T04:57:09.4481368Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/16/maven-plugins-16.pom
+2023-06-14T04:57:09.4699414Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/16/maven-plugins-16.pom (13 kB at 589 kB/s)
+2023-06-14T04:57:09.4718901Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom
+2023-06-14T04:57:09.4936927Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/15/maven-parent-15.pom (24 kB at 1.1 MB/s)
+2023-06-14T04:57:09.4977646Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom
+2023-06-14T04:57:09.5194249Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/6/apache-6.pom (13 kB at 582 kB/s)
+2023-06-14T04:57:09.5241143Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.2-beta-5/maven-assembly-plugin-2.2-beta-5.jar
+2023-06-14T04:57:09.5593977Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-assembly-plugin/2.2-beta-5/maven-assembly-plugin-2.2-beta-5.jar (209 kB at 5.8 MB/s)
+2023-06-14T04:57:09.5673456Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdeb/1.10/jdeb-1.10.pom
+2023-06-14T04:57:09.5948422Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdeb/1.10/jdeb-1.10.pom (20 kB at 734 kB/s)
+2023-06-14T04:57:09.6041138Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdeb/1.10/jdeb-1.10.jar
+2023-06-14T04:57:09.7729587Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdeb/1.10/jdeb-1.10.jar (3.7 MB at 21 MB/s)
+2023-06-14T04:57:09.7866864Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-client/5.18.1/activemq-client-5.18.1.pom
+2023-06-14T04:57:09.8129944Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-client/5.18.1/activemq-client-5.18.1.pom (14 kB at 576 kB/s)
+2023-06-14T04:57:09.8150190Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-parent/5.18.1/activemq-parent-5.18.1.pom
+2023-06-14T04:57:09.8443197Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-parent/5.18.1/activemq-parent-5.18.1.pom (61 kB at 2.0 MB/s)
+2023-06-14T04:57:09.8530808Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.51.v20230217/jetty-bom-9.4.51.v20230217.pom
+2023-06-14T04:57:09.8779945Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.51.v20230217/jetty-bom-9.4.51.v20230217.pom (18 kB at 706 kB/s)
+2023-06-14T04:57:09.8925273Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.pom
+2023-06-14T04:57:09.9155864Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.pom (1.6 kB at 70 kB/s)
+2023-06-14T04:57:09.9207295Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.6/slf4j-parent-2.0.6.pom
+2023-06-14T04:57:09.9493285Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.6/slf4j-parent-2.0.6.pom (17 kB at 551 kB/s)
+2023-06-14T04:57:09.9554057Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/jms/jakarta.jms-api/2.0.3/jakarta.jms-api-2.0.3.pom
+2023-06-14T04:57:09.9776805Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/jms/jakarta.jms-api/2.0.3/jakarta.jms-api-2.0.3.pom (11 kB at 498 kB/s)
+2023-06-14T04:57:09.9804628Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom
+2023-06-14T04:57:10.0033228Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.5/project-1.0.5.pom (13 kB at 573 kB/s)
+2023-06-14T04:57:10.0065751Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.pom
+2023-06-14T04:57:10.0288067Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.pom (2.6 kB at 118 kB/s)
+2023-06-14T04:57:10.0308616Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf-project/1.11/hawtbuf-project-1.11.pom
+2023-06-14T04:57:10.0526802Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/fusesource/hawtbuf/hawtbuf-project/1.11/hawtbuf-project-1.11.pom (11 kB at 520 kB/s)
+2023-06-14T04:57:10.0549202Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/fusesource/fusesource-pom/1.10/fusesource-pom-1.10.pom
+2023-06-14T04:57:10.0786914Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/fusesource/fusesource-pom/1.10/fusesource-pom-1.10.pom (15 kB at 617 kB/s)
+2023-06-14T04:57:10.0821600Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-openwire-legacy/5.18.1/activemq-openwire-legacy-5.18.1.pom
+2023-06-14T04:57:10.1090223Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/activemq/activemq-openwire-legacy/5.18.1/activemq-openwire-legacy-5.18.1.pom (1.6 kB at 63 kB/s)
+2023-06-14T04:57:10.1130074Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.pom
+2023-06-14T04:57:10.1348738Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.pom (15 kB at 670 kB/s)
+2023-06-14T04:57:10.1374569Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom
+2023-06-14T04:57:10.1606805Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/52/commons-parent-52.pom (79 kB at 3.4 MB/s)
+2023-06-14T04:57:10.1679517Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom
+2023-06-14T04:57:10.1946181Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom (18 kB at 682 kB/s)
+2023-06-14T04:57:10.2094048Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom
+2023-06-14T04:57:10.2770500Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.pom (20 kB at 313 kB/s)
+2023-06-14T04:57:10.2771248Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom
+2023-06-14T04:57:10.6213450Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom (5.1 kB at 15 kB/s)
+2023-06-14T04:57:10.6214438Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.pom
+2023-06-14T04:57:11.4231588Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.15/commons-codec-1.15.pom (15 kB at 19 kB/s)
+2023-06-14T04:57:11.4309546Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom
+2023-06-14T04:57:11.4663589Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.pom (31 kB at 786 kB/s)
+2023-06-14T04:57:11.4718055Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom
+2023-06-14T04:57:11.4933201Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.7.1/junit-bom-5.7.1.pom (5.1 kB at 232 kB/s)
+2023-06-14T04:57:11.4953679Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.pom
+2023-06-14T04:57:11.5334168Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.pom (2.6 kB at 68 kB/s)
+2023-06-14T04:57:11.5347818Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom
+2023-06-14T04:57:11.5562309Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/specs/specs/1.4/specs-1.4.pom (12 kB at 545 kB/s)
+2023-06-14T04:57:11.5580355Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/config/project-config/1.2/project-config-1.2.pom
+2023-06-14T04:57:11.5814338Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/config/project-config/1.2/project-config-1.2.pom (22 kB at 908 kB/s)
+2023-06-14T04:57:11.5832084Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/config/config/1.2/config-1.2.pom
+2023-06-14T04:57:11.6041022Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/config/config/1.2/config-1.2.pom (1.8 kB at 89 kB/s)
+2023-06-14T04:57:11.6053391Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/genesis/1.2/genesis-1.2.pom
+2023-06-14T04:57:11.6345092Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/geronimo/genesis/genesis/1.2/genesis-1.2.pom (11 kB at 383 kB/s)
+2023-06-14T04:57:11.6360183Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom
+2023-06-14T04:57:11.6584729Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/3/apache-3.pom (3.4 kB at 149 kB/s)
+2023-06-14T04:57:11.6613440Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.4.7/logback-classic-1.4.7.pom
+2023-06-14T04:57:11.6830319Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.4.7/logback-classic-1.4.7.pom (13 kB at 606 kB/s)
+2023-06-14T04:57:11.6852374Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.4.7/logback-parent-1.4.7.pom
+2023-06-14T04:57:11.7100708Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-parent/1.4.7/logback-parent-1.4.7.pom (20 kB at 819 kB/s)
+2023-06-14T04:57:11.7148163Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.4.7/logback-core-1.4.7.pom
+2023-06-14T04:57:11.7523042Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.4.7/logback-core-1.4.7.pom (5.0 kB at 136 kB/s)
+2023-06-14T04:57:11.7553284Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.4/slf4j-api-2.0.4.pom
+[... 12387 lines removed by TriageCore ...]
+2023-06-14T04:57:27.4411534Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+2023-06-14T04:57:27.4411780Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+2023-06-14T04:57:27.4412026Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-06-14T04:57:27.4412209Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+2023-06-14T04:57:27.4412343Z 	at java.base/java.lang.Class.forName0(Native Method)
+2023-06-14T04:57:27.4412501Z 	at java.base/java.lang.Class.forName(Class.java:398)
+2023-06-14T04:57:27.4412777Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.nextProviderClass(ServiceLoader.java:1210)
+2023-06-14T04:57:27.4413052Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1221)
+2023-06-14T04:57:27.4413300Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1265)
+2023-06-14T04:57:27.4413605Z 	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1300)
+2023-06-14T04:57:27.4413778Z 	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1385)
+2023-06-14T04:57:27.4414024Z 	at java.scripting/javax.script.ScriptEngineManager.initEngines(ScriptEngineManager.java:123)
+2023-06-14T04:57:27.4414249Z 	at java.scripting/javax.script.ScriptEngineManager.init(ScriptEngineManager.java:87)
+2023-06-14T04:57:27.4414451Z 	at java.scripting/javax.script.ScriptEngineManager.<init>(ScriptEngineManager.java:62)
+2023-06-14T04:57:27.4414681Z 	at co.nordlander.a.MessageDumpTransformer.<init>(MessageDumpTransformer.java:47)
+2023-06-14T04:57:27.4414809Z 	at co.nordlander.a.A.<init>(A.java:81)
+2023-06-14T04:57:27.4414990Z 	at co.nordlander.a.BaseTest.setupJMS(BaseTest.java:103)
+2023-06-14T04:57:27.4415214Z 	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+2023-06-14T04:57:27.4415507Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-06-14T04:57:27.4415685Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-06-14T04:57:27.4415913Z 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+2023-06-14T04:57:27.4416141Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-06-14T04:57:27.4416388Z 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+2023-06-14T04:57:27.4416639Z 	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+2023-06-14T04:57:27.4416873Z 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+2023-06-14T04:57:27.4417274Z 	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+2023-06-14T04:57:27.4417514Z 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+2023-06-14T04:57:27.4417898Z 	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+2023-06-14T04:57:27.4418100Z 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+2023-06-14T04:57:27.4418410Z 	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+2023-06-14T04:57:27.4418582Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-06-14T04:57:27.4419138Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+2023-06-14T04:57:27.4419482Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+2023-06-14T04:57:27.4419662Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-06-14T04:57:27.4419986Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-06-14T04:57:27.4420199Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-06-14T04:57:27.4420384Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-06-14T04:57:27.4420576Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-06-14T04:57:27.4420943Z 	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+2023-06-14T04:57:27.4421324Z 	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+2023-06-14T04:57:27.4421503Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-06-14T04:57:27.4421681Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-06-14T04:57:27.4421978Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+2023-06-14T04:57:27.4422229Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+2023-06-14T04:57:27.4422505Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+2023-06-14T04:57:27.4422887Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+2023-06-14T04:57:27.4423125Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2023-06-14T04:57:27.4423375Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2023-06-14T04:57:27.4423684Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-06-14T04:57:27.4423860Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-06-14T04:57:27.4424151Z 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+2023-06-14T04:57:27.4424415Z 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+2023-06-14T04:57:27.4424690Z 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+2023-06-14T04:57:27.4424950Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+2023-06-14T04:57:27.4425182Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+2023-06-14T04:57:27.4425191Z 
+2023-06-14T04:57:27.4425379Z testMoveSelector(co.nordlander.a.AMQPTest)  Time elapsed: 0.013 sec  <<< ERROR!
+2023-06-14T04:57:27.4425807Z java.lang.UnsupportedClassVersionError: com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.4425967Z 	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+2023-06-14T04:57:27.4426162Z 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+2023-06-14T04:57:27.4426397Z 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+2023-06-14T04:57:27.4426641Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:800)
+2023-06-14T04:57:27.4426947Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:698)
+2023-06-14T04:57:27.4427205Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:621)
+2023-06-14T04:57:27.4427454Z 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:579)
+2023-06-14T04:57:27.4427687Z 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+2023-06-14T04:57:27.4427871Z 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+2023-06-14T04:57:27.4428003Z 	at java.base/java.lang.Class.forName0(Native Method)
+2023-06-14T04:57:27.4428152Z 	at java.base/java.lang.Class.forName(Class.java:398)
+2023-06-14T04:57:27.4428560Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.nextProviderClass(ServiceLoader.java:1210)
+2023-06-14T04:57:27.4428837Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNextService(ServiceLoader.java:1221)
+2023-06-14T04:57:27.4429080Z 	at java.base/java.util.ServiceLoader$LazyClassPathLookupIterator.hasNext(ServiceLoader.java:1265)
+2023-06-14T04:57:27.4429264Z 	at java.base/java.util.ServiceLoader$2.hasNext(ServiceLoader.java:1300)
+2023-06-14T04:57:27.4429440Z 	at java.base/java.util.ServiceLoader$3.hasNext(ServiceLoader.java:1385)
+2023-06-14T04:57:27.4429679Z 	at java.scripting/javax.script.ScriptEngineManager.initEngines(ScriptEngineManager.java:123)
+2023-06-14T04:57:27.4429885Z 	at java.scripting/javax.script.ScriptEngineManager.init(ScriptEngineManager.java:87)
+2023-06-14T04:57:27.4430097Z 	at java.scripting/javax.script.ScriptEngineManager.<init>(ScriptEngineManager.java:62)
+2023-06-14T04:57:27.4430322Z 	at co.nordlander.a.MessageDumpTransformer.<init>(MessageDumpTransformer.java:47)
+2023-06-14T04:57:27.4430457Z 	at co.nordlander.a.A.<init>(A.java:81)
+2023-06-14T04:57:27.4430624Z 	at co.nordlander.a.BaseTest.setupJMS(BaseTest.java:103)
+2023-06-14T04:57:27.4430843Z 	at jdk.internal.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+2023-06-14T04:57:27.4431231Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-06-14T04:57:27.4431400Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-06-14T04:57:27.4431605Z 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+2023-06-14T04:57:27.4431844Z 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+2023-06-14T04:57:27.4432110Z 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+2023-06-14T04:57:27.4432363Z 	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+2023-06-14T04:57:27.4432597Z 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+2023-06-14T04:57:27.4432988Z 	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+2023-06-14T04:57:27.4433219Z 	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+2023-06-14T04:57:27.4433606Z 	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+2023-06-14T04:57:27.4433797Z 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+2023-06-14T04:57:27.4434072Z 	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+2023-06-14T04:57:27.4434267Z 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+2023-06-14T04:57:27.4434594Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+2023-06-14T04:57:27.4434912Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+2023-06-14T04:57:27.4435092Z 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+2023-06-14T04:57:27.4435270Z 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+2023-06-14T04:57:27.4435471Z 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+2023-06-14T04:57:27.4435661Z 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+2023-06-14T04:57:27.4435844Z 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+2023-06-14T04:57:27.4436213Z 	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+2023-06-14T04:57:27.4436593Z 	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+2023-06-14T04:57:27.4436772Z 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+2023-06-14T04:57:27.4436949Z 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+2023-06-14T04:57:27.4437361Z 	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+2023-06-14T04:57:27.4437612Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+2023-06-14T04:57:27.4437874Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+2023-06-14T04:57:27.4438104Z 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+2023-06-14T04:57:27.4438336Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+2023-06-14T04:57:27.4438593Z 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+2023-06-14T04:57:27.4438886Z 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+2023-06-14T04:57:27.4439061Z 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+2023-06-14T04:57:27.4439353Z 	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+2023-06-14T04:57:27.4439628Z 	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+2023-06-14T04:57:27.4440014Z 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+2023-06-14T04:57:27.4440284Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+2023-06-14T04:57:27.4440507Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+2023-06-14T04:57:27.4440516Z 
+2023-06-14T04:57:27.7046855Z 
+2023-06-14T04:57:27.7053258Z Results :
+2023-06-14T04:57:27.7053470Z 
+2023-06-14T04:57:27.7082692Z Tests in error: 
+2023-06-14T04:57:27.7084637Z   jndiConnectTest(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7086838Z   testCopyQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7088898Z   testPutBytesQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7091177Z   testPutQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7092006Z   testPutTopic(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7092808Z   testGetCount(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7093574Z   testGetQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7094617Z   testGetTopic(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7095428Z   testReadFolder(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7096240Z   testBatch(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7097064Z   testMoveCountQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7097913Z   testDumpMessages_RollbackOnError(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7098877Z   testRestoreDump(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7100097Z   testCopySelector(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7100931Z   testPutWithPriorityAndType(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7101783Z   testDumpMessages(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7102591Z   testDumpManyMessages(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7103428Z   testPutQueueWithSlash(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7104272Z   testGetQueueWithSelector(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7105121Z   testCopyQueueWithTransformer(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7105967Z   testDumpMessagesAndTransform(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7106891Z   testMoveQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7107708Z   testMoveQueueWithTransformer(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7108548Z   testMoveZeroCountQueue(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7109398Z   testSendMapMessage(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7110295Z   testMoveSelector(co.nordlander.a.AOpenWireTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7111144Z   assertBrokerInfo(co.nordlander.a.DataStructureTypeAsStringTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7112051Z   assertUnknownForUnknown(co.nordlander.a.DataStructureTypeAsStringTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7112918Z   testCopyQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7113719Z   testPutBytesQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7114540Z   testPutQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7115329Z   testPutTopic(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7116137Z   testGetCount(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7116919Z   testGetQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7117777Z   testGetTopic(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7118579Z   testReadFolder(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7119382Z   testBatch(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7120182Z   testMoveCountQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7121006Z   testDumpMessages_RollbackOnError(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7121914Z   testRestoreDump(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7122726Z   testCopySelector(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7123555Z   testPutWithPriorityAndType(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7124400Z   testDumpMessages(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7128830Z   testDumpManyMessages(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7136508Z   testPutQueueWithSlash(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7137390Z   testGetQueueWithSelector(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7138245Z   testCopyQueueWithTransformer(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7139298Z   testDumpMessagesAndTransform(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7140140Z   testMoveQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7140985Z   testMoveQueueWithTransformer(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7141837Z   testMoveZeroCountQueue(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7142685Z   testSendMapMessage(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7143596Z   testMoveSelector(co.nordlander.a.ArtemisJmsTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7144404Z   JndiConnectTest(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7145216Z   testCopyQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7146020Z   testPutBytesQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7147609Z   testPutQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7148626Z   testPutTopic(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7149815Z   testGetCount(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7152336Z   testGetQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7153126Z   testGetTopic(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7154043Z   testReadFolder(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7154853Z   testBatch(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7155650Z   testMoveCountQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7156488Z   testDumpMessages_RollbackOnError(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7157401Z   testRestoreDump(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7158192Z   testCopySelector(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7159004Z   testPutWithPriorityAndType(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7159812Z   testDumpMessages(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7160612Z   testDumpManyMessages(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7161426Z   testPutQueueWithSlash(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7162250Z   testGetQueueWithSelector(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7163191Z   testCopyQueueWithTransformer(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7165169Z   testDumpMessagesAndTransform(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7166076Z   testMoveQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7166946Z   testMoveQueueWithTransformer(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7167783Z   testMoveZeroCountQueue(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7169641Z   testSendMapMessage(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7170450Z   testMoveSelector(co.nordlander.a.AMQPTest): com/oracle/truffle/js/scriptengine/GraalJSEngineFactory has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2023-06-14T04:57:27.7170964Z 
+2023-06-14T04:57:27.7171100Z Tests run: 80, Failures: 0, Errors: 79, Skipped: 1
+2023-06-14T04:57:27.7171258Z 
+2023-06-14T04:57:27.7172317Z [INFO] ------------------------------------------------------------------------
+2023-06-14T04:57:27.7172613Z [INFO] BUILD FAILURE
+2023-06-14T04:57:27.7172972Z [INFO] ------------------------------------------------------------------------
+2023-06-14T04:57:27.7173268Z [INFO] Total time:  19.585 s
+2023-06-14T04:57:27.7173567Z [INFO] Finished at: 2023-06-14T04:57:27Z
+2023-06-14T04:57:27.7173940Z [INFO] ------------------------------------------------------------------------
+2023-06-14T04:57:27.7174533Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project a: There are test failures.
+2023-06-14T04:57:27.7174883Z [ERROR] 
+2023-06-14T04:57:27.7175277Z [ERROR] Please refer to /home/runner/work/a/a/target/surefire-reports for the individual test results.
+2023-06-14T04:57:27.7175621Z [ERROR] -> [Help 1]
+2023-06-14T04:57:27.7175797Z [ERROR] 
+2023-06-14T04:57:27.7176143Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-14T04:57:27.7176567Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-14T04:57:27.7176820Z [ERROR] 
+2023-06-14T04:57:27.7177114Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-14T04:57:27.7177554Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-14T04:57:27.7256904Z ##[error]Process completed with exit code 1.
+2023-06-14T04:57:27.7309729Z Post job cleanup.
+2023-06-14T04:57:27.7867484Z Post job cleanup.
+2023-06-14T04:57:27.9192121Z [command]/usr/bin/git version
+2023-06-14T04:57:27.9237572Z git version 2.40.1
+2023-06-14T04:57:27.9278124Z Temporarily overriding HOME='/home/runner/work/_temp/9732c6ad-eaaa-4e1d-9602-e67b0830dfea' before making global git config changes
+2023-06-14T04:57:27.9278858Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-14T04:57:27.9282931Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/a/a
+2023-06-14T04:57:27.9321959Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-14T04:57:27.9354409Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-14T04:57:27.9574748Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-14T04:57:27.9599750Z http.https://github.com/.extraheader
+2023-06-14T04:57:27.9609661Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-14T04:57:27.9641614Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-14T04:57:28.0067955Z Cleaning up orphan processes
+
+2023-06-14T04:56:50.2014387Z ##[section]Starting: Prepare job build
+2023-06-14T04:56:50.2017864Z Evaluating strategy
+2023-06-14T04:56:50.2022751Z Creating job '__default'
+2023-06-14T04:56:50.2025173Z Evaluating timeout
+2023-06-14T04:56:50.2025207Z Evaluating cancel timeout
+2023-06-14T04:56:50.2025232Z Evaluating continue on error
+2023-06-14T04:56:50.2025258Z Evaluating target
+2023-06-14T04:56:50.2026623Z ##[section]Finishing: Prepare job build
+
+2023-06-14T04:56:59.4977850Z ##[group]Run actions/setup-java@v1
+2023-06-14T04:56:59.4978089Z with:
+2023-06-14T04:56:59.4978279Z   java-version: 11
+2023-06-14T04:56:59.4978486Z   java-package: jdk
+2023-06-14T04:56:59.4978681Z   architecture: x64
+2023-06-14T04:56:59.4978872Z   server-id: github
+2023-06-14T04:56:59.4979087Z   server-username: GITHUB_ACTOR
+2023-06-14T04:56:59.4979332Z   server-password: GITHUB_TOKEN
+2023-06-14T04:56:59.4979547Z ##[endgroup]
+2023-06-14T04:57:01.6541616Z [command]/usr/bin/tar --version
+2023-06-14T04:57:01.6594932Z tar (GNU tar) 1.34
+2023-06-14T04:57:01.6595408Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-06-14T04:57:01.6595889Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-06-14T04:57:01.6600569Z This is free software: you are free to change and redistribute it.
+2023-06-14T04:57:01.6600905Z There is NO WARRANTY, to the extent permitted by law.
+2023-06-14T04:57:01.6601189Z 
+2023-06-14T04:57:01.6601505Z Written by John Gilmore and Jay Fenlason.
+2023-06-14T04:57:01.6629362Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/temp_1703817073 -f /home/runner/work/_temp/6de4b838-6fd7-481b-9546-c1e0fcce5901
+2023-06-14T04:57:06.2842281Z creating settings.xml with server-id: github; environment variables: username=$GITHUB_ACTOR, *** and gpg-passphrase=null
+2023-06-14T04:57:06.2919146Z writing /home/runner/.m2/settings.xml
+
+2023-06-14T04:57:27.7867470Z Post job cleanup.
+2023-06-14T04:57:27.9192088Z [command]/usr/bin/git version
+2023-06-14T04:57:27.9237552Z git version 2.40.1
+2023-06-14T04:57:27.9278111Z Temporarily overriding HOME='/home/runner/work/_temp/9732c6ad-eaaa-4e1d-9602-e67b0830dfea' before making global git config changes
+2023-06-14T04:57:27.9278853Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-14T04:57:27.9282925Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/a/a
+2023-06-14T04:57:27.9321941Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-14T04:57:27.9354392Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-14T04:57:27.9574725Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-14T04:57:27.9599651Z http.https://github.com/.extraheader
+2023-06-14T04:57:27.9609651Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-14T04:57:27.9641597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"

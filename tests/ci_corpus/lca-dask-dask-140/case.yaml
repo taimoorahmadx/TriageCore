@@ -1,0 +1,64 @@
+repo: dask/dask
+run_id: '140'
+head_sha: 16a0c04d06205527ec5e379df2596b399ee5dadc
+run_attempts: []
+commits:
+- sha: 16a0c04d06205527ec5e379df2596b399ee5dadc
+  author: milesgranger
+  files:
+  - dask/dataframe/core.py
+  - dask/dataframe/tests/test_dataframe.py
+  - dask/utils.py
+- sha: a46e6647134787866272d246d9d3127b7250e2c3
+  author: crusaderky
+  files:
+  - dask/array/tests/test_array_core.py
+  - dask/array/tests/test_routines.py
+- sha: 0d62e31777cdefecd79c13f5818a7bf623fcac1a
+  author: phofl
+  files:
+  - dask/dataframe/tests/test_groupby.py
+- sha: 77882f430be453a8ceac78663bee8b6018829c6d
+  author: hendrikmakait
+  files:
+  - dask/dataframe/tests/test_groupby.py
+- sha: c0058eb86683a0c6138ae02d580ae7f891c1b69d
+  author: crusaderky
+  files:
+  - dask/array/reductions.py
+  - dask/array/tests/test_masked.py
+- sha: c21c7297540f076c2bd15cd1c5ef5f355ad05e2f
+  author: hendrikmakait
+  files:
+  - dask/dataframe/groupby.py
+- sha: 99036c42083fa77fe974fc38a58391340566baaa
+  author: crusaderky
+  files:
+  - dask/dataframe/tseries/tests/test_resample.py
+- sha: 6b5154b784dbb4dd35e65f335098065be9795d5f
+  author: phofl
+  files:
+  - .github/workflows/tests.yml
+  - dask/array/tests/test_array_core.py
+  - dask/bytes/tests/test_http.py
+  - dask/dataframe/tests/test_dataframe.py
+  - dask/tests/test_distributed.py
+  - dask/tests/test_graph_manipulation.py
+  - dask/tests/test_order.py
+  - dask/tests/test_utils.py
+- sha: 9a722bf274500e76bb87f6ef6ccff67ebf7894bf
+  author: phofl
+  files:
+  - dask/dataframe/_testing.py
+- sha: 7307e13bd89810fe0cc0e70a45f568ff20cee817
+  author: phofl
+  files:
+  - conftest.py
+  - dask/conftest.py
+  - dask/dataframe/__init__.py
+  - dask/dataframe/_testing.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

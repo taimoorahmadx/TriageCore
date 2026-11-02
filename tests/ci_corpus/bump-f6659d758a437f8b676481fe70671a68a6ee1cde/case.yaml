@@ -1,0 +1,81 @@
+repo: premium-minds/billy
+run_id: f6659d758a437f8b676481fe70671a68a6ee1cde
+head_sha: f6659d758a437f8b676481fe70671a68a6ee1cde
+run_attempts: []
+commits:
+- sha: f6659d758a437f8b676481fe70671a68a6ee1cde
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 25a120f573b3c47a8cfffe267b4b1cbc30aec96b
+  author: Vasco-F
+  files:
+  - CHANGELOG.md
+  - README.md
+- sha: 0bbe2314b7ff887130b57c89ad8cef488ffd1152
+  author: Vasco-F
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: fda32eeb75ce8cb6bb7d9cfdcdf624b38ffac802
+  author: Vasco-F
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: b25fed3f066efe209f8a8055ab1f457ca6561a26
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: a8c83209fc2a3b8fe8439a6f68a259dbafa7cb25
+  author: Vasco-F
+  files:
+  - billy-andorra/src/main/java/com/premiumminds/billy/andorra/services/documents/ADGenericInvoiceIssuingHandler.java
+  - billy-andorra/src/test/java/com/premiumminds/billy/andorra/test/services/documents/TestConcurrentIssuing.java
+  - billy-france/src/main/java/com/premiumminds/billy/france/services/documents/FRGenericInvoiceIssuingHandler.java
+  - billy-france/src/test/java/com/premiumminds/billy/france/test/services/documents/TestConcurrentIssuing.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/documents/PTGenericInvoiceIssuingHandler.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/util/GenerateHash.java
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/test/services/documents/TestConcurrentIssuing.java
+  - billy-spain/src/main/java/com/premiumminds/billy/spain/services/documents/ESGenericInvoiceIssuingHandler.java
+  - billy-spain/src/test/java/com/premiumminds/billy/spain/test/services/documents/TestConcurrentIssuing.java
+- sha: ff2e98ca2d37926df4a4bafd44b5d3d1d3582d41
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: 0afae76c3da61360afd4887b0c891b658296f21f
+  author: froque
+  files:
+  - billy-core/pom.xml
+- sha: fb154dd3b3d00b0a06d15b0b867f7e567d47d02c
+  author: dependabot[bot]
+  files:
+  - billy-core/pom.xml
+- sha: d01c91c21946b8d264c0064e888b07692f358c2a
+  author: Vasco-F
+  files:
+  - billy-andorra/src/main/java/com/premiumminds/billy/andorra/services/documents/ADGenericInvoiceIssuingHandler.java
+  - billy-andorra/src/test/java/com/premiumminds/billy/andorra/test/services/documents/TestConcurrentIssuing.java
+  - billy-france/src/main/java/com/premiumminds/billy/france/services/documents/FRGenericInvoiceIssuingHandler.java
+  - billy-france/src/test/java/com/premiumminds/billy/france/test/services/documents/TestConcurrentIssuing.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/documents/PTGenericInvoiceIssuingHandler.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/util/GenerateHash.java
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/test/services/documents/TestConcurrentIssuing.java
+  - billy-spain/src/main/java/com/premiumminds/billy/spain/services/documents/ESGenericInvoiceIssuingHandler.java
+  - billy-spain/src/test/java/com/premiumminds/billy/spain/test/services/documents/TestConcurrentIssuing.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

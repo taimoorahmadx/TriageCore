@@ -1,0 +1,360 @@
+===== run-tests (3.8, full, pinned)/5_Run tests.txt =====
+##[group]Run make test
+[36;1mmake test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  NB_KERNEL: python
+  MPLBACKEND: Agg
+  SEABORN_DATA: /home/runner/work/seaborn/seaborn/seaborn-data
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+pytest -n auto --cov=seaborn --cov=tests --cov-config=setup.cfg tests
+============================= test session starts ==============================
+platform linux -- Python 3.8.18, pytest-7.4.3, pluggy-1.3.0
+rootdir: /home/runner/work/seaborn/seaborn
+configfile: pyproject.toml
+plugins: cov-4.1.0, xdist-3.5.0
+created: 4/4 workers
+4 workers [2375 items]
+
+........................................................................ [  3%]
+........................................................................ [  6%]
+........................................................................ [  9%]
+......................................................................... [ 12%]
+........................................................................ [ 15%]
+........................................................................ [ 18%]
+........................................................................ [ 21%]
+........................................................................ [ 24%]
+........................................................................ [ 27%]
+...............s.............................sss........................ [ 30%]
+........................................................................ [ 33%]
+......................s................................................. [ 36%]
+........................................................................ [ 39%]
+............................ss.......................................... [ 42%]
+........................................................................ [ 45%]
+..................................s...s...................sss........... [ 48%]
+........................................................................ [ 51%]
+........................................................................ [ 54%]
+..............ss..................s...................................... [ 57%]
+......................................s................................. [ 60%]
+........................................ss.............................. [ 63%]
+.................................s...........x...............x.....x.... [ 66%]
+......................x...x............................................. [ 69%]
+..................ss.................................................... [ 72%]
+........................................................................ [ 75%]
+........................................................................ [ 78%]
+........................................................................ [ 81%]
+.................................................x...................... [ 84%]
+........................................................................ [ 88%]
+........................................................................ [ 91%]
+......F................................................................. [ 94%]
+........................................................................ [ 97%]
+.....................................................................    [100%]
+=================================== FAILURES ===================================
+_________________________ TestLinePlotter.test_weights _________________________
+[gw1] linux -- Python 3.8.18 /opt/hostedtoolcache/Python/3.8.18/x64/bin/python
+
+self = <tests.test_relational.TestLinePlotter object at 0x7f21d311ba00>
+long_df =      x         y         z  a  b  ...  s    f a_cat  s_cat  s_str
+0   12  0.449243  6.611886  b  p  ...  2  0.2     b ...  8  0.3     a      8      8
+99  15  0.073484  1.036343  c  p  ...  8  0.2     c      8      8
+
+[100 rows x 13 columns]
+
+    def test_weights(self, long_df):
+    
+        ax = lineplot(long_df, x="a", y="y", weights="x")
+        vals = ax.lines[0].get_ydata()
+        for i, label in enumerate(ax.get_xticklabels()):
+            pos_df = long_df.loc[long_df["a"] == label.get_text()]
+>           expected = np.average(pos_df["y"], weights=pos_df["x"])
+
+tests/test_relational.py:1077: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+<__array_function__ internals>:5: in average
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+a = array([], dtype=float64), axis = None
+weights = Series([], Name: x, dtype: int64), returned = False
+
+    @array_function_dispatch(_average_dispatcher)
+    def average(a, axis=None, weights=None, returned=False):
+        """
+        Compute the weighted average along the specified axis.
+    
+        Parameters
+        ----------
+        a : array_like
+            Array containing data to be averaged. If `a` is not an array, a
+            conversion is attempted.
+        axis : None or int or tuple of ints, optional
+            Axis or axes along which to average `a`.  The default,
+            axis=None, will average over all of the elements of the input array.
+            If axis is negative it counts from the last to the first axis.
+    
+            .. versionadded:: 1.7.0
+    
+            If axis is a tuple of ints, averaging is performed on all of the axes
+            specified in the tuple instead of a single axis or all the axes as
+            before.
+        weights : array_like, optional
+            An array of weights associated with the values in `a`. Each value in
+            `a` contributes to the average according to its associated weight.
+            The weights array can either be 1-D (in which case its length must be
+            the size of `a` along the given axis) or of the same shape as `a`.
+            If `weights=None`, then all data in `a` are assumed to have a
+            weight equal to one.  The 1-D calculation is::
+    
+                avg = sum(a * weights) / sum(weights)
+    
+            The only constraint on `weights` is that `sum(weights)` must not be 0.
+        returned : bool, optional
+            Default is `False`. If `True`, the tuple (`average`, `sum_of_weights`)
+            is returned, otherwise only the average is returned.
+            If `weights=None`, `sum_of_weights` is equivalent to the number of
+            elements over which the average is taken.
+    
+        Returns
+        -------
+        retval, [sum_of_weights] : array_type or double
+            Return the average along the specified axis. When `returned` is `True`,
+            return a tuple with the average as the first element and the sum
+            of the weights as the second element. `sum_of_weights` is of the
+            same type as `retval`. The result dtype follows a genereal pattern.
+            If `weights` is None, the result dtype will be that of `a` , or ``float64``
+            if `a` is integral. Otherwise, if `weights` is not None and `a` is non-
+            integral, the result type will be the type of lowest precision capable of
+            representing values of both `a` and `weights`. If `a` happens to be
+            integral, the previous rules still applies but the result dtype will
+            at least be ``float64``.
+    
+        Raises
+        ------
+        ZeroDivisionError
+            When all weights along axis are zero. See `numpy.ma.average` for a
+            version robust to this type of error.
+        TypeError
+            When the length of 1D `weights` is not the same as the shape of `a`
+            along axis.
+    
+        See Also
+        --------
+        mean
+    
+        ma.average : average for masked arrays -- useful if your data contains
+                     "missing" values
+        numpy.result_type : Returns the type that results from applying the
+                            numpy type promotion rules to the arguments.
+    
+        Examples
+        --------
+        >>> data = np.arange(1, 5)
+        >>> data
+        array([1, 2, 3, 4])
+        >>> np.average(data)
+        2.5
+        >>> np.average(np.arange(1, 11), weights=np.arange(10, 0, -1))
+        4.0
+    
+        >>> data = np.arange(6).reshape((3,2))
+        >>> data
+        array([[0, 1],
+               [2, 3],
+               [4, 5]])
+        >>> np.average(data, axis=1, weights=[1./4, 3./4])
+        array([0.75, 2.75, 4.75])
+        >>> np.average(data, weights=[1./4, 3./4])
+        Traceback (most recent call last):
+            ...
+        TypeError: Axis must be specified when shapes of a and weights differ.
+    
+        >>> a = np.ones(5, dtype=np.float128)
+        >>> w = np.ones(5, dtype=np.complex64)
+        >>> avg = np.average(a, weights=w)
+        >>> print(avg.dtype)
+        complex256
+        """
+        a = np.asanyarray(a)
+    
+        if weights is None:
+            avg = a.mean(axis)
+            scl = avg.dtype.type(a.size/avg.size)
+        else:
+            wgt = np.asanyarray(weights)
+    
+            if issubclass(a.dtype.type, (np.integer, np.bool_)):
+                result_dtype = np.result_type(a.dtype, wgt.dtype, 'f8')
+            else:
+                result_dtype = np.result_type(a.dtype, wgt.dtype)
+    
+            # Sanity checks
+            if a.shape != wgt.shape:
+                if axis is None:
+                    raise TypeError(
+                        "Axis must be specified when shapes of a and weights "
+                        "differ.")
+                if wgt.ndim != 1:
+                    raise TypeError(
+                        "1D weights expected when shapes of a and weights differ.")
+                if wgt.shape[0] != a.shape[axis]:
+                    raise ValueError(
+                        "Length of weights not compatible with specified axis.")
+    
+                # setup wgt to broadcast along axis
+                wgt = np.broadcast_to(wgt, (a.ndim-1)*(1,) + wgt.shape)
+                wgt = wgt.swapaxes(-1, axis)
+    
+            scl = wgt.sum(axis=axis, dtype=result_dtype)
+            if np.any(scl == 0.0):
+>               raise ZeroDivisionError(
+                    "Weights sum to zero, can't be normalized")
+E               ZeroDivisionError: Weights sum to zero, can't be normalized
+
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/numpy/lib/function_base.py:409: ZeroDivisionError
+=============================== warnings summary ===============================
+../../../../../opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: 4 warnings
+tests/test_rcmod.py: 23 warnings
+tests/_core/test_plot.py: 390 warnings
+tests/_marks/test_area.py: 12 warnings
+tests/_marks/test_bar.py: 34 warnings
+tests/_marks/test_dot.py: 28 warnings
+tests/_marks/test_line.py: 66 warnings
+tests/_marks/test_text.py: 16 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The savefig.jpeg_quality rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/test_rcmod.py: 23 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The animation.avconv_args rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/test_rcmod.py: 23 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The animation.avconv_path rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/test_rcmod.py: 23 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The animation.html_args rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/test_rcmod.py: 23 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The keymap.all_axes rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/test_rcmod.py: 23 warnings
+  /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/_collections_abc.py:832: MatplotlibDeprecationWarning: 
+  The text.latex.preview rcparam was deprecated in Matplotlib 3.3 and will be removed two minor releases later.
+    self[key] = other[key]
+
+tests/_core/test_plot.py::TestFacetInterface::test_layout_algo[constrained]
+  /home/runner/work/seaborn/seaborn/seaborn/_core/plot.py:999: UserWarning: There are no gridspecs with layoutgrids. Possibly did not call parent GridSpec with the "figure" keyword
+    self._figure.savefig(loc, **kwargs)
+
+tests/_core/test_scales.py::TestNominal::test_empty_data
+  /home/runner/work/seaborn/seaborn/seaborn/_core/rules.py:170: DeprecationWarning: The default dtype for empty Series will be 'object' instead of 'float64' in a future version. Specify a dtype explicitly to silence this warning.
+    if variable_type(pd.Series(order)) == "numeric":
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+---------- coverage: platform linux, python 3.8.18-final-0 -----------
+Name                               Stmts   Miss  Cover
+------------------------------------------------------
+seaborn/__init__.py                   16      0   100%
+seaborn/_base.py                     766     22    97%
+seaborn/_compat.py                    70     35    50%
+seaborn/_core/__init__.py              0      0   100%
+seaborn/_core/data.py                116      9    92%
+seaborn/_core/exceptions.py           10      1    90%
+seaborn/_core/groupby.py              54      0   100%
+seaborn/_core/moves.py               109      0   100%
+seaborn/_core/plot.py                816      5    99%
+seaborn/_core/properties.py          425      4    99%
+seaborn/_core/rules.py                63      3    95%
+seaborn/_core/scales.py              502     47    91%
+seaborn/_core/subplots.py            140      0   100%
+seaborn/_core/typing.py               25      1    96%
+seaborn/_docstrings.py                40      5    88%
+seaborn/_marks/__init__.py             0      0   100%
+seaborn/_marks/area.py                86      3    97%
+seaborn/_marks/bar.py                123      0   100%
+seaborn/_marks/base.py               132      2    98%
+seaborn/_marks/dot.py                 92      0   100%
+seaborn/_marks/line.py               116      0   100%
+seaborn/_marks/text.py                33      0   100%
+seaborn/_statistics.py               323      5    98%
+seaborn/_stats/__init__.py             0      0   100%
+seaborn/_stats/aggregation.py         41      1    98%
+seaborn/_stats/base.py                26      1    96%
+seaborn/_stats/counting.py            96      0   100%
+seaborn/_stats/density.py             99      4    96%
+seaborn/_stats/order.py               30      3    90%
+seaborn/_stats/regression.py          23      1    96%
+seaborn/_testing.py                   52      4    92%
+seaborn/algorithms.py                 60      0   100%
+seaborn/axisgrid.py                 1039     34    97%
+seaborn/categorical.py              1204     13    99%
+seaborn/distributions.py             951     36    96%
+seaborn/matrix.py                    551     26    95%
+seaborn/miscplot.py                   24      0   100%
+seaborn/objects.py                    15      0   100%
+seaborn/palettes.py                  249      1    99%
+seaborn/rcmod.py                     104      0   100%
+seaborn/regression.py                336     10    97%
+seaborn/relational.py                285      1    99%
+seaborn/utils.py                     395     23    94%
+tests/__init__.py                      0      0   100%
+tests/_core/__init__.py                0      0   100%
+tests/_core/test_data.py             293     10    97%
+tests/_core/test_groupby.py           83      0   100%
+tests/_core/test_moves.py            231      0   100%
+tests/_core/test_plot.py            1536     33    98%
+tests/_core/test_properties.py       365      4    99%
+tests/_core/test_rules.py             72      0   100%
+tests/_core/test_scales.py           547      0   100%
+tests/_core/test_subplots.py         368      0   100%
+tests/_marks/__init__.py               0      0   100%
+tests/_marks/test_area.py             84      0   100%
+tests/_marks/test_bar.py             152      0   100%
+tests/_marks/test_base.py            102      0   100%
+tests/_marks/test_dot.py             136      0   100%
+tests/_marks/test_line.py            298      0   100%
+tests/_marks/test_text.py             98      1    99%
+tests/_stats/__init__.py               0      0   100%
+tests/_stats/test_aggregation.py      84      0   100%
+tests/_stats/test_counting.py        180      0   100%
+tests/_stats/test_density.py         141      3    98%
+tests/_stats/test_order.py            64      1    98%
+tests/_stats/test_regression.py       36      0   100%
+tests/conftest.py                    107      1    99%
+tests/test_algorithms.py             110      0   100%
+tests/test_axisgrid.py              1314     25    98%
+tests/test_base.py                  1008      3    99%
+tests/test_categorical.py           2161     43    98%
+tests/test_distributions.py         1523     12    99%
+tests/test_docstrings.py              19      0   100%
+tests/test_matrix.py                 864     28    97%
+tests/test_miscplot.py                24      0   100%
+tests/test_objects.py                 11      0   100%
+tests/test_palettes.py               304      0   100%
+tests/test_rcmod.py                  189     21    89%
+tests/test_regression.py             441      6    99%
+tests/test_relational.py            1213     14    99%
+tests/test_statistics.py             489      2    99%
+tests/test_utils.py                  382      4    99%
+------------------------------------------------------
+TOTAL                              24666    511    98%
+
+=========================== short test summary info ============================
+FAILED tests/test_relational.py::TestLinePlotter::test_weights - ZeroDivisionError: Weights sum to zero, can't be normalized
+= 1 failed, 2347 passed, 21 skipped, 6 xfailed, 690 warnings in 257.15s (0:04:17) =
+make: *** [Makefile:4: test] Error 1
+##[error]Process completed with exit code 2.

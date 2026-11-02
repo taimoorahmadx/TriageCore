@@ -1,0 +1,691 @@
+===== doctest/8_Run Doctest.txt =====
+##[group]Run cd docs
+[36;1mcd docs[0m
+[36;1mmake doctest[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+sphinx-autogen source/**/*.rst
+[autosummary] generating autosummary for: source/reference/artifacts.rst, source/reference/cli.rst, source/reference/distributions.rst, source/reference/exceptions.rst, source/reference/importance.rst, source/reference/index.rst, source/reference/integration.rst, source/reference/logging.rst, source/reference/optuna.rst, source/reference/pruners.rst, source/reference/search_space.rst, source/reference/storages.rst, source/reference/study.rst, source/reference/terminator.rst, source/reference/trial.rst, source/tutorial/index.rst
+[autosummary] generating autosummary for: /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.TrialPruned.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.Backoff.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.Boto3ArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.FileSystemArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.GCSArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.upload_artifact.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.copy_study.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.create_study.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.delete_study.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.CategoricalDistribution.rst, ..., /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.terminator.RegretBoundEvaluator.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.terminator.StaticErrorEvaluator.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.terminator.Terminator.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.terminator.TerminatorCallback.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.terminator.report_cross_validation_scores.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.trial.FixedTrial.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.trial.FrozenTrial.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.trial.Trial.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.trial.TrialState.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.trial.create_trial.rst
+Running Sphinx v7.1.2
+making output directory... done
+Using Sphinx-Gallery to convert rst text blocks to markdown for .ipynb files.
+[autosummary] generating autosummary for: faq.rst, index.rst, installation.rst, license_thirdparty.rst, privacy.rst, reference/artifacts.rst, reference/cli.rst, reference/distributions.rst, reference/exceptions.rst, reference/generated/optuna.TrialPruned.rst, ..., reference/samplers/index.rst, reference/samplers/nsgaii.rst, reference/search_space.rst, reference/storages.rst, reference/study.rst, reference/terminator.rst, reference/trial.rst, reference/visualization/index.rst, reference/visualization/matplotlib.rst, tutorial/index.rst
+[autosummary] generating autosummary for: /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.Backoff.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.Boto3ArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.FileSystemArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.artifacts.GCSArtifactStore.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.CategoricalDistribution.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.DiscreteUniformDistribution.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.FloatDistribution.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.IntDistribution.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.IntLogUniformDistribution.rst, /home/runner/work/optuna/optuna/docs/source/reference/generated/optuna.distributions.IntUniformDistribution.rst, ..., /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_hypervolume_history.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_intermediate_values.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_optimization_history.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_parallel_coordinate.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_param_importances.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_pareto_front.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_rank.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_slice.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_terminator_improvement.rst, /home/runner/work/optuna/optuna/docs/source/reference/visualization/generated/optuna.visualization.plot_timeline.rst
+loading intersphinx inventory from https://docs.python.org/3/objects.inv...
+loading intersphinx inventory from https://distributed.dask.org/en/stable/objects.inv...
+loading intersphinx inventory from https://lightgbm.readthedocs.io/en/latest/objects.inv...
+loading intersphinx inventory from https://matplotlib.org/stable/objects.inv...
+loading intersphinx inventory from https://numpy.org/doc/stable/objects.inv...
+loading intersphinx inventory from https://docs.scipy.org/doc/scipy/objects.inv...
+loading intersphinx inventory from https://scikit-learn.org/stable/objects.inv...
+loading intersphinx inventory from https://pytorch.org/docs/stable/objects.inv...
+loading intersphinx inventory from https://pandas.pydata.org/docs/objects.inv...
+loading intersphinx inventory from https://plotly.com/python-api-reference/objects.inv...
+generating gallery...
+[I 2023-11-01 05:06:52,260] A new study created in memory with name: no-name-ec490657-3332-406a-9faa-d6af677bbbec
+[I 2023-11-01 05:06:52,261] Trial 0 finished with value: 26.608714791257388 and parameters: {'x': -3.1583635768775924}. Best is trial 0 with value: 26.608714791257388.
+[I 2023-11-01 05:06:52,262] Trial 1 finished with value: 1.5285752915058195 and parameters: {'x': 3.2363556492796963}. Best is trial 1 with value: 1.5285752915058195.
+[I 2023-11-01 05:06:52,262] Trial 2 finished with value: 62.61511060819589 and parameters: {'x': -5.912971035470552}. Best is trial 1 with value: 1.5285752915058195.
+[I 2023-11-01 05:06:52,263] Trial 3 finished with value: 13.270676902855739 and parameters: {'x': -1.6428940284965385}. Best is trial 1 with value: 1.5285752915058195.
+[I 2023-11-01 05:06:52,263] Trial 4 finished with value: 0.06747860131740525 and parameters: {'x': 2.259766436087123}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,264] Trial 5 finished with value: 61.93462043790284 and parameters: {'x': -5.869855172612953}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,264] Trial 6 finished with value: 8.529241838009128 and parameters: {'x': 4.9204865755570815}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,265] Trial 7 finished with value: 6.327280416306507 and parameters: {'x': 4.515408598281104}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,265] Trial 8 finished with value: 34.87678251007827 and parameters: {'x': -3.9056568229180293}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,266] Trial 9 finished with value: 5.85614322177441 and parameters: {'x': -0.41994694606605165}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,272] Trial 10 finished with value: 41.49873929915151 and parameters: {'x': 8.441951513256795}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,277] Trial 11 finished with value: 0.08190012289686961 and parameters: {'x': 1.7138180248567887}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,282] Trial 12 finished with value: 122.27482876022076 and parameters: {'x': -9.05779493209296}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,287] Trial 13 finished with value: 0.1103268056442651 and parameters: {'x': 1.6678452083075346}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,293] Trial 14 finished with value: 1.239806570001033 and parameters: {'x': 0.8865339834548012}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,300] Trial 15 finished with value: 29.33277548813995 and parameters: {'x': 7.415974103348349}. Best is trial 4 with value: 0.06747860131740525.
+[I 2023-11-01 05:06:52,305] Trial 16 finished with value: 0.04002250139876792 and parameters: {'x': 1.7999437544119956}. Best is trial 16 with value: 0.04002250139876792.
+[I 2023-11-01 05:06:52,310] Trial 17 finished with value: 11.131224898493468 and parameters: {'x': 5.336349037270152}. Best is trial 16 with value: 0.04002250139876792.
+[I 2023-11-01 05:06:52,315] Trial 18 finished with value: 0.42213929972985975 and parameters: {'x': 2.6497224790091995}. Best is trial 16 with value: 0.04002250139876792.
+[I 2023-11-01 05:06:52,321] Trial 19 finished with value: 5.986613479725296 and parameters: {'x': -0.44675570495407146}. Best is trial 16 with value: 0.04002250139876792.
+[I 2023-11-01 05:06:52,326] Trial 20 finished with value: 23.390376393441542 and parameters: {'x': 6.836359828780479}. Best is trial 16 with value: 0.04002250139876792.
+[I 2023-11-01 05:06:52,331] Trial 21 finished with value: 0.03152288205560932 and parameters: {'x': 1.8224531553206047}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,337] Trial 22 finished with value: 2.2797419051239296 and parameters: {'x': 3.5098814208817624}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,342] Trial 23 finished with value: 60.707266557023715 and parameters: {'x': 9.79148680015719}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,347] Trial 24 finished with value: 1.9983058273111458 and parameters: {'x': 0.5863855450261037}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,352] Trial 25 finished with value: 0.27255197998168285 and parameters: {'x': 2.522065110864232}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,358] Trial 26 finished with value: 3.8339596133140934 and parameters: {'x': 3.958049951690225}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,364] Trial 27 finished with value: 15.797502171649247 and parameters: {'x': 5.974607171991875}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,369] Trial 28 finished with value: 0.036032534445352295 and parameters: {'x': 2.189822376039687}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,375] Trial 29 finished with value: 14.648704718863884 and parameters: {'x': -1.8273626322657075}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,380] Trial 30 finished with value: 1.0269261088545933 and parameters: {'x': 0.9866263725285755}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,386] Trial 31 finished with value: 0.14994724527244452 and parameters: {'x': 1.6127697774289247}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,391] Trial 32 finished with value: 2.095181403370709 and parameters: {'x': 3.4474741460111504}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,397] Trial 33 finished with value: 0.22103028406150582 and parameters: {'x': 2.470138579635309}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,402] Trial 34 finished with value: 4.808124813926069 and parameters: {'x': -0.192743672645316}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,408] Trial 35 finished with value: 2.667684266770483 and parameters: {'x': 3.633304707263921}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,414] Trial 36 finished with value: 6.223307412268121 and parameters: {'x': 4.494655770295397}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,419] Trial 37 finished with value: 10.886106074137919 and parameters: {'x': -1.2994099584831709}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,424] Trial 38 finished with value: 9.344296986739726 and parameters: {'x': 5.056844285654689}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,430] Trial 39 finished with value: 0.03674555820263529 and parameters: {'x': 2.191691309669049}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,435] Trial 40 finished with value: 0.9188229435958446 and parameters: {'x': 2.958552525214891}. Best is trial 21 with value: 0.03152288205560932.
+[I 2023-11-01 05:06:52,440] Trial 41 finished with value: 0.00034717018847745906 and parameters: {'x': 1.9813674964516987}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,446] Trial 42 finished with value: 2.619120131897846 and parameters: {'x': 0.3816304093632239}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,451] Trial 43 finished with value: 0.12683816720242805 and parameters: {'x': 1.6438565356454957}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,457] Trial 44 finished with value: 0.07131841255934805 and parameters: {'x': 2.267055074019102}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,462] Trial 45 finished with value: 4.992843783751005 and parameters: {'x': 4.234467225929037}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,467] Trial 46 finished with value: 1.2321955101630584 and parameters: {'x': 0.8899569782377539}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,473] Trial 47 finished with value: 8.882543126285444 and parameters: {'x': -0.9803595632549849}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,478] Trial 48 finished with value: 17.79971460302885 and parameters: {'x': -2.2189707990253797}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,483] Trial 49 finished with value: 3.603912201007066 and parameters: {'x': 0.10160272835028916}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,489] Trial 50 finished with value: 1.2683340411217978 and parameters: {'x': 3.1262033746716433}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,494] Trial 51 finished with value: 0.0039178234777032354 and parameters: {'x': 1.9374074806570047}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,499] Trial 52 finished with value: 0.35520398581016316 and parameters: {'x': 1.4040100791035446}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,504] Trial 53 finished with value: 0.00042813986239516116 and parameters: {'x': 1.9793084591585073}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,510] Trial 54 finished with value: 0.0020887609244023622 and parameters: {'x': 2.045702964065828}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,515] Trial 55 finished with value: 0.7737692767703207 and parameters: {'x': 2.87964156152965}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,520] Trial 56 finished with value: 0.9164401942170134 and parameters: {'x': 1.042691170929144}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,526] Trial 57 finished with value: 3.012310015670226 and parameters: {'x': 0.2643992349419104}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,531] Trial 58 finished with value: 3.296708433144217 and parameters: {'x': 3.815684012471393}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,537] Trial 59 finished with value: 7.004590546965399 and parameters: {'x': -0.6466187007133078}. Best is trial 41 with value: 0.00034717018847745906.
+[I 2023-11-01 05:06:52,542] Trial 60 finished with value: 9.52035594438783e-05 and parameters: {'x': 2.0097572311361307}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,548] Trial 61 finished with value: 0.14922466349020133 and parameters: {'x': 2.3862960826751953}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,553] Trial 62 finished with value: 0.02991706214469467 and parameters: {'x': 1.827034505913189}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,558] Trial 63 finished with value: 0.202400583996796 and parameters: {'x': 1.5501104757867816}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,564] Trial 64 finished with value: 1.2606421607247438 and parameters: {'x': 0.8772167792825083}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,569] Trial 65 finished with value: 1.299118549404685 and parameters: {'x': 3.1397888178977214}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,575] Trial 66 finished with value: 4.450895898329239 and parameters: {'x': -0.10971464855540103}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,580] Trial 67 finished with value: 0.03088479384351814 and parameters: {'x': 1.824259299410984}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,586] Trial 68 finished with value: 5.332971739906828 and parameters: {'x': 4.309322788158214}. Best is trial 60 with value: 9.52035594438783e-05.
+[I 2023-11-01 05:06:52,591] Trial 69 finished with value: 0.6271268853930936 and parameters: {'x': 1.208086566982796}. Best is trial 60 with value: 9.52035594438783e-05.
+[... 87486 lines removed by TriageCore ...]
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:28,914] Trial 27 failed with value None.
+[W 2023-11-01 05:29:28,976] Trial 28 failed with parameters: {'x': 0.9539796013524156} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:28,977] Trial 28 failed with value None.
+[W 2023-11-01 05:29:29,004] Trial 29 failed with parameters: {'x': 0.8395749667466484} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,005] Trial 29 failed with value None.
+[W 2023-11-01 05:29:29,067] Trial 30 failed with parameters: {'x': 0.8280926077423015} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,068] Trial 30 failed with value None.
+[W 2023-11-01 05:29:29,098] Trial 31 failed with parameters: {'x': 0.8799080865537525} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,099] Trial 31 failed with value None.
+[W 2023-11-01 05:29:29,160] Trial 32 failed with parameters: {'x': 0.856937291814868} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,161] Trial 32 failed with value None.
+[W 2023-11-01 05:29:29,193] Trial 33 failed with parameters: {'x': 0.8464380540724806} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,194] Trial 33 failed with value None.
+[I 2023-11-01 05:29:29,217] Trial 35 finished with value: 0.030300040090470808 and parameters: {'x': 0.17406906701212255}. Best is trial 15 with value: 9.903806189091457e-06.
+[I 2023-11-01 05:29:29,224] Trial 36 finished with value: 0.00021326872193431514 and parameters: {'x': 0.01460372287926319}. Best is trial 15 with value: 9.903806189091457e-06.
+[W 2023-11-01 05:29:29,257] Trial 34 failed with parameters: {'x': 0.8854930912581905} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,258] Trial 34 failed with value None.
+[W 2023-11-01 05:29:29,317] Trial 37 failed with parameters: {'x': 0.866818763390184} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,318] Trial 37 failed with value None.
+[W 2023-11-01 05:29:29,346] Trial 38 failed with parameters: {'x': 0.819393135373528} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,347] Trial 38 failed with value None.
+[W 2023-11-01 05:29:29,408] Trial 39 failed with parameters: {'x': 0.8408205789965458} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,409] Trial 39 failed with value None.
+[W 2023-11-01 05:29:29,449] Trial 40 failed with parameters: {'x': 0.9656709719875146} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,451] Trial 40 failed with value None.
+[W 2023-11-01 05:29:29,507] Trial 41 failed with parameters: {'x': 0.9116260944828029} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,509] Trial 41 failed with value None.
+[W 2023-11-01 05:29:29,540] Trial 42 failed with parameters: {'x': 0.8301841815412819} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,542] Trial 42 failed with value None.
+[W 2023-11-01 05:29:29,601] Trial 43 failed with parameters: {'x': 0.8545418840583909} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,602] Trial 43 failed with value None.
+[W 2023-11-01 05:29:29,635] Trial 44 failed with parameters: {'x': 0.8718551800978102} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,636] Trial 44 failed with value None.
+[W 2023-11-01 05:29:29,694] Trial 45 failed with parameters: {'x': 0.8481533767119213} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,695] Trial 45 failed with value None.
+[W 2023-11-01 05:29:29,732] Trial 46 failed with parameters: {'x': 0.8924918201658735} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,733] Trial 46 failed with value None.
+[W 2023-11-01 05:29:29,799] Trial 47 failed with parameters: {'x': 0.9647724789607142} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,800] Trial 47 failed with value None.
+[W 2023-11-01 05:29:29,825] Trial 48 failed with parameters: {'x': 0.8591374724474415} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,826] Trial 48 failed with value None.
+[W 2023-11-01 05:29:29,888] Trial 49 failed with parameters: {'x': 0.8115810797577248} because of the following error: ValueError().
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/study/_optimize.py", line 200, in _run_trial
+    value_or_values = func(trial)
+  File "<string>", line 10, in objective
+ValueError
+[W 2023-11-01 05:29:29,889] Trial 49 failed with value None.
+[2Kreading sources... [ 88%] reference/visualization/generated/optuna.visualization.plot_timeline
+[2Kreading sources... [ 88%] reference/visualization/index
+[2Kreading sources... [ 89%] reference/visualization/matplotlib
+[2Kreading sources... [ 89%] tutorial/10_key_features/001_first
+[2Kreading sources... [ 90%] tutorial/10_key_features/002_configurations
+[2Kreading sources... [ 90%] tutorial/10_key_features/003_efficient_optimization_algorithms
+[2Kreading sources... [ 91%] tutorial/10_key_features/004_distributed
+[2Kreading sources... [ 91%] tutorial/10_key_features/005_visualization
+[2Kreading sources... [ 92%] tutorial/10_key_features/index
+[2Kreading sources... [ 92%] tutorial/10_key_features/sg_execution_times
+[2Kreading sources... [ 93%] tutorial/20_recipes/001_rdb
+[2Kreading sources... [ 93%] tutorial/20_recipes/002_multi_objective
+[2Kreading sources... [ 94%] tutorial/20_recipes/003_attributes
+[2Kreading sources... [ 94%] tutorial/20_recipes/004_cli
+[2Kreading sources... [ 95%] tutorial/20_recipes/005_user_defined_sampler
+[2Kreading sources... [ 95%] tutorial/20_recipes/006_user_defined_pruner
+[2Kreading sources... [ 96%] tutorial/20_recipes/007_optuna_callback
+[2Kreading sources... [ 96%] tutorial/20_recipes/008_specify_params
+[2Kreading sources... [ 97%] tutorial/20_recipes/009_ask_and_tell
+[2Kreading sources... [ 97%] tutorial/20_recipes/010_reuse_best_trial
+[2Kreading sources... [ 98%] tutorial/20_recipes/011_journal_storage
+[2Kreading sources... [ 98%] tutorial/20_recipes/012_artifact_tutorial
+[2Kreading sources... [ 99%] tutorial/20_recipes/index
+[2Kreading sources... [ 99%] tutorial/20_recipes/sg_execution_times
+[2Kreading sources... [100%] tutorial/index
+<string>:21: ExperimentalWarning:
+
+plot_timeline is experimental (supported from v3.2.0). The interface can change in the future.
+
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/samplers/_tpe/sampler.py:docstring of optuna.samplers._tpe.sampler.TPESampler:22: ERROR: Unexpected indentation.
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/samplers/_tpe/sampler.py:docstring of optuna.samplers._tpe.sampler.TPESampler:20: WARNING: Inline interpreted text or phrase reference start-string without end-string.
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/optuna/samplers/_tpe/sampler.py:docstring of optuna.samplers._tpe.sampler.TPESampler:23: WARNING: Block quote ends without a blank line; unexpected unindent.
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... [2Kcopying downloadable files... [  3%] tutorial/10_key_features/001_first.py
+[2Kcopying downloadable files... [  5%] tutorial/10_key_features/001_first.ipynb
+[2Kcopying downloadable files... [  8%] tutorial/10_key_features/002_configurations.py
+[2Kcopying downloadable files... [ 11%] tutorial/10_key_features/002_configurations.ipynb
+[2Kcopying downloadable files... [ 13%] tutorial/10_key_features/003_efficient_optimization_algorithms.py
+[2Kcopying downloadable files... [ 16%] tutorial/10_key_features/003_efficient_optimization_algorithms.ipynb
+[2Kcopying downloadable files... [ 18%] tutorial/10_key_features/004_distributed.py
+[2Kcopying downloadable files... [ 21%] tutorial/10_key_features/004_distributed.ipynb
+[2Kcopying downloadable files... [ 24%] tutorial/10_key_features/005_visualization.py
+[2Kcopying downloadable files... [ 26%] tutorial/10_key_features/005_visualization.ipynb
+[2Kcopying downloadable files... [ 29%] tutorial/10_key_features/10_key_features_python.zip
+[2Kcopying downloadable files... [ 32%] tutorial/10_key_features/10_key_features_jupyter.zip
+[2Kcopying downloadable files... [ 34%] tutorial/20_recipes/001_rdb.py
+[2Kcopying downloadable files... [ 37%] tutorial/20_recipes/001_rdb.ipynb
+[2Kcopying downloadable files... [ 39%] tutorial/20_recipes/002_multi_objective.py
+[2Kcopying downloadable files... [ 42%] tutorial/20_recipes/002_multi_objective.ipynb
+[2Kcopying downloadable files... [ 45%] tutorial/20_recipes/003_attributes.py
+[2Kcopying downloadable files... [ 47%] tutorial/20_recipes/003_attributes.ipynb
+[2Kcopying downloadable files... [ 50%] tutorial/20_recipes/004_cli.py
+[2Kcopying downloadable files... [ 53%] tutorial/20_recipes/004_cli.ipynb
+[2Kcopying downloadable files... [ 55%] tutorial/20_recipes/005_user_defined_sampler.py
+[2Kcopying downloadable files... [ 58%] tutorial/20_recipes/005_user_defined_sampler.ipynb
+[2Kcopying downloadable files... [ 61%] tutorial/20_recipes/006_user_defined_pruner.py
+[2Kcopying downloadable files... [ 63%] tutorial/20_recipes/006_user_defined_pruner.ipynb
+[2Kcopying downloadable files... [ 66%] tutorial/20_recipes/007_optuna_callback.py
+[2Kcopying downloadable files... [ 68%] tutorial/20_recipes/007_optuna_callback.ipynb
+[2Kcopying downloadable files... [ 71%] tutorial/20_recipes/008_specify_params.py
+[2Kcopying downloadable files... [ 74%] tutorial/20_recipes/008_specify_params.ipynb
+[2Kcopying downloadable files... [ 76%] tutorial/20_recipes/009_ask_and_tell.py
+[2Kcopying downloadable files... [ 79%] tutorial/20_recipes/009_ask_and_tell.ipynb
+[2Kcopying downloadable files... [ 82%] tutorial/20_recipes/010_reuse_best_trial.py
+[2Kcopying downloadable files... [ 84%] tutorial/20_recipes/010_reuse_best_trial.ipynb
+[2Kcopying downloadable files... [ 87%] tutorial/20_recipes/011_journal_storage.py
+[2Kcopying downloadable files... [ 89%] tutorial/20_recipes/011_journal_storage.ipynb
+[2Kcopying downloadable files... [ 92%] tutorial/20_recipes/012_artifact_tutorial.py
+[2Kcopying downloadable files... [ 95%] tutorial/20_recipes/012_artifact_tutorial.ipynb
+[2Kcopying downloadable files... [ 97%] tutorial/20_recipes/20_recipes_python.zip
+[2Kcopying downloadable files... [100%] tutorial/20_recipes/20_recipes_jupyter.zip
+copying static files... done
+copying extra files... done
+done
+[2Kwriting output... [  1%] faq
+[2Kwriting output... [  1%] index
+[2Kwriting output... [  2%] installation
+[2Kwriting output... [  2%] license_thirdparty
+[2Kwriting output... [  3%] privacy
+[2Kwriting output... [  3%] reference/artifacts
+[2Kwriting output... [  4%] reference/cli
+[2Kwriting output... [  4%] reference/distributions
+[2Kwriting output... [  5%] reference/exceptions
+[2Kwriting output... [  5%] reference/generated/optuna.TrialPruned
+[2Kwriting output... [  6%] reference/generated/optuna.artifacts.Backoff
+[2Kwriting output... [  6%] reference/generated/optuna.artifacts.Boto3ArtifactStore
+[2Kwriting output... [  7%] reference/generated/optuna.artifacts.FileSystemArtifactStore
+[2Kwriting output... [  7%] reference/generated/optuna.artifacts.GCSArtifactStore
+[2Kwriting output... [  8%] reference/generated/optuna.artifacts.upload_artifact
+[2Kwriting output... [  8%] reference/generated/optuna.copy_study
+[2Kwriting output... [  9%] reference/generated/optuna.create_study
+[2Kwriting output... [  9%] reference/generated/optuna.delete_study
+[2Kwriting output... [ 10%] reference/generated/optuna.distributions.CategoricalDistribution
+[2Kwriting output... [ 10%] reference/generated/optuna.distributions.DiscreteUniformDistribution
+[2Kwriting output... [ 11%] reference/generated/optuna.distributions.FloatDistribution
+[2Kwriting output... [ 11%] reference/generated/optuna.distributions.IntDistribution
+[2Kwriting output... [ 12%] reference/generated/optuna.distributions.IntLogUniformDistribution
+[2Kwriting output... [ 12%] reference/generated/optuna.distributions.IntUniformDistribution
+[2Kwriting output... [ 13%] reference/generated/optuna.distributions.LogUniformDistribution
+[2Kwriting output... [ 13%] reference/generated/optuna.distributions.UniformDistribution
+[2Kwriting output... [ 14%] reference/generated/optuna.distributions.check_distribution_compatibility
+[2Kwriting output... [ 14%] reference/generated/optuna.distributions.distribution_to_json
+[2Kwriting output... [ 15%] reference/generated/optuna.distributions.json_to_distribution
+[2Kwriting output... [ 15%] reference/generated/optuna.exceptions.CLIUsageError
+[2Kwriting output... [ 16%] reference/generated/optuna.exceptions.DuplicatedStudyError
+[2Kwriting output... [ 16%] reference/generated/optuna.exceptions.OptunaError
+[2Kwriting output... [ 17%] reference/generated/optuna.exceptions.StorageInternalError
+[2Kwriting output... [ 17%] reference/generated/optuna.exceptions.TrialPruned
+[2Kwriting output... [ 18%] reference/generated/optuna.get_all_study_names
+[2Kwriting output... [ 18%] reference/generated/optuna.get_all_study_summaries
+[2Kwriting output... [ 19%] reference/generated/optuna.importance.FanovaImportanceEvaluator
+[2Kwriting output... [ 19%] reference/generated/optuna.importance.MeanDecreaseImpurityImportanceEvaluator
+[2Kwriting output... [ 20%] reference/generated/optuna.importance.get_param_importances
+[2Kwriting output... [ 20%] reference/generated/optuna.integration.BoTorchSampler
+[2Kwriting output... [ 21%] reference/generated/optuna.integration.CatBoostPruningCallback
+[2Kwriting output... [ 21%] reference/generated/optuna.integration.CmaEsSampler
+[2Kwriting output... [ 22%] reference/generated/optuna.integration.DaskStorage
+[2Kwriting output... [ 22%] reference/generated/optuna.integration.FastAIPruningCallback
+[2Kwriting output... [ 23%] reference/generated/optuna.integration.FastAIV1PruningCallback
+[2Kwriting output... [ 23%] reference/generated/optuna.integration.FastAIV2PruningCallback
+[2Kwriting output... [ 24%] reference/generated/optuna.integration.LightGBMPruningCallback
+[2Kwriting output... [ 24%] reference/generated/optuna.integration.MLflowCallback
+[2Kwriting output... [ 25%] reference/generated/optuna.integration.OptunaSearchCV
+[2Kwriting output... [ 25%] reference/generated/optuna.integration.PyCmaSampler
+[2Kwriting output... [ 26%] reference/generated/optuna.integration.PyTorchIgnitePruningHandler
+[2Kwriting output... [ 26%] reference/generated/optuna.integration.PyTorchLightningPruningCallback
+[2Kwriting output... [ 27%] reference/generated/optuna.integration.SkoptSampler
+[2Kwriting output... [ 27%] reference/generated/optuna.integration.TensorBoardCallback
+[2Kwriting output... [ 28%] reference/generated/optuna.integration.TorchDistributedTrial
+[2Kwriting output... [ 28%] reference/generated/optuna.integration.WeightsAndBiasesCallback
+[2Kwriting output... [ 29%] reference/generated/optuna.integration.XGBoostPruningCallback
+[2Kwriting output... [ 29%] reference/generated/optuna.integration.botorch.logei_candidates_func
+[2Kwriting output... [ 30%] reference/generated/optuna.integration.botorch.qehvi_candidates_func
+[2Kwriting output... [ 30%] reference/generated/optuna.integration.botorch.qei_candidates_func
+[2Kwriting output... [ 31%] reference/generated/optuna.integration.botorch.qnehvi_candidates_func
+[2Kwriting output... [ 31%] reference/generated/optuna.integration.botorch.qnei_candidates_func
+[2Kwriting output... [ 32%] reference/generated/optuna.integration.botorch.qparego_candidates_func
+[2Kwriting output... [ 32%] reference/generated/optuna.integration.lightgbm.LightGBMTuner
+[2Kwriting output... [ 33%] reference/generated/optuna.integration.lightgbm.LightGBMTunerCV
+[2Kwriting output... [ 33%] reference/generated/optuna.integration.lightgbm.train
+[2Kwriting output... [ 34%] reference/generated/optuna.load_study
+[2Kwriting output... [ 34%] reference/generated/optuna.logging.disable_default_handler
+[2Kwriting output... [ 35%] reference/generated/optuna.logging.disable_propagation
+[2Kwriting output... [ 35%] reference/generated/optuna.logging.enable_default_handler
+[2Kwriting output... [ 36%] reference/generated/optuna.logging.enable_propagation
+[2Kwriting output... [ 36%] reference/generated/optuna.logging.get_verbosity
+[2Kwriting output... [ 37%] reference/generated/optuna.logging.set_verbosity
+[2Kwriting output... [ 37%] reference/generated/optuna.pruners.BasePruner
+[2Kwriting output... [ 38%] reference/generated/optuna.pruners.HyperbandPruner
+[2Kwriting output... [ 38%] reference/generated/optuna.pruners.MedianPruner
+[2Kwriting output... [ 39%] reference/generated/optuna.pruners.NopPruner
+[2Kwriting output... [ 39%] reference/generated/optuna.pruners.PatientPruner
+[2Kwriting output... [ 40%] reference/generated/optuna.pruners.PercentilePruner
+[2Kwriting output... [ 40%] reference/generated/optuna.pruners.SuccessiveHalvingPruner
+[2Kwriting output... [ 41%] reference/generated/optuna.pruners.ThresholdPruner
+[2Kwriting output... [ 41%] reference/generated/optuna.search_space.IntersectionSearchSpace
+[2Kwriting output... [ 42%] reference/generated/optuna.search_space.intersection_search_space
+[2Kwriting output... [ 42%] reference/generated/optuna.storages.JournalFileOpenLock
+[2Kwriting output... [ 43%] reference/generated/optuna.storages.JournalFileStorage
+[2Kwriting output... [ 43%] reference/generated/optuna.storages.JournalFileSymlinkLock
+[2Kwriting output... [ 44%] reference/generated/optuna.storages.JournalRedisStorage
+[2Kwriting output... [ 44%] reference/generated/optuna.storages.JournalStorage
+[2Kwriting output... [ 45%] reference/generated/optuna.storages.RDBStorage
+[2Kwriting output... [ 45%] reference/generated/optuna.storages.RetryFailedTrialCallback
+[2Kwriting output... [ 46%] reference/generated/optuna.storages.fail_stale_trials
+[2Kwriting output... [ 46%] reference/generated/optuna.study.MaxTrialsCallback
+[2Kwriting output... [ 47%] reference/generated/optuna.study.Study
+[2Kwriting output... [ 47%] reference/generated/optuna.study.StudyDirection
+[2Kwriting output... [ 48%] reference/generated/optuna.study.StudySummary
+[2Kwriting output... [ 48%] reference/generated/optuna.study.copy_study
+[2Kwriting output... [ 49%] reference/generated/optuna.study.create_study
+[2Kwriting output... [ 49%] reference/generated/optuna.study.delete_study
+[2Kwriting output... [ 50%] reference/generated/optuna.study.get_all_study_names
+[2Kwriting output... [ 51%] reference/generated/optuna.study.get_all_study_summaries
+[2Kwriting output... [ 51%] reference/generated/optuna.study.load_study
+[2Kwriting output... [ 52%] reference/generated/optuna.terminator.BaseErrorEvaluator
+[2Kwriting output... [ 52%] reference/generated/optuna.terminator.BaseImprovementEvaluator
+[2Kwriting output... [ 53%] reference/generated/optuna.terminator.BaseTerminator
+[2Kwriting output... [ 53%] reference/generated/optuna.terminator.BestValueStagnationEvaluator
+[2Kwriting output... [ 54%] reference/generated/optuna.terminator.CrossValidationErrorEvaluator
+[2Kwriting output... [ 54%] reference/generated/optuna.terminator.RegretBoundEvaluator
+[2Kwriting output... [ 55%] reference/generated/optuna.terminator.StaticErrorEvaluator
+[2Kwriting output... [ 55%] reference/generated/optuna.terminator.Terminator
+[2Kwriting output... [ 56%] reference/generated/optuna.terminator.TerminatorCallback
+[2Kwriting output... [ 56%] reference/generated/optuna.terminator.report_cross_validation_scores
+[2Kwriting output... [ 57%] reference/generated/optuna.trial.FixedTrial
+[2Kwriting output... [ 57%] reference/generated/optuna.trial.FrozenTrial
+[2Kwriting output... [ 58%] reference/generated/optuna.trial.Trial
+[2Kwriting output... [ 58%] reference/generated/optuna.trial.TrialState
+[2Kwriting output... [ 59%] reference/generated/optuna.trial.create_trial
+[2Kwriting output... [ 59%] reference/importance
+[2Kwriting output... [ 60%] reference/index
+[2Kwriting output... [ 60%] reference/integration
+[2Kwriting output... [ 61%] reference/logging
+[2Kwriting output... [ 61%] reference/optuna
+[2Kwriting output... [ 62%] reference/pruners
+[2Kwriting output... [ 62%] reference/samplers/generated/optuna.samplers.BaseSampler
+[2Kwriting output... [ 63%] reference/samplers/generated/optuna.samplers.BruteForceSampler
+[2Kwriting output... [ 63%] reference/samplers/generated/optuna.samplers.CmaEsSampler
+[2Kwriting output... [ 64%] reference/samplers/generated/optuna.samplers.GridSampler
+[2Kwriting output... [ 64%] reference/samplers/generated/optuna.samplers.IntersectionSearchSpace
+[2Kwriting output... [ 65%] reference/samplers/generated/optuna.samplers.NSGAIIISampler
+[2Kwriting output... [ 65%] reference/samplers/generated/optuna.samplers.NSGAIISampler
+[2Kwriting output... [ 66%] reference/samplers/generated/optuna.samplers.PartialFixedSampler
+[2Kwriting output... [ 66%] reference/samplers/generated/optuna.samplers.QMCSampler
+[2Kwriting output... [ 67%] reference/samplers/generated/optuna.samplers.RandomSampler
+[2Kwriting output... [ 67%] reference/samplers/generated/optuna.samplers.TPESampler
+[2Kwriting output... [ 68%] reference/samplers/generated/optuna.samplers.intersection_search_space
+[2Kwriting output... [ 68%] reference/samplers/generated/optuna.samplers.nsgaii.BLXAlphaCrossover
+[2Kwriting output... [ 69%] reference/samplers/generated/optuna.samplers.nsgaii.BaseCrossover
+[2Kwriting output... [ 69%] reference/samplers/generated/optuna.samplers.nsgaii.SBXCrossover
+[2Kwriting output... [ 70%] reference/samplers/generated/optuna.samplers.nsgaii.SPXCrossover
+[2Kwriting output... [ 70%] reference/samplers/generated/optuna.samplers.nsgaii.UNDXCrossover
+[2Kwriting output... [ 71%] reference/samplers/generated/optuna.samplers.nsgaii.UniformCrossover
+[2Kwriting output... [ 71%] reference/samplers/generated/optuna.samplers.nsgaii.VSBXCrossover
+[2Kwriting output... [ 72%] reference/samplers/index
+[2Kwriting output... [ 72%] reference/samplers/nsgaii
+[2Kwriting output... [ 73%] reference/search_space
+[2Kwriting output... [ 73%] reference/storages
+[2Kwriting output... [ 74%] reference/study
+[2Kwriting output... [ 74%] reference/terminator
+[2Kwriting output... [ 75%] reference/trial
+[2Kwriting output... [ 75%] reference/visualization/generated/optuna.visualization.is_available
+[2Kwriting output... [ 76%] reference/visualization/generated/optuna.visualization.matplotlib.is_available
+[2Kwriting output... [ 76%] reference/visualization/generated/optuna.visualization.matplotlib.plot_contour
+[2Kwriting output... [ 77%] reference/visualization/generated/optuna.visualization.matplotlib.plot_edf
+[2Kwriting output... [ 77%] reference/visualization/generated/optuna.visualization.matplotlib.plot_hypervolume_history
+[2Kwriting output... [ 78%] reference/visualization/generated/optuna.visualization.matplotlib.plot_intermediate_values
+[2Kwriting output... [ 78%] reference/visualization/generated/optuna.visualization.matplotlib.plot_optimization_history
+[2Kwriting output... [ 79%] reference/visualization/generated/optuna.visualization.matplotlib.plot_parallel_coordinate
+[2Kwriting output... [ 79%] reference/visualization/generated/optuna.visualization.matplotlib.plot_param_importances
+[2Kwriting output... [ 80%] reference/visualization/generated/optuna.visualization.matplotlib.plot_pareto_front
+[2Kwriting output... [ 80%] reference/visualization/generated/optuna.visualization.matplotlib.plot_rank
+[2Kwriting output... [ 81%] reference/visualization/generated/optuna.visualization.matplotlib.plot_slice
+[2Kwriting output... [ 81%] reference/visualization/generated/optuna.visualization.matplotlib.plot_terminator_improvement
+[2Kwriting output... [ 82%] reference/visualization/generated/optuna.visualization.matplotlib.plot_timeline
+[2Kwriting output... [ 82%] reference/visualization/generated/optuna.visualization.plot_contour
+[2Kwriting output... [ 83%] reference/visualization/generated/optuna.visualization.plot_edf
+[2Kwriting output... [ 83%] reference/visualization/generated/optuna.visualization.plot_hypervolume_history
+[2Kwriting output... [ 84%] reference/visualization/generated/optuna.visualization.plot_intermediate_values
+[2Kwriting output... [ 84%] reference/visualization/generated/optuna.visualization.plot_optimization_history
+[2Kwriting output... [ 85%] reference/visualization/generated/optuna.visualization.plot_parallel_coordinate
+[2Kwriting output... [ 85%] reference/visualization/generated/optuna.visualization.plot_param_importances
+[2Kwriting output... [ 86%] reference/visualization/generated/optuna.visualization.plot_pareto_front
+[2Kwriting output... [ 86%] reference/visualization/generated/optuna.visualization.plot_rank
+[2Kwriting output... [ 87%] reference/visualization/generated/optuna.visualization.plot_slice
+[2Kwriting output... [ 87%] reference/visualization/generated/optuna.visualization.plot_terminator_improvement
+[2Kwriting output... [ 88%] reference/visualization/generated/optuna.visualization.plot_timeline
+[2Kwriting output... [ 88%] reference/visualization/index
+[2Kwriting output... [ 89%] reference/visualization/matplotlib
+[2Kwriting output... [ 89%] tutorial/10_key_features/001_first
+[2Kwriting output... [ 90%] tutorial/10_key_features/002_configurations
+[2Kwriting output... [ 90%] tutorial/10_key_features/003_efficient_optimization_algorithms
+[2Kwriting output... [ 91%] tutorial/10_key_features/004_distributed
+[2Kwriting output... [ 91%] tutorial/10_key_features/005_visualization
+[2Kwriting output... [ 92%] tutorial/10_key_features/index
+[2Kwriting output... [ 92%] tutorial/10_key_features/sg_execution_times
+[2Kwriting output... [ 93%] tutorial/20_recipes/001_rdb
+[2Kwriting output... [ 93%] tutorial/20_recipes/002_multi_objective
+[2Kwriting output... [ 94%] tutorial/20_recipes/003_attributes
+[2Kwriting output... [ 94%] tutorial/20_recipes/004_cli
+[2Kwriting output... [ 95%] tutorial/20_recipes/005_user_defined_sampler
+[2Kwriting output... [ 95%] tutorial/20_recipes/006_user_defined_pruner
+[2Kwriting output... [ 96%] tutorial/20_recipes/007_optuna_callback
+[2Kwriting output... [ 96%] tutorial/20_recipes/008_specify_params
+[2Kwriting output... [ 97%] tutorial/20_recipes/009_ask_and_tell
+[2Kwriting output... [ 97%] tutorial/20_recipes/010_reuse_best_trial
+[2Kwriting output... [ 98%] tutorial/20_recipes/011_journal_storage
+[2Kwriting output... [ 98%] tutorial/20_recipes/012_artifact_tutorial
+[2Kwriting output... [ 99%] tutorial/20_recipes/index
+[2Kwriting output... [ 99%] tutorial/20_recipes/sg_execution_times
+[2Kwriting output... [100%] tutorial/index
+generating indices... genindex py-modindex done
+[2Khighlighting module code... [  1%] optuna._callbacks
+[2Khighlighting module code... [  2%] optuna.artifacts._backoff
+[2Khighlighting module code... [  3%] optuna.artifacts._boto3
+[2Khighlighting module code... [  4%] optuna.artifacts._filesystem
+[2Khighlighting module code... [  5%] optuna.artifacts._gcs
+[2Khighlighting module code... [  6%] optuna.artifacts._upload
+[2Khighlighting module code... [  7%] optuna.distributions
+[2Khighlighting module code... [  8%] optuna.exceptions
+[2Khighlighting module code... [  9%] optuna.importance
+[2Khighlighting module code... [ 10%] optuna.importance._fanova._evaluator
+[2Khighlighting module code... [ 11%] optuna.importance._mean_decrease_impurity
+[2Khighlighting module code... [ 12%] optuna.integration._lightgbm_tuner._train
+[2Khighlighting module code... [ 13%] optuna.integration._lightgbm_tuner.optimize
+[2Khighlighting module code... [ 14%] optuna.integration.botorch
+[2Khighlighting module code... [ 15%] optuna.integration.catboost
+[2Khighlighting module code... [ 16%] optuna.integration.cma
+[2Khighlighting module code... [ 17%] optuna.integration.dask
+[2Khighlighting module code... [ 18%] optuna.integration.fastaiv1
+[2Khighlighting module code... [ 19%] optuna.integration.fastaiv2
+[2Khighlighting module code... [ 20%] optuna.integration.lightgbm
+[2Khighlighting module code... [ 21%] optuna.integration.mlflow
+[2Khighlighting module code... [ 22%] optuna.integration.pytorch_distributed
+[2Khighlighting module code... [ 23%] optuna.integration.pytorch_ignite
+[2Khighlighting module code... [ 24%] optuna.integration.pytorch_lightning
+[2Khighlighting module code... [ 25%] optuna.integration.sklearn
+[2Khighlighting module code... [ 26%] optuna.integration.skopt
+[2Khighlighting module code... [ 27%] optuna.integration.tensorboard
+[2Khighlighting module code... [ 28%] optuna.integration.wandb
+[2Khighlighting module code... [ 29%] optuna.integration.xgboost
+[2Khighlighting module code... [ 30%] optuna.logging
+[2Khighlighting module code... [ 31%] optuna.pruners._base
+[2Khighlighting module code... [ 32%] optuna.pruners._hyperband
+[2Khighlighting module code... [ 33%] optuna.pruners._median
+[2Khighlighting module code... [ 34%] optuna.pruners._nop
+[2Khighlighting module code... [ 35%] optuna.pruners._patient
+[2Khighlighting module code... [ 36%] optuna.pruners._percentile
+[2Khighlighting module code... [ 37%] optuna.pruners._successive_halving
+[2Khighlighting module code... [ 38%] optuna.pruners._threshold
+[2Khighlighting module code... [ 39%] optuna.samplers._base
+[2Khighlighting module code... [ 40%] optuna.samplers._brute_force
+[2Khighlighting module code... [ 41%] optuna.samplers._cmaes
+[2Khighlighting module code... [ 42%] optuna.samplers._grid
+[2Khighlighting module code... [ 43%] optuna.samplers._nsgaiii._sampler
+[2Khighlighting module code... [ 44%] optuna.samplers._partial_fixed
+[2Khighlighting module code... [ 45%] optuna.samplers._qmc
+[2Khighlighting module code... [ 46%] optuna.samplers._random
+[2Khighlighting module code... [ 47%] optuna.samplers._search_space.intersection
+[2Khighlighting module code... [ 48%] optuna.samplers._tpe.sampler
+[2Khighlighting module code... [ 49%] optuna.samplers.nsgaii._crossovers._base
+[2Khighlighting module code... [ 51%] optuna.samplers.nsgaii._crossovers._blxalpha
+[2Khighlighting module code... [ 52%] optuna.samplers.nsgaii._crossovers._sbx
+[2Khighlighting module code... [ 53%] optuna.samplers.nsgaii._crossovers._spx
+[2Khighlighting module code... [ 54%] optuna.samplers.nsgaii._crossovers._undx
+[2Khighlighting module code... [ 55%] optuna.samplers.nsgaii._crossovers._uniform
+[2Khighlighting module code... [ 56%] optuna.samplers.nsgaii._crossovers._vsbx
+[2Khighlighting module code... [ 57%] optuna.samplers.nsgaii._sampler
+[2Khighlighting module code... [ 58%] optuna.search_space.intersection
+[2Khighlighting module code... [ 59%] optuna.storages._heartbeat
+[2Khighlighting module code... [ 60%] optuna.storages._journal.file
+[2Khighlighting module code... [ 61%] optuna.storages._journal.redis
+[2Khighlighting module code... [ 62%] optuna.storages._journal.storage
+[2Khighlighting module code... [ 63%] optuna.storages._rdb.storage
+[2Khighlighting module code... [ 64%] optuna.study._study_direction
+[2Khighlighting module code... [ 65%] optuna.study._study_summary
+[2Khighlighting module code... [ 66%] optuna.study.study
+[2Khighlighting module code... [ 67%] optuna.terminator.callback
+[2Khighlighting module code... [ 68%] optuna.terminator.erroreval
+[2Khighlighting module code... [ 69%] optuna.terminator.improvement.evaluator
+[2Khighlighting module code... [ 70%] optuna.terminator.terminator
+[2Khighlighting module code... [ 71%] optuna.trial._fixed
+[2Khighlighting module code... [ 72%] optuna.trial._frozen
+[2Khighlighting module code... [ 73%] optuna.trial._state
+[2Khighlighting module code... [ 74%] optuna.trial._trial
+[2Khighlighting module code... [ 75%] optuna.visualization._contour
+[2Khighlighting module code... [ 76%] optuna.visualization._edf
+[2Khighlighting module code... [ 77%] optuna.visualization._hypervolume_history
+[2Khighlighting module code... [ 78%] optuna.visualization._intermediate_values
+[2Khighlighting module code... [ 79%] optuna.visualization._optimization_history
+[2Khighlighting module code... [ 80%] optuna.visualization._parallel_coordinate
+[2Khighlighting module code... [ 81%] optuna.visualization._param_importances
+[2Khighlighting module code... [ 82%] optuna.visualization._pareto_front
+[2Khighlighting module code... [ 83%] optuna.visualization._rank
+[2Khighlighting module code... [ 84%] optuna.visualization._slice
+[2Khighlighting module code... [ 85%] optuna.visualization._terminator_improvement
+[2Khighlighting module code... [ 86%] optuna.visualization._timeline
+[2Khighlighting module code... [ 87%] optuna.visualization._utils
+[2Khighlighting module code... [ 88%] optuna.visualization.matplotlib._contour
+[2Khighlighting module code... [ 89%] optuna.visualization.matplotlib._edf
+[2Khighlighting module code... [ 90%] optuna.visualization.matplotlib._hypervolume_history
+[2Khighlighting module code... [ 91%] optuna.visualization.matplotlib._intermediate_values
+[2Khighlighting module code... [ 92%] optuna.visualization.matplotlib._optimization_history
+[2Khighlighting module code... [ 93%] optuna.visualization.matplotlib._parallel_coordinate
+[2Khighlighting module code... [ 94%] optuna.visualization.matplotlib._param_importances
+[2Khighlighting module code... [ 95%] optuna.visualization.matplotlib._pareto_front
+[2Khighlighting module code... [ 96%] optuna.visualization.matplotlib._rank
+[2Khighlighting module code... [ 97%] optuna.visualization.matplotlib._slice
+[2Khighlighting module code... [ 98%] optuna.visualization.matplotlib._terminator_improvement
+[2Khighlighting module code... [ 99%] optuna.visualization.matplotlib._timeline
+[2Khighlighting module code... [100%] optuna.visualization.matplotlib._utils
+writing additional pages... search done
+[2Kcopying images... [  3%] ../image/sampling-sequence.png
+[2Kcopying images... [  7%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_contour-1.png
+[2Kcopying images... [ 10%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_edf-1.png
+[2Kcopying images... [ 13%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_hypervolume_history-1.png
+[2Kcopying images... [ 17%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_intermediate_values-1.png
+[2Kcopying images... [ 20%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_optimization_history-1.png
+[2Kcopying images... [ 23%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_parallel_coordinate-1.png
+[2Kcopying images... [ 27%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_param_importances-1.png
+[2Kcopying images... [ 30%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_pareto_front-1.png
+[2Kcopying images... [ 33%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_rank-1.png
+[2Kcopying images... [ 37%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_slice-1.png
+[2Kcopying images... [ 40%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_terminator_improvement-1.png
+[2Kcopying images... [ 43%] ../build/plot_directive/reference/visualization/generated/optuna-visualization-matplotlib-plot_timeline-1.png
+[2Kcopying images... [ 47%] tutorial/10_key_features/images/thumb/sphx_glr_001_first_thumb.png
+[2Kcopying images... [ 50%] tutorial/10_key_features/images/thumb/sphx_glr_002_configurations_thumb.png
+[2Kcopying images... [ 53%] tutorial/10_key_features/images/thumb/sphx_glr_003_efficient_optimization_algorithms_thumb.png
+[2Kcopying images... [ 57%] tutorial/10_key_features/images/thumb/sphx_glr_004_distributed_thumb.png
+[2Kcopying images... [ 60%] tutorial/10_key_features/images/thumb/sphx_glr_005_visualization_thumb.png
+[2Kcopying images... [ 63%] tutorial/20_recipes/images/thumb/sphx_glr_001_rdb_thumb.png
+[2Kcopying images... [ 67%] tutorial/20_recipes/images/thumb/sphx_glr_002_multi_objective_thumb.png
+[2Kcopying images... [ 70%] tutorial/20_recipes/images/thumb/sphx_glr_003_attributes_thumb.png
+[2Kcopying images... [ 73%] tutorial/20_recipes/images/thumb/sphx_glr_004_cli_thumb.png
+[2Kcopying images... [ 77%] tutorial/20_recipes/images/thumb/sphx_glr_005_user_defined_sampler_thumb.png
+[2Kcopying images... [ 80%] tutorial/20_recipes/images/thumb/sphx_glr_006_user_defined_pruner_thumb.png
+[2Kcopying images... [ 83%] tutorial/20_recipes/images/thumb/sphx_glr_007_optuna_callback_thumb.png
+[2Kcopying images... [ 87%] tutorial/20_recipes/images/thumb/sphx_glr_008_specify_params_thumb.png
+[2Kcopying images... [ 90%] tutorial/20_recipes/images/thumb/sphx_glr_009_ask_and_tell_thumb.png
+[2Kcopying images... [ 93%] tutorial/20_recipes/images/thumb/sphx_glr_010_reuse_best_trial_thumb.png
+[2Kcopying images... [ 97%] tutorial/20_recipes/images/thumb/sphx_glr_011_journal_storage_thumb.png
+[2Kcopying images... [100%] tutorial/20_recipes/images/thumb/sphx_glr_012_artifact_tutorial_thumb.png
+dumping search index in English (code: en)... done
+dumping object inventory... done
+
+Sphinx-Gallery successfully executed 17 out of 17 files subselected by:
+
+    gallery_conf["filename_pattern"] = '/*\\.py'
+    gallery_conf["ignore_pattern"]   = '__init__\\.py'
+
+after excluding 0 files that had previously been run (based on MD5).
+
+embedding documentation hyperlinks...
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 14%] 003_efficient_optimization_algorithms.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 29%] 005_visualization.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 43%] index.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 57%] 001_first.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 71%] sg_execution_times.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [ 86%] 002_configurations.html
+[2Kembedding documentation hyperlinks for tutorial/10_key_features... [100%] 004_distributed.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [  7%] 005_user_defined_sampler.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 14%] 009_ask_and_tell.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 21%] 004_cli.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 29%] 002_multi_objective.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 36%] 010_reuse_best_trial.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 43%] 008_specify_params.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 50%] 003_attributes.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 57%] 006_user_defined_pruner.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 64%] index.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 71%] 001_rdb.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 79%] sg_execution_times.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 86%] 011_journal_storage.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [ 93%] 007_optuna_callback.html
+[2Kembedding documentation hyperlinks for tutorial/20_recipes... [100%] 012_artifact_tutorial.html
+build finished with problems, 3 warnings.
+make: *** [Makefile:20: html] Error 1
+##[error]Process completed with exit code 2.

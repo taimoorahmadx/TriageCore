@@ -1,0 +1,68 @@
+repo: volodya-lombrozo/jtcop
+run_id: 3b4a91979f0d93ca4cbb79e6cfa5029a6b8eaf01
+head_sha: 3b4a91979f0d93ca4cbb79e6cfa5029a6b8eaf01
+run_attempts: []
+commits:
+- sha: 3b4a91979f0d93ca4cbb79e6cfa5029a6b8eaf01
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 08e3c2adfd462267842932d826bb458c0bdb128e
+  author: rultor
+  files:
+  - pom.xml
+- sha: 3816f1a48f61ebb1ec90d83f1601f0078df3053c
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: ad48647d017a31e632c986d3de117c42efbdbd88
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 60a5195faca44d4f1571a404492b5984c4378df7
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 85fa042d897ad032e091e7595609457fff1f99db
+  author: rultor
+  files:
+  - docs/rules/line-hitter.md
+  - src/it/all-incorrect/src/test/java/LineHitterTest.java
+  - src/it/all-incorrect/verify.groovy
+  - src/it/assertions/src/test/java/AssertionsTest.java
+  - src/main/java/com/github/lombrozo/testnames/Assertion.java
+  - src/main/java/com/github/lombrozo/testnames/javaparser/AssertionOfHamcrest.java
+  - src/main/java/com/github/lombrozo/testnames/javaparser/AssertionOfJUnit.java
+  - src/main/java/com/github/lombrozo/testnames/javaparser/AssertionOfJavaParser.java
+  - src/main/java/com/github/lombrozo/testnames/rules/RuleCorrectTestCase.java
+  - src/main/java/com/github/lombrozo/testnames/rules/RuleLineHitter.java
+  - src/test/java/com/github/lombrozo/testnames/javaparser/AssertionOfHamcrestTest.java
+  - src/test/java/com/github/lombrozo/testnames/javaparser/AssertionOfJUnitTest.java
+  - src/test/java/com/github/lombrozo/testnames/javaparser/JavaTestClasses.java
+  - src/test/java/com/github/lombrozo/testnames/rules/RuleLineHitterTest.java
+  - src/test/resources/HamcrestAssertTrueHitter.java
+  - src/test/resources/JunitAssertTrueHitter.java
+- sha: 42217ea3a9dcf4cd72ef48e2220a1afab61ca6de
+  author: l3r8yJ
+  files:
+  - src/it/all-incorrect/verify.groovy
+- sha: 33ae4e7ec9c3d3f9dd3476b4664af25068123be1
+  author: l3r8yJ
+  files:
+  - docs/rules/line-hitter.md
+  - src/main/java/com/github/lombrozo/testnames/rules/RuleLineHitter.java
+- sha: 144efc34031678029b4ec3018577fe98fcdfb237
+  author: l3r8yJ
+  files:
+  - src/main/java/com/github/lombrozo/testnames/javaparser/AssertionOfHamcrest.java
+  - src/test/java/com/github/lombrozo/testnames/javaparser/AssertionOfHamcrestTest.java
+  - src/test/resources/HamcrestAssertTrueHitter.java
+- sha: 06cafb2b69a89b269ffa6eb0b26abcf95bfcbff8
+  author: l3r8yJ
+  files:
+  - src/main/java/com/github/lombrozo/testnames/Assertion.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

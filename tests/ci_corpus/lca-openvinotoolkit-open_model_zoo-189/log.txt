@@ -1,0 +1,78 @@
+===== accuracy_checker (ubuntu-20.04, 3.8)/6_Pip install and run pylint.txt =====
+##[group]Run python -m pip install pylint==2.10.2
+[36;1mpython -m pip install pylint==2.10.2[0m
+[36;1mPYTHONPATH=. python -m pylint --rcfile=.pylintrc `find -wholename '?*/**/*.py' -not -path "./tests/*" -not -path "./build/*"`[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+Collecting pylint==2.10.2
+  Downloading pylint-2.10.2-py3-none-any.whl (392 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 392.6/392.6 kB 15.3 MB/s eta 0:00:00
+Collecting platformdirs>=2.2.0 (from pylint==2.10.2)
+  Downloading platformdirs-4.1.0-py3-none-any.whl.metadata (11 kB)
+Collecting astroid<2.8,>=2.7.2 (from pylint==2.10.2)
+  Downloading astroid-2.7.3-py3-none-any.whl (240 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 46.7 MB/s eta 0:00:00
+Collecting isort<6,>=4.2.5 (from pylint==2.10.2)
+  Downloading isort-5.13.2-py3-none-any.whl.metadata (12 kB)
+Collecting mccabe<0.7,>=0.6 (from pylint==2.10.2)
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting toml>=0.7.1 (from pylint==2.10.2)
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting lazy-object-proxy>=1.4.0 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading lazy_object_proxy-1.10.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.8 kB)
+Collecting wrapt<1.13,>=1.11 (from astroid<2.8,>=2.7.2->pylint==2.10.2)
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: setuptools>=20.0 in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (from astroid<2.8,>=2.7.2->pylint==2.10.2) (56.0.0)
+Downloading isort-5.13.2-py3-none-any.whl (92 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.3/92.3 kB 21.2 MB/s eta 0:00:00
+Downloading platformdirs-4.1.0-py3-none-any.whl (17 kB)
+Downloading lazy_object_proxy-1.10.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.4/66.4 kB 16.7 MB/s eta 0:00:00
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp38-cp38-linux_x86_64.whl size=81820 sha256=be1d80d6ab9cc886aa44b352ed5ead61a5f3ec49ae66639ac53a214d9cb2af26
+  Stored in directory: /home/runner/.cache/pip/wheels/5f/fd/9e/b6cf5890494cb8ef0b5eaff72e5d55a70fb56316007d6dfe73
+Successfully built wrapt
+Installing collected packages: wrapt, mccabe, toml, platformdirs, lazy-object-proxy, isort, astroid, pylint
+Successfully installed astroid-2.7.3 isort-5.13.2 lazy-object-proxy-1.10.0 mccabe-0.6.1 platformdirs-4.1.0 pylint-2.10.2 toml-0.10.2 wrapt-1.12.1
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/astroid/raw_building.py:416: FutureWarning: In the future `np.long` will be defined as the corresponding NumPy scalar.
+  getattr(sys.modules[modname], name)
+************* Module openvino.tools.accuracy_checker.evaluators.model_evaluator
+openvino/tools/accuracy_checker/evaluators/model_evaluator.py:805:0: C0303: Trailing whitespace (trailing-whitespace)
+
+------------------------------------
+Your code has been rated at 10.00/10
+
+##[error]Process completed with exit code 16.

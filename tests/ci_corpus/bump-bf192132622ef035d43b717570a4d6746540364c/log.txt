@@ -1,0 +1,799 @@
+2023-06-30T10:48:17.6660335Z Current runner version: '2.305.0'
+2023-06-30T10:48:17.6689038Z ##[group]Operating System
+2023-06-30T10:48:17.6689710Z Ubuntu
+2023-06-30T10:48:17.6689955Z 22.04.2
+2023-06-30T10:48:17.6690221Z LTS
+2023-06-30T10:48:17.6690510Z ##[endgroup]
+2023-06-30T10:48:17.6690979Z ##[group]Runner Image
+2023-06-30T10:48:17.6691376Z Image: ubuntu-22.04
+2023-06-30T10:48:17.6691692Z Version: 20230625.1.0
+2023-06-30T10:48:17.6692147Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230625.1.0/images/linux/Ubuntu2204-Readme.md
+2023-06-30T10:48:17.6692932Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230625.1.0
+2023-06-30T10:48:17.6693375Z ##[endgroup]
+2023-06-30T10:48:17.6693764Z ##[group]Runner Image Provisioner
+2023-06-30T10:48:17.6694046Z 2.0.238.1
+2023-06-30T10:48:17.6694350Z ##[endgroup]
+2023-06-30T10:48:17.6695230Z ##[group]GITHUB_TOKEN Permissions
+2023-06-30T10:48:17.6695958Z Actions: read
+2023-06-30T10:48:17.6696215Z Checks: read
+2023-06-30T10:48:17.6696509Z Contents: read
+2023-06-30T10:48:17.6697126Z Deployments: read
+2023-06-30T10:48:17.6697444Z Discussions: read
+2023-06-30T10:48:17.6697746Z Issues: read
+2023-06-30T10:48:17.6698003Z Metadata: read
+2023-06-30T10:48:17.6698328Z Packages: read
+2023-06-30T10:48:17.6698622Z Pages: read
+2023-06-30T10:48:17.6698876Z PullRequests: read
+2023-06-30T10:48:17.6699217Z RepositoryProjects: read
+2023-06-30T10:48:17.6699556Z SecurityEvents: read
+2023-06-30T10:48:17.6699864Z Statuses: read
+2023-06-30T10:48:17.6700154Z ##[endgroup]
+2023-06-30T10:48:17.6703857Z Secret source: None
+2023-06-30T10:48:17.6704306Z Prepare workflow directory
+2023-06-30T10:48:17.7466032Z Prepare all required actions
+2023-06-30T10:48:17.7658768Z Getting action download info
+2023-06-30T10:48:17.9243633Z Download action repository 'kiegroup/kie-ci@main' (SHA:3638f917f91dcbeadcd2a9bb843c882b93a61c2b)
+2023-06-30T10:48:18.4518208Z Getting action download info
+2023-06-30T10:48:18.6160877Z Download action repository 'actions/setup-java@v2' (SHA:91d3aa4956ec4a53e477c4907347b5e3481be8c9)
+2023-06-30T10:48:18.8938736Z Download action repository 'stCarolas/setup-maven@v4.2' (SHA:7060d72b50fbf2389a16d6f66a9c7d4d9ece5d36)
+2023-06-30T10:48:19.8707552Z Download action repository 'actions/cache@v2' (SHA:8492260343ad570701412c2f464a5877dc76bace)
+2023-06-30T10:48:20.1041920Z Download action repository 'whelk-io/maven-settings-xml-action@v21' (SHA:7c60eb95b2d5ec18f2e0e29f34c9ed69475e7a96)
+2023-06-30T10:48:20.3291847Z Getting action download info
+2023-06-30T10:48:20.4429317Z Download action repository 'kiegroup/github-action-build-chain@v3' (SHA:010625f1e20efcc23f8c095fb7a0f3b4df238145)
+2023-06-30T10:48:20.7672217Z Getting action download info
+2023-06-30T10:48:20.9197964Z Download action repository 'ScaCap/action-surefire-report@v1.0.13' (SHA:482f012643ed0560e23ef605a79e8e87ca081648)
+2023-06-30T10:48:21.1753742Z Complete job name: ubuntu-latest - Java 11 - Maven
+
+2023-06-30T10:48:16.5970470Z Current runner version: '2.305.0'
+2023-06-30T10:48:16.6009714Z ##[group]Operating System
+2023-06-30T10:48:16.6010506Z Ubuntu
+2023-06-30T10:48:16.6010877Z 22.04.2
+2023-06-30T10:48:16.6011202Z LTS
+2023-06-30T10:48:16.6011510Z ##[endgroup]
+2023-06-30T10:48:16.6011904Z ##[group]Runner Image
+2023-06-30T10:48:16.6012391Z Image: ubuntu-22.04
+2023-06-30T10:48:16.6013040Z Version: 20230625.1.0
+2023-06-30T10:48:16.6013684Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230625.1.0/images/linux/Ubuntu2204-Readme.md
+2023-06-30T10:48:16.6014467Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230625.1.0
+2023-06-30T10:48:16.6014963Z ##[endgroup]
+2023-06-30T10:48:16.6015453Z ##[group]Runner Image Provisioner
+2023-06-30T10:48:16.6015872Z 2.0.238.1
+2023-06-30T10:48:16.6016214Z ##[endgroup]
+2023-06-30T10:48:16.6017342Z ##[group]GITHUB_TOKEN Permissions
+2023-06-30T10:48:16.6018177Z Actions: read
+2023-06-30T10:48:16.6018589Z Checks: read
+2023-06-30T10:48:16.6018960Z Contents: read
+2023-06-30T10:48:16.6019810Z Deployments: read
+2023-06-30T10:48:16.6020152Z Discussions: read
+2023-06-30T10:48:16.6020537Z Issues: read
+2023-06-30T10:48:16.6020880Z Metadata: read
+2023-06-30T10:48:16.6021304Z Packages: read
+2023-06-30T10:48:16.6021619Z Pages: read
+2023-06-30T10:48:16.6021999Z PullRequests: read
+2023-06-30T10:48:16.6022436Z RepositoryProjects: read
+2023-06-30T10:48:16.6022813Z SecurityEvents: read
+2023-06-30T10:48:16.6023248Z Statuses: read
+2023-06-30T10:48:16.6023626Z ##[endgroup]
+2023-06-30T10:48:16.6028049Z Secret source: None
+2023-06-30T10:48:16.6028667Z Prepare workflow directory
+2023-06-30T10:48:16.7012989Z Prepare all required actions
+2023-06-30T10:48:16.7262835Z Getting action download info
+2023-06-30T10:48:17.0163609Z Download action repository 'kiegroup/kie-ci@main' (SHA:3638f917f91dcbeadcd2a9bb843c882b93a61c2b)
+2023-06-30T10:48:17.9158277Z Getting action download info
+2023-06-30T10:48:18.1086177Z Download action repository 'actions/setup-java@v2' (SHA:91d3aa4956ec4a53e477c4907347b5e3481be8c9)
+2023-06-30T10:48:18.7529029Z Download action repository 'stCarolas/setup-maven@v4.2' (SHA:7060d72b50fbf2389a16d6f66a9c7d4d9ece5d36)
+2023-06-30T10:48:20.3820816Z Download action repository 'actions/cache@v2' (SHA:8492260343ad570701412c2f464a5877dc76bace)
+2023-06-30T10:48:20.9787047Z Download action repository 'whelk-io/maven-settings-xml-action@v21' (SHA:7c60eb95b2d5ec18f2e0e29f34c9ed69475e7a96)
+2023-06-30T10:48:21.4596076Z Getting action download info
+2023-06-30T10:48:21.5981665Z Download action repository 'kiegroup/github-action-build-chain@v3' (SHA:010625f1e20efcc23f8c095fb7a0f3b4df238145)
+2023-06-30T10:48:22.1877359Z Getting action download info
+2023-06-30T10:48:22.3337088Z Download action repository 'ScaCap/action-surefire-report@v1.0.13' (SHA:482f012643ed0560e23ef605a79e8e87ca081648)
+2023-06-30T10:48:22.9518322Z Complete job name: ubuntu-latest - Java 8 - Maven
+
+2023-06-30T10:48:28.2054028Z ##[group]Run kiegroup/kie-ci/.ci/actions/build-chain@main
+2023-06-30T10:48:28.2054351Z with:
+2023-06-30T10:48:28.2054758Z   definition-file: https://raw.githubusercontent.com/${GROUP:kiegroup}/droolsjbpm-build-bootstrap/${BRANCH:main}/.ci/pull-request-config.yaml
+2023-06-30T10:48:28.2055182Z   annotations-prefix: Linux-11/3.8.1
+2023-06-30T10:48:28.2055862Z   github-token: ***
+2023-06-30T10:48:28.2056084Z   flow-type: pull-request
+2023-06-30T10:48:28.2056298Z   logger-level: info
+2023-06-30T10:48:28.2056475Z env:
+2023-06-30T10:48:28.2056728Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-30T10:48:28.2056998Z ##[endgroup]
+2023-06-30T10:48:28.2089827Z ##[group]Run kiegroup/github-action-build-chain@v3
+2023-06-30T10:48:28.2090081Z with:
+2023-06-30T10:48:28.2090619Z   definition-file: https://raw.githubusercontent.com/${GROUP:kiegroup}/droolsjbpm-build-bootstrap/${BRANCH:main}/.ci/pull-request-config.yaml
+2023-06-30T10:48:28.2091020Z   flow-type: pull-request
+2023-06-30T10:48:28.2091274Z   logger-level: info
+2023-06-30T10:48:28.2091501Z   annotations-prefix: Linux-11/3.8.1
+2023-06-30T10:48:28.2091744Z   skip-execution: false
+2023-06-30T10:48:28.2091950Z   skip-checkout: false
+2023-06-30T10:48:28.2092178Z   skip-parallel-checkout: false
+2023-06-30T10:48:28.2092433Z   enable-parallel-execution: false
+2023-06-30T10:48:28.2092644Z env:
+2023-06-30T10:48:28.2092894Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-30T10:48:28.2093309Z   GITHUB_TOKEN: ***
+2023-06-30T10:48:28.2093507Z ##[endgroup]
+2023-06-30T10:48:29.5497121Z ##[group]Executing pre section
+2023-06-30T10:48:29.5545507Z [command]/usr/bin/echo BUILD_MVN_OPTS= dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3
+2023-06-30T10:48:29.5599927Z BUILD_MVN_OPTS= dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3
+2023-06-30T10:48:29.5625719Z [command]/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64/bin/java -version
+2023-06-30T10:48:29.6798374Z openjdk version "11.0.19" 2023-04-18
+2023-06-30T10:48:29.6799018Z OpenJDK Runtime Environment Temurin-11.0.19+7 (build 11.0.19+7)
+2023-06-30T10:48:29.6799536Z OpenJDK 64-Bit Server VM Temurin-11.0.19+7 (build 11.0.19+7, mixed mode)
+2023-06-30T10:48:29.6937044Z ##[endgroup]
+2023-06-30T10:48:29.6940921Z ##[group]Execution Plan
+2023-06-30T10:48:29.6946091Z [INFO] 15 projects will be executed
+2023-06-30T10:48:29.6948754Z [INFO] [kiegroup/lienzo-core]
+2023-06-30T10:48:29.6949095Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6949842Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6950592Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6951175Z [INFO] 	 [after]
+2023-06-30T10:48:29.6951495Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6952133Z [INFO] [kiegroup/droolsjbpm-build-bootstrap]
+2023-06-30T10:48:29.6955325Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6955690Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6956404Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6956929Z [INFO] 	 [after]
+2023-06-30T10:48:29.6957236Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6957568Z [INFO] [kiegroup/lienzo-tests]
+2023-06-30T10:48:29.6957897Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6958181Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6959357Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6959879Z [INFO] 	 [after]
+2023-06-30T10:48:29.6960184Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6960517Z [INFO] [kiegroup/kie-soup]
+2023-06-30T10:48:29.6961140Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6961418Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6962095Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6962585Z [INFO] 	 [after]
+2023-06-30T10:48:29.6962908Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6963425Z [INFO] [kiegroup/appformer]
+2023-06-30T10:48:29.6963737Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6964025Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6964706Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6965377Z [INFO] 	 [after]
+2023-06-30T10:48:29.6965680Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6966060Z [INFO] [kiegroup/kie-uberfire-extensions]
+2023-06-30T10:48:29.6966382Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6966669Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6967352Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6967851Z [INFO] 	 [after]
+2023-06-30T10:48:29.6968134Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6968486Z [INFO] [kiegroup/droolsjbpm-knowledge]
+2023-06-30T10:48:29.6968815Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6969096Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6969766Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6971184Z [INFO] 	 [after]
+2023-06-30T10:48:29.6971434Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6971636Z [INFO] [kiegroup/drools]
+2023-06-30T10:48:29.6971846Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6972060Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6972651Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6973068Z [INFO] 	 [after]
+2023-06-30T10:48:29.6973291Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6973510Z [INFO] [kiegroup/optaplanner]
+2023-06-30T10:48:29.6973728Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6973944Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6974537Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6974964Z [INFO] 	 [after]
+2023-06-30T10:48:29.6975177Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6975383Z [INFO] [kiegroup/jbpm]
+2023-06-30T10:48:29.6975604Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6975801Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6976399Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6976819Z [INFO] 	 [after]
+2023-06-30T10:48:29.6977031Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6977316Z [INFO] [kiegroup/droolsjbpm-integration]
+2023-06-30T10:48:29.6977567Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6977758Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6978345Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6978763Z [INFO] 	 [after]
+2023-06-30T10:48:29.6978986Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6979254Z [INFO] [kiegroup/kie-wb-playground]
+2023-06-30T10:48:29.6979492Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6979694Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6980453Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6980876Z [INFO] 	 [after]
+2023-06-30T10:48:29.6981097Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6981343Z [INFO] [kiegroup/kie-wb-common]
+2023-06-30T10:48:29.6981576Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6981781Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6982380Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6982789Z [INFO] 	 [after]
+2023-06-30T10:48:29.6983109Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6983361Z [INFO] [kiegroup/drools-wb]
+2023-06-30T10:48:29.6983582Z [INFO] 	 Level type: upstream
+2023-06-30T10:48:29.6983786Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6984372Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true
+2023-06-30T10:48:29.6984789Z [INFO] 	 [after]
+2023-06-30T10:48:29.6984999Z [INFO] 		 rm -rf ./*
+2023-06-30T10:48:29.6985257Z [INFO] [kiegroup/optaplanner-wb]
+2023-06-30T10:48:29.6985489Z [INFO] 	 Level type: current
+2023-06-30T10:48:29.6985684Z [INFO] 	 [commands]
+2023-06-30T10:48:29.6986301Z [INFO] 		 mvn ${{ env.BUILD_MVN_OPTS }} -e -nsu -Dfull -Pwildfly clean install -Prun-code-coverage  -Dcontainer.profile=wildfly -Dcontainer=wildfly -Dintegration-tests=true -Dmaven.test.failure.ignore=true
+2023-06-30T10:48:29.6986962Z ##[endgroup]
+2023-06-30T10:48:29.6987504Z ##[group]Checking out kiegroup/optaplanner-wb and its dependencies (15 projects in total). It can take some time.
+2023-06-30T10:48:31.0414135Z [INFO] kiegroup/lienzo-tests checked out
+2023-06-30T10:48:31.1642049Z [INFO] kiegroup/kie-soup checked out
+2023-06-30T10:48:31.4451118Z [INFO] kiegroup/kie-wb-playground checked out
+2023-06-30T10:48:31.8264904Z [INFO] kiegroup/kie-uberfire-extensions checked out
+2023-06-30T10:48:32.8107056Z [INFO] kiegroup/lienzo-core checked out
+2023-06-30T10:48:33.1212237Z [INFO] kiegroup/optaplanner-wb checked out
+2023-06-30T10:48:43.2940664Z [INFO] kiegroup/droolsjbpm-knowledge checked out
+2023-06-30T10:48:54.2295285Z [INFO] kiegroup/appformer checked out
+2023-06-30T10:48:54.2589953Z [INFO] kiegroup/jbpm checked out
+2023-06-30T10:48:54.7943758Z [INFO] kiegroup/droolsjbpm-integration checked out
+2023-06-30T10:48:58.5051887Z [INFO] kiegroup/drools-wb checked out
+2023-06-30T10:49:05.4936898Z [INFO] kiegroup/kie-wb-common checked out
+2023-06-30T10:49:33.4467383Z [INFO] kiegroup/drools checked out
+2023-06-30T10:49:34.1336830Z [INFO] kiegroup/droolsjbpm-build-bootstrap checked out
+2023-06-30T10:49:34.8363166Z [INFO] kiegroup/optaplanner checked out
+2023-06-30T10:49:34.8364133Z ##[endgroup]
+2023-06-30T10:49:34.8453960Z ##[group]Checkout summary
+2023-06-30T10:49:34.8454465Z [INFO] [kiegroup/lienzo-core]
+2023-06-30T10:49:34.8454807Z [INFO] 	 Project taken from kiegroup/lienzo-core:main
+2023-06-30T10:49:34.8455171Z [INFO] [kiegroup/droolsjbpm-build-bootstrap]
+2023-06-30T10:49:34.8455587Z [INFO] 	 Project taken from kiegroup/droolsjbpm-build-bootstrap:main
+2023-06-30T10:49:34.8456059Z [INFO] 	 Merged mbiarnes/droolsjbpm-build-bootstrap:removeOptaPlanner into branch main
+2023-06-30T10:49:34.8456436Z [INFO] [kiegroup/lienzo-tests]
+2023-06-30T10:49:34.8456774Z [INFO] 	 Project taken from kiegroup/lienzo-tests:main
+2023-06-30T10:49:34.8457074Z [INFO] [kiegroup/kie-soup]
+2023-06-30T10:49:34.8457389Z [INFO] 	 Project taken from kiegroup/kie-soup:main
+2023-06-30T10:49:34.8457649Z [INFO] [kiegroup/appformer]
+2023-06-30T10:49:34.8457933Z [INFO] 	 Project taken from kiegroup/appformer:main
+2023-06-30T10:49:34.8458268Z [INFO] [kiegroup/kie-uberfire-extensions]
+2023-06-30T10:49:34.8458648Z [INFO] 	 Project taken from kiegroup/kie-uberfire-extensions:main
+2023-06-30T10:49:34.8459568Z [INFO] [kiegroup/droolsjbpm-knowledge]
+2023-06-30T10:49:34.8459938Z [INFO] 	 Project taken from kiegroup/droolsjbpm-knowledge:7.x
+2023-06-30T10:49:34.8460208Z [INFO] [kiegroup/drools]
+2023-06-30T10:49:34.8460459Z [INFO] 	 Project taken from kiegroup/drools:7.x
+2023-06-30T10:49:34.8460703Z [INFO] [kiegroup/optaplanner]
+2023-06-30T10:49:34.8460968Z [INFO] 	 Project taken from kiegroup/optaplanner:7.x
+2023-06-30T10:49:34.8461220Z [INFO] [kiegroup/jbpm]
+2023-06-30T10:49:34.8461460Z [INFO] 	 Project taken from kiegroup/jbpm:main
+2023-06-30T10:49:34.8461781Z [INFO] [kiegroup/droolsjbpm-integration]
+2023-06-30T10:49:34.8462157Z [INFO] 	 Project taken from kiegroup/droolsjbpm-integration:main
+2023-06-30T10:49:34.8462486Z [INFO] [kiegroup/kie-wb-playground]
+[... 334885 lines removed by TriageCore ...]
+2023-06-30T11:08:41.1016797Z [INFO] Tests are skipped.
+2023-06-30T11:08:41.1018763Z [INFO] 
+2023-06-30T11:08:41.1028031Z [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ jbpm-remote-ejb-test-suite ---
+2023-06-30T11:08:41.1069179Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-container-test/jbpm-remote-ejb-test/jbpm-remote-ejb-test-suite/target/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT.jar to /home/runner/.m2/repository/org/jbpm/jbpm-remote-ejb-test-suite/7.75.0-SNAPSHOT/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT.jar
+2023-06-30T11:08:41.1102974Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-container-test/jbpm-remote-ejb-test/jbpm-remote-ejb-test-suite/pom.xml to /home/runner/.m2/repository/org/jbpm/jbpm-remote-ejb-test-suite/7.75.0-SNAPSHOT/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT.pom
+2023-06-30T11:08:41.1140826Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-container-test/jbpm-remote-ejb-test/jbpm-remote-ejb-test-suite/target/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-sources.jar to /home/runner/.m2/repository/org/jbpm/jbpm-remote-ejb-test-suite/7.75.0-SNAPSHOT/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-sources.jar
+2023-06-30T11:08:41.1195445Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-container-test/jbpm-remote-ejb-test/jbpm-remote-ejb-test-suite/target/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-test-sources.jar to /home/runner/.m2/repository/org/jbpm/jbpm-remote-ejb-test-suite/7.75.0-SNAPSHOT/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-test-sources.jar
+2023-06-30T11:08:41.1225508Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-container-test/jbpm-remote-ejb-test/jbpm-remote-ejb-test-suite/target/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-tests.jar to /home/runner/.m2/repository/org/jbpm/jbpm-remote-ejb-test-suite/7.75.0-SNAPSHOT/jbpm-remote-ejb-test-suite-7.75.0-SNAPSHOT-tests.jar
+2023-06-30T11:08:59.9381420Z [INFO] Building jar: /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT-jar-with-dependencies.jar
+2023-06-30T11:09:02.6524899Z [INFO] 
+2023-06-30T11:09:02.6557275Z [INFO] --- maven-failsafe-plugin:2.22.1:integration-test (default) @ jbpm-xes ---
+2023-06-30T11:09:02.6604451Z [INFO] Tests are skipped.
+2023-06-30T11:09:02.6607264Z [INFO] 
+2023-06-30T11:09:02.6631789Z [INFO] --- maven-failsafe-plugin:2.22.1:verify (default) @ jbpm-xes ---
+2023-06-30T11:09:02.6645462Z [INFO] Tests are skipped.
+2023-06-30T11:09:02.6648416Z [INFO] 
+2023-06-30T11:09:02.6671269Z [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ jbpm-xes ---
+2023-06-30T11:09:02.6764400Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT.jar to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT.jar
+2023-06-30T11:09:02.6765435Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/pom.xml to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT.pom
+2023-06-30T11:09:02.6796106Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT-sources.jar to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT-sources.jar
+2023-06-30T11:09:02.6799694Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT-test-sources.jar to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT-test-sources.jar
+2023-06-30T11:09:02.6862554Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT-tests.jar to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT-tests.jar
+2023-06-30T11:09:02.6879912Z [INFO] Installing /home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_jbpm/jbpm-xes/target/jbpm-xes-7.75.0-SNAPSHOT-jar-with-dependencies.jar to /home/runner/.m2/repository/org/jbpm/jbpm-xes/7.75.0-SNAPSHOT/jbpm-xes-7.75.0-SNAPSHOT-jar-with-dependencies.jar
+2023-06-30T11:09:02.7120168Z [INFO] ------------------------------------------------------------------------
+2023-06-30T11:09:02.7120930Z [INFO] Reactor Summary for jBPM :: Multiproject 7.75.0-SNAPSHOT:
+2023-06-30T11:09:02.7121381Z [INFO] 
+2023-06-30T11:09:02.7122014Z [INFO] jBPM :: Multiproject ............................... SUCCESS [  1.702 s]
+2023-06-30T11:09:02.7122514Z [INFO] jBPM :: Flow ....................................... SUCCESS [ 13.277 s]
+2023-06-30T11:09:02.7122833Z [INFO] jBPM :: Flow Builder ............................... SUCCESS [  3.304 s]
+2023-06-30T11:09:02.7123339Z [INFO] jBPM Persistence projects .......................... SUCCESS [  0.140 s]
+2023-06-30T11:09:02.7123693Z [INFO] jBPM :: Persistence API ............................ SUCCESS [  0.804 s]
+2023-06-30T11:09:02.7124023Z [INFO] jBPM :: Test Util .................................. SUCCESS [  0.981 s]
+2023-06-30T11:09:02.7124543Z [INFO] jBPM :: JPA Persistence ............................ SUCCESS [  2.598 s]
+2023-06-30T11:09:02.7124839Z [INFO] jBPM :: JPA Query .................................. SUCCESS [  1.147 s]
+2023-06-30T11:09:02.7245811Z [INFO] jBPM :: Audit ...................................... SUCCESS [  4.664 s]
+2023-06-30T11:09:02.7246139Z [INFO] jBPM :: BPMN2 ...................................... SUCCESS [  4.169 s]
+2023-06-30T11:09:02.7246467Z [INFO] jBPM :: Human Task ................................. SUCCESS [  1.150 s]
+2023-06-30T11:09:02.7246757Z [INFO] jBPM :: JPA Human Task Persistence ................. SUCCESS [  2.913 s]
+2023-06-30T11:09:02.7247062Z [INFO] jBPM :: Human Task Core ............................ SUCCESS [  6.018 s]
+2023-06-30T11:09:02.7247666Z [INFO] jBPM :: Human Task WorkItems ....................... SUCCESS [  0.814 s]
+2023-06-30T11:09:02.7247974Z [INFO] jBPM :: Human Task Audit ........................... SUCCESS [  1.739 s]
+2023-06-30T11:09:02.7248377Z [INFO] jBPM :: RuntimeManager ............................. SUCCESS [  2.681 s]
+2023-06-30T11:09:02.7248685Z [INFO] jBPM :: Services ................................... SUCCESS [  0.098 s]
+2023-06-30T11:09:02.7248971Z [INFO] jBPM :: Services API ............................... SUCCESS [  2.201 s]
+2023-06-30T11:09:02.7249251Z [INFO] jBPM :: Shared Services ............................ SUCCESS [  0.964 s]
+2023-06-30T11:09:02.7249544Z [INFO] jBPM :: Case Management ............................ SUCCESS [  0.104 s]
+2023-06-30T11:09:02.7249841Z [INFO] jBPM :: Case Management API ........................ SUCCESS [  0.556 s]
+2023-06-30T11:09:02.7250133Z [INFO] jBPM :: Test ....................................... SUCCESS [  0.739 s]
+2023-06-30T11:09:02.7250407Z [INFO] jBPM :: KIE Services ............................... SUCCESS [  6.020 s]
+2023-06-30T11:09:02.7250697Z [INFO] jBPM :: Executor Service ........................... SUCCESS [  1.869 s]
+2023-06-30T11:09:02.7251060Z [INFO] jBPM :: CMMN ....................................... SUCCESS [  1.431 s]
+2023-06-30T11:09:02.7251341Z [INFO] jBPM :: Document Service ........................... SUCCESS [  1.002 s]
+2023-06-30T11:09:02.7251643Z [INFO] jBPM :: Case Management Impl ....................... SUCCESS [  3.616 s]
+2023-06-30T11:09:02.7251943Z [INFO] jBPM :: DB Scripts resources ....................... SUCCESS [  0.997 s]
+2023-06-30T11:09:02.7252243Z [INFO] jBPM :: BPMN2 EMF Extension Model .................. SUCCESS [  6.899 s]
+2023-06-30T11:09:02.7252521Z [INFO] WorkItems .......................................... SUCCESS [  0.222 s]
+2023-06-30T11:09:02.7252795Z [INFO] Template Resources ................................. SUCCESS [  1.287 s]
+2023-06-30T11:09:02.7253066Z [INFO] Core ............................................... SUCCESS [  3.108 s]
+2023-06-30T11:09:02.7253330Z [INFO] WebService ......................................... SUCCESS [  7.112 s]
+2023-06-30T11:09:02.7253601Z [INFO] BPMN2 .............................................. SUCCESS [  4.488 s]
+2023-06-30T11:09:02.7253856Z [INFO] Email .............................................. SUCCESS [  2.187 s]
+2023-06-30T11:09:02.7254119Z [INFO] JMS ................................................ SUCCESS [  4.923 s]
+2023-06-30T11:09:02.7254366Z [INFO] REST ............................................... SUCCESS [ 13.987 s]
+2023-06-30T11:09:02.7254627Z [INFO] Archetype .......................................... SUCCESS [  1.387 s]
+2023-06-30T11:09:02.7254896Z [INFO] Archetype .......................................... SUCCESS [  0.216 s]
+2023-06-30T11:09:02.7255166Z [INFO] jBPM :: CDI Services ............................... SUCCESS [  1.351 s]
+2023-06-30T11:09:02.7255445Z [INFO] jBPM :: EJB Services ............................... SUCCESS [  0.256 s]
+2023-06-30T11:09:02.7255734Z [INFO] jBPM :: EJB Services API ........................... SUCCESS [  0.382 s]
+2023-06-30T11:09:02.7256013Z [INFO] jBPM :: EJB Timer .................................. SUCCESS [ 10.030 s]
+2023-06-30T11:09:02.7256538Z [INFO] jBPM :: Executor Service EJB add-ons ............... SUCCESS [  0.663 s]
+2023-06-30T11:09:02.7256911Z [INFO] jBPM :: EJB Services Implementation ................ SUCCESS [  1.328 s]
+2023-06-30T11:09:02.7257223Z [INFO] jBPM :: EJB Services Client ........................ SUCCESS [  0.614 s]
+2023-06-30T11:09:02.7257592Z [INFO] jBPM :: Executor Service CDI add-ons ............... SUCCESS [  0.659 s]
+2023-06-30T11:09:02.7257898Z [INFO] jBPM :: Test Coverage .............................. SUCCESS [  3.260 s]
+2023-06-30T11:09:02.7258183Z [INFO] jBPM :: Examples ................................... SUCCESS [  3.235 s]
+2023-06-30T11:09:02.7258472Z [INFO] jBPM :: Container Test ............................. SUCCESS [  0.163 s]
+2023-06-30T11:09:02.7258756Z [INFO] jBPM :: In Container Test .......................... SUCCESS [  0.128 s]
+2023-06-30T11:09:02.7259124Z [INFO] jBPM :: Container Test Integration Dependencies .... SUCCESS [  0.089 s]
+2023-06-30T11:09:02.7259511Z [INFO] jBPM :: Container Test IDEPS Hibernate Core ........ SUCCESS [  0.214 s]
+2023-06-30T11:09:02.7259817Z [INFO] jBPM :: Container Test IDEPS jBPM .................. SUCCESS [  0.279 s]
+2023-06-30T11:09:02.7260132Z [INFO] jBPM :: Container Test IDEPS jBPM EJB Services ..... SUCCESS [  0.931 s]
+2023-06-30T11:09:02.7260471Z [INFO] jBPM :: Container Test IDEPS jBPM Persistence ...... SUCCESS [  0.154 s]
+2023-06-30T11:09:02.7260796Z [INFO] jBPM :: Container Test IDEPS REST .................. SUCCESS [  0.249 s]
+2023-06-30T11:09:02.7261104Z [INFO] jBPM :: Container Test Shrinkwrap WAR Profiles ..... SUCCESS [  0.282 s]
+2023-06-30T11:09:02.7261414Z [INFO] jBPM :: Container Test Suite ....................... SUCCESS [ 12.323 s]
+2023-06-30T11:09:02.7261718Z [INFO] jBPM :: jBPM Remote EJB tests and resources ........ SUCCESS [  0.108 s]
+2023-06-30T11:09:02.7262118Z [INFO] jbpm-remote-ejb-test-domain ........................ SUCCESS [  0.371 s]
+2023-06-30T11:09:02.7262556Z [INFO] test-kjar-parent ................................... SUCCESS [  0.090 s]
+2023-06-30T11:09:02.7262935Z [INFO] test-kjar-bpmn-build ............................... SUCCESS [  0.226 s]
+2023-06-30T11:09:02.7263316Z [INFO] test-kjar-evaluation ............................... SUCCESS [  0.242 s]
+2023-06-30T11:09:02.7263684Z [INFO] kjar sources - integration ......................... SUCCESS [  0.295 s]
+2023-06-30T11:09:02.7264013Z [INFO] jBPM :: EJB Services WAR Test Application .......... SUCCESS [  2.818 s]
+2023-06-30T11:09:02.7264334Z [INFO] jBPM :: jBPM Remote EJB Test Suite ................. SUCCESS [  1.599 s]
+2023-06-30T11:09:02.7267400Z [INFO] jBPM :: Event Emitters ............................. SUCCESS [  0.121 s]
+2023-06-30T11:09:02.7267717Z [INFO] jBPM :: Event Emitters :: ElasticSearch ............ SUCCESS [  4.700 s]
+2023-06-30T11:09:02.7268156Z [INFO] jBPM :: Event Emitters :: Kafka .................... SUCCESS [  2.269 s]
+2023-06-30T11:09:02.7268530Z [INFO] jBPM :: XES Exporter ............................... SUCCESS [ 52.386 s]
+2023-06-30T11:09:02.7289786Z [INFO] jBPM :: Installer .................................. SUCCESS [  1.419 s]
+2023-06-30T11:09:02.7290272Z [INFO] ------------------------------------------------------------------------
+2023-06-30T11:09:02.7290696Z [INFO] BUILD SUCCESS
+2023-06-30T11:09:02.7291128Z [INFO] ------------------------------------------------------------------------
+2023-06-30T11:09:02.7291490Z [INFO] Total time:  02:04 min (Wall Clock)
+2023-06-30T11:09:02.7293014Z [INFO] Finished at: 2023-06-30T11:09:02Z
+2023-06-30T11:09:02.7314718Z [INFO] ------------------------------------------------------------------------
+2023-06-30T11:09:02.8036032Z [command]/usr/bin/rm -rf ./*
+2023-06-30T11:09:02.8076712Z [INFO] Execution summary for kiegroup/jbpm
+2023-06-30T11:09:02.8077336Z [INFO] [BEFORE] No commands were found for kiegroup/jbpm
+2023-06-30T11:09:02.8079957Z ##[group][COMMANDS] [kiegroup/jbpm] mvn  dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3 -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B
+2023-06-30T11:09:02.8080897Z [INFO] OK [Executed in 126458.256273 ms]
+2023-06-30T11:09:02.8081292Z ##[endgroup]
+2023-06-30T11:09:02.8081739Z ##[group][AFTER] [kiegroup/jbpm] rm -rf ./*
+2023-06-30T11:09:02.8081987Z [INFO] OK [Executed in 5.158003 ms]
+2023-06-30T11:09:02.8082341Z ##[endgroup]
+2023-06-30T11:09:02.8082663Z ##[endgroup]
+2023-06-30T11:09:02.8084347Z ##[group]Executing kiegroup/droolsjbpm-integration
+2023-06-30T11:09:02.8107529Z [command]/opt/hostedtoolcache/maven/3.8.1/x64/bin/mvn dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3 -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B
+2023-06-30T11:09:04.3275967Z [INFO] Error stacktraces are turned on.
+2023-06-30T11:09:04.3407692Z [INFO] Scanning for projects...
+2023-06-30T11:09:06.2451540Z [ERROR] [ERROR] Some problems were encountered while processing the POMs:
+2023-06-30T11:09:06.2489380Z [ERROR] Non-resolvable import POM: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT @ line 81, column 19
+2023-06-30T11:09:06.2490056Z  @ 
+2023-06-30T11:09:06.2512611Z [ERROR] The build could not read 1 project -> [Help 1]
+2023-06-30T11:09:06.2544915Z org.apache.maven.project.ProjectBuildingException: Some problems were encountered while processing the POMs:
+2023-06-30T11:09:06.2586466Z [ERROR] Non-resolvable import POM: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT @ line 81, column 19
+2023-06-30T11:09:06.2587096Z 
+2023-06-30T11:09:06.2588073Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:397)
+2023-06-30T11:09:06.2589127Z     at org.apache.maven.graph.DefaultGraphBuilder.collectProjects (DefaultGraphBuilder.java:414)
+2023-06-30T11:09:06.2593954Z     at org.apache.maven.graph.DefaultGraphBuilder.getProjectsForMavenReactor (DefaultGraphBuilder.java:405)
+2023-06-30T11:09:06.2618558Z     at org.apache.maven.graph.DefaultGraphBuilder.build (DefaultGraphBuilder.java:82)
+2023-06-30T11:09:06.2638572Z     at org.apache.maven.DefaultMaven.buildGraph (DefaultMaven.java:507)
+2023-06-30T11:09:06.2639209Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:219)
+2023-06-30T11:09:06.2640220Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+2023-06-30T11:09:06.2651255Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+2023-06-30T11:09:06.2684772Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+2023-06-30T11:09:06.2685400Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+2023-06-30T11:09:06.2686000Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+2023-06-30T11:09:06.2686679Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-30T11:09:06.2698124Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-30T11:09:06.2728154Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-30T11:09:06.2728876Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-30T11:09:06.2729526Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-30T11:09:06.2730295Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-30T11:09:06.2752573Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-30T11:09:06.2764985Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-30T11:09:06.2765579Z [ERROR]   
+2023-06-30T11:09:06.2767561Z [ERROR]   The project org.drools:droolsjbpm-integration:7.75.0-SNAPSHOT (/home/runner/work/optaplanner-wb/optaplanner-wb/kiegroup_droolsjbpm-integration/pom.xml) has 1 error
+2023-06-30T11:09:06.2794025Z [ERROR]     Non-resolvable import POM: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT @ line 81, column 19 -> [Help 2]
+2023-06-30T11:09:06.2794998Z org.apache.maven.model.resolution.UnresolvableModelException: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT
+2023-06-30T11:09:06.2802783Z     at org.apache.maven.project.ProjectModelResolver.resolveModel (ProjectModelResolver.java:196)
+2023-06-30T11:09:06.2816766Z     at org.apache.maven.model.building.DefaultModelBuilder.importDependencyManagement (DefaultModelBuilder.java:1265)
+2023-06-30T11:09:06.2817877Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:474)
+2023-06-30T11:09:06.2818605Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:440)
+2023-06-30T11:09:06.2838161Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:618)
+2023-06-30T11:09:06.2838925Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:387)
+2023-06-30T11:09:06.2839631Z     at org.apache.maven.graph.DefaultGraphBuilder.collectProjects (DefaultGraphBuilder.java:414)
+2023-06-30T11:09:06.2858119Z     at org.apache.maven.graph.DefaultGraphBuilder.getProjectsForMavenReactor (DefaultGraphBuilder.java:405)
+2023-06-30T11:09:06.2858919Z     at org.apache.maven.graph.DefaultGraphBuilder.build (DefaultGraphBuilder.java:82)
+2023-06-30T11:09:06.2859536Z     at org.apache.maven.DefaultMaven.buildGraph (DefaultMaven.java:507)
+2023-06-30T11:09:06.2860206Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:219)
+2023-06-30T11:09:06.2866299Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+2023-06-30T11:09:06.2878601Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+2023-06-30T11:09:06.2879206Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+2023-06-30T11:09:06.2879802Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+2023-06-30T11:09:06.2880661Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+2023-06-30T11:09:06.2925187Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-30T11:09:06.2936429Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-30T11:09:06.2947725Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-30T11:09:06.2959323Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-30T11:09:06.2967444Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-30T11:09:06.2974941Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-30T11:09:06.2983926Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-30T11:09:06.2994773Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-30T11:09:06.3005870Z Caused by: org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT
+2023-06-30T11:09:06.3006655Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve (DefaultArtifactResolver.java:424)
+2023-06-30T11:09:06.3019942Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts (DefaultArtifactResolver.java:229)
+2023-06-30T11:09:06.3033522Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact (DefaultArtifactResolver.java:207)
+2023-06-30T11:09:06.3045403Z     at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact (DefaultRepositorySystem.java:262)
+2023-06-30T11:09:06.3053227Z     at org.apache.maven.project.ProjectModelResolver.resolveModel (ProjectModelResolver.java:192)
+2023-06-30T11:09:06.3066312Z     at org.apache.maven.model.building.DefaultModelBuilder.importDependencyManagement (DefaultModelBuilder.java:1265)
+2023-06-30T11:09:06.3081156Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:474)
+2023-06-30T11:09:06.3081791Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:440)
+2023-06-30T11:09:06.3082380Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:618)
+2023-06-30T11:09:06.3092928Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:387)
+2023-06-30T11:09:06.3093555Z     at org.apache.maven.graph.DefaultGraphBuilder.collectProjects (DefaultGraphBuilder.java:414)
+2023-06-30T11:09:06.3094394Z     at org.apache.maven.graph.DefaultGraphBuilder.getProjectsForMavenReactor (DefaultGraphBuilder.java:405)
+2023-06-30T11:09:06.3108894Z     at org.apache.maven.graph.DefaultGraphBuilder.build (DefaultGraphBuilder.java:82)
+2023-06-30T11:09:06.3109584Z     at org.apache.maven.DefaultMaven.buildGraph (DefaultMaven.java:507)
+2023-06-30T11:09:06.3110073Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:219)
+2023-06-30T11:09:06.3110548Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+2023-06-30T11:09:06.3125177Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+2023-06-30T11:09:06.3140896Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+2023-06-30T11:09:06.3141370Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+2023-06-30T11:09:06.3141813Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+2023-06-30T11:09:06.3142297Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-30T11:09:06.3168793Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-30T11:09:06.3169647Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-30T11:09:06.3180335Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-30T11:09:06.3191738Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-30T11:09:06.3202712Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-30T11:09:06.3212644Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-30T11:09:06.3221065Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-30T11:09:06.3233671Z Caused by: org.eclipse.aether.transfer.ArtifactNotFoundException: Could not find artifact org.optaplanner:optaplanner-bom:pom:7.75.0-SNAPSHOT
+2023-06-30T11:09:06.3246562Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolve (DefaultArtifactResolver.java:414)
+2023-06-30T11:09:06.3252506Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifacts (DefaultArtifactResolver.java:229)
+2023-06-30T11:09:06.3284641Z     at org.eclipse.aether.internal.impl.DefaultArtifactResolver.resolveArtifact (DefaultArtifactResolver.java:207)
+2023-06-30T11:09:06.3285445Z     at org.eclipse.aether.internal.impl.DefaultRepositorySystem.resolveArtifact (DefaultRepositorySystem.java:262)
+2023-06-30T11:09:06.3313547Z     at org.apache.maven.project.ProjectModelResolver.resolveModel (ProjectModelResolver.java:192)
+2023-06-30T11:09:06.3330232Z     at org.apache.maven.model.building.DefaultModelBuilder.importDependencyManagement (DefaultModelBuilder.java:1265)
+2023-06-30T11:09:06.3330994Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:474)
+2023-06-30T11:09:06.3336306Z     at org.apache.maven.model.building.DefaultModelBuilder.build (DefaultModelBuilder.java:440)
+2023-06-30T11:09:06.3356672Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:618)
+2023-06-30T11:09:06.3375525Z     at org.apache.maven.project.DefaultProjectBuilder.build (DefaultProjectBuilder.java:387)
+2023-06-30T11:09:06.3376420Z     at org.apache.maven.graph.DefaultGraphBuilder.collectProjects (DefaultGraphBuilder.java:414)
+2023-06-30T11:09:06.3377097Z     at org.apache.maven.graph.DefaultGraphBuilder.getProjectsForMavenReactor (DefaultGraphBuilder.java:405)
+2023-06-30T11:09:06.3389594Z     at org.apache.maven.graph.DefaultGraphBuilder.build (DefaultGraphBuilder.java:82)
+2023-06-30T11:09:06.3449804Z     at org.apache.maven.DefaultMaven.buildGraph (DefaultMaven.java:507)
+2023-06-30T11:09:06.3450346Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:219)
+2023-06-30T11:09:06.3450810Z     at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+2023-06-30T11:09:06.3451268Z     at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+2023-06-30T11:09:06.3464244Z     at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+2023-06-30T11:09:06.3481505Z     at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+2023-06-30T11:09:06.3482220Z     at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+2023-06-30T11:09:06.3482724Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+2023-06-30T11:09:06.3483508Z     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+2023-06-30T11:09:06.3509118Z     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+2023-06-30T11:09:06.3509664Z     at java.lang.reflect.Method.invoke (Method.java:566)
+2023-06-30T11:09:06.3510191Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+2023-06-30T11:09:06.3512031Z     at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+2023-06-30T11:09:06.3540723Z     at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+2023-06-30T11:09:06.3541273Z     at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+2023-06-30T11:09:06.3541870Z [ERROR] 
+2023-06-30T11:09:06.3549401Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-30T11:09:06.3553865Z [ERROR] 
+2023-06-30T11:09:06.3554338Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-30T11:09:06.3556990Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/ProjectBuildingException
+2023-06-30T11:09:06.3567837Z [ERROR] [Help 2] http://cwiki.apache.org/confluence/display/MAVEN/UnresolvableModelException
+2023-06-30T11:09:06.3675165Z [INFO] kiegroup/droolsjbpm-integration failed. Won't execute remaining commands and projects
+2023-06-30T11:09:06.3675804Z [INFO] Execution summary for kiegroup/droolsjbpm-integration
+2023-06-30T11:09:06.3676315Z [INFO] [BEFORE] No commands were found for kiegroup/droolsjbpm-integration
+2023-06-30T11:09:06.3677888Z ##[group][COMMANDS] [kiegroup/droolsjbpm-integration] mvn  dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3 -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B
+2023-06-30T11:09:06.3678894Z [INFO] NOT OK [Executed in 3558.777355 ms]
+2023-06-30T11:09:06.3679411Z [ERROR] The process '/opt/hostedtoolcache/maven/3.8.1/x64/bin/mvn' failed with exit code 1
+2023-06-30T11:09:06.3679940Z ##[endgroup]
+2023-06-30T11:09:06.3680336Z [INFO] [AFTER] Skipped kiegroup/droolsjbpm-integration
+2023-06-30T11:09:06.3680809Z ##[endgroup]
+2023-06-30T11:09:06.3681230Z ##[group]Uploading artifacts
+2023-06-30T11:09:06.3681569Z [INFO] No artifacts to archive
+2023-06-30T11:09:06.3681999Z ##[endgroup]
+2023-06-30T11:09:06.3698817Z [ERROR] Failed to execute commands for kiegroup/droolsjbpm-integration
+2023-06-30T11:09:06.3700364Z [ERROR] Failed to execute mvn  dependency:tree -Dmaven.wagon.httpconnectionManager.ttlSeconds=25 -Dmaven.wagon.http.retryHandler.count=3 -e -T1C clean install -DskipTests -Dgwt.compiler.skip=true -Dgwt.skipCompilation=true -Denforcer.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true -Drevapi.skip=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn -B :
+2023-06-30T11:09:06.3707433Z [ERROR] The process '/opt/hostedtoolcache/maven/3.8.1/x64/bin/mvn' failed with exit code 1
+2023-06-30T11:09:06.4250305Z ##[group]Run kiegroup/kie-ci/.ci/actions/surefire-report@main
+2023-06-30T11:09:06.4250573Z with:
+2023-06-30T11:09:06.4250796Z   report_paths: **/surefire-reports/TEST-*.xml
+2023-06-30T11:09:06.4251019Z env:
+2023-06-30T11:09:06.4251275Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-30T11:09:06.4251651Z ##[endgroup]
+2023-06-30T11:09:06.4301160Z ##[group]Run ScaCap/action-surefire-report@v1.0.13
+2023-06-30T11:09:06.4301408Z with:
+2023-06-30T11:09:06.4301610Z   fail_on_test_failures: true
+2023-06-30T11:09:06.4301826Z   fail_if_no_tests: false
+2023-06-30T11:09:06.4302023Z   skip_publishing: true
+2023-06-30T11:09:06.4302272Z   report_paths: **/surefire-reports/TEST-*.xml
+2023-06-30T11:09:06.4302623Z   github_token: ***
+2023-06-30T11:09:06.4302817Z   check_name: Test Report
+2023-06-30T11:09:06.4303002Z env:
+2023-06-30T11:09:06.4303259Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-06-30T11:09:06.4303604Z   NODE_OPTIONS: --max_old_space_size=4096
+2023-06-30T11:09:06.4303830Z ##[endgroup]
+2023-06-30T11:09:06.8762181Z Going to parse results form **/surefire-reports/TEST-*.xml
+2023-06-30T11:09:19.5155934Z Not publishing test result due to skip_publishing=true
+2023-06-30T11:09:19.5252769Z ##[warning]The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-06-30T11:09:19.5318306Z Post job cleanup.
+2023-06-30T11:09:19.5393744Z Post job cleanup.
+2023-06-30T11:09:19.7363219Z Cleaning up orphan processes
+
+2023-06-30T11:10:01.6198029Z Cleaning up orphan processes
+2023-06-30T11:10:01.7062287Z Terminate orphan process: pid (7227) (java)
+
+2023-06-30T10:48:23.0849977Z ##[group]Run kiegroup/kie-ci/.ci/actions/maven@main
+2023-06-30T10:48:23.0850372Z with:
+2023-06-30T10:48:23.0850616Z   java-version: 8
+2023-06-30T10:48:23.0850847Z   maven-version: 3.8.1
+2023-06-30T10:48:23.0851115Z   cache-key-prefix: Linux-8-maven3.8.1
+2023-06-30T10:48:23.0851369Z   allow-snapshots: false
+2023-06-30T10:48:23.0851622Z   setup-maven-settings: true
+2023-06-30T10:48:23.0851856Z   debug: false
+2023-06-30T10:48:23.0852065Z ##[endgroup]
+2023-06-30T10:48:23.1197057Z ##[group]Run actions/setup-java@v2
+2023-06-30T10:48:23.1197335Z with:
+2023-06-30T10:48:23.1197540Z   distribution: temurin
+2023-06-30T10:48:23.1197777Z   java-version: 8
+2023-06-30T10:48:23.1198010Z   check-latest: true
+2023-06-30T10:48:23.1198228Z   java-package: jdk
+2023-06-30T10:48:23.1198466Z   architecture: x64
+2023-06-30T10:48:23.1198694Z   server-id: github
+2023-06-30T10:48:23.1198922Z   server-username: GITHUB_ACTOR
+2023-06-30T10:48:23.1199234Z   server-password: GITHUB_TOKEN
+2023-06-30T10:48:23.1199536Z   overwrite-settings: true
+2023-06-30T10:48:23.1199829Z   job-status: success
+2023-06-30T10:48:23.1200050Z ##[endgroup]
+2023-06-30T10:48:23.5684610Z Trying to resolve the latest version from remote
+2023-06-30T10:48:24.1453189Z Resolved latest version as 8.0.372+7
+2023-06-30T10:48:24.1453883Z Resolved Java 8.0.372+7 from tool-cache
+2023-06-30T10:48:24.1455633Z Setting Java 8.0.372+7 as the default
+2023-06-30T10:48:24.1480240Z 
+2023-06-30T10:48:24.1480699Z Java configuration:
+2023-06-30T10:48:24.1532078Z   Distribution: temurin
+2023-06-30T10:48:24.1532314Z   Version: 8.0.372+7
+2023-06-30T10:48:24.1532931Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-30T10:48:24.1533153Z 
+2023-06-30T10:48:24.1702859Z Creating settings.xml with server-id: github
+2023-06-30T10:48:24.1703231Z Writing to /home/runner/.m2/settings.xml
+2023-06-30T10:48:24.1943400Z ##[group]Run stCarolas/setup-maven@v4.2
+2023-06-30T10:48:24.1943894Z with:
+2023-06-30T10:48:24.1944100Z   maven-version: 3.8.1
+2023-06-30T10:48:24.1944494Z env:
+2023-06-30T10:48:24.1944817Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-30T10:48:24.1945119Z ##[endgroup]
+2023-06-30T10:48:24.2688474Z downloading https://archive.apache.org/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+2023-06-30T10:48:26.1759137Z [command]/usr/bin/tar xz -C /home/runner/work/_temp/99b0c226-575b-486c-980f-38520e82667b -f /home/runner/work/_temp/f6f538cd-a136-4093-a404-82df1625113f
+2023-06-30T10:48:26.4547628Z ##[group]Run actions/cache@v2
+2023-06-30T10:48:26.4547888Z with:
+2023-06-30T10:48:26.4548096Z   path: ~/.m2
+2023-06-30T10:48:26.4548316Z   key: Linux-8-maven3.8.1-m2-
+2023-06-30T10:48:26.4548591Z   restore-keys: Linux-8-maven3.8.1-m2
+2023-06-30T10:48:26.4548835Z env:
+2023-06-30T10:48:26.4549107Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-30T10:48:26.4549406Z ##[endgroup]
+2023-06-30T10:48:26.8065793Z Cache not found for input keys: Linux-8-maven3.8.1-m2-, Linux-8-maven3.8.1-m2
+2023-06-30T10:48:26.8251400Z ##[group]Run whelk-io/maven-settings-xml-action@v21
+2023-06-30T10:48:26.8251706Z with:
+2023-06-30T10:48:26.8252868Z   repositories: [
+  {
+    "id": "jboss-public-repository-group",
+    "name": "JBoss Public Repository Group",
+    "url": "https://repository.jboss.org/nexus/content/groups/public",
+    "releases": {
+      "enabled": "true",
+      "updatePolicy": "never"
+    },
+    "snapshots": {
+      "enabled": "false",
+      "updatePolicy": "never"
+    }
+  },
+  {
+    "id": "kogito-staging-repository-group",
+    "name": "Kogito Staging Repositories",
+    "url": "https://repository.jboss.org/nexus/content/groups/kogito-public",
+    "releases": {
+      "enabled": "true",
+      "updatePolicy": "never"
+    },
+    "snapshots": {
+      "enabled": "false",
+      "updatePolicy": "never"
+    }
+  }
+]
+
+2023-06-30T10:48:26.8254573Z   plugin_repositories: [
+  {
+    "id": "jboss-public-repository-group",
+    "name": "JBoss Public Repository Group",
+    "url": "https://repository.jboss.org/nexus/content/groups/public",
+    "releases": {
+      "enabled": "true",
+      "updatePolicy": "never"
+    },
+    "snapshots": {
+      "enabled": "false",
+      "updatePolicy": "never"
+    }
+  },
+  {
+    "id": "kogito-staging-repository-group",
+    "name": "Kogito Staging Repositories",
+    "url": "https://repository.jboss.org/nexus/content/groups/kogito-public",
+    "releases": {
+      "enabled": "true",
+      "updatePolicy": "never"
+    },
+    "snapshots": {
+      "enabled": "false",
+      "updatePolicy": "never"
+    }
+  }
+]
+
+2023-06-30T10:48:26.8255826Z   plugin_groups: [
+  "org.zanata"
+]
+
+2023-06-30T10:48:26.8256070Z env:
+2023-06-30T10:48:26.8256348Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-30T10:48:26.8256653Z ##[endgroup]
+2023-06-30T10:48:26.9059816Z writing settings.xml to path: /home/runner/.m2/settings.xml
+2023-06-30T10:48:26.9191711Z ##[group]Run cat ~/.m2/settings.xml
+2023-06-30T10:48:26.9192067Z [36;1mcat ~/.m2/settings.xml[0m
+2023-06-30T10:48:26.9265193Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-06-30T10:48:26.9265549Z env:
+2023-06-30T10:48:26.9265857Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/8.0.372-7/x64
+2023-06-30T10:48:26.9266536Z ##[endgroup]
+2023-06-30T10:48:26.9479034Z <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0                         http://maven.apache.org/xsd/settings-1.0.0.xsd">
+2023-06-30T10:48:26.9479991Z   <activeProfiles>
+2023-06-30T10:48:26.9480571Z     <activeProfile>
+2023-06-30T10:48:26.9480881Z       github
+2023-06-30T10:48:26.9481133Z     </activeProfile>
+2023-06-30T10:48:26.9481461Z   </activeProfiles>
+2023-06-30T10:48:26.9481864Z   <profiles>
+2023-06-30T10:48:26.9482093Z     <profile>
+2023-06-30T10:48:26.9482312Z       <id>
+2023-06-30T10:48:26.9482538Z         github
+2023-06-30T10:48:26.9482757Z       </id>
+2023-06-30T10:48:26.9482988Z       <repositories>
+2023-06-30T10:48:26.9483207Z         <repository>
+2023-06-30T10:48:26.9483460Z           <id>
+2023-06-30T10:48:26.9483921Z             jboss-public-repository-group
+2023-06-30T10:48:26.9484206Z           </id>
+2023-06-30T10:48:26.9484432Z           <name>
+2023-06-30T10:48:26.9484698Z             JBoss Public Repository Group
+2023-06-30T10:48:26.9484943Z           </name>
+2023-06-30T10:48:26.9485162Z           <url>
+2023-06-30T10:48:26.9485502Z             https://repository.jboss.org/nexus/content/groups/public
+2023-06-30T10:48:26.9485810Z           </url>
+2023-06-30T10:48:26.9486034Z           <releases>
+2023-06-30T10:48:26.9486263Z             <enabled>
+2023-06-30T10:48:26.9486471Z               true
+2023-06-30T10:48:26.9486693Z             </enabled>
+2023-06-30T10:48:26.9486937Z             <updatePolicy>
+2023-06-30T10:48:26.9487160Z               never
+2023-06-30T10:48:26.9487399Z             </updatePolicy>
+2023-06-30T10:48:26.9487641Z           </releases>
+2023-06-30T10:48:26.9487853Z           <snapshots>
+2023-06-30T10:48:26.9488082Z             <enabled>
+2023-06-30T10:48:26.9488311Z               false
+2023-06-30T10:48:26.9488516Z             </enabled>
+2023-06-30T10:48:26.9488770Z             <updatePolicy>
+2023-06-30T10:48:26.9489006Z               never
+2023-06-30T10:48:26.9489227Z             </updatePolicy>
+2023-06-30T10:48:26.9489473Z           </snapshots>
+2023-06-30T10:48:26.9489708Z         </repository>
+2023-06-30T10:48:26.9489925Z         <repository>
+2023-06-30T10:48:26.9490152Z           <id>
+2023-06-30T10:48:26.9490512Z             kogito-staging-repository-group
+2023-06-30T10:48:26.9490798Z           </id>
+2023-06-30T10:48:26.9490999Z           <name>
+2023-06-30T10:48:26.9491255Z             Kogito Staging Repositories
+2023-06-30T10:48:26.9491515Z           </name>
+2023-06-30T10:48:26.9491717Z           <url>
+2023-06-30T10:48:26.9492156Z             https://repository.jboss.org/nexus/content/groups/kogito-public
+2023-06-30T10:48:26.9492493Z           </url>
+2023-06-30T10:48:26.9493075Z           <releases>
+2023-06-30T10:48:26.9493297Z             <enabled>
+2023-06-30T10:48:26.9493829Z               true
+2023-06-30T10:48:26.9494062Z             </enabled>
+2023-06-30T10:48:26.9494291Z             <updatePolicy>
+2023-06-30T10:48:26.9494528Z               never
+2023-06-30T10:48:26.9494763Z             </updatePolicy>
+2023-06-30T10:48:26.9495017Z           </releases>
+2023-06-30T10:48:26.9495250Z           <snapshots>
+2023-06-30T10:48:26.9495477Z             <enabled>
+2023-06-30T10:48:26.9495679Z               false
+2023-06-30T10:48:26.9495907Z             </enabled>
+2023-06-30T10:48:26.9496147Z             <updatePolicy>
+2023-06-30T10:48:26.9496364Z               never
+2023-06-30T10:48:26.9496602Z             </updatePolicy>
+2023-06-30T10:48:26.9496848Z           </snapshots>
+2023-06-30T10:48:26.9497066Z         </repository>
+2023-06-30T10:48:26.9497304Z       </repositories>
+2023-06-30T10:48:26.9497565Z       <pluginRepositories>
+2023-06-30T10:48:26.9498016Z         <pluginRepository>
+2023-06-30T10:48:26.9498267Z           <id>
+2023-06-30T10:48:26.9498703Z             jboss-public-repository-group
+2023-06-30T10:48:26.9498984Z           </id>
+2023-06-30T10:48:26.9499386Z           <name>
+2023-06-30T10:48:26.9499654Z             JBoss Public Repository Group
+2023-06-30T10:48:26.9499915Z           </name>
+2023-06-30T10:48:26.9500118Z           <url>
+2023-06-30T10:48:26.9500467Z             https://repository.jboss.org/nexus/content/groups/public
+2023-06-30T10:48:26.9500793Z           </url>
+2023-06-30T10:48:26.9501000Z           <releases>
+2023-06-30T10:48:26.9501228Z             <enabled>
+2023-06-30T10:48:26.9501450Z               true
+2023-06-30T10:48:26.9501657Z             </enabled>
+2023-06-30T10:48:26.9501899Z             <updatePolicy>
+2023-06-30T10:48:26.9502136Z               never
+2023-06-30T10:48:26.9502357Z             </updatePolicy>
+2023-06-30T10:48:26.9502597Z           </releases>
+2023-06-30T10:48:26.9502986Z           <snapshots>
+2023-06-30T10:48:26.9503188Z             <enabled>
+2023-06-30T10:48:26.9503402Z               false
+2023-06-30T10:48:26.9503627Z             </enabled>
+2023-06-30T10:48:26.9503842Z             <updatePolicy>
+2023-06-30T10:48:26.9504076Z               never
+2023-06-30T10:48:26.9504306Z             </updatePolicy>
+2023-06-30T10:48:26.9504525Z           </snapshots>
+2023-06-30T10:48:26.9504769Z         </pluginRepository>
+2023-06-30T10:48:26.9505027Z         <pluginRepository>
+2023-06-30T10:48:26.9505241Z           <id>
+2023-06-30T10:48:26.9505610Z             kogito-staging-repository-group
+2023-06-30T10:48:26.9505886Z           </id>
+2023-06-30T10:48:26.9506098Z           <name>
+2023-06-30T10:48:26.9506328Z             Kogito Staging Repositories
+2023-06-30T10:48:26.9506577Z           </name>
+2023-06-30T10:48:26.9506788Z           <url>
+2023-06-30T10:48:26.9507193Z             https://repository.jboss.org/nexus/content/groups/kogito-public
+2023-06-30T10:48:26.9507516Z           </url>
+2023-06-30T10:48:26.9507732Z           <releases>
+2023-06-30T10:48:26.9507937Z             <enabled>
+2023-06-30T10:48:26.9508151Z               true
+2023-06-30T10:48:26.9508375Z             </enabled>
+2023-06-30T10:48:26.9508600Z             <updatePolicy>
+2023-06-30T10:48:26.9508825Z               never
+2023-06-30T10:48:26.9509054Z             </updatePolicy>
+2023-06-30T10:48:26.9509271Z           </releases>
+2023-06-30T10:48:26.9509495Z           <snapshots>
+2023-06-30T10:48:26.9509716Z             <enabled>
+2023-06-30T10:48:26.9509912Z               false
+2023-06-30T10:48:26.9510126Z             </enabled>
+2023-06-30T10:48:26.9510359Z             <updatePolicy>
+2023-06-30T10:48:26.9510569Z               never
+2023-06-30T10:48:26.9510792Z             </updatePolicy>
+2023-06-30T10:48:26.9511029Z           </snapshots>
+2023-06-30T10:48:26.9511253Z         </pluginRepository>
+2023-06-30T10:48:26.9511514Z       </pluginRepositories>
+2023-06-30T10:48:26.9511752Z     </profile>
+2023-06-30T10:48:26.9511954Z   </profiles>
+2023-06-30T10:48:26.9512173Z   <servers/>
+2023-06-30T10:48:26.9512387Z   <mirrors/>
+2023-06-30T10:48:26.9512589Z   <pluginGroups>
+2023-06-30T10:48:26.9512986Z     <pluginGroup>
+2023-06-30T10:48:26.9513210Z       org.zanata
+2023-06-30T10:48:26.9513424Z     </pluginGroup>
+2023-06-30T10:48:26.9513654Z   </pluginGroups>
+2023-06-30T10:48:26.9513877Z   <proxies/>
+2023-06-30T10:48:26.9514084Z </settings>
+
+2023-06-30T11:10:01.0682754Z Post job cleanup.
+2023-06-30T11:10:01.0834422Z Post job cleanup.

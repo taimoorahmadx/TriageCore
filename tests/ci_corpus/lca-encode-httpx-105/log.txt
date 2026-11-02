@@ -1,0 +1,276 @@
+===== Python 3.8/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.8.18, pytest-7.4.4, pluggy-1.3.0
+rootdir: /home/runner/work/httpx/httpx
+configfile: pyproject.toml
+plugins: anyio-4.2.0
+collected 855 items
+
+tests/test_api.py ...........                                            [  1%]
+tests/test_asgi.py ........................                              [  4%]
+tests/test_auth.py ........                                              [  5%]
+tests/test_config.py ...............................                     [  8%]
+tests/test_content.py ........................................           [ 13%]
+tests/test_decoders.py ...................................               [ 17%]
+tests/test_exceptions.py ...                                             [ 17%]
+tests/test_exported_members.py .                                         [ 17%]
+tests/test_main.py ...........                                           [ 19%]
+tests/test_multipart.py ......................................           [ 23%]
+tests/test_status_codes.py ......                                        [ 24%]
+tests/test_timeouts.py ........                                          [ 25%]
+tests/test_utils.py .................................................... [ 31%]
+....                                                                     [ 31%]
+tests/test_wsgi.py ............                                          [ 33%]
+tests/client/test_async_client.py ...................................... [ 37%]
+..............                                                           [ 39%]
+tests/client/test_auth.py .............................................. [ 44%]
+..........................s........                                      [ 48%]
+tests/client/test_client.py ...................................          [ 52%]
+tests/client/test_cookies.py .....FF.                                    [ 53%]
+tests/client/test_event_hooks.py .........                               [ 54%]
+tests/client/test_headers.py ...........                                 [ 56%]
+tests/client/test_properties.py ........                                 [ 57%]
+tests/client/test_proxies.py ........................................... [ 62%]
+....................................                                     [ 66%]
+tests/client/test_queryparams.py ...                                     [ 66%]
+tests/client/test_redirects.py .............................F.           [ 70%]
+tests/models/test_cookies.py .......                                     [ 71%]
+tests/models/test_headers.py ..................                          [ 73%]
+tests/models/test_queryparams.py ..............                          [ 74%]
+tests/models/test_requests.py .......................                    [ 77%]
+tests/models/test_responses.py ......................................... [ 82%]
+.................................................................        [ 89%]
+tests/models/test_url.py ............................................... [ 95%]
+.......................................                                  [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_get_cookie ________________________________
+
+    def test_get_cookie() -> None:
+        url = "http://example.org/set_cookie"
+    
+        client = httpx.Client(transport=httpx.MockTransport(get_and_set_cookies))
+        response = client.get(url)
+    
+        assert response.status_code == 200
+        assert response.cookies["example-name"] == "example-value"
+>       assert client.cookies["example-name"] == "example-value"
+
+tests/client/test_cookies.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Cookies[]>, name = 'example-name'
+
+    def __getitem__(self, name: str) -> str:
+        value = self.get(name)
+        if value is None:
+>           raise KeyError(name)
+E           KeyError: 'example-name'
+
+httpx/_models.py:1154: KeyError
+___________________________ test_cookie_persistence ____________________________
+
+    def test_cookie_persistence() -> None:
+        """
+        Ensure that Client instances persist cookies between requests.
+        """
+        client = httpx.Client(transport=httpx.MockTransport(get_and_set_cookies))
+    
+        response = client.get("http://example.org/echo_cookies")
+        assert response.status_code == 200
+        assert response.json() == {"cookies": None}
+    
+        response = client.get("http://example.org/set_cookie")
+        assert response.status_code == 200
+        assert response.cookies["example-name"] == "example-value"
+>       assert client.cookies["example-name"] == "example-value"
+
+tests/client/test_cookies.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Cookies[]>, name = 'example-name'
+
+    def __getitem__(self, name: str) -> str:
+        value = self.get(name)
+        if value is None:
+>           raise KeyError(name)
+E           KeyError: 'example-name'
+
+httpx/_models.py:1154: KeyError
+________________________ test_redirect_cookie_behavior _________________________
+
+    def test_redirect_cookie_behavior():
+        client = httpx.Client(
+            transport=httpx.MockTransport(cookie_sessions), follow_redirects=True
+        )
+    
+        # The client is not logged in.
+        response = client.get("https://example.com/")
+        assert response.url == "https://example.com/"
+        assert response.text == "Not logged in"
+    
+        # Login redirects to the homepage, setting a session cookie.
+        response = client.post("https://example.com/login")
+        assert response.url == "https://example.com/"
+>       assert response.text == "Logged in"
+E       AssertionError: assert 'Not logged in' == 'Logged in'
+E         - Logged in
+E         + Not logged in
+
+tests/client/test_redirects.py:416: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] tests/client/test_auth.py:272: netrc files without a password are invalid with Python < 3.11
+================== 3 failed, 851 passed, 1 skipped in 17.34s ===================
+##[error]Process completed with exit code 1.
+
+
+===== Python 3.11/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.7/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.7/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.7/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run -m pytest
+============================= test session starts ==============================
+platform linux -- Python 3.11.7, pytest-7.4.4, pluggy-1.3.0
+rootdir: /home/runner/work/httpx/httpx
+configfile: pyproject.toml
+plugins: anyio-4.2.0
+collected 855 items
+
+tests/test_api.py ...........                                            [  1%]
+tests/test_asgi.py ........................                              [  4%]
+tests/test_auth.py ........                                              [  5%]
+tests/test_config.py ...............................                     [  8%]
+tests/test_content.py ........................................           [ 13%]
+tests/test_decoders.py ...................................               [ 17%]
+tests/test_exceptions.py ...                                             [ 17%]
+tests/test_exported_members.py .                                         [ 17%]
+tests/test_main.py ...........                                           [ 19%]
+tests/test_multipart.py ......................................           [ 23%]
+tests/test_status_codes.py ......                                        [ 24%]
+tests/test_timeouts.py ........                                          [ 25%]
+tests/test_utils.py .................................................... [ 31%]
+....                                                                     [ 31%]
+tests/test_wsgi.py ............                                          [ 33%]
+tests/client/test_async_client.py ...................................... [ 37%]
+..............                                                           [ 39%]
+tests/client/test_auth.py .............................................. [ 44%]
+...........................s.......                                      [ 48%]
+tests/client/test_client.py ...................................          [ 52%]
+tests/client/test_cookies.py .....FF.                                    [ 53%]
+tests/client/test_event_hooks.py .........                               [ 54%]
+tests/client/test_headers.py ...........                                 [ 56%]
+tests/client/test_properties.py ........                                 [ 57%]
+tests/client/test_proxies.py ........................................... [ 62%]
+....................................                                     [ 66%]
+tests/client/test_queryparams.py ...                                     [ 66%]
+tests/client/test_redirects.py .............................F.           [ 70%]
+tests/models/test_cookies.py .......                                     [ 71%]
+tests/models/test_headers.py ..................                          [ 73%]
+tests/models/test_queryparams.py ..............                          [ 74%]
+tests/models/test_requests.py .......................                    [ 77%]
+tests/models/test_responses.py ......................................... [ 82%]
+.................................................................        [ 89%]
+tests/models/test_url.py ............................................... [ 95%]
+.......................................                                  [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_get_cookie ________________________________
+
+    def test_get_cookie() -> None:
+        url = "http://example.org/set_cookie"
+    
+        client = httpx.Client(transport=httpx.MockTransport(get_and_set_cookies))
+        response = client.get(url)
+    
+        assert response.status_code == 200
+        assert response.cookies["example-name"] == "example-value"
+>       assert client.cookies["example-name"] == "example-value"
+
+tests/client/test_cookies.py:148: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Cookies[]>, name = 'example-name'
+
+    def __getitem__(self, name: str) -> str:
+        value = self.get(name)
+        if value is None:
+>           raise KeyError(name)
+E           KeyError: 'example-name'
+
+httpx/_models.py:1154: KeyError
+___________________________ test_cookie_persistence ____________________________
+
+    def test_cookie_persistence() -> None:
+        """
+        Ensure that Client instances persist cookies between requests.
+        """
+        client = httpx.Client(transport=httpx.MockTransport(get_and_set_cookies))
+    
+        response = client.get("http://example.org/echo_cookies")
+        assert response.status_code == 200
+        assert response.json() == {"cookies": None}
+    
+        response = client.get("http://example.org/set_cookie")
+        assert response.status_code == 200
+        assert response.cookies["example-name"] == "example-value"
+>       assert client.cookies["example-name"] == "example-value"
+
+tests/client/test_cookies.py:164: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Cookies[]>, name = 'example-name'
+
+    def __getitem__(self, name: str) -> str:
+        value = self.get(name)
+        if value is None:
+>           raise KeyError(name)
+E           KeyError: 'example-name'
+
+httpx/_models.py:1154: KeyError
+________________________ test_redirect_cookie_behavior _________________________
+
+    def test_redirect_cookie_behavior():
+        client = httpx.Client(
+            transport=httpx.MockTransport(cookie_sessions), follow_redirects=True
+        )
+    
+        # The client is not logged in.
+        response = client.get("https://example.com/")
+        assert response.url == "https://example.com/"
+        assert response.text == "Not logged in"
+    
+        # Login redirects to the homepage, setting a session cookie.
+        response = client.post("https://example.com/login")
+        assert response.url == "https://example.com/"
+>       assert response.text == "Logged in"
+E       AssertionError: assert 'Not logged in' == 'Logged in'
+E         - Logged in
+E         + Not logged in
+
+tests/client/test_redirects.py:416: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] tests/client/test_auth.py:295: netrc files without a password are valid from Python >= 3.11
+================== 3 failed, 851 passed, 1 skipped in 16.79s ===================
+##[error]Process completed with exit code 1.

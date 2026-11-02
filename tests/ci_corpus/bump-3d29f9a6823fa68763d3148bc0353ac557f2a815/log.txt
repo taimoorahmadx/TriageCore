@@ -1,0 +1,596 @@
+2023-08-07T10:43:51.3888395Z Cleaning up orphan processes
+
+2023-08-07T10:43:00.5822632Z ##[group]Run echo "::set-output name=date::$(/bin/date -u "+%Y%m%d")"
+2023-08-07T10:43:00.5823067Z [36;1mecho "::set-output name=date::$(/bin/date -u "+%Y%m%d")"[0m
+2023-08-07T10:43:00.5888916Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-08-07T10:43:00.5889240Z env:
+2023-08-07T10:43:00.5889454Z   JAVA_DISTRIBUTION: adopt
+2023-08-07T10:43:00.5889764Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:00.5890127Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:00.5890405Z ##[endgroup]
+2023-08-07T10:43:00.6102521Z ##[warning]The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+
+2023-08-07T10:43:10.1489566Z ##[group]Run actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8
+2023-08-07T10:43:10.1489900Z with:
+2023-08-07T10:43:10.1490112Z   path: ~/.sonar/cache
+2023-08-07T10:43:10.1490354Z   key: Linux-sonar
+2023-08-07T10:43:10.1490606Z   restore-keys: Linux-sonar
+2023-08-07T10:43:10.1490879Z   enableCrossOsArchive: false
+2023-08-07T10:43:10.1491164Z   fail-on-cache-miss: false
+2023-08-07T10:43:10.1491428Z   lookup-only: false
+2023-08-07T10:43:10.1491637Z env:
+2023-08-07T10:43:10.1491869Z   JAVA_DISTRIBUTION: adopt
+2023-08-07T10:43:10.1492218Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:10.1492590Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:10.1492897Z ##[endgroup]
+2023-08-07T10:43:11.7527090Z Received 0 of 197980418 (0.0%), 0.0 MBs/sec
+2023-08-07T10:43:12.7547365Z Received 79691776 of 197980418 (40.3%), 37.9 MBs/sec
+2023-08-07T10:43:13.8001801Z Received 197980418 of 197980418 (100.0%), 61.9 MBs/sec
+2023-08-07T10:43:13.8007703Z Cache Size: ~189 MB (197980418 B)
+2023-08-07T10:43:13.8128413Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c8953e5f-3e92-4208-8f28-15fa73b78ea1/cache.tzst -P -C /home/runner/work/sorald/sorald --use-compress-program unzstd
+2023-08-07T10:43:14.8777395Z Cache restored successfully
+2023-08-07T10:43:15.1333970Z Cache restored from key: Linux-sonar
+
+2023-08-07T10:43:02.4131988Z ##[group]Run mvn package -DskipTests
+2023-08-07T10:43:02.4132464Z [36;1mmvn package -DskipTests[0m
+2023-08-07T10:43:02.4195959Z shell: /usr/bin/bash -e {0}
+2023-08-07T10:43:02.4196244Z env:
+2023-08-07T10:43:02.4196493Z   JAVA_DISTRIBUTION: adopt
+2023-08-07T10:43:02.4196867Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.17/x64
+2023-08-07T10:43:02.4197306Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.17/x64/lib/pkgconfig
+2023-08-07T10:43:02.4197728Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.17/x64
+2023-08-07T10:43:02.4198110Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.17/x64
+2023-08-07T10:43:02.4198502Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.17/x64
+2023-08-07T10:43:02.4198898Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.17/x64/lib
+2023-08-07T10:43:02.4199338Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:02.4199769Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.20-8/x64
+2023-08-07T10:43:02.4200103Z ##[endgroup]
+2023-08-07T10:43:03.9761142Z [INFO] Scanning for projects...
+2023-08-07T10:43:04.0930736Z [WARNING] 
+2023-08-07T10:43:04.0937142Z [WARNING] Some problems were encountered while building the effective model for se.kth.castor:sorald:maven-plugin:0.8.6-SNAPSHOT
+2023-08-07T10:43:04.0938357Z [WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-failsafe-plugin is missing. @ line 310, column 21
+2023-08-07T10:43:04.0939115Z [WARNING] 
+2023-08-07T10:43:04.0939975Z [WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+2023-08-07T10:43:04.0940557Z [WARNING] 
+2023-08-07T10:43:04.0941380Z [WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+2023-08-07T10:43:04.0942092Z [WARNING] 
+2023-08-07T10:43:04.1045236Z [INFO] ------------------------------------------------------------------------
+2023-08-07T10:43:04.1050120Z [INFO] Reactor Build Order:
+2023-08-07T10:43:04.1054049Z [INFO] 
+2023-08-07T10:43:04.1069394Z [INFO] Sorald-parent                                                      [pom]
+2023-08-07T10:43:04.1073670Z [INFO] Sorald-API                                                         [jar]
+2023-08-07T10:43:04.1077774Z [INFO] Sorald                                                    [maven-plugin]
+2023-08-07T10:43:04.1151066Z [INFO] 
+2023-08-07T10:43:04.1154333Z [INFO] --------------------< se.kth.castor:sorald-parent >---------------------
+2023-08-07T10:43:04.1157491Z [INFO] Building Sorald-parent 0.8.6-SNAPSHOT                              [1/3]
+2023-08-07T10:43:04.1158112Z [INFO]   from pom.xml
+2023-08-07T10:43:04.1161272Z [INFO] --------------------------------[ pom ]---------------------------------
+2023-08-07T10:43:04.3890754Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/3.0.1/maven-release-plugin-3.0.1.pom
+2023-08-07T10:43:04.6759196Z Progress (1): 2.7/9.8 kB
+2023-08-07T10:43:04.6802448Z Progress (1): 5.5/9.8 kB
+2023-08-07T10:43:04.6816103Z Progress (1): 8.2/9.8 kB
+2023-08-07T10:43:04.6892430Z Progress (1): 9.8 kB    
+2023-08-07T10:43:04.6897521Z                     
+2023-08-07T10:43:04.6901866Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/3.0.1/maven-release-plugin-3.0.1.pom (9.8 kB at 32 kB/s)
+2023-08-07T10:43:04.7100989Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/3.0.1/maven-release-3.0.1.pom
+2023-08-07T10:43:04.7198125Z Progress (1): 2.7/11 kB
+2023-08-07T10:43:04.7208144Z Progress (1): 5.5/11 kB
+2023-08-07T10:43:04.7254943Z Progress (1): 8.2/11 kB
+2023-08-07T10:43:04.7257229Z Progress (1): 11/11 kB 
+2023-08-07T10:43:04.7317251Z Progress (1): 11 kB   
+2023-08-07T10:43:04.7331034Z                    
+2023-08-07T10:43:04.7332404Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/release/maven-release/3.0.1/maven-release-3.0.1.pom (11 kB at 487 kB/s)
+2023-08-07T10:43:04.7370021Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-08-07T10:43:04.7479933Z Progress (1): 4.1/48 kB
+2023-08-07T10:43:04.7486987Z Progress (1): 8.2/48 kB
+2023-08-07T10:43:04.7490252Z Progress (1): 12/48 kB 
+2023-08-07T10:43:04.7517630Z Progress (1): 16/48 kB
+2023-08-07T10:43:04.7522240Z Progress (1): 20/48 kB
+2023-08-07T10:43:04.7524381Z Progress (1): 25/48 kB
+2023-08-07T10:43:04.7526511Z Progress (1): 29/48 kB
+2023-08-07T10:43:04.7545252Z Progress (1): 33/48 kB
+2023-08-07T10:43:04.7549353Z Progress (1): 37/48 kB
+2023-08-07T10:43:04.7551413Z Progress (1): 41/48 kB
+2023-08-07T10:43:04.7552929Z Progress (1): 45/48 kB
+2023-08-07T10:43:04.7594719Z Progress (1): 48 kB   
+2023-08-07T10:43:04.7595413Z                    
+2023-08-07T10:43:04.7596661Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 2.1 MB/s)
+2023-08-07T10:43:04.7757349Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-08-07T10:43:04.7805162Z Progress (1): 4.1/21 kB
+2023-08-07T10:43:04.7806341Z Progress (1): 8.2/21 kB
+2023-08-07T10:43:04.7808581Z Progress (1): 12/21 kB 
+2023-08-07T10:43:04.7831217Z Progress (1): 16/21 kB
+2023-08-07T10:43:04.7832519Z Progress (1): 20/21 kB
+2023-08-07T10:43:04.7886606Z Progress (1): 21 kB   
+2023-08-07T10:43:04.7958617Z                    
+2023-08-07T10:43:04.7959884Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 1.0 MB/s)
+2023-08-07T10:43:04.8070493Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/3.0.1/maven-release-plugin-3.0.1.jar
+2023-08-07T10:43:04.8249966Z Progress (1): 4.1/61 kB
+2023-08-07T10:43:04.8250488Z Progress (1): 8.2/61 kB
+2023-08-07T10:43:04.8250957Z Progress (1): 12/61 kB 
+2023-08-07T10:43:04.8251448Z Progress (1): 16/61 kB
+2023-08-07T10:43:04.8251890Z Progress (1): 20/61 kB
+2023-08-07T10:43:04.8252332Z Progress (1): 25/61 kB
+2023-08-07T10:43:04.8252766Z Progress (1): 29/61 kB
+2023-08-07T10:43:04.8299669Z Progress (1): 33/61 kB
+2023-08-07T10:43:04.8301831Z Progress (1): 37/61 kB
+2023-08-07T10:43:04.8304061Z Progress (1): 41/61 kB
+2023-08-07T10:43:04.8306218Z Progress (1): 45/61 kB
+2023-08-07T10:43:04.8349015Z Progress (1): 49/61 kB
+2023-08-07T10:43:04.8350668Z Progress (1): 53/61 kB
+2023-08-07T10:43:04.8352487Z Progress (1): 57/61 kB
+2023-08-07T10:43:04.9450614Z Progress (1): 61 kB   
+2023-08-07T10:43:04.9451537Z                    
+2023-08-07T10:43:04.9456541Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-release-plugin/3.0.1/maven-release-plugin-3.0.1.jar (61 kB at 448 kB/s)
+2023-08-07T10:43:04.9789141Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom
+2023-08-07T10:43:04.9839298Z Progress (1): 4.1/21 kB
+2023-08-07T10:43:04.9844397Z Progress (1): 8.2/21 kB
+2023-08-07T10:43:04.9848598Z Progress (1): 12/21 kB 
+2023-08-07T10:43:04.9855244Z Progress (1): 16/21 kB
+2023-08-07T10:43:04.9858806Z Progress (1): 20/21 kB
+2023-08-07T10:43:05.3764600Z Progress (1): 21 kB   
+2023-08-07T10:43:05.3765424Z                    
+2023-08-07T10:43:05.3766796Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom (21 kB at 52 kB/s)
+2023-08-07T10:43:05.3767947Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-08-07T10:43:05.3808273Z Progress (1): 4.1/8.1 kB
+2023-08-07T10:43:05.5864634Z Progress (1): 8.1 kB    
+2023-08-07T10:43:05.5865901Z                     
+2023-08-07T10:43:05.5867719Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 38 kB/s)
+2023-08-07T10:43:05.5937950Z Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar
+2023-08-07T10:43:05.6192050Z Progress (1): 4.1/507 kB
+2023-08-07T10:43:05.6194090Z Progress (1): 8.2/507 kB
+2023-08-07T10:43:05.6197442Z Progress (1): 12/507 kB 
+2023-08-07T10:43:05.6205912Z Progress (1): 16/507 kB
+2023-08-07T10:43:05.6239973Z Progress (1): 20/507 kB
+2023-08-07T10:43:05.6240692Z Progress (1): 24/507 kB
+2023-08-07T10:43:05.6241810Z Progress (1): 28/507 kB
+2023-08-07T10:43:05.6246658Z Progress (1): 32/507 kB
+2023-08-07T10:43:05.6253980Z Progress (1): 36/507 kB
+2023-08-07T10:43:05.6271034Z Progress (1): 40/507 kB
+2023-08-07T10:43:05.6272779Z Progress (1): 45/507 kB
+2023-08-07T10:43:05.6278362Z Progress (1): 49/507 kB
+2023-08-07T10:43:05.6279125Z Progress (1): 53/507 kB
+2023-08-07T10:43:05.6279465Z Progress (1): 57/507 kB
+2023-08-07T10:43:05.6286510Z Progress (1): 61/507 kB
+2023-08-07T10:43:05.6294396Z Progress (1): 65/507 kB
+2023-08-07T10:43:05.6298097Z Progress (1): 69/507 kB
+2023-08-07T10:43:05.6302680Z Progress (1): 73/507 kB
+2023-08-07T10:43:05.6306323Z Progress (1): 77/507 kB
+2023-08-07T10:43:05.6313927Z Progress (1): 81/507 kB
+2023-08-07T10:43:05.6317058Z Progress (1): 85/507 kB
+2023-08-07T10:43:05.6320345Z Progress (1): 90/507 kB
+2023-08-07T10:43:05.6323795Z Progress (1): 94/507 kB
+2023-08-07T10:43:05.6330904Z Progress (1): 98/507 kB
+2023-08-07T10:43:05.6334627Z Progress (1): 102/507 kB
+2023-08-07T10:43:05.6337956Z Progress (1): 106/507 kB
+2023-08-07T10:43:05.6341413Z Progress (1): 110/507 kB
+2023-08-07T10:43:05.6348600Z Progress (1): 114/507 kB
+2023-08-07T10:43:05.6351923Z Progress (1): 118/507 kB
+2023-08-07T10:43:05.6355358Z Progress (1): 122/507 kB
+2023-08-07T10:43:05.6358770Z Progress (1): 126/507 kB
+2023-08-07T10:43:05.6366795Z Progress (1): 131/507 kB
+2023-08-07T10:43:05.6371933Z Progress (1): 135/507 kB
+2023-08-07T10:43:05.6375042Z Progress (1): 139/507 kB
+2023-08-07T10:43:05.6380823Z Progress (1): 143/507 kB
+2023-08-07T10:43:05.6389836Z Progress (1): 147/507 kB
+2023-08-07T10:43:05.6395182Z Progress (1): 151/507 kB
+2023-08-07T10:43:05.6401597Z Progress (1): 155/507 kB
+2023-08-07T10:43:05.6407396Z Progress (1): 159/507 kB
+2023-08-07T10:43:05.6418958Z Progress (1): 163/507 kB
+2023-08-07T10:43:05.6426011Z Progress (1): 167/507 kB
+2023-08-07T10:43:05.6437795Z Progress (1): 172/507 kB
+2023-08-07T10:43:05.6443769Z Progress (1): 176/507 kB
+2023-08-07T10:43:05.6456242Z Progress (1): 180/507 kB
+2023-08-07T10:43:05.6462013Z Progress (1): 184/507 kB
+2023-08-07T10:43:05.6467539Z Progress (1): 188/507 kB
+2023-08-07T10:43:05.6473341Z Progress (1): 192/507 kB
+2023-08-07T10:43:05.6484621Z Progress (1): 196/507 kB
+2023-08-07T10:43:05.6490593Z Progress (1): 200/507 kB
+2023-08-07T10:43:05.6496299Z Progress (1): 204/507 kB
+2023-08-07T10:43:05.6504849Z Progress (1): 208/507 kB
+2023-08-07T10:43:05.6517248Z Progress (1): 212/507 kB
+2023-08-07T10:43:05.6526408Z Progress (1): 217/507 kB
+2023-08-07T10:43:05.6532791Z Progress (1): 221/507 kB
+2023-08-07T10:43:05.6538517Z Progress (1): 225/507 kB
+2023-08-07T10:43:05.6604384Z Progress (1): 229/507 kB
+2023-08-07T10:43:05.6613604Z Progress (1): 233/507 kB
+2023-08-07T10:43:05.6616658Z Progress (1): 237/507 kB
+2023-08-07T10:43:05.6619466Z Progress (1): 241/507 kB
+2023-08-07T10:43:05.6620250Z Progress (1): 245/507 kB
+2023-08-07T10:43:05.6620847Z Progress (1): 249/507 kB
+2023-08-07T10:43:05.6621439Z Progress (1): 253/507 kB
+2023-08-07T10:43:05.6621962Z Progress (1): 258/507 kB
+2023-08-07T10:43:05.6626208Z Progress (1): 262/507 kB
+2023-08-07T10:43:05.6628137Z Progress (1): 266/507 kB
+2023-08-07T10:43:05.6630210Z Progress (1): 270/507 kB
+2023-08-07T10:43:05.6632138Z Progress (1): 274/507 kB
+2023-08-07T10:43:05.6658017Z Progress (1): 278/507 kB
+2023-08-07T10:43:05.6659944Z Progress (1): 282/507 kB
+2023-08-07T10:43:05.6662179Z Progress (1): 286/507 kB
+2023-08-07T10:43:05.6664327Z Progress (1): 290/507 kB
+2023-08-07T10:43:05.6673023Z Progress (1): 294/507 kB
+2023-08-07T10:43:05.6674761Z Progress (1): 298/507 kB
+2023-08-07T10:43:05.6676824Z Progress (1): 303/507 kB
+2023-08-07T10:43:05.6678714Z Progress (1): 307/507 kB
+2023-08-07T10:43:05.6708971Z Progress (1): 311/507 kB
+2023-08-07T10:43:05.6711078Z Progress (1): 315/507 kB
+2023-08-07T10:43:05.6715137Z Progress (1): 319/507 kB
+2023-08-07T10:43:05.6717221Z Progress (1): 323/507 kB
+2023-08-07T10:43:05.6728141Z Progress (1): 327/507 kB
+2023-08-07T10:43:05.6813288Z Progress (1): 331/507 kB
+2023-08-07T10:43:05.6815700Z Progress (1): 335/507 kB
+2023-08-07T10:43:05.6817694Z Progress (1): 339/507 kB
+2023-08-07T10:43:05.6827247Z Progress (1): 344/507 kB
+2023-08-07T10:43:05.6829096Z Progress (1): 348/507 kB
+2023-08-07T10:43:05.6830891Z Progress (1): 352/507 kB
+2023-08-07T10:43:05.6832849Z Progress (1): 356/507 kB
+2023-08-07T10:43:05.6843142Z Progress (1): 360/507 kB
+2023-08-07T10:43:05.6844780Z Progress (1): 364/507 kB
+2023-08-07T10:43:05.6846504Z Progress (1): 368/507 kB
+2023-08-07T10:43:05.6848439Z Progress (1): 372/507 kB
+2023-08-07T10:43:05.6857354Z Progress (1): 376/507 kB
+2023-08-07T10:43:05.6859234Z Progress (1): 380/507 kB
+2023-08-07T10:43:05.6861305Z Progress (1): 384/507 kB
+2023-08-07T10:43:05.6863207Z Progress (1): 389/507 kB
+2023-08-07T10:43:05.6869817Z Progress (1): 393/507 kB
+2023-08-07T10:43:05.6871518Z Progress (1): 397/507 kB
+2023-08-07T10:43:05.6879999Z Progress (1): 401/507 kB
+2023-08-07T10:43:05.6882164Z Progress (1): 405/507 kB
+2023-08-07T10:43:05.6884325Z Progress (1): 409/507 kB
+2023-08-07T10:43:05.6886284Z Progress (1): 413/507 kB
+2023-08-07T10:43:05.6895518Z Progress (1): 417/507 kB
+2023-08-07T10:43:05.6897322Z Progress (1): 421/507 kB
+2023-08-07T10:43:05.6899182Z Progress (1): 425/507 kB
+2023-08-07T10:43:05.6900921Z Progress (1): 430/507 kB
+2023-08-07T10:43:05.6909256Z Progress (1): 434/507 kB
+2023-08-07T10:43:05.6910977Z Progress (1): 438/507 kB
+2023-08-07T10:43:05.6913024Z Progress (1): 442/507 kB
+2023-08-07T10:43:05.6915944Z Progress (1): 446/507 kB
+2023-08-07T10:43:05.6925073Z Progress (1): 450/507 kB
+2023-08-07T10:43:05.6926708Z Progress (1): 454/507 kB
+2023-08-07T10:43:05.6928539Z Progress (1): 458/507 kB
+2023-08-07T10:43:05.6930678Z Progress (1): 462/507 kB
+2023-08-07T10:43:05.6969113Z Progress (1): 466/507 kB
+2023-08-07T10:43:05.6970721Z Progress (1): 471/507 kB
+2023-08-07T10:43:05.6972122Z Progress (1): 475/507 kB
+2023-08-07T10:43:05.6973364Z Progress (1): 479/507 kB
+2023-08-07T10:43:05.6981455Z Progress (1): 483/507 kB
+2023-08-07T10:43:05.6982460Z Progress (1): 487/507 kB
+2023-08-07T10:43:05.6983637Z Progress (1): 491/507 kB
+2023-08-07T10:43:05.6984964Z Progress (1): 495/507 kB
+2023-08-07T10:43:05.7004452Z Progress (1): 499/507 kB
+2023-08-07T10:43:05.7005612Z Progress (1): 503/507 kB
+2023-08-07T10:43:06.0268199Z Progress (1): 507 kB    
+2023-08-07T10:43:06.0268619Z                     
+2023-08-07T10:43:06.0269885Z Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar (507 kB at 1.2 MB/s)
+2023-08-07T10:43:06.1203774Z Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.pom
+2023-08-07T10:43:06.1301427Z Progress (1): 3.2 kB
+2023-08-07T10:43:06.1306351Z                     
+2023-08-07T10:43:06.1310093Z Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.pom (3.2 kB at 320 kB/s)
+2023-08-07T10:43:06.1343465Z Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom
+2023-08-07T10:43:06.1393337Z Progress (1): 4.1/5.6 kB
+2023-08-07T10:43:06.1435680Z Progress (1): 5.6 kB    
+2023-08-07T10:43:06.1462361Z                     
+2023-08-07T10:43:06.1470328Z Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom (5.6 kB at 471 kB/s)
+2023-08-07T10:43:06.1532869Z Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.pom
+2023-08-07T10:43:06.1689316Z Progress (1): 3.2 kB
+2023-08-07T10:43:06.1700010Z                     
+2023-08-07T10:43:06.1709696Z Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.pom (3.2 kB at 177 kB/s)
+2023-08-07T10:43:06.1746008Z Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom
+2023-08-07T10:43:06.1887740Z Progress (1): 2.0 kB
+2023-08-07T10:43:06.1898213Z                     
+[... 77580 lines removed by TriageCore ...]
+2023-08-07T10:43:33.4413554Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom
+2023-08-07T10:43:33.4460770Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom (3.2 kB at 805 kB/s)
+2023-08-07T10:43:33.4522620Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.1/plexus-io-3.4.1.pom
+2023-08-07T10:43:33.4567768Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.1/plexus-io-3.4.1.pom (6.0 kB at 1.5 MB/s)
+2023-08-07T10:43:33.4585497Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.7.1/plexus-archiver-4.7.1.pom
+2023-08-07T10:43:33.4628491Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.7.1/plexus-archiver-4.7.1.pom (6.5 kB at 1.6 MB/s)
+2023-08-07T10:43:33.4651027Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.pom
+2023-08-07T10:43:33.4697127Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.pom (22 kB at 4.4 MB/s)
+2023-08-07T10:43:33.4714259Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/56/commons-parent-56.pom
+2023-08-07T10:43:33.4787053Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/56/commons-parent-56.pom (82 kB at 12 MB/s)
+2023-08-07T10:43:33.4826210Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.5-2/zstd-jni-1.5.5-2.pom
+2023-08-07T10:43:33.4872915Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.5-2/zstd-jni-1.5.5-2.pom (1.9 kB at 383 kB/s)
+2023-08-07T10:43:33.4911963Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar
+2023-08-07T10:43:33.4924871Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar
+2023-08-07T10:43:33.4932508Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.1/plexus-io-3.4.1.jar
+2023-08-07T10:43:33.4958149Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.7.1/plexus-archiver-4.7.1.jar
+2023-08-07T10:43:33.4978141Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar
+2023-08-07T10:43:33.4986965Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar (58 kB at 7.3 MB/s)
+2023-08-07T10:43:33.4988577Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.5-2/zstd-jni-1.5.5-2.jar
+2023-08-07T10:43:33.5030055Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.3.1/maven-filtering-3.3.1.jar (55 kB at 4.6 MB/s)
+2023-08-07T10:43:33.5107089Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-io/3.4.1/plexus-io-3.4.1.jar (79 kB at 4.4 MB/s)
+2023-08-07T10:43:33.5127167Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.7.1/plexus-archiver-4.7.1.jar (221 kB at 11 MB/s)
+2023-08-07T10:43:33.5295166Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar (1.1 MB at 31 MB/s)
+2023-08-07T10:43:33.6265730Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/luben/zstd-jni/1.5.5-2/zstd-jni-1.5.5-2.jar (5.9 MB at 45 MB/s)
+2023-08-07T10:43:34.2138609Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom
+2023-08-07T10:43:34.2189034Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.9.0/junit-bom-5.9.0.pom (5.6 kB at 1.1 MB/s)
+2023-08-07T10:43:34.8811260Z [INFO] Building jar: /home/runner/work/sorald/sorald/sorald-api/target/sorald-api-0.8.6-SNAPSHOT-jar-with-dependencies.jar
+2023-08-07T10:43:37.9956059Z [INFO] 
+2023-08-07T10:43:37.9957255Z [INFO] --- maven-javadoc-plugin:3.5.0:jar (attach-javadocs) @ sorald-api ---
+2023-08-07T10:43:38.1971565Z [INFO] No previous run data found, generating javadoc.
+2023-08-07T10:43:40.5704513Z [INFO] 
+2023-08-07T10:43:40.5731786Z Loading source files for package sorald.cli...
+2023-08-07T10:43:40.5732491Z Loading source files for package sorald.rule...
+2023-08-07T10:43:40.5733484Z Loading source files for package sorald.event...
+2023-08-07T10:43:40.5734017Z Loading source files for package sorald.event.models...
+2023-08-07T10:43:40.5734523Z Loading source files for package sorald.annotations...
+2023-08-07T10:43:40.5734995Z Loading source files for package sorald...
+2023-08-07T10:43:40.5735455Z Loading source files for package sorald.api...
+2023-08-07T10:43:40.5735934Z Loading source files for package sorald.support...
+2023-08-07T10:43:40.5736425Z Loading source files for package sorald.processor...
+2023-08-07T10:43:40.5736903Z Constructing Javadoc information...
+2023-08-07T10:43:40.5737314Z Standard Doclet version 11.0.20
+2023-08-07T10:43:40.5737736Z Building tree for all the packages and classes...
+2023-08-07T10:43:40.5738716Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/Constants.html...
+2023-08-07T10:43:40.5739941Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/IncompleteProcessor.html...
+2023-08-07T10:43:40.5741329Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/ProcessorAnnotation.html...
+2023-08-07T10:43:40.5742923Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/ProcessorRepository.html...
+2023-08-07T10:43:40.5743771Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/RuleRepository.html...
+2023-08-07T10:43:40.5744640Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/cli/CLIConfigForStaticAnalyzer.html...
+2023-08-07T10:43:40.5745499Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/EventHelper.html...
+2023-08-07T10:43:40.5746297Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/EventType.html...
+2023-08-07T10:43:40.5747085Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/SoraldEvent.html...
+2023-08-07T10:43:40.5747927Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/SoraldEventHandler.html...
+2023-08-07T10:43:40.5748774Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/StatsMetadataKeys.html...
+2023-08-07T10:43:40.5749606Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/CrashEvent.html...
+2023-08-07T10:43:40.5750426Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/RepairEvent.html...
+2023-08-07T10:43:40.5751352Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/processor/SoraldAbstractProcessor.html...
+2023-08-07T10:43:40.5752125Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/IRuleType.html...
+2023-08-07T10:43:40.5752826Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/Rule.html...
+2023-08-07T10:43:40.5753750Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/RuleViolation.html...
+2023-08-07T10:43:40.5754567Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/StaticAnalyzer.html...
+2023-08-07T10:43:40.5755385Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/support/IdentityHashSet.html...
+2023-08-07T10:43:40.5756307Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/package-summary.html...
+2023-08-07T10:43:40.5758190Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/package-tree.html...
+2023-08-07T10:43:40.5758932Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/package-summary.html...
+2023-08-07T10:43:40.5759683Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/package-tree.html...
+2023-08-07T10:43:40.5760416Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/package-summary.html...
+2023-08-07T10:43:40.5761142Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/package-tree.html...
+2023-08-07T10:43:40.5761864Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/cli/package-summary.html...
+2023-08-07T10:43:40.5762567Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/cli/package-tree.html...
+2023-08-07T10:43:40.5763278Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/package-summary.html...
+2023-08-07T10:43:40.5763996Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/package-tree.html...
+2023-08-07T10:43:40.5764740Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/package-summary.html...
+2023-08-07T10:43:40.5765561Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/package-tree.html...
+2023-08-07T10:43:40.5766462Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/processor/package-summary.html...
+2023-08-07T10:43:40.5767290Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/processor/package-tree.html...
+2023-08-07T10:43:40.5767971Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/package-summary.html...
+2023-08-07T10:43:40.5768623Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/package-tree.html...
+2023-08-07T10:43:40.5769496Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/support/package-summary.html...
+2023-08-07T10:43:40.5770231Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/support/package-tree.html...
+2023-08-07T10:43:40.5770920Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/constant-values.html...
+2023-08-07T10:43:40.5771711Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/cli/class-use/CLIConfigForStaticAnalyzer.html...
+2023-08-07T10:43:40.5772526Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/class-use/StaticAnalyzer.html...
+2023-08-07T10:43:40.5773287Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/class-use/RuleViolation.html...
+2023-08-07T10:43:40.5774014Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/class-use/IRuleType.html...
+2023-08-07T10:43:40.5774724Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/class-use/Rule.html...
+2023-08-07T10:43:40.5775479Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/class-use/SoraldEventHandler.html...
+2023-08-07T10:43:40.5776240Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/class-use/EventType.html...
+2023-08-07T10:43:40.5777061Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/class-use/EventHelper.html...
+2023-08-07T10:43:40.5777780Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/class-use/StatsMetadataKeys.html...
+2023-08-07T10:43:40.5778497Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/class-use/SoraldEvent.html...
+2023-08-07T10:43:40.5779202Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/class-use/CrashEvent.html...
+2023-08-07T10:43:40.5779903Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/class-use/RepairEvent.html...
+2023-08-07T10:43:40.5794970Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/class-use/ProcessorAnnotation.html...
+2023-08-07T10:43:40.5795797Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/class-use/IncompleteProcessor.html...
+2023-08-07T10:43:40.5796524Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/class-use/Constants.html...
+2023-08-07T10:43:40.5797240Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/class-use/RuleRepository.html...
+2023-08-07T10:43:40.5797984Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/class-use/ProcessorRepository.html...
+2023-08-07T10:43:40.5798724Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/support/class-use/IdentityHashSet.html...
+2023-08-07T10:43:40.5799477Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/processor/class-use/SoraldAbstractProcessor.html...
+2023-08-07T10:43:40.5800173Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/package-use.html...
+2023-08-07T10:43:40.5800830Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/annotations/package-use.html...
+2023-08-07T10:43:40.5801491Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/api/package-use.html...
+2023-08-07T10:43:40.5802382Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/cli/package-use.html...
+2023-08-07T10:43:40.5803171Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/package-use.html...
+2023-08-07T10:43:40.5803880Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/event/models/package-use.html...
+2023-08-07T10:43:40.5804472Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/processor/package-use.html...
+2023-08-07T10:43:40.5805085Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/rule/package-use.html...
+2023-08-07T10:43:40.5805661Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/sorald/support/package-use.html...
+2023-08-07T10:43:40.5806055Z Building index for all the packages and classes...
+2023-08-07T10:43:40.5806536Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/overview-tree.html...
+2023-08-07T10:43:40.5807066Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/index-all.html...
+2023-08-07T10:43:40.5807417Z Building index for all classes...
+2023-08-07T10:43:40.5807869Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/allclasses-index.html...
+2023-08-07T10:43:40.5808428Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/allpackages-index.html...
+2023-08-07T10:43:40.5808981Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/deprecated-list.html...
+2023-08-07T10:43:40.5809339Z Building index for all classes...
+2023-08-07T10:43:40.5809781Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/allclasses.html...
+2023-08-07T10:43:40.5810305Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/allclasses.html...
+2023-08-07T10:43:40.5810804Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/index.html...
+2023-08-07T10:43:40.5811335Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/overview-summary.html...
+2023-08-07T10:43:40.5811870Z Generating /home/runner/work/sorald/sorald/sorald-api/target/apidocs/help-doc.html...
+2023-08-07T10:43:40.5812185Z 1 warning
+2023-08-07T10:43:40.5812399Z [WARNING] Javadoc Warnings
+2023-08-07T10:43:40.5812908Z [WARNING] /home/runner/work/sorald/sorald/sorald-api/src/main/java/sorald/rule/IRuleType.java:9: warning: no @return
+2023-08-07T10:43:40.5813260Z [WARNING] String getName();
+2023-08-07T10:43:40.5813485Z [WARNING] ^
+2023-08-07T10:43:40.6127276Z [INFO] Building jar: /home/runner/work/sorald/sorald/sorald-api/target/sorald-api-0.8.6-SNAPSHOT-javadoc.jar
+2023-08-07T10:43:40.7198764Z [INFO] 
+2023-08-07T10:43:40.7201023Z [INFO] --- maven-install-plugin:2.4:install (default-install) @ sorald-api ---
+2023-08-07T10:43:40.7326247Z [INFO] Installing /home/runner/work/sorald/sorald/sorald-api/target/sorald-api-0.8.6-SNAPSHOT.jar to /home/runner/.m2/repository/se/kth/castor/sorald-api/0.8.6-SNAPSHOT/sorald-api-0.8.6-SNAPSHOT.jar
+2023-08-07T10:43:40.7333948Z [INFO] Installing /home/runner/work/sorald/sorald/sorald-api/pom.xml to /home/runner/.m2/repository/se/kth/castor/sorald-api/0.8.6-SNAPSHOT/sorald-api-0.8.6-SNAPSHOT.pom
+2023-08-07T10:43:40.7348564Z [INFO] Installing /home/runner/work/sorald/sorald/sorald-api/target/sorald-api-0.8.6-SNAPSHOT-jar-with-dependencies.jar to /home/runner/.m2/repository/se/kth/castor/sorald-api/0.8.6-SNAPSHOT/sorald-api-0.8.6-SNAPSHOT-jar-with-dependencies.jar
+2023-08-07T10:43:40.7577706Z [INFO] Installing /home/runner/work/sorald/sorald/sorald-api/target/sorald-api-0.8.6-SNAPSHOT-javadoc.jar to /home/runner/.m2/repository/se/kth/castor/sorald-api/0.8.6-SNAPSHOT/sorald-api-0.8.6-SNAPSHOT-javadoc.jar
+2023-08-07T10:43:40.7669005Z [INFO] 
+2023-08-07T10:43:40.7670915Z [INFO] ------------------------< se.kth.castor:sorald >------------------------
+2023-08-07T10:43:40.7672633Z [INFO] Building Sorald 0.8.6-SNAPSHOT                                     [3/3]
+2023-08-07T10:43:40.7674423Z [INFO]   from sorald/pom.xml
+2023-08-07T10:43:40.7676049Z [INFO] ----------------------------[ maven-plugin ]----------------------------
+2023-08-07T10:43:40.8116170Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-maven-plugin/0.11.0/itf-maven-plugin-0.11.0.pom
+2023-08-07T10:43:40.8211265Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-maven-plugin/0.11.0/itf-maven-plugin-0.11.0.pom (5.8 kB at 646 kB/s)
+2023-08-07T10:43:40.8226145Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension/0.11.0/itf-extension-0.11.0.pom
+2023-08-07T10:43:40.8364110Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension/0.11.0/itf-extension-0.11.0.pom (8.1 kB at 621 kB/s)
+2023-08-07T10:43:40.8377725Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/smpp/smpp/5.3.3/smpp-5.3.3.pom
+2023-08-07T10:43:40.8441686Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/smpp/smpp/5.3.3/smpp-5.3.3.pom (28 kB at 4.7 MB/s)
+2023-08-07T10:43:40.8461545Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-maven-plugin/0.11.0/itf-maven-plugin-0.11.0.jar
+2023-08-07T10:43:40.8535712Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-maven-plugin/0.11.0/itf-maven-plugin-0.11.0.jar (29 kB at 3.6 MB/s)
+2023-08-07T10:43:40.8571952Z [WARNING] org.apache.maven:maven-model/maven-metadata.xmlfailed to transfer from http://0.0.0.0/ during a previous attempt. This failure was cached in the local repository and resolution will not be reattempted until the update interval of maven-default-http-blocker has elapsed or updates are forced. Original error: Could not transfer metadata org.apache.maven:maven-model/maven-metadata.xml from/to maven-default-http-blocker (http://0.0.0.0/): transfer failed for http://0.0.0.0/org/apache/maven/maven-model/maven-metadata.xml
+2023-08-07T10:43:40.8987388Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core/9.1.1.74346/sonarlint-core-9.1.1.74346.pom
+2023-08-07T10:43:41.0440887Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core/9.1.1.74346/sonarlint-core-9.1.1.74346.pom (19 kB at 130 kB/s)
+2023-08-07T10:43:41.0464604Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core-parent/9.1.1.74346/sonarlint-core-parent-9.1.1.74346.pom
+2023-08-07T10:43:41.1821513Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core-parent/9.1.1.74346/sonarlint-core-parent-9.1.1.74346.pom (9.8 kB at 73 kB/s)
+2023-08-07T10:43:41.1842022Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/68.0.0.247/parent-68.0.0.247.pom
+2023-08-07T10:43:41.1945664Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/parent/parent/68.0.0.247/parent-68.0.0.247.pom (33 kB at 3.0 MB/s)
+2023-08-07T10:43:41.1972708Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.6.21/kotlin-bom-1.6.21.pom
+2023-08-07T10:43:41.2050535Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.6.21/kotlin-bom-1.6.21.pom (9.3 kB at 1.3 MB/s)
+2023-08-07T10:43:41.2069956Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/info/picocli/picocli/4.7.4/picocli-4.7.4.pom
+2023-08-07T10:43:41.2197951Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/info/picocli/picocli/4.7.4/picocli-4.7.4.pom (1.4 kB at 106 kB/s)
+2023-08-07T10:43:41.2208816Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/info/picocli/picocli-codegen/4.7.4/picocli-codegen-4.7.4.pom
+2023-08-07T10:43:41.2267324Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/info/picocli/picocli-codegen/4.7.4/picocli-codegen-4.7.4.pom (1.5 kB at 254 kB/s)
+2023-08-07T10:43:41.2278031Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/json/json/20230618/json-20230618.pom
+2023-08-07T10:43:41.2327194Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/json/json/20230618/json-20230618.pom (6.6 kB at 1.3 MB/s)
+2023-08-07T10:43:41.2339547Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.9.4/maven-plugin-api-3.9.4.pom
+2023-08-07T10:43:41.2394796Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.9.4/maven-plugin-api-3.9.4.pom (2.9 kB at 490 kB/s)
+2023-08-07T10:43:41.2418387Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.pom
+2023-08-07T10:43:41.2474893Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.pom (2.3 kB at 386 kB/s)
+2023-08-07T10:43:41.2498894Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.pom
+2023-08-07T10:43:41.2543137Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.pom (7.6 kB at 1.5 MB/s)
+2023-08-07T10:43:41.2563446Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.9.0/maven-plugin-annotations-3.9.0.pom
+2023-08-07T10:43:41.2605922Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.9.0/maven-plugin-annotations-3.9.0.pom (1.5 kB at 368 kB/s)
+2023-08-07T10:43:41.2622261Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.pom
+2023-08-07T10:43:41.2665771Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.pom (19 kB at 4.8 MB/s)
+2023-08-07T10:43:41.2678423Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent/3.24.2/assertj-parent-3.24.2.pom
+2023-08-07T10:43:41.2727217Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent/3.24.2/assertj-parent-3.24.2.pom (13 kB at 2.7 MB/s)
+2023-08-07T10:43:41.2738286Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-build/3.24.2/assertj-build-3.24.2.pom
+2023-08-07T10:43:41.2777755Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-build/3.24.2/assertj-build-3.24.2.pom (8.8 kB at 2.2 MB/s)
+2023-08-07T10:43:41.2795029Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.pom
+2023-08-07T10:43:41.2846182Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.pom (16 kB at 3.2 MB/s)
+2023-08-07T10:43:41.2858121Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.12.21/byte-buddy-parent-1.12.21.pom
+2023-08-07T10:43:41.2925845Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.12.21/byte-buddy-parent-1.12.21.pom (58 kB at 8.3 MB/s)
+2023-08-07T10:43:41.2977273Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-assertj/0.12.0/itf-assertj-0.12.0.pom
+2023-08-07T10:43:41.3037040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-assertj/0.12.0/itf-assertj-0.12.0.pom (2.3 kB at 377 kB/s)
+2023-08-07T10:43:41.3045349Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension/0.12.0/itf-extension-0.12.0.pom
+2023-08-07T10:43:41.3147500Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension/0.12.0/itf-extension-0.12.0.pom (6.9 kB at 685 kB/s)
+2023-08-07T10:43:41.3167470Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/smpp/smpp/5.3.13/smpp-5.3.13.pom
+2023-08-07T10:43:41.3238072Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/smpp/smpp/5.3.13/smpp-5.3.13.pom (27 kB at 3.9 MB/s)
+2023-08-07T10:43:41.3314672Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.10.0/mockito-bom-4.10.0.pom
+2023-08-07T10:43:41.3847487Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.10.0/mockito-bom-4.10.0.pom (3.2 kB at 59 kB/s)
+2023-08-07T10:43:41.3862533Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension-maven/0.12.0/itf-extension-maven-0.12.0.pom
+2023-08-07T10:43:41.3927817Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension-maven/0.12.0/itf-extension-maven-0.12.0.pom (2.0 kB at 328 kB/s)
+2023-08-07T10:43:41.3942822Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.pom
+2023-08-07T10:43:41.3987526Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.pom (3.8 kB at 951 kB/s)
+2023-08-07T10:43:41.3997352Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.1.0/maven-3.1.0.pom
+2023-08-07T10:43:41.4043361Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven/3.1.0/maven-3.1.0.pom (22 kB at 4.4 MB/s)
+2023-08-07T10:43:41.4063452Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.pom
+2023-08-07T10:43:41.4104454Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.pom (3.1 kB at 786 kB/s)
+2023-08-07T10:43:41.4113779Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom
+2023-08-07T10:43:41.4161990Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/3.3/plexus-3.3.pom (20 kB at 4.0 MB/s)
+2023-08-07T10:43:41.4181124Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.pom
+2023-08-07T10:43:41.4426940Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.pom (1.2 kB at 47 kB/s)
+2023-08-07T10:43:41.4437278Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.23.1/assertj-core-3.23.1.pom
+2023-08-07T10:43:41.4480756Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.23.1/assertj-core-3.23.1.pom (24 kB at 5.9 MB/s)
+2023-08-07T10:43:41.4494138Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.17/assertj-parent-pom-2.2.17.pom
+2023-08-07T10:43:41.4650007Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-parent-pom/2.2.17/assertj-parent-pom-2.2.17.pom (24 kB at 1.6 MB/s)
+2023-08-07T10:43:41.4710295Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+2023-08-07T10:43:41.4753700Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 1.1 MB/s)
+2023-08-07T10:43:41.4764442Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.5.1/mockito-bom-4.5.1.pom
+2023-08-07T10:43:41.4913959Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.5.1/mockito-bom-4.5.1.pom (3.0 kB at 199 kB/s)
+2023-08-07T10:43:41.4924686Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.pom
+2023-08-07T10:43:41.4967069Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.pom (17 kB at 4.2 MB/s)
+2023-08-07T10:43:41.4979205Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.12.10/byte-buddy-parent-1.12.10.pom
+2023-08-07T10:43:41.5049117Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy-parent/1.12.10/byte-buddy-parent-1.12.10.pom (45 kB at 6.4 MB/s)
+2023-08-07T10:43:41.5068648Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-jupiter-extension/0.12.0/itf-jupiter-extension-0.12.0.pom
+2023-08-07T10:43:41.5145307Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-jupiter-extension/0.12.0/itf-jupiter-extension-0.12.0.pom (2.9 kB at 364 kB/s)
+2023-08-07T10:43:41.5159401Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.pom
+2023-08-07T10:43:41.5203754Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.9.1/junit-jupiter-api-5.9.1.pom (3.2 kB at 636 kB/s)
+2023-08-07T10:43:41.5214424Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom
+2023-08-07T10:43:41.5252505Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.pom (1.7 kB at 421 kB/s)
+2023-08-07T10:43:41.5264841Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.pom
+2023-08-07T10:43:41.5306872Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/platform/junit-platform-commons/1.9.1/junit-platform-commons-1.9.1.pom (2.8 kB at 708 kB/s)
+2023-08-07T10:43:41.5418071Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core/9.1.1.74346/sonarlint-core-9.1.1.74346.jar
+2023-08-07T10:43:41.5424057Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/info/picocli/picocli/4.7.4/picocli-4.7.4.jar
+2023-08-07T10:43:41.5427191Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/info/picocli/picocli-codegen/4.7.4/picocli-codegen-4.7.4.jar
+2023-08-07T10:43:41.5430141Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/json/json/20230618/json-20230618.jar
+2023-08-07T10:43:41.5438973Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.9.4/maven-plugin-api-3.9.4.jar
+2023-08-07T10:43:41.5549441Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/info/picocli/picocli-codegen/4.7.4/picocli-codegen-4.7.4.jar (129 kB at 11 MB/s)
+2023-08-07T10:43:41.5550670Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.9.4/maven-model-3.9.4.jar
+2023-08-07T10:43:41.5621341Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/json/json/20230618/json-20230618.jar (73 kB at 4.3 MB/s)
+2023-08-07T10:43:41.5622490Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.jar
+2023-08-07T10:43:41.5635530Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/info/picocli/picocli/4.7.4/picocli-4.7.4.jar (415 kB at 19 MB/s)
+2023-08-07T10:43:41.5639841Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-api/3.9.4/maven-plugin-api-3.9.4.jar (47 kB at 2.3 MB/s)
+2023-08-07T10:43:41.5644373Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar
+2023-08-07T10:43:41.5651202Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.9.0/maven-plugin-annotations-3.9.0.jar
+2023-08-07T10:43:41.5680417Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.9.4/maven-model-3.9.4.jar (217 kB at 9.4 MB/s)
+2023-08-07T10:43:41.5684720Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar
+2023-08-07T10:43:41.5696207Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-artifact/3.9.4/maven-artifact-3.9.4.jar (59 kB at 2.3 MB/s)
+2023-08-07T10:43:41.5697639Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar
+2023-08-07T10:43:41.5706323Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar (53 kB at 2.0 MB/s)
+2023-08-07T10:43:41.5710466Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-assertj/0.12.0/itf-assertj-0.12.0.jar
+2023-08-07T10:43:41.5794934Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.9.0/maven-plugin-annotations-3.9.0.jar (14 kB at 382 kB/s)
+2023-08-07T10:43:41.5798095Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension-maven/0.12.0/itf-extension-maven-0.12.0.jar
+2023-08-07T10:43:41.5815559Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-assertj/0.12.0/itf-assertj-0.12.0.jar (20 kB at 516 kB/s)
+2023-08-07T10:43:41.5817068Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-jupiter-extension/0.12.0/itf-jupiter-extension-0.12.0.jar
+2023-08-07T10:43:41.5951968Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-extension-maven/0.12.0/itf-extension-maven-0.12.0.jar (10 kB at 204 kB/s)
+2023-08-07T10:43:41.5957849Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/soebes/itf/jupiter/extension/itf-jupiter-extension/0.12.0/itf-jupiter-extension-0.12.0.jar (53 kB at 1.0 MB/s)
+2023-08-07T10:43:41.6056460Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar (1.3 MB at 22 MB/s)
+2023-08-07T10:43:41.6615439Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar (3.9 MB at 33 MB/s)
+2023-08-07T10:43:42.0277205Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonarsource/sonarlint/core/sonarlint-core/9.1.1.74346/sonarlint-core-9.1.1.74346.jar (13 MB at 27 MB/s)
+2023-08-07T10:43:42.0381284Z [INFO] 
+2023-08-07T10:43:42.0383551Z [INFO] --- buildnumber-maven-plugin:3.2.0:create (default) @ sorald ---
+2023-08-07T10:43:42.0398686Z [INFO] 
+2023-08-07T10:43:42.0400769Z [INFO] --- jacoco-maven-plugin:0.8.10:prepare-agent (default-prepare-agent) @ sorald ---
+2023-08-07T10:43:42.0410325Z [INFO] argLine set to -javaagent:/home/runner/.m2/repository/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10-runtime.jar=destfile=/home/runner/work/sorald/sorald/sorald/target/jacoco.exec
+2023-08-07T10:43:42.0412648Z [INFO] 
+2023-08-07T10:43:42.0414361Z [INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ sorald ---
+2023-08-07T10:43:42.0442749Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-08-07T10:43:42.0468899Z [INFO] Copying 1 resource
+2023-08-07T10:43:42.0535783Z [INFO] 
+2023-08-07T10:43:42.0537777Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ sorald ---
+2023-08-07T10:43:42.0774898Z [INFO] Changes detected - recompiling the module! :dependency
+2023-08-07T10:43:42.0779469Z [INFO] Compiling 75 source files with javac [debug target 11] to target/classes
+2023-08-07T10:43:44.0806499Z [INFO] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/sonar/JavaInputFile.java: /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/sonar/JavaInputFile.java uses or overrides a deprecated API.
+2023-08-07T10:43:44.0807948Z [INFO] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/sonar/JavaInputFile.java: Recompile with -Xlint:deprecation for details.
+2023-08-07T10:43:44.0808773Z [INFO] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/processor/ArrayHashCodeAndToStringProcessor.java: Some input files use unchecked or unsafe operations.
+2023-08-07T10:43:44.0809809Z [INFO] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/processor/ArrayHashCodeAndToStringProcessor.java: Recompile with -Xlint:unchecked for details.
+2023-08-07T10:43:44.0810545Z [INFO] -------------------------------------------------------------
+2023-08-07T10:43:44.0811198Z [ERROR] COMPILATION ERROR : 
+2023-08-07T10:43:44.0812662Z [INFO] -------------------------------------------------------------
+2023-08-07T10:43:44.0813277Z [ERROR] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/sonar/SonarLintEngine.java:[163,17] cannot find symbol
+2023-08-07T10:43:44.0813964Z   symbol:   method addEnabledLanguages(java.util.Set<org.sonarsource.sonarlint.core.commons.Language>)
+2023-08-07T10:43:44.0814790Z   location: class org.sonarsource.sonarlint.core.analysis.api.AnalysisEngineConfiguration.Builder
+2023-08-07T10:43:44.0815376Z [INFO] 1 error
+2023-08-07T10:43:44.0815840Z [INFO] -------------------------------------------------------------
+2023-08-07T10:43:44.0829295Z [INFO] ------------------------------------------------------------------------
+2023-08-07T10:43:44.0829802Z [INFO] Reactor Summary for Sorald-parent 0.8.6-SNAPSHOT:
+2023-08-07T10:43:44.0831817Z [INFO] 
+2023-08-07T10:43:44.0833655Z [INFO] Sorald-parent ...................................... SUCCESS [  6.286 s]
+2023-08-07T10:43:44.0834411Z [INFO] Sorald-API ......................................... SUCCESS [ 11.030 s]
+2023-08-07T10:43:44.0835196Z [INFO] Sorald ............................................. FAILURE [  3.316 s]
+2023-08-07T10:43:44.0836746Z [INFO] ------------------------------------------------------------------------
+2023-08-07T10:43:44.0837286Z [INFO] BUILD FAILURE
+2023-08-07T10:43:44.0838055Z [INFO] ------------------------------------------------------------------------
+2023-08-07T10:43:44.0839703Z [INFO] Total time:  20.729 s
+2023-08-07T10:43:44.0841187Z [INFO] Finished at: 2023-08-07T10:43:44Z
+2023-08-07T10:43:44.0841854Z [INFO] ------------------------------------------------------------------------
+2023-08-07T10:43:44.0854427Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project sorald: Compilation failure
+2023-08-07T10:43:44.0855444Z [ERROR] /home/runner/work/sorald/sorald/sorald/src/main/java/sorald/sonar/SonarLintEngine.java:[163,17] cannot find symbol
+2023-08-07T10:43:44.0856424Z [ERROR]   symbol:   method addEnabledLanguages(java.util.Set<org.sonarsource.sonarlint.core.commons.Language>)
+2023-08-07T10:43:44.0857243Z [ERROR]   location: class org.sonarsource.sonarlint.core.analysis.api.AnalysisEngineConfiguration.Builder
+2023-08-07T10:43:44.0857924Z [ERROR] -> [Help 1]
+2023-08-07T10:43:44.0858165Z [ERROR] 
+2023-08-07T10:43:44.0858610Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-08-07T10:43:44.0859137Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-07T10:43:44.0859463Z [ERROR] 
+2023-08-07T10:43:44.0859857Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-07T10:43:44.0860568Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-07T10:43:44.0860919Z [ERROR] 
+2023-08-07T10:43:44.0862908Z [ERROR] After correcting the problems, you can resume the build with the command
+2023-08-07T10:43:44.0865128Z [ERROR]   mvn <args> -rf :sorald
+2023-08-07T10:43:44.1144200Z ##[error]Process completed with exit code 1.
+2023-08-07T10:43:44.1235339Z Post job cleanup.
+2023-08-07T10:43:44.3134600Z Post job cleanup.
+2023-08-07T10:43:44.4291321Z [command]/usr/bin/git version
+2023-08-07T10:43:44.4349170Z git version 2.41.0
+2023-08-07T10:43:44.4400433Z Temporarily overriding HOME='/home/runner/work/_temp/40f06f9a-a163-4383-9148-549ca27bb58f' before making global git config changes
+2023-08-07T10:43:44.4402197Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-07T10:43:44.4409148Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/sorald/sorald
+2023-08-07T10:43:44.4456951Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-07T10:43:44.4499734Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-08-07T10:43:44.4777486Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-07T10:43:44.4798502Z http.https://github.com/.extraheader
+2023-08-07T10:43:44.4813568Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-08-07T10:43:44.4855238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-08-07T10:43:44.5389230Z Cleaning up orphan processes

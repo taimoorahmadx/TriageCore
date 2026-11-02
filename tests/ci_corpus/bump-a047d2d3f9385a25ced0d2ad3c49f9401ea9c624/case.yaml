@@ -1,0 +1,75 @@
+repo: jenkinsci/incrementals-tools
+run_id: a047d2d3f9385a25ced0d2ad3c49f9401ea9c624
+head_sha: a047d2d3f9385a25ced0d2ad3c49f9401ea9c624
+run_attempts: []
+commits:
+- sha: a047d2d3f9385a25ced0d2ad3c49f9401ea9c624
+  author: dependabot[bot]
+  files:
+  - maven-plugin/pom.xml
+- sha: 7458f259294981775c9636d2f4e8d63c1c5b598b
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: b7f14f3c38905a0844d17eb999a7e751da19bba6
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: 49a6f2e08d8a68aba1e2d9d936fc0a80f7efd475
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: d863d0f8eb75e38b974be2c4a1617ed968226874
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: 3b53bf5fa7e18f55e3ff5223ea5cc69ad74ddf69
+  author: jglick
+  files:
+  - .github/workflows/maven.yml
+  - pom.xml
+- sha: a4d1bf9d9d7ea35f19fe53c3bd49abfa7ab79f28
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: 02f2e1952f0e6cebae49e3c5a8b3f37270c7c417
+  author: jglick
+  files:
+  - enforcer-rules/pom.xml
+  - git-changelist-maven-extension/pom.xml
+  - lib/pom.xml
+  - maven-plugin/pom.xml
+  - pom.xml
+- sha: 95b01179e7194931107f7ad2b1095fa5b482ab40
+  author: jglick
+  files:
+  - maven-plugin/pom.xml
+- sha: 8ea8bffe484100650f4d530cf2bca5f6e235dbca
+  author: jglick
+  files:
+  - .github/workflows/maven.yml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

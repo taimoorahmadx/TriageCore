@@ -1,0 +1,61 @@
+repo: octodns/octodns
+run_id: '161'
+head_sha: 3ed7a88e343c89b7153efea25db1b6287b2f0823
+run_attempts: []
+commits:
+- sha: 3ed7a88e343c89b7153efea25db1b6287b2f0823
+  author: Solvik
+  files:
+  - tests/test_octodns_processor_filter.py
+- sha: fa56dfaffddb1c5e183fabf10cd8b0d3d2619baf
+  author: ross
+  files:
+  - octodns/processor/filter.py
+- sha: 010e5039cca36eced58d4ad926f21770565e3f36
+  author: Solvik
+  files:
+  - octodns/processor/filter.py
+- sha: f9cb31b602c99761f5e9fc4cc02e31866a4e8494
+  author: Solvik
+  files:
+  - tests/test_octodns_processor_filter.py
+- sha: 354b8c2967532f3941ed1dabb7e89831a4570067
+  author: Solvik
+  files:
+  - octodns/processor/filter.py
+- sha: f5fd68bb7e847aaee098f6e1c4e3f291c53506ed
+  author: Solvik
+  files:
+  - octodns/processor/filter.py
+  - tests/test_octodns_processor_filter.py
+- sha: f5fcb1ae8a4c7f4ee01511521b0e592507bbc94a
+  author: ross
+  files:
+  - CHANGELOG.md
+  - README.md
+  - octodns/processor/filter.py
+  - tests/test_octodns_processor_filter.py
+- sha: 1b293253d9c5c03499ba0b7dad5a04fa11121756
+  author: ross
+  files:
+  - CHANGELOG.md
+  - README.md
+  - octodns/processor/filter.py
+  - tests/test_octodns_processor_filter.py
+- sha: bc809a0f85f5a7b83d58ebc73b4f01c8adf39663
+  author: ross
+  files:
+  - CHANGELOG.md
+  - octodns/record/base.py
+  - octodns/record/chunked.py
+  - tests/test_octodns_record_txt.py
+- sha: 65f4a48bc1a1a14cd14042d9041916134a886c82
+  author: ross
+  files:
+  - octodns/record/base.py
+  - octodns/record/chunked.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,28 @@
+===== format (3.8)/5_Running yapf.txt =====
+##[group]Run yapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \
+[36;1myapf --diff --recursive ./ --exclude 'sky/skylet/ray_patches/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/aws/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/gcp/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/azure/**' \[0m
+[36;1m    --exclude 'sky/skylet/providers/ibm/**'[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+--- ./sky/data/storage.py	(original)
++++ ./sky/data/storage.py	(reformatted)
+@@ -819,7 +819,7 @@
+         source = override_args.get('source', metadata.source)
+         name = override_args.get('name', metadata.storage_name)
+         # If the source is a list, it consists of local paths
+-        if not isinstance(source, list): 
++        if not isinstance(source, list):
+             if data_utils.is_cloud_store_url(source):
+                 name = None
+ 
+##[error]Process completed with exit code 1.

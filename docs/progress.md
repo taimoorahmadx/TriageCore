@@ -6,15 +6,14 @@ move resolved blockers out. Task status and what's next: `TODO.md` only.
 History lives in git and `docs/log/ai-usage-log.md`.
 
 ## Now
-- C3 remains blocked. The corpus contains 73 cases across 17 repositories; 45 are labeled: 41
-  `infra`, 3 `flaky`, 1 `bug`, and 0 `dependency`. The newly supplied candidate report is not a
-  usable dataset: its ten cited run IDs all returned HTTP 404 from the public GitHub Actions API,
-  and it provides no raw logs or verified commit/attempt metadata. C3 requires at least five reviewed
-  cases per cause, and the task says to stop when a cause remains below five after ten repositories.
-- 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Plan: `bug` + some
-  `dependency` from JetBrains `lca-ci-builds-repair` (real GHA logs, fix diffs), `dependency` from
-  BUMP if its repo has GHA logs, `flaky` from live mining or injected runs. C3 steps 6–10 added.
-  Keep the four causes. Fix diffs and rerun outcomes are label inputs only, never engine evidence.
+- C3 is in progress. The corpus has 209 cases: 73 mined, 68 lca, and 68 BUMP. The 45 reviewed
+  mined cases remain 41 `infra`, 3 `flaky`, 1 `bug`, and 0 `dependency`; every imported case still
+  has `label: null` and `label_source: null` for human review. One BUMP case was skipped because
+  GitHub returned 404 for its project repository; the importer also excludes records without a
+  matching GitHub Actions log.
+- 2026-11-02 dataset survey: `docs/research/ci-datasets-2026-11-02.md`. Fix diffs and BUMP
+  `failureCategory` write `suggested_label` only; they never enter engine evidence. Imported cases
+  keep `label` and `label_source` null until human review.
 ## Blockers / questions for the team
 - Supervisor scope review is pending for Q5 and C14; both are planned for the final demo.
 - Team review and rewrite of `docs/spec.md` and `docs/plan.md` in members' own words; both remain
@@ -27,13 +26,12 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - D1 needs a human-created VM, Docker, an API token, and firewall setup.
 - CI owner's contribution should be visible and explainable in the viva; the audit found no CI-owner
   commits on `main`. Agree how to evidence ownership without misrepresenting authorship.
-- C3 still needs at least five reviewed `bug`, `dependency`, and `flaky` cases. The user is
-  preparing a dataset; the candidate IDs provided so far are unavailable via GitHub API. Need five
-  accessible dependency-failure run URLs/logs (the current corpus has none). Do not assign labels
-  based only on `suggested_label`.
+- C3 still needs at least five reviewed `bug`, `dependency`, and `flaky` cases. The new lca and BUMP
+  cases need human review. Do not assign labels based only on `suggested_label`.
 - Verified: BUMP has `workflowLogs/`; Zheng/Lin Table 3 counts are recorded in the dataset survey.
   lca (`default` config, 68 cases) fixes are all code changes: lca gives `bug` only, and BUMP gives
-  `dependency`. All three human checks are done, so C3 importers can be built.
+  `dependency`. All three human checks are done; importers ran successfully, and imported cases
+  still need human review.
 - Owner approved (2026-11-02, not yet applied): `flaky` is defined by mechanism, and `rerun` is also
   correct for transient `infra`. Apply it in C12 with an ADR 006 addendum, never earlier.
 - C12 requires reviewed labels and enough cases for a

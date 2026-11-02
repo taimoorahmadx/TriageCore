@@ -1,0 +1,69 @@
+repo: canonical/cloud-init
+run_id: '26'
+head_sha: 385c14d0ae500918cff5565ea836884bfaa2bfa5
+run_attempts: []
+commits:
+- sha: 385c14d0ae500918cff5565ea836884bfaa2bfa5
+  author: holmanb
+  files:
+  - cloudinit/net/dhcp.py
+  - tests/unittests/net/test_dhcp.py
+- sha: 598e0560d64f949369962ebbce2c53207763f5d2
+  author: holmanb
+  files:
+  - cloudinit/config/cc_growpart.py
+  - tests/unittests/config/test_cc_growpart.py
+- sha: 0d787d0a262f70ff848b315633742aa8fc45a1de
+  author: apollo13
+  files:
+  - cloudinit/net/network_manager.py
+  - tests/unittests/net/test_net_rendering.py
+  - tests/unittests/test_net.py
+  - tools/.github-cla-signers
+- sha: 39abae9ec05c8fcca313d56aeee63d3b5c8eb0e3
+  author: blackboxsw
+  files:
+  - cloudinit/config/cc_apt_configure.py
+  - tests/integration_tests/util.py
+  - tests/unittests/config/test_cc_apt_configure.py
+- sha: 960faf87d83685ebb5a0b088c839f0bbf48d236d
+  author: blackboxsw
+  files:
+  - .pre-commit-config.yaml
+  - cloudinit/config/schema.py
+  - cloudinit/stages.py
+  - tests/unittests/config/test_schema.py
+- sha: 3274d2306adcff04918a95a325b498b8ab2e0598
+  author: blackboxsw
+  files:
+  - .pre-commit-config.yaml
+  - cloudinit/config/schema.py
+  - tests/unittests/config/test_schema.py
+- sha: 8937b5e5a94533a10a78100991afe559331242e0
+  author: igalic
+  files:
+  - config/cloud.cfg.tmpl
+- sha: 83f99b547c0c52b292fb6b3f56417c93df6156d1
+  author: igalic
+  files:
+  - tests/unittests/test_ds_identify.py
+  - tools/ds-identify
+- sha: ccf5bc4dc7f24700dae0c8cb28f08cb6537cd35a
+  author: igalic
+  files:
+  - sysvinit/freebsd/cloudinitlocal.tmpl
+  - sysvinit/netbsd/cloudconfig.tmpl
+  - sysvinit/netbsd/cloudfinal.tmpl
+  - sysvinit/netbsd/cloudinit.tmpl
+  - sysvinit/netbsd/cloudinitlocal.tmpl
+  - sysvinit/netbsd/dsidentify.tmpl
+- sha: b51536bc70cb6817d9729d2c682224234e2e4664
+  author: holmanb
+  files:
+  - doc/rtd/explanation/format.rst
+  - doc/rtd/reference/merging.rst
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,50 @@
+repo: django-import-export/django-import-export
+run_id: '83'
+head_sha: d4ca3713b196de2aee52fd0344d0eb9a9eaada64
+run_attempts: []
+commits:
+- sha: d4ca3713b196de2aee52fd0344d0eb9a9eaada64
+  author: RobTilton
+  files:
+  - import_export/admin.py
+- sha: 857bb8b9f8df6c042d03fd331ac04c8d4bc35d8d
+  author: matthewhegarty
+  files:
+  - import_export/admin.py
+- sha: c359d794dd0e4baf40be48d584193f88c2213f37
+  author: RobTilton
+  files:
+  - tests/core/tests/test_results.py
+- sha: 1fabda9feded385632cb1982147b8749024d3aa9
+  author: RobTilton
+  files:
+  - docs/changelog.rst
+- sha: 089acd8058b47a96edf26c0391d94d8614bf7292
+  author: RobTilton
+  files:
+  - docs/changelog.rst
+- sha: 9bd5fbd14859e7b8fc0a368d5f768725b48cc51a
+  author: pre-commit-ci-lite[bot]
+  files:
+  - tests/core/tests/test_results.py
+- sha: e98a7dead618ed7c047116cba0e4255860c2a555
+  author: RobTilton
+  files:
+  - docs/changelog.rst
+- sha: bb1ddbdf8897e6cc21ac2aad4e4d42f88e542ca2
+  author: RobTilton
+  files:
+  - tests/core/tests/test_resources/test_resources.py
+- sha: bef3acd258541a994ec64c82b47c25deaad07506
+  author: RobTilton
+  files:
+  - tests/core/tests/test_results.py
+- sha: 6c9e9df1afcd49c39ac8b1eb92fe2fae3ba58583
+  author: matthewhegarty
+  files:
+  - docs/release_notes.rst
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

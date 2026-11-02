@@ -1,0 +1,18 @@
+===== check_code_quality/5_Check quality.txt =====
+##[group]Run ruff check examples tests src utils scripts
+[36;1mruff check examples tests src utils scripts[0m
+[36;1mruff format examples tests src utils scripts --check[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+##[endgroup]
+src/diffusers/loaders/single_file_utils.py:23:8: F401 [*] `torch` imported but unused
+src/diffusers/loaders/single_file_utils.py:25:44: F401 [*] `safetensors.torch.load_file` imported but unused
+Found 2 errors.
+[*] 2 fixable with the `--fix` option.
+##[error]Process completed with exit code 1.

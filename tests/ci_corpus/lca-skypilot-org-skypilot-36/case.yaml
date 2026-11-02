@@ -1,0 +1,144 @@
+repo: skypilot-org/skypilot
+run_id: '36'
+head_sha: d2f64daf7608d00cb7a8659cfd1dee42c54bb12c
+run_attempts: []
+commits:
+- sha: d2f64daf7608d00cb7a8659cfd1dee42c54bb12c
+  author: Michaelvll
+  files:
+  - docs/source/conf.py
+- sha: 621587f6d4a93d24634ff0da988edc4ea3be291a
+  author: Michaelvll
+  files:
+  - docs/source/conf.py
+- sha: 348badce2c2d7741c8c4f44fe65e724e329e2dae
+  author: Michaelvll
+  files:
+  - docs/source/_static/custom.css
+- sha: 0c354838b65338c4f8a4c04d1be44abeb3794fe4
+  author: Michaelvll
+  files:
+  - docs/source/_static/custom.css
+- sha: 7a1dff96453b897f40e4451027ed83461e3a14ce
+  author: Michaelvll
+  files:
+  - .github/workflows/format.yml
+  - README.md
+  - docs/source/getting-started/installation.rst
+  - docs/source/images/cloud-logos-dark.png
+  - docs/source/images/cloud-logos-light.png
+  - docs/source/index.rst
+  - docs/source/reference/kubernetes/index.rst
+  - docs/source/serving/autoscaling.rst
+  - docs/source/serving/service-yaml-spec.rst
+  - docs/source/serving/sky-serve.rst
+  - examples/torch_ddp_benchmark/torch_ddp_benchmark.py
+  - examples/torch_ddp_benchmark/torch_ddp_benchmark.yaml
+  - examples/tpu/tpuvm_mnist.yaml
+  - format.sh
+  - requirements-dev.txt
+  - sky/__init__.py
+  - sky/adaptors/runpod.py
+  - sky/authentication.py
+  - sky/backends/backend_utils.py
+  - sky/backends/cloud_vm_ray_backend.py
+  - sky/cli.py
+  - sky/clouds/__init__.py
+  - sky/clouds/aws.py
+  - sky/clouds/gcp.py
+  - sky/clouds/kubernetes.py
+  - sky/clouds/runpod.py
+  - sky/clouds/service_catalog/__init__.py
+  - sky/clouds/service_catalog/common.py
+  - sky/clouds/service_catalog/runpod_catalog.py
+  - sky/clouds/utils/gcp_utils.py
+  - sky/data/mounting_utils.py
+  - sky/data/storage.py
+  - sky/exceptions.py
+  - sky/global_user_state.py
+  - sky/provision/__init__.py
+  - sky/provision/aws/__init__.py
+  - sky/provision/aws/instance.py
+  - sky/provision/azure/__init__.py
+  - sky/provision/azure/instance.py
+  - sky/provision/common.py
+  - sky/provision/gcp/__init__.py
+  - sky/provision/gcp/config.py
+  - sky/provision/gcp/constants.py
+  - sky/provision/gcp/instance.py
+  - sky/provision/gcp/instance_utils.py
+  - sky/provision/instance_setup.py
+  - sky/provision/kubernetes/__init__.py
+  - sky/provision/kubernetes/network.py
+  - sky/provision/kubernetes/network_utils.py
+  - sky/provision/provisioner.py
+  - sky/provision/runpod/__init__.py
+  - sky/provision/runpod/config.py
+  - sky/provision/runpod/instance.py
+  - sky/provision/runpod/utils.py
+  - sky/serve/service_spec.py
+  - sky/setup_files/MANIFEST.in
+  - sky/setup_files/setup.py
+  - sky/skylet/LICENSE
+  - sky/skylet/constants.py
+  - sky/skylet/providers/aws/__init__.py
+  - sky/skylet/providers/aws/cloudwatch/__init__.py
+  - sky/skylet/providers/aws/cloudwatch/cloudwatch_helper.py
+  - sky/skylet/providers/aws/config.py
+  - sky/skylet/providers/aws/node_provider.py
+  - sky/skylet/providers/aws/utils.py
+  - sky/skylet/providers/kubernetes/node_provider.py
+  - sky/spot/spot_state.py
+  - sky/templates/gcp-ray.yml.j2
+  - sky/templates/gcp-tpu-create.sh.j2
+  - sky/templates/gcp-tpu-delete.sh.j2
+  - sky/templates/kubernetes-ingress.yml.j2
+  - sky/templates/kubernetes-loadbalancer.yml.j2
+  - sky/templates/kubernetes-ray.yml.j2
+  - sky/templates/runpod-ray.yml.j2
+  - sky/utils/db_utils.py
+  - sky/utils/kubernetes_enums.py
+  - sky/utils/kubernetes_utils.py
+  - sky/utils/schemas.py
+  - tests/mypy_files.txt
+  - tests/test_optimizer_random_dag.py
+  - tests/test_smoke.py
+- sha: cbd8fc8b9a40b5309b6e4cf78f74c5831990100d
+  author: Michaelvll
+  files:
+  - sky/backends/cloud_vm_ray_backend.py
+  - sky/provision/common.py
+  - sky/provision/provisioner.py
+- sha: 351916f1f9ba6110db41943c97df54ce5b399c47
+  author: cblmemo
+  files:
+  - docs/source/index.rst
+  - docs/source/serving/autoscaling.rst
+  - docs/source/serving/service-yaml-spec.rst
+  - docs/source/serving/sky-serve.rst
+- sha: 488e2fe1d6de4912485287b682740334fb221b98
+  author: concretevitamin
+  files:
+  - sky/provision/provisioner.py
+- sha: c1f28bcb630b60f9a22d2303119f7ce62e700de3
+  author: Michaelvll
+  files:
+  - sky/backends/backend_utils.py
+  - sky/backends/cloud_vm_ray_backend.py
+  - sky/global_user_state.py
+  - sky/provision/common.py
+  - sky/provision/gcp/config.py
+  - sky/provision/gcp/instance.py
+  - sky/provision/gcp/instance_utils.py
+  - sky/provision/provisioner.py
+  - sky/spot/spot_state.py
+  - sky/utils/db_utils.py
+- sha: f0bb6bad945d21a3c79c8f56996699ae6fe1c322
+  author: cblmemo
+  files:
+  - sky/serve/service_spec.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

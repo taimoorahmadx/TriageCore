@@ -1,0 +1,53 @@
+repo: NemProject/nem
+run_id: 14fc5fa696f499cac48401b3a86882b3bf7d9b82
+head_sha: 14fc5fa696f499cac48401b3a86882b3bf7d9b82
+run_attempts: []
+commits:
+- sha: 14fc5fa696f499cac48401b3a86882b3bf7d9b82
+  author: dependabot[bot]
+  files:
+  - nis/pom.xml
+- sha: 1724729b449bd9c8447755af783b6b3f52ef0ec1
+  author: dependabot[bot]
+  files:
+  - deploy/pom.xml
+- sha: 4173209b42596ab74137b3bfde0cc8e48535c9f3
+  author: dependabot[bot]
+  files:
+  - peer/pom.xml
+- sha: 43019c209b85e63b3a895fef576ed883cd88ac8c
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 3f118cfae90fec3ea4bf90308e8639ccbfed734b
+  author: dependabot[bot]
+  files:
+  - peer/pom.xml
+- sha: 3689c9cb4492c65ef5f47304205e21f504508a44
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+- sha: 84a62535ecc3eb08575fa3f5ac4752d2e578b32b
+  author: dependabot[bot]
+  files:
+  - .github/workflows/auto-merge.yaml
+- sha: a520c9eaeab08fccb9b371e361af45cd1428f5bd
+  author: Wayonb
+  files:
+  - core/Jenkinsfile
+  - deploy/Jenkinsfile
+  - nis/Jenkinsfile
+  - peer/Jenkinsfile
+- sha: 74f80aaa1a9464dd6b0ee2fc0a3c469dad5f6318
+  author: dependabot[bot]
+  files:
+  - deploy/pom.xml
+- sha: d0639c5fd2967c49d7b5a2830c37dab482a9af48
+  author: dependabot[bot]
+  files:
+  - core/pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

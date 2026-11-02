@@ -1,0 +1,51 @@
+repo: skypilot-org/skypilot
+run_id: '35'
+head_sha: b639adb71066410b3b12d97a674ee7fcb51e9980
+run_attempts: []
+commits:
+- sha: b639adb71066410b3b12d97a674ee7fcb51e9980
+  author: jackyk02
+  files:
+  - sky/resources.py
+- sha: 3eb0778929ddea2c64a4b924da4767ea1e1964b7
+  author: jackyk02
+  files:
+  - sky/resources.py
+- sha: ae554f787aa245b6c0ba0fb6376f6e29b97d7054
+  author: jackyk02
+  files:
+  - sky/resources.py
+- sha: f409bb90e371d5bf7c1f8dc89f136e87c96327a1
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: df4adff9ca62f258a6b1fa98e462f850b6286086
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: f0c0699d1557ba110ff4c321c90254a055eb66df
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: caf9846717a28450b0454e61fbbae134815fc60d
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: a3e3311a1f99d1392d776c356cf290a710ec0ec4
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: 30059e00cd06180513bf61f03bf124f627ecf487
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+- sha: f480eda50f72cceaae5f4062a464d43816fde08d
+  author: jackyk02
+  files:
+  - sky/skylet/providers/gcp/node.py
+  - sky/skylet/providers/gcp/node_provider.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

@@ -1,0 +1,49 @@
+===== ubuntu/7_Run pre-commit on all files.txt =====
+##[group]Run pre-commit run --all-files
+[36;1mpre-commit run --all-files[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+##[endgroup]
+[INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Initializing environment for local.
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+[INFO] Installing environment for local.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+check json...........................................(no files to check)Skipped
+check yaml...............................................................Passed
+fix end of files.........................................................Passed
+trim trailing whitespace.................................................Passed
+mixed line ending........................................................Passed
+black....................................................................Passed
+ruff.....................................................................Passed
+mypy.....................................................................Failed
+- hook id: mypy
+- exit code: 1
+
+river/drift/kswin.py:112: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/nodes/sgt_nodes.py:45: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/nodes/hatc_nodes.py:140: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/stochastic_gradient_tree.py:56: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/anomaly/sad.py:68: error: Incompatible types in assignment (expression has type "Quantile", variable has type "Mean")  [assignment]
+river/forest/aggregated_mondrian_forest.py:173: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/forest/aggregated_mondrian_forest.py:295: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+Found 1 error in 1 file (checked 230 source files)
+river/drift/kswin.py:112: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/nodes/sgt_nodes.py:45: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/nodes/hatc_nodes.py:140: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/tree/stochastic_gradient_tree.py:56: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/anomaly/sad.py:68: error: Incompatible types in assignment (expression has type "Quantile", variable has type "Mean")  [assignment]
+river/forest/aggregated_mondrian_forest.py:173: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+river/forest/aggregated_mondrian_forest.py:295: note: By default the bodies of untyped functions are not checked, consider using --check-untyped-defs  [annotation-unchecked]
+Found 1 error in 1 file (checked 230 source files)
+
+##[error]Process completed with exit code 1.

@@ -1,0 +1,1323 @@
+===== Python 3.9 ubuntu-latest/7_Run tests.txt =====
+##[group]Run scripts/test
+[36;1mscripts/test[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
++ [ -z true ]
++ coverage run --debug config -m pytest
+-- config ----------------------------------------------------
+         attempted_config_files: .coveragerc
+                                 setup.cfg
+                                 tox.ini
+                                 pyproject.toml
+                         branch: False
+                   command_line: None
+                    concurrency: -none-
+                    config_file: /home/runner/work/uvicorn/uvicorn/pyproject.toml
+              config_files_read: /home/runner/work/uvicorn/uvicorn/pyproject.toml
+                        context: None
+                    cover_pylib: False
+                      data_file: .coverage
+                          debug: config
+                     debug_file: None
+               disable_warnings: -none-
+                dynamic_context: None
+                   exclude_also: -none-
+                   exclude_list: pragma: no cover
+                                 pragma: nocover
+                                 if TYPE_CHECKING:
+                                 if typing.TYPE_CHECKING:
+                                 raise NotImplementedError
+                                 py-not-win32
+                                 py-linux
+                                 py-gte-38
+                                 py-gte-39
+                                 py-lt-310
+                                 py-lt-311
+                      extra_css: None
+                     fail_under: 98.35
+                         format: None
+                       html_dir: htmlcov
+              html_skip_covered: None
+                html_skip_empty: None
+                     html_title: Coverage report
+                  ignore_errors: False
+     include_namespace_packages: False
+                    json_output: coverage.json
+              json_pretty_print: False
+             json_show_contexts: False
+                    lcov_output: coverage.lcov
+                       parallel: False
+            partial_always_list: while (True|1|False|0):
+                                 if (True|1|False|0):
+                   partial_list: #\s*(pragma|PRAGMA)[:\s]?\s*(no|NO)\s*(branch|BRANCH)
+                          paths: {}
+                 plugin_options: {'coverage_conditional_plugin': {'omit': {"sys_platform == 'win32'": ['uvicorn/loops/uvloop.py'], "sys_platform != 'win32'": ['uvicorn/loops/asyncio.py']}, 'rules': {'py-win32': "sys_platform == 'win32'", 'py-not-win32': "sys_platform != 'win32'", 'py-linux': "sys_platform == 'linux'", 'py-darwin': "sys_platform == 'darwin'", 'py-gte-38': 'sys_version_info >= (3, 8)', 'py-lt-38': 'sys_version_info < (3, 8)', 'py-gte-39': 'sys_version_info >= (3, 9)', 'py-lt-39': 'sys_version_info < (3, 9)', 'py-gte-310': 'sys_version_info >= (3, 10)', 'py-lt-310': 'sys_version_info < (3, 10)', 'py-gte-311': 'sys_version_info >= (3, 11)', 'py-lt-311': 'sys_version_info < (3, 11)'}}}
+                        plugins: coverage_conditional_plugin
+                      precision: 2
+                 relative_files: False
+                report_contexts: None
+                 report_include: None
+                    report_omit: None
+                    run_include: -none-
+                       run_omit: uvicorn/workers.py
+                                 uvicorn/__main__.py
+                                 uvicorn/loops/asyncio.py
+                  show_contexts: False
+                   show_missing: True
+                        sigterm: False
+                   skip_covered: True
+                     skip_empty: False
+                           sort: None
+                         source: None
+                    source_pkgs: uvicorn
+                                 tests
+                          timid: False
+                     xml_output: coverage.xml
+              xml_package_depth: 99
+-- end -------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.18, pytest-7.4.4, pluggy-1.3.0
+rootdir: /home/runner/work/uvicorn/uvicorn
+configfile: pyproject.toml
+plugins: anyio-3.7.1, mock-3.12.0
+collected 565 items
+
+tests/test_auto_detection.py ...                                         [  0%]
+tests/test_cli.py ..............                                         [  3%]
+tests/test_config.py ................................................... [ 12%]
+........................................................                 [ 21%]
+tests/test_default_headers.py ......                                     [ 23%]
+tests/test_lifespan.py ................                                  [ 25%]
+tests/test_main.py .........                                             [ 27%]
+tests/test_ssl.py ....                                                   [ 28%]
+tests/test_subprocess.py ..                                              [ 28%]
+tests/importer/test_importer.py .......                                  [ 29%]
+tests/middleware/test_logging.py ..............                          [ 32%]
+tests/middleware/test_message_logger.py ..                               [ 32%]
+tests/middleware/test_proxy_headers.py ...............                   [ 35%]
+tests/middleware/test_wsgi.py ...........                                [ 37%]
+tests/protocols/test_http.py ........................................... [ 44%]
+...............................................................          [ 55%]
+tests/protocols/test_utils.py ......                                     [ 56%]
+tests/protocols/test_websocket.py ...................................... [ 63%]
+........................................................................ [ 76%]
+........................................................FF......FF..FF.. [ 89%]
+....................                                                     [ 92%]
+tests/supervisors/test_multiprocess.py .                                 [ 92%]
+tests/supervisors/test_reload.py .....................................   [ 99%]
+tests/supervisors/test_signal.py ...                                     [100%]
+
+=================================== FAILURES ===================================
+____ test_server_reject_connection_with_body_nolength[websockets-httptools] ____
+
+    @contextlib.contextmanager
+    def map_httpcore_exceptions() -> typing.Iterator[None]:
+        try:
+>           yield
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:371: in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection_pool.py:268: in handle_async_request
+    raise exc
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection_pool.py:251: in handle_async_request
+    response = await connection.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection.py:103: in handle_async_request
+    return await self._connection.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:133: in handle_async_request
+    raise exc
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:111: in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:176: in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <AsyncHTTP11Connection ['http://127.0.0.1:60493', CLOSED, Request Count: 1]>
+timeout = 5.0
+
+    async def _receive_event(
+        self, timeout: Optional[float] = None
+    ) -> Union[h11.Event, Type[h11.PAUSED]]:
+        while True:
+            with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+                event = self._h11_state.next_event()
+    
+            if event is h11.NEED_DATA:
+                data = await self._network_stream.read(
+                    self.READ_NUM_BYTES, timeout=timeout
+                )
+    
+                # If we feed this case through h11 we'll raise an exception like:
+                #
+                #     httpcore.RemoteProtocolError: can't handle event type
+                #     ConnectionClosed when role=SERVER and state=SEND_RESPONSE
+                #
+                # Which is accurate, but not very informative from an end-user
+                # perspective. Instead we handle this case distinctly and treat
+                # it as a ConnectError.
+                if data == b"" and self._h11_state.their_state == h11.SEND_RESPONSE:
+                    msg = "Server disconnected without sending a response."
+>                   raise RemoteProtocolError(msg)
+E                   httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:226: RemoteProtocolError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.httptools_impl.HttpToolsProtocol'>
+unused_tcp_port = 60493
+
+    @pytest.mark.anyio
+    async def test_server_reject_connection_with_body_nolength(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        # test that the server can send a response with a body but no content-length
+        async def app(scope: Scope, receive: ASGIReceiveCallable, send: ASGISendCallable):
+            assert scope["type"] == "websocket"
+            assert "extensions" in scope
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            await send(
+                {
+                    "type": "websocket.http.response.start",
+                    "status": 403,
+                    "headers": [],
+                }
+            )
+            await send({"type": "websocket.http.response.body", "body": b"hardbody"})
+    
+        async def websocket_session(url):
+            response = await wsresponse(url)
+            assert response.status_code == 403
+            assert response.content == b"hardbody"
+            if ws_protocol_cls == WSProtocol:  # pragma: no cover
+                # wsproto automatically makes the message chunked
+                assert response.headers["transfer-encoding"] == "chunked"
+            else:  # pragma: no cover
+                # websockets automatically adds a content-length
+                assert response.headers["content-length"] == "8"
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1219: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1201: in websocket_session
+    response = await wsresponse(url)
+tests/protocols/test_websocket.py:73: in wsresponse
+    return await client.get(url, headers=headers)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1786: in get
+    return await self.request(
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1559: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1646: in send
+    response = await self._send_handling_auth(
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1674: in _send_handling_auth
+    response = await self._send_handling_redirects(
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1711: in _send_handling_redirects
+    response = await self._send_single_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_client.py:1748: in _send_single_request
+    response = await transport.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:371: in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/contextlib.py:137: in __exit__
+    self.gen.throw(typ, value, traceback)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @contextlib.contextmanager
+    def map_httpcore_exceptions() -> typing.Iterator[None]:
+        try:
+            yield
+        except Exception as exc:
+            mapped_exc = None
+    
+            for from_exc, to_exc in HTTPCORE_EXC_MAP.items():
+                if not isinstance(exc, from_exc):
+                    continue
+                # We want to map to the most specific exception we can find.
+                # Eg if `exc` is an `httpcore.ReadTimeout`, we want to map to
+                # `httpx.ReadTimeout`, not just `httpx.TimeoutException`.
+                if mapped_exc is None or issubclass(to_exc, mapped_exc):
+                    mapped_exc = to_exc
+    
+            if mapped_exc is None:  # pragma: no cover
+                raise
+    
+            message = str(exc)
+>           raise mapped_exc(message) from exc
+E           httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:84: RemoteProtocolError
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1904]
+INFO:     Uvicorn running on http://127.0.0.1:60493 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 57402) - "WebSocket /" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1904]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:60493 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 57402) - "WebSocket /" 403
+INFO     uvicorn.error:server.py:229 connection rejected (403 Forbidden)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+_______ test_server_reject_connection_with_body_nolength[websockets-h11] _______
+
+    @contextlib.contextmanager
+    def map_httpcore_exceptions() -> typing.Iterator[None]:
+        try:
+>           yield
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:67: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpx/_transports/default.py:371: in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection_pool.py:268: in handle_async_request
+    raise exc
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection_pool.py:251: in handle_async_request
+    response = await connection.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/connection.py:103: in handle_async_request
+    return await self._connection.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:133: in handle_async_request
+    raise exc
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:111: in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:176: in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <AsyncHTTP11Connection ['http://127.0.0.1:54995', CLOSED, Request Count: 1]>
+timeout = 5.0
+
+    async def _receive_event(
+        self, timeout: Optional[float] = None
+    ) -> Union[h11.Event, Type[h11.PAUSED]]:
+        while True:
+            with map_exceptions({h11.RemoteProtocolError: RemoteProtocolError}):
+                event = self._h11_state.next_event()
+    
+            if event is h11.NEED_DATA:
+                data = await self._network_stream.read(
+                    self.READ_NUM_BYTES, timeout=timeout
+                )
+    
+                # If we feed this case through h11 we'll raise an exception like:
+                #
+                #     httpcore.RemoteProtocolError: can't handle event type
+                #     ConnectionClosed when role=SERVER and state=SEND_RESPONSE
+                #
+                # Which is accurate, but not very informative from an end-user
+                # perspective. Instead we handle this case distinctly and treat
+                # it as a ConnectError.
+                if data == b"" and self._h11_state.their_state == h11.SEND_RESPONSE:
+                    msg = "Server disconnected without sending a response."
+>                   raise RemoteProtocolError(msg)
+E                   httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/httpcore/_async/http11.py:226: RemoteProtocolError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.h11_impl.H11Protocol'>
+unused_tcp_port = 54995
+
+    @pytest.mark.anyio
+    async def test_server_reject_connection_with_body_nolength(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+[... 2594 lines removed by TriageCore ...]
+                # perspective. Instead we handle this case distinctly and treat
+                # it as a ConnectError.
+                if data == b"" and self._h11_state.their_state == h11.SEND_RESPONSE:
+                    msg = "Server disconnected without sending a response."
+>                   raise RemoteProtocolError(msg)
+E                   httpcore.RemoteProtocolError: Server disconnected without sending a response.
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpcore/_async/http11.py:226: RemoteProtocolError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.h11_impl.H11Protocol'>
+unused_tcp_port = 34651
+
+    @pytest.mark.anyio
+    async def test_server_reject_connection_with_body_nolength(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        # test that the server can send a response with a body but no content-length
+        async def app(scope: Scope, receive: ASGIReceiveCallable, send: ASGISendCallable):
+            assert scope["type"] == "websocket"
+            assert "extensions" in scope
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            await send(
+                {
+                    "type": "websocket.http.response.start",
+                    "status": 403,
+                    "headers": [],
+                }
+            )
+            await send({"type": "websocket.http.response.body", "body": b"hardbody"})
+    
+        async def websocket_session(url):
+            response = await wsresponse(url)
+            assert response.status_code == 403
+            assert response.content == b"hardbody"
+            if ws_protocol_cls == WSProtocol:  # pragma: no cover
+                # wsproto automatically makes the message chunked
+                assert response.headers["transfer-encoding"] == "chunked"
+            else:  # pragma: no cover
+                # websockets automatically adds a content-length
+                assert response.headers["content-length"] == "8"
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1219: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1201: in websocket_session
+    response = await wsresponse(url)
+tests/protocols/test_websocket.py:73: in wsresponse
+    return await client.get(url, headers=headers)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1786: in get
+    return await self.request(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1559: in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1646: in send
+    response = await self._send_handling_auth(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1674: in _send_handling_auth
+    response = await self._send_handling_redirects(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1711: in _send_handling_redirects
+    response = await self._send_single_request(request)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_client.py:1748: in _send_single_request
+    response = await transport.handle_async_request(request)
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_transports/default.py:370: in handle_async_request
+    with map_httpcore_exceptions():
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/contextlib.py:158: in __exit__
+    self.gen.throw(typ, value, traceback)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    @contextlib.contextmanager
+    def map_httpcore_exceptions() -> typing.Iterator[None]:
+        try:
+            yield
+        except Exception as exc:
+            mapped_exc = None
+    
+            for from_exc, to_exc in HTTPCORE_EXC_MAP.items():
+                if not isinstance(exc, from_exc):
+                    continue
+                # We want to map to the most specific exception we can find.
+                # Eg if `exc` is an `httpcore.ReadTimeout`, we want to map to
+                # `httpx.ReadTimeout`, not just `httpx.TimeoutException`.
+                if mapped_exc is None or issubclass(to_exc, mapped_exc):
+                    mapped_exc = to_exc
+    
+            if mapped_exc is None:  # pragma: no cover
+                raise
+    
+            message = str(exc)
+>           raise mapped_exc(message) from exc
+E           httpx.RemoteProtocolError: Server disconnected without sending a response.
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/httpx/_transports/default.py:84: RemoteProtocolError
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1915]
+INFO:     Uvicorn running on http://127.0.0.1:34651 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 33874) - "WebSocket /" 403
+INFO:     connection rejected (403 Forbidden)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1915]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:34651 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 33874) - "WebSocket /" 403
+INFO     uvicorn.error:server.py:229 connection rejected (403 Forbidden)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+____ test_server_reject_connection_with_missing_body[websockets-httptools] _____
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a54387b0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+>           status_line = await read_line(stream)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a54387b0>>
+
+    async def read_line(stream: asyncio.StreamReader) -> bytes:
+        """
+        Read a single line from ``stream``.
+    
+        CRLF is stripped from the return value.
+    
+        """
+        # Security: this is bounded by the StreamReader's limit (default = 32 KiB).
+        line = await stream.readline()
+        # Security: this guarantees header values are small (hard-coded = 8 KiB)
+        if len(line) > MAX_LINE:
+            raise SecurityError("line too long")
+        # Not mandatory but safe - https://www.rfc-editor.org/rfc/rfc7230.html#section-3.5
+        if not line.endswith(b"\r\n"):
+>           raise EOFError("line without CRLF")
+E           EOFError: line without CRLF
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:200: EOFError
+
+The above exception was the direct cause of the following exception:
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f98409d1750>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+>           status_code, reason, headers = await read_response(self.reader)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a54387b0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+            status_line = await read_line(stream)
+        except EOFError as exc:
+>           raise EOFError("connection closed while reading HTTP status line") from exc
+E           EOFError: connection closed while reading HTTP status line
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:122: EOFError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.httptools_impl.HttpToolsProtocol'>
+unused_tcp_port = 41033
+
+    @pytest.mark.anyio
+    async def test_server_reject_connection_with_missing_body(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        async def app(scope, receive, send):
+            assert scope["type"] == "websocket"
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            message = {
+                "type": "websocket.http.response.start",
+                "status": 404,
+                "headers": [(b"Content-Length", b"0"), (b"Content-Type", b"text/plain")],
+            }
+            await send(message)
+            # no further message
+    
+        async def websocket_session(url):
+            with pytest.raises(websockets.exceptions.InvalidStatusCode) as exc_info:
+                async with websockets.client.connect(url):
+                    pass  # pragma: no cover
+            assert exc_info.value.status_code == 404
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1298: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1286: in websocket_session
+    async with websockets.client.connect(url):
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:629: in __aenter__
+    return await self
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:647: in __await_impl_timeout__
+    return await self.__await_impl__()
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:654: in __await_impl__
+    await protocol.handshake(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:319: in handshake
+    status_code, response_headers = await self.read_http_response()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f98409d1750>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+            status_code, reason, headers = await read_response(self.reader)
+        except Exception as exc:
+>           raise InvalidMessage("did not receive a valid HTTP response") from exc
+E           websockets.exceptions.InvalidMessage: did not receive a valid HTTP response
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:141: InvalidMessage
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1915]
+INFO:     Uvicorn running on http://127.0.0.1:41033 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 36320) - "WebSocket /" 404
+INFO:     connection rejected (404 Not Found)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1915]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:41033 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 36320) - "WebSocket /" 404
+INFO     uvicorn.error:server.py:229 connection rejected (404 Not Found)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+_______ test_server_reject_connection_with_missing_body[websockets-h11] ________
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a5438500>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+>           status_line = await read_line(stream)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a5438500>>
+
+    async def read_line(stream: asyncio.StreamReader) -> bytes:
+        """
+        Read a single line from ``stream``.
+    
+        CRLF is stripped from the return value.
+    
+        """
+        # Security: this is bounded by the StreamReader's limit (default = 32 KiB).
+        line = await stream.readline()
+        # Security: this guarantees header values are small (hard-coded = 8 KiB)
+        if len(line) > MAX_LINE:
+            raise SecurityError("line too long")
+        # Not mandatory but safe - https://www.rfc-editor.org/rfc/rfc7230.html#section-3.5
+        if not line.endswith(b"\r\n"):
+>           raise EOFError("line without CRLF")
+E           EOFError: line without CRLF
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:200: EOFError
+
+The above exception was the direct cause of the following exception:
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840e04550>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+>           status_code, reason, headers = await read_response(self.reader)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a5438500>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+            status_line = await read_line(stream)
+        except EOFError as exc:
+>           raise EOFError("connection closed while reading HTTP status line") from exc
+E           EOFError: connection closed while reading HTTP status line
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:122: EOFError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.h11_impl.H11Protocol'>
+unused_tcp_port = 36033
+
+    @pytest.mark.anyio
+    async def test_server_reject_connection_with_missing_body(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        async def app(scope, receive, send):
+            assert scope["type"] == "websocket"
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            message = {
+                "type": "websocket.http.response.start",
+                "status": 404,
+                "headers": [(b"Content-Length", b"0"), (b"Content-Type", b"text/plain")],
+            }
+            await send(message)
+            # no further message
+    
+        async def websocket_session(url):
+            with pytest.raises(websockets.exceptions.InvalidStatusCode) as exc_info:
+                async with websockets.client.connect(url):
+                    pass  # pragma: no cover
+            assert exc_info.value.status_code == 404
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1298: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1286: in websocket_session
+    async with websockets.client.connect(url):
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:629: in __aenter__
+    return await self
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:647: in __await_impl_timeout__
+    return await self.__await_impl__()
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:654: in __await_impl__
+    await protocol.handshake(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:319: in handshake
+    status_code, response_headers = await self.read_http_response()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840e04550>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+            status_code, reason, headers = await read_response(self.reader)
+        except Exception as exc:
+>           raise InvalidMessage("did not receive a valid HTTP response") from exc
+E           websockets.exceptions.InvalidMessage: did not receive a valid HTTP response
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:141: InvalidMessage
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1915]
+INFO:     Uvicorn running on http://127.0.0.1:36033 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 50070) - "WebSocket /" 404
+INFO:     connection rejected (404 Not Found)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1915]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:36033 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 50070) - "WebSocket /" 404
+INFO     uvicorn.error:server.py:229 connection rejected (404 Not Found)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+_ test_server_multiple_websocket_http_response_start_events[websockets-httptools] _
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58897f0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+>           status_line = await read_line(stream)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58897f0>>
+
+    async def read_line(stream: asyncio.StreamReader) -> bytes:
+        """
+        Read a single line from ``stream``.
+    
+        CRLF is stripped from the return value.
+    
+        """
+        # Security: this is bounded by the StreamReader's limit (default = 32 KiB).
+        line = await stream.readline()
+        # Security: this guarantees header values are small (hard-coded = 8 KiB)
+        if len(line) > MAX_LINE:
+            raise SecurityError("line too long")
+        # Not mandatory but safe - https://www.rfc-editor.org/rfc/rfc7230.html#section-3.5
+        if not line.endswith(b"\r\n"):
+>           raise EOFError("line without CRLF")
+E           EOFError: line without CRLF
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:200: EOFError
+
+The above exception was the direct cause of the following exception:
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840dc7fd0>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+>           status_code, reason, headers = await read_response(self.reader)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58897f0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+            status_line = await read_line(stream)
+        except EOFError as exc:
+>           raise EOFError("connection closed while reading HTTP status line") from exc
+E           EOFError: connection closed while reading HTTP status line
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:122: EOFError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.httptools_impl.HttpToolsProtocol'>
+unused_tcp_port = 57873
+
+    @pytest.mark.anyio
+    async def test_server_multiple_websocket_http_response_start_events(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        """
+        The server should raise an exception if it sends multiple
+        websocket.http.response.start events.
+        """
+        exception_message: typing.Optional[str] = None
+    
+        async def app(scope: Scope, receive: ASGIReceiveCallable, send: ASGISendCallable):
+            nonlocal exception_message
+            assert scope["type"] == "websocket"
+            assert "extensions" in scope
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            start_event: WebSocketResponseStartEvent = {
+                "type": "websocket.http.response.start",
+                "status": 404,
+                "headers": [(b"Content-Length", b"0"), (b"Content-Type", b"text/plain")],
+            }
+            await send(start_event)
+            try:
+                await send(start_event)
+            except Exception as exc:
+                exception_message = str(exc)
+    
+        async def websocket_session(url: str):
+            with pytest.raises(websockets.exceptions.InvalidStatusCode) as exc_info:
+                async with websockets.client.connect(url):
+                    pass
+            assert exc_info.value.status_code == 404
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1348: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1336: in websocket_session
+    async with websockets.client.connect(url):
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:629: in __aenter__
+    return await self
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:647: in __await_impl_timeout__
+    return await self.__await_impl__()
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:654: in __await_impl__
+    await protocol.handshake(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:319: in handshake
+    status_code, response_headers = await self.read_http_response()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840dc7fd0>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+            status_code, reason, headers = await read_response(self.reader)
+        except Exception as exc:
+>           raise InvalidMessage("did not receive a valid HTTP response") from exc
+E           websockets.exceptions.InvalidMessage: did not receive a valid HTTP response
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:141: InvalidMessage
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1915]
+INFO:     Uvicorn running on http://127.0.0.1:57873 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 59494) - "WebSocket /" 404
+INFO:     connection rejected (404 Not Found)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1915]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:57873 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 59494) - "WebSocket /" 404
+INFO     uvicorn.error:server.py:229 connection rejected (404 Not Found)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+__ test_server_multiple_websocket_http_response_start_events[websockets-h11] ___
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58460a0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+>           status_line = await read_line(stream)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58460a0>>
+
+    async def read_line(stream: asyncio.StreamReader) -> bytes:
+        """
+        Read a single line from ``stream``.
+    
+        CRLF is stripped from the return value.
+    
+        """
+        # Security: this is bounded by the StreamReader's limit (default = 32 KiB).
+        line = await stream.readline()
+        # Security: this guarantees header values are small (hard-coded = 8 KiB)
+        if len(line) > MAX_LINE:
+            raise SecurityError("line too long")
+        # Not mandatory but safe - https://www.rfc-editor.org/rfc/rfc7230.html#section-3.5
+        if not line.endswith(b"\r\n"):
+>           raise EOFError("line without CRLF")
+E           EOFError: line without CRLF
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:200: EOFError
+
+The above exception was the direct cause of the following exception:
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840e07e10>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+>           status_code, reason, headers = await read_response(self.reader)
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+stream = <StreamReader eof limit=32768 transport=<TCPTransport closed=True reading=False 0x5565a58460a0>>
+
+    async def read_response(stream: asyncio.StreamReader) -> Tuple[int, str, Headers]:
+        """
+        Read an HTTP/1.1 response and return ``(status_code, reason, headers)``.
+    
+        ``reason`` and ``headers`` are expected to contain only ASCII characters.
+        Other characters are represented with surrogate escapes.
+    
+        :func:`read_request` doesn't attempt to read the response body because
+        WebSocket handshake responses don't have one. If the response contains a
+        body, it may be read from ``stream`` after this coroutine returns.
+    
+        Args:
+            stream: Input to read the response from.
+    
+        Raises:
+            EOFError: If the connection is closed without a full HTTP response.
+            SecurityError: If the response exceeds a security limit.
+            ValueError: If the response isn't well formatted.
+    
+        """
+        # https://www.rfc-editor.org/rfc/rfc7230.html#section-3.1.2
+    
+        # As in read_request, parsing is simple because a fixed value is expected
+        # for version, status_code is a 3-digit number, and reason can be ignored.
+    
+        try:
+            status_line = await read_line(stream)
+        except EOFError as exc:
+>           raise EOFError("connection closed while reading HTTP status line") from exc
+E           EOFError: connection closed while reading HTTP status line
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/http.py:122: EOFError
+
+The above exception was the direct cause of the following exception:
+
+ws_protocol_cls = <class 'uvicorn.protocols.websockets.websockets_impl.WebSocketProtocol'>
+http_protocol_cls = <class 'uvicorn.protocols.http.h11_impl.H11Protocol'>
+unused_tcp_port = 39787
+
+    @pytest.mark.anyio
+    async def test_server_multiple_websocket_http_response_start_events(
+        ws_protocol_cls: "typing.Type[WSProtocol | WebSocketProtocol]",
+        http_protocol_cls: "typing.Type[H11Protocol | HttpToolsProtocol]",
+        unused_tcp_port: int,
+    ):
+        """
+        The server should raise an exception if it sends multiple
+        websocket.http.response.start events.
+        """
+        exception_message: typing.Optional[str] = None
+    
+        async def app(scope: Scope, receive: ASGIReceiveCallable, send: ASGISendCallable):
+            nonlocal exception_message
+            assert scope["type"] == "websocket"
+            assert "extensions" in scope
+            assert "websocket.http.response" in scope["extensions"]
+    
+            # Pull up first recv message.
+            message = await receive()
+            assert message["type"] == "websocket.connect"
+    
+            start_event: WebSocketResponseStartEvent = {
+                "type": "websocket.http.response.start",
+                "status": 404,
+                "headers": [(b"Content-Length", b"0"), (b"Content-Type", b"text/plain")],
+            }
+            await send(start_event)
+            try:
+                await send(start_event)
+            except Exception as exc:
+                exception_message = str(exc)
+    
+        async def websocket_session(url: str):
+            with pytest.raises(websockets.exceptions.InvalidStatusCode) as exc_info:
+                async with websockets.client.connect(url):
+                    pass
+            assert exc_info.value.status_code == 404
+    
+        config = Config(
+            app=app,
+            ws=ws_protocol_cls,
+            http=http_protocol_cls,
+            lifespan="off",
+            port=unused_tcp_port,
+        )
+        async with run_server(config):
+>           await websocket_session(f"ws://127.0.0.1:{unused_tcp_port}")
+
+tests/protocols/test_websocket.py:1348: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/protocols/test_websocket.py:1336: in websocket_session
+    async with websockets.client.connect(url):
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:629: in __aenter__
+    return await self
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:647: in __await_impl_timeout__
+    return await self.__await_impl__()
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:654: in __await_impl__
+    await protocol.handshake(
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:319: in handshake
+    status_code, response_headers = await self.read_http_response()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <websockets.legacy.client.WebSocketClientProtocol object at 0x7f9840e07e10>
+
+    async def read_http_response(self) -> Tuple[int, Headers]:
+        """
+        Read status line and headers from the HTTP response.
+    
+        If the response contains a body, it may be read from ``self.reader``
+        after this coroutine returns.
+    
+        Raises:
+            InvalidMessage: If the HTTP message is malformed or isn't an
+                HTTP/1.1 GET response.
+    
+        """
+        try:
+            status_code, reason, headers = await read_response(self.reader)
+        except Exception as exc:
+>           raise InvalidMessage("did not receive a valid HTTP response") from exc
+E           websockets.exceptions.InvalidMessage: did not receive a valid HTTP response
+
+/opt/hostedtoolcache/Python/3.11.7/x64/lib/python3.11/site-packages/websockets/legacy/client.py:141: InvalidMessage
+----------------------------- Captured stderr call -----------------------------
+INFO:     Started server process [1915]
+INFO:     Uvicorn running on http://127.0.0.1:39787 (Press CTRL+C to quit)
+INFO:     ('127.0.0.1', 43558) - "WebSocket /" 404
+INFO:     connection rejected (404 Not Found)
+INFO:     connection closed
+INFO:     Shutting down
+------------------------------ Captured log call -------------------------------
+INFO     uvicorn.error:server.py:77 Started server process [1915]
+INFO     uvicorn.error:server.py:219 Uvicorn running on http://127.0.0.1:39787 (Press CTRL+C to quit)
+INFO     uvicorn.error:websockets_impl.py:317 ('127.0.0.1', 43558) - "WebSocket /" 404
+INFO     uvicorn.error:server.py:229 connection rejected (404 Not Found)
+INFO     uvicorn.error:server.py:264 connection closed
+INFO     uvicorn.error:server.py:265 Shutting down
+=================== 6 failed, 559 passed in 66.08s (0:01:06) ===================
+##[error]Process completed with exit code 1.

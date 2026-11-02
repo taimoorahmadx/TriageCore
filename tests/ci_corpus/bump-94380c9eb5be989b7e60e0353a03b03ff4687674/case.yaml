@@ -1,0 +1,52 @@
+repo: pmckeown/dependency-track-maven-plugin
+run_id: 94380c9eb5be989b7e60e0353a03b03ff4687674
+head_sha: 94380c9eb5be989b7e60e0353a03b03ff4687674
+run_attempts: []
+commits:
+- sha: 94380c9eb5be989b7e60e0353a03b03ff4687674
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 6cb56d63e842172292ae08683626fdfee3c4abad
+  author: pmckeown
+  files:
+  - src/main/java/io/github/pmckeown/dependencytrack/policyviolation/report/PolicyViolationsReportGenerator.java
+- sha: 389295759e144baa4f91fee3adb29c1263d05f31
+  author: pmckeown
+  files:
+  - pom.xml
+- sha: 0e57b2e6e58b298e269540dff77f23336e45fa25
+  author: pmckeown
+  files:
+  - pom.xml
+- sha: 250c917b46453c6aeb2c804d20273cd1dad7d2d9
+  author: pmckeown
+  files:
+  - pom.xml
+- sha: e1246bc6bf1947ca75688cd8c517cb30e1fd2490
+  author: pmckeown
+  files:
+  - src/main/java/io/github/pmckeown/dependencytrack/finding/FindingsMojo.java
+- sha: 27f34d6d99eb36eef03c459e5011a9e9a9bdb076
+  author: pmckeown
+  files:
+  - pom.xml
+- sha: 46857bc1113b93bdf796bb366f6f295b6305033e
+  author: pmckeown
+  files:
+  - README.md
+  - src/main/java/io/github/pmckeown/dependencytrack/finding/FindingsMojo.java
+  - src/test/java/io/github/pmckeown/dependencytrack/finding/FindingsMojoTest.java
+- sha: 8b1bb8bd2d0f258cf8f8447799121b9f7b3f24aa
+  author: pmckeown
+  files:
+  - README.md
+- sha: c1971a8458ca2b06294ae8410ad7cb611cb1e44e
+  author: pmckeown
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

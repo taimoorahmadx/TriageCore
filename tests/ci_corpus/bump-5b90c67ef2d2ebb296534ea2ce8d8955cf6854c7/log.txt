@@ -1,0 +1,467 @@
+2023-07-01T19:05:47.5487607Z ##[group]Run mvn -B package --file pom.xml
+2023-07-01T19:05:47.5488087Z [36;1mmvn -B package --file pom.xml[0m
+2023-07-01T19:05:47.5547224Z shell: /usr/bin/bash -e {0}
+2023-07-01T19:05:47.5547526Z env:
+2023-07-01T19:05:47.5547879Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-07-01T19:05:47.5548356Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-07-01T19:05:47.5548973Z ##[endgroup]
+2023-07-01T19:05:49.2715215Z [INFO] Scanning for projects...
+2023-07-01T19:05:49.7045714Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.7.10/spring-boot-starter-parent-2.7.10.pom
+2023-07-01T19:05:50.0992247Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-parent/2.7.10/spring-boot-starter-parent-2.7.10.pom (9.2 kB at 23 kB/s)
+2023-07-01T19:05:50.1188497Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/2.7.10/spring-boot-dependencies-2.7.10.pom
+2023-07-01T19:05:50.1826425Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/2.7.10/spring-boot-dependencies-2.7.10.pom (110 kB at 1.7 MB/s)
+2023-07-01T19:05:50.2481926Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.14.1/java-driver-bom-4.14.1.pom
+2023-07-01T19:05:50.2658477Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.14.1/java-driver-bom-4.14.1.pom (4.1 kB at 230 kB/s)
+2023-07-01T19:05:50.2685827Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.18/metrics-bom-4.2.18.pom
+2023-07-01T19:05:50.2888603Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.18/metrics-bom-4.2.18.pom (7.5 kB at 377 kB/s)
+2023-07-01T19:05:50.2912617Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.18/metrics-parent-4.2.18.pom
+2023-07-01T19:05:50.3139889Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.18/metrics-parent-4.2.18.pom (20 kB at 889 kB/s)
+2023-07-01T19:05:50.3230458Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-bom/3.0.16/groovy-bom-3.0.16.pom
+2023-07-01T19:05:50.3427650Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/groovy/groovy-bom/3.0.16/groovy-bom-3.0.16.pom (26 kB at 1.3 MB/s)
+2023-07-01T19:05:50.3497171Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/13.0.15.Final/infinispan-bom-13.0.15.Final.pom
+2023-07-01T19:05:50.3736477Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/13.0.15.Final/infinispan-bom-13.0.15.Final.pom (18 kB at 761 kB/s)
+2023-07-01T19:05:50.3804781Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/13.0.15.Final/infinispan-build-configuration-parent-13.0.15.Final.pom
+2023-07-01T19:05:50.4005365Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/13.0.15.Final/infinispan-build-configuration-parent-13.0.15.Final.pom (16 kB at 791 kB/s)
+2023-07-01T19:05:50.4090534Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom
+2023-07-01T19:05:50.4340088Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/36/jboss-parent-36.pom (66 kB at 2.6 MB/s)
+2023-07-01T19:05:50.4520697Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.13.5/jackson-bom-2.13.5.pom
+2023-07-01T19:05:50.4757519Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.13.5/jackson-bom-2.13.5.pom (17 kB at 723 kB/s)
+2023-07-01T19:05:50.4802433Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.13/jackson-parent-2.13.pom
+2023-07-01T19:05:50.4949591Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.13/jackson-parent-2.13.pom (7.4 kB at 530 kB/s)
+2023-07-01T19:05:50.4975544Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/43/oss-parent-43.pom
+2023-07-01T19:05:50.5163914Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/43/oss-parent-43.pom (24 kB at 1.2 MB/s)
+2023-07-01T19:05:50.5285120Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/2.35/jersey-bom-2.35.pom
+2023-07-01T19:05:50.5455667Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/2.35/jersey-bom-2.35.pom (19 kB at 1.1 MB/s)
+2023-07-01T19:05:50.5484966Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom
+2023-07-01T19:05:50.5657865Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.6/project-1.0.6.pom (13 kB at 784 kB/s)
+2023-07-01T19:05:50.5687020Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.51.v20230217/jetty-bom-9.4.51.v20230217.pom
+2023-07-01T19:05:50.5895547Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/9.4.51.v20230217/jetty-bom-9.4.51.v20230217.pom (18 kB at 841 kB/s)
+2023-07-01T19:05:50.5926216Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom
+2023-07-01T19:05:50.6113437Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.8.2/junit-bom-5.8.2.pom (5.6 kB at 296 kB/s)
+2023-07-01T19:05:50.6137993Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.6.21/kotlin-bom-1.6.21.pom
+2023-07-01T19:05:50.6311662Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.6.21/kotlin-bom-1.6.21.pom (9.3 kB at 549 kB/s)
+2023-07-01T19:05:50.6360726Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.6.4/kotlinx-coroutines-bom-1.6.4.pom
+2023-07-01T19:05:50.6512371Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.6.4/kotlinx-coroutines-bom-1.6.4.pom (4.3 kB at 238 kB/s)
+2023-07-01T19:05:50.6535750Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.17.2/log4j-bom-2.17.2.pom
+2023-07-01T19:05:50.6683800Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.17.2/log4j-bom-2.17.2.pom (8.1 kB at 540 kB/s)
+2023-07-01T19:05:50.6698674Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/5/logging-parent-5.pom
+2023-07-01T19:05:50.6841994Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/5/logging-parent-5.pom (3.3 kB at 219 kB/s)
+2023-07-01T19:05:50.6855874Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom
+2023-07-01T19:05:50.6999422Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/24/apache-24.pom (20 kB at 1.4 MB/s)
+2023-07-01T19:05:50.7042258Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.9.9/micrometer-bom-1.9.9.pom
+2023-07-01T19:05:50.7194850Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.9.9/micrometer-bom-1.9.9.pom (7.1 kB at 471 kB/s)
+2023-07-01T19:05:50.7215296Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.5.1/mockito-bom-4.5.1.pom
+2023-07-01T19:05:50.7365040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/4.5.1/mockito-bom-4.5.1.pom (3.0 kB at 199 kB/s)
+2023-07-01T19:05:50.7383991Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.90.Final/netty-bom-4.1.90.Final.pom
+2023-07-01T19:05:50.7559106Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.90.Final/netty-bom-4.1.90.Final.pom (13 kB at 781 kB/s)
+2023-07-01T19:05:50.7576575Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+2023-07-01T19:05:50.7717406Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom (4.8 kB at 345 kB/s)
+2023-07-01T19:05:50.7740034Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.9.3/okhttp-bom-4.9.3.pom
+2023-07-01T19:05:50.8008360Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp-bom/4.9.3/okhttp-bom-4.9.3.pom (3.0 kB at 113 kB/s)
+2023-07-01T19:05:50.8156594Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/21.5.0.0/ojdbc-bom-21.5.0.0.pom
+2023-07-01T19:05:50.8309053Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/21.5.0.0/ojdbc-bom-21.5.0.0.pom (13 kB at 843 kB/s)
+2023-07-01T19:05:50.8333184Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/prometheus/simpleclient_bom/0.15.0/simpleclient_bom-0.15.0.pom
+2023-07-01T19:05:50.8502743Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/prometheus/simpleclient_bom/0.15.0/simpleclient_bom-0.15.0.pom (5.8 kB at 341 kB/s)
+2023-07-01T19:05:50.8517568Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/prometheus/parent/0.15.0/parent-0.15.0.pom
+2023-07-01T19:05:50.8667730Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/prometheus/parent/0.15.0/parent-0.15.0.pom (12 kB at 808 kB/s)
+2023-07-01T19:05:50.8692014Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom
+2023-07-01T19:05:50.8828988Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom (7.2 kB at 551 kB/s)
+2023-07-01T19:05:50.8853113Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/r2dbc/r2dbc-bom/Borca-SR2/r2dbc-bom-Borca-SR2.pom
+2023-07-01T19:05:50.9004000Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/r2dbc/r2dbc-bom/Borca-SR2/r2dbc-bom-Borca-SR2.pom (3.8 kB at 256 kB/s)
+2023-07-01T19:05:50.9025740Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2020.0.30/reactor-bom-2020.0.30.pom
+2023-07-01T19:05:50.9210598Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2020.0.30/reactor-bom-2020.0.30.pom (4.6 kB at 288 kB/s)
+2023-07-01T19:05:50.9221663Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/4.5.1/rest-assured-bom-4.5.1.pom
+2023-07-01T19:05:50.9373576Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/4.5.1/rest-assured-bom-4.5.1.pom (5.8 kB at 342 kB/s)
+2023-07-01T19:05:50.9395699Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/rsocket/rsocket-bom/1.1.3/rsocket-bom-1.1.3.pom
+2023-07-01T19:05:50.9534874Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/rsocket/rsocket-bom/1.1.3/rsocket-bom-1.1.3.pom (2.6 kB at 188 kB/s)
+2023-07-01T19:05:50.9556060Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2021.2.10/spring-data-bom-2021.2.10.pom
+2023-07-01T19:05:50.9728041Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2021.2.10/spring-data-bom-2021.2.10.pom (5.7 kB at 335 kB/s)
+2023-07-01T19:05:50.9750040Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.26/spring-framework-bom-5.3.26.pom
+2023-07-01T19:05:50.9915941Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/5.3.26/spring-framework-bom-5.3.26.pom (5.7 kB at 333 kB/s)
+2023-07-01T19:05:50.9936302Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/5.5.17/spring-integration-bom-5.5.17.pom
+2023-07-01T19:05:51.0132881Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/5.5.17/spring-integration-bom-5.5.17.pom (9.2 kB at 540 kB/s)
+2023-07-01T19:05:51.0134197Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/5.7.7/spring-security-bom-5.7.7.pom
+2023-07-01T19:05:51.0421872Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/5.7.7/spring-security-bom-5.7.7.pom (5.7 kB at 197 kB/s)
+2023-07-01T19:05:51.0453595Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/2021.2.1/spring-session-bom-2021.2.1.pom
+2023-07-01T19:05:51.0707997Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/2021.2.1/spring-session-bom-2021.2.1.pom (3.1 kB at 119 kB/s)
+2023-07-01T19:05:51.1248355Z [INFO] 
+2023-07-01T19:05:51.1252341Z [INFO] ---------------------------< com.lpvs:lpvs >----------------------------
+2023-07-01T19:05:51.1255421Z [INFO] Building lpvs 1.1.0
+2023-07-01T19:05:51.1259288Z [INFO]   from pom.xml
+2023-07-01T19:05:51.1262826Z [INFO] --------------------------------[ jar ]---------------------------------
+2023-07-01T19:05:51.1302495Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/2.7.9/spring-boot-maven-plugin-2.7.9.pom
+2023-07-01T19:05:51.1573854Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/2.7.9/spring-boot-maven-plugin-2.7.9.pom (3.0 kB at 104 kB/s)
+2023-07-01T19:05:51.1722009Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/2.7.9/spring-boot-maven-plugin-2.7.9.jar
+2023-07-01T19:05:51.1913377Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-maven-plugin/2.7.9/spring-boot-maven-plugin-2.7.9.jar (107 kB at 4.0 MB/s)
+2023-07-01T19:05:51.2010393Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.pom
+2023-07-01T19:05:51.2191215Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.pom (3.8 kB at 210 kB/s)
+2023-07-01T19:05:51.2249285Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.8/org.jacoco.build-0.8.8.pom
+2023-07-01T19:05:51.2498542Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.build/0.8.8/org.jacoco.build-0.8.8.pom (44 kB at 1.6 MB/s)
+2023-07-01T19:05:51.2587098Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.jar
+2023-07-01T19:05:51.2812982Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jacoco/jacoco-maven-plugin/0.8.8/jacoco-maven-plugin-0.8.8.jar (56 kB at 2.2 MB/s)
+2023-07-01T19:05:51.2922905Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.2.0/maven-resources-plugin-3.2.0.pom
+2023-07-01T19:05:51.3102224Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.2.0/maven-resources-plugin-3.2.0.pom (8.1 kB at 449 kB/s)
+2023-07-01T19:05:51.3122889Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom
+2023-07-01T19:05:51.3272147Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/34/maven-plugins-34.pom (11 kB at 712 kB/s)
+2023-07-01T19:05:51.3299770Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+2023-07-01T19:05:51.3489341Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 2.3 MB/s)
+2023-07-01T19:05:51.3517682Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom
+2023-07-01T19:05:51.3686173Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom (18 kB at 1.1 MB/s)
+2023-07-01T19:05:51.3738871Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.2.0/maven-resources-plugin-3.2.0.jar
+2023-07-01T19:05:51.3894010Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-resources-plugin/3.2.0/maven-resources-plugin-3.2.0.jar (33 kB at 1.8 MB/s)
+2023-07-01T19:05:51.3940342Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom
+2023-07-01T19:05:51.4103850Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-compiler-plugin/3.11.0/maven-compiler-plugin-3.11.0.pom (9.8 kB at 577 kB/s)
+2023-07-01T19:05:51.4126482Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-07-01T19:05:51.4304914Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 450 kB/s)
+2023-07-01T19:05:51.4347310Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+[... 2897 lines removed by TriageCore ...]
+2023-07-01T19:05:58.5861243Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/0.9.0.M2/aether-api-0.9.0.M2.jar (134 kB at 3.4 MB/s)
+2023-07-01T19:05:58.5862513Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar
+2023-07-01T19:05:58.5897441Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-impl/0.9.0.M2/aether-impl-0.9.0.M2.jar (145 kB at 3.4 MB/s)
+2023-07-01T19:05:58.5898405Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar
+2023-07-01T19:05:58.5905486Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/0.9.0.M2/aether-util-0.9.0.M2.jar (134 kB at 3.0 MB/s)
+2023-07-01T19:05:58.5906397Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.jar
+2023-07-01T19:05:58.5940004Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.4.2/plexus-classworlds-2.4.2.jar (47 kB at 999 kB/s)
+2023-07-01T19:05:58.5941256Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar
+2023-07-01T19:05:58.5951701Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.0.10/plexus-utils-3.0.10.jar (231 kB at 4.7 MB/s)
+2023-07-01T19:05:58.5954442Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar
+2023-07-01T19:05:58.5988180Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar (29 kB at 549 kB/s)
+2023-07-01T19:05:58.5989220Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.jar
+2023-07-01T19:05:58.6052518Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar (13 kB at 229 kB/s)
+2023-07-01T19:05:58.6054652Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0.jar
+2023-07-01T19:05:58.6078867Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar (4.2 kB at 70 kB/s)
+2023-07-01T19:05:58.6079832Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar
+2023-07-01T19:05:58.6134448Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-model/3.1.0/maven-model-3.1.0.jar (164 kB at 2.6 MB/s)
+2023-07-01T19:05:58.6135906Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar
+2023-07-01T19:05:58.6182309Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar (85 kB at 1.3 MB/s)
+2023-07-01T19:05:58.6188481Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus/0.0.0.M2a/org.eclipse.sisu.plexus-0.0.0.M2a.jar (202 kB at 2.8 MB/s)
+2023-07-01T19:05:58.6190644Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/10.0.1/guava-10.0.1.jar
+2023-07-01T19:05:58.6195626Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+2023-07-01T19:05:58.6231253Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar (5.8 kB at 78 kB/s)
+2023-07-01T19:05:58.6232120Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar
+2023-07-01T19:05:58.6238737Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/enterprise/cdi-api/1.0/cdi-api-1.0.jar (45 kB at 591 kB/s)
+2023-07-01T19:05:58.6240796Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+2023-07-01T19:05:58.6429753Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar (4.5 kB at 47 kB/s)
+2023-07-01T19:05:58.6430744Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.jar
+2023-07-01T19:05:58.6434769Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar (2.5 kB at 26 kB/s)
+2023-07-01T19:05:58.6435549Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/asm/asm/3.3.1/asm-3.3.1.jar
+2023-07-01T19:05:58.6451287Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar (33 kB at 340 kB/s)
+2023-07-01T19:05:58.6452271Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.jar
+2023-07-01T19:05:58.6552651Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar (357 kB at 3.3 MB/s)
+2023-07-01T19:05:58.6553853Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar
+2023-07-01T19:05:58.6564185Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/asm/asm/3.3.1/asm-3.3.1.jar (44 kB at 400 kB/s)
+2023-07-01T19:05:58.6565381Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar
+2023-07-01T19:05:58.6620141Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M2a/org.eclipse.sisu.inject-0.0.0.M2a.jar (202 kB at 1.8 MB/s)
+2023-07-01T19:05:58.6621399Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+2023-07-01T19:05:58.6671230Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/guava/guava/10.0.1/guava-10.0.1.jar (1.5 MB at 13 MB/s)
+2023-07-01T19:05:58.6673584Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar
+2023-07-01T19:05:58.6685381Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar (8.5 kB at 70 kB/s)
+2023-07-01T19:05:58.6728965Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar (154 kB at 1.2 MB/s)
+2023-07-01T19:05:58.6841658Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/3.2.0/maven-filtering-3.2.0.jar (52 kB at 380 kB/s)
+2023-07-01T19:05:58.6847288Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar (215 kB at 1.6 MB/s)
+2023-07-01T19:05:58.6913961Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar (502 kB at 3.5 MB/s)
+2023-07-01T19:05:58.7656513Z [INFO] Using 'UTF-8' encoding to copy filtered resources.
+2023-07-01T19:05:58.7657005Z [INFO] Using 'UTF-8' encoding to copy filtered properties files.
+2023-07-01T19:05:58.7687193Z [INFO] Copying 1 resource
+2023-07-01T19:05:58.7800836Z [INFO] Copying 1 resource
+2023-07-01T19:05:58.7811023Z [INFO] 
+2023-07-01T19:05:58.7811929Z [INFO] --- maven-compiler-plugin:3.11.0:compile (default-compile) @ lpvs ---
+2023-07-01T19:05:58.7843640Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+2023-07-01T19:05:58.8014352Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 343 kB/s)
+2023-07-01T19:05:58.8040504Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom
+2023-07-01T19:05:58.8176639Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom (4.7 kB at 339 kB/s)
+2023-07-01T19:05:58.8186932Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom
+2023-07-01T19:05:58.8313205Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom (6.4 kB at 489 kB/s)
+2023-07-01T19:05:58.8333085Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom
+2023-07-01T19:05:58.8488939Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom (815 B at 54 kB/s)
+2023-07-01T19:05:58.8497482Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom
+2023-07-01T19:05:58.8637884Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom (4.2 kB at 303 kB/s)
+2023-07-01T19:05:58.8653701Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom
+2023-07-01T19:05:58.8821796Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.pom (5.0 kB at 311 kB/s)
+2023-07-01T19:05:58.8833000Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom
+2023-07-01T19:05:58.9000170Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-languages/1.1.2/plexus-languages-1.1.2.pom (4.1 kB at 259 kB/s)
+2023-07-01T19:05:58.9007612Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+2023-07-01T19:05:58.9169429Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 1.6 MB/s)
+2023-07-01T19:05:58.9187181Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom
+2023-07-01T19:05:58.9349819Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.pom (17 kB at 1.1 MB/s)
+2023-07-01T19:05:58.9367178Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom
+2023-07-01T19:05:58.9638175Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.pom (1.1 kB at 39 kB/s)
+2023-07-01T19:05:58.9648162Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom
+2023-07-01T19:05:58.9794380Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler/2.13.0/plexus-compiler-2.13.0.pom (8.4 kB at 559 kB/s)
+2023-07-01T19:05:58.9804928Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom
+2023-07-01T19:05:58.9948191Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-components/10.0/plexus-components-10.0.pom (2.7 kB at 191 kB/s)
+2023-07-01T19:05:58.9971042Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom
+2023-07-01T19:05:59.0106846Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.pom (8.0 kB at 572 kB/s)
+2023-07-01T19:05:59.0124589Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom
+2023-07-01T19:05:59.0269253Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.pom (1.1 kB at 81 kB/s)
+2023-07-01T19:05:59.0296423Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom
+2023-07-01T19:05:59.0422133Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.1.1/plexus-component-annotations-2.1.1.pom (770 B at 59 kB/s)
+2023-07-01T19:05:59.0430625Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom
+2023-07-01T19:05:59.0814288Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.1.1/plexus-containers-2.1.1.pom (6.0 kB at 155 kB/s)
+2023-07-01T19:05:59.0824392Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom
+2023-07-01T19:05:59.0949548Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/6.5/plexus-6.5.pom (26 kB at 2.1 MB/s)
+2023-07-01T19:05:59.0967955Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom
+2023-07-01T19:05:59.1108884Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.pom (1.2 kB at 86 kB/s)
+2023-07-01T19:05:59.1118259Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom
+2023-07-01T19:05:59.1406064Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compilers/2.13.0/plexus-compilers-2.13.0.pom (1.3 kB at 46 kB/s)
+2023-07-01T19:05:59.1458037Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+2023-07-01T19:05:59.1468506Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2023-07-01T19:05:59.1487014Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar
+2023-07-01T19:05:59.1522908Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar
+2023-07-01T19:05:59.1526863Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2023-07-01T19:05:59.1645948Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 9.0 MB/s)
+2023-07-01T19:05:59.1649698Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar
+2023-07-01T19:05:59.1663922Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar (14 kB at 752 kB/s)
+2023-07-01T19:05:59.1665091Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar
+2023-07-01T19:05:59.1713536Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar (4.2 kB at 168 kB/s)
+2023-07-01T19:05:59.1714773Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar
+2023-07-01T19:05:59.1822310Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/qdox/qdox/2.0.3/qdox-2.0.3.jar (334 kB at 11 MB/s)
+2023-07-01T19:05:59.1823157Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar
+2023-07-01T19:05:59.1823992Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-java/1.1.2/plexus-java-1.1.2.jar (55 kB at 1.7 MB/s)
+2023-07-01T19:05:59.1824836Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-api/2.13.0/plexus-compiler-api-2.13.0.jar (27 kB at 844 kB/s)
+2023-07-01T19:05:59.1855181Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-manager/2.13.0/plexus-compiler-manager-2.13.0.jar (4.7 kB at 126 kB/s)
+2023-07-01T19:05:59.1869019Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar (267 kB at 7.0 MB/s)
+2023-07-01T19:05:59.1923410Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-compiler-javac/2.13.0/plexus-compiler-javac-2.13.0.jar (23 kB at 518 kB/s)
+2023-07-01T19:05:59.2785826Z [INFO] Changes detected - recompiling the module! :dependency
+2023-07-01T19:05:59.2811757Z [INFO] Compiling 28 source files with javac [debug deprecation release 11] to target/classes
+2023-07-01T19:06:01.1171959Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1192963Z [WARNING] COMPILATION WARNING : 
+2023-07-01T19:06:01.1222180Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1223533Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor': bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/annotation/AliasFor.class)
+2023-07-01T19:06:01.1224901Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1225794Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1226573Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1227304Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1227996Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1228828Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1229496Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1230185Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1230865Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1231524Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1232196Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1232860Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1233531Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1234197Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1234859Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1235510Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1236207Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1236869Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1237511Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1238162Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1238809Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1239448Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1240421Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1241090Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1241739Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1242778Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor': bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/annotation/AliasFor.class)
+2023-07-01T19:06:01.1243620Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1243999Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1244621Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1245293Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1245973Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1246657Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1247339Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1248003Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1248674Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1249342Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1250010Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1250653Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1251319Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1251992Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1252658Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1253298Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1253962Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1254622Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1255266Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1255915Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1256560Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1257211Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1257844Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1258550Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1259202Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1260406Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor': bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/annotation/AliasFor.class)
+2023-07-01T19:06:01.1261602Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1261982Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1262740Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1263422Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1264087Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1321021Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1321863Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1322555Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1323243Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1323912Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1324597Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1325257Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1325924Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1326595Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1327257Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1327911Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1328580Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1329233Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1329886Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1330535Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1331191Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1331830Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1332473Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1333122Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1333753Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1334806Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor': bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/annotation/AliasFor.class)
+2023-07-01T19:06:01.1335477Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1335863Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1336706Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1337400Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1338073Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1338747Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1339539Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1340216Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1341036Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1341717Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1342372Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1343033Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1343698Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1344381Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1345031Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1345691Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1346360Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1347027Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1347667Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1348317Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1348965Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1349604Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1350249Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1350897Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1351539Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-07-01T19:06:01.1351904Z [INFO] 96 warnings 
+2023-07-01T19:06:01.1352285Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1352724Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1353022Z [ERROR] COMPILATION ERROR : 
+2023-07-01T19:06:01.1353406Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1353928Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/util/LPVSFileUtil.java:[15,32] cannot access org.springframework.util.FileSystemUtils
+2023-07-01T19:06:01.1354733Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/util/FileSystemUtils.class)
+2023-07-01T19:06:01.1355201Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1355579Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1356296Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[15,37] cannot access org.springframework.core.task.TaskExecutor
+2023-07-01T19:06:01.1357155Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/task/TaskExecutor.class)
+2023-07-01T19:06:01.1357617Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1358099Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1358711Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/controller/GitHubWebhooksController.java:[27,32] cannot access org.springframework.util.StringUtils
+2023-07-01T19:06:01.1359534Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/util/StringUtils.class)
+2023-07-01T19:06:01.1359985Z     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1360362Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1360854Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[37,12] cannot find symbol
+2023-07-01T19:06:01.1361251Z   symbol:   class TaskExecutor
+2023-07-01T19:06:01.1361564Z   location: class com.lpvs.LicensePreValidationSystem
+2023-07-01T19:06:01.1361861Z [INFO] 4 errors 
+2023-07-01T19:06:01.1362244Z [INFO] -------------------------------------------------------------
+2023-07-01T19:06:01.1362706Z [INFO] ------------------------------------------------------------------------
+2023-07-01T19:06:01.1363022Z [INFO] BUILD FAILURE
+2023-07-01T19:06:01.1363424Z [INFO] ------------------------------------------------------------------------
+2023-07-01T19:06:01.1363728Z [INFO] Total time:  11.904 s
+2023-07-01T19:06:01.1364056Z [INFO] Finished at: 2023-07-01T19:06:01Z
+2023-07-01T19:06:01.1364481Z [INFO] ------------------------------------------------------------------------
+2023-07-01T19:06:01.1365214Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project lpvs: Compilation failure: Compilation failure: 
+2023-07-01T19:06:01.1365898Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/util/LPVSFileUtil.java:[15,32] cannot access org.springframework.util.FileSystemUtils
+2023-07-01T19:06:01.1366706Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/util/FileSystemUtils.class)
+2023-07-01T19:06:01.1367211Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1367590Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1368179Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[15,37] cannot access org.springframework.core.task.TaskExecutor
+2023-07-01T19:06:01.1369031Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/core/task/TaskExecutor.class)
+2023-07-01T19:06:01.1369527Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1369906Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1370484Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/controller/GitHubWebhooksController.java:[27,32] cannot access org.springframework.util.StringUtils
+2023-07-01T19:06:01.1371313Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar(/org/springframework/util/StringUtils.class)
+2023-07-01T19:06:01.1371798Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-07-01T19:06:01.1372179Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-07-01T19:06:01.1372790Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[37,12] cannot find symbol
+2023-07-01T19:06:01.1373197Z [ERROR]   symbol:   class TaskExecutor
+2023-07-01T19:06:01.1373542Z [ERROR]   location: class com.lpvs.LicensePreValidationSystem
+2023-07-01T19:06:01.1373878Z [ERROR] -> [Help 1]
+2023-07-01T19:06:01.1374084Z [ERROR] 
+2023-07-01T19:06:01.1374472Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-07-01T19:06:01.1375022Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-07-01T19:06:01.1375303Z [ERROR] 
+2023-07-01T19:06:01.1375647Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-07-01T19:06:01.1376139Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-07-01T19:06:01.1612590Z ##[error]Process completed with exit code 1.
+2023-07-01T19:06:01.1675984Z Post job cleanup.
+2023-07-01T19:06:01.3513899Z Post job cleanup.
+2023-07-01T19:06:01.4860485Z [command]/usr/bin/git version
+2023-07-01T19:06:01.4941264Z git version 2.41.0
+2023-07-01T19:06:01.5001931Z Temporarily overriding HOME='/home/runner/work/_temp/2cc12a10-f1cb-4eeb-84cc-05b3671346d6' before making global git config changes
+2023-07-01T19:06:01.5005550Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-01T19:06:01.5012430Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/LPVS/LPVS
+2023-07-01T19:06:01.5068555Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-01T19:06:01.5107146Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2023-07-01T19:06:01.5343115Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-01T19:06:01.5373426Z http.https://github.com/.extraheader
+2023-07-01T19:06:01.5384564Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-01T19:06:01.5424930Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2023-07-01T19:06:01.5911761Z Cleaning up orphan processes
+
+2023-07-01T19:06:01.5911741Z Cleaning up orphan processes
+
+2023-07-01T19:04:58.6122658Z ##[section]Starting: Prepare job build
+2023-07-01T19:04:58.6124822Z Evaluating strategy
+2023-07-01T19:04:58.6129524Z Creating job '__default'
+2023-07-01T19:04:58.6131993Z Evaluating timeout
+2023-07-01T19:04:58.6132035Z Evaluating cancel timeout
+2023-07-01T19:04:58.6132061Z Evaluating continue on error
+2023-07-01T19:04:58.6132089Z Evaluating target
+2023-07-01T19:04:58.6133563Z ##[section]Finishing: Prepare job build
+
+2023-07-01T19:05:47.1049785Z ##[group]Run actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2
+2023-07-01T19:05:47.1050177Z with:
+2023-07-01T19:05:47.1050424Z   java-version: 11
+2023-07-01T19:05:47.1050694Z   distribution: temurin
+2023-07-01T19:05:47.1050941Z   cache: maven
+2023-07-01T19:05:47.1051197Z   java-package: jdk
+2023-07-01T19:05:47.1051466Z   check-latest: false
+2023-07-01T19:05:47.1051716Z   server-id: github
+2023-07-01T19:05:47.1052003Z   server-username: GITHUB_ACTOR
+2023-07-01T19:05:47.1052341Z   server-password: GITHUB_TOKEN
+2023-07-01T19:05:47.1052641Z   overwrite-settings: true
+2023-07-01T19:05:47.1052931Z   job-status: success
+2023-07-01T19:05:47.1053395Z   token: ***
+2023-07-01T19:05:47.1053632Z ##[endgroup]
+2023-07-01T19:05:47.3190508Z ##[group]Installed distributions
+2023-07-01T19:05:47.3251455Z Resolved Java 11.0.19+7 from tool-cache
+2023-07-01T19:05:47.3251840Z Setting Java 11.0.19+7 as the default
+2023-07-01T19:05:47.3271063Z Creating toolchains.xml for JDK version 11 from temurin
+2023-07-01T19:05:47.3372734Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-01T19:05:47.3373416Z 
+2023-07-01T19:05:47.3373842Z Java configuration:
+2023-07-01T19:05:47.3374141Z   Distribution: temurin
+2023-07-01T19:05:47.3376005Z   Version: 11.0.19+7
+2023-07-01T19:05:47.3376604Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.19-7/x64
+2023-07-01T19:05:47.3377222Z 
+2023-07-01T19:05:47.3378386Z ##[endgroup]
+2023-07-01T19:05:47.3401902Z Creating settings.xml with server-id: github
+2023-07-01T19:05:47.3422778Z Writing to /home/runner/.m2/settings.xml
+2023-07-01T19:05:47.5342726Z maven cache is not found
+
+2023-07-01T19:05:45.2280552Z Current runner version: '2.305.0'
+2023-07-01T19:05:45.2306850Z ##[group]Operating System
+2023-07-01T19:05:45.2307369Z Ubuntu
+2023-07-01T19:05:45.2307691Z 22.04.2
+2023-07-01T19:05:45.2307983Z LTS
+2023-07-01T19:05:45.2308237Z ##[endgroup]
+2023-07-01T19:05:45.2308648Z ##[group]Runner Image
+2023-07-01T19:05:45.2309036Z Image: ubuntu-22.04
+2023-07-01T19:05:45.2309331Z Version: 20230625.1.0
+2023-07-01T19:05:45.2309890Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230625.1.0/images/linux/Ubuntu2204-Readme.md
+2023-07-01T19:05:45.2310674Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230625.1.0
+2023-07-01T19:05:45.2311108Z ##[endgroup]
+2023-07-01T19:05:45.2311484Z ##[group]Runner Image Provisioner
+2023-07-01T19:05:45.2311838Z 2.0.238.1
+2023-07-01T19:05:45.2312128Z ##[endgroup]
+2023-07-01T19:05:45.2312853Z ##[group]GITHUB_TOKEN Permissions
+2023-07-01T19:05:45.2313401Z Contents: read
+2023-07-01T19:05:45.2313735Z Metadata: read
+2023-07-01T19:05:45.2314351Z ##[endgroup]
+2023-07-01T19:05:45.2317809Z Secret source: Dependabot
+2023-07-01T19:05:45.2318336Z Prepare workflow directory
+2023-07-01T19:05:45.3046857Z Prepare all required actions
+2023-07-01T19:05:45.3235551Z Getting action download info
+2023-07-01T19:05:45.4992241Z Download action repository 'actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28' (SHA:d0651293c4a5a52e711f25b41b05b2212f385d28)
+2023-07-01T19:05:45.8514609Z Download action repository 'actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-07-01T19:05:46.2484739Z Complete job name: build

@@ -1,0 +1,53 @@
+repo: jcabi/jcabi-maven-plugin
+run_id: ed7fbdd75abc666d9d5a2794e9392ed33e75de9b
+head_sha: ed7fbdd75abc666d9d5a2794e9392ed33e75de9b
+run_attempts: []
+commits:
+- sha: ed7fbdd75abc666d9d5a2794e9392ed33e75de9b
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 91993a656ff99d40975b083b91fce986ce6ea4a7
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 9e45af5ef1ffd1d5f16f4fa7be29544c74a6f745
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: e13cac7aabd5959ec6f1763b535ca7d2cc8d96b0
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 1256b8e9bfd00359cab180015a2885a05d9dd695
+  author: renovate[bot]
+  files:
+  - src/it/ajc/pom.xml
+  - src/it/ajc_defaultCopy/pom.xml
+  - src/it/ajc_disableCopy/pom.xml
+- sha: c6d7c3d883b5176a0532516af477f77f96884ebb
+  author: renovate[bot]
+  files:
+  - src/it/ajc/pom.xml
+  - src/it/ajc_defaultCopy/pom.xml
+  - src/it/ajc_disableCopy/pom.xml
+- sha: c54ae98a9008d96f687dafc0a33fcf0f6319d1ab
+  author: rultor
+  files:
+  - pom.xml
+- sha: 1325b94615402e01acdbcc25c65ed6f3c3f57266
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: f45011cc4e2d6d889c9ee69986cfe40f3ca66af9
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 432c02f4b9bccb46e854f064503f13c557a1e1aa
+  author: renovate[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump

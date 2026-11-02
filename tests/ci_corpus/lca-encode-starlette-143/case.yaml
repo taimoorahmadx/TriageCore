@@ -1,0 +1,59 @@
+repo: encode/starlette
+run_id: '143'
+head_sha: cc0b066c05947c2a356d063d0137685205709c3e
+run_attempts: []
+commits:
+- sha: cc0b066c05947c2a356d063d0137685205709c3e
+  author: nicolaipre
+  files:
+  - starlette/routing.py
+- sha: 23c81da94b57701eabd43f582093442e6811f81d
+  author: Kludex
+  files:
+  - docs/release-notes.md
+  - starlette/__init__.py
+- sha: 80818a4c471b8c7b76eb15b67a704c1a55303d85
+  author: aminalaee
+  files:
+  - docs/config.md
+- sha: 13651500aaebd42bda3a003b8bec38c3c3ebf2a7
+  author: vagi8
+  files:
+  - docs/third-party-packages.md
+- sha: a2a3df31f29ff4a6743d68cc140615598ffb494c
+  author: dfioravanti
+  files:
+  - docs/middleware.md
+- sha: 1b766f4449a529c59a2164b933830b26a2a7d91f
+  author: Bernardoow
+  files:
+  - docs/middleware.md
+- sha: 3c8ab8e74a8c773624d6149d8c04cf5a09d4f1c4
+  author: neolooong
+  files:
+  - starlette/responses.py
+  - starlette/staticfiles.py
+  - tests/test_staticfiles.py
+- sha: efa03ebd64b9a1927cb6d0da61784b400fa5a0de
+  author: Kludex
+  files:
+  - starlette/testclient.py
+  - tests/middleware/test_session.py
+  - tests/test_testclient.py
+- sha: 9a213c1321593fcf9344161b043bdd7d1e600e24
+  author: Kludex
+  files:
+  - starlette/_exception_handler.py
+  - starlette/concurrency.py
+- sha: 6715eb4f4f1b80a093b98aacf7f998fac876918f
+  author: Kludex
+  files:
+  - pyproject.toml
+  - starlette/responses.py
+  - starlette/staticfiles.py
+  - tests/test_responses.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

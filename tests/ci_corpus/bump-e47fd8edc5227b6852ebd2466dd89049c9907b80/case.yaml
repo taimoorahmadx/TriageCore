@@ -1,0 +1,60 @@
+repo: Samsung/LPVS
+run_id: e47fd8edc5227b6852ebd2466dd89049c9907b80
+head_sha: e47fd8edc5227b6852ebd2466dd89049c9907b80
+run_attempts: []
+commits:
+- sha: e47fd8edc5227b6852ebd2466dd89049c9907b80
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 766c005ce579ff1917d96d8c0eab9b918da90b01
+  author: dependabot[bot]
+  files:
+  - .github/workflows/codeql.yml
+  - .github/workflows/scorecards.yml
+- sha: 57cbf217a1506ea289770762da9aeb3275b864ae
+  author: dependabot[bot]
+  files:
+  - .github/workflows/test-suite.yml
+- sha: eae1bba3a1d8b090b1589fbde27ace69f0ab9779
+  author: dependabot[bot]
+  files:
+  - .github/workflows/publish.yml
+- sha: b615e7932f59dbf86c2d30d2d2b155bb29231c20
+  author: dependabot[bot]
+  files:
+  - .github/workflows/publish.yml
+- sha: d0b65e4cc3548f4d8e32e9e16f26e33c61632d47
+  author: dependabot[bot]
+  files:
+  - .github/workflows/scorecards.yml
+- sha: 4d8d76879b155638d6d411b9b5acbe65d9836b7a
+  author: dependabot[bot]
+  files:
+  - .github/workflows/publish.yml
+- sha: 7bb1da3d6e4c8c441dd6b1869501385588f6a4d8
+  author: o-kopysov
+  files:
+  - src/main/java/com/lpvs/entity/LPVSPullRequest.java
+  - src/test/java/com/lpvs/entity/LPVSPullRequestFilesUrlResponseTest.java
+  - src/test/java/com/lpvs/entity/LPVSPullRequestTest.java
+- sha: d78687131ff67303539635701af5ae3deb685ebd
+  author: o-kopysov
+  files:
+  - .github/CONTRIBUTING.md
+  - .github/SECURITY.md
+  - README.md
+  - src/main/java/com/lpvs/controller/GitHubWebhooksController.java
+- sha: 4d6bc0148b1f6c540a42e4217641b17b07c8ff90
+  author: tdrozdovsky
+  files:
+  - .github/Docker_Usage.md
+  - .gitignore
+  - README.md
+  - docker-compose.yml
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

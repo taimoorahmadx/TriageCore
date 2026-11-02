@@ -1,0 +1,825 @@
+2023-07-24T00:07:19.9506940Z ##[group]Run false
+2023-07-24T00:07:19.9507459Z [36;1mfalse[0m
+2023-07-24T00:07:20.5271847Z shell: /usr/bin/bash -e {0}
+2023-07-24T00:07:20.5272314Z ##[endgroup]
+2023-07-24T00:07:20.5828724Z ##[error]Process completed with exit code 1.
+
+2023-07-24T00:05:37.4128760Z ##[group]Run s4u/setup-maven-action@v1.8.0
+2023-07-24T00:05:37.4129180Z with:
+2023-07-24T00:05:37.4129400Z   checkout-fetch-depth: 0
+2023-07-24T00:05:37.4129610Z   java-version: 17
+2023-07-24T00:05:37.4129830Z   java-distribution: zulu
+2023-07-24T00:05:37.4130040Z   maven-version: 3.9.0
+2023-07-24T00:05:37.4130270Z   settings-sonatypeSnapshots: true
+2023-07-24T00:05:37.4130980Z   settings-properties: [
+  {"sonar.pullrequest.key": "479"},
+  {"sonar.pullrequest.base": "master"},
+  {"sonar.pullrequest.branch": "s4u/pgpverify-maven-plugin/dependabot/maven/org.junit.jupiter-junit-jupiter-params-5.10.0"},
+  {"sonar.pullrequest.github.repository": "s4u/pgpverify-maven-plugin"},
+  {"sonar.login": "2de0e32b2b3108965f76a4713ba2028978c233ed"},
+  {"sonar.scm.revision": "19249139eb66616953c389242c22edde60c4ac2f"}
+]
+
+2023-07-24T00:05:37.4132550Z   cache-prefix: 2307-
+2023-07-24T00:05:37.4132810Z   cache-path-add: ~/.sonar/cache
+2023-07-24T00:05:37.4133070Z   checkout-persist-credentials: false
+2023-07-24T00:05:37.4133300Z   cache-path: ~/.m2/repository
+2023-07-24T00:05:37.4133580Z ##[endgroup]
+2023-07-24T00:05:37.4788930Z ##[group]Run actions/checkout@v3
+2023-07-24T00:05:37.4789230Z with:
+2023-07-24T00:05:37.4789440Z   fetch-depth: 0
+2023-07-24T00:05:37.4789690Z   persist-credentials: false
+2023-07-24T00:05:37.4789950Z   repository: s4u/pgpverify-maven-plugin
+2023-07-24T00:05:37.4790350Z   token: ***
+2023-07-24T00:05:37.4790550Z   ssh-strict: true
+2023-07-24T00:05:37.4790740Z   clean: true
+2023-07-24T00:05:37.4790960Z   sparse-checkout-cone-mode: true
+2023-07-24T00:05:37.4791170Z   lfs: false
+2023-07-24T00:05:37.4791440Z   submodules: false
+2023-07-24T00:05:37.4791660Z   set-safe-directory: true
+2023-07-24T00:05:37.4791860Z ##[endgroup]
+2023-07-24T00:05:39.2422290Z Syncing repository: s4u/pgpverify-maven-plugin
+2023-07-24T00:05:39.2424950Z ##[group]Getting Git version info
+2023-07-24T00:05:39.2425570Z Working directory is '/Users/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin'
+2023-07-24T00:05:39.2426250Z [command]/usr/local/bin/git version
+2023-07-24T00:05:39.2486950Z git version 2.41.0
+2023-07-24T00:05:39.2846930Z ##[endgroup]
+2023-07-24T00:05:39.2988650Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/75650ff6-4d0a-4bc7-a593-f8c4976fcc63/.gitconfig'
+2023-07-24T00:05:39.3059980Z Temporarily overriding HOME='/Users/runner/work/_temp/75650ff6-4d0a-4bc7-a593-f8c4976fcc63' before making global git config changes
+2023-07-24T00:05:39.3153730Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-24T00:05:39.3258280Z [command]/usr/local/bin/git config --global --add safe.directory /Users/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin
+2023-07-24T00:05:39.3501590Z Deleting the contents of '/Users/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin'
+2023-07-24T00:05:39.3577680Z ##[group]Initializing the repository
+2023-07-24T00:05:39.3612670Z [command]/usr/local/bin/git init /Users/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin
+2023-07-24T00:05:39.3696010Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-24T00:05:39.3797560Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-24T00:05:39.3900710Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-24T00:05:39.4003080Z hint: 
+2023-07-24T00:05:39.4105260Z hint: 	git config --global init.defaultBranch <name>
+2023-07-24T00:05:39.4212950Z hint: 
+2023-07-24T00:05:39.4215500Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-24T00:05:39.4289600Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-24T00:05:39.4357720Z hint: 
+2023-07-24T00:05:39.4420810Z hint: 	git branch -m <name>
+2023-07-24T00:05:39.4486360Z Initialized empty Git repository in /Users/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/.git/
+2023-07-24T00:05:39.4799710Z [command]/usr/local/bin/git remote add origin https://github.com/s4u/pgpverify-maven-plugin
+2023-07-24T00:05:39.5105220Z ##[endgroup]
+2023-07-24T00:05:39.5207070Z ##[group]Disabling automatic garbage collection
+2023-07-24T00:05:39.5308720Z [command]/usr/local/bin/git config --local gc.auto 0
+2023-07-24T00:05:39.5613120Z ##[endgroup]
+2023-07-24T00:05:39.5715040Z ##[group]Setting up auth
+2023-07-24T00:05:39.5827010Z [command]/usr/local/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-24T00:05:39.6183260Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-24T00:05:39.6489220Z [command]/usr/local/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-24T00:05:39.6809580Z [command]/usr/local/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-24T00:05:39.7686740Z [command]/usr/local/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-07-24T00:05:39.7988470Z ##[endgroup]
+2023-07-24T00:05:39.8083180Z ##[group]Fetching the repository
+2023-07-24T00:05:39.8177020Z [command]/usr/local/bin/git -c protocol.version=2 fetch --prune --progress --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +9e9d70a075d592a0dc53bcd660f394bc89dbdb7a:refs/remotes/pull/479/merge
+2023-07-24T00:05:40.2210010Z remote: Enumerating objects: 6497, done.        
+2023-07-24T00:05:40.2314860Z remote: Counting objects:   0% (1/1769)        
+2023-07-24T00:05:40.2416250Z remote: Counting objects:   1% (18/1769)        
+2023-07-24T00:05:40.2517730Z remote: Counting objects:   2% (36/1769)        
+2023-07-24T00:05:40.2619280Z remote: Counting objects:   3% (54/1769)        
+2023-07-24T00:05:40.2721040Z remote: Counting objects:   4% (71/1769)        
+2023-07-24T00:05:40.2721480Z remote: Counting objects:   5% (89/1769)        
+2023-07-24T00:05:40.2722040Z remote: Counting objects:   6% (107/1769)        
+2023-07-24T00:05:40.2823250Z remote: Counting objects:   7% (124/1769)        
+2023-07-24T00:05:40.2924450Z remote: Counting objects:   8% (142/1769)        
+2023-07-24T00:05:40.3025810Z remote: Counting objects:   9% (160/1769)        
+2023-07-24T00:05:40.3127230Z remote: Counting objects:  10% (177/1769)        
+2023-07-24T00:05:40.3232060Z remote: Counting objects:  11% (195/1769)        
+2023-07-24T00:05:40.3333400Z remote: Counting objects:  12% (213/1769)        
+2023-07-24T00:05:40.3434810Z remote: Counting objects:  13% (230/1769)        
+2023-07-24T00:05:40.3536230Z remote: Counting objects:  14% (248/1769)        
+2023-07-24T00:05:40.3638390Z remote: Counting objects:  15% (266/1769)        
+2023-07-24T00:05:40.3739970Z remote: Counting objects:  16% (284/1769)        
+2023-07-24T00:05:40.3841560Z remote: Counting objects:  17% (301/1769)        
+2023-07-24T00:05:40.3942830Z remote: Counting objects:  18% (319/1769)        
+2023-07-24T00:05:40.4044400Z remote: Counting objects:  19% (337/1769)        
+2023-07-24T00:05:40.4145780Z remote: Counting objects:  20% (354/1769)        
+2023-07-24T00:05:40.4247260Z remote: Counting objects:  21% (372/1769)        
+2023-07-24T00:05:40.4348840Z remote: Counting objects:  22% (390/1769)        
+2023-07-24T00:05:40.4450720Z remote: Counting objects:  23% (407/1769)        
+2023-07-24T00:05:40.4552340Z remote: Counting objects:  24% (425/1769)        
+2023-07-24T00:05:40.4654140Z remote: Counting objects:  25% (443/1769)        
+2023-07-24T00:05:40.4755890Z remote: Counting objects:  26% (460/1769)        
+2023-07-24T00:05:40.4857050Z remote: Counting objects:  27% (478/1769)        
+2023-07-24T00:05:40.4958400Z remote: Counting objects:  28% (496/1769)        
+2023-07-24T00:05:40.5060100Z remote: Counting objects:  29% (514/1769)        
+2023-07-24T00:05:40.5161520Z remote: Counting objects:  30% (531/1769)        
+2023-07-24T00:05:40.5262720Z remote: Counting objects:  31% (549/1769)        
+2023-07-24T00:05:40.5364920Z remote: Counting objects:  32% (567/1769)        
+2023-07-24T00:05:40.5432780Z remote: Counting objects:  33% (584/1769)        
+2023-07-24T00:05:40.5533920Z remote: Counting objects:  34% (602/1769)        
+2023-07-24T00:05:40.5634200Z remote: Counting objects:  35% (620/1769)        
+2023-07-24T00:05:40.5735580Z remote: Counting objects:  36% (637/1769)        
+2023-07-24T00:05:40.5835960Z remote: Counting objects:  37% (655/1769)        
+2023-07-24T00:05:40.5937360Z remote: Counting objects:  38% (673/1769)        
+2023-07-24T00:05:40.6038670Z remote: Counting objects:  39% (690/1769)        
+2023-07-24T00:05:40.6139080Z remote: Counting objects:  40% (708/1769)        
+2023-07-24T00:05:40.6236040Z remote: Counting objects:  41% (726/1769)        
+2023-07-24T00:05:40.6336550Z remote: Counting objects:  42% (743/1769)        
+2023-07-24T00:05:40.6437670Z remote: Counting objects:  43% (761/1769)        
+2023-07-24T00:05:40.6538500Z remote: Counting objects:  44% (779/1769)        
+2023-07-24T00:05:40.6639550Z remote: Counting objects:  45% (797/1769)        
+2023-07-24T00:05:40.6730610Z remote: Counting objects:  46% (814/1769)        
+2023-07-24T00:05:40.6829410Z remote: Counting objects:  47% (832/1769)        
+2023-07-24T00:05:40.6930660Z remote: Counting objects:  48% (850/1769)        
+2023-07-24T00:05:40.7030980Z remote: Counting objects:  49% (867/1769)        
+2023-07-24T00:05:40.7132150Z remote: Counting objects:  50% (885/1769)        
+2023-07-24T00:05:40.7232420Z remote: Counting objects:  51% (903/1769)        
+2023-07-24T00:05:40.7333640Z remote: Counting objects:  52% (920/1769)        
+2023-07-24T00:05:40.7434480Z remote: Counting objects:  53% (938/1769)        
+2023-07-24T00:05:40.7535140Z remote: Counting objects:  54% (956/1769)        
+2023-07-24T00:05:40.7636010Z remote: Counting objects:  55% (973/1769)        
+2023-07-24T00:05:40.7736590Z remote: Counting objects:  56% (991/1769)        
+2023-07-24T00:05:40.7837610Z remote: Counting objects:  57% (1009/1769)        
+2023-07-24T00:05:40.7938030Z remote: Counting objects:  58% (1027/1769)        
+2023-07-24T00:05:40.8039690Z remote: Counting objects:  59% (1044/1769)        
+2023-07-24T00:05:40.8140220Z remote: Counting objects:  60% (1062/1769)        
+2023-07-24T00:05:40.8241360Z remote: Counting objects:  61% (1080/1769)        
+2023-07-24T00:05:40.8341770Z remote: Counting objects:  62% (1097/1769)        
+2023-07-24T00:05:40.8443060Z remote: Counting objects:  63% (1115/1769)        
+2023-07-24T00:05:40.8543530Z remote: Counting objects:  64% (1133/1769)        
+2023-07-24T00:05:40.8644670Z remote: Counting objects:  65% (1150/1769)        
+2023-07-24T00:05:40.8745330Z remote: Counting objects:  66% (1168/1769)        
+2023-07-24T00:05:40.8845650Z remote: Counting objects:  67% (1186/1769)        
+2023-07-24T00:05:40.8946340Z remote: Counting objects:  68% (1203/1769)        
+2023-07-24T00:05:40.9047010Z remote: Counting objects:  69% (1221/1769)        
+2023-07-24T00:05:40.9147480Z remote: Counting objects:  70% (1239/1769)        
+2023-07-24T00:05:40.9247810Z remote: Counting objects:  71% (1256/1769)        
+2023-07-24T00:05:40.9348160Z remote: Counting objects:  72% (1274/1769)        
+2023-07-24T00:05:40.9448850Z remote: Counting objects:  73% (1292/1769)        
+2023-07-24T00:05:40.9549360Z remote: Counting objects:  74% (1310/1769)        
+2023-07-24T00:05:40.9649960Z remote: Counting objects:  75% (1327/1769)        
+2023-07-24T00:05:40.9750600Z remote: Counting objects:  76% (1345/1769)        
+2023-07-24T00:05:40.9851590Z remote: Counting objects:  77% (1363/1769)        
+2023-07-24T00:05:40.9953780Z remote: Counting objects:  78% (1380/1769)        
+2023-07-24T00:05:41.0127150Z remote: Counting objects:  79% (1398/1769)        
+2023-07-24T00:05:41.0536750Z remote: Counting objects:  80% (1416/1769)        
+2023-07-24T00:05:41.0537340Z remote: Counting objects:  81% (1433/1769)        
+2023-07-24T00:05:41.0638360Z remote: Counting objects:  82% (1451/1769)        
+2023-07-24T00:05:41.0740430Z remote: Counting objects:  83% (1469/1769)        
+2023-07-24T00:05:41.0841520Z remote: Counting objects:  84% (1486/1769)        
+2023-07-24T00:05:41.0942720Z remote: Counting objects:  85% (1504/1769)        
+2023-07-24T00:05:41.1043820Z remote: Counting objects:  86% (1522/1769)        
+2023-07-24T00:05:41.1145040Z remote: Counting objects:  87% (1540/1769)        
+2023-07-24T00:05:41.1246280Z remote: Counting objects:  88% (1557/1769)        
+2023-07-24T00:05:41.1347550Z remote: Counting objects:  89% (1575/1769)        
+2023-07-24T00:05:41.1453060Z remote: Counting objects:  90% (1593/1769)        
+2023-07-24T00:05:41.1554400Z remote: Counting objects:  91% (1610/1769)        
+2023-07-24T00:05:41.1655490Z remote: Counting objects:  92% (1628/1769)        
+2023-07-24T00:05:41.1756790Z remote: Counting objects:  93% (1646/1769)        
+2023-07-24T00:05:41.1859070Z remote: Counting objects:  94% (1663/1769)        
+2023-07-24T00:05:41.1960330Z remote: Counting objects:  95% (1681/1769)        
+2023-07-24T00:05:41.2061500Z remote: Counting objects:  96% (1699/1769)        
+2023-07-24T00:05:41.2162840Z remote: Counting objects:  97% (1716/1769)        
+2023-07-24T00:05:41.2264180Z remote: Counting objects:  98% (1734/1769)        
+2023-07-24T00:05:41.2365590Z remote: Counting objects:  99% (1752/1769)        
+2023-07-24T00:05:41.2466790Z remote: Counting objects: 100% (1769/1769)        
+2023-07-24T00:05:41.2568060Z remote: Counting objects: 100% (1769/1769), done.        
+2023-07-24T00:05:41.2669290Z remote: Compressing objects:   0% (1/774)        
+2023-07-24T00:05:41.2770460Z remote: Compressing objects:   1% (8/774)        
+2023-07-24T00:05:41.2871850Z remote: Compressing objects:   2% (16/774)        
+2023-07-24T00:05:41.2973100Z remote: Compressing objects:   3% (24/774)        
+2023-07-24T00:05:41.3074390Z remote: Compressing objects:   4% (31/774)        
+2023-07-24T00:05:41.3175580Z remote: Compressing objects:   5% (39/774)        
+2023-07-24T00:05:41.3277110Z remote: Compressing objects:   6% (47/774)        
+2023-07-24T00:05:41.3379000Z remote: Compressing objects:   7% (55/774)        
+2023-07-24T00:05:41.3480450Z remote: Compressing objects:   8% (62/774)        
+2023-07-24T00:05:41.3581960Z remote: Compressing objects:   9% (70/774)        
+2023-07-24T00:05:41.3683370Z remote: Compressing objects:  10% (78/774)        
+2023-07-24T00:05:41.3785280Z remote: Compressing objects:  11% (86/774)        
+2023-07-24T00:05:41.3889810Z remote: Compressing objects:  12% (93/774)        
+2023-07-24T00:05:41.3992530Z remote: Compressing objects:  13% (101/774)        
+2023-07-24T00:05:41.4093960Z remote: Compressing objects:  14% (109/774)        
+2023-07-24T00:05:41.4166700Z remote: Compressing objects:  15% (117/774)        
+2023-07-24T00:05:41.4268030Z remote: Compressing objects:  16% (124/774)        
+2023-07-24T00:05:41.4369660Z remote: Compressing objects:  17% (132/774)        
+2023-07-24T00:05:41.4466880Z remote: Compressing objects:  18% (140/774)        
+2023-07-24T00:05:41.4568260Z remote: Compressing objects:  19% (148/774)        
+2023-07-24T00:05:41.4668390Z remote: Compressing objects:  20% (155/774)        
+2023-07-24T00:05:41.4769840Z remote: Compressing objects:  21% (163/774)        
+2023-07-24T00:05:41.4829160Z remote: Compressing objects:  22% (171/774)        
+2023-07-24T00:05:41.4892040Z remote: Compressing objects:  23% (179/774)        
+2023-07-24T00:05:41.4962190Z remote: Compressing objects:  24% (186/774)        
+2023-07-24T00:05:41.5018640Z remote: Compressing objects:  25% (194/774)        
+2023-07-24T00:05:41.5073370Z remote: Compressing objects:  26% (202/774)        
+2023-07-24T00:05:41.5120210Z remote: Compressing objects:  27% (209/774)        
+2023-07-24T00:05:41.5164800Z remote: Compressing objects:  28% (217/774)        
+2023-07-24T00:05:41.5200430Z remote: Compressing objects:  29% (225/774)        
+2023-07-24T00:05:41.5250750Z remote: Compressing objects:  30% (233/774)        
+2023-07-24T00:05:41.5315030Z remote: Compressing objects:  31% (240/774)        
+2023-07-24T00:05:41.5377630Z remote: Compressing objects:  32% (248/774)        
+2023-07-24T00:05:41.5409430Z remote: Compressing objects:  33% (256/774)        
+2023-07-24T00:05:41.5432690Z remote: Compressing objects:  34% (264/774)        
+2023-07-24T00:05:41.5466730Z remote: Compressing objects:  35% (271/774)        
+2023-07-24T00:05:41.5480030Z remote: Compressing objects:  36% (279/774)        
+2023-07-24T00:05:41.5494070Z remote: Compressing objects:  37% (287/774)        
+2023-07-24T00:05:41.5506410Z remote: Compressing objects:  38% (295/774)        
+2023-07-24T00:05:41.5521210Z remote: Compressing objects:  39% (302/774)        
+2023-07-24T00:05:41.5540200Z remote: Compressing objects:  40% (310/774)        
+2023-07-24T00:05:41.5551990Z remote: Compressing objects:  41% (318/774)        
+2023-07-24T00:05:41.5577420Z remote: Compressing objects:  42% (326/774)        
+2023-07-24T00:05:41.5603800Z remote: Compressing objects:  43% (333/774)        
+2023-07-24T00:05:41.5605030Z remote: Compressing objects:  44% (341/774)        
+2023-07-24T00:05:41.5630890Z remote: Compressing objects:  45% (349/774)        
+2023-07-24T00:05:41.5656600Z remote: Compressing objects:  46% (357/774)        
+2023-07-24T00:05:41.5683260Z remote: Compressing objects:  47% (364/774)        
+2023-07-24T00:05:41.5684520Z remote: Compressing objects:  48% (372/774)        
+2023-07-24T00:05:41.5722870Z remote: Compressing objects:  49% (380/774)        
+2023-07-24T00:05:41.5823500Z remote: Compressing objects:  50% (387/774)        
+2023-07-24T00:05:41.5896060Z remote: Compressing objects:  51% (395/774)        
+2023-07-24T00:05:41.6084540Z remote: Compressing objects:  52% (403/774)        
+2023-07-24T00:05:41.6184160Z remote: Compressing objects:  53% (411/774)        
+2023-07-24T00:05:41.6243740Z remote: Compressing objects:  54% (418/774)        
+2023-07-24T00:05:41.6300320Z remote: Compressing objects:  55% (426/774)        
+2023-07-24T00:05:41.6355480Z remote: Compressing objects:  56% (434/774)        
+2023-07-24T00:05:41.6391190Z remote: Compressing objects:  57% (442/774)        
+2023-07-24T00:05:41.6435780Z remote: Compressing objects:  58% (449/774)        
+2023-07-24T00:05:41.6483170Z remote: Compressing objects:  59% (457/774)        
+2023-07-24T00:05:41.6507240Z remote: Compressing objects:  60% (465/774)        
+2023-07-24T00:05:41.6542370Z remote: Compressing objects:  61% (473/774)        
+2023-07-24T00:05:41.6571130Z remote: Compressing objects:  62% (480/774)        
+[... 44411 lines removed by TriageCore ...]
+2023-07-24T00:05:31.9260555Z remote: Compressing objects:   0% (1/376)        
+2023-07-24T00:05:31.9260981Z remote: Compressing objects:   1% (4/376)        
+2023-07-24T00:05:31.9261617Z remote: Compressing objects:   2% (8/376)        
+2023-07-24T00:05:31.9262157Z remote: Compressing objects:   3% (12/376)        
+2023-07-24T00:05:31.9262691Z remote: Compressing objects:   4% (16/376)        
+2023-07-24T00:05:31.9263251Z remote: Compressing objects:   5% (19/376)        
+2023-07-24T00:05:31.9263809Z remote: Compressing objects:   6% (23/376)        
+2023-07-24T00:05:31.9264318Z remote: Compressing objects:   7% (27/376)        
+2023-07-24T00:05:31.9264857Z remote: Compressing objects:   8% (31/376)        
+2023-07-24T00:05:31.9265398Z remote: Compressing objects:   9% (34/376)        
+2023-07-24T00:05:31.9265918Z remote: Compressing objects:  10% (38/376)        
+2023-07-24T00:05:31.9266470Z remote: Compressing objects:  11% (42/376)        
+2023-07-24T00:05:31.9267003Z remote: Compressing objects:  12% (46/376)        
+2023-07-24T00:05:31.9267532Z remote: Compressing objects:  13% (49/376)        
+2023-07-24T00:05:31.9268045Z remote: Compressing objects:  14% (53/376)        
+2023-07-24T00:05:31.9268645Z remote: Compressing objects:  15% (57/376)        
+2023-07-24T00:05:31.9269192Z remote: Compressing objects:  16% (61/376)        
+2023-07-24T00:05:31.9269722Z remote: Compressing objects:  17% (64/376)        
+2023-07-24T00:05:31.9270250Z remote: Compressing objects:  18% (68/376)        
+2023-07-24T00:05:31.9270798Z remote: Compressing objects:  19% (72/376)        
+2023-07-24T00:05:31.9271335Z remote: Compressing objects:  20% (76/376)        
+2023-07-24T00:05:31.9271868Z remote: Compressing objects:  21% (79/376)        
+2023-07-24T00:05:31.9272429Z remote: Compressing objects:  22% (83/376)        
+2023-07-24T00:05:31.9272959Z remote: Compressing objects:  23% (87/376)        
+2023-07-24T00:05:31.9273481Z remote: Compressing objects:  24% (91/376)        
+2023-07-24T00:05:31.9274004Z remote: Compressing objects:  25% (94/376)        
+2023-07-24T00:05:31.9274538Z remote: Compressing objects:  26% (98/376)        
+2023-07-24T00:05:31.9275081Z remote: Compressing objects:  27% (102/376)        
+2023-07-24T00:05:31.9276845Z remote: Compressing objects:  28% (106/376)        
+2023-07-24T00:05:31.9277192Z remote: Compressing objects:  29% (110/376)        
+2023-07-24T00:05:31.9277791Z remote: Compressing objects:  30% (113/376)        
+2023-07-24T00:05:31.9278309Z remote: Compressing objects:  31% (117/376)        
+2023-07-24T00:05:31.9278846Z remote: Compressing objects:  32% (121/376)        
+2023-07-24T00:05:31.9279386Z remote: Compressing objects:  33% (125/376)        
+2023-07-24T00:05:31.9279912Z remote: Compressing objects:  34% (128/376)        
+2023-07-24T00:05:31.9280449Z remote: Compressing objects:  35% (132/376)        
+2023-07-24T00:05:31.9280987Z remote: Compressing objects:  36% (136/376)        
+2023-07-24T00:05:31.9281521Z remote: Compressing objects:  37% (140/376)        
+2023-07-24T00:05:31.9282191Z remote: Compressing objects:  38% (143/376)        
+2023-07-24T00:05:31.9282742Z remote: Compressing objects:  39% (147/376)        
+2023-07-24T00:05:31.9283276Z remote: Compressing objects:  40% (151/376)        
+2023-07-24T00:05:31.9283833Z remote: Compressing objects:  41% (155/376)        
+2023-07-24T00:05:31.9285343Z remote: Compressing objects:  42% (158/376)        
+2023-07-24T00:05:31.9285838Z remote: Compressing objects:  43% (162/376)        
+2023-07-24T00:05:31.9286541Z remote: Compressing objects:  44% (166/376)        
+2023-07-24T00:05:31.9286877Z remote: Compressing objects:  45% (170/376)        
+2023-07-24T00:05:31.9287434Z remote: Compressing objects:  46% (173/376)        
+2023-07-24T00:05:31.9287989Z remote: Compressing objects:  47% (177/376)        
+2023-07-24T00:05:31.9288517Z remote: Compressing objects:  48% (181/376)        
+2023-07-24T00:05:31.9289050Z remote: Compressing objects:  49% (185/376)        
+2023-07-24T00:05:31.9289581Z remote: Compressing objects:  50% (188/376)        
+2023-07-24T00:05:31.9290143Z remote: Compressing objects:  51% (192/376)        
+2023-07-24T00:05:31.9290670Z remote: Compressing objects:  52% (196/376)        
+2023-07-24T00:05:31.9293027Z remote: Compressing objects:  53% (200/376)        
+2023-07-24T00:05:31.9300391Z remote: Compressing objects:  54% (204/376)        
+2023-07-24T00:05:31.9311471Z remote: Compressing objects:  55% (207/376)        
+2023-07-24T00:05:31.9319063Z remote: Compressing objects:  56% (211/376)        
+2023-07-24T00:05:31.9332268Z remote: Compressing objects:  57% (215/376)        
+2023-07-24T00:05:31.9341731Z remote: Compressing objects:  58% (219/376)        
+2023-07-24T00:05:31.9350163Z remote: Compressing objects:  59% (222/376)        
+2023-07-24T00:05:31.9360374Z remote: Compressing objects:  60% (226/376)        
+2023-07-24T00:05:31.9380824Z remote: Compressing objects:  61% (230/376)        
+2023-07-24T00:05:31.9381454Z remote: Compressing objects:  62% (234/376)        
+2023-07-24T00:05:31.9383478Z remote: Compressing objects:  63% (237/376)        
+2023-07-24T00:05:31.9392048Z remote: Compressing objects:  64% (241/376)        
+2023-07-24T00:05:31.9398240Z remote: Compressing objects:  65% (245/376)        
+2023-07-24T00:05:31.9402969Z remote: Compressing objects:  66% (249/376)        
+2023-07-24T00:05:31.9409095Z remote: Compressing objects:  67% (252/376)        
+2023-07-24T00:05:31.9409641Z remote: Compressing objects:  68% (256/376)        
+2023-07-24T00:05:31.9411340Z remote: Compressing objects:  69% (260/376)        
+2023-07-24T00:05:31.9411948Z remote: Compressing objects:  70% (264/376)        
+2023-07-24T00:05:31.9412531Z remote: Compressing objects:  71% (267/376)        
+2023-07-24T00:05:31.9413148Z remote: Compressing objects:  72% (271/376)        
+2023-07-24T00:05:31.9413913Z remote: Compressing objects:  73% (275/376)        
+2023-07-24T00:05:31.9414518Z remote: Compressing objects:  74% (279/376)        
+2023-07-24T00:05:31.9415149Z remote: Compressing objects:  75% (282/376)        
+2023-07-24T00:05:31.9415778Z remote: Compressing objects:  76% (286/376)        
+2023-07-24T00:05:31.9416395Z remote: Compressing objects:  77% (290/376)        
+2023-07-24T00:05:31.9417002Z remote: Compressing objects:  78% (294/376)        
+2023-07-24T00:05:31.9417634Z remote: Compressing objects:  79% (298/376)        
+2023-07-24T00:05:31.9418258Z remote: Compressing objects:  80% (301/376)        
+2023-07-24T00:05:31.9444111Z remote: Compressing objects:  81% (305/376)        
+2023-07-24T00:05:31.9444581Z remote: Compressing objects:  82% (309/376)        
+2023-07-24T00:05:31.9445418Z remote: Compressing objects:  83% (313/376)        
+2023-07-24T00:05:31.9445836Z remote: Compressing objects:  84% (316/376)        
+2023-07-24T00:05:31.9446628Z remote: Compressing objects:  85% (320/376)        
+2023-07-24T00:05:31.9447023Z remote: Compressing objects:  86% (324/376)        
+2023-07-24T00:05:31.9448159Z remote: Compressing objects:  87% (328/376)        
+2023-07-24T00:05:31.9448571Z remote: Compressing objects:  88% (331/376)        
+2023-07-24T00:05:31.9449423Z remote: Compressing objects:  89% (335/376)        
+2023-07-24T00:05:31.9449861Z remote: Compressing objects:  90% (339/376)        
+2023-07-24T00:05:31.9450632Z remote: Compressing objects:  91% (343/376)        
+2023-07-24T00:05:31.9451031Z remote: Compressing objects:  92% (346/376)        
+2023-07-24T00:05:31.9451802Z remote: Compressing objects:  93% (350/376)        
+2023-07-24T00:05:31.9452202Z remote: Compressing objects:  94% (354/376)        
+2023-07-24T00:05:31.9453591Z remote: Compressing objects:  95% (358/376)        
+2023-07-24T00:05:31.9453852Z remote: Compressing objects:  96% (361/376)        
+2023-07-24T00:05:31.9454096Z remote: Compressing objects:  97% (365/376)        
+2023-07-24T00:05:31.9454343Z remote: Compressing objects:  98% (369/376)        
+2023-07-24T00:05:31.9454577Z remote: Compressing objects:  99% (373/376)        
+2023-07-24T00:05:31.9454825Z remote: Compressing objects: 100% (376/376)        
+2023-07-24T00:05:31.9455098Z remote: Compressing objects: 100% (376/376), done.        
+2023-07-24T00:05:31.9607031Z Receiving objects:   0% (1/618)
+2023-07-24T00:05:31.9612414Z Receiving objects:   1% (7/618)
+2023-07-24T00:05:31.9617950Z Receiving objects:   2% (13/618)
+2023-07-24T00:05:31.9621967Z Receiving objects:   3% (19/618)
+2023-07-24T00:05:31.9624630Z Receiving objects:   4% (25/618)
+2023-07-24T00:05:31.9627936Z Receiving objects:   5% (31/618)
+2023-07-24T00:05:31.9633480Z Receiving objects:   6% (38/618)
+2023-07-24T00:05:31.9636194Z Receiving objects:   7% (44/618)
+2023-07-24T00:05:31.9639465Z Receiving objects:   8% (50/618)
+2023-07-24T00:05:31.9642072Z Receiving objects:   9% (56/618)
+2023-07-24T00:05:31.9644593Z Receiving objects:  10% (62/618)
+2023-07-24T00:05:31.9647273Z Receiving objects:  11% (68/618)
+2023-07-24T00:05:31.9649707Z Receiving objects:  12% (75/618)
+2023-07-24T00:05:31.9652317Z Receiving objects:  13% (81/618)
+2023-07-24T00:05:31.9655215Z Receiving objects:  14% (87/618)
+2023-07-24T00:05:31.9657670Z Receiving objects:  15% (93/618)
+2023-07-24T00:05:31.9659667Z Receiving objects:  16% (99/618)
+2023-07-24T00:05:31.9661746Z Receiving objects:  17% (106/618)
+2023-07-24T00:05:31.9663724Z Receiving objects:  18% (112/618)
+2023-07-24T00:05:31.9665612Z Receiving objects:  19% (118/618)
+2023-07-24T00:05:31.9667550Z Receiving objects:  20% (124/618)
+2023-07-24T00:05:31.9669758Z Receiving objects:  21% (130/618)
+2023-07-24T00:05:31.9672216Z Receiving objects:  22% (136/618)
+2023-07-24T00:05:31.9674160Z Receiving objects:  23% (143/618)
+2023-07-24T00:05:31.9676439Z Receiving objects:  24% (149/618)
+2023-07-24T00:05:31.9679301Z Receiving objects:  25% (155/618)
+2023-07-24T00:05:31.9681475Z Receiving objects:  26% (161/618)
+2023-07-24T00:05:31.9685039Z Receiving objects:  27% (167/618)
+2023-07-24T00:05:31.9687794Z Receiving objects:  28% (174/618)
+2023-07-24T00:05:31.9691951Z Receiving objects:  29% (180/618)
+2023-07-24T00:05:31.9695138Z Receiving objects:  30% (186/618)
+2023-07-24T00:05:31.9699763Z Receiving objects:  31% (192/618)
+2023-07-24T00:05:31.9704108Z Receiving objects:  32% (198/618)
+2023-07-24T00:05:31.9708515Z Receiving objects:  33% (204/618)
+2023-07-24T00:05:31.9713057Z Receiving objects:  34% (211/618)
+2023-07-24T00:05:31.9716443Z Receiving objects:  35% (217/618)
+2023-07-24T00:05:31.9719843Z Receiving objects:  36% (223/618)
+2023-07-24T00:05:31.9723488Z Receiving objects:  37% (229/618)
+2023-07-24T00:05:31.9726843Z Receiving objects:  38% (235/618)
+2023-07-24T00:05:31.9733318Z Receiving objects:  39% (242/618)
+2023-07-24T00:05:31.9738678Z Receiving objects:  40% (248/618)
+2023-07-24T00:05:31.9738942Z Receiving objects:  41% (254/618)
+2023-07-24T00:05:31.9741723Z Receiving objects:  42% (260/618)
+2023-07-24T00:05:31.9741961Z Receiving objects:  43% (266/618)
+2023-07-24T00:05:31.9744624Z Receiving objects:  44% (272/618)
+2023-07-24T00:05:31.9744880Z Receiving objects:  45% (279/618)
+2023-07-24T00:05:31.9747608Z Receiving objects:  46% (285/618)
+2023-07-24T00:05:31.9751277Z Receiving objects:  47% (291/618)
+2023-07-24T00:05:31.9753398Z Receiving objects:  48% (297/618)
+2023-07-24T00:05:31.9755207Z Receiving objects:  49% (303/618)
+2023-07-24T00:05:31.9757351Z Receiving objects:  50% (309/618)
+2023-07-24T00:05:31.9759820Z Receiving objects:  51% (316/618)
+2023-07-24T00:05:31.9775843Z Receiving objects:  52% (322/618)
+2023-07-24T00:05:31.9777615Z Receiving objects:  53% (328/618)
+2023-07-24T00:05:31.9782292Z Receiving objects:  54% (334/618)
+2023-07-24T00:05:31.9782607Z Receiving objects:  55% (340/618)
+2023-07-24T00:05:31.9786963Z Receiving objects:  56% (347/618)
+2023-07-24T00:05:31.9787269Z Receiving objects:  57% (353/618)
+2023-07-24T00:05:31.9787505Z Receiving objects:  58% (359/618)
+2023-07-24T00:05:31.9798680Z Receiving objects:  59% (365/618)
+2023-07-24T00:05:31.9799162Z Receiving objects:  60% (371/618)
+2023-07-24T00:05:31.9802218Z Receiving objects:  61% (377/618)
+2023-07-24T00:05:31.9803718Z Receiving objects:  62% (384/618)
+2023-07-24T00:05:31.9806523Z Receiving objects:  63% (390/618)
+2023-07-24T00:05:31.9847586Z Receiving objects:  64% (396/618)
+2023-07-24T00:05:31.9851110Z Receiving objects:  65% (402/618)
+2023-07-24T00:05:31.9852288Z Receiving objects:  66% (408/618)
+2023-07-24T00:05:31.9852588Z Receiving objects:  67% (415/618)
+2023-07-24T00:05:31.9876006Z Receiving objects:  68% (421/618)
+2023-07-24T00:05:31.9897696Z Receiving objects:  69% (427/618)
+2023-07-24T00:05:31.9898771Z Receiving objects:  70% (433/618)
+2023-07-24T00:05:31.9901147Z Receiving objects:  71% (439/618)
+2023-07-24T00:05:31.9901566Z Receiving objects:  72% (445/618)
+2023-07-24T00:05:31.9902534Z Receiving objects:  73% (452/618)
+2023-07-24T00:05:31.9902904Z Receiving objects:  74% (458/618)
+2023-07-24T00:05:31.9903207Z Receiving objects:  75% (464/618)
+2023-07-24T00:05:31.9905435Z Receiving objects:  76% (470/618)
+2023-07-24T00:05:31.9905810Z Receiving objects:  77% (476/618)
+2023-07-24T00:05:31.9906551Z Receiving objects:  78% (483/618)
+2023-07-24T00:05:31.9906931Z Receiving objects:  79% (489/618)
+2023-07-24T00:05:31.9913398Z Receiving objects:  80% (495/618)
+2023-07-24T00:05:31.9916887Z Receiving objects:  81% (501/618)
+2023-07-24T00:05:31.9929774Z Receiving objects:  82% (507/618)
+2023-07-24T00:05:31.9931737Z Receiving objects:  83% (513/618)
+2023-07-24T00:05:31.9951073Z Receiving objects:  84% (520/618)
+2023-07-24T00:05:31.9951529Z Receiving objects:  85% (526/618)
+2023-07-24T00:05:31.9954164Z Receiving objects:  86% (532/618)
+2023-07-24T00:05:31.9958510Z Receiving objects:  87% (538/618)
+2023-07-24T00:05:31.9958935Z Receiving objects:  88% (544/618)
+2023-07-24T00:05:31.9961181Z Receiving objects:  89% (551/618)
+2023-07-24T00:05:31.9962834Z Receiving objects:  90% (557/618)
+2023-07-24T00:05:31.9965394Z Receiving objects:  91% (563/618)
+2023-07-24T00:05:31.9968114Z Receiving objects:  92% (569/618)
+2023-07-24T00:05:31.9970853Z Receiving objects:  93% (575/618)
+2023-07-24T00:05:31.9973839Z Receiving objects:  94% (581/618)
+2023-07-24T00:05:31.9978504Z Receiving objects:  95% (588/618)
+2023-07-24T00:05:31.9978910Z Receiving objects:  96% (594/618)
+2023-07-24T00:05:32.0009340Z Receiving objects:  97% (600/618)
+2023-07-24T00:05:32.0047060Z Receiving objects:  98% (606/618)
+2023-07-24T00:05:32.0047728Z remote: Total 618 (delta 152), reused 466 (delta 71), pack-reused 0        
+2023-07-24T00:05:32.0048083Z Receiving objects:  99% (612/618)
+2023-07-24T00:05:32.0048684Z Receiving objects: 100% (618/618)
+2023-07-24T00:05:32.0049275Z Receiving objects: 100% (618/618), 573.95 KiB | 13.35 MiB/s, done.
+2023-07-24T00:05:32.0055787Z Resolving deltas:   0% (0/152)
+2023-07-24T00:05:32.0056380Z Resolving deltas:   1% (2/152)
+2023-07-24T00:05:32.0056913Z Resolving deltas:   2% (4/152)
+2023-07-24T00:05:32.0057477Z Resolving deltas:   3% (5/152)
+2023-07-24T00:05:32.0058015Z Resolving deltas:   4% (7/152)
+2023-07-24T00:05:32.0058575Z Resolving deltas:   5% (8/152)
+2023-07-24T00:05:32.0059138Z Resolving deltas:   6% (10/152)
+2023-07-24T00:05:32.0059694Z Resolving deltas:   7% (11/152)
+2023-07-24T00:05:32.0060218Z Resolving deltas:   8% (13/152)
+2023-07-24T00:05:32.0060779Z Resolving deltas:   9% (14/152)
+2023-07-24T00:05:32.0061315Z Resolving deltas:  10% (16/152)
+2023-07-24T00:05:32.0061866Z Resolving deltas:  11% (17/152)
+2023-07-24T00:05:32.0062405Z Resolving deltas:  12% (19/152)
+2023-07-24T00:05:32.0062940Z Resolving deltas:  13% (20/152)
+2023-07-24T00:05:32.0063498Z Resolving deltas:  14% (22/152)
+2023-07-24T00:05:32.0064059Z Resolving deltas:  15% (23/152)
+2023-07-24T00:05:32.0064537Z Resolving deltas:  16% (25/152)
+2023-07-24T00:05:32.0064929Z Resolving deltas:  17% (26/152)
+2023-07-24T00:05:32.0065143Z Resolving deltas:  18% (28/152)
+2023-07-24T00:05:32.0065339Z Resolving deltas:  19% (29/152)
+2023-07-24T00:05:32.0065542Z Resolving deltas:  20% (31/152)
+2023-07-24T00:05:32.0065843Z Resolving deltas:  21% (32/152)
+2023-07-24T00:05:32.0070514Z Resolving deltas:  22% (34/152)
+2023-07-24T00:05:32.0070909Z Resolving deltas:  23% (35/152)
+2023-07-24T00:05:32.0071114Z Resolving deltas:  24% (37/152)
+2023-07-24T00:05:32.0071387Z Resolving deltas:  25% (38/152)
+2023-07-24T00:05:32.0071587Z Resolving deltas:  26% (40/152)
+2023-07-24T00:05:32.0071857Z Resolving deltas:  27% (42/152)
+2023-07-24T00:05:32.0073821Z Resolving deltas:  28% (43/152)
+2023-07-24T00:05:32.0079011Z Resolving deltas:  30% (46/152)
+2023-07-24T00:05:32.0079579Z Resolving deltas:  31% (48/152)
+2023-07-24T00:05:32.0080110Z Resolving deltas:  32% (49/152)
+2023-07-24T00:05:32.0080598Z Resolving deltas:  33% (51/152)
+2023-07-24T00:05:32.0081165Z Resolving deltas:  34% (52/152)
+2023-07-24T00:05:32.0082316Z Resolving deltas:  35% (54/152)
+2023-07-24T00:05:32.0082841Z Resolving deltas:  36% (55/152)
+2023-07-24T00:05:32.0083368Z Resolving deltas:  37% (57/152)
+2023-07-24T00:05:32.0083930Z Resolving deltas:  38% (58/152)
+2023-07-24T00:05:32.0084465Z Resolving deltas:  39% (60/152)
+2023-07-24T00:05:32.0085010Z Resolving deltas:  40% (61/152)
+2023-07-24T00:05:32.0085540Z Resolving deltas:  41% (63/152)
+2023-07-24T00:05:32.0086116Z Resolving deltas:  42% (64/152)
+2023-07-24T00:05:32.0086692Z Resolving deltas:  43% (66/152)
+2023-07-24T00:05:32.0090645Z Resolving deltas:  44% (67/152)
+2023-07-24T00:05:32.0091078Z Resolving deltas:  45% (69/152)
+2023-07-24T00:05:32.0091283Z Resolving deltas:  46% (70/152)
+2023-07-24T00:05:32.0091494Z Resolving deltas:  47% (72/152)
+2023-07-24T00:05:32.0091685Z Resolving deltas:  48% (73/152)
+2023-07-24T00:05:32.0091885Z Resolving deltas:  49% (75/152)
+2023-07-24T00:05:32.0092104Z Resolving deltas:  50% (76/152)
+2023-07-24T00:05:32.0092293Z Resolving deltas:  51% (78/152)
+2023-07-24T00:05:32.0092496Z Resolving deltas:  52% (80/152)
+2023-07-24T00:05:32.0092784Z Resolving deltas:  53% (81/152)
+2023-07-24T00:05:32.0093536Z Resolving deltas:  54% (83/152)
+2023-07-24T00:05:32.0093933Z Resolving deltas:  55% (84/152)
+2023-07-24T00:05:32.0094473Z Resolving deltas:  56% (86/152)
+2023-07-24T00:05:32.0096103Z Resolving deltas:  57% (87/152)
+2023-07-24T00:05:32.0096575Z Resolving deltas:  58% (89/152)
+2023-07-24T00:05:32.0098327Z Resolving deltas:  59% (91/152)
+2023-07-24T00:05:32.0098720Z Resolving deltas:  60% (92/152)
+2023-07-24T00:05:32.0099607Z Resolving deltas:  61% (93/152)
+2023-07-24T00:05:32.0100045Z Resolving deltas:  62% (95/152)
+2023-07-24T00:05:32.0102821Z Resolving deltas:  63% (96/152)
+2023-07-24T00:05:32.0103197Z Resolving deltas:  64% (98/152)
+2023-07-24T00:05:32.0103983Z Resolving deltas:  65% (99/152)
+2023-07-24T00:05:32.0104337Z Resolving deltas:  66% (101/152)
+2023-07-24T00:05:32.0105133Z Resolving deltas:  67% (102/152)
+2023-07-24T00:05:32.0105487Z Resolving deltas:  68% (104/152)
+2023-07-24T00:05:32.0105796Z Resolving deltas:  69% (105/152)
+2023-07-24T00:05:32.0106552Z Resolving deltas:  70% (107/152)
+2023-07-24T00:05:32.0106928Z Resolving deltas:  71% (108/152)
+2023-07-24T00:05:32.0107655Z Resolving deltas:  72% (110/152)
+2023-07-24T00:05:32.0108037Z Resolving deltas:  73% (111/152)
+2023-07-24T00:05:32.0108745Z Resolving deltas:  74% (113/152)
+2023-07-24T00:05:32.0110333Z Resolving deltas:  75% (114/152)
+2023-07-24T00:05:32.0112829Z Resolving deltas:  76% (116/152)
+2023-07-24T00:05:32.0113379Z Resolving deltas:  77% (118/152)
+2023-07-24T00:05:32.0117179Z Resolving deltas:  78% (119/152)
+2023-07-24T00:05:32.0119617Z Resolving deltas:  79% (121/152)
+2023-07-24T00:05:32.0122562Z Resolving deltas:  80% (122/152)
+2023-07-24T00:05:32.0122950Z Resolving deltas:  81% (124/152)
+2023-07-24T00:05:32.0124626Z Resolving deltas:  82% (125/152)
+2023-07-24T00:05:32.0125013Z Resolving deltas:  83% (127/152)
+2023-07-24T00:05:32.0126129Z Resolving deltas:  84% (128/152)
+2023-07-24T00:05:32.0126712Z Resolving deltas:  85% (130/152)
+2023-07-24T00:05:32.0128914Z Resolving deltas:  86% (131/152)
+2023-07-24T00:05:32.0129350Z Resolving deltas:  87% (133/152)
+2023-07-24T00:05:32.0131618Z Resolving deltas:  88% (134/152)
+2023-07-24T00:05:32.0132026Z Resolving deltas:  89% (136/152)
+2023-07-24T00:05:32.0133588Z Resolving deltas:  90% (137/152)
+2023-07-24T00:05:32.0133972Z Resolving deltas:  91% (139/152)
+2023-07-24T00:05:32.0136172Z Resolving deltas:  92% (140/152)
+2023-07-24T00:05:32.0136543Z Resolving deltas:  93% (142/152)
+2023-07-24T00:05:32.0139126Z Resolving deltas:  94% (143/152)
+2023-07-24T00:05:32.0139632Z Resolving deltas:  95% (145/152)
+2023-07-24T00:05:32.0141844Z Resolving deltas:  96% (146/152)
+2023-07-24T00:05:32.0143959Z Resolving deltas:  97% (148/152)
+2023-07-24T00:05:32.0144334Z Resolving deltas:  98% (149/152)
+2023-07-24T00:05:32.0146421Z Resolving deltas:  99% (151/152)
+2023-07-24T00:05:32.0146971Z Resolving deltas: 100% (152/152)
+2023-07-24T00:05:32.0147725Z Resolving deltas: 100% (152/152), done.
+2023-07-24T00:05:32.0422572Z From https://github.com/s4u/pgpverify-maven-plugin
+2023-07-24T00:05:32.0423351Z  * [new ref]         9e9d70a075d592a0dc53bcd660f394bc89dbdb7a -> pull/479/merge
+2023-07-24T00:05:32.0535037Z ##[endgroup]
+2023-07-24T00:05:32.0535601Z ##[group]Determining the checkout info
+2023-07-24T00:05:32.0537040Z ##[endgroup]
+2023-07-24T00:05:32.0537581Z ##[group]Checking out the ref
+2023-07-24T00:05:32.0542277Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/479/merge
+2023-07-24T00:05:32.0867116Z Note: switching to 'refs/remotes/pull/479/merge'.
+2023-07-24T00:05:32.0867465Z 
+2023-07-24T00:05:32.0867919Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-24T00:05:32.0868938Z changes and commit them, and you can discard any commits you make in this
+2023-07-24T00:05:32.0869534Z state without impacting any branches by switching back to a branch.
+2023-07-24T00:05:32.0872484Z 
+2023-07-24T00:05:32.0872877Z If you want to create a new branch to retain commits you create, you may
+2023-07-24T00:05:32.0873373Z do so (now or later) by using -c with the switch command. Example:
+2023-07-24T00:05:32.0873558Z 
+2023-07-24T00:05:32.0873821Z   git switch -c <new-branch-name>
+2023-07-24T00:05:32.0873978Z 
+2023-07-24T00:05:32.0874082Z Or undo this operation with:
+2023-07-24T00:05:32.0874301Z 
+2023-07-24T00:05:32.0874488Z   git switch -
+2023-07-24T00:05:32.0874610Z 
+2023-07-24T00:05:32.0875075Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-24T00:05:32.0875360Z 
+2023-07-24T00:05:32.0875674Z HEAD is now at 9e9d70a Merge 19249139eb66616953c389242c22edde60c4ac2f into 10abdde0e14f196e65f9bb97852a7daac839eaf0
+2023-07-24T00:05:32.0880878Z ##[endgroup]
+2023-07-24T00:05:32.0924258Z [command]/usr/bin/git log -1 --format='%H'
+2023-07-24T00:05:32.0952707Z '9e9d70a075d592a0dc53bcd660f394bc89dbdb7a'
+2023-07-24T00:05:32.0963256Z ##[group]Removing auth
+2023-07-24T00:05:32.0968595Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-24T00:05:32.1000821Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-24T00:05:32.1306411Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-24T00:05:32.1331968Z http.https://github.com/.extraheader
+2023-07-24T00:05:32.1353901Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-07-24T00:05:32.1396723Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-24T00:05:32.1642749Z ##[endgroup]
+2023-07-24T00:05:32.1911590Z ##[group]Run actions/setup-java@v3
+2023-07-24T00:05:32.1911826Z with:
+2023-07-24T00:05:32.1912023Z   overwrite-settings: false
+2023-07-24T00:05:32.1912231Z   java-version: 8
+2023-07-24T00:05:32.1912590Z   distribution: zulu
+2023-07-24T00:05:32.1912793Z   java-package: jdk
+2023-07-24T00:05:32.1912993Z   check-latest: false
+2023-07-24T00:05:32.1913192Z   server-id: github
+2023-07-24T00:05:32.1913409Z   server-username: GITHUB_ACTOR
+2023-07-24T00:05:32.1913660Z   server-password: GITHUB_TOKEN
+2023-07-24T00:05:32.1913880Z   job-status: success
+2023-07-24T00:05:32.1914187Z   token: ***
+2023-07-24T00:05:32.1914370Z ##[endgroup]
+2023-07-24T00:05:32.5234302Z ##[group]Installed distributions
+2023-07-24T00:05:32.5273469Z Trying to resolve the latest version from remote
+2023-07-24T00:05:32.6618563Z Resolved latest version as 8.0.382+5
+2023-07-24T00:05:32.6619525Z Trying to download...
+2023-07-24T00:05:32.6620809Z Downloading Java 8.0.382+5 (Zulu) from https://cdn.azul.com/zulu/bin/zulu8.72.0.17-ca-jdk8.0.382-linux_x64.tar.gz ...
+2023-07-24T00:05:33.2586140Z Extracting Java archive...
+2023-07-24T00:05:33.2696982Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/1fd4328c-5031-4752-ab1b-2353edb69a6d -f /home/runner/work/_temp/e24281b9-eb3b-4907-8061-43218be1de95
+2023-07-24T00:05:35.6989736Z Java 8.0.382+5 was downloaded
+2023-07-24T00:05:35.6993603Z Setting Java 8.0.382+5 as the default
+2023-07-24T00:05:35.7013764Z Creating toolchains.xml for JDK version 8 from zulu
+2023-07-24T00:05:35.7109630Z Writing to /home/runner/.m2/toolchains.xml
+2023-07-24T00:05:35.7113134Z 
+2023-07-24T00:05:35.7113328Z Java configuration:
+2023-07-24T00:05:35.7114723Z   Distribution: zulu
+2023-07-24T00:05:35.7115004Z   Version: 8.0.382+5
+2023-07-24T00:05:35.7122241Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:35.7122479Z 
+2023-07-24T00:05:35.7124895Z ##[endgroup]
+2023-07-24T00:05:35.7159265Z Creating settings.xml with server-id: github
+2023-07-24T00:05:35.7159573Z Writing to /home/runner/.m2/settings.xml
+2023-07-24T00:05:35.9163281Z ##[group]Run actions/cache@v3
+2023-07-24T00:05:35.9163486Z with:
+2023-07-24T00:05:35.9163676Z   path: ~/.m2/repository
+
+
+2023-07-24T00:05:35.9164149Z   key: 2307-maven-site-Linux-jdk8-zulu-maven3.9.0-ac67ba6e661f66867448bc419f571b94b3c9ad5c393bee5b1d9ae3b5d4ebed07
+2023-07-24T00:05:35.9164642Z   restore-keys: 2307-maven-site-Linux-jdk8-zulu-maven3.9.0-
+2023-07-24T00:05:35.9164928Z   enableCrossOsArchive: false
+2023-07-24T00:05:35.9165158Z   fail-on-cache-miss: false
+2023-07-24T00:05:35.9165376Z   lookup-only: false
+2023-07-24T00:05:35.9165561Z env:
+2023-07-24T00:05:35.9165805Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:35.9166119Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:35.9166355Z ##[endgroup]
+2023-07-24T00:05:37.1314825Z Received 112228535 of 112228535 (100.0%), 118.9 MBs/sec
+2023-07-24T00:05:37.1316628Z Cache Size: ~107 MB (112228535 B)
+2023-07-24T00:05:37.1345251Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3a99fe5d-3f2b-440e-81de-0e0bf3d24044/cache.tzst -P -C /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin --use-compress-program unzstd
+2023-07-24T00:05:37.4912776Z Cache restored successfully
+2023-07-24T00:05:37.9349504Z Cache restored from key: 2307-maven-site-Linux-jdk8-zulu-maven3.9.0-080ab15a50430357fcc359e54c209aad7ec883f4a83e6ab949c3b029a15061fa
+2023-07-24T00:05:37.9506909Z ##[group]Run echo "version=$(mvn -q -v)" >> $GITHUB_OUTPUT
+2023-07-24T00:05:37.9507268Z [36;1mecho "version=$(mvn -q -v)" >> $GITHUB_OUTPUT[0m
+2023-07-24T00:05:37.9564807Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2023-07-24T00:05:37.9565074Z env:
+2023-07-24T00:05:37.9565335Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:37.9565658Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:37.9565921Z ##[endgroup]
+2023-07-24T00:05:38.6151400Z ##[group]Run stCarolas/setup-maven@v4.5
+2023-07-24T00:05:38.6151638Z with:
+2023-07-24T00:05:38.6151846Z   maven-version: 3.9.0
+2023-07-24T00:05:38.6152033Z env:
+2023-07-24T00:05:38.6152433Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:38.6152767Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:38.6153017Z ##[endgroup]
+2023-07-24T00:05:38.6944877Z downloading https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.0/apache-maven-3.9.0-bin.tar.gz
+2023-07-24T00:05:38.8449282Z [command]tar --version
+2023-07-24T00:05:38.8492335Z tar (GNU tar) 1.34
+2023-07-24T00:05:38.8492884Z Copyright (C) 2021 Free Software Foundation, Inc.
+2023-07-24T00:05:38.8493610Z License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+2023-07-24T00:05:38.8494202Z This is free software: you are free to change and redistribute it.
+2023-07-24T00:05:38.8494803Z There is NO WARRANTY, to the extent permitted by law.
+2023-07-24T00:05:38.8495311Z 
+2023-07-24T00:05:38.8495966Z Written by John Gilmore and Jay Fenlason.
+2023-07-24T00:05:38.8502306Z [command]tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/d3e213db-05d1-491a-805f-1c2e0e2a1b87 -f /home/runner/work/_temp/261d05fb-d868-41e4-8bd4-7c96fbc7ee5b
+2023-07-24T00:05:38.9908101Z ##[group]Run s4u/maven-settings-action@v2.8.0
+2023-07-24T00:05:38.9908344Z with:
+2023-07-24T00:05:38.9908537Z   sonatypeSnapshots: true
+2023-07-24T00:05:38.9908764Z   apacheSnapshots: false
+2023-07-24T00:05:38.9908972Z   override: true
+2023-07-24T00:05:38.9909170Z   githubServer: true
+2023-07-24T00:05:38.9909376Z   oracleRepo: false
+2023-07-24T00:05:38.9909552Z env:
+2023-07-24T00:05:38.9909799Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:38.9910117Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:38.9910368Z ##[endgroup]
+2023-07-24T00:05:39.0598619Z Prepare maven setings: /home/runner/.m2/settings.xml
+2023-07-24T00:05:39.0601935Z maven settings.xml already exists - override
+2023-07-24T00:05:39.0758764Z ##[group]Run mvn --errors --show-version package site -Dmaven.test.skip=true
+2023-07-24T00:05:39.0759206Z [36;1mmvn --errors --show-version package site -Dmaven.test.skip=true[0m
+2023-07-24T00:05:39.0812233Z shell: /usr/bin/bash -e {0}
+2023-07-24T00:05:39.0812457Z env:
+2023-07-24T00:05:39.0812707Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:39.0813030Z   JAVA_HOME_8_X64: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64
+2023-07-24T00:05:39.0813287Z ##[endgroup]
+2023-07-24T00:05:39.2546488Z Apache Maven 3.9.0 (9b58d2bad23a66be161c4664ef21ce219c2c8584)
+2023-07-24T00:05:39.2547203Z Maven home: /opt/hostedtoolcache/maven/3.9.0/x64
+2023-07-24T00:05:39.2548532Z Java version: 1.8.0_382, vendor: Azul Systems, Inc., runtime: /opt/hostedtoolcache/Java_Zulu_jdk/8.0.382-5/x64/jre
+2023-07-24T00:05:39.2549116Z Default locale: en, platform encoding: UTF-8
+2023-07-24T00:05:39.2549905Z OS name: "linux", version: "5.15.0-1041-azure", arch: "amd64", family: "unix"
+2023-07-24T00:05:40.3377403Z [INFO] Error stacktraces are turned on.
+2023-07-24T00:05:40.3880682Z [INFO] Scanning for projects...
+2023-07-24T00:05:41.3020586Z [INFO] Inspecting build with total of 1 modules...
+2023-07-24T00:05:41.3050780Z [INFO] Installing Nexus Staging features:
+2023-07-24T00:05:41.3052172Z [INFO]   ... total of 1 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+2023-07-24T00:05:41.3181949Z [INFO] 
+2023-07-24T00:05:41.3182968Z [INFO] -----------< org.simplify4u.plugins:pgpverify-maven-plugin >------------
+2023-07-24T00:05:41.3184049Z [INFO] Building Verify PGP signatures plugin 1.17.1-SNAPSHOT
+2023-07-24T00:05:41.3184544Z [INFO]   from pom.xml
+2023-07-24T00:05:41.3185301Z [INFO] ----------------------------[ maven-plugin ]----------------------------
+2023-07-24T00:05:41.8535206Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.pom
+2023-07-24T00:05:42.1177405Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.pom (3.0 kB at 11 kB/s)
+2023-07-24T00:05:42.1281146Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom
+2023-07-24T00:05:42.1585626Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.0/junit-bom-5.10.0.pom (5.6 kB at 182 kB/s)
+2023-07-24T00:05:42.1831748Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar
+2023-07-24T00:05:42.2827417Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar (586 kB at 5.9 MB/s)
+2023-07-24T00:05:42.2906059Z [INFO] 
+2023-07-24T00:05:42.2907828Z [INFO] --- enforcer:3.1.0:enforce (enforcer) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:42.6372404Z [INFO] 
+2023-07-24T00:05:42.6378522Z [INFO] --- plugin:3.7.0:helpmojo (generated-helpmojo) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:43.1208762Z [INFO] 
+2023-07-24T00:05:43.1221114Z [INFO] --- resources:3.3.0:resources (default-resources) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:43.1705842Z [INFO] Copying 1 resource
+2023-07-24T00:05:43.1729960Z [INFO] 
+2023-07-24T00:05:43.1730799Z [INFO] --- compiler:3.10.1:compile (default-compile) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:43.3611591Z [WARNING] Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-07-24T00:05:43.3948524Z [INFO] Changes detected - recompiling the module!
+2023-07-24T00:05:43.3983383Z [INFO] Compiling 52 source files to /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/target/classes
+2023-07-24T00:05:45.8783322Z [WARNING] /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/src/main/java/org/simplify4u/plugins/ShowMojo.java:[172,35] toString() in org.apache.maven.shared.utils.logging.MessageBuilder has been deprecated
+2023-07-24T00:05:45.8784235Z [INFO] 
+2023-07-24T00:05:45.8785533Z [INFO] --- plugin:3.7.0:descriptor (default-descriptor) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:45.8845707Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-07-24T00:05:47.0657918Z [INFO] java-annotations mojo extractor found 4 mojo descriptors.
+2023-07-24T00:05:47.1052488Z [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:47.1065920Z [INFO] ant mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:47.1067591Z [INFO] bsh mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:47.1358734Z [INFO] 
+2023-07-24T00:05:47.1361246Z [INFO] --- resources:3.3.0:testResources (default-testResources) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:47.1387916Z [INFO] Not copying test resources
+2023-07-24T00:05:47.1389781Z [INFO] 
+2023-07-24T00:05:47.1391833Z [INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:47.1441610Z [WARNING] Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-07-24T00:05:47.1476503Z [INFO] Not compiling test sources
+2023-07-24T00:05:47.1478912Z [INFO] 
+2023-07-24T00:05:47.1481745Z [INFO] --- surefire:3.0.0-M7:test (default-test) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:47.2948686Z [INFO] Tests are skipped.
+2023-07-24T00:05:47.2959214Z [INFO] 
+2023-07-24T00:05:47.2963253Z [INFO] --- jar:3.3.0:jar (default-jar) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:47.5083535Z [INFO] Building jar: /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/target/pgpverify-maven-plugin-1.17.1-SNAPSHOT.jar
+2023-07-24T00:05:47.5755703Z [INFO] 
+2023-07-24T00:05:47.5760068Z [INFO] --- plugin:3.7.0:addPluginArtifactMetadata (default-addPluginArtifactMetadata) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:47.5798016Z [INFO] 
+2023-07-24T00:05:47.5801843Z [INFO] --- javadoc:3.4.1:jar (attach-javadocs) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:48.1412327Z [INFO] No previous run data found, generating javadoc.
+2023-07-24T00:05:49.7974074Z [INFO] Building jar: /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/target/pgpverify-maven-plugin-1.17.1-SNAPSHOT-javadoc.jar
+2023-07-24T00:05:49.8694610Z [INFO] 
+2023-07-24T00:05:49.8695554Z [INFO] --- source:3.2.1:jar-no-fork (attach-sources) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:50.0225165Z [INFO] Building jar: /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/target/pgpverify-maven-plugin-1.17.1-SNAPSHOT-sources.jar
+2023-07-24T00:05:50.0714942Z [INFO] 
+2023-07-24T00:05:50.0716549Z [INFO] --- site:3.12.1:site (default-site) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:50.8082336Z [INFO] configuring report plugin org.apache.maven.plugins:maven-project-info-reports-plugin:3.4.1
+2023-07-24T00:05:51.0978272Z [INFO] 8 reports configured for maven-project-info-reports-plugin:3.4.1: ci-management, dependencies, issue-management, licenses, plugins, team, scm, summary
+2023-07-24T00:05:51.0979702Z [INFO] configuring report plugin org.apache.maven.plugins:maven-plugin-plugin:3.7.0
+2023-07-24T00:05:51.3184095Z [WARNING] Goal 'report' is deprecated: use the maven-plugin-report-plugin instead
+2023-07-24T00:05:51.3240862Z [INFO] preparing maven-plugin-plugin:report report requires 'process-classes' forked phase execution
+2023-07-24T00:05:51.3241602Z [INFO] 
+2023-07-24T00:05:51.3242313Z [INFO] >>> plugin:3.7.0:report > process-classes @ pgpverify-maven-plugin >>>
+2023-07-24T00:05:51.3719742Z [INFO] 
+2023-07-24T00:05:51.3720481Z [INFO] --- enforcer:3.1.0:enforce (enforcer) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:51.3835970Z [INFO] 
+2023-07-24T00:05:51.3836828Z [INFO] --- plugin:3.7.0:helpmojo (generated-helpmojo) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:51.4045534Z [INFO] 
+2023-07-24T00:05:51.4046496Z [INFO] --- resources:3.3.0:resources (default-resources) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:51.4078642Z [INFO] Copying 1 resource
+2023-07-24T00:05:51.4082722Z [INFO] 
+2023-07-24T00:05:51.4083556Z [INFO] --- compiler:3.10.1:compile (default-compile) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:51.4091871Z [WARNING] Parameter 'optimize' (user property 'maven.compiler.optimize') is deprecated: This property is a no-op in {@code javac}.
+2023-07-24T00:05:51.4121332Z [INFO] Changes detected - recompiling the module!
+2023-07-24T00:05:51.4137088Z [INFO] Compiling 52 source files to /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/target/classes
+2023-07-24T00:05:53.0680325Z [WARNING] /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin/src/main/java/org/simplify4u/plugins/ShowMojo.java:[172,35] toString() in org.apache.maven.shared.utils.logging.MessageBuilder has been deprecated
+2023-07-24T00:05:53.0684958Z [INFO] 
+2023-07-24T00:05:53.0688351Z [INFO] --- plugin:3.7.0:descriptor (default-descriptor) @ pgpverify-maven-plugin ---
+2023-07-24T00:05:53.0715478Z [INFO] Using 'UTF-8' encoding to read mojo source files.
+2023-07-24T00:05:53.8894774Z [INFO] java-annotations mojo extractor found 4 mojo descriptors.
+2023-07-24T00:05:53.9627130Z [INFO] java-javadoc mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:53.9634909Z [INFO] ant mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:53.9638309Z [INFO] bsh mojo extractor found 0 mojo descriptor.
+2023-07-24T00:05:53.9982489Z [INFO] 
+2023-07-24T00:05:53.9986081Z [INFO] <<< plugin:3.7.0:report < process-classes @ pgpverify-maven-plugin <<<
+2023-07-24T00:05:53.9989026Z [INFO] 
+2023-07-24T00:05:53.9992126Z [INFO] 'process-classes' forked phase execution for maven-plugin-plugin:report report preparation done
+2023-07-24T00:05:53.9995446Z [INFO] 1 report detected for maven-plugin-plugin:3.7.0: report
+2023-07-24T00:05:54.0798174Z [INFO] Rendering site with default locale English (en)
+2023-07-24T00:05:54.1242361Z [INFO] Relativizing decoration links with respect to localized project URL: https://www.simplify4u.org/pgpverify-maven-plugin
+2023-07-24T00:05:54.1263090Z [INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:1.11.1 skin.
+2023-07-24T00:05:54.1605873Z [INFO] Rendering 5 Doxia documents: 5 markdown
+2023-07-24T00:05:54.8343635Z [INFO] Generating "CI Management" report --- maven-project-info-reports-plugin:3.4.1:ci-management
+2023-07-24T00:05:54.8827914Z [INFO] Generating "Dependencies" report  --- maven-project-info-reports-plugin:3.4.1:dependencies
+2023-07-24T00:06:01.2957310Z [INFO] Generating "Issue Management" report --- maven-project-info-reports-plugin:3.4.1:issue-management
+2023-07-24T00:06:01.3219426Z [INFO] Generating "Licenses" report      --- maven-project-info-reports-plugin:3.4.1:licenses
+2023-07-24T00:06:01.3534446Z [INFO] Generating "Plugins" report       --- maven-project-info-reports-plugin:3.4.1:plugins
+2023-07-24T00:06:01.5094821Z [INFO] Generating "Team" report          --- maven-project-info-reports-plugin:3.4.1:team
+2023-07-24T00:06:01.5262251Z [INFO] Generating "Source Code Management" report --- maven-project-info-reports-plugin:3.4.1:scm
+2023-07-24T00:06:01.5459069Z [INFO] Generating "Summary" report       --- maven-project-info-reports-plugin:3.4.1:summary
+2023-07-24T00:06:01.5705294Z [INFO] Generating "Plugin Documentation" report --- maven-plugin-plugin:3.7.0:report
+2023-07-24T00:06:01.5710994Z [WARNING] The 'report' goal of the maven-plugin-plugin is deprecated, please use the 'report' goal from the maven-plugin-report-plugin instead. This goal will be removed in version 4.0.0.
+2023-07-24T00:06:01.6893869Z [INFO] Rendering 4 generated Doxia documents: 4 xdoc
+2023-07-24T00:06:01.7921434Z [INFO] 
+2023-07-24T00:06:01.7922590Z [INFO] --- sitemapxml:2.1.0:gen (default) @ pgpverify-maven-plugin ---
+2023-07-24T00:06:01.8331141Z [INFO] Generate sitemap.xml - Start
+2023-07-24T00:06:01.8835798Z [INFO] Generate sitemap.xml - OK
+2023-07-24T00:06:01.8841903Z [INFO] ------------------------------------------------------------------------
+2023-07-24T00:06:01.8848232Z [INFO] BUILD SUCCESS
+2023-07-24T00:06:01.8850672Z [INFO] ------------------------------------------------------------------------
+2023-07-24T00:06:01.8864983Z [INFO] Total time:  21.520 s
+2023-07-24T00:06:01.8868035Z [INFO] Finished at: 2023-07-24T00:06:01Z
+2023-07-24T00:06:01.8869883Z [INFO] ------------------------------------------------------------------------
+2023-07-24T00:06:01.9306701Z Post job cleanup.
+2023-07-24T00:06:01.9345227Z Post job cleanup.
+2023-07-24T00:06:02.0044831Z Cleanup maven setings: /home/runner/.m2/settings.xml - file was removed
+2023-07-24T00:06:02.1925725Z Post job cleanup.
+2023-07-24T00:06:02.3582396Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin --files-from manifest.txt --use-compress-program zstdmt
+2023-07-24T00:06:05.8798170Z Cache Size: ~107 MB (112270305 B)
+2023-07-24T00:06:05.9679473Z Cache saved successfully
+2023-07-24T00:06:05.9842968Z Cache saved with key: 2307-maven-site-Linux-jdk8-zulu-maven3.9.0-ac67ba6e661f66867448bc419f571b94b3c9ad5c393bee5b1d9ae3b5d4ebed07
+2023-07-24T00:06:05.9950459Z Post job cleanup.
+2023-07-24T00:06:06.1778575Z Post job cleanup.
+2023-07-24T00:06:06.2827007Z [command]/usr/bin/git version
+2023-07-24T00:06:06.2871284Z git version 2.41.0
+2023-07-24T00:06:06.2914631Z Temporarily overriding HOME='/home/runner/work/_temp/c889b78d-a95e-4431-bfe2-c1e5dd483404' before making global git config changes
+2023-07-24T00:06:06.2915562Z Adding repository directory to the temporary git global config as a safe directory
+2023-07-24T00:06:06.2921573Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/pgpverify-maven-plugin/pgpverify-maven-plugin
+2023-07-24T00:06:06.2959992Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-07-24T00:06:06.2993428Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-07-24T00:06:06.3217947Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-07-24T00:06:06.3251064Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-07-24T00:06:06.3666382Z Cleaning up orphan processes

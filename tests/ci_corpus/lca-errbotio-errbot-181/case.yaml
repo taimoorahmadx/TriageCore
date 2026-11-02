@@ -1,0 +1,67 @@
+repo: errbotio/errbot
+run_id: '181'
+head_sha: 8a04007d606de7a355f904407294f8ad5d2b7374
+run_attempts: []
+commits:
+- sha: 8a04007d606de7a355f904407294f8ad5d2b7374
+  author: sijis
+  files:
+  - tests/commands_test.py
+- sha: cb9e671b30bac5976c51300e820e95db74a8be0f
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: 9373e9ebc7b0b8c2ad17c5ccb5a38f08692068ad
+  author: sijis
+  files:
+  - CHANGES.rst
+  - docs/html_extras/repos.json
+- sha: b6acb8150265a614c32248b758a822261b9fea57
+  author: sijis
+  files:
+  - .readthedocs.yaml
+  - CHANGES.rst
+- sha: 41379c40b4f23bacb98df2710851332cf7f2b031
+  author: sijis
+  files:
+  - CHANGES.rst
+  - docs/html_extras/repos.json
+  - tools/blacklisted.txt
+  - tools/plugin-gen.py
+- sha: 91f62a7ee256e418a249be9c61e83f0f3ead662d
+  author: dependabot[bot]
+  files:
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: e2e41586ddfd5f216d4862b435d62207de63dbec
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: 13bbbc0d5e9c2e65418be76ec197b0b35f5e298d
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: d02778d4ce31201f98e23432b2a4978c606c8068
+  author: dependabot[bot]
+  files:
+  - .github/workflows/docker-build.yml
+  - .github/workflows/python-package.yml
+  - CHANGES.rst
+- sha: 31f6b113f1e034b61e6f54e6bb327b1b50742233
+  author: sijis
+  files:
+  - CHANGES.rst
+  - errbot/core_plugins/templates/webserver.md
+  - errbot/core_plugins/webserver.py
+  - tests/commands_test.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

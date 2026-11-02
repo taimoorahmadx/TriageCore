@@ -1,0 +1,206 @@
+===== check_requirements/4_Check main requirements.txt =====
+##[group]Run pip install -r requirements/requirements-dev.txt
+[36;1mpip install -r requirements/requirements-dev.txt[0m
+[36;1m[0m
+[36;1mpython tests/scripts/check_requirements.py[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.9.18/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
+##[endgroup]
+Collecting black==23.3.0 (from -r requirements/requirements-dev.txt (line 1))
+  Downloading black-23.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 18.4 MB/s eta 0:00:00
+Collecting flake8==5.0.4 (from -r requirements/requirements-dev.txt (line 2))
+  Downloading flake8-5.0.4-py2.py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.9/61.9 kB 19.0 MB/s eta 0:00:00
+Collecting isort==5.10.1 (from -r requirements/requirements-dev.txt (line 3))
+  Downloading isort-5.10.1-py3-none-any.whl (103 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 26.5 MB/s eta 0:00:00
+Collecting pre-commit>=2.16.0 (from -r requirements/requirements-dev.txt (line 4))
+  Downloading pre_commit-3.6.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting watchfiles==0.19.0 (from -r requirements/requirements-dev.txt (line 5))
+  Downloading watchfiles-0.19.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 31.1 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages (from -r requirements/requirements-dev.txt (line 6)) (58.1.0)
+Collecting wheel (from -r requirements/requirements-dev.txt (line 7))
+  Downloading wheel-0.42.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting deptry==0.12.0 (from -r requirements/requirements-dev.txt (line 8))
+  Downloading deptry-0.12.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting twine (from -r requirements/requirements-dev.txt (line 9))
+  Downloading twine-4.0.2-py3-none-any.whl (36 kB)
+Collecting click>=8.0.0 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting mypy-extensions>=0.4.3 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Collecting packaging>=22.0 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading packaging-23.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting pathspec>=0.9.0 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading pathspec-0.12.1-py3-none-any.whl.metadata (21 kB)
+Collecting platformdirs>=2 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading platformdirs-4.1.0-py3-none-any.whl.metadata (11 kB)
+Collecting tomli>=1.1.0 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading tomli-2.0.1-py3-none-any.whl (12 kB)
+Collecting typing-extensions>=3.10.0.0 (from black==23.3.0->-r requirements/requirements-dev.txt (line 1))
+  Downloading typing_extensions-4.9.0-py3-none-any.whl.metadata (3.0 kB)
+Collecting mccabe<0.8.0,>=0.7.0 (from flake8==5.0.4->-r requirements/requirements-dev.txt (line 2))
+  Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+Collecting pycodestyle<2.10.0,>=2.9.0 (from flake8==5.0.4->-r requirements/requirements-dev.txt (line 2))
+  Downloading pycodestyle-2.9.1-py2.py3-none-any.whl (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.5/41.5 kB 11.9 MB/s eta 0:00:00
+Collecting pyflakes<2.6.0,>=2.5.0 (from flake8==5.0.4->-r requirements/requirements-dev.txt (line 2))
+  Downloading pyflakes-2.5.0-py2.py3-none-any.whl (66 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.1/66.1 kB 20.4 MB/s eta 0:00:00
+Collecting anyio>=3.0.0 (from watchfiles==0.19.0->-r requirements/requirements-dev.txt (line 5))
+  Downloading anyio-4.2.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting chardet>=4.0.0 (from deptry==0.12.0->-r requirements/requirements-dev.txt (line 8))
+  Downloading chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting cfgv>=2.0.0 (from pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading identify-2.5.33-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
+Collecting pyyaml>=5.1 (from pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading virtualenv-20.25.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting pkginfo>=1.8.1 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading pkginfo-1.9.6-py3-none-any.whl (30 kB)
+Collecting readme-renderer>=35.0 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading readme_renderer-42.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting requests>=2.20 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading requests-2.31.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 17.0 MB/s eta 0:00:00
+Collecting urllib3>=1.26.0 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading urllib3-2.1.0-py3-none-any.whl.metadata (6.4 kB)
+Collecting importlib-metadata>=3.6 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading importlib_metadata-7.0.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting keyring>=15.1 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading keyring-24.3.0-py3-none-any.whl.metadata (20 kB)
+Collecting rfc3986>=1.4.0 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+Collecting rich>=12.0.0 (from twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading rich-13.7.0-py3-none-any.whl.metadata (18 kB)
+Collecting idna>=2.8 (from anyio>=3.0.0->watchfiles==0.19.0->-r requirements/requirements-dev.txt (line 5))
+  Downloading idna-3.6-py3-none-any.whl.metadata (9.9 kB)
+Collecting sniffio>=1.1 (from anyio>=3.0.0->watchfiles==0.19.0->-r requirements/requirements-dev.txt (line 5))
+  Downloading sniffio-1.3.0-py3-none-any.whl (10 kB)
+Collecting exceptiongroup>=1.0.2 (from anyio>=3.0.0->watchfiles==0.19.0->-r requirements/requirements-dev.txt (line 5))
+  Downloading exceptiongroup-1.2.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting zipp>=0.5 (from importlib-metadata>=3.6->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading zipp-3.17.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting jaraco.classes (from keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading jaraco.classes-3.3.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting SecretStorage>=3.2 (from keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading SecretStorage-3.3.3-py3-none-any.whl (15 kB)
+Collecting jeepney>=0.4.2 (from keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading jeepney-0.8.0-py3-none-any.whl (48 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.4/48.4 kB 17.1 MB/s eta 0:00:00
+Collecting nh3>=0.2.14 (from readme-renderer>=35.0->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading nh3-0.2.15-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.7 kB)
+Collecting docutils>=0.13.1 (from readme-renderer>=35.0->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading docutils-0.20.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting Pygments>=2.5.1 (from readme-renderer>=35.0->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting charset-normalizer<4,>=2 (from requests>=2.20->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (33 kB)
+Collecting certifi>=2017.4.17 (from requests>=2.20->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading certifi-2023.11.17-py3-none-any.whl.metadata (2.2 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=12.0.0->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit>=2.16.0->-r requirements/requirements-dev.txt (line 4))
+  Downloading filelock-3.13.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.0.0->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+Collecting more-itertools (from jaraco.classes->keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading more_itertools-10.1.0-py3-none-any.whl.metadata (33 kB)
+Collecting cffi>=1.12 (from cryptography>=2.0->SecretStorage>=3.2->keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading cffi-1.16.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.12->cryptography>=2.0->SecretStorage>=3.2->keyring>=15.1->twine->-r requirements/requirements-dev.txt (line 9))
+  Downloading pycparser-2.21-py2.py3-none-any.whl (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 35.3 MB/s eta 0:00:00
+Downloading deptry-0.12.0-py3-none-any.whl (41 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 13.1 MB/s eta 0:00:00
+Downloading pre_commit-3.6.0-py2.py3-none-any.whl (204 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.0/204.0 kB 42.9 MB/s eta 0:00:00
+Downloading wheel-0.42.0-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.4/65.4 kB 22.9 MB/s eta 0:00:00
+Downloading anyio-4.2.0-py3-none-any.whl (85 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.5/85.5 kB 29.1 MB/s eta 0:00:00
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading chardet-5.2.0-py3-none-any.whl (199 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199.4/199.4 kB 43.8 MB/s eta 0:00:00
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 kB 33.7 MB/s eta 0:00:00
+Downloading identify-2.5.33-py2.py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 31.2 MB/s eta 0:00:00
+Downloading importlib_metadata-7.0.1-py3-none-any.whl (23 kB)
+Downloading keyring-24.3.0-py3-none-any.whl (38 kB)
+Downloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Downloading packaging-23.2-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.0/53.0 kB 18.2 MB/s eta 0:00:00
+Downloading pathspec-0.12.1-py3-none-any.whl (31 kB)
+Downloading platformdirs-4.1.0-py3-none-any.whl (17 kB)
+Downloading PyYAML-6.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.9/738.9 kB 37.6 MB/s eta 0:00:00
+Downloading readme_renderer-42.0-py3-none-any.whl (13 kB)
+Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 21.9 MB/s eta 0:00:00
+Downloading rich-13.7.0-py3-none-any.whl (240 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.6/240.6 kB 51.0 MB/s eta 0:00:00
+Downloading typing_extensions-4.9.0-py3-none-any.whl (32 kB)
+Downloading urllib3-2.1.0-py3-none-any.whl (104 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.6/104.6 kB 33.0 MB/s eta 0:00:00
+Downloading virtualenv-20.25.0-py3-none-any.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 53.1 MB/s eta 0:00:00
+Downloading certifi-2023.11.17-py3-none-any.whl (162 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.5/162.5 kB 43.3 MB/s eta 0:00:00
+Downloading charset_normalizer-3.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 142.3/142.3 kB 40.8 MB/s eta 0:00:00
+Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 68.6 MB/s eta 0:00:00
+Downloading docutils-0.20.1-py3-none-any.whl (572 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 572.7/572.7 kB 67.0 MB/s eta 0:00:00
+Downloading exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Downloading filelock-3.13.1-py3-none-any.whl (11 kB)
+Downloading idna-3.6-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 20.6 MB/s eta 0:00:00
+Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 28.4 MB/s eta 0:00:00
+Downloading nh3-0.2.15-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 72.8 MB/s eta 0:00:00
+Downloading pygments-2.17.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 81.6 MB/s eta 0:00:00
+Downloading zipp-3.17.0-py3-none-any.whl (7.4 kB)
+Downloading jaraco.classes-3.3.0-py3-none-any.whl (5.9 kB)
+Downloading cryptography-41.0.7-cp37-abi3-manylinux_2_28_x86_64.whl (4.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.4/4.4 MB 94.7 MB/s eta 0:00:00
+Downloading more_itertools-10.1.0-py3-none-any.whl (55 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 55.8/55.8 kB 17.6 MB/s eta 0:00:00
+Downloading cffi-1.16.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (443 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 443.4/443.4 kB 72.9 MB/s eta 0:00:00
+Installing collected packages: nh3, distlib, zipp, wheel, urllib3, typing-extensions, tomli, sniffio, rfc3986, pyyaml, Pygments, pyflakes, pycparser, pycodestyle, platformdirs, pkginfo, pathspec, packaging, nodeenv, mypy-extensions, more-itertools, mdurl, mccabe, jeepney, isort, idna, identify, filelock, exceptiongroup, docutils, click, charset-normalizer, chardet, cfgv, certifi, virtualenv, requests, readme-renderer, markdown-it-py, jaraco.classes, importlib-metadata, flake8, deptry, cffi, black, anyio, watchfiles, rich, requests-toolbelt, pre-commit, cryptography, SecretStorage, keyring, twine
+Successfully installed Pygments-2.17.2 SecretStorage-3.3.3 anyio-4.2.0 black-23.3.0 certifi-2023.11.17 cffi-1.16.0 cfgv-3.4.0 chardet-5.2.0 charset-normalizer-3.3.2 click-8.1.7 cryptography-41.0.7 deptry-0.12.0 distlib-0.3.8 docutils-0.20.1 exceptiongroup-1.2.0 filelock-3.13.1 flake8-5.0.4 identify-2.5.33 idna-3.6 importlib-metadata-7.0.1 isort-5.10.1 jaraco.classes-3.3.0 jeepney-0.8.0 keyring-24.3.0 markdown-it-py-3.0.0 mccabe-0.7.0 mdurl-0.1.2 more-itertools-10.1.0 mypy-extensions-1.0.0 nh3-0.2.15 nodeenv-1.8.0 packaging-23.2 pathspec-0.12.1 pkginfo-1.9.6 platformdirs-4.1.0 pre-commit-3.6.0 pycodestyle-2.9.1 pycparser-2.21 pyflakes-2.5.0 pyyaml-6.0.1 readme-renderer-42.0 requests-2.31.0 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-13.7.0 sniffio-1.3.0 tomli-2.0.1 twine-4.0.2 typing-extensions-4.9.0 urllib3-2.1.0 virtualenv-20.25.0 watchfiles-0.19.0 wheel-0.42.0 zipp-3.17.0
+
+[notice] A new release of pip is available: 23.0.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+--- Checking requirements files for duplicates ---
+
+--- Checking that requirements match imports ---
+- requirements/requirements.txt
+    None:None: DEP002 'type_infer' defined as a dependency but not used in the codebase
+
+
+--- Checking handlers that require other handlers ---
+##[error]Process completed with exit code 1.

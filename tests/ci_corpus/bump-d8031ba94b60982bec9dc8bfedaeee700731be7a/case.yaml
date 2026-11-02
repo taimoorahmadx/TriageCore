@@ -1,0 +1,52 @@
+repo: getgauge/gauge-java
+run_id: d8031ba94b60982bec9dc8bfedaeee700731be7a
+head_sha: d8031ba94b60982bec9dc8bfedaeee700731be7a
+run_attempts: []
+commits:
+- sha: d8031ba94b60982bec9dc8bfedaeee700731be7a
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 3363a7f279d92a7c9c9de0d4828077058192c925
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 2a3c548d8edd9768ae8974fbc3c732fa79ab1d15
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 0eb08ed69316ccc163925f980f34b2f35890eb53
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: c44f8c886d8c8944beced5d491bc4eb28d79ed1f
+  author: haroon-sheikh
+  files:
+  - gauge-java.go
+  - java.json
+  - pom.xml
+- sha: a256de04a29fdbbc0e49389ed01e7c2138b5c798
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: bf54ce832a2643f30878ff7d90cae2887eccd977
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: f60fefa558b66a1354c1325008037b82bf4ec490
+  author: dependabot[bot]
+  files:
+  - .github/workflows/codeql-analysis.yml
+- sha: 06cbdb4c3b39ca419d07587e8b38c96a89bea0ec
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 81081480409b1303966605913fbb7aabf8c8b2c1
+  author: dependabot[bot]
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

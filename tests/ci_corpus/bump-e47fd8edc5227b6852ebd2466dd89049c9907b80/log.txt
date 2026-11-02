@@ -1,0 +1,780 @@
+2023-08-01T19:13:50.6839917Z Requested labels: ubuntu-latest
+2023-08-01T19:13:50.6840219Z Job defined at: Samsung/LPVS/.github/workflows/test-suite.yml@refs/pull/194/merge
+2023-08-01T19:13:50.6840316Z Waiting for a runner to pick up this job...
+2023-08-01T19:13:50.8474615Z Job is waiting for a hosted runner to come online.
+2023-08-01T19:13:54.5385831Z Job is about to start running on the hosted runner: GitHub Actions 11 (hosted)
+2023-08-01T19:13:56.7299742Z Current runner version: '2.307.1'
+2023-08-01T19:13:56.7331932Z ##[group]Operating System
+2023-08-01T19:13:56.7332605Z Ubuntu
+2023-08-01T19:13:56.7332894Z 22.04.2
+2023-08-01T19:13:56.7333203Z LTS
+2023-08-01T19:13:56.7333530Z ##[endgroup]
+2023-08-01T19:13:56.7333830Z ##[group]Runner Image
+2023-08-01T19:13:56.7334247Z Image: ubuntu-22.04
+2023-08-01T19:13:56.7334616Z Version: 20230724.1.0
+2023-08-01T19:13:56.7335192Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230724.1/images/linux/Ubuntu2204-Readme.md
+2023-08-01T19:13:56.7335854Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230724.1
+2023-08-01T19:13:56.7336373Z ##[endgroup]
+2023-08-01T19:13:56.7336767Z ##[group]Runner Image Provisioner
+2023-08-01T19:13:56.7337092Z 2.0.264.1
+2023-08-01T19:13:56.7337428Z ##[endgroup]
+2023-08-01T19:13:56.7338151Z ##[group]GITHUB_TOKEN Permissions
+2023-08-01T19:13:56.7338808Z Contents: read
+2023-08-01T19:13:56.7339193Z Metadata: read
+2023-08-01T19:13:56.7339766Z PullRequests: write
+2023-08-01T19:13:56.7340251Z ##[endgroup]
+2023-08-01T19:13:56.7344147Z Secret source: Dependabot
+2023-08-01T19:13:56.7344655Z Prepare workflow directory
+2023-08-01T19:13:56.8105628Z Prepare all required actions
+2023-08-01T19:13:56.8303849Z Getting action download info
+2023-08-01T19:13:57.0219050Z Download action repository 'actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28' (SHA:d0651293c4a5a52e711f25b41b05b2212f385d28)
+2023-08-01T19:13:57.5532962Z Download action repository 'actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-08-01T19:13:57.7974813Z Download action repository 'cicirello/jacoco-badge-generator@a0c1eb19a496308187341ed2a736ef5df78b7003' (SHA:a0c1eb19a496308187341ed2a736ef5df78b7003)
+2023-08-01T19:13:57.9520422Z Download action repository 'actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce' (SHA:0b7f8abb1508181956e8e162db84b466c27e18ce)
+2023-08-01T19:13:58.2568430Z Complete job name: test-suite
+2023-08-01T19:13:58.3398779Z ##[group]Build container for action use: '/home/runner/work/_actions/cicirello/jacoco-badge-generator/a0c1eb19a496308187341ed2a736ef5df78b7003/Dockerfile'.
+2023-08-01T19:13:58.3478101Z ##[command]/usr/bin/docker build -t 5bedb4:47f17ff137614488bc92aa7260900f6a -f "/home/runner/work/_actions/cicirello/jacoco-badge-generator/a0c1eb19a496308187341ed2a736ef5df78b7003/Dockerfile" "/home/runner/work/_actions/cicirello/jacoco-badge-generator/a0c1eb19a496308187341ed2a736ef5df78b7003"
+2023-08-01T19:13:58.5234042Z Sending build context to Docker daemon  181.2kB
+2023-08-01T19:13:58.5268033Z 
+2023-08-01T19:13:58.5657053Z Step 1/3 : FROM ghcr.io/cicirello/pyaction:4.19.0
+2023-08-01T19:13:58.7842686Z 4.19.0: Pulling from cicirello/pyaction
+2023-08-01T19:13:58.8516726Z 9e3ea8720c6d: Pulling fs layer
+2023-08-01T19:13:58.8519101Z fe9f5cfcf49b: Pulling fs layer
+2023-08-01T19:13:58.8519475Z cbf438db4e3d: Pulling fs layer
+2023-08-01T19:13:58.8519777Z eb097188185b: Pulling fs layer
+2023-08-01T19:13:58.8520186Z a14e8556ab93: Pulling fs layer
+2023-08-01T19:13:58.8520465Z 66e6e6705059: Pulling fs layer
+2023-08-01T19:13:58.8520736Z eb097188185b: Waiting
+2023-08-01T19:13:58.8520994Z a14e8556ab93: Waiting
+2023-08-01T19:13:58.8521232Z 66e6e6705059: Waiting
+2023-08-01T19:13:58.9900012Z fe9f5cfcf49b: Verifying Checksum
+2023-08-01T19:13:58.9901943Z fe9f5cfcf49b: Download complete
+2023-08-01T19:13:59.0821682Z cbf438db4e3d: Verifying Checksum
+2023-08-01T19:13:59.0822967Z cbf438db4e3d: Download complete
+2023-08-01T19:13:59.1041816Z eb097188185b: Verifying Checksum
+2023-08-01T19:13:59.1042214Z eb097188185b: Download complete
+2023-08-01T19:13:59.1262810Z 9e3ea8720c6d: Verifying Checksum
+2023-08-01T19:13:59.1263244Z 9e3ea8720c6d: Download complete
+2023-08-01T19:13:59.2243987Z a14e8556ab93: Verifying Checksum
+2023-08-01T19:13:59.2244812Z a14e8556ab93: Download complete
+2023-08-01T19:13:59.4980345Z 66e6e6705059: Verifying Checksum
+2023-08-01T19:13:59.4981144Z 66e6e6705059: Download complete
+2023-08-01T19:14:00.6675400Z 9e3ea8720c6d: Pull complete
+2023-08-01T19:14:01.2944687Z fe9f5cfcf49b: Pull complete
+2023-08-01T19:14:01.8300470Z cbf438db4e3d: Pull complete
+2023-08-01T19:14:01.8896516Z eb097188185b: Pull complete
+2023-08-01T19:14:02.1760316Z a14e8556ab93: Pull complete
+2023-08-01T19:14:04.0594256Z 66e6e6705059: Pull complete
+2023-08-01T19:14:04.0664158Z Digest: sha256:8ef3621f89b6502ff0f35152ddab60d1f4559b661e84c529893efee38b6d41ee
+2023-08-01T19:14:04.0708641Z Status: Downloaded newer image for ghcr.io/cicirello/pyaction:4.19.0
+2023-08-01T19:14:04.0725471Z  ---> 7163d31670d2
+2023-08-01T19:14:04.0725716Z Step 2/3 : COPY src /
+2023-08-01T19:14:05.0223527Z  ---> d66c3adf4373
+2023-08-01T19:14:05.0224251Z Step 3/3 : ENTRYPOINT ["/entrypoint.py"]
+2023-08-01T19:14:05.0410524Z  ---> Running in 7fb5b100654d
+2023-08-01T19:14:06.0212702Z Removing intermediate container 7fb5b100654d
+2023-08-01T19:14:06.0213016Z  ---> 8f1bfce94352
+2023-08-01T19:14:06.0216992Z Successfully built 8f1bfce94352
+2023-08-01T19:14:06.0305697Z Successfully tagged 5bedb4:47f17ff137614488bc92aa7260900f6a
+2023-08-01T19:14:06.0348281Z ##[endgroup]
+2023-08-01T19:14:06.0737746Z ##[group]Run actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
+2023-08-01T19:14:06.0738075Z with:
+2023-08-01T19:14:06.0738552Z   repository: Samsung/LPVS
+2023-08-01T19:14:06.0739279Z   token: ***
+2023-08-01T19:14:06.0739634Z   ssh-strict: true
+2023-08-01T19:14:06.0739883Z   persist-credentials: true
+2023-08-01T19:14:06.0740107Z   clean: true
+2023-08-01T19:14:06.0740321Z   fetch-depth: 1
+2023-08-01T19:14:06.0740532Z   lfs: false
+2023-08-01T19:14:06.0740728Z   submodules: false
+2023-08-01T19:14:06.0740971Z   set-safe-directory: true
+2023-08-01T19:14:06.0741209Z ##[endgroup]
+2023-08-01T19:14:06.3010730Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.3737583Z Syncing repository: Samsung/LPVS
+2023-08-01T19:14:06.3739365Z ##[group]Getting Git version info
+2023-08-01T19:14:06.3739967Z Working directory is '/home/runner/work/LPVS/LPVS'
+2023-08-01T19:14:06.3740466Z [command]/usr/bin/git version
+2023-08-01T19:14:06.3941844Z git version 2.41.0
+2023-08-01T19:14:06.3943885Z ##[endgroup]
+2023-08-01T19:14:06.3959511Z Temporarily overriding HOME='/home/runner/work/_temp/1f3fc0f4-2245-4fd3-96e5-79330f300fa7' before making global git config changes
+2023-08-01T19:14:06.3960479Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-01T19:14:06.3961471Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/LPVS/LPVS
+2023-08-01T19:14:06.3998111Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.4004430Z Deleting the contents of '/home/runner/work/LPVS/LPVS'
+2023-08-01T19:14:06.4008282Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.4009786Z ##[group]Initializing the repository
+2023-08-01T19:14:06.4012095Z [command]/usr/bin/git init /home/runner/work/LPVS/LPVS
+2023-08-01T19:14:06.4098793Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-01T19:14:06.4099677Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-01T19:14:06.4100600Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-01T19:14:06.4101046Z hint: 
+2023-08-01T19:14:06.4101768Z hint: 	git config --global init.defaultBranch <name>
+2023-08-01T19:14:06.4102203Z hint: 
+2023-08-01T19:14:06.4102925Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-01T19:14:06.4103909Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-01T19:14:06.4104590Z hint: 
+2023-08-01T19:14:06.4105016Z hint: 	git branch -m <name>
+2023-08-01T19:14:06.4116311Z Initialized empty Git repository in /home/runner/work/LPVS/LPVS/.git/
+2023-08-01T19:14:06.4125681Z [command]/usr/bin/git remote add origin https://github.com/Samsung/LPVS
+2023-08-01T19:14:06.4171868Z ##[endgroup]
+2023-08-01T19:14:06.4172627Z ##[group]Disabling automatic garbage collection
+2023-08-01T19:14:06.4176095Z [command]/usr/bin/git config --local gc.auto 0
+2023-08-01T19:14:06.4210916Z ##[endgroup]
+2023-08-01T19:14:06.4211568Z ##[group]Setting up auth
+2023-08-01T19:14:06.4218675Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-01T19:14:06.4253446Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2023-08-01T19:14:06.4673107Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-01T19:14:06.4708586Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2023-08-01T19:14:06.4949993Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-01T19:14:06.4983859Z ##[endgroup]
+2023-08-01T19:14:06.4984578Z ##[group]Fetching the repository
+2023-08-01T19:14:06.4994308Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +e53da66c724e188a1ee0713f8eedcbb438c2d031:refs/remotes/pull/194/merge
+2023-08-01T19:14:06.7391966Z remote: Enumerating objects: 105, done.        
+2023-08-01T19:14:06.7403430Z remote: Counting objects:   0% (1/105)        
+2023-08-01T19:14:06.7403988Z remote: Counting objects:   1% (2/105)        
+2023-08-01T19:14:06.7404368Z remote: Counting objects:   2% (3/105)        
+2023-08-01T19:14:06.7404695Z remote: Counting objects:   3% (4/105)        
+2023-08-01T19:14:06.7405046Z remote: Counting objects:   4% (5/105)        
+2023-08-01T19:14:06.7405363Z remote: Counting objects:   5% (6/105)        
+2023-08-01T19:14:06.7405680Z remote: Counting objects:   6% (7/105)        
+2023-08-01T19:14:06.7405978Z remote: Counting objects:   7% (8/105)        
+2023-08-01T19:14:06.7406289Z remote: Counting objects:   8% (9/105)        
+2023-08-01T19:14:06.7406620Z remote: Counting objects:   9% (10/105)        
+2023-08-01T19:14:06.7406931Z remote: Counting objects:  10% (11/105)        
+2023-08-01T19:14:06.7407261Z remote: Counting objects:  11% (12/105)        
+2023-08-01T19:14:06.7407580Z remote: Counting objects:  12% (13/105)        
+2023-08-01T19:14:06.7407899Z remote: Counting objects:  13% (14/105)        
+2023-08-01T19:14:06.7408200Z remote: Counting objects:  14% (15/105)        
+2023-08-01T19:14:06.7408525Z remote: Counting objects:  15% (16/105)        
+2023-08-01T19:14:06.7408843Z remote: Counting objects:  16% (17/105)        
+2023-08-01T19:14:06.7409145Z remote: Counting objects:  17% (18/105)        
+2023-08-01T19:14:06.7409465Z remote: Counting objects:  18% (19/105)        
+2023-08-01T19:14:06.7409784Z remote: Counting objects:  19% (20/105)        
+2023-08-01T19:14:06.7410174Z remote: Counting objects:  20% (21/105)        
+2023-08-01T19:14:06.7410493Z remote: Counting objects:  21% (23/105)        
+2023-08-01T19:14:06.7410808Z remote: Counting objects:  22% (24/105)        
+2023-08-01T19:14:06.7411111Z remote: Counting objects:  23% (25/105)        
+2023-08-01T19:14:06.7411529Z remote: Counting objects:  24% (26/105)        
+2023-08-01T19:14:06.7411887Z remote: Counting objects:  25% (27/105)        
+2023-08-01T19:14:06.7412203Z remote: Counting objects:  26% (28/105)        
+2023-08-01T19:14:06.7412537Z remote: Counting objects:  27% (29/105)        
+2023-08-01T19:14:06.7413184Z remote: Counting objects:  28% (30/105)        
+2023-08-01T19:14:06.7413508Z remote: Counting objects:  29% (31/105)        
+2023-08-01T19:14:06.7413807Z remote: Counting objects:  30% (32/105)        
+2023-08-01T19:14:06.7414117Z remote: Counting objects:  31% (33/105)        
+2023-08-01T19:14:06.7414527Z remote: Counting objects:  32% (34/105)        
+2023-08-01T19:14:06.7414874Z remote: Counting objects:  33% (35/105)        
+2023-08-01T19:14:06.7415193Z remote: Counting objects:  34% (36/105)        
+2023-08-01T19:14:06.7415511Z remote: Counting objects:  35% (37/105)        
+2023-08-01T19:14:06.7415815Z remote: Counting objects:  36% (38/105)        
+2023-08-01T19:14:06.7416233Z remote: Counting objects:  37% (39/105)        
+2023-08-01T19:14:06.7416553Z remote: Counting objects:  38% (40/105)        
+2023-08-01T19:14:06.7416861Z remote: Counting objects:  39% (41/105)        
+2023-08-01T19:14:06.7417162Z remote: Counting objects:  40% (42/105)        
+2023-08-01T19:14:06.7417512Z remote: Counting objects:  41% (44/105)        
+2023-08-01T19:14:06.7417993Z remote: Counting objects:  42% (45/105)        
+2023-08-01T19:14:06.7418296Z remote: Counting objects:  43% (46/105)        
+2023-08-01T19:14:06.7418614Z remote: Counting objects:  44% (47/105)        
+2023-08-01T19:14:06.7418925Z remote: Counting objects:  45% (48/105)        
+2023-08-01T19:14:06.7419222Z remote: Counting objects:  46% (49/105)        
+2023-08-01T19:14:06.7419534Z remote: Counting objects:  47% (50/105)        
+2023-08-01T19:14:06.7419847Z remote: Counting objects:  48% (51/105)        
+2023-08-01T19:14:06.7420239Z remote: Counting objects:  49% (52/105)        
+2023-08-01T19:14:06.7420591Z remote: Counting objects:  50% (53/105)        
+2023-08-01T19:14:06.7420907Z remote: Counting objects:  51% (54/105)        
+2023-08-01T19:14:06.7421221Z remote: Counting objects:  52% (55/105)        
+2023-08-01T19:14:06.7421521Z remote: Counting objects:  53% (56/105)        
+2023-08-01T19:14:06.7421927Z remote: Counting objects:  54% (57/105)        
+2023-08-01T19:14:06.7422256Z remote: Counting objects:  55% (58/105)        
+2023-08-01T19:14:06.7422595Z remote: Counting objects:  56% (59/105)        
+2023-08-01T19:14:06.7422908Z remote: Counting objects:  57% (60/105)        
+2023-08-01T19:14:06.7423223Z remote: Counting objects:  58% (61/105)        
+2023-08-01T19:14:06.7423520Z remote: Counting objects:  59% (62/105)        
+2023-08-01T19:14:06.7423830Z remote: Counting objects:  60% (63/105)        
+2023-08-01T19:14:06.7424146Z remote: Counting objects:  61% (65/105)        
+2023-08-01T19:14:06.7424458Z remote: Counting objects:  62% (66/105)        
+2023-08-01T19:14:06.7424755Z remote: Counting objects:  63% (67/105)        
+2023-08-01T19:14:06.7425070Z remote: Counting objects:  64% (68/105)        
+2023-08-01T19:14:06.7425398Z remote: Counting objects:  65% (69/105)        
+2023-08-01T19:14:06.7425820Z remote: Counting objects:  66% (70/105)        
+2023-08-01T19:14:06.7426158Z remote: Counting objects:  67% (71/105)        
+2023-08-01T19:14:06.7426477Z remote: Counting objects:  68% (72/105)        
+2023-08-01T19:14:06.7426797Z remote: Counting objects:  69% (73/105)        
+2023-08-01T19:14:06.7430356Z remote: Counting objects:  70% (74/105)        
+2023-08-01T19:14:06.7430916Z remote: Counting objects:  71% (75/105)        
+2023-08-01T19:14:06.7434955Z remote: Counting objects:  72% (76/105)        
+2023-08-01T19:14:06.7435269Z remote: Counting objects:  73% (77/105)        
+2023-08-01T19:14:06.7435587Z remote: Counting objects:  74% (78/105)        
+2023-08-01T19:14:06.7435905Z remote: Counting objects:  75% (79/105)        
+2023-08-01T19:14:06.7436224Z remote: Counting objects:  76% (80/105)        
+2023-08-01T19:14:06.7436528Z remote: Counting objects:  77% (81/105)        
+2023-08-01T19:14:06.7436840Z remote: Counting objects:  78% (82/105)        
+2023-08-01T19:14:06.7437152Z remote: Counting objects:  79% (83/105)        
+2023-08-01T19:14:06.7437454Z remote: Counting objects:  80% (84/105)        
+2023-08-01T19:14:06.7437767Z remote: Counting objects:  81% (86/105)        
+2023-08-01T19:14:06.7438365Z remote: Counting objects:  82% (87/105)        
+2023-08-01T19:14:06.7438663Z remote: Counting objects:  83% (88/105)        
+2023-08-01T19:14:06.7438976Z remote: Counting objects:  84% (89/105)        
+2023-08-01T19:14:06.7439295Z remote: Counting objects:  85% (90/105)        
+2023-08-01T19:14:06.7439593Z remote: Counting objects:  86% (91/105)        
+2023-08-01T19:14:06.7439906Z remote: Counting objects:  87% (92/105)        
+2023-08-01T19:14:06.7440219Z remote: Counting objects:  88% (93/105)        
+2023-08-01T19:14:06.7440529Z remote: Counting objects:  89% (94/105)        
+2023-08-01T19:14:06.7441020Z remote: Counting objects:  90% (95/105)        
+2023-08-01T19:14:06.7441420Z remote: Counting objects:  91% (96/105)        
+2023-08-01T19:14:06.7441834Z remote: Counting objects:  92% (97/105)        
+2023-08-01T19:14:06.7442230Z remote: Counting objects:  93% (98/105)        
+2023-08-01T19:14:06.7442573Z remote: Counting objects:  94% (99/105)        
+2023-08-01T19:14:06.7443213Z remote: Counting objects:  95% (100/105)        
+2023-08-01T19:14:06.7443646Z remote: Counting objects:  96% (101/105)        
+2023-08-01T19:14:06.7444653Z remote: Counting objects:  97% (102/105)        
+2023-08-01T19:14:06.7445064Z remote: Counting objects:  98% (103/105)        
+2023-08-01T19:14:06.7446315Z remote: Counting objects:  99% (104/105)        
+2023-08-01T19:14:06.7446857Z remote: Counting objects: 100% (105/105)        
+2023-08-01T19:14:06.7447222Z remote: Counting objects: 100% (105/105), done.        
+2023-08-01T19:14:06.7447659Z remote: Compressing objects:   1% (1/91)        
+2023-08-01T19:14:06.7448089Z remote: Compressing objects:   2% (2/91)        
+2023-08-01T19:14:06.7448501Z remote: Compressing objects:   3% (3/91)        
+2023-08-01T19:14:06.7448923Z remote: Compressing objects:   4% (4/91)        
+2023-08-01T19:14:06.7449339Z remote: Compressing objects:   5% (5/91)        
+2023-08-01T19:14:06.7449697Z remote: Compressing objects:   6% (6/91)        
+2023-08-01T19:14:06.7450128Z remote: Compressing objects:   7% (7/91)        
+2023-08-01T19:14:06.7450586Z remote: Compressing objects:   8% (8/91)        
+2023-08-01T19:14:06.7450936Z remote: Compressing objects:   9% (9/91)        
+[... 2687 lines removed by TriageCore ...]
+2023-08-01T19:14:18.3383609Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3384357Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3385039Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3385867Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3386522Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3387287Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3387961Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3392765Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3393422Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3394075Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3394730Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3395402Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3396061Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3396712Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3397361Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3398018Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3398656Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3399300Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3399949Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3413801Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3414490Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3419214Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3419893Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3420530Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3421569Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor': bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/core/annotation/AliasFor.class)
+2023-08-01T19:14:18.3422242Z     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3422627Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3423503Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3424181Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3424856Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3425525Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3426177Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3426842Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3440344Z [WARNING] Cannot find annotation method 'attribute()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3441183Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3441844Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3442507Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3444669Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3445553Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3446203Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3446875Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3447538Z [WARNING] Cannot find annotation method 'annotation()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3448187Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3448833Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3449479Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3450126Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3450754Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3451392Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3452036Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3452677Z [WARNING] Cannot find annotation method 'value()' in type 'org.springframework.core.annotation.AliasFor'
+2023-08-01T19:14:18.3453038Z [INFO] 96 warnings 
+2023-08-01T19:14:18.3453415Z [INFO] -------------------------------------------------------------
+2023-08-01T19:14:18.3453857Z [INFO] -------------------------------------------------------------
+2023-08-01T19:14:18.3454159Z [ERROR] COMPILATION ERROR : 
+2023-08-01T19:14:18.3454547Z [INFO] -------------------------------------------------------------
+2023-08-01T19:14:18.3455059Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/util/LPVSFileUtil.java:[15,32] cannot access org.springframework.util.FileSystemUtils
+2023-08-01T19:14:18.3455860Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/util/FileSystemUtils.class)
+2023-08-01T19:14:18.3456329Z     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3456702Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3457506Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[15,37] cannot access org.springframework.core.task.TaskExecutor
+2023-08-01T19:14:18.3458349Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/core/task/TaskExecutor.class)
+2023-08-01T19:14:18.3458803Z     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3459183Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3459745Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/controller/GitHubWebhooksController.java:[27,32] cannot access org.springframework.util.StringUtils
+2023-08-01T19:14:18.3460677Z   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/util/StringUtils.class)
+2023-08-01T19:14:18.3461129Z     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3461499Z     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3461992Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[37,12] cannot find symbol
+2023-08-01T19:14:18.3462371Z   symbol:   class TaskExecutor
+2023-08-01T19:14:18.3462746Z   location: class com.lpvs.LicensePreValidationSystem
+2023-08-01T19:14:18.3463041Z [INFO] 4 errors 
+2023-08-01T19:14:18.3463462Z [INFO] -------------------------------------------------------------
+2023-08-01T19:14:18.3463926Z [INFO] ------------------------------------------------------------------------
+2023-08-01T19:14:18.3464241Z [INFO] BUILD FAILURE
+2023-08-01T19:14:18.3464644Z [INFO] ------------------------------------------------------------------------
+2023-08-01T19:14:18.3464964Z [INFO] Total time:  9.602 s
+2023-08-01T19:14:18.3465286Z [INFO] Finished at: 2023-08-01T19:14:18Z
+2023-08-01T19:14:18.3465718Z [INFO] ------------------------------------------------------------------------
+2023-08-01T19:14:18.3466148Z [WARNING] The requested profile "coverage" could not be activated because it does not exist.
+2023-08-01T19:14:18.3466885Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project lpvs: Compilation failure: Compilation failure: 
+2023-08-01T19:14:18.3467734Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/util/LPVSFileUtil.java:[15,32] cannot access org.springframework.util.FileSystemUtils
+2023-08-01T19:14:18.3468545Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/util/FileSystemUtils.class)
+2023-08-01T19:14:18.3469042Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3469417Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3470008Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[15,37] cannot access org.springframework.core.task.TaskExecutor
+2023-08-01T19:14:18.3470843Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/core/task/TaskExecutor.class)
+2023-08-01T19:14:18.3471324Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3471695Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3472265Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/controller/GitHubWebhooksController.java:[27,32] cannot access org.springframework.util.StringUtils
+2023-08-01T19:14:18.3473076Z [ERROR]   bad class file: /home/runner/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar(/org/springframework/util/StringUtils.class)
+2023-08-01T19:14:18.3473556Z [ERROR]     class file has wrong version 61.0, should be 55.0
+2023-08-01T19:14:18.3474057Z [ERROR]     Please remove or make sure it appears in the correct subdirectory of the classpath.
+2023-08-01T19:14:18.3474545Z [ERROR] /home/runner/work/LPVS/LPVS/src/main/java/com/lpvs/LicensePreValidationSystem.java:[37,12] cannot find symbol
+2023-08-01T19:14:18.3474942Z [ERROR]   symbol:   class TaskExecutor
+2023-08-01T19:14:18.3475273Z [ERROR]   location: class com.lpvs.LicensePreValidationSystem
+2023-08-01T19:14:18.3475617Z [ERROR] -> [Help 1]
+2023-08-01T19:14:18.3475827Z [ERROR] 
+2023-08-01T19:14:18.3476202Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-08-01T19:14:18.3476667Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-08-01T19:14:18.3476951Z [ERROR] 
+2023-08-01T19:14:18.3477403Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-08-01T19:14:18.3477881Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-08-01T19:14:18.3659386Z ##[error]Process completed with exit code 1.
+
+2023-08-01T19:14:06.0737719Z ##[group]Run actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28
+2023-08-01T19:14:06.0738070Z with:
+2023-08-01T19:14:06.0738546Z   repository: Samsung/LPVS
+2023-08-01T19:14:06.0739275Z   token: ***
+2023-08-01T19:14:06.0739629Z   ssh-strict: true
+2023-08-01T19:14:06.0739866Z   persist-credentials: true
+2023-08-01T19:14:06.0740103Z   clean: true
+2023-08-01T19:14:06.0740317Z   fetch-depth: 1
+2023-08-01T19:14:06.0740528Z   lfs: false
+2023-08-01T19:14:06.0740725Z   submodules: false
+2023-08-01T19:14:06.0740967Z   set-safe-directory: true
+2023-08-01T19:14:06.0741205Z ##[endgroup]
+2023-08-01T19:14:06.3010676Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.3737532Z Syncing repository: Samsung/LPVS
+2023-08-01T19:14:06.3739354Z ##[group]Getting Git version info
+2023-08-01T19:14:06.3739882Z Working directory is '/home/runner/work/LPVS/LPVS'
+2023-08-01T19:14:06.3740461Z [command]/usr/bin/git version
+2023-08-01T19:14:06.3941811Z git version 2.41.0
+2023-08-01T19:14:06.3943858Z ##[endgroup]
+2023-08-01T19:14:06.3959496Z Temporarily overriding HOME='/home/runner/work/_temp/1f3fc0f4-2245-4fd3-96e5-79330f300fa7' before making global git config changes
+2023-08-01T19:14:06.3960472Z Adding repository directory to the temporary git global config as a safe directory
+2023-08-01T19:14:06.3961465Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/LPVS/LPVS
+2023-08-01T19:14:06.3998075Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.4004421Z Deleting the contents of '/home/runner/work/LPVS/LPVS'
+2023-08-01T19:14:06.4008257Z ##[warning]The `save-state` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+2023-08-01T19:14:06.4009777Z ##[group]Initializing the repository
+2023-08-01T19:14:06.4012088Z [command]/usr/bin/git init /home/runner/work/LPVS/LPVS
+2023-08-01T19:14:06.4098759Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-08-01T19:14:06.4099670Z hint: is subject to change. To configure the initial branch name to use in all
+2023-08-01T19:14:06.4100595Z hint: of your new repositories, which will suppress this warning, call:
+2023-08-01T19:14:06.4101041Z hint: 
+2023-08-01T19:14:06.4101762Z hint: 	git config --global init.defaultBranch <name>
+2023-08-01T19:14:06.4102198Z hint: 
+2023-08-01T19:14:06.4102919Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-08-01T19:14:06.4103887Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-08-01T19:14:06.4104585Z hint: 
+2023-08-01T19:14:06.4105010Z hint: 	git branch -m <name>
+2023-08-01T19:14:06.4116289Z Initialized empty Git repository in /home/runner/work/LPVS/LPVS/.git/
+2023-08-01T19:14:06.4125672Z [command]/usr/bin/git remote add origin https://github.com/Samsung/LPVS
+2023-08-01T19:14:06.4171852Z ##[endgroup]
+2023-08-01T19:14:06.4172621Z ##[group]Disabling automatic garbage collection
+2023-08-01T19:14:06.4176088Z [command]/usr/bin/git config --local gc.auto 0
+2023-08-01T19:14:06.4210901Z ##[endgroup]
+2023-08-01T19:14:06.4211561Z ##[group]Setting up auth
+2023-08-01T19:14:06.4218666Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-08-01T19:14:06.4253422Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :
+2023-08-01T19:14:06.4671972Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-08-01T19:14:06.4708512Z [command]/usr/bin/git submodule foreach --recursive git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :
+2023-08-01T19:14:06.4949940Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-08-01T19:14:06.4983822Z ##[endgroup]
+2023-08-01T19:14:06.4984573Z ##[group]Fetching the repository
+2023-08-01T19:14:06.4994294Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +e53da66c724e188a1ee0713f8eedcbb438c2d031:refs/remotes/pull/194/merge
+2023-08-01T19:14:06.7391913Z remote: Enumerating objects: 105, done.        
+2023-08-01T19:14:06.7403363Z remote: Counting objects:   0% (1/105)        
+2023-08-01T19:14:06.7403982Z remote: Counting objects:   1% (2/105)        
+2023-08-01T19:14:06.7404349Z remote: Counting objects:   2% (3/105)        
+2023-08-01T19:14:06.7404690Z remote: Counting objects:   3% (4/105)        
+2023-08-01T19:14:06.7405041Z remote: Counting objects:   4% (5/105)        
+2023-08-01T19:14:06.7405358Z remote: Counting objects:   5% (6/105)        
+2023-08-01T19:14:06.7405676Z remote: Counting objects:   6% (7/105)        
+2023-08-01T19:14:06.7405974Z remote: Counting objects:   7% (8/105)        
+2023-08-01T19:14:06.7406284Z remote: Counting objects:   8% (9/105)        
+2023-08-01T19:14:06.7406616Z remote: Counting objects:   9% (10/105)        
+2023-08-01T19:14:06.7406927Z remote: Counting objects:  10% (11/105)        
+2023-08-01T19:14:06.7407257Z remote: Counting objects:  11% (12/105)        
+2023-08-01T19:14:06.7407576Z remote: Counting objects:  12% (13/105)        
+2023-08-01T19:14:06.7407894Z remote: Counting objects:  13% (14/105)        
+2023-08-01T19:14:06.7408197Z remote: Counting objects:  14% (15/105)        
+2023-08-01T19:14:06.7408520Z remote: Counting objects:  15% (16/105)        
+2023-08-01T19:14:06.7408833Z remote: Counting objects:  16% (17/105)        
+2023-08-01T19:14:06.7409141Z remote: Counting objects:  17% (18/105)        
+2023-08-01T19:14:06.7409461Z remote: Counting objects:  18% (19/105)        
+2023-08-01T19:14:06.7409780Z remote: Counting objects:  19% (20/105)        
+2023-08-01T19:14:06.7410170Z remote: Counting objects:  20% (21/105)        
+2023-08-01T19:14:06.7410489Z remote: Counting objects:  21% (23/105)        
+2023-08-01T19:14:06.7410804Z remote: Counting objects:  22% (24/105)        
+2023-08-01T19:14:06.7411108Z remote: Counting objects:  23% (25/105)        
+2023-08-01T19:14:06.7411525Z remote: Counting objects:  24% (26/105)        
+2023-08-01T19:14:06.7411883Z remote: Counting objects:  25% (27/105)        
+2023-08-01T19:14:06.7412199Z remote: Counting objects:  26% (28/105)        
+2023-08-01T19:14:06.7412532Z remote: Counting objects:  27% (29/105)        
+2023-08-01T19:14:06.7413179Z remote: Counting objects:  28% (30/105)        
+2023-08-01T19:14:06.7413496Z remote: Counting objects:  29% (31/105)        
+2023-08-01T19:14:06.7413803Z remote: Counting objects:  30% (32/105)        
+2023-08-01T19:14:06.7414113Z remote: Counting objects:  31% (33/105)        
+2023-08-01T19:14:06.7414522Z remote: Counting objects:  32% (34/105)        
+2023-08-01T19:14:06.7414870Z remote: Counting objects:  33% (35/105)        
+2023-08-01T19:14:06.7415189Z remote: Counting objects:  34% (36/105)        
+2023-08-01T19:14:06.7415507Z remote: Counting objects:  35% (37/105)        
+2023-08-01T19:14:06.7415810Z remote: Counting objects:  36% (38/105)        
+2023-08-01T19:14:06.7416227Z remote: Counting objects:  37% (39/105)        
+2023-08-01T19:14:06.7416549Z remote: Counting objects:  38% (40/105)        
+2023-08-01T19:14:06.7416857Z remote: Counting objects:  39% (41/105)        
+2023-08-01T19:14:06.7417158Z remote: Counting objects:  40% (42/105)        
+2023-08-01T19:14:06.7417508Z remote: Counting objects:  41% (44/105)        
+2023-08-01T19:14:06.7417826Z remote: Counting objects:  42% (45/105)        
+2023-08-01T19:14:06.7418292Z remote: Counting objects:  43% (46/105)        
+2023-08-01T19:14:06.7418610Z remote: Counting objects:  44% (47/105)        
+2023-08-01T19:14:06.7418921Z remote: Counting objects:  45% (48/105)        
+2023-08-01T19:14:06.7419217Z remote: Counting objects:  46% (49/105)        
+2023-08-01T19:14:06.7419530Z remote: Counting objects:  47% (50/105)        
+2023-08-01T19:14:06.7419842Z remote: Counting objects:  48% (51/105)        
+2023-08-01T19:14:06.7420235Z remote: Counting objects:  49% (52/105)        
+2023-08-01T19:14:06.7420587Z remote: Counting objects:  50% (53/105)        
+2023-08-01T19:14:06.7420903Z remote: Counting objects:  51% (54/105)        
+2023-08-01T19:14:06.7421217Z remote: Counting objects:  52% (55/105)        
+2023-08-01T19:14:06.7421517Z remote: Counting objects:  53% (56/105)        
+2023-08-01T19:14:06.7421922Z remote: Counting objects:  54% (57/105)        
+2023-08-01T19:14:06.7422247Z remote: Counting objects:  55% (58/105)        
+2023-08-01T19:14:06.7422591Z remote: Counting objects:  56% (59/105)        
+2023-08-01T19:14:06.7422904Z remote: Counting objects:  57% (60/105)        
+2023-08-01T19:14:06.7423219Z remote: Counting objects:  58% (61/105)        
+2023-08-01T19:14:06.7423517Z remote: Counting objects:  59% (62/105)        
+2023-08-01T19:14:06.7423826Z remote: Counting objects:  60% (63/105)        
+2023-08-01T19:14:06.7424143Z remote: Counting objects:  61% (65/105)        
+2023-08-01T19:14:06.7424441Z remote: Counting objects:  62% (66/105)        
+2023-08-01T19:14:06.7424751Z remote: Counting objects:  63% (67/105)        
+2023-08-01T19:14:06.7425067Z remote: Counting objects:  64% (68/105)        
+2023-08-01T19:14:06.7425394Z remote: Counting objects:  65% (69/105)        
+2023-08-01T19:14:06.7425816Z remote: Counting objects:  66% (70/105)        
+2023-08-01T19:14:06.7426154Z remote: Counting objects:  67% (71/105)        
+2023-08-01T19:14:06.7426474Z remote: Counting objects:  68% (72/105)        
+2023-08-01T19:14:06.7426788Z remote: Counting objects:  69% (73/105)        
+2023-08-01T19:14:06.7430332Z remote: Counting objects:  70% (74/105)        
+2023-08-01T19:14:06.7430911Z remote: Counting objects:  71% (75/105)        
+2023-08-01T19:14:06.7434932Z remote: Counting objects:  72% (76/105)        
+2023-08-01T19:14:06.7435264Z remote: Counting objects:  73% (77/105)        
+2023-08-01T19:14:06.7435583Z remote: Counting objects:  74% (78/105)        
+2023-08-01T19:14:06.7435900Z remote: Counting objects:  75% (79/105)        
+2023-08-01T19:14:06.7436203Z remote: Counting objects:  76% (80/105)        
+2023-08-01T19:14:06.7436524Z remote: Counting objects:  77% (81/105)        
+2023-08-01T19:14:06.7436837Z remote: Counting objects:  78% (82/105)        
+2023-08-01T19:14:06.7437147Z remote: Counting objects:  79% (83/105)        
+2023-08-01T19:14:06.7437450Z remote: Counting objects:  80% (84/105)        
+2023-08-01T19:14:06.7437763Z remote: Counting objects:  81% (86/105)        
+2023-08-01T19:14:06.7438351Z remote: Counting objects:  82% (87/105)        
+2023-08-01T19:14:06.7438659Z remote: Counting objects:  83% (88/105)        
+2023-08-01T19:14:06.7438972Z remote: Counting objects:  84% (89/105)        
+2023-08-01T19:14:06.7439292Z remote: Counting objects:  85% (90/105)        
+2023-08-01T19:14:06.7439590Z remote: Counting objects:  86% (91/105)        
+2023-08-01T19:14:06.7439902Z remote: Counting objects:  87% (92/105)        
+2023-08-01T19:14:06.7440215Z remote: Counting objects:  88% (93/105)        
+2023-08-01T19:14:06.7440514Z remote: Counting objects:  89% (94/105)        
+2023-08-01T19:14:06.7441016Z remote: Counting objects:  90% (95/105)        
+2023-08-01T19:14:06.7441416Z remote: Counting objects:  91% (96/105)        
+2023-08-01T19:14:06.7441830Z remote: Counting objects:  92% (97/105)        
+2023-08-01T19:14:06.7442174Z remote: Counting objects:  93% (98/105)        
+2023-08-01T19:14:06.7442570Z remote: Counting objects:  94% (99/105)        
+2023-08-01T19:14:06.7443028Z remote: Counting objects:  95% (100/105)        
+2023-08-01T19:14:06.7443641Z remote: Counting objects:  96% (101/105)        
+2023-08-01T19:14:06.7444644Z remote: Counting objects:  97% (102/105)        
+2023-08-01T19:14:06.7445060Z remote: Counting objects:  98% (103/105)        
+2023-08-01T19:14:06.7446302Z remote: Counting objects:  99% (104/105)        
+2023-08-01T19:14:06.7446852Z remote: Counting objects: 100% (105/105)        
+2023-08-01T19:14:06.7447217Z remote: Counting objects: 100% (105/105), done.        
+2023-08-01T19:14:06.7447654Z remote: Compressing objects:   1% (1/91)        
+2023-08-01T19:14:06.7448085Z remote: Compressing objects:   2% (2/91)        
+2023-08-01T19:14:06.7448497Z remote: Compressing objects:   3% (3/91)        
+2023-08-01T19:14:06.7448919Z remote: Compressing objects:   4% (4/91)        
+2023-08-01T19:14:06.7449335Z remote: Compressing objects:   5% (5/91)        
+2023-08-01T19:14:06.7449693Z remote: Compressing objects:   6% (6/91)        
+2023-08-01T19:14:06.7450118Z remote: Compressing objects:   7% (7/91)        
+2023-08-01T19:14:06.7450582Z remote: Compressing objects:   8% (8/91)        
+2023-08-01T19:14:06.7450933Z remote: Compressing objects:   9% (9/91)        
+2023-08-01T19:14:06.7451344Z remote: Compressing objects:  10% (10/91)        
+2023-08-01T19:14:06.7451761Z remote: Compressing objects:  12% (11/91)        
+2023-08-01T19:14:06.7452205Z remote: Compressing objects:  13% (12/91)        
+2023-08-01T19:14:06.7452600Z remote: Compressing objects:  14% (13/91)        
+2023-08-01T19:14:06.7453012Z remote: Compressing objects:  15% (14/91)        
+2023-08-01T19:14:06.7453421Z remote: Compressing objects:  16% (15/91)        
+2023-08-01T19:14:06.7453776Z remote: Compressing objects:  17% (16/91)        
+2023-08-01T19:14:06.7454223Z remote: Compressing objects:  18% (17/91)        
+2023-08-01T19:14:06.7455298Z remote: Compressing objects:  19% (18/91)        
+2023-08-01T19:14:06.7456117Z remote: Compressing objects:  20% (19/91)        
+2023-08-01T19:14:06.7456550Z remote: Compressing objects:  21% (20/91)        
+2023-08-01T19:14:06.7456979Z remote: Compressing objects:  23% (21/91)        
+2023-08-01T19:14:06.7457816Z remote: Compressing objects:  24% (22/91)        
+2023-08-01T19:14:06.7458253Z remote: Compressing objects:  25% (23/91)        
+2023-08-01T19:14:06.7458662Z remote: Compressing objects:  26% (24/91)        
+2023-08-01T19:14:06.7459076Z remote: Compressing objects:  27% (25/91)        
+2023-08-01T19:14:06.7459581Z remote: Compressing objects:  28% (26/91)        
+2023-08-01T19:14:06.7459949Z remote: Compressing objects:  29% (27/91)        
+2023-08-01T19:14:06.7460303Z remote: Compressing objects:  30% (28/91)        
+2023-08-01T19:14:06.7460650Z remote: Compressing objects:  31% (29/91)        
+2023-08-01T19:14:06.7461006Z remote: Compressing objects:  32% (30/91)        
+2023-08-01T19:14:06.7461400Z remote: Compressing objects:  34% (31/91)        
+2023-08-01T19:14:06.7472273Z remote: Compressing objects:  35% (32/91)        
+2023-08-01T19:14:06.7473023Z remote: Compressing objects:  36% (33/91)        
+2023-08-01T19:14:06.7473423Z remote: Compressing objects:  37% (34/91)        
+2023-08-01T19:14:06.7473879Z remote: Compressing objects:  38% (35/91)        
+2023-08-01T19:14:06.7474200Z remote: Compressing objects:  39% (36/91)        
+2023-08-01T19:14:06.7474561Z remote: Compressing objects:  40% (37/91)        
+2023-08-01T19:14:06.7474940Z remote: Compressing objects:  41% (38/91)        
+2023-08-01T19:14:06.7475277Z remote: Compressing objects:  42% (39/91)        
+2023-08-01T19:14:06.7475675Z remote: Compressing objects:  43% (40/91)        
+2023-08-01T19:14:06.7476032Z remote: Compressing objects:  45% (41/91)        
+2023-08-01T19:14:06.7476404Z remote: Compressing objects:  46% (42/91)        
+2023-08-01T19:14:06.7476714Z remote: Compressing objects:  47% (43/91)        
+2023-08-01T19:14:06.7477099Z remote: Compressing objects:  48% (44/91)        
+2023-08-01T19:14:06.7477459Z remote: Compressing objects:  49% (45/91)        
+2023-08-01T19:14:06.7477769Z remote: Compressing objects:  50% (46/91)        
+2023-08-01T19:14:06.7478261Z remote: Compressing objects:  51% (47/91)        
+2023-08-01T19:14:06.7478642Z remote: Compressing objects:  52% (48/91)        
+2023-08-01T19:14:06.7478981Z remote: Compressing objects:  53% (49/91)        
+2023-08-01T19:14:06.7479348Z remote: Compressing objects:  54% (50/91)        
+2023-08-01T19:14:06.7479707Z remote: Compressing objects:  56% (51/91)        
+2023-08-01T19:14:06.7480011Z remote: Compressing objects:  57% (52/91)        
+2023-08-01T19:14:06.7480368Z remote: Compressing objects:  58% (53/91)        
+2023-08-01T19:14:06.7480756Z remote: Compressing objects:  59% (54/91)        
+2023-08-01T19:14:06.7481119Z remote: Compressing objects:  60% (55/91)        
+2023-08-01T19:14:06.7481429Z remote: Compressing objects:  61% (56/91)        
+2023-08-01T19:14:06.7487749Z remote: Compressing objects:  62% (57/91)        
+2023-08-01T19:14:06.7488234Z remote: Compressing objects:  63% (58/91)        
+2023-08-01T19:14:06.7488596Z remote: Compressing objects:  64% (59/91)        
+2023-08-01T19:14:06.7494047Z remote: Compressing objects:  65% (60/91)        
+2023-08-01T19:14:06.7494438Z remote: Compressing objects:  67% (61/91)        
+2023-08-01T19:14:06.7494883Z remote: Compressing objects:  68% (62/91)        
+2023-08-01T19:14:06.7495200Z remote: Compressing objects:  69% (63/91)        
+2023-08-01T19:14:06.7495585Z remote: Compressing objects:  70% (64/91)        
+2023-08-01T19:14:06.7495942Z remote: Compressing objects:  71% (65/91)        
+2023-08-01T19:14:06.7496272Z remote: Compressing objects:  72% (66/91)        
+2023-08-01T19:14:06.7496656Z remote: Compressing objects:  73% (67/91)        
+2023-08-01T19:14:06.7497021Z remote: Compressing objects:  74% (68/91)        
+2023-08-01T19:14:06.7497329Z remote: Compressing objects:  75% (69/91)        
+2023-08-01T19:14:06.7498891Z remote: Compressing objects:  76% (70/91)        
+2023-08-01T19:14:06.7499270Z remote: Compressing objects:  78% (71/91)        
+2023-08-01T19:14:06.7499732Z remote: Compressing objects:  79% (72/91)        
+2023-08-01T19:14:06.7500052Z remote: Compressing objects:  80% (73/91)        
+2023-08-01T19:14:06.7500410Z remote: Compressing objects:  81% (74/91)        
+2023-08-01T19:14:06.7500773Z remote: Compressing objects:  82% (75/91)        
+2023-08-01T19:14:06.7501087Z remote: Compressing objects:  83% (76/91)        
+2023-08-01T19:14:06.7501486Z remote: Compressing objects:  84% (77/91)        
+2023-08-01T19:14:06.7501837Z remote: Compressing objects:  85% (78/91)        
+2023-08-01T19:14:06.7502204Z remote: Compressing objects:  86% (79/91)        
+2023-08-01T19:14:06.7505817Z remote: Compressing objects:  87% (80/91)        
+2023-08-01T19:14:06.7506267Z remote: Compressing objects:  89% (81/91)        
+2023-08-01T19:14:06.7506631Z remote: Compressing objects:  90% (82/91)        
+2023-08-01T19:14:06.7506944Z remote: Compressing objects:  91% (83/91)        
+2023-08-01T19:14:06.7507457Z remote: Compressing objects:  92% (84/91)        
+2023-08-01T19:14:06.7508038Z remote: Compressing objects:  93% (85/91)        
+2023-08-01T19:14:06.7508397Z remote: Compressing objects:  94% (86/91)        
+2023-08-01T19:14:06.7508755Z remote: Compressing objects:  95% (87/91)        
+2023-08-01T19:14:06.7509129Z remote: Compressing objects:  96% (88/91)        
+2023-08-01T19:14:06.7509439Z remote: Compressing objects:  97% (89/91)        
+2023-08-01T19:14:06.7509855Z remote: Compressing objects:  98% (90/91)        
+2023-08-01T19:14:06.7510246Z remote: Compressing objects: 100% (91/91)        
+2023-08-01T19:14:06.7510648Z remote: Compressing objects: 100% (91/91), done.        
+2023-08-01T19:14:06.7557959Z Receiving objects:   0% (1/105)
+2023-08-01T19:14:06.7558441Z Receiving objects:   1% (2/105)
+2023-08-01T19:14:06.7558763Z Receiving objects:   2% (3/105)
+2023-08-01T19:14:06.7559084Z Receiving objects:   3% (4/105)
+2023-08-01T19:14:06.7559355Z Receiving objects:   4% (5/105)
+2023-08-01T19:14:06.7559739Z Receiving objects:   5% (6/105)
+2023-08-01T19:14:06.7560070Z Receiving objects:   6% (7/105)
+2023-08-01T19:14:06.7560336Z Receiving objects:   7% (8/105)
+2023-08-01T19:14:06.7560872Z Receiving objects:   8% (9/105)
+2023-08-01T19:14:06.7561212Z Receiving objects:   9% (10/105)
+2023-08-01T19:14:06.7627597Z Receiving objects:  10% (11/105)
+2023-08-01T19:14:06.7628127Z Receiving objects:  11% (12/105)
+2023-08-01T19:14:06.7628544Z Receiving objects:  12% (13/105)
+2023-08-01T19:14:06.7628830Z Receiving objects:  13% (14/105)
+2023-08-01T19:14:06.7629168Z Receiving objects:  14% (15/105)
+2023-08-01T19:14:06.7629491Z Receiving objects:  15% (16/105)
+2023-08-01T19:14:06.7629772Z Receiving objects:  16% (17/105)
+2023-08-01T19:14:06.7630135Z Receiving objects:  17% (18/105)
+2023-08-01T19:14:06.7630468Z Receiving objects:  18% (19/105)
+2023-08-01T19:14:06.7630735Z Receiving objects:  19% (20/105)
+2023-08-01T19:14:06.7631059Z Receiving objects:  20% (21/105)
+2023-08-01T19:14:06.7631403Z Receiving objects:  21% (23/105)
+2023-08-01T19:14:06.7631731Z Receiving objects:  22% (24/105)
+2023-08-01T19:14:06.7632011Z Receiving objects:  23% (25/105)
+2023-08-01T19:14:06.7632544Z Receiving objects:  24% (26/105)
+2023-08-01T19:14:06.7633360Z Receiving objects:  25% (27/105)
+2023-08-01T19:14:06.7634126Z remote: Total 105 (delta 11), reused 72 (delta 7), pack-reused 0        
+2023-08-01T19:14:06.7637259Z Receiving objects:  26% (28/105)
+2023-08-01T19:14:06.7637608Z Receiving objects:  27% (29/105)
+2023-08-01T19:14:06.7638006Z Receiving objects:  28% (30/105)
+2023-08-01T19:14:06.7638278Z Receiving objects:  29% (31/105)
+2023-08-01T19:14:06.7638678Z Receiving objects:  30% (32/105)
+2023-08-01T19:14:06.7639417Z Receiving objects:  31% (33/105)
+2023-08-01T19:14:06.7639710Z Receiving objects:  32% (34/105)
+2023-08-01T19:14:06.7640028Z Receiving objects:  33% (35/105)
+2023-08-01T19:14:06.7640390Z Receiving objects:  34% (36/105)
+2023-08-01T19:14:06.7640660Z Receiving objects:  35% (37/105)
+2023-08-01T19:14:06.7640988Z Receiving objects:  36% (38/105)
+2023-08-01T19:14:06.7641331Z Receiving objects:  37% (39/105)
+2023-08-01T19:14:06.7641596Z Receiving objects:  38% (40/105)
+2023-08-01T19:14:06.7642127Z Receiving objects:  39% (41/105)
+2023-08-01T19:14:06.7642472Z Receiving objects:  40% (42/105)
+2023-08-01T19:14:06.7642741Z Receiving objects:  41% (44/105)
+2023-08-01T19:14:06.7643681Z Receiving objects:  42% (45/105)
+2023-08-01T19:14:06.7644010Z Receiving objects:  43% (46/105)
+2023-08-01T19:14:06.7644380Z Receiving objects:  44% (47/105)
+2023-08-01T19:14:06.7644648Z Receiving objects:  45% (48/105)
+2023-08-01T19:14:06.7644979Z Receiving objects:  46% (49/105)
+2023-08-01T19:14:06.7645532Z Receiving objects:  47% (50/105)
+2023-08-01T19:14:06.7645801Z Receiving objects:  48% (51/105)
+2023-08-01T19:14:06.7646154Z Receiving objects:  49% (52/105)
+2023-08-01T19:14:06.7646510Z Receiving objects:  50% (53/105)
+2023-08-01T19:14:06.7646781Z Receiving objects:  51% (54/105)
+2023-08-01T19:14:06.7647091Z Receiving objects:  52% (55/105)
+2023-08-01T19:14:06.7647434Z Receiving objects:  53% (56/105)
+2023-08-01T19:14:06.7647911Z Receiving objects:  54% (57/105)
+2023-08-01T19:14:06.7648247Z Receiving objects:  55% (58/105)
+2023-08-01T19:14:06.7648583Z Receiving objects:  56% (59/105)
+2023-08-01T19:14:06.7648851Z Receiving objects:  57% (60/105)
+2023-08-01T19:14:06.7649193Z Receiving objects:  58% (61/105)
+2023-08-01T19:14:06.7649519Z Receiving objects:  59% (62/105)
+2023-08-01T19:14:06.7649785Z Receiving objects:  60% (63/105)
+2023-08-01T19:14:06.7650098Z Receiving objects:  61% (65/105)
+2023-08-01T19:14:06.7650411Z Receiving objects:  62% (66/105)
+2023-08-01T19:14:06.7650706Z Receiving objects:  63% (67/105)
+2023-08-01T19:14:06.7651528Z Receiving objects:  64% (68/105)
+2023-08-01T19:14:06.7651871Z Receiving objects:  65% (69/105)
+2023-08-01T19:14:06.7652140Z Receiving objects:  66% (70/105)
+2023-08-01T19:14:06.7652460Z Receiving objects:  67% (71/105)
+2023-08-01T19:14:06.7652842Z Receiving objects:  68% (72/105)
+2023-08-01T19:14:06.7653157Z Receiving objects:  69% (73/105)
+2023-08-01T19:14:06.7653433Z Receiving objects:  70% (74/105)
+2023-08-01T19:14:06.7653743Z Receiving objects:  71% (75/105)
+2023-08-01T19:14:06.7654472Z Receiving objects:  72% (76/105)
+2023-08-01T19:14:06.7654747Z Receiving objects:  73% (77/105)
+2023-08-01T19:14:06.7655102Z Receiving objects:  74% (78/105)
+2023-08-01T19:14:06.7661217Z Receiving objects:  75% (79/105)
+2023-08-01T19:14:06.7661625Z Receiving objects:  76% (80/105)
+2023-08-01T19:14:06.7662024Z Receiving objects:  77% (81/105)
+2023-08-01T19:14:06.7662357Z Receiving objects:  78% (82/105)
+2023-08-01T19:14:06.7662627Z Receiving objects:  79% (83/105)
+2023-08-01T19:14:06.7662933Z Receiving objects:  80% (84/105)
+2023-08-01T19:14:06.7663243Z Receiving objects:  81% (86/105)
+2023-08-01T19:14:06.7663548Z Receiving objects:  82% (87/105)
+2023-08-01T19:14:06.7663852Z Receiving objects:  83% (88/105)
+2023-08-01T19:14:06.7664169Z Receiving objects:  84% (89/105)
+2023-08-01T19:14:06.7664428Z Receiving objects:  85% (90/105)
+2023-08-01T19:14:06.7664743Z Receiving objects:  86% (91/105)
+2023-08-01T19:14:06.7665106Z Receiving objects:  87% (92/105)
+2023-08-01T19:14:06.7665368Z Receiving objects:  88% (93/105)
+2023-08-01T19:14:06.7665683Z Receiving objects:  89% (94/105)
+2023-08-01T19:14:06.7665991Z Receiving objects:  90% (95/105)
+2023-08-01T19:14:06.7666336Z Receiving objects:  91% (96/105)
+2023-08-01T19:14:06.7666602Z Receiving objects:  92% (97/105)
+2023-08-01T19:14:06.7666915Z Receiving objects:  93% (98/105)
+2023-08-01T19:14:06.7667581Z Receiving objects:  94% (99/105)
+2023-08-01T19:14:06.7667854Z Receiving objects:  95% (100/105)
+2023-08-01T19:14:06.7668236Z Receiving objects:  96% (101/105)
+2023-08-01T19:14:06.7668556Z Receiving objects:  97% (102/105)
+2023-08-01T19:14:06.7668832Z Receiving objects:  98% (103/105)
+2023-08-01T19:14:06.7669145Z Receiving objects:  99% (104/105)
+2023-08-01T19:14:06.7669472Z Receiving objects: 100% (105/105)
+2023-08-01T19:14:06.7669810Z Receiving objects: 100% (105/105), 117.78 KiB | 19.63 MiB/s, done.
+2023-08-01T19:14:06.7670159Z Resolving deltas:   0% (0/11)
+2023-08-01T19:14:06.7670477Z Resolving deltas:   9% (1/11)
+2023-08-01T19:14:06.7670740Z Resolving deltas:  18% (2/11)
+2023-08-01T19:14:06.7671066Z Resolving deltas:  27% (3/11)
+2023-08-01T19:14:06.7671394Z Resolving deltas:  36% (4/11)
+2023-08-01T19:14:06.7671651Z Resolving deltas:  45% (5/11)
+2023-08-01T19:14:06.7671949Z Resolving deltas:  54% (6/11)
+2023-08-01T19:14:06.7672261Z Resolving deltas:  63% (7/11)
+2023-08-01T19:14:06.7672586Z Resolving deltas:  72% (8/11)
+2023-08-01T19:14:06.7672851Z Resolving deltas:  81% (9/11)
+2023-08-01T19:14:06.7673166Z Resolving deltas:  90% (10/11)
+2023-08-01T19:14:06.7673493Z Resolving deltas: 100% (11/11)
+2023-08-01T19:14:06.7673770Z Resolving deltas: 100% (11/11), done.
+2023-08-01T19:14:06.7709326Z From https://github.com/Samsung/LPVS
+2023-08-01T19:14:06.7710154Z  * [new ref]         e53da66c724e188a1ee0713f8eedcbb438c2d031 -> pull/194/merge
+2023-08-01T19:14:06.7761279Z ##[endgroup]
+2023-08-01T19:14:06.7761918Z ##[group]Determining the checkout info
+2023-08-01T19:14:06.7762759Z ##[endgroup]
+2023-08-01T19:14:06.7763294Z ##[group]Checking out the ref
+2023-08-01T19:14:06.7764009Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/194/merge
+2023-08-01T19:14:06.7859723Z Note: switching to 'refs/remotes/pull/194/merge'.
+2023-08-01T19:14:06.7860137Z 
+2023-08-01T19:14:06.7860455Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-08-01T19:14:06.7860933Z changes and commit them, and you can discard any commits you make in this
+2023-08-01T19:14:06.7861390Z state without impacting any branches by switching back to a branch.
+2023-08-01T19:14:06.7861589Z 
+2023-08-01T19:14:06.7861817Z If you want to create a new branch to retain commits you create, you may
+2023-08-01T19:14:06.7862367Z do so (now or later) by using -c with the switch command. Example:
+2023-08-01T19:14:06.7862607Z 
+2023-08-01T19:14:06.7862818Z   git switch -c <new-branch-name>
+2023-08-01T19:14:06.7863043Z 
+2023-08-01T19:14:06.7863194Z Or undo this operation with:
+2023-08-01T19:14:06.7863360Z 
+2023-08-01T19:14:06.7863494Z   git switch -
+2023-08-01T19:14:06.7863661Z 
+2023-08-01T19:14:06.7864852Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-08-01T19:14:06.7865177Z 
+2023-08-01T19:14:06.7870424Z HEAD is now at e53da66 Merge e47fd8edc5227b6852ebd2466dd89049c9907b80 into 766c005ce579ff1917d96d8c0eab9b918da90b01
+2023-08-01T19:14:06.7871302Z ##[endgroup]
+2023-08-01T19:14:06.7898921Z [command]/usr/bin/git log -1 --format='%H'
+2023-08-01T19:14:06.7941476Z 'e53da66c724e188a1ee0713f8eedcbb438c2d031'
+
+2023-08-01T19:13:50.3946940Z ##[section]Starting: Prepare job test-suite
+2023-08-01T19:13:50.3950485Z Evaluating strategy
+2023-08-01T19:13:50.3955209Z Creating job '__default'
+2023-08-01T19:13:50.3957649Z Evaluating timeout
+2023-08-01T19:13:50.3957689Z Evaluating cancel timeout
+2023-08-01T19:13:50.3957731Z Evaluating continue on error
+2023-08-01T19:13:50.3957756Z Evaluating target
+2023-08-01T19:13:50.3960110Z ##[section]Finishing: Prepare job test-suite
+
+2023-08-01T19:13:56.7298974Z Current runner version: '2.307.1'
+2023-08-01T19:13:56.7331900Z ##[group]Operating System
+2023-08-01T19:13:56.7332597Z Ubuntu
+2023-08-01T19:13:56.7332890Z 22.04.2
+2023-08-01T19:13:56.7333192Z LTS
+2023-08-01T19:13:56.7333525Z ##[endgroup]
+2023-08-01T19:13:56.7333825Z ##[group]Runner Image
+2023-08-01T19:13:56.7334242Z Image: ubuntu-22.04
+2023-08-01T19:13:56.7334611Z Version: 20230724.1.0
+2023-08-01T19:13:56.7335135Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230724.1/images/linux/Ubuntu2204-Readme.md
+2023-08-01T19:13:56.7335849Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230724.1
+2023-08-01T19:13:56.7336367Z ##[endgroup]
+2023-08-01T19:13:56.7336761Z ##[group]Runner Image Provisioner
+2023-08-01T19:13:56.7337087Z 2.0.264.1
+2023-08-01T19:13:56.7337400Z ##[endgroup]
+2023-08-01T19:13:56.7338146Z ##[group]GITHUB_TOKEN Permissions
+2023-08-01T19:13:56.7338801Z Contents: read
+2023-08-01T19:13:56.7339189Z Metadata: read
+2023-08-01T19:13:56.7339546Z PullRequests: write
+2023-08-01T19:13:56.7340246Z ##[endgroup]
+2023-08-01T19:13:56.7344122Z Secret source: Dependabot
+2023-08-01T19:13:56.7344649Z Prepare workflow directory
+2023-08-01T19:13:56.8105584Z Prepare all required actions
+2023-08-01T19:13:56.8303753Z Getting action download info
+2023-08-01T19:13:57.0219002Z Download action repository 'actions/checkout@d0651293c4a5a52e711f25b41b05b2212f385d28' (SHA:d0651293c4a5a52e711f25b41b05b2212f385d28)
+2023-08-01T19:13:57.5532934Z Download action repository 'actions/setup-java@5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2' (SHA:5ffc13f4174014e2d4d4572b3d74c3fa61aeb2c2)
+2023-08-01T19:13:57.7974787Z Download action repository 'cicirello/jacoco-badge-generator@a0c1eb19a496308187341ed2a736ef5df78b7003' (SHA:a0c1eb19a496308187341ed2a736ef5df78b7003)
+2023-08-01T19:13:57.9520397Z Download action repository 'actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce' (SHA:0b7f8abb1508181956e8e162db84b466c27e18ce)
+2023-08-01T19:13:58.2568378Z Complete job name: test-suite
+
+2023-08-01T19:14:18.8095869Z Cleaning up orphan processes

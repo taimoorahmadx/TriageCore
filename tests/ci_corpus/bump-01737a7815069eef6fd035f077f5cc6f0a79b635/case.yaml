@@ -1,0 +1,65 @@
+repo: googleapis/java-storage-nio
+run_id: 01737a7815069eef6fd035f077f5cc6f0a79b635
+head_sha: 01737a7815069eef6fd035f077f5cc6f0a79b635
+run_attempts: []
+commits:
+- sha: 01737a7815069eef6fd035f077f5cc6f0a79b635
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 9f7b1bba58f63cdfc42f42b1f219f65dbcc8d310
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: 4cae224f24ad139ea032fd515119abaeda9dc666
+  author: renovate-bot
+  files:
+  - pom.xml
+  - samples/install-without-bom/pom.xml
+  - samples/snapshot/pom.xml
+  - samples/snippets/pom.xml
+- sha: fe212061cc3dc7206ece4d5545d2fb8ff58f36b6
+  author: gcf-owl-bot[bot]
+  files:
+  - .github/.OwlBot.lock.yaml
+  - .github/dependabot.yml
+- sha: 3edd4cc0ec60d8e7621cb0445d85a970971c2a7c
+  author: renovate-bot
+  files:
+  - samples/snippets/pom.xml
+- sha: 1f2e43fb68487d9559fe80bb2392fdc2ee75354e
+  author: release-please[bot]
+  files:
+  - google-cloud-nio-examples/pom.xml
+  - google-cloud-nio-retrofit/pom.xml
+  - google-cloud-nio/pom.xml
+  - pom.xml
+  - samples/snapshot/pom.xml
+  - versions.txt
+- sha: 7a839d0ac5ba98f71eca12db674391333643ee36
+  author: renovate-bot
+  files:
+  - samples/install-without-bom/pom.xml
+- sha: 91b5d6ae6d80f33c45a7fa37fd3ec3907e3639d0
+  author: release-please[bot]
+  files:
+  - CHANGELOG.md
+  - google-cloud-nio-examples/pom.xml
+  - google-cloud-nio-retrofit/pom.xml
+  - google-cloud-nio/pom.xml
+  - pom.xml
+  - samples/snapshot/pom.xml
+  - versions.txt
+- sha: 6018385114a0e190026a19826a8ff85d994c40c3
+  author: renovate-bot
+  files:
+  - pom.xml
+- sha: db3cf2898027be6169fb109b4d64866f24d74fb4
+  author: renovate-bot
+  files:
+  - pom.xml
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

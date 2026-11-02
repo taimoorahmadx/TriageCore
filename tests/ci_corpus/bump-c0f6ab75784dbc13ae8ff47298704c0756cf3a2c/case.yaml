@@ -1,0 +1,54 @@
+repo: ASSERT-KTH/sorald
+run_id: c0f6ab75784dbc13ae8ff47298704c0756cf3a2c
+head_sha: c0f6ab75784dbc13ae8ff47298704c0756cf3a2c
+run_attempts: []
+commits:
+- sha: c0f6ab75784dbc13ae8ff47298704c0756cf3a2c
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 1dc649db9ede7c9627a1eb4ad66ec56115787acc
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 7a21ea903584634c52b2f0b015866c30e78e21b8
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: a2c9c011eb5a3e9d2a2778d3b803e8bbb319cf50
+  author: algomaster99
+  files:
+  - .github/workflows/deploy.yml
+  - .github/workflows/jreleaser.yml
+  - .github/workflows/tests.yml
+  - README.md
+  - sorald/pom.xml
+- sha: f4eb5c7f56a40782a3f8ebc620d71a331b55b213
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 37b31853784204de21b57415aad9e86790e3d682
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 4e13410de69315ab509ed5be7f06b320e6980a1d
+  author: renovate[bot]
+  files:
+  - sorald/pom.xml
+- sha: 0ed80a64be5bdba534f64b0bb1eb08d8f657806d
+  author: renovate[bot]
+  files:
+  - pom.xml
+- sha: 664d0d6d652a0293e2e5c20e72b200d08b5a301c
+  author: renovate[bot]
+  files:
+  - sorald-api/pom.xml
+  - sorald/pom.xml
+- sha: 490c8d7baefa99f518c51ed45ce8343d3ce6537d
+  author: renovate[bot]
+  files: []
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,0 +1,633 @@
+===== build (3.10)/5_Test with tox.txt =====
+##[group]Run tox
+[36;1mtox[0m
+shell: /usr/bin/bash -e {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.10.13/x64
+  PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib/pkgconfig
+  Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.13/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.13/x64/lib
+##[endgroup]
+lint: install_deps> python -I -m pip install -r /home/runner/work/cowrie/cowrie/requirements.txt -r /home/runner/work/cowrie/cowrie/requirements-dev.txt
+lint: freeze> python -m pip freeze --all
+lint: alabaster==0.7.13,appdirs==1.4.4,astroid==3.0.1,attrs==23.1.0,Automat==22.10.0,Babel==2.13.1,bcrypt==4.0.1,build==1.0.3,cachetools==5.3.2,certifi==2023.7.22,cffi==1.16.0,cfgv==3.4.0,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,configparser==6.0.0,constantly==23.10.4,coverage==7.3.2,cryptography==41.0.4,dataclasses-json==0.6.2,dill==0.3.7,distlib==0.3.7,docutils==0.18.1,filelock==3.13.1,hyperlink==21.0.0,identify==2.5.31,idna==3.4,imagesize==1.4.1,importlab==0.8.1,incremental==22.10.0,intervaltree==3.1.0,isort==5.12.0,Jinja2==3.1.2,libcst==0.4.9,MarkupSafe==2.1.3,marshmallow==3.20.1,mccabe==0.7.0,mypy==1.4.1,mypy-extensions==1.0.0,mypy-zope==1.0.1,networkx==3.1,ninja==1.11.1.1,nodeenv==1.8.0,packaging==23.2,pathspec==0.11.2,pip==23.3.1,pipdeptree==2.13.0,platformdirs==3.11.0,pluggy==1.3.0,pre-commit==3.5.0,psutil==5.9.6,pyasn1==0.5.0,pyasn1-modules==0.3.0,pycparser==2.21,pydot==1.4.2,Pygments==2.16.1,pylint==3.0.2,pyOpenSSL==23.2.0,pyparsing==3.1.1,pyproject-api==1.6.1,pyproject_hooks==1.0.0,pyre-check==0.9.19,pyre-extensions==0.0.30,pyright==1.1.333,python-dateutil==2.8.2,pytype==2023.6.2,pyupgrade==3.15.0,PyYAML==6.0.1,readthedocs-sphinx-search==0.3.1,requests==2.31.0,ruff==0.1.3,service-identity==23.1.0,setuptools==68.2.2,six==1.16.0,snowballstemmer==2.2.0,sortedcontainers==2.4.0,Sphinx==7.2.6,sphinx-copybutton==0.5.2,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tabulate==0.9.0,TestSlide==2.7.1,tftpy==0.8.2,tokenize-rt==5.2.0,toml==0.10.2,tomli==2.0.1,tomlkit==0.12.2,tox==4.11.3,treq==22.2.0,Twisted==23.10.0,typeguard==2.13.3,types-pyOpenSSL==23.3.0.0,types-python-dateutil==2.8.19.14,types-redis==4.6.0.7,types-requests==2.31.0.10,typing-inspect==0.9.0,typing_extensions==4.8.0,urllib3==2.0.7,virtualenv==20.24.6,wheel==0.41.2,yamllint==1.32.0,zope.event==5.0,zope.interface==6.1,zope.schema==7.0.1
+##[group]tox: lint
+lint: commands[0]> ruff /home/runner/work/cowrie/cowrie/src
+src/cowrie/output/oraclecloud.py:3:26: F401 [*] `configparser.NoOptionError` imported but unused
+src/cowrie/output/oraclecloud.py:8:8: F811 Redefinition of unused `oci` from line 5
+src/cowrie/output/oraclecloud.py:9:17: F401 [*] `oci.auth` imported but unused
+src/cowrie/output/oraclecloud.py:24:25: Q000 [*] Single quotes found but double quotes preferred
+src/cowrie/output/oraclecloud.py:53:13: T201 `print` found
+src/cowrie/output/oraclecloud.py:58:13: T201 `print` found
+Found 6 errors.
+[*] 3 fixable with the `--fix` option.
+lint: exit 1 (0.10 seconds) /home/runner/work/cowrie/cowrie> ruff /home/runner/work/cowrie/cowrie/src pid=2034
+##[endgroup]
+lint: FAIL ✖ in 36.55 seconds
+docs: install_deps> python -I -m pip install -r /home/runner/work/cowrie/cowrie/requirements.txt -r /home/runner/work/cowrie/cowrie/requirements-dev.txt
+docs: freeze> python -m pip freeze --all
+docs: alabaster==0.7.13,appdirs==1.4.4,astroid==3.0.1,attrs==23.1.0,Automat==22.10.0,Babel==2.13.1,bcrypt==4.0.1,build==1.0.3,cachetools==5.3.2,certifi==2023.7.22,cffi==1.16.0,cfgv==3.4.0,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,configparser==6.0.0,constantly==23.10.4,coverage==7.3.2,cryptography==41.0.4,dataclasses-json==0.6.2,dill==0.3.7,distlib==0.3.7,docutils==0.18.1,filelock==3.13.1,hyperlink==21.0.0,identify==2.5.31,idna==3.4,imagesize==1.4.1,importlab==0.8.1,incremental==22.10.0,intervaltree==3.1.0,isort==5.12.0,Jinja2==3.1.2,libcst==0.4.9,MarkupSafe==2.1.3,marshmallow==3.20.1,mccabe==0.7.0,mypy==1.4.1,mypy-extensions==1.0.0,mypy-zope==1.0.1,networkx==3.1,ninja==1.11.1.1,nodeenv==1.8.0,packaging==23.2,pathspec==0.11.2,pip==23.3.1,pipdeptree==2.13.0,platformdirs==3.11.0,pluggy==1.3.0,pre-commit==3.5.0,psutil==5.9.6,pyasn1==0.5.0,pyasn1-modules==0.3.0,pycparser==2.21,pydot==1.4.2,Pygments==2.16.1,pylint==3.0.2,pyOpenSSL==23.2.0,pyparsing==3.1.1,pyproject-api==1.6.1,pyproject_hooks==1.0.0,pyre-check==0.9.19,pyre-extensions==0.0.30,pyright==1.1.333,python-dateutil==2.8.2,pytype==2023.6.2,pyupgrade==3.15.0,PyYAML==6.0.1,readthedocs-sphinx-search==0.3.1,requests==2.31.0,ruff==0.1.3,service-identity==23.1.0,setuptools==68.2.2,six==1.16.0,snowballstemmer==2.2.0,sortedcontainers==2.4.0,Sphinx==7.2.6,sphinx-copybutton==0.5.2,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tabulate==0.9.0,TestSlide==2.7.1,tftpy==0.8.2,tokenize-rt==5.2.0,toml==0.10.2,tomli==2.0.1,tomlkit==0.12.2,tox==4.11.3,treq==22.2.0,Twisted==23.10.0,typeguard==2.13.3,types-pyOpenSSL==23.3.0.0,types-python-dateutil==2.8.19.14,types-redis==4.6.0.7,types-requests==2.31.0.10,typing-inspect==0.9.0,typing_extensions==4.8.0,urllib3==2.0.7,virtualenv==20.24.6,wheel==0.41.2,yamllint==1.32.0,zope.event==5.0,zope.interface==6.1,zope.schema==7.0.1
+##[group]tox: docs
+docs: commands[0] /home/runner/work/cowrie/cowrie/docs> sphinx-build -W -b html -d /home/runner/work/cowrie/cowrie/.tox/docs/tmp/doctrees . /home/runner/work/cowrie/cowrie/.tox/docs/tmp/html
+Running Sphinx v7.2.6
+making output directory... done
+loading intersphinx inventory from https://docs.python.org/3/objects.inv...
+loading intersphinx inventory from https://docs.twistedmatrix.com/en/latest/api/objects.inv...
+building [mo]: targets for 0 po files that are out of date
+writing output... 
+building [html]: targets for 24 source files that are out of date
+updating environment: [new config] 24 added, 0 changed, 0 removed
+[2Kreading sources... [  4%] BACKEND_POOL
+[2Kreading sources... [  8%] CHANGELOG
+[2Kreading sources... [ 12%] CONTRIBUTING
+[2Kreading sources... [ 17%] FAQ
+[2Kreading sources... [ 21%] HONEYFS
+[2Kreading sources... [ 25%] INSTALL
+[2Kreading sources... [ 29%] LICENSE
+[2Kreading sources... [ 33%] OUTPUT
+[2Kreading sources... [ 38%] PROXY
+[2Kreading sources... [ 42%] README
+[2Kreading sources... [ 46%] SNAPSHOTS
+[2Kreading sources... [ 50%] datadog/README
+[2Kreading sources... [ 54%] docker/README
+[2Kreading sources... [ 58%] elk/README
+[2Kreading sources... [ 62%] graylog/README
+[2Kreading sources... [ 67%] index
+[2Kreading sources... [ 71%] kippo-graph/README
+[2Kreading sources... [ 75%] sentinel/README
+[2Kreading sources... [ 79%] splunk/README
+[2Kreading sources... [ 83%] sql/README
+[2Kreading sources... [ 88%] squid/README
+[2Kreading sources... [ 92%] supervisor/README
+[2Kreading sources... [ 96%] systemd/README
+[2Kreading sources... [100%] threatjammer/README
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... done
+preparing documents... done
+copying assets... copying static files... done
+copying extra files... done
+done
+[2Kwriting output... [  4%] BACKEND_POOL
+[2Kwriting output... [  8%] CHANGELOG
+[2Kwriting output... [ 12%] CONTRIBUTING
+[2Kwriting output... [ 17%] FAQ
+[2Kwriting output... [ 21%] HONEYFS
+[2Kwriting output... [ 25%] INSTALL
+[2Kwriting output... [ 29%] LICENSE
+[2Kwriting output... [ 33%] OUTPUT
+[2Kwriting output... [ 38%] PROXY
+[2Kwriting output... [ 42%] README
+[2Kwriting output... [ 46%] SNAPSHOTS
+[2Kwriting output... [ 50%] datadog/README
+[2Kwriting output... [ 54%] docker/README
+[2Kwriting output... [ 58%] elk/README
+[2Kwriting output... [ 62%] graylog/README
+[2Kwriting output... [ 67%] index
+[2Kwriting output... [ 71%] kippo-graph/README
+[2Kwriting output... [ 75%] sentinel/README
+[2Kwriting output... [ 79%] splunk/README
+[2Kwriting output... [ 83%] sql/README
+[2Kwriting output... [ 88%] squid/README
+[2Kwriting output... [ 92%] supervisor/README
+[2Kwriting output... [ 96%] systemd/README
+[2Kwriting output... [100%] threatjammer/README
+generating indices... genindex done
+highlighting module code... 
+writing additional pages... search done
+dumping search index in English (code: en)... done
+dumping object inventory... done
+build succeeded.
+
+The HTML pages are in ../.tox/docs/tmp/html.
+##[endgroup]
+docs: OK ✔ in 40.98 seconds
+typing: install_deps> python -I -m pip install -r /home/runner/work/cowrie/cowrie/requirements.txt -r /home/runner/work/cowrie/cowrie/requirements-dev.txt
+typing: freeze> python -m pip freeze --all
+typing: alabaster==0.7.13,appdirs==1.4.4,astroid==3.0.1,attrs==23.1.0,Automat==22.10.0,Babel==2.13.1,bcrypt==4.0.1,build==1.0.3,cachetools==5.3.2,certifi==2023.7.22,cffi==1.16.0,cfgv==3.4.0,chardet==5.2.0,charset-normalizer==3.3.2,click==8.1.7,colorama==0.4.6,configparser==6.0.0,constantly==23.10.4,coverage==7.3.2,cryptography==41.0.4,dataclasses-json==0.6.2,dill==0.3.7,distlib==0.3.7,docutils==0.18.1,filelock==3.13.1,hyperlink==21.0.0,identify==2.5.31,idna==3.4,imagesize==1.4.1,importlab==0.8.1,incremental==22.10.0,intervaltree==3.1.0,isort==5.12.0,Jinja2==3.1.2,libcst==0.4.9,MarkupSafe==2.1.3,marshmallow==3.20.1,mccabe==0.7.0,mypy==1.4.1,mypy-extensions==1.0.0,mypy-zope==1.0.1,networkx==3.1,ninja==1.11.1.1,nodeenv==1.8.0,packaging==23.2,pathspec==0.11.2,pip==23.3.1,pipdeptree==2.13.0,platformdirs==3.11.0,pluggy==1.3.0,pre-commit==3.5.0,psutil==5.9.6,pyasn1==0.5.0,pyasn1-modules==0.3.0,pycparser==2.21,pydot==1.4.2,Pygments==2.16.1,pylint==3.0.2,pyOpenSSL==23.2.0,pyparsing==3.1.1,pyproject-api==1.6.1,pyproject_hooks==1.0.0,pyre-check==0.9.19,pyre-extensions==0.0.30,pyright==1.1.333,python-dateutil==2.8.2,pytype==2023.6.2,pyupgrade==3.15.0,PyYAML==6.0.1,readthedocs-sphinx-search==0.3.1,requests==2.31.0,ruff==0.1.3,service-identity==23.1.0,setuptools==68.2.2,six==1.16.0,snowballstemmer==2.2.0,sortedcontainers==2.4.0,Sphinx==7.2.6,sphinx-copybutton==0.5.2,sphinx-rtd-theme==1.3.0,sphinxcontrib-applehelp==1.0.7,sphinxcontrib-devhelp==1.0.5,sphinxcontrib-htmlhelp==2.0.4,sphinxcontrib-jquery==4.1,sphinxcontrib-jsmath==1.0.1,sphinxcontrib-qthelp==1.0.6,sphinxcontrib-serializinghtml==1.1.9,tabulate==0.9.0,TestSlide==2.7.1,tftpy==0.8.2,tokenize-rt==5.2.0,toml==0.10.2,tomli==2.0.1,tomlkit==0.12.2,tox==4.11.3,treq==22.2.0,Twisted==23.10.0,typeguard==2.13.3,types-pyOpenSSL==23.3.0.0,types-python-dateutil==2.8.19.14,types-redis==4.6.0.7,types-requests==2.31.0.10,typing-inspect==0.9.0,typing_extensions==4.8.0,urllib3==2.0.7,virtualenv==20.24.6,wheel==0.41.2,yamllint==1.32.0,zope.event==5.0,zope.interface==6.1,zope.schema==7.0.1
+##[group]tox: typing - run static type checkers
+typing: commands[0]> mypy --cache-dir=/home/runner/work/cowrie/cowrie/.tox/mypy_cache --config-file=/home/runner/work/cowrie/cowrie/pyproject.toml src
+Success: no issues found in 178 source files
+typing: commands[1]> mypyc --cache-dir=/home/runner/work/cowrie/cowrie/.tox/mypyc_cache --config-file=/home/runner/work/cowrie/cowrie/pyproject.toml src
+Traceback (most recent call last):
+  File "mypyc/irbuild/prepare.py", line 98, in build_type_map
+  File "mypyc/irbuild/prepare.py", line 307, in prepare_class_def
+  File "mypyc/irbuild/prepare.py", line 331, in prepare_methods_and_attributes
+  File "mypyc/irbuild/mapper.py", line 143, in type_to_rtype
+src/cowrie/shell/protocol.py:25: AssertionError: unexpected type <class 'mypy.types.DeletedType'>
+typing: exit 2 (27.33 seconds) /home/runner/work/cowrie/cowrie> mypyc --cache-dir=/home/runner/work/cowrie/cowrie/.tox/mypyc_cache --config-file=/home/runner/work/cowrie/cowrie/pyproject.toml src pid=2261
+typing: command failed but is marked ignore outcome so handling it as success
+typing: commands[2]> pytype --keep-going --jobs auto
+usage: pytype [options] input [input ...]
+pytype: error: Need an input.
+typing: exit 2 (0.92 seconds) /home/runner/work/cowrie/cowrie> pytype --keep-going --jobs auto pid=2279
+typing: command failed but is marked ignore outcome so handling it as success
+typing: commands[3]> pyre --noninteractive analyze
+2023-11-13 09:01:56,237 [PID 2286] INFO No binary specified, looking for `pyre.bin` in PATH
+2023-11-13 09:01:56,238 [PID 2286] INFO Pyre binary is located at `/home/runner/work/cowrie/cowrie/.tox/typing/bin/pyre.bin`
+2023-11-13 09:01:56,239 [PID 2286] INFO No typeshed specified, looking for it...
+2023-11-13 09:01:56,239 [PID 2286] INFO Found: `/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed`
+2023-11-13 09:01:56,243 [PID 2286] INFO Writing arguments into /tmp/pyre_arguments_480k7g42.json...
+2023-11-13 09:01:56,243 [PID 2286] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/runner/work/cowrie/cowrie/src"
+    ]
+  },
+  "search_paths": [
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stdlib",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/D3DShot",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/DateTimeRange",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Deprecated",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Flask-Cors",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Flask-Migrate",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Flask-SQLAlchemy",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/JACK-Client",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Markdown",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Pillow",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/PyAutoGUI",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/PyScreeze",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Pygments",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/SQLAlchemy",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/Send2Trash",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/annoy",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/appdirs",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/aws-xray-sdk",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/babel",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/backports.ssl_match_hostname",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/beautifulsoup4",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/bleach",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/boto",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/braintree",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/cachetools",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/caldav",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/cffi",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/chardet",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/click-spinner",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/commonmark",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/console-menu",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/contextvars",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/croniter",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/dateparser",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/decorator",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/dj-database-url",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/dockerfile-parse",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/docopt",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/docutils",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/editdistance",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/emoji",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/entrypoints",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/first",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-2020",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-bugbear",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-builtins",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-docstrings",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-plugin-utils",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-rst-docstrings",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-simplify",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/flake8-typing-imports",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/fpdf2",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/gdb",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/google-cloud-ndb",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/hdbcli",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/html5lib",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/httplib2",
+    "/home/runner/work/cowrie/cowrie/.tox/typing/lib/pyre_check/typeshed/stubs/humanfriendly",
+[... 519 lines removed by TriageCore ...]
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:98:42 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:98:52 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:100:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:100:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:110:37 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:110:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:112:37 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:112:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:114:42 - error: Cannot access member "sessionno" for type "ITransport"
+    Member "sessionno" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:114:42 - error: "sessionno" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:124:30 - error: Cannot access member "pool_handler" for type "Factory"
+    Member "pool_handler" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:124:30 - error: "pool_handler" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:137:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:163:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:197:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:197:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:198:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:228:36 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:270:44 - error: "append" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:293:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:293:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:337:26 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:337:51 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:338:27 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:362:24 - error: Cannot access member "connectionLost" for type "ITransport"
+    Member "connectionLost" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:362:24 - error: "connectionLost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:366:26 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:366:51 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:367:27 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:371:71 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:371:38 - error: "client" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:400:28 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:400:28 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:402:28 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/server_transport.py:431:31 - error: "parse_num_packet" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/userauth.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/userauth.py:30:24 - error: Cannot access member "sendPacket" for type "None"
+    Member "sendPacket" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/userauth.py:31:24 - error: Cannot assign member "frontendAuthenticated" for type "None"
+    Member "frontendAuthenticated" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/userauth.py:34:27 - error: Cannot access member "sshParse" for type "None"
+    Member "sshParse" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/ssh_proxy/userauth.py:35:28 - error: Cannot access member "sshParse" for type "None"
+    Member "sshParse" is unknown (reportGeneralTypeIssues)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet/factory.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/factory.py:45:32 - error: Cannot access member "output_plugins" for type "IPlugin"
+    Member "output_plugins" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/factory.py:81:13 - error: Object of type "None" cannot be called (reportOptionalCall)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:71:27 - error: Cannot access member "options" for type "ITransport"
+    Member "options" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:71:27 - error: "options" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:72:28 - error: Cannot access member "willChain" for type "ITransport"
+    Member "willChain" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:72:28 - error: "willChain" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:73:28 - error: Cannot access member "willChain" for type "ITransport"
+    Member "willChain" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:73:28 - error: "willChain" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:111:22 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:123:26 - error: "conn" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:134:22 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:143:22 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:149:29 - error: "transport" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:155:29 - error: "transport" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:158:22 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:161:22 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/session.py:164:22 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:28:36 - error: Cannot access member "sessionno" for type "ITransport"
+    Member "sessionno" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:28:36 - error: "sessionno" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:37:35 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:37:45 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:38:37 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:38:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:39:35 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:39:45 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:40:37 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:40:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:56:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:56:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/transport.py:64:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:45:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:45:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:45:43 - error: Cannot access member "banner" for type "Factory"
+    Member "banner" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:45:43 - error: "banner" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:46:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:46:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:61:24 - error: Cannot access member "willChain" for type "ITransport"
+    Member "willChain" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:61:24 - error: "willChain" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:63:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:63:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:71:42 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:71:52 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:71:18 - error: Cannot assign member "src_ip" for type "HoneyPotTelnetAuthProtocol"
+    Member "src_ip" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:72:65 - error: Cannot access member "src_ip" for type "HoneyPotTelnetAuthProtocol"
+    Member "src_ip" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:73:47 - error: Cannot access member "src_ip" for type "HoneyPotTelnetAuthProtocol"
+    Member "src_ip" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:104:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:104:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:107:24 - error: Cannot access member "setTimeout" for type "ITransport"
+    Member "setTimeout" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:107:24 - error: "setTimeout" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:117:24 - error: Cannot access member "wontChain" for type "ITransport"
+    Member "wontChain" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:117:24 - error: "wontChain" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:118:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:118:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:119:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:119:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:78:27 - error: Cannot access member "options" for type "ITransport"
+    Member "options" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:78:27 - error: "options" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:83:28 - error: Cannot access member "wontChain" for type "ITransport"
+    Member "wontChain" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:83:28 - error: "wontChain" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:91:24 - error: Cannot access member "protocol" for type "ITransport"
+    Member "protocol" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:91:24 - error: "protocol" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:113:24 - error: Cannot assign member "protocol" for type "ITransport"
+    Member "protocol" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet/userauth.py:113:24 - error: "protocol" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:20:66 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:20:76 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:21:43 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:21:43 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:25:22 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:25:22 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:27:36 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:27:36 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:28:28 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:28:28 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:29:22 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:29:22 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:36:22 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:36:22 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:39:28 - error: "close" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:49:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:50:22 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:50:22 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:53:28 - error: "close" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:56:28 - error: "addPacket" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:59:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:59:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:66:22 - error: Cannot access member "server" for type "Factory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/client_transport.py:66:22 - error: "server" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:53:36 - error: Cannot access member "sessionno" for type "ITransport"
+    Member "sessionno" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:53:36 - error: "sessionno" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:55:39 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:55:49 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:56:41 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:56:51 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:57:40 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:57:50 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:58:42 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:58:52 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:63:35 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:63:45 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:64:37 - error: "getPeer" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:64:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:65:35 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:65:45 - error: Cannot access member "host" for type "IAddress"
+    Member "host" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:66:37 - error: "getHost" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:66:47 - error: Cannot access member "port" for type "IAddress"
+    Member "port" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:80:30 - error: Cannot access member "pool_handler" for type "Factory"
+    Member "pool_handler" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:80:30 - error: "pool_handler" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:93:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:119:24 - error: "loseConnection" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:132:24 - error: Cannot assign member "server" for type "BackendTelnetFactory"
+    Member "server" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:143:24 - error: 
+    Could not bind method "write" because "ITransport" is not assignable to parameter "data"
+      "ITransport" is incompatible with "bytes" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:143:24 - error: "write" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:196:28 - error: Cannot access member "backendConnected" for type "None"
+    Member "backendConnected" is unknown (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/telnet_proxy/server_transport.py:204:29 - error: Cannot access member "transport" for type "None"
+    Member "transport" is unknown (reportGeneralTypeIssues)
+/home/runner/work/cowrie/cowrie/src/cowrie/test/fake_transport.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/fake_transport.py:103:13 - error: Argument of type "Literal[True]" cannot be assigned to parameter "__value" of type "(...) -> Unknown" in function "__setitem__"
+    Type "Literal[True]" cannot be assigned to type "(...) -> Unknown" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/fake_transport.py:133:14 - error: Cannot assign member "modes" for type "FakeTransport"
+    Member "modes" cannot be assigned through a class instance because it is a ClassVar (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/fake_transport.py:164:55 - error: Cannot assign member "sessions" for type "Container"
+    Member "sessions" cannot be assigned through a class instance because it is a ClassVar (reportGeneralTypeIssues)
+/home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py:192:24 - error: "file_contents" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py:268:39 - error: "exists" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py:269:39 - error: "isdir" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py:288:40 - error: "exists" is not a known member of "None" (reportOptionalMemberAccess)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_base_commands.py:307:39 - error: "exists" is not a known member of "None" (reportOptionalMemberAccess)
+/home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:26:36 - error: Argument of type "HoneyPotRealm" cannot be assigned to parameter "realm" of type "IRealm" in function "__init__"
+    "HoneyPotRealm" is incompatible with "IRealm" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:27:36 - error: Argument of type "HoneypotPublicKeyChecker" cannot be assigned to parameter "checker" of type "ICredentialsChecker" in function "registerChecker"
+    "HoneypotPublicKeyChecker" is incompatible with "ICredentialsChecker" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:28:36 - error: Argument of type "HoneypotPasswordChecker" cannot be assigned to parameter "checker" of type "ICredentialsChecker" in function "registerChecker"
+    "HoneypotPasswordChecker" is incompatible with "ICredentialsChecker" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:69:41 - error: "listenTCP" is not a known member of module "twisted.internet.reactor" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:85:41 - error: "listenTCP" is not a known member of module "twisted.internet.reactor" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/cowrie/test/test_proxy.py:97:46 - error: Cannot access member "running" for type "CowrieSSHFactory"
+    Member "running" is unknown (reportGeneralTypeIssues)
+/home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:85:32 - error: Argument of type "(event: dict[Unknown, Unknown]) -> None" cannot be assigned to parameter "observer" of type "ILogObserver" in function "addObserver"
+    "function" is incompatible with "ILogObserver" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:239:49 - error: "realm" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:240:49 - error: "checkers" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:241:49 - error: "checkers" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:244:53 - error: "checkers" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:259:21 - error: Cannot assign member "tac" for type "HoneyPotTelnetFactory"
+    "CowrieServiceMaker" is incompatible with "IPlugin" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:260:43 - error: "realm" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+  /home/runner/work/cowrie/cowrie/src/twisted/plugins/cowrie_plugin.py:261:43 - error: "checkers" is not a known member of module "cowrie.core" (reportGeneralTypeIssues)
+385 errors, 50 warnings, 0 informations 
+WARNING: there is a new pyright version available (v1.1.333 -> v1.1.335).
+Please install the new version or set PYRIGHT_PYTHON_FORCE_VERSION to `latest`
+
+typing: exit 1 (21.96 seconds) /home/runner/work/cowrie/cowrie> pyright src pid=2326
+typing: command failed but is marked ignore outcome so handling it as success
+##[endgroup]
+typing: OK ✔ in 1 minute 45.12 seconds
+py310: install_deps> python -I -m pip install -r /home/runner/work/cowrie/cowrie/requirements.txt
+py310: freeze> python -m pip freeze --all
+py310: appdirs==1.4.4,attrs==23.1.0,Automat==22.10.0,bcrypt==4.0.1,certifi==2023.7.22,cffi==1.16.0,charset-normalizer==3.3.2,configparser==6.0.0,constantly==23.10.4,cryptography==41.0.4,hyperlink==21.0.0,idna==3.4,incremental==22.10.0,packaging==23.2,pip==23.3.1,pyasn1==0.5.0,pyasn1-modules==0.3.0,pycparser==2.21,pyOpenSSL==23.2.0,pyparsing==3.1.1,python-dateutil==2.8.2,requests==2.31.0,service-identity==23.1.0,setuptools==68.2.2,six==1.16.0,tftpy==0.8.2,treq==22.2.0,Twisted==23.10.0,typing_extensions==4.8.0,urllib3==2.0.7,wheel==0.41.2,zope.interface==6.1
+##[group]tox: py310
+py310: commands[0]> python -m unittest discover src --verbose
+/home/runner/work/cowrie/cowrie/.tox/py310/lib/python3.10/site-packages/twisted/conch/ssh/transport.py:106: CryptographyDeprecationWarning: Blowfish has been deprecated
+  b"blowfish-cbc": (algorithms.Blowfish, 16, modes.CBC),
+/home/runner/work/cowrie/cowrie/.tox/py310/lib/python3.10/site-packages/twisted/conch/ssh/transport.py:110: CryptographyDeprecationWarning: CAST5 has been deprecated
+  b"cast128-cbc": (algorithms.CAST5, 16, modes.CBC),
+/home/runner/work/cowrie/cowrie/.tox/py310/lib/python3.10/site-packages/twisted/conch/ssh/transport.py:115: CryptographyDeprecationWarning: Blowfish has been deprecated
+  b"blowfish-ctr": (algorithms.Blowfish, 16, modes.CTR),
+/home/runner/work/cowrie/cowrie/.tox/py310/lib/python3.10/site-packages/twisted/conch/ssh/transport.py:116: CryptographyDeprecationWarning: CAST5 has been deprecated
+  b"cast128-ctr": (algorithms.CAST5, 16, modes.CTR),
+test_awk_command_001 (cowrie.test.test_awk.ShellEchoCommandTests) ... ok
+test_awk_command_002 (cowrie.test.test_awk.ShellEchoCommandTests) ... ok
+test_awk_command_003 (cowrie.test.test_awk.ShellEchoCommandTests) ... ok
+test_awk_command_004 (cowrie.test.test_awk.ShellEchoCommandTests) ... ok
+test_awk_command_005 (cowrie.test.test_awk.ShellEchoCommandTests) ... ok
+test_base64_command_001 (cowrie.test.test_base64.ShellBase64CommandTests) ... ok
+test_base64_command_002 (cowrie.test.test_base64.ShellBase64CommandTests) ... ok
+test_alias_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_bash_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_cd_error_output (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_cd_output (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_chattr_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_chgrp_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_chown_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_clear_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_date_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_exit_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_export_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_hostname_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_id_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_jobs_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_kill_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_killall5_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_killall_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_logout_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_passwd_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_php_help_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_php_version_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_pkill_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_poweroff_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_reset_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_set_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_sh_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_shutdown_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_su_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_umask_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_unset_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_users_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_whoami_command (cowrie.test.test_base_commands.ShellBaseCommandsTests) ... ok
+test_cat_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_cp_error_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_cp_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_grep_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_head_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_mkdir_error_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_mkdir_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_mv_error_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_mv_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_pwd_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_rm_error_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_rm_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_rmdir_error_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_rmdir_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_tail_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_touch_output (cowrie.test.test_base_commands.ShellFileCommandsTests) ... ok
+test_shell_pipe_with_cat_head (cowrie.test.test_base_commands.ShellPipeCommandsTests) ... ok
+test_shell_pipe_with_cat_tail (cowrie.test.test_base_commands.ShellPipeCommandsTests) ... ok
+test_cat_command_001 (cowrie.test.test_cat.ShellCatCommandTests) ... ok
+test_cat_command_002 (cowrie.test.test_cat.ShellCatCommandTests) ... ok
+test_cat_command_003 (cowrie.test.test_cat.ShellCatCommandTests) ... ok
+test_cat_command_004 (cowrie.test.test_cat.ShellCatCommandTests) ... ok
+test_chmod_command_001 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_002 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_003 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_004 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_005 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_006 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_007 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_008 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_009 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_010 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_011 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_012 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_013 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_014 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_chmod_command_015 (cowrie.test.test_chmod.ShellChmodCommandTests) ... ok
+test_echo_command_001 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_002 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_003 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_005 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_006 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_007 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_008 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_009 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_010 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_011 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_012 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_013 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_014 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_015 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_016 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_017 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_018 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_019 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_020 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_021 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_022 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_023 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_024 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_025 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_026 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_027 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_028 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_echo_command_029 (cowrie.test.test_echo.ShellEchoCommandTests) ... ok
+test_help_command (cowrie.test.test_ftpget.ShellFtpGetCommandTests) ... ok
+test_tee_command_001 (cowrie.test.test_tee.ShellTeeCommandTests) ... ok
+test_tee_command_002 (cowrie.test.test_tee.ShellTeeCommandTests) ... ok
+test_tee_command_003 (cowrie.test.test_tee.ShellTeeCommandTests) ... ok
+test_tee_command_004 (cowrie.test.test_tee.ShellTeeCommandTests) ... ok
+test_tee_command_005 (cowrie.test.test_tee.ShellTeeCommandTests) ... ok
+test_echo_command_001 (cowrie.test.test_tftp.ShellTftpCommandTests) ... ok
+test_uniq_command_001 (cowrie.test.test_uniq.ShellUniqCommandTests) ... ok
+test_uniq_command_002 (cowrie.test.test_uniq.ShellUniqCommandTests) ... ok
+test_uniq_command_003 (cowrie.test.test_uniq.ShellUniqCommandTests) ... ok
+test_create_endpoint_services (cowrie.test.test_utils.UtilsTestCase) ... ok
+test_durationHuman (cowrie.test.test_utils.UtilsTestCase) ... ok
+test_get_endpoints_from_section (cowrie.test.test_utils.UtilsTestCase) ... ok
+
+----------------------------------------------------------------------
+Ran 117 tests in 3.825s
+
+OK
+##[endgroup]
+  lint: FAIL code 1 (36.55=setup[36.46]+cmd[0.10] seconds)
+  docs: OK (40.98=setup[36.63]+cmd[4.35] seconds)
+  typing: OK (105.11=setup[37.40]+cmd[15.97,27.33,0.92,1.53,21.96] seconds)
+  py310: OK (16.46=setup[10.64]+cmd[5.82] seconds)
+  evaluation failed :( (199.49 seconds)
+##[error]Process completed with exit code 255.

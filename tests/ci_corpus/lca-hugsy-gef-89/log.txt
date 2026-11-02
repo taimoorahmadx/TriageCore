@@ -1,0 +1,891 @@
+===== Run Unit tests on ubuntu-22.04/8_Run Tests.txt =====
+##[group]Run make -C tests/binaries -j 4
+[36;1mmake -C tests/binaries -j 4[0m
+[36;1mpython3.10 -m pytest --forked -n 4 -v -k "not benchmark" tests/[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  PY_VER: 3.10
+  GEF_CI_NB_CPU: 4
+  GEF_CI_ARCH: x86_64
+  GEF_CI_CACHE_DIR: /home/runner/.cache/pip
+##[endgroup]
+make: Entering directory '/home/runner/work/gef/gef/tests/binaries'
+[+] Building '/tmp/bss.out'
+[+] Building '/tmp/canary.out'
+[+] Building '/tmp/checksec-no-canary.out'
+[+] Building '/tmp/checksec-no-nx.out'
+[+] Building '/tmp/checksec-no-pie.out'
+[+] Building '/tmp/default.out'
+[+] Building '/tmp/format-string-helper.out'
+[+] Building '/tmp/heap-analysis.out'
+[+] Building '/tmp/heap-bins.out'
+[+] Building '/tmp/heap-fastbins.out'
+[+] Building '/tmp/heap-multiple-heaps.out'
+[+] Building '/tmp/heap-non-main.out'
+[+] Building '/tmp/heap-tcache.out'
+[+] Building '/tmp/heap.out'
+[+] Building '/tmp/memwatch.out'
+[+] Building '/tmp/mmap-known-address.out'
+[+] Building '/tmp/nested.out'
+[+] Building '/tmp/nested2.out'
+[+] Building '/tmp/pattern.out'
+[+] Building '/tmp/pcustom.out'
+[+] Building '/tmp/class.out'
+make: Leaving directory '/home/runner/work/gef/gef/tests/binaries'
+/home/runner/.local/lib/python3.10/site-packages/pytest_benchmark/logger.py:46: PytestBenchmarkWarning: Benchmarks are automatically disabled because xdist plugin is active.Benchmarks cannot be performed reliably in a parallelized environment.
+  warner(PytestBenchmarkWarning(text))
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-7.4.4, pluggy-1.3.0 -- /usr/bin/python3.10
+cachedir: .pytest_cache
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /home/runner/work/gef/gef/tests
+configfile: pytest.ini
+plugins: benchmark-4.0.0, forked-1.6.0, xdist-3.5.0, cov-4.1.0
+created: 4/4 workers
+4 workers [168 items]
+
+scheduling tests via LoadScheduling
+
+tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_elf_values 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_tidx2size 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_rm 
+tests/api/gef_session.py::GefSessionApi::test_func_get_pid 
+[gw0] [  0%] PASSED tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_elf_values 
+tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_gef_attributes 
+[gw3] [  1%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_rm 
+tests/commands/aslr.py::AslrCommand::test_cmd_aslr_show 
+[gw2] [  1%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_get_pid 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_local 
+[gw1] [  2%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_tidx2size 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_only_running 
+[gw0] [  2%] PASSED tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_gef_attributes 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_ptrsize 
+[gw3] [  3%] PASSED tests/commands/aslr.py::AslrCommand::test_cmd_aslr_show 
+tests/commands/aslr.py::AslrCommand::test_cmd_aslr_toggle 
+[gw1] [  4%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_only_running 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps 
+[gw2] [  4%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_local 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_qemu 
+[gw0] [  5%] PASSED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_ptrsize 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86 
+[gw0] [  5%] SKIPPED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86_64 
+[gw3] [  6%] PASSED tests/commands/aslr.py::AslrCommand::test_cmd_aslr_toggle 
+tests/commands/canary.py::CanaryCommand::test_cmd_canary 
+[gw1] [  7%] FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format 
+[gw2] [  7%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_qemu 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_remote 
+[gw3] [  8%] PASSED tests/commands/canary.py::CanaryCommand::test_cmd_canary 
+tests/commands/canary.py::CanaryCommand::test_overwrite_canary 
+[gw0] [  8%] PASSED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86_64 
+tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble 
+[gw1] [  9%] FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_local_procfs 
+[gw0] [ 10%] PASSED tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble 
+tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble_page_border 
+[gw3] [ 10%] PASSED tests/commands/canary.py::CanaryCommand::test_overwrite_canary 
+tests/commands/checksec.py::ChecksecCommandNoCanary::test_cmd_checksec 
+[gw2] [ 11%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_remote 
+tests/api/misc.py::MiscFunctionTest::test_func_gef_convenience 
+[gw1] [ 11%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_local_procfs 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_gdbserver 
+[gw3] [ 12%] PASSED tests/commands/checksec.py::ChecksecCommandNoCanary::test_cmd_checksec 
+tests/commands/checksec.py::ChecksecCommandNoNx::test_cmd_checksec 
+[gw0] [ 13%] PASSED tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble_page_border 
+tests/api/gef_heap.py::GefHeapApi::test_class_glibcarena_main_arena 
+[gw2] [ 13%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_gef_convenience 
+tests/api/misc.py::MiscFunctionTest::test_func_parse_address 
+[gw3] [ 14%] PASSED tests/commands/checksec.py::ChecksecCommandNoNx::test_cmd_checksec 
+tests/commands/checksec.py::ChecksecCommandNoPie::test_cmd_checksec 
+[gw0] [ 14%] PASSED tests/api/gef_heap.py::GefHeapApi::test_class_glibcarena_main_arena 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_csize2tidx 
+[gw2] [ 15%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_parse_address 
+tests/api/misc.py::MiscFunctionTest::test_func_show_last_exception 
+[gw3] [ 16%] PASSED tests/commands/checksec.py::ChecksecCommandNoPie::test_cmd_checksec 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference 
+[gw0] [ 16%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_csize2tidx 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_malloc_align_address 
+[gw2] [ 17%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_show_last_exception 
+tests/api/misc.py::MiscFunctionTest::test_func_which 
+[gw3] [ 17%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_backwards 
+[gw0] [ 18%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_malloc_align_address 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_forwards 
+[gw2] [ 19%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_which 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_add 
+[gw3] [ 19%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_backwards 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config_get 
+[gw2] [ 20%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_add 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_list 
+[gw0] [ 20%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_forwards 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_disable 
+[gw3] [ 21%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config_get 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config_set 
+[gw2] [ 22%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_list 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks 
+[gw0] [ 22%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_disable 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_enable 
+[gw3] [ 23%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config_set 
+tests/commands/gef.py::GefCommand::test_cmd_gef_help 
+[gw2] [ 23%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_max_size_filter 
+[gw3] [ 24%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_help 
+tests/commands/gef.py::GefCommand::test_cmd_gef_install 
+[gw0] [ 25%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_enable 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_toggle 
+[gw3] [ 25%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_install 
+tests/commands/gef.py::GefCommand::test_cmd_gef_run_and_run 
+[gw2] [ 26%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_max_size_filter 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_min_size_filter 
+[gw0] [ 26%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_toggle 
+tests/commands/elf_info.py::ElfInfoCommand::test_cmd_elf_info 
+[gw3] [ 27%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_run_and_run 
+tests/commands/gef.py::GefCommand::test_cmd_gef_save 
+[gw0] [ 27%] PASSED tests/commands/elf_info.py::ElfInfoCommand::test_cmd_elf_info 
+tests/commands/entry_break.py::EntryBreakCommand::test_cmd_entry_break 
+[gw2] [ 28%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_min_size_filter 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_summary 
+[gw3] [ 29%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_save 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote 
+[gw0] [ 29%] PASSED tests/commands/entry_break.py::EntryBreakCommand::test_cmd_entry_break 
+tests/commands/format_string_helper.py::FormatStringHelperCommand::test_cmd_format_string_helper 
+[gw2] [ 30%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_summary 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_with_count 
+[gw1] [ 30%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_gdbserver 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_qemu 
+[gw0] [ 31%] PASSED tests/commands/format_string_helper.py::FormatStringHelperCommand::test_cmd_format_string_helper 
+tests/commands/functions.py::FunctionsCommand::test_cmd_functions 
+[gw3] [ 32%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote_qemu_user 
+[gw2] [ 32%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_with_count 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_set_arena 
+[gw0] [ 33%] PASSED tests/commands/functions.py::FunctionsCommand::test_cmd_functions 
+tests/commands/gef.py::GefCommand::test_cmd_gef 
+[gw1] [ 33%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_qemu 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_permissions 
+[gw3] [ 34%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote_qemu_user 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_target_remote 
+[gw2] [ 35%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_set_arena 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_non_main 
+[gw0] [ 35%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config 
+[gw1] [ 36%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_permissions 
+tests/api/gef_session.py::GefSessionApi::test_func_auxiliary_vector 
+[gw2] [ 36%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_non_main 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_tcache 
+[gw0] [ 37%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_large 
+[gw3] [ 38%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_target_remote 
+tests/commands/got.py::GotCommand::test_cmd_got 
+[gw1] [ 38%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_auxiliary_vector 
+tests/api/gef_session.py::GefSessionApi::test_func_get_filepath 
+[gw2] [ 39%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_tcache 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_chunks 
+[gw0] [ 39%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_large 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_small 
+[gw3] [ 40%] PASSED tests/commands/got.py::GotCommand::test_cmd_got 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_arenas 
+[gw1] [ 41%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_get_filepath 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_unwatch 
+[gw0] [ 41%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_small 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_unsorted 
+[gw2] [ 42%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_chunks 
+tests/commands/heap.py::HeapCommandMultipleHeaps::test_cmd_heap_chunks_mult_heaps 
+[gw3] [ 42%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_arenas 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_no_arg 
+[gw1] [ 43%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_unwatch 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_basic 
+[gw0] [ 44%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_unsorted 
+tests/commands/heap.py::HeapCommandTcache::test_cmd_heap_bins_tcache_all 
+[gw2] [ 44%] PASSED tests/commands/heap.py::HeapCommandMultipleHeaps::test_cmd_heap_chunks_mult_heaps 
+tests/commands/heap.py::HeapCommandClass::test_cmd_heap_chunks_summary_with_type_resolved 
+[gw3] [ 45%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_no_arg 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_with_number 
+[gw1] [ 45%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_basic 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_global_variable 
+[gw3] [ 46%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_with_number 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction_force 
+[gw2] [ 47%] PASSED tests/commands/heap.py::HeapCommandClass::test_cmd_heap_chunks_summary_with_type_resolved 
+tests/commands/heap.py::HeapCommandFastBins::test_cmd_heap_bins_fast 
+[gw0] [ 47%] PASSED tests/commands/heap.py::HeapCommandTcache::test_cmd_heap_bins_tcache_all 
+tests/commands/heap_analysis.py::HeapAnalysisCommand::test_cmd_heap_analysis 
+[gw1] [ 48%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_global_variable 
+tests/commands/name_break.py::NameBreakCommand::test_cmd_name_break 
+[gw3] [ 48%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_check_b_and_n_same_time 
+[gw2] [ 49%] PASSED tests/commands/heap.py::HeapCommandFastBins::test_cmd_heap_bins_fast 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop 
+[gw1] [ 50%] PASSED tests/commands/name_break.py::NameBreakCommand::test_cmd_name_break 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes 
+[gw0] [ 50%] PASSED tests/commands/heap_analysis.py::HeapAnalysisCommand::test_cmd_heap_analysis 
+tests/commands/hexdump.py::HexdumpCommand::test_cmd_hexdump 
+[gw3] [ 51%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_check_b_and_n_same_time 
+tests/commands/nop.py::NopCommand::test_cmd_nop_force_arg_break_instruction 
+[gw2] [ 51%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg 
+[gw1] [ 52%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg 
+[gw0] [ 52%] PASSED tests/commands/hexdump.py::HexdumpCommand::test_cmd_hexdump 
+tests/commands/highlight.py::HighlightCommand::test_cmd_highlight 
+[gw3] [ 53%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_force_arg_break_instruction 
+tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg 
+[gw2] [ 54%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks 
+[gw1] [ 54%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit 
+[gw0] [ 55%] PASSED tests/commands/highlight.py::HighlightCommand::test_cmd_highlight 
+tests/commands/hijack_fd.py::HijackFdCommand::test_cmd_hijack_fd 
+[gw3] [ 55%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg_reaching_unmapped_area 
+[gw2] [ 56%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks_force 
+[gw0] [ 57%] PASSED tests/commands/hijack_fd.py::HijackFdCommand::test_cmd_hijack_fd 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_list 
+[gw1] [ 57%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit_force 
+[gw3] [ 58%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg_reaching_unmapped_area 
+tests/commands/nop.py::NopCommand::test_cmd_nop_inactive 
+[gw2] [ 58%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction 
+[gw0] [ 59%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_list 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_reset 
+[gw1] [ 60%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction 
+[gw3] [ 60%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_inactive 
+tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg 
+[gw2] [ 61%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction_force 
+[gw0] [ 61%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_reset 
+tests/commands/nop.py::NopCommandMmapKnownAddress::test_cmd_nop_invalid_end_address 
+[gw1] [ 62%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_string 
+[gw3] [ 63%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg_break_instruction 
+[gw2] [ 63%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction_force 
+[... 86 lines removed by TriageCore ...]
+tests/commands/xinfo.py::XinfoCommandClass::test_cmd_xinfo_on_class 
+[gw2] [ 89%] PASSED tests/commands/vmmap.py::VmmapCommand::test_cmd_vmmap 
+tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_display 
+[gw0] [ 90%] PASSED tests/commands/xinfo.py::XinfoCommand::test_cmd_xinfo 
+tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_patch 
+[gw3] [ 91%] PASSED tests/commands/xfiles.py::XfilesCommand::test_cmd_xfiles 
+tests/config/__init__.py::TestGefConfigUnit::test_config_hook_validator 
+[gw1] [ 91%] PASSED tests/commands/xinfo.py::XinfoCommandClass::test_cmd_xinfo_on_class 
+tests/config/__init__.py::TestGefConfigUnit::test_config_libc_version 
+[gw2] [ 92%] PASSED tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_display 
+tests/config/__init__.py::TestGefConfigUnit::test_config_show_opcodes_size 
+[gw0] [ 92%] PASSED tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_patch 
+tests/config/__init__.py::TestGefConfigUnit::test_config_type_validator 
+[gw3] [ 93%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_hook_validator 
+tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_base 
+[gw1] [ 94%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_libc_version 
+tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_stack 
+[gw2] [ 94%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_show_opcodes_size 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionBss::test_func_bss 
+[gw0] [ 95%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_type_validator 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_got 
+[gw3] [ 95%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_base 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_heap 
+[gw1] [ 96%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_stack 
+tests/regressions/gdbserver_connection.py::RegressionGdbserverConnection::test_can_establish_connection_to_gdbserver_again_after_disconnect 
+[gw2] [ 97%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionBss::test_func_bss 
+tests/regressions/registers_register_order.py::RegressionRegisterOrder::test_registers_show_registers_in_correct_order 
+[gw0] [ 97%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_got 
+tests/regressions/registers_register_order.py::RegressionRegisterOrderNested::test_context_correct_registers_refresh_with_frames 
+[gw3] [ 98%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_heap 
+[gw2] [ 98%] PASSED tests/regressions/registers_register_order.py::RegressionRegisterOrder::test_registers_show_registers_in_correct_order 
+[gw0] [ 99%] PASSED tests/regressions/registers_register_order.py::RegressionRegisterOrderNested::test_context_correct_registers_refresh_with_frames 
+[gw1] [100%] PASSED tests/regressions/gdbserver_connection.py::RegressionGdbserverConnection::test_can_establish_connection_to_gdbserver_again_after_disconnect 
+
+=================================== FAILURES ===================================
+____________ GefMemoryApi.test_api_gef_memory_parse_info_proc_maps _____________
+[gw1] linux -- Python 3.10.12 /usr/bin/python3.10
+self = <tests.api.gef_memory.GefMemoryApi testMethod=test_api_gef_memory_parse_info_proc_maps>
+
+    def test_api_gef_memory_parse_info_proc_maps(self):
+        gdb, gef, root = self._gdb, self._gef, self._conn.root
+        gdb.execute("start")
+    
+        Section = root.eval("Section")
+    
+>       if self.gdb_version < (11, 0):
+E       TypeError: '<' not supported between instances of 'list' and 'tuple'
+
+tests/api/gef_memory.py:71: TypeError
+----------------------------- Captured stdout call -----------------------------
+Reading symbols from /tmp/default.out...
+[32mGEF[0m for linux ready, type `[4m[33mgef[24m[0m' to start, `[4m[35mgef config[24m[0m' to configure
+[1m[32m88[0m commands loaded and [1m[34m5[0m functions added for GDB [1m[33m12.1[0m in 0.01ms using Python engine [1m[31m3.10[0m
+[+] Breaking at '0x1169'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+───────────────────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0000555555555169  →  <main+0> endbr64 
+$rbx   : 0x0               
+$rcx   : 0x0000555555557db8  →  0x0000555555555120  →  <__do_global_dtors_aux+0> endbr64 
+$rdx   : 0x00007fffffffd758  →  0x00007fffffffdcc8  →  "GITHUB_STATE=/home/runner/work/_temp/_runner_file_[...]"
+$rsp   : 0x00007fffffffd600  →  0x0000000000000002
+$rbp   : 0x00007fffffffd630  →  0x0000000000000001
+$rsi   : 0x00007fffffffd748  →  0x00007fffffffdcb7  →  "/tmp/default.out"
+$rdi   : 0x1               
+$rip   : 0x0000555555555180  →  <main+23> mov rax, QWORD PTR fs:0x28
+$r8    : 0x00007ffff7e1bf10  →  0x0000000000000004
+$r9    : 0x00007ffff7fc9040  →  <_dl_fini+0> endbr64 
+$r10   : 0x00007ffff7fc3908  →  0x000d00120000000e
+$r11   : 0x00007ffff7fde660  →  <_dl_audit_preinit+0> endbr64 
+$r12   : 0x00007fffffffd748  →  0x00007fffffffdcb7  →  "/tmp/default.out"
+$r13   : 0x0000555555555169  →  <main+0> endbr64 
+$r14   : 0x0000555555557db8  →  0x0000555555555120  →  <__do_global_dtors_aux+0> endbr64 
+$r15   : 0x00007ffff7ffd040  →  0x00007ffff7ffe2e0  →  0x0000555555554000  →   jg 0x555555554047
+$eflags: [zero carry PARITY adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+───────────────────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffd600│+0x0000: 0x0000000000000002	 ← $rsp
+0x00007fffffffd608│+0x0008: 0x00007fffffffd758  →  0x00007fffffffdcc8  →  "GITHUB_STATE=/home/runner/work/_temp/_runner_file_[...]"
+0x00007fffffffd610│+0x0010: 0x00007fffffffd748  →  0x00007fffffffdcb7  →  "/tmp/default.out"
+0x00007fffffffd618│+0x0018: 0x0000000100000064 ("d"?)
+0x00007fffffffd620│+0x0020: 0x0000000000001000
+0x00007fffffffd628│+0x0028: 0x0000555555555080  →  <_start+0> endbr64 
+0x00007fffffffd630│+0x0030: 0x0000000000000001	 ← $rbp
+0x00007fffffffd638│+0x0038: 0x00007ffff7c29d90  →  <__libc_start_call_main+128> mov edi, eax
+─────────────────────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x555555555175 <main+12>        mov    DWORD PTR [rbp-0x14], edi
+   0x555555555178 <main+15>        mov    QWORD PTR [rbp-0x20], rsi
+   0x55555555517c <main+19>        mov    QWORD PTR [rbp-0x28], rdx
+ → 0x555555555180 <main+23>        mov    rax, QWORD PTR fs:0x28
+   0x555555555189 <main+32>        mov    QWORD PTR [rbp-0x8], rax
+   0x55555555518d <main+36>        xor    eax, eax
+   0x55555555518f <main+38>        lea    rax, [rip+0xe6e]        # 0x555555556004
+   0x555555555196 <main+45>        mov    rdi, rax
+   0x555555555199 <main+48>        call   0x555555555060 <puts@plt>
+─────────────────────────────────────────────────────────────────────────── source:default.c+13 ────
+      8	 #include <stdlib.h>
+      9	 #include <unistd.h>
+     10	 
+     11	 
+     12	 int main(int argc, char** argv, char** envp)
+ →   13	 {
+     14	         printf("Hello World!\n");
+     15	         return EXIT_SUCCESS;
+     16	 }
+─────────────────────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "default.out", stopped 0x555555555180 in main (), reason: BREAKPOINT
+───────────────────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x555555555180 → main(argc=0x1, argv=0x7fffffffd748, envp=0x7fffffffd758)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+----------------------------- Captured stderr call -----------------------------
+Error while writing index for `/tmp/default.out': mkstemp: No such file or directory.
+TERM environment variable not set.
+WARNING:REMOTEDEBUG/25467:keyboard interrupt!
+____ GefMemoryApi.test_api_gef_memory_parse_info_proc_maps_expected_format _____
+[gw1] linux -- Python 3.10.12 /usr/bin/python3.10
+self = <tests.api.gef_memory.GefMemoryApi testMethod=test_api_gef_memory_parse_info_proc_maps_expected_format>
+
+    def test_api_gef_memory_parse_info_proc_maps_expected_format(self):
+>       if self.gdb_version < (11, 0):
+E       TypeError: '<' not supported between instances of 'list' and 'tuple'
+
+tests/api/gef_memory.py:36: TypeError
+----------------------------- Captured stdout call -----------------------------
+Reading symbols from /tmp/default.out...
+[32mGEF[0m for linux ready, type `[4m[33mgef[24m[0m' to start, `[4m[35mgef config[24m[0m' to configure
+[1m[32m88[0m commands loaded and [1m[34m5[0m functions added for GDB [1m[33m12.1[0m in 0.00ms using Python engine [1m[31m3.10[0m
+
+----------------------------- Captured stderr call -----------------------------
+Error while writing index for `/tmp/default.out': mkstemp: No such file or directory.
+WARNING:REMOTEDEBUG/8616:keyboard interrupt!
+=========================== short test summary info ============================
+FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps
+FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format
+============= 2 failed, 165 passed, 1 skipped in 61.42s (0:01:01) ==============
+##[error]Process completed with exit code 1.
+
+
+===== Run Unit tests on ubuntu-20.04/8_Run Tests.txt =====
+##[group]Run make -C tests/binaries -j 4
+[36;1mmake -C tests/binaries -j 4[0m
+[36;1mpython3.8 -m pytest --forked -n 4 -v -k "not benchmark" tests/[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  PY_VER: 3.8
+  GEF_CI_NB_CPU: 4
+  GEF_CI_ARCH: x86_64
+  GEF_CI_CACHE_DIR: /home/runner/.cache/pip
+##[endgroup]
+make: Entering directory '/home/runner/work/gef/gef/tests/binaries'
+[+] Building '/tmp/heap.out'
+[+] Building '/tmp/bss.out'
+[+] Building '/tmp/canary.out'
+[+] Building '/tmp/heap-multiple-heaps.out'
+[+] Building '/tmp/checksec-no-canary.out'
+[+] Building '/tmp/format-string-helper.out'
+[+] Building '/tmp/checksec-no-nx.out'
+[+] Building '/tmp/heap-non-main.out'
+[+] Building '/tmp/nested2.out'
+[+] Building '/tmp/mmap-known-address.out'
+[+] Building '/tmp/heap-analysis.out'
+[+] Building '/tmp/default.out'
+[+] Building '/tmp/heap-tcache.out'
+[+] Building '/tmp/nested.out'
+[+] Building '/tmp/checksec-no-pie.out'
+[+] Building '/tmp/heap-bins.out'
+[+] Building '/tmp/pattern.out'
+[+] Building '/tmp/memwatch.out'
+[+] Building '/tmp/pcustom.out'
+[+] Building '/tmp/heap-fastbins.out'
+[+] Building '/tmp/class.out'
+make: Leaving directory '/home/runner/work/gef/gef/tests/binaries'
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.4.4, pluggy-1.3.0 -- /usr/bin/python3.8
+cachedir: .pytest_cache
+benchmark: 4.0.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /home/runner/work/gef/gef/tests
+configfile: pytest.ini
+plugins: forked-1.6.0, xdist-3.5.0, benchmark-4.0.0, cov-4.1.0
+created: 4/4 workers
+4 workers [168 items]
+
+scheduling tests via LoadScheduling
+
+tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_elf_values 
+tests/api/gef_session.py::GefSessionApi::test_func_get_pid 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_tidx2size 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_rm 
+[gw0] [  0%] PASSED tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_elf_values 
+tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_gef_attributes 
+[gw3] [  1%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_rm 
+tests/commands/aslr.py::AslrCommand::test_cmd_aslr_show 
+[gw2] [  1%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_tidx2size 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_only_running 
+[gw1] [  2%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_get_pid 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_local 
+[gw3] [  2%] PASSED tests/commands/aslr.py::AslrCommand::test_cmd_aslr_show 
+tests/commands/aslr.py::AslrCommand::test_cmd_aslr_toggle 
+[gw0] [  3%] PASSED tests/api/deprecated.py::GefFuncDeprecatedApi::test_deprecated_gef_attributes 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_ptrsize 
+[gw2] [  4%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_only_running 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps 
+[gw1] [  4%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_local 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_qemu 
+[gw3] [  5%] PASSED tests/commands/aslr.py::AslrCommand::test_cmd_aslr_toggle 
+tests/commands/canary.py::CanaryCommand::test_cmd_canary 
+[gw0] [  5%] PASSED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_ptrsize 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86 
+[gw0] [  6%] SKIPPED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86 
+tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86_64 
+[gw1] [  7%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_qemu 
+tests/api/gef_session.py::GefSessionApi::test_root_dir_remote 
+[gw2] [  7%] FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps 
+tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format 
+[gw3] [  8%] PASSED tests/commands/canary.py::CanaryCommand::test_cmd_canary 
+tests/commands/canary.py::CanaryCommand::test_overwrite_canary 
+[gw0] [  8%] PASSED tests/api/gef_arch.py::GefArchApi::test_api_gef_arch_x86_64 
+tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble 
+[gw2] [  9%] FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_local_procfs 
+[gw3] [ 10%] PASSED tests/commands/canary.py::CanaryCommand::test_overwrite_canary 
+tests/commands/checksec.py::ChecksecCommandNoCanary::test_cmd_checksec 
+[gw0] [ 10%] PASSED tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble 
+tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble_page_border 
+[gw1] [ 11%] PASSED tests/api/gef_session.py::GefSessionApi::test_root_dir_remote 
+tests/api/misc.py::MiscFunctionTest::test_func_gef_convenience 
+[gw2] [ 11%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_local_procfs 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_gdbserver 
+[gw3] [ 12%] PASSED tests/commands/checksec.py::ChecksecCommandNoCanary::test_cmd_checksec 
+tests/commands/checksec.py::ChecksecCommandNoNx::test_cmd_checksec 
+[gw0] [ 13%] PASSED tests/api/gef_disassemble.py::GefDisassembleApiFunction::test_func_gef_disassemble_page_border 
+tests/api/gef_heap.py::GefHeapApi::test_class_glibcarena_main_arena 
+[gw1] [ 13%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_gef_convenience 
+tests/api/misc.py::MiscFunctionTest::test_func_parse_address 
+[gw3] [ 14%] PASSED tests/commands/checksec.py::ChecksecCommandNoNx::test_cmd_checksec 
+tests/commands/checksec.py::ChecksecCommandNoPie::test_cmd_checksec 
+[gw1] [ 14%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_parse_address 
+tests/api/misc.py::MiscFunctionTest::test_func_show_last_exception 
+[gw0] [ 15%] PASSED tests/api/gef_heap.py::GefHeapApi::test_class_glibcarena_main_arena 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_csize2tidx 
+[gw3] [ 16%] PASSED tests/commands/checksec.py::ChecksecCommandNoPie::test_cmd_checksec 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference 
+[gw1] [ 16%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_show_last_exception 
+tests/api/misc.py::MiscFunctionTest::test_func_which 
+[gw0] [ 17%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_csize2tidx 
+tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_malloc_align_address 
+[gw3] [ 17%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_backwards 
+[gw1] [ 18%] PASSED tests/api/misc.py::MiscFunctionTest::test_func_which 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_add 
+[gw0] [ 19%] PASSED tests/api/gef_heap.py::GefHeapApi::test_func_gef_heap_malloc_align_address 
+tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_forwards 
+[gw3] [ 19%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_backwards 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config_get 
+[gw1] [ 20%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_add 
+tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_list 
+[gw0] [ 20%] PASSED tests/commands/dereference.py::DereferenceCommand::test_cmd_dereference_forwards 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_disable 
+[gw3] [ 21%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config_get 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config_set 
+[gw1] [ 22%] PASSED tests/commands/aliases.py::AliasesCommand::test_cmd_aliases_list 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks 
+[gw3] [ 22%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config_set 
+tests/commands/gef.py::GefCommand::test_cmd_gef_help 
+[gw0] [ 23%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_disable 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_enable 
+[gw1] [ 23%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_max_size_filter 
+[gw3] [ 24%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_help 
+tests/commands/gef.py::GefCommand::test_cmd_gef_install 
+[gw0] [ 25%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_enable 
+tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_toggle 
+[gw1] [ 25%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_max_size_filter 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_min_size_filter 
+[gw3] [ 26%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_install 
+tests/commands/gef.py::GefCommand::test_cmd_gef_run_and_run 
+[gw0] [ 26%] PASSED tests/commands/edit_flags.py::EditFlagsCommand::test_cmd_edit_flags_toggle 
+tests/commands/elf_info.py::ElfInfoCommand::test_cmd_elf_info 
+[gw3] [ 27%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_run_and_run 
+tests/commands/gef.py::GefCommand::test_cmd_gef_save 
+[gw1] [ 27%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_min_size_filter 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_summary 
+[gw0] [ 28%] PASSED tests/commands/elf_info.py::ElfInfoCommand::test_cmd_elf_info 
+tests/commands/entry_break.py::EntryBreakCommand::test_cmd_entry_break 
+[gw3] [ 29%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_save 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote 
+[gw1] [ 29%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_summary 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_with_count 
+[gw0] [ 30%] PASSED tests/commands/entry_break.py::EntryBreakCommand::test_cmd_entry_break 
+tests/commands/format_string_helper.py::FormatStringHelperCommand::test_cmd_format_string_helper 
+[gw1] [ 30%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunks_with_count 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_set_arena 
+[gw0] [ 31%] PASSED tests/commands/format_string_helper.py::FormatStringHelperCommand::test_cmd_format_string_helper 
+tests/commands/functions.py::FunctionsCommand::test_cmd_functions 
+[gw3] [ 32%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote_qemu_user 
+[gw2] [ 32%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_gdbserver 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_qemu 
+[gw0] [ 33%] PASSED tests/commands/functions.py::FunctionsCommand::test_cmd_functions 
+tests/commands/gef.py::GefCommand::test_cmd_gef 
+[gw3] [ 33%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_gef_remote_qemu_user 
+tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_target_remote 
+[gw1] [ 34%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_set_arena 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_non_main 
+[gw2] [ 35%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_maps_remote_qemu 
+tests/api/gef_memory.py::GefMemoryApi::test_func_parse_permissions 
+[gw0] [ 35%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef 
+tests/commands/gef.py::GefCommand::test_cmd_gef_config 
+[gw1] [ 36%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_non_main 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_tcache 
+[gw2] [ 36%] PASSED tests/api/gef_memory.py::GefMemoryApi::test_func_parse_permissions 
+tests/api/gef_session.py::GefSessionApi::test_func_auxiliary_vector 
+[gw0] [ 37%] PASSED tests/commands/gef.py::GefCommand::test_cmd_gef_config 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_large 
+[gw3] [ 38%] PASSED tests/commands/gef_remote.py::GefRemoteCommand::test_cmd_target_remote 
+tests/commands/got.py::GotCommand::test_cmd_got 
+[gw1] [ 38%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_bins_tcache 
+tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_chunks 
+[gw2] [ 39%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_auxiliary_vector 
+tests/api/gef_session.py::GefSessionApi::test_func_get_filepath 
+[gw0] [ 39%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_large 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_small 
+[gw3] [ 40%] PASSED tests/commands/got.py::GotCommand::test_cmd_got 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_arenas 
+[gw2] [ 41%] PASSED tests/api/gef_session.py::GefSessionApi::test_func_get_filepath 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_unwatch 
+[gw1] [ 41%] PASSED tests/commands/heap.py::HeapCommandNonMain::test_cmd_heap_chunks 
+tests/commands/heap.py::HeapCommandMultipleHeaps::test_cmd_heap_chunks_mult_heaps 
+[gw0] [ 42%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_small 
+tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_unsorted 
+[gw3] [ 42%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_arenas 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_no_arg 
+[gw2] [ 43%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_unwatch 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_basic 
+[gw1] [ 44%] PASSED tests/commands/heap.py::HeapCommandMultipleHeaps::test_cmd_heap_chunks_mult_heaps 
+tests/commands/heap.py::HeapCommandClass::test_cmd_heap_chunks_summary_with_type_resolved 
+[gw0] [ 44%] PASSED tests/commands/heap.py::HeapCommandBins::test_cmd_heap_bins_unsorted 
+tests/commands/heap.py::HeapCommandTcache::test_cmd_heap_bins_tcache_all 
+[gw3] [ 45%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_no_arg 
+tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_with_number 
+[gw2] [ 45%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_basic 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_global_variable 
+[gw1] [ 46%] PASSED tests/commands/heap.py::HeapCommandClass::test_cmd_heap_chunks_summary_with_type_resolved 
+tests/commands/heap.py::HeapCommandFastBins::test_cmd_heap_bins_fast 
+[gw3] [ 47%] PASSED tests/commands/heap.py::HeapCommand::test_cmd_heap_chunk_with_number 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction_force 
+[gw0] [ 47%] PASSED tests/commands/heap.py::HeapCommandTcache::test_cmd_heap_bins_tcache_all 
+tests/commands/heap_analysis.py::HeapAnalysisCommand::test_cmd_heap_analysis 
+[gw1] [ 48%] PASSED tests/commands/heap.py::HeapCommandFastBins::test_cmd_heap_bins_fast 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop 
+[gw2] [ 48%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_watch_global_variable 
+tests/commands/name_break.py::NameBreakCommand::test_cmd_name_break 
+[gw3] [ 49%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_check_b_and_n_same_time 
+[gw0] [ 50%] PASSED tests/commands/heap_analysis.py::HeapAnalysisCommand::test_cmd_heap_analysis 
+tests/commands/hexdump.py::HexdumpCommand::test_cmd_hexdump 
+[gw1] [ 50%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg 
+[gw2] [ 51%] PASSED tests/commands/name_break.py::NameBreakCommand::test_cmd_name_break 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes 
+[gw3] [ 51%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_check_b_and_n_same_time 
+tests/commands/nop.py::NopCommand::test_cmd_nop_force_arg_break_instruction 
+[gw0] [ 52%] PASSED tests/commands/hexdump.py::HexdumpCommand::test_cmd_hexdump 
+tests/commands/highlight.py::HighlightCommand::test_cmd_highlight 
+[gw1] [ 52%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks 
+[gw2] [ 53%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg 
+[gw3] [ 54%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_force_arg_break_instruction 
+tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg 
+[gw0] [ 54%] PASSED tests/commands/highlight.py::HighlightCommand::test_cmd_highlight 
+tests/commands/hijack_fd.py::HijackFdCommand::test_cmd_hijack_fd 
+[gw1] [ 55%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks_force 
+[gw3] [ 55%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg_reaching_unmapped_area 
+[gw2] [ 56%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit 
+[gw0] [ 57%] PASSED tests/commands/hijack_fd.py::HijackFdCommand::test_cmd_hijack_fd 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_list 
+[gw1] [ 57%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_arg_multibnop_breaks_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction 
+[gw3] [ 58%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_i_arg_reaching_unmapped_area 
+tests/commands/nop.py::NopCommand::test_cmd_nop_inactive 
+[gw2] [ 58%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit_force 
+[gw0] [ 59%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_list 
+tests/commands/memory.py::MemoryCommand::test_cmd_memory_reset 
+[gw1] [ 60%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction 
+tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction_force 
+[gw3] [ 60%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_inactive 
+tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg 
+[gw2] [ 61%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_arg_nops_no_fit_force 
+tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction 
+[gw0] [ 61%] PASSED tests/commands/memory.py::MemoryCommand::test_cmd_memory_reset 
+tests/commands/nop.py::NopCommandMmapKnownAddress::test_cmd_nop_invalid_end_address 
+[gw1] [ 62%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_nop_break_instruction_force 
+tests/commands/nop.py::NopCommandMmapKnownAddress::test_cmd_nop_as_bytes_invalid_end_address 
+[gw3] [ 63%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg 
+tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg_break_instruction 
+[gw2] [ 63%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_bytes_break_instruction 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_string 
+[gw0] [ 64%] PASSED tests/commands/nop.py::NopCommandMmapKnownAddress::test_cmd_nop_invalid_end_address 
+tests/commands/patch.py::PatchCommand::test_cmd_patch 
+[gw1] [ 64%] PASSED tests/commands/nop.py::NopCommandMmapKnownAddress::test_cmd_nop_as_bytes_invalid_end_address 
+tests/commands/pcustom.py::PcustomCommand::test_cmd_pcustom 
+[gw3] [ 65%] PASSED tests/commands/nop.py::NopCommand::test_cmd_nop_no_arg_break_instruction 
+tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_run 
+[gw2] [ 66%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_string 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_word 
+[gw0] [ 66%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_byte 
+[gw1] [ 67%] PASSED tests/commands/pcustom.py::PcustomCommand::test_cmd_pcustom 
+tests/commands/pcustom.py::PcustomCommand::test_cmd_pcustom_show 
+[gw3] [ 67%] PASSED tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_run 
+tests/commands/print_format.py::PrintFormatCommand::test_cmd_print_format 
+[gw2] [ 68%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_word 
+tests/commands/patch.py::PatchCommandBss::test_cmd_patch_qword_symbol 
+[gw0] [ 69%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_byte 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_byte_bytearray 
+[gw3] [ 69%] PASSED tests/commands/print_format.py::PrintFormatCommand::test_cmd_print_format 
+tests/commands/print_format.py::PrintFormatCommand::test_cmd_print_format_bytearray 
+[gw1] [ 70%] PASSED tests/commands/pcustom.py::PcustomCommand::test_cmd_pcustom_show 
+tests/commands/pie.py::PieCommand::test_cmd_pie 
+[gw2] [ 70%] PASSED tests/commands/patch.py::PatchCommandBss::test_cmd_patch_qword_symbol 
+tests/commands/pattern.py::PatternCommand::test_cmd_pattern_create 
+[gw0] [ 71%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_byte_bytearray 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_dword 
+[gw1] [ 72%] PASSED tests/commands/pie.py::PieCommand::test_cmd_pie 
+tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_check 
+[gw3] [ 72%] PASSED tests/commands/print_format.py::PrintFormatCommand::test_cmd_print_format_bytearray 
+tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search1 
+[gw2] [ 73%] PASSED tests/commands/pattern.py::PatternCommand::test_cmd_pattern_create 
+tests/commands/pattern.py::PatternCommand::test_cmd_pattern_search 
+[gw0] [ 73%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_dword 
+tests/commands/patch.py::PatchCommand::test_cmd_patch_qword 
+[gw1] [ 74%] PASSED tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_check 
+tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_delete 
+[gw3] [ 75%] PASSED tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search1 
+tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search_smartscan 
+[gw0] [ 75%] PASSED tests/commands/patch.py::PatchCommand::test_cmd_patch_qword 
+tests/commands/search_pattern.py::SearchPatternCommand::test_cmd_search_pattern 
+[gw1] [ 76%] PASSED tests/commands/pie.py::PieCommand::test_cmd_pie_breakpoint_delete 
+tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_get_nok 
+[gw2] [ 76%] PASSED tests/commands/pattern.py::PatternCommand::test_cmd_pattern_search 
+tests/commands/registers.py::RegistersCommand::test_cmd_registers 
+[gw3] [ 77%] PASSED tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search_smartscan 
+tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search_wildcart 
+[gw0] [ 77%] PASSED tests/commands/search_pattern.py::SearchPatternCommand::test_cmd_search_pattern 
+tests/commands/search_pattern.py::SearchPatternCommand::test_cmd_search_pattern_regex 
+[gw1] [ 78%] PASSED tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_get_nok 
+tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_get_ok 
+[gw2] [ 79%] PASSED tests/commands/registers.py::RegistersCommand::test_cmd_registers 
+tests/commands/reset_cache.py::ResetCacheCommand::test_cmd_reset_cache 
+[gw3] [ 79%] PASSED tests/commands/process_search.py::ProcessSearchCommand::test_cmd_process_search_wildcart 
+tests/commands/process_status.py::ProcessStatusCommand::test_cmd_process_status 
+[gw0] [ 80%] PASSED tests/commands/search_pattern.py::SearchPatternCommand::test_cmd_search_pattern_regex 
+tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode 
+[gw2] [ 80%] PASSED tests/commands/reset_cache.py::ResetCacheCommand::test_cmd_reset_cache 
+tests/commands/scan.py::ScanCommand::test_cmd_scan 
+[gw1] [ 81%] PASSED tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_get_ok 
+tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_search 
+[gw3] [ 82%] PASSED tests/commands/process_status.py::ProcessStatusCommand::test_cmd_process_status 
+tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_no_arg 
+[gw0] [ 82%] PASSED tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode 
+tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_two_instructions_from_location 
+[gw1] [ 83%] PASSED tests/commands/shellcode.py::ShellcodeCommand::test_cmd_shellcode_search 
+tests/commands/skipi.py::SkipiCommand::test_cmd_nop_inactive 
+[gw3] [ 83%] PASSED tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_no_arg 
+tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_skip_two_instructions 
+[gw2] [ 84%] PASSED tests/commands/scan.py::ScanCommand::test_cmd_scan 
+tests/commands/stub.py::StubCommand::test_cmd_stub 
+[gw0] [ 85%] PASSED tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_two_instructions_from_location 
+tests/commands/smart_eval.py::SmartEvalCommand::test_cmd_smart_eval 
+[gw1] [ 85%] PASSED tests/commands/skipi.py::SkipiCommand::test_cmd_nop_inactive 
+tests/commands/theme.py::ThemeCommand::test_cmd_theme 
+[gw3] [ 86%] PASSED tests/commands/skipi.py::SkipiCommand::test_cmd_skipi_skip_two_instructions 
+tests/commands/trace_run.py::TraceRunCommand::test_cmd_trace_run 
+[gw0] [ 86%] PASSED tests/commands/smart_eval.py::SmartEvalCommand::test_cmd_smart_eval 
+tests/commands/vmmap.py::VmmapCommand::test_cmd_vmmap 
+[gw1] [ 87%] PASSED tests/commands/theme.py::ThemeCommand::test_cmd_theme 
+tests/commands/xfiles.py::XfilesCommand::test_cmd_xfiles 
+[gw2] [ 88%] PASSED tests/commands/stub.py::StubCommand::test_cmd_stub 
+tests/commands/version.py::VersionCommand::test_cmd_version 
+[gw3] [ 88%] PASSED tests/commands/trace_run.py::TraceRunCommand::test_cmd_trace_run 
+tests/commands/xinfo.py::XinfoCommand::test_cmd_xinfo 
+[gw2] [ 89%] PASSED tests/commands/version.py::VersionCommand::test_cmd_version 
+tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_patch 
+[gw0] [ 89%] PASSED tests/commands/vmmap.py::VmmapCommand::test_cmd_vmmap 
+tests/commands/xinfo.py::XinfoCommandClass::test_cmd_xinfo_on_class 
+[gw1] [ 90%] PASSED tests/commands/xfiles.py::XfilesCommand::test_cmd_xfiles 
+tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_display 
+[gw3] [ 91%] PASSED tests/commands/xinfo.py::XinfoCommand::test_cmd_xinfo 
+tests/config/__init__.py::TestGefConfigUnit::test_config_hook_validator 
+[gw2] [ 91%] PASSED tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_patch 
+tests/config/__init__.py::TestGefConfigUnit::test_config_libc_version 
+[gw0] [ 92%] PASSED tests/commands/xinfo.py::XinfoCommandClass::test_cmd_xinfo_on_class 
+tests/config/__init__.py::TestGefConfigUnit::test_config_show_opcodes_size 
+[gw1] [ 92%] PASSED tests/commands/xor_memory.py::XorMemoryCommand::test_cmd_xor_memory_display 
+tests/config/__init__.py::TestGefConfigUnit::test_config_type_validator 
+[gw3] [ 93%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_hook_validator 
+tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_base 
+[gw2] [ 94%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_libc_version 
+tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_stack 
+[gw1] [ 94%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_type_validator 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_got 
+[gw0] [ 95%] PASSED tests/config/__init__.py::TestGefConfigUnit::test_config_show_opcodes_size 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionBss::test_func_bss 
+[gw3] [ 95%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_base 
+tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_heap 
+[gw2] [ 96%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunction::test_func_stack 
+tests/regressions/gdbserver_connection.py::RegressionGdbserverConnection::test_can_establish_connection_to_gdbserver_again_after_disconnect 
+[gw1] [ 97%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_got 
+tests/regressions/registers_register_order.py::RegressionRegisterOrder::test_registers_show_registers_in_correct_order 
+[gw0] [ 97%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionBss::test_func_bss 
+tests/regressions/registers_register_order.py::RegressionRegisterOrderNested::test_context_correct_registers_refresh_with_frames 
+[gw3] [ 98%] PASSED tests/functions/elf_sections.py::ElfSectionGdbFunctionHeap::test_func_heap 
+[gw1] [ 98%] PASSED tests/regressions/registers_register_order.py::RegressionRegisterOrder::test_registers_show_registers_in_correct_order 
+[gw0] [ 99%] PASSED tests/regressions/registers_register_order.py::RegressionRegisterOrderNested::test_context_correct_registers_refresh_with_frames 
+[gw2] [100%] PASSED tests/regressions/gdbserver_connection.py::RegressionGdbserverConnection::test_can_establish_connection_to_gdbserver_again_after_disconnect 
+
+=================================== FAILURES ===================================
+/home/runner/.local/lib/python3.8/site-packages/pytest_benchmark/logger.py:46: PytestBenchmarkWarning: Benchmarks are automatically disabled because xdist plugin is active.Benchmarks cannot be performed reliably in a parallelized environment.
+  warner(PytestBenchmarkWarning(text))
+____________ GefMemoryApi.test_api_gef_memory_parse_info_proc_maps _____________
+[gw2] linux -- Python 3.8.10 /usr/bin/python3.8
+self = <tests.api.gef_memory.GefMemoryApi testMethod=test_api_gef_memory_parse_info_proc_maps>
+
+    def test_api_gef_memory_parse_info_proc_maps(self):
+        gdb, gef, root = self._gdb, self._gef, self._conn.root
+        gdb.execute("start")
+    
+        Section = root.eval("Section")
+    
+>       if self.gdb_version < (11, 0):
+E       TypeError: '<' not supported between instances of 'list' and 'tuple'
+
+tests/api/gef_memory.py:71: TypeError
+----------------------------- Captured stdout call -----------------------------
+Reading symbols from /tmp/default.out...
+[32mGEF[0m for linux ready, type `[4m[33mgef[24m[0m' to start, `[4m[35mgef config[24m[0m' to configure
+[1m[32m88[0m commands loaded and [1m[34m5[0m functions added for GDB [1m[33m10.2[0m in 0.00ms using Python engine [1m[31m3.8[0m
+[+] Breaking at '0x1169'
+───────────────────────────────────────────────────────────────────────────────────── registers ────
+$rax   : 0x0000555555555169  →  <main+0> endbr64 
+$rbx   : 0x00005555555551c0  →  <__libc_csu_init+0> endbr64 
+$rcx   : 0x00005555555551c0  →  <__libc_csu_init+0> endbr64 
+$rdx   : 0x00007fffffffd758  →  0x00007fffffffdcd0  →  "GITHUB_STATE=/home/runner/work/_temp/_runner_file_[...]"
+$rsp   : 0x00007fffffffd620  →  0x00007ffff7fb62e8  →  0x0000000000000000
+$rbp   : 0x00007fffffffd650  →  0x0000000000000000
+$rsi   : 0x00007fffffffd748  →  0x00007fffffffdcbf  →  "/tmp/default.out"
+$rdi   : 0x1               
+$rip   : 0x0000555555555180  →  <main+23> mov rax, QWORD PTR fs:0x28
+$r8    : 0x0               
+$r9    : 0x00007ffff7fe0d60  →  <_dl_fini+0> endbr64 
+$r10   : 0x00007ffff7ffcf68  →  0x000000006ffffff0
+$r11   : 0x202             
+$r12   : 0x0000555555555080  →  <_start+0> endbr64 
+$r13   : 0x00007fffffffd740  →  0x0000000000000001
+$r14   : 0x0               
+$r15   : 0x0               
+$eflags: [zero carry parity adjust sign trap INTERRUPT direction overflow resume virtualx86 identification]
+$cs: 0x33 $ss: 0x2b $ds: 0x00 $es: 0x00 $fs: 0x00 $gs: 0x00 
+───────────────────────────────────────────────────────────────────────────────────────── stack ────
+0x00007fffffffd620│+0x0000: 0x00007ffff7fb62e8  →  0x0000000000000000	 ← $rsp
+0x00007fffffffd628│+0x0008: 0x00007fffffffd758  →  0x00007fffffffdcd0  →  "GITHUB_STATE=/home/runner/work/_temp/_runner_file_[...]"
+0x00007fffffffd630│+0x0010: 0x00007fffffffd748  →  0x00007fffffffdcbf  →  "/tmp/default.out"
+0x00007fffffffd638│+0x0018: 0x0000000155555080
+0x00007fffffffd640│+0x0020: 0x00007fffffffd740  →  0x0000000000000001
+0x00007fffffffd648│+0x0028: 0x0000000000000000
+0x00007fffffffd650│+0x0030: 0x0000000000000000	 ← $rbp
+0x00007fffffffd658│+0x0038: 0x00007ffff7de9083  →  <__libc_start_main+243> mov edi, eax
+─────────────────────────────────────────────────────────────────────────────────── code:x86:64 ────
+   0x555555555175 <main+12>        mov    DWORD PTR [rbp-0x14], edi
+   0x555555555178 <main+15>        mov    QWORD PTR [rbp-0x20], rsi
+   0x55555555517c <main+19>        mov    QWORD PTR [rbp-0x28], rdx
+ → 0x555555555180 <main+23>        mov    rax, QWORD PTR fs:0x28
+   0x555555555189 <main+32>        mov    QWORD PTR [rbp-0x8], rax
+   0x55555555518d <main+36>        xor    eax, eax
+   0x55555555518f <main+38>        lea    rdi, [rip+0xe6e]        # 0x555555556004
+   0x555555555196 <main+45>        call   0x555555555060 <puts@plt>
+   0x55555555519b <main+50>        mov    eax, 0x0
+─────────────────────────────────────────────────────────────────────────── source:default.c+13 ────
+      8	 #include <stdlib.h>
+      9	 #include <unistd.h>
+     10	 
+     11	 
+     12	 int main(int argc, char** argv, char** envp)
+ →   13	 {
+     14	         printf("Hello World!\n");
+     15	         return EXIT_SUCCESS;
+     16	 }
+─────────────────────────────────────────────────────────────────────────────────────── threads ────
+[#0] Id 1, Name: "default.out", stopped 0x555555555180 in main (), reason: BREAKPOINT
+───────────────────────────────────────────────────────────────────────────────────────── trace ────
+[#0] 0x555555555180 → main(argc=0x1, argv=0x7fffffffd748, envp=0x7fffffffd758)
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+----------------------------- Captured stderr call -----------------------------
+Error while writing index for `/tmp/default.out': mkstemp: No such file or directory.
+TERM environment variable not set.
+WARNING:REMOTEDEBUG/7965:keyboard interrupt!
+____ GefMemoryApi.test_api_gef_memory_parse_info_proc_maps_expected_format _____
+[gw2] linux -- Python 3.8.10 /usr/bin/python3.8
+self = <tests.api.gef_memory.GefMemoryApi testMethod=test_api_gef_memory_parse_info_proc_maps_expected_format>
+
+    def test_api_gef_memory_parse_info_proc_maps_expected_format(self):
+>       if self.gdb_version < (11, 0):
+E       TypeError: '<' not supported between instances of 'list' and 'tuple'
+
+tests/api/gef_memory.py:36: TypeError
+----------------------------- Captured stdout call -----------------------------
+Reading symbols from /tmp/default.out...
+[32mGEF[0m for linux ready, type `[4m[33mgef[24m[0m' to start, `[4m[35mgef config[24m[0m' to configure
+[1m[32m88[0m commands loaded and [1m[34m5[0m functions added for GDB [1m[33m10.2[0m in 0.00ms using Python engine [1m[31m3.8[0m
+
+----------------------------- Captured stderr call -----------------------------
+Error while writing index for `/tmp/default.out': mkstemp: No such file or directory.
+WARNING:REMOTEDEBUG/29939:keyboard interrupt!
+=========================== short test summary info ============================
+FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps
+FAILED tests/api/gef_memory.py::GefMemoryApi::test_api_gef_memory_parse_info_proc_maps_expected_format
+============= 2 failed, 165 passed, 1 skipped in 60.83s (0:01:00) ==============
+##[error]Process completed with exit code 1.

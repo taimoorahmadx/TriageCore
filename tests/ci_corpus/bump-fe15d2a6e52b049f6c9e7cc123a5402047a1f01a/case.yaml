@@ -1,0 +1,68 @@
+repo: premium-minds/billy
+run_id: fe15d2a6e52b049f6c9e7cc123a5402047a1f01a
+head_sha: fe15d2a6e52b049f6c9e7cc123a5402047a1f01a
+run_attempts: []
+commits:
+- sha: fe15d2a6e52b049f6c9e7cc123a5402047a1f01a
+  author: dependabot[bot]
+  files:
+  - billy-portugal/pom.xml
+- sha: 2db395f116dd9f916a9b6dcaac19d330ef7f042e
+  author: froque
+  files:
+  - CHANGELOG.md
+- sha: 662be253d6fce6901f77dedca52cad43fed941cd
+  author: froque
+  files:
+  - pom.xml
+- sha: f6fd2ce81a583f275a9e0fac17457f71dc2469fa
+  author: dependabot[bot]
+  files:
+  - pom.xml
+- sha: 236ab22696fd80c767f7d3395eb427d71c3c294a
+  author: froque
+  files:
+  - billy-france/src/test/java/com/premiumminds/billy/france/test/services/persistence/TestInvoiceGenerationAndExport.java
+  - billy-portugal/src/test/java/com/premiumminds/billy/portugal/test/services/persistence/TestInvoiceGenerationAndExport.java
+  - billy-spain/src/test/java/com/premiumminds/billy/spain/test/services/persistence/TestInvoiceGenerationAndExport.java
+- sha: 25b54c3447f321b330b8d917c173ce00a2df2f2e
+  author: thenmaster
+  files:
+  - README.md
+- sha: a2c81a640afab567ace4b3a418d14962cbaee9e6
+  author: thenmaster
+  files:
+  - CHANGELOG.md
+- sha: 4d9cfaf71f667bc8310c58bb001e739c1746e34e
+  author: Nuno Goncalves
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: 8a6efda9d4be755f135e6548c577f2a37afa7498
+  author: Nuno Goncalves
+  files:
+  - billy-andorra/pom.xml
+  - billy-core-jpa/pom.xml
+  - billy-core/pom.xml
+  - billy-france/pom.xml
+  - billy-gin/pom.xml
+  - billy-portugal/pom.xml
+  - billy-spain/pom.xml
+  - pom.xml
+- sha: f18e3d627d113aa61727df7567f9ed25c82f15c0
+  author: Nuno Goncalves
+  files:
+  - billy-andorra/src/main/java/com/premiumminds/billy/andorra/services/builders/impl/ADSimpleInvoiceBuilderImpl.java
+  - billy-portugal/src/main/java/com/premiumminds/billy/portugal/services/builders/impl/PTSimpleInvoiceBuilderImpl.java
+  - billy-spain/src/main/java/com/premiumminds/billy/spain/services/builders/impl/ESSimpleInvoiceBuilderImpl.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

@@ -1,4 +1,5 @@
 repo: vercel/next.js
+source: mined
 run_id: 40337346242
 head_sha: 56b07938df21e9a336c30b66f5c8cc928710494c
 run_attempts:

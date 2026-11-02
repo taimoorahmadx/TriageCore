@@ -1,0 +1,502 @@
+2023-06-19T20:58:01.2293494Z ##[group]Run mvn -B verify --file pom.xml
+2023-06-19T20:58:01.2293923Z [36;1mmvn -B verify --file pom.xml[0m
+2023-06-19T20:58:01.2363561Z shell: /usr/bin/bash -e {0}
+2023-06-19T20:58:01.2363877Z env:
+2023-06-19T20:58:01.2364197Z   JAVA_HOME: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-19T20:58:01.2364560Z ##[endgroup]
+2023-06-19T20:58:02.8943162Z [INFO] Scanning for projects...
+2023-06-19T20:58:02.9923561Z [INFO] ------------------------------------------------------------------------
+2023-06-19T20:58:02.9924427Z [INFO] Reactor Build Order:
+2023-06-19T20:58:02.9925721Z [INFO] 
+2023-06-19T20:58:02.9933957Z [INFO] billy                                                              [pom]
+2023-06-19T20:58:02.9934603Z [INFO] billy core                                                         [jar]
+2023-06-19T20:58:02.9935285Z [INFO] billy core JPA                                                     [jar]
+2023-06-19T20:58:02.9936306Z [INFO] billy GIN                                                          [jar]
+2023-06-19T20:58:02.9939141Z [INFO] billy portugal (PT Pack)                                           [jar]
+2023-06-19T20:58:02.9939741Z [INFO] billy spain (ES Pack)                                              [jar]
+2023-06-19T20:58:02.9941036Z [INFO] billy france (FR Pack)                                             [jar]
+2023-06-19T20:58:02.9942226Z [INFO] billy andorra (AD Pack)                                            [jar]
+2023-06-19T20:58:03.0003912Z [INFO] 
+2023-06-19T20:58:03.0005049Z [INFO] -----------------------< com.premiumminds:billy >-----------------------
+2023-06-19T20:58:03.0005937Z [INFO] Building billy 8.2.1-SNAPSHOT                                      [1/8]
+2023-06-19T20:58:03.0006468Z [INFO]   from pom.xml
+2023-06-19T20:58:03.0007184Z [INFO] --------------------------------[ pom ]---------------------------------
+2023-06-19T20:58:03.3109232Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom
+2023-06-19T20:58:03.5718442Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.pom (6.7 kB at 25 kB/s)
+2023-06-19T20:58:03.5985521Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom
+2023-06-19T20:58:03.6169392Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-plugins/39/maven-plugins-39.pom (8.1 kB at 426 kB/s)
+2023-06-19T20:58:03.6251747Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom
+2023-06-19T20:58:03.6545507Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/39/maven-parent-39.pom (48 kB at 1.6 MB/s)
+2023-06-19T20:58:03.6638103Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom
+2023-06-19T20:58:03.6780034Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/29/apache-29.pom (21 kB at 1.5 MB/s)
+2023-06-19T20:58:03.7000924Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar
+2023-06-19T20:58:03.7188162Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-source-plugin/3.3.0/maven-source-plugin-3.3.0.jar (32 kB at 1.6 MB/s)
+2023-06-19T20:58:03.7492271Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom
+2023-06-19T20:58:03.7625231Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.pom (21 kB at 1.5 MB/s)
+2023-06-19T20:58:03.7788726Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar
+2023-06-19T20:58:03.8377213Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-javadoc-plugin/3.5.0/maven-javadoc-plugin-3.5.0.jar (507 kB at 8.6 MB/s)
+2023-06-19T20:58:03.9024102Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-failsafe-plugin/3.1.2/maven-failsafe-plugin-3.1.2.pom
+2023-06-19T20:58:03.9206754Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-failsafe-plugin/3.1.2/maven-failsafe-plugin-3.1.2.pom (10 kB at 571 kB/s)
+2023-06-19T20:58:03.9267373Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.2/surefire-3.1.2.pom
+2023-06-19T20:58:03.9443930Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire/3.1.2/surefire-3.1.2.pom (22 kB at 1.2 MB/s)
+2023-06-19T20:58:03.9557962Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-failsafe-plugin/3.1.2/maven-failsafe-plugin-3.1.2.jar
+2023-06-19T20:58:03.9711001Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-failsafe-plugin/3.1.2/maven-failsafe-plugin-3.1.2.jar (54 kB at 3.6 MB/s)
+2023-06-19T20:58:03.9871316Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.37.0/spotless-maven-plugin-2.37.0.pom
+2023-06-19T20:58:04.0198140Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.37.0/spotless-maven-plugin-2.37.0.pom (3.1 kB at 82 kB/s)
+2023-06-19T20:58:04.0278306Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.37.0/spotless-maven-plugin-2.37.0.jar
+2023-06-19T20:58:04.0506982Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/diffplug/spotless/spotless-maven-plugin/2.37.0/spotless-maven-plugin-2.37.0.jar (117 kB at 5.1 MB/s)
+2023-06-19T20:58:04.0559397Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.pom
+2023-06-19T20:58:04.0764497Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.pom (9.7 kB at 464 kB/s)
+2023-06-19T20:58:04.0799772Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin-parent/4.2/license-maven-plugin-parent-4.2.pom
+2023-06-19T20:58:04.0992617Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin-parent/4.2/license-maven-plugin-parent-4.2.pom (17 kB at 858 kB/s)
+2023-06-19T20:58:04.1026968Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/10/mycila-pom-10.pom
+2023-06-19T20:58:04.1186292Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/10/mycila-pom-10.pom (15 kB at 959 kB/s)
+2023-06-19T20:58:04.1323491Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.jar
+2023-06-19T20:58:04.1796585Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/license-maven-plugin/4.2/license-maven-plugin-4.2.jar (143 kB at 3.0 MB/s)
+2023-06-19T20:58:04.2025517Z [INFO] 
+2023-06-19T20:58:04.2032190Z [INFO] --- license-maven-plugin:4.2:format (format-headers) @ billy ---
+2023-06-19T20:58:04.2131162Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom
+2023-06-19T20:58:04.2206662Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.pom (5.8 kB at 729 kB/s)
+2023-06-19T20:58:04.2263631Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom
+2023-06-19T20:58:04.2345130Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/34/maven-shared-components-34.pom (5.1 kB at 463 kB/s)
+2023-06-19T20:58:04.2388996Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom
+2023-06-19T20:58:04.2513694Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/34/maven-parent-34.pom (43 kB at 2.9 MB/s)
+2023-06-19T20:58:04.2557277Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom
+2023-06-19T20:58:04.2654984Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/23/apache-23.pom (18 kB at 1.7 MB/s)
+2023-06-19T20:58:04.2743145Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom
+2023-06-19T20:58:04.2893573Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.pom (14 kB at 1.0 MB/s)
+2023-06-19T20:58:04.2939568Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+2023-06-19T20:58:04.3101366Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/42/commons-parent-42.pom (68 kB at 4.2 MB/s)
+2023-06-19T20:58:04.3241663Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom
+2023-06-19T20:58:04.3342636Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/18/apache-18.pom (16 kB at 1.0 MB/s)
+2023-06-19T20:58:04.3461454Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.pom
+2023-06-19T20:58:04.3549083Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.pom (5.3 kB at 479 kB/s)
+2023-06-19T20:58:04.3573559Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/37/maven-shared-components-37.pom
+2023-06-19T20:58:04.3707994Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/37/maven-shared-components-37.pom (4.9 kB at 376 kB/s)
+2023-06-19T20:58:04.3724437Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom
+2023-06-19T20:58:04.3810989Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/maven-parent/37/maven-parent-37.pom (46 kB at 5.7 MB/s)
+2023-06-19T20:58:04.3844795Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom
+2023-06-19T20:58:04.3927754Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/27/apache-27.pom (20 kB at 2.5 MB/s)
+2023-06-19T20:58:04.4047476Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom
+2023-06-19T20:58:04.4134413Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom (2.7 kB at 274 kB/s)
+2023-06-19T20:58:04.4157021Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom
+2023-06-19T20:58:04.4303785Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom (14 kB at 940 kB/s)
+2023-06-19T20:58:04.4370879Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.pom
+2023-06-19T20:58:04.4486296Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.pom (6.2 kB at 520 kB/s)
+2023-06-19T20:58:04.4566743Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom
+2023-06-19T20:58:04.4657409Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.pom (2.2 kB at 199 kB/s)
+2023-06-19T20:58:04.4684996Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom
+2023-06-19T20:58:04.4840488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether/1.0.0.v20140518/aether-1.0.0.v20140518.pom (30 kB at 2.0 MB/s)
+2023-06-19T20:58:04.4884643Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom
+2023-06-19T20:58:04.4968554Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.pom (1.9 kB at 271 kB/s)
+2023-06-19T20:58:04.5026242Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.pom
+2023-06-19T20:58:04.5157771Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.pom (9.4 kB at 720 kB/s)
+2023-06-19T20:58:04.5209060Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.10.1/gson-parent-2.10.1.pom
+2023-06-19T20:58:04.5314212Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson-parent/2.10.1/gson-parent-2.10.1.pom (13 kB at 1.1 MB/s)
+2023-06-19T20:58:04.5346623Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom
+2023-06-19T20:58:04.5436197Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.pom (8.8 kB at 974 kB/s)
+2023-06-19T20:58:04.5463571Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom
+2023-06-19T20:58:04.5573750Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/10/plexus-10.pom (25 kB at 2.3 MB/s)
+2023-06-19T20:58:04.5633727Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-xmltool/4.4.ga/mycila-xmltool-4.4.ga.pom
+2023-06-19T20:58:04.5797835Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-xmltool/4.4.ga/mycila-xmltool-4.4.ga.pom (2.8 kB at 156 kB/s)
+2023-06-19T20:58:04.5823108Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/3/mycila-pom-3.pom
+2023-06-19T20:58:04.5932417Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-pom/3/mycila-pom-3.pom (20 kB at 1.9 MB/s)
+2023-06-19T20:58:04.5967540Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.2/commons-pool2-2.2.pom
+2023-06-19T20:58:04.6090040Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-pool2/2.2/commons-pool2-2.2.pom (12 kB at 968 kB/s)
+2023-06-19T20:58:04.6116813Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/33/commons-parent-33.pom
+2023-06-19T20:58:04.6260919Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/33/commons-parent-33.pom (53 kB at 3.8 MB/s)
+2023-06-19T20:58:04.6316285Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom
+2023-06-19T20:58:04.6413271Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/13/apache-13.pom (14 kB at 1.4 MB/s)
+2023-06-19T20:58:04.6551506Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar
+2023-06-19T20:58:04.6594648Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar
+2023-06-19T20:58:04.6621896Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar
+2023-06-19T20:58:04.6656579Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.6/commons-io-2.6.jar
+2023-06-19T20:58:04.6667353Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar
+2023-06-19T20:58:04.7125407Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-utils/3.3.4/maven-shared-utils-3.3.4.jar (153 kB at 2.4 MB/s)
+2023-06-19T20:58:04.7130482Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar
+2023-06-19T20:58:04.7181314Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar (41 kB at 709 kB/s)
+2023-06-19T20:58:04.7201050Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar (58 kB at 898 kB/s)
+2023-06-19T20:58:04.7202568Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar
+2023-06-19T20:58:04.7206643Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-api/1.0.0.v20140518/aether-api-1.0.0.v20140518.jar
+2023-06-19T20:58:04.7270580Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar (43 kB at 710 kB/s)
+2023-06-19T20:58:04.7271950Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar
+2023-06-19T20:58:04.7379876Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/aether/aether-util/1.0.0.v20140518/aether-util-1.0.0.v20140518.jar (146 kB at 1.9 MB/s)
+2023-06-19T20:58:04.7385109Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/mycila/mycila-xmltool/4.4.ga/mycila-xmltool-4.4.ga.jar
+[... 8332 lines removed by TriageCore ...]
+2023-06-19T20:58:58.5251719Z   symbol:   class WebResult
+2023-06-19T20:58:58.5252163Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5253018Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[90,10] cannot find symbol
+2023-06-19T20:58:58.5253498Z   symbol:   class WebParam
+2023-06-19T20:58:58.5253956Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5254798Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[92,10] cannot find symbol
+2023-06-19T20:58:58.5255271Z   symbol:   class WebParam
+2023-06-19T20:58:58.5255725Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5256798Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[94,10] cannot find symbol
+2023-06-19T20:58:58.5257305Z   symbol:   class WebParam
+2023-06-19T20:58:58.5257791Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5258929Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[96,10] cannot find symbol
+2023-06-19T20:58:58.5259394Z   symbol:   class WebParam
+2023-06-19T20:58:58.5259844Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5260708Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[98,10] cannot find symbol
+2023-06-19T20:58:58.5261180Z   symbol:   class WebParam
+2023-06-19T20:58:58.5261620Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5272656Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[100,10] cannot find symbol
+2023-06-19T20:58:58.5273203Z   symbol:   class WebParam
+2023-06-19T20:58:58.5273683Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5274875Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[84,6] cannot find symbol
+2023-06-19T20:58:58.5275399Z   symbol:   class WebMethod
+2023-06-19T20:58:58.5276166Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5277082Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[85,6] cannot find symbol
+2023-06-19T20:58:58.5277604Z   symbol:   class WebResult
+2023-06-19T20:58:58.5278104Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5279032Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[126,10] cannot find symbol
+2023-06-19T20:58:58.5279541Z   symbol:   class WebParam
+2023-06-19T20:58:58.5280035Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5280956Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[128,10] cannot find symbol
+2023-06-19T20:58:58.5281462Z   symbol:   class WebParam
+2023-06-19T20:58:58.5281956Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5282874Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[130,10] cannot find symbol
+2023-06-19T20:58:58.5283389Z   symbol:   class WebParam
+2023-06-19T20:58:58.5283859Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5284782Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[132,10] cannot find symbol
+2023-06-19T20:58:58.5285295Z   symbol:   class WebParam
+2023-06-19T20:58:58.5285781Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5286776Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[134,10] cannot find symbol
+2023-06-19T20:58:58.5287254Z   symbol:   class WebParam
+2023-06-19T20:58:58.5287706Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5288539Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[136,10] cannot find symbol
+2023-06-19T20:58:58.5289010Z   symbol:   class WebParam
+2023-06-19T20:58:58.5289463Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5290439Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[138,10] cannot find symbol
+2023-06-19T20:58:58.5290906Z   symbol:   class WebParam
+2023-06-19T20:58:58.5291358Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5292212Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[140,10] cannot find symbol
+2023-06-19T20:58:58.5292693Z   symbol:   class WebParam
+2023-06-19T20:58:58.5293131Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5293981Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[142,10] cannot find symbol
+2023-06-19T20:58:58.5294463Z   symbol:   class WebParam
+2023-06-19T20:58:58.5294901Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5295769Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[120,6] cannot find symbol
+2023-06-19T20:58:58.5296250Z   symbol:   class WebMethod
+2023-06-19T20:58:58.5296704Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5297654Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[121,6] cannot find symbol
+2023-06-19T20:58:58.5298131Z   symbol:   class WebResult
+2023-06-19T20:58:58.5298581Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5299431Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[166,10] cannot find symbol
+2023-06-19T20:58:58.5299887Z   symbol:   class WebParam
+2023-06-19T20:58:58.5300342Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5301188Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[168,10] cannot find symbol
+2023-06-19T20:58:58.5301651Z   symbol:   class WebParam
+2023-06-19T20:58:58.5302366Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5303234Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[170,10] cannot find symbol
+2023-06-19T20:58:58.5303714Z   symbol:   class WebParam
+2023-06-19T20:58:58.5304155Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5305009Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[172,10] cannot find symbol
+2023-06-19T20:58:58.5305496Z   symbol:   class WebParam
+2023-06-19T20:58:58.5305938Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5306787Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[174,10] cannot find symbol
+2023-06-19T20:58:58.5307265Z   symbol:   class WebParam
+2023-06-19T20:58:58.5307716Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5308549Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[176,10] cannot find symbol
+2023-06-19T20:58:58.5309014Z   symbol:   class WebParam
+2023-06-19T20:58:58.5309463Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5310442Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[160,6] cannot find symbol
+2023-06-19T20:58:58.5310917Z   symbol:   class WebMethod
+2023-06-19T20:58:58.5311374Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5312235Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[161,6] cannot find symbol
+2023-06-19T20:58:58.5312725Z   symbol:   class WebResult
+2023-06-19T20:58:58.5313168Z   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5313597Z [INFO] 77 errors 
+2023-06-19T20:58:58.5314020Z [INFO] -------------------------------------------------------------
+2023-06-19T20:58:58.5314529Z [INFO] ------------------------------------------------------------------------
+2023-06-19T20:58:58.5314999Z [INFO] Reactor Summary for billy 8.2.1-SNAPSHOT:
+2023-06-19T20:58:58.5315278Z [INFO] 
+2023-06-19T20:58:58.5315553Z [INFO] billy .............................................. SUCCESS [  8.477 s]
+2023-06-19T20:58:58.5315897Z [INFO] billy core ......................................... SUCCESS [ 14.705 s]
+2023-06-19T20:58:58.5316250Z [INFO] billy core JPA ..................................... SUCCESS [ 12.933 s]
+2023-06-19T20:58:58.5316601Z [INFO] billy GIN .......................................... SUCCESS [  6.958 s]
+2023-06-19T20:58:58.5317065Z [INFO] billy portugal (PT Pack) ........................... FAILURE [ 12.436 s]
+2023-06-19T20:58:58.5317425Z [INFO] billy spain (ES Pack) .............................. SKIPPED
+2023-06-19T20:58:58.5317777Z [INFO] billy france (FR Pack) ............................. SKIPPED
+2023-06-19T20:58:58.5318115Z [INFO] billy andorra (AD Pack) ............................ SKIPPED
+2023-06-19T20:58:58.5318612Z [INFO] ------------------------------------------------------------------------
+2023-06-19T20:58:58.5318947Z [INFO] BUILD FAILURE
+2023-06-19T20:58:58.5319377Z [INFO] ------------------------------------------------------------------------
+2023-06-19T20:58:58.5319724Z [INFO] Total time:  55.646 s
+2023-06-19T20:58:58.5320086Z [INFO] Finished at: 2023-06-19T20:58:58Z
+2023-06-19T20:58:58.5320548Z [INFO] ------------------------------------------------------------------------
+2023-06-19T20:58:58.5321372Z [ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project billy-portugal: Compilation failure: Compilation failure: 
+2023-06-19T20:58:58.5322389Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[4,17] package javax.jws does not exist
+2023-06-19T20:58:58.5323374Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[5,17] package javax.jws does not exist
+2023-06-19T20:58:58.5324352Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[6,17] package javax.jws does not exist
+2023-06-19T20:58:58.5325324Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[7,17] package javax.jws does not exist
+2023-06-19T20:58:58.5326300Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[8,22] package javax.jws.soap does not exist
+2023-06-19T20:58:58.5327297Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[18,2] cannot find symbol
+2023-06-19T20:58:58.5327807Z [ERROR]   symbol: class WebService
+2023-06-19T20:58:58.5328525Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[19,2] cannot find symbol
+2023-06-19T20:58:58.5329126Z [ERROR]   symbol: class SOAPBinding
+2023-06-19T20:58:58.5330034Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[5,17] package javax.jws does not exist
+2023-06-19T20:58:58.5331043Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[6,17] package javax.jws does not exist
+2023-06-19T20:58:58.5332046Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[7,17] package javax.jws does not exist
+2023-06-19T20:58:58.5333021Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[8,17] package javax.jws does not exist
+2023-06-19T20:58:58.5333986Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[22,2] cannot find symbol
+2023-06-19T20:58:58.5334518Z [ERROR]   symbol: class WebService
+2023-06-19T20:58:58.5335331Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[19,42] package SOAPBinding does not exist
+2023-06-19T20:58:58.5336460Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[35,10] cannot find symbol
+2023-06-19T20:58:58.5337004Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5337563Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5338566Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[32,6] cannot find symbol
+2023-06-19T20:58:58.5339091Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5339664Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5340662Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[33,6] cannot find symbol
+2023-06-19T20:58:58.5341209Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5342031Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5344063Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[47,10] cannot find symbol
+2023-06-19T20:58:58.5344581Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5345103Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5346035Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[44,6] cannot find symbol
+2023-06-19T20:58:58.5346551Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5347073Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5347989Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[45,6] cannot find symbol
+2023-06-19T20:58:58.5348489Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5349006Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5349930Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[59,10] cannot find symbol
+2023-06-19T20:58:58.5350421Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5351164Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5352102Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[56,6] cannot find symbol
+2023-06-19T20:58:58.5352609Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5353119Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5354051Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[57,6] cannot find symbol
+2023-06-19T20:58:58.5354559Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5355270Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5356265Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[71,10] cannot find symbol
+2023-06-19T20:58:58.5356805Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5357359Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5358350Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[68,6] cannot find symbol
+2023-06-19T20:58:58.5359013Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5359567Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5360562Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[69,6] cannot find symbol
+2023-06-19T20:58:58.5361094Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5361651Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5362662Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[83,10] cannot find symbol
+2023-06-19T20:58:58.5363208Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5363750Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5364753Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[80,6] cannot find symbol
+2023-06-19T20:58:58.5365297Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5365856Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5366834Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[81,6] cannot find symbol
+2023-06-19T20:58:58.5367375Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5367929Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5368930Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[95,10] cannot find symbol
+2023-06-19T20:58:58.5369464Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5370019Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5371013Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[92,6] cannot find symbol
+2023-06-19T20:58:58.5371538Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5372091Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5373185Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[93,6] cannot find symbol
+2023-06-19T20:58:58.5373732Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5374271Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5375275Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[107,10] cannot find symbol
+2023-06-19T20:58:58.5375815Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5376368Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5377350Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[104,6] cannot find symbol
+2023-06-19T20:58:58.5377890Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5378448Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5379440Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[105,6] cannot find symbol
+2023-06-19T20:58:58.5380079Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5380634Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5381629Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[119,10] cannot find symbol
+2023-06-19T20:58:58.5382403Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5382963Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5383975Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[116,6] cannot find symbol
+2023-06-19T20:58:58.5384520Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5385064Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5386076Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[117,6] cannot find symbol
+2023-06-19T20:58:58.5386622Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5387181Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5388165Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[131,10] cannot find symbol
+2023-06-19T20:58:58.5388705Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5389263Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5390257Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[128,6] cannot find symbol
+2023-06-19T20:58:58.5390786Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5391342Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5392335Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/documents/FatcorewsPort.java:[129,6] cannot find symbol
+2023-06-19T20:58:58.5392876Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5393416Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.documents.FatcorewsPort
+2023-06-19T20:58:58.5394549Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[52,10] cannot find symbol
+2023-06-19T20:58:58.5395086Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5395586Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5396529Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[54,10] cannot find symbol
+2023-06-19T20:58:58.5397063Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5397581Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5398500Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[56,10] cannot find symbol
+2023-06-19T20:58:58.5399028Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5399537Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5400470Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[58,10] cannot find symbol
+2023-06-19T20:58:58.5400980Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5401491Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5402556Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[60,10] cannot find symbol
+2023-06-19T20:58:58.5403063Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5403571Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5404501Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[62,10] cannot find symbol
+2023-06-19T20:58:58.5405020Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5405516Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5406442Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[64,10] cannot find symbol
+2023-06-19T20:58:58.5406963Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5407476Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5408389Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[66,10] cannot find symbol
+2023-06-19T20:58:58.5408908Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5409415Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5410321Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[46,6] cannot find symbol
+2023-06-19T20:58:58.5410850Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5411361Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5412285Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[47,6] cannot find symbol
+2023-06-19T20:58:58.5412796Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5413305Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5414229Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[90,10] cannot find symbol
+2023-06-19T20:58:58.5414750Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5415238Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5416269Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[92,10] cannot find symbol
+2023-06-19T20:58:58.5416793Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5417299Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5418214Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[94,10] cannot find symbol
+2023-06-19T20:58:58.5418735Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5419244Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5420154Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[96,10] cannot find symbol
+2023-06-19T20:58:58.5420672Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5421183Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5425787Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[98,10] cannot find symbol
+2023-06-19T20:58:58.5429447Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5430535Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5433109Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[100,10] cannot find symbol
+2023-06-19T20:58:58.5434027Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5434531Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5435490Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[84,6] cannot find symbol
+2023-06-19T20:58:58.5436032Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5436533Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5437464Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[85,6] cannot find symbol
+2023-06-19T20:58:58.5437998Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5438512Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5439425Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[126,10] cannot find symbol
+2023-06-19T20:58:58.5439949Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5440459Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5441399Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[128,10] cannot find symbol
+2023-06-19T20:58:58.5441907Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5442412Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5443345Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[130,10] cannot find symbol
+2023-06-19T20:58:58.5443876Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5444366Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5445294Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[132,10] cannot find symbol
+2023-06-19T20:58:58.5445814Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5446494Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5447442Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[134,10] cannot find symbol
+2023-06-19T20:58:58.5447968Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5448486Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5449394Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[136,10] cannot find symbol
+2023-06-19T20:58:58.5449920Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5450432Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5451358Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[138,10] cannot find symbol
+2023-06-19T20:58:58.5451868Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5452376Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5453295Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[140,10] cannot find symbol
+2023-06-19T20:58:58.5453912Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5454418Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5455347Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[142,10] cannot find symbol
+2023-06-19T20:58:58.5455873Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5456367Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5457297Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[120,6] cannot find symbol
+2023-06-19T20:58:58.5457827Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5458343Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5459260Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[121,6] cannot find symbol
+2023-06-19T20:58:58.5459791Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5460300Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5461227Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[166,10] cannot find symbol
+2023-06-19T20:58:58.5461729Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5462426Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5463355Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[168,10] cannot find symbol
+2023-06-19T20:58:58.5463860Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5464374Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5465313Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[170,10] cannot find symbol
+2023-06-19T20:58:58.5465835Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5466328Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5467253Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[172,10] cannot find symbol
+2023-06-19T20:58:58.5467782Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5468419Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5469343Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[174,10] cannot find symbol
+2023-06-19T20:58:58.5469871Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5470380Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5471293Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[176,10] cannot find symbol
+2023-06-19T20:58:58.5471809Z [ERROR]   symbol:   class WebParam
+2023-06-19T20:58:58.5472317Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5473257Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[160,6] cannot find symbol
+2023-06-19T20:58:58.5473773Z [ERROR]   symbol:   class WebMethod
+2023-06-19T20:58:58.5474288Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5475215Z [ERROR] /home/runner/work/billy/billy/billy-portugal/src-generated/main/java/com/premiumminds/billy/portugal/webservices/series/SeriesWS.java:[161,6] cannot find symbol
+2023-06-19T20:58:58.5475852Z [ERROR]   symbol:   class WebResult
+2023-06-19T20:58:58.5476347Z [ERROR]   location: interface com.premiumminds.billy.portugal.webservices.series.SeriesWS
+2023-06-19T20:58:58.5476864Z [ERROR] -> [Help 1]
+2023-06-19T20:58:58.5477105Z [ERROR] 
+2023-06-19T20:58:58.5477554Z [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+2023-06-19T20:58:58.5478113Z [ERROR] Re-run Maven using the -X switch to enable full debug logging.
+2023-06-19T20:58:58.5478450Z [ERROR] 
+2023-06-19T20:58:58.5478850Z [ERROR] For more information about the errors and possible solutions, please read the following articles:
+2023-06-19T20:58:58.5479433Z [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2023-06-19T20:58:58.5479817Z [ERROR] 
+2023-06-19T20:58:58.5480173Z [ERROR] After correcting the problems, you can resume the build with the command
+2023-06-19T20:58:58.5480632Z [ERROR]   mvn <args> -rf :billy-portugal
+2023-06-19T20:58:58.5750152Z ##[error]Process completed with exit code 1.
+2023-06-19T20:58:58.5833127Z Post job cleanup.
+2023-06-19T20:58:58.7657897Z Post job cleanup.
+2023-06-19T20:58:58.9158647Z [command]/usr/bin/git version
+2023-06-19T20:58:58.9216328Z git version 2.40.1
+2023-06-19T20:58:58.9270138Z Temporarily overriding HOME='/home/runner/work/_temp/b3c1ac0e-1173-4cf3-8768-13503895c99b' before making global git config changes
+2023-06-19T20:58:58.9271537Z Adding repository directory to the temporary git global config as a safe directory
+2023-06-19T20:58:58.9276914Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/billy/billy
+2023-06-19T20:58:58.9325411Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-06-19T20:58:58.9368962Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-06-19T20:58:58.9651827Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-06-19T20:58:58.9686567Z http.https://github.com/.extraheader
+2023-06-19T20:58:58.9700078Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-06-19T20:58:58.9745115Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-06-19T20:58:59.0268365Z Cleaning up orphan processes
+
+2023-06-19T20:58:59.0268345Z Cleaning up orphan processes
+
+2023-06-19T20:57:21.9806783Z ##[section]Starting: Prepare job build
+2023-06-19T20:57:21.9810312Z Evaluating strategy
+2023-06-19T20:57:21.9818630Z Creating job '__default'
+2023-06-19T20:57:21.9823122Z Evaluating timeout
+2023-06-19T20:57:21.9823201Z Evaluating cancel timeout
+2023-06-19T20:57:21.9823269Z Evaluating continue on error
+2023-06-19T20:57:21.9823319Z Evaluating target
+2023-06-19T20:57:21.9825243Z ##[section]Finishing: Prepare job build
+
+2023-06-19T20:57:54.8666462Z ##[group]Run actions/setup-java@v2
+2023-06-19T20:57:54.8667011Z with:
+2023-06-19T20:57:54.8667323Z   java-version: 11
+2023-06-19T20:57:54.8667748Z   distribution: adopt
+2023-06-19T20:57:54.8668228Z   java-package: jdk
+2023-06-19T20:57:54.8668531Z   architecture: x64
+2023-06-19T20:57:54.8668917Z   check-latest: false
+2023-06-19T20:57:54.8669479Z   server-id: github
+2023-06-19T20:57:54.8669828Z   server-username: GITHUB_ACTOR
+2023-06-19T20:57:54.8670294Z   server-password: GITHUB_TOKEN
+2023-06-19T20:57:54.8670732Z   overwrite-settings: true
+2023-06-19T20:57:54.8671123Z   job-status: success
+2023-06-19T20:57:54.8671504Z ##[endgroup]
+2023-06-19T20:57:55.0872818Z Trying to resolve the latest version from remote
+2023-06-19T20:57:55.3946824Z Resolved latest version as 11.0.19+7
+2023-06-19T20:57:55.3947408Z Trying to download...
+2023-06-19T20:57:55.3948763Z Downloading Java 11.0.19+7 (Adopt-Hotspot) from https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.19_7.tar.gz ...
+2023-06-19T20:57:56.6619797Z Extracting Java archive...
+2023-06-19T20:57:56.6760242Z [command]/usr/bin/tar xz --warning=no-unknown-keyword -C /home/runner/work/_temp/ad5d86db-2aaf-495f-8ee0-6a67bec14793 -f /home/runner/work/_temp/fa014896-34f2-474c-975d-32a1c153aba7
+2023-06-19T20:58:01.1936732Z Java 11.0.19+7 was downloaded
+2023-06-19T20:58:01.1938747Z Setting Java 11.0.19+7 as the default
+2023-06-19T20:58:01.1954924Z 
+2023-06-19T20:58:01.1955555Z Java configuration:
+2023-06-19T20:58:01.1956347Z   Distribution: adopt
+2023-06-19T20:58:01.1956685Z   Version: 11.0.19+7
+2023-06-19T20:58:01.1957334Z   Path: /opt/hostedtoolcache/Java_Adopt_jdk/11.0.19-7/x64
+2023-06-19T20:58:01.1957579Z 
+2023-06-19T20:58:01.1987582Z Creating settings.xml with server-id: github
+2023-06-19T20:58:01.2094473Z Writing to /home/runner/.m2/settings.xml

@@ -1,4 +1,5 @@
 repo: django/django
+source: mined
 run_id: 40312859026
 head_sha: dfddcc5fbbc6d5c2e51ed497e49770d0a2da99b4
 run_attempts:

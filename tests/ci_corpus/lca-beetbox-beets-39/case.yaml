@@ -1,0 +1,51 @@
+repo: beetbox/beets
+run_id: '39'
+head_sha: 7440ca51fb0ff3fb94a725fcd278f7fd5ea77c04
+run_attempts: []
+commits:
+- sha: 7440ca51fb0ff3fb94a725fcd278f7fd5ea77c04
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 2eb8000a0bc2510de18ade055f87720940b01135
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: d5a237912a0c7255f518006b0e85e6bb96a1df0d
+  author: arsaboo
+  files:
+  - docs/plugins/index.rst
+- sha: 0ed65564b30e002d7f5884e32132098542c3c7dd
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 454164496177fd8b9d6aad4f106e68e816becb6c
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+  - docs/plugins/listenbrainz.rst
+- sha: e8dc2cb5daa1049d83700664c8756397816843dd
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 4f6689742c23ec124a7169931fa986a5c5f6f7a4
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 7f4da6e02326195145216f2befbaf140c21460a5
+  author: arsaboo
+  files:
+  - docs/changelog.rst
+- sha: b010fb507fa8d80646dc31b8f1144324de42909f
+  author: arsaboo
+  files:
+  - beetsplug/listenbrainz.py
+- sha: 75deae5f479738a58eec21ca1cb04be1a8492085
+  author: arsaboo
+  files:
+  - beetsplug/lastimport.py
+label: null
+label_source: null
+risk_tier: medium
+source: lca
+suggested_label: bug

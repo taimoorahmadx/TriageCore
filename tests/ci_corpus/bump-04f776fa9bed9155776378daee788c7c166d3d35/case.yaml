@@ -1,0 +1,71 @@
+repo: snowflakedb/snowflake-jdbc
+run_id: 04f776fa9bed9155776378daee788c7c166d3d35
+head_sha: 04f776fa9bed9155776378daee788c7c166d3d35
+run_attempts: []
+commits:
+- sha: 04f776fa9bed9155776378daee788c7c166d3d35
+  author: snyk-bot
+  files:
+  - pom.xml
+- sha: 2de961602c27c352e666107e294418c65327c913
+  author: sfc-gh-mknister
+  files:
+  - src/main/java/net/snowflake/client/core/SFBaseStatement.java
+  - src/main/java/net/snowflake/client/core/SFPreparedStatementMetaData.java
+  - src/main/java/net/snowflake/client/core/SFStatement.java
+  - src/main/java/net/snowflake/client/jdbc/SnowflakeParameterMetadata.java
+  - src/main/java/net/snowflake/client/jdbc/SnowflakePreparedStatementV1.java
+  - src/main/java/net/snowflake/client/jdbc/SnowflakeStatementV1.java
+  - src/test/java/net/snowflake/client/jdbc/MockConnectionTest.java
+  - src/test/java/net/snowflake/client/jdbc/PreparedStatement2LatestIT.java
+- sha: 8f539b70732f5b8268a3ab27eca04c7264a0e147
+  author: sfc-gh-ext-simba-lb
+  files:
+  - src/main/java/net/snowflake/client/jdbc/SnowflakeResultSetSerializableV1.java
+- sha: 793bd0da6e882cea048a1114e1c4d689d7128550
+  author: sfc-gh-alhuang
+  files:
+  - src/test/java/net/snowflake/client/jdbc/telemetry/TelemetryIT.java
+- sha: 4c17e1fc1d136f6f449de2eda9ad31152fa54564
+  author: sfc-gh-ext-simba-lb
+  files:
+  - src/main/java/net/snowflake/client/jdbc/SnowflakeConnectString.java
+  - src/test/java/net/snowflake/client/jdbc/SnowflakeDriverTest.java
+- sha: f97c3d412b630ade4870c174df9da52f2d3f20cc
+  author: sfc-gh-jfan
+  files:
+  - .github/workflows/snyk-issue.yml
+  - .github/workflows/snyk-pr.yml
+- sha: 75f5e31a42ed3956fea373cd23cf8b621d27e1cd
+  author: sfc-gh-skumbham
+  files:
+  - src/main/java/net/snowflake/client/core/HttpUtil.java
+  - src/main/java/net/snowflake/client/core/SFSession.java
+  - src/main/java/net/snowflake/client/core/SFSessionProperty.java
+  - src/main/java/net/snowflake/client/core/SFStatement.java
+  - src/main/java/net/snowflake/client/core/StmtUtil.java
+  - src/main/java/net/snowflake/client/jdbc/RestRequest.java
+  - src/main/java/net/snowflake/client/jdbc/cloud/storage/SnowflakeGCSClient.java
+  - src/test/java/net/snowflake/client/core/SFSessionPropertyTest.java
+  - src/test/java/net/snowflake/client/jdbc/RestRequestTest.java
+- sha: aa959868569772ca78da6c43b4847bbc9d55cc51
+  author: sfc-gh-alhuang
+  files:
+  - src/main/java/net/snowflake/client/jdbc/telemetry/TelemetryClient.java
+  - src/test/java/net/snowflake/client/jdbc/telemetry/TelemetryIT.java
+- sha: 78c75a675062e11b30ea412ce2f1ef7471d87300
+  author: sfc-gh-skumbham
+  files:
+  - README.rst
+- sha: e0ce82d3aabc9adc7f39c441b2110449bee95012
+  author: sfc-gh-kdama
+  files:
+  - CHANGELOG.rst
+  - FIPS/pom.xml
+  - pom.xml
+  - src/main/java/net/snowflake/client/jdbc/SnowflakeDriver.java
+label: null
+label_source: null
+risk_tier: medium
+source: bump
+suggested_label: dependency

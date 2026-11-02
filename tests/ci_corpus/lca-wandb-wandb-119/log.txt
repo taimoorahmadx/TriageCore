@@ -1,0 +1,149 @@
+===== pre-commit/6_Run pre-commitaction@v3.0.0.txt =====
+##[group]Run pre-commit/action@v3.0.0
+with:
+  extra_args: --hook-stage pre-push --all-files
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+##[group]Run python -m pip install pre-commit
+[36;1mpython -m pip install pre-commit[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+Collecting pre-commit
+  Downloading pre_commit-3.5.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting cfgv>=2.0.0 (from pre-commit)
+  Downloading cfgv-3.4.0-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting identify>=1.0.0 (from pre-commit)
+  Downloading identify-2.5.30-py2.py3-none-any.whl.metadata (4.4 kB)
+Collecting nodeenv>=0.11.1 (from pre-commit)
+  Downloading nodeenv-1.8.0-py2.py3-none-any.whl.metadata (21 kB)
+Collecting pyyaml>=5.1 (from pre-commit)
+  Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting virtualenv>=20.10.0 (from pre-commit)
+  Downloading virtualenv-20.24.6-py3-none-any.whl.metadata (4.5 kB)
+Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.11.6/x64/lib/python3.11/site-packages (from nodeenv>=0.11.1->pre-commit) (65.5.0)
+Collecting distlib<1,>=0.3.7 (from virtualenv>=20.10.0->pre-commit)
+  Downloading distlib-0.3.7-py2.py3-none-any.whl.metadata (5.1 kB)
+Collecting filelock<4,>=3.12.2 (from virtualenv>=20.10.0->pre-commit)
+  Downloading filelock-3.12.4-py3-none-any.whl.metadata (2.8 kB)
+Collecting platformdirs<4,>=3.9.1 (from virtualenv>=20.10.0->pre-commit)
+  Downloading platformdirs-3.11.0-py3-none-any.whl.metadata (11 kB)
+Downloading pre_commit-3.5.0-py2.py3-none-any.whl (203 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 203.7/203.7 kB 4.6 MB/s eta 0:00:00
+Downloading cfgv-3.4.0-py2.py3-none-any.whl (7.2 kB)
+Downloading identify-2.5.30-py2.py3-none-any.whl (98 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.9/98.9 kB 7.4 MB/s eta 0:00:00
+Downloading nodeenv-1.8.0-py2.py3-none-any.whl (22 kB)
+Downloading PyYAML-6.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (757 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 757.7/757.7 kB 10.2 MB/s eta 0:00:00
+Downloading virtualenv-20.24.6-py3-none-any.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 20.8 MB/s eta 0:00:00
+Downloading distlib-0.3.7-py2.py3-none-any.whl (468 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 33.7 MB/s eta 0:00:00
+Downloading filelock-3.12.4-py3-none-any.whl (11 kB)
+Downloading platformdirs-3.11.0-py3-none-any.whl (17 kB)
+Installing collected packages: distlib, pyyaml, platformdirs, nodeenv, identify, filelock, cfgv, virtualenv, pre-commit
+Successfully installed cfgv-3.4.0 distlib-0.3.7 filelock-3.12.4 identify-2.5.30 nodeenv-1.8.0 platformdirs-3.11.0 pre-commit-3.5.0 pyyaml-6.0.1 virtualenv-20.24.6
+
+[notice] A new release of pip is available: 23.3 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
+##[group]Run python -m pip freeze --local
+[36;1mpython -m pip freeze --local[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+cfgv==3.4.0
+distlib==0.3.7
+filelock==3.12.4
+identify==2.5.30
+nodeenv==1.8.0
+platformdirs==3.11.0
+pre-commit==3.5.0
+PyYAML==6.0.1
+virtualenv==20.24.6
+##[group]Run actions/cache@v3
+with:
+  path: ~/.cache/pre-commit
+  key: pre-commit-3|/opt/hostedtoolcache/Python/3.11.6/x64|4624495e58feb8be98af6293a50c9765fd8d1ff38819271c6f54f14eaeef22bf
+  enableCrossOsArchive: false
+  fail-on-cache-miss: false
+  lookup-only: false
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+Cache Size: ~43 MB (44974893 B)
+[command]/usr/bin/tar -xf /home/runner/work/_temp/b71606f2-9f8e-400c-9185-4e13f5685bd6/cache.tzst -P -C /home/runner/work/wandb/wandb --use-compress-program unzstd
+Received 44974893 of 44974893 (100.0%), 42.8 MBs/sec
+Cache restored successfully
+Cache restored from key: pre-commit-3|/opt/hostedtoolcache/Python/3.11.6/x64|4624495e58feb8be98af6293a50c9765fd8d1ff38819271c6f54f14eaeef22bf
+##[group]Run pre-commit run --show-diff-on-failure --color=always --hook-stage pre-push --all-files
+[36;1mpre-commit run --show-diff-on-failure --color=always --hook-stage pre-push --all-files[0m
+shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+env:
+  pythonLocation: /opt/hostedtoolcache/Python/3.11.6/x64
+  LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.6/x64/lib
+  SKIP: go-generate-graphql
+##[endgroup]
+ruff.....................................................................[42mPassed[m
+black-jupyter............................................................[41mFailed[m
+[2m- hook id: black-jupyter[m
+[2m- files were modified by this hook[m
+
+[1mreformatted wandb/sdk/data_types/image.py[0m
+
+[1mAll done! ✨ 🍰 ✨[0m
+[34m[1m1 file [0m[1mreformatted[0m, [34m851 files [0mleft unchanged.
+
+blacken-docs.............................................................[42mPassed[m
+check for merge conflicts................................................[42mPassed[m
+trailing-whitespace......................................................[42mPassed[m
+end-of-file-fixer........................................................[42mPassed[m
+check-yaml...............................................................[42mPassed[m
+check-added-large-files..................................................[42mPassed[m
+check-shebang-scripts-are-executable.....................................[42mPassed[m
+check-executables-have-shebangs..........................................[42mPassed[m
+check-symlinks.......................................(no files to check)[46;30mSkipped[m
+check-toml...............................................................[42mPassed[m
+debug-statements.........................................................[42mPassed[m
+forbid-submodules....................................(no files to check)[46;30mSkipped[m
+black....................................................................[42mPassed[m
+go-generate-proto........................................................[42mPassed[m
+go-generate-graphql.....................................................[43;30mSkipped[m
+go-fmt...................................................................[42mPassed[m
+go-imports...............................................................[42mPassed[m
+go-unit-tests............................................................[42mPassed[m
+go-vet...................................................................[42mPassed[m
+golangci-lint............................................................[42mPassed[m
+go-critic................................................................[42mPassed[m
+go-cyclo.................................................................[42mPassed[m
+go-mod-tidy..............................................................[42mPassed[m
+go-build.................................................................[42mPassed[m
+pre-commit hook(s) made changes.
+If you are seeing this message in CI, reproduce locally with: `pre-commit run --all-files`.
+To run `pre-commit` as part of git workflow, use `pre-commit install`.
+All changes made by hooks:
+[1mdiff --git a/wandb/sdk/data_types/image.py b/wandb/sdk/data_types/image.py[m
+[1mindex 977251b..67a9aa6 100644[m
+[1m--- a/wandb/sdk/data_types/image.py[m
+[1m+++ b/wandb/sdk/data_types/image.py[m
+[36m@@ -277,7 +277,7 @@[m [mclass Image(BatchableMedia):[m
+         )[m
+         if util.is_matplotlib_typename(util.get_full_typename(data)):[m
+             buf = BytesIO()[m
+[31m-            util.ensure_matplotlib_figure(data).savefig(buf, format='png')[m
+[32m+[m[32m            util.ensure_matplotlib_figure(data).savefig(buf, format="png")[m
+             self._image = pil_image.open(buf, formats=["PNG"])[m
+         elif isinstance(data, pil_image.Image):[m
+             self._image = data[m
+##[error]Process completed with exit code 1.

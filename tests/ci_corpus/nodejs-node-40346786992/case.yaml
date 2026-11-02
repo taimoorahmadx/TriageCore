@@ -1,4 +1,5 @@
 repo: nodejs/node
+source: mined
 run_id: 40346786992
 head_sha: 1ae40765d68cd4bac5a94d63a695239b84be5426
 run_attempts:
@@ -658,7 +659,7 @@ commits:
   files:
   - src/node_sqlite.cc
   - test/parallel/test-sqlite-backup.mjs
-label: null
-label_source: null
+label: infra
+label_source: The build log shows sccache failed because its hosted cache service returned HTTP 503 ServerBusy with an account egress limit error.
 risk_tier: medium
 suggested_label: infra
