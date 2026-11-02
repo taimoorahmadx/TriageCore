@@ -17,6 +17,7 @@ DecisionStore adapter backed by SQLite is planned around it (ADR 005).
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 
 from src.core.decision import Decision, DecisionPolicy, MinExpectedLossPolicy
@@ -95,10 +96,18 @@ class ConfidenceEngine:
         if reason:
             blocked.update({a: reason for a in spec.autonomous_actions if a not in blocked})
 
-        decision = self.policy.decide(spec, posterior, risk_tier, blocked)
         classification = posterior.most_probable
+        if spec.name == "ci" and classification == "bug":
+            policy_reason = "CI policy requires a bug diagnosis to escalate in FYP-1"
+            for action in spec.autonomous_actions:
+                prior_reason = blocked.get(action)
+                blocked[action] = f"{prior_reason}; {policy_reason}" if prior_reason else policy_reason
+
+        decision = self.policy.decide(spec, posterior, risk_tier, blocked)
+        reliability_reason = diagnosis_reliability_reason(posterior, spec.unknown_pattern_floor)
         output = ConfidenceEngineOutput(
             classification=classification,  # diagnosis only, never an action
+            diagnosis_reliable=reliability_reason is None,
             confidence_score=round(100 * decision.confidence),
             reasoning_trace=build_trace(spec, states, posterior, decision),
             recommended_action=decision.action,  # type: ignore[arg-type]
@@ -109,6 +118,7 @@ class ConfidenceEngine:
             "missing_groups": list(posterior.missing),
             "posterior": posterior.probs,
             "fit": posterior.fit,
+            "diagnosis_reliability_reason": reliability_reason,
             "risk_tier": risk_tier,
             "expected_loss": decision.expected_loss,
             "blocked": decision.blocked,
@@ -117,6 +127,18 @@ class ConfidenceEngine:
             },
         }
         return output, details
+
+
+def diagnosis_reliability_reason(posterior: Posterior, unknown_pattern_floor: float) -> str | None:
+    """Return why the most-probable cause should not be presented as reliable, if applicable."""
+    if not posterior.observed:
+        return "No evidence was observed"
+    expected = 1 / len(posterior.probs)
+    if all(math.isclose(probability, expected, rel_tol=0.0, abs_tol=1e-9) for probability in posterior.probs.values()):
+        return "The posterior is uniform across causes"
+    if posterior.fit < unknown_pattern_floor:
+        return f"Evidence fit {posterior.fit:.3f} is below the configured floor {unknown_pattern_floor:.3f}"
+    return None
 
 
 def build_trace(spec: DomainSpec, states: dict[str, str | None], posterior: Posterior, decision: Decision) -> str:
@@ -133,6 +155,8 @@ def build_trace(spec: DomainSpec, states: dict[str, str | None], posterior: Post
         "Posterior: " + ", ".join(f"{h} {posterior.probs[h]:.3f}" for h in spec.hypotheses)
         + f" -> most probable cause: {posterior.most_probable}"
     )
+    reliability_reason = diagnosis_reliability_reason(posterior, spec.unknown_pattern_floor)
+    parts.append("Diagnosis reliability: " + (f"unreliable ({reliability_reason})" if reliability_reason else "reliable"))
     if decision.blocked:
         parts.append("Blocked: " + "; ".join(f"{a} ({why})" for a, why in decision.blocked.items()))
     losses = ", ".join(f"{a} {v:.2f}" for a, v in decision.expected_loss.items())

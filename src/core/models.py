@@ -11,6 +11,7 @@ class ConfidenceEngineInput(BaseModel):
 
 class ConfidenceEngineOutput(BaseModel):
     classification: Literal["flaky", "dependency", "bug", "infra", "stale_selector", "likely_regression"] = Field(description="Diagnosis only. Never an action.")
+    diagnosis_reliable: bool = Field(description="Whether the evidence supports reporting the most-probable cause as reliable.")
     confidence_score: int = Field(ge=0, le=100, description="Calculated confidence score between 0 and 100.")
     reasoning_trace: str = Field(description="Explanation of how the score was calculated.")
     recommended_action: Literal["heal", "escalate", "auto-fix", "flag", "rerun"] = Field(

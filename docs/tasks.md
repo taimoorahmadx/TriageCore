@@ -142,6 +142,7 @@ Lanes (can run in parallel): **A** cleanup · **Q** QA agent · **B** evaluation
 | [B3](tasks/b3.md) | Rerun and freeze QA baseline evaluation | Taimoor | FYP-1 final evidence | B2, Q3, Q4 |
 | [B1](tasks/b1.md) | Real-app QA cases | Taimoor | M5.5 | Q4 |
 | [D1](tasks/d1.md) | Docker deployment on a VM | Taimoor | M5.5 | A5, S1 |
+| [C15](tasks/c15.md) | CI diagnosis reliability and screen clarity | Shazil | CI demo quality | C11, C14 |
 
 ## Template for a new task
 

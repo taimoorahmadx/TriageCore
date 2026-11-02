@@ -128,11 +128,11 @@ Fetching logs from GitHub and processing jobs live is FYP-2.
 | D5 | No LangGraph; plain Python pipelines | ADR 005 |
 | D6 | SQLite store; Postgres only if FYP-2 needs it | ADR 005 |
 | D7 | One `flaky` label; meaning defined per source in `brief.md` | `brief.md` glossary |
-| D8 | CI `bug` diagnosis should escalate in FYP-1 | Project owner, 2026-11-02; implementation task required |
-| D9 | Add `diagnosis_reliable` to the shared output; false for no evidence, uniform posterior, or fit below the unknown-pattern floor | Project owner, 2026-11-02; implementation task required |
-| D10 | FYP-1 demo adds visible Modern TodoMVC QA scenarios and read-only analysis of reviewed historical CI runs; it does not add live GitHub integration | Project owner request, 2026-11-02; Q5, C14; demo-scope supervisor sign-off confirmation remains pending |
+| D8 | CI `bug` diagnosis should escalate in FYP-1 | Project owner, 2026-11-02; implemented in C15 |
+| D9 | Add `diagnosis_reliable` to the shared output; false for no evidence, uniform posterior, or fit below the unknown-pattern floor | Project owner, 2026-11-02; implemented in C15 |
+| D10 | FYP-1 demo adds visible Modern TodoMVC QA scenarios and read-only analysis of reviewed historical CI runs; it does not add live GitHub integration | Project owner request, 2026-11-02; Q5, C14; supervisor scope sign-off confirmed |
 
-CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 after the FYP-1 demo, once the reviewed corpus supports a meaningful train/holdout split. The approved D8 policy still needs implementation in the CI loss/action policy before it is enforced.
+CI probability tables may be agent-proposed in C9 and calibrated on reviewed data in C12 after the FYP-1 demo, once the reviewed corpus supports a meaningful train/holdout split. The FYP-1 CI bug-escalation policy is enforced by C15 without changing loss costs or probability tables.
 
 ## 8. Security and data
 

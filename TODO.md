@@ -98,3 +98,8 @@ follow-up calibration branch from up-to-date `main`.
 ## After FYP-1
 FYP-2 plan (M6 live CI and PRs, M7 benchmark and calibration, M8 user acceptance): `docs/fyp2.md`.
 Remaining FYP-2 tasks are written at the start of FYP-2 after reviewing FYP-1 results.
+
+## 10. `feature/ci-engine-clarity` · CI decision and screen clarity
+- [x] C15 · Explain CI diagnosis reliability and escalations; make the case catalogue usable · after C11, C14
+
+→ Merge into `main`.

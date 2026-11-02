@@ -113,7 +113,7 @@ ci:
         infra:      {truncated: 0.10, complete: 0.90}
   actions:
     rerun: [flaky]
-    auto-fix: [dependency, bug]
+    auto-fix: [dependency]
 
 thresholds:
   qa:

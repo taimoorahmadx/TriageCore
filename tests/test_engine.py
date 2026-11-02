@@ -38,6 +38,7 @@ def posterior_of(engine, evidence):
 def test_rerun_is_a_valid_action():
     output = ConfidenceEngineOutput(
         classification="flaky",
+        diagnosis_reliable=True,
         confidence_score=90,
         reasoning_trace="CI failure classified as intermittent.",
         recommended_action="rerun",
@@ -156,7 +157,78 @@ def test_shared_engine_handles_four_cause_ci_domain(engine):
         )
     )
     assert bug.classification == "bug"
-    assert bug.recommended_action == "auto-fix"
+    assert bug.diagnosis_reliable is True
+    assert bug.recommended_action == "escalate"
+
+
+def test_ci_bug_diagnosis_escalates_with_traceable_policy_reason(engine):
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log",
+        source="ci",
+        raw_signals={
+            "failure_kind": "test_assertion",
+            "dependency_change": "unchanged",
+            "code_link": "failing_file_touched",
+            "truncated": False,
+        },
+        context={"risk_tier": "default", "attributed_commit": "def456", "ambiguous_commit": False},
+    )
+
+    output, details = engine.evaluate_detailed(evidence)
+
+    assert output.classification == "bug"
+    assert output.recommended_action == "escalate"
+    assert "CI policy requires a bug diagnosis to escalate" in details["blocked"]["auto-fix"]
+    assert "CI policy requires a bug diagnosis to escalate" in details["blocked"]["rerun"]
+
+
+def test_diagnosis_reliable_is_false_when_no_evidence_is_observed(engine):
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log", source="ci",
+        raw_signals={"failure_kind": None, "dependency_change": None, "code_link": None, "truncated": None},
+        context={"risk_tier": "default", "attributed_commit": None, "ambiguous_commit": None},
+    )
+
+    output = engine.evaluate(evidence)
+
+    assert output.diagnosis_reliable is False
+
+
+def test_diagnosis_reliable_is_false_for_uniform_posterior(tmp_path):
+    weights = yaml.safe_load(SYNTHETIC_WEIGHTS.read_text(encoding="utf-8"))
+    for cause in weights["ci"]["groups"]["log_coverage"]["likelihoods"]:
+        weights["ci"]["groups"]["log_coverage"]["likelihoods"][cause] = {"truncated": 0.1, "complete": 0.9}
+    weights_path = tmp_path / "weights.yaml"
+    weights_path.write_text(yaml.safe_dump(weights), encoding="utf-8")
+    uniform_engine = ConfidenceEngine(weights_path)
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log", source="ci",
+        raw_signals={"failure_kind": None, "dependency_change": None, "code_link": None, "truncated": False},
+        context={"risk_tier": "default", "attributed_commit": None, "ambiguous_commit": None},
+    )
+
+    output, details = uniform_engine.evaluate_detailed(evidence)
+
+    assert details["posterior"] == pytest.approx({"flaky": 0.25, "dependency": 0.25, "bug": 0.25, "infra": 0.25})
+    assert output.diagnosis_reliable is False
+
+
+def test_diagnosis_reliable_is_false_below_fit_floor(tmp_path):
+    weights = yaml.safe_load(SYNTHETIC_WEIGHTS.read_text(encoding="utf-8"))
+    weights["thresholds"]["ci"]["unknown_pattern_floor"] = 0.99
+    weights_path = tmp_path / "weights.yaml"
+    weights_path.write_text(yaml.safe_dump(weights), encoding="utf-8")
+    high_floor_engine = ConfidenceEngine(weights_path)
+    evidence = ConfidenceEngineInput(
+        evidence_type="ci_log", source="ci",
+        raw_signals={"failure_kind": "other", "dependency_change": "changed", "code_link": "not_touched", "truncated": False},
+        context={"risk_tier": "default", "attributed_commit": "abc123", "ambiguous_commit": False},
+    )
+
+    output, details = high_floor_engine.evaluate_detailed(evidence)
+
+    assert output.diagnosis_reliable is False
+    assert details["diagnosis_reliability_reason"].startswith("Evidence fit ")
 
 
 def test_ambiguous_commit_blocks_ci_auto_fix(engine):
@@ -336,6 +408,7 @@ def test_reasoning_trace_shows_expected_losses_without_break_even(engine):
 def test_no_evidence_escalates(engine):
     out = engine.evaluate(qa_evidence())
     assert out.recommended_action == "escalate"
+    assert out.diagnosis_reliable is False
     assert "no evidence observed" in out.reasoning_trace
 
 
@@ -345,6 +418,7 @@ def test_unrecognised_pattern_escalates(tmp_path):
     engine = ConfidenceEngine(_write(tmp_path, data))
     out = engine.evaluate(qa_evidence(**{**CLEAN, "action_succeeded": False}))
     assert out.recommended_action == "escalate"
+    assert out.diagnosis_reliable is False
     assert "unrecognised evidence pattern" in out.reasoning_trace
 
 
