@@ -43,6 +43,10 @@ History lives in git and `docs/log/ai-usage-log.md`.
 - C12 requires reviewed labels and enough cases for a
   training/holdout split disjoint from C10 benchmark cases; agents must not invent labels or claim
   results before evaluation.
+- C12 is blocked (2026-11-02): the reviewed corpus has only 3 `flaky` cases. Holding out even one
+  leaves at most two for fitting and produces an uninformative cause-specific evaluation; C12
+  requires a meaningful holdout for every cause. Collect and human-review more `flaky` cases before
+  calibration. No calibration script, weights, or holdout results were created.
 
 ## Decisions (short; full record in docs/plan.md §7 and docs/adr/)
 - D1 offline CI slice for FYP-1 · D2 heal suggests a patch, never writes · D3 `rerun` added ·
