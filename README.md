@@ -1,98 +1,129 @@
 # TriageCore
 
-A shared decision engine for self-healing browser tests and CI failure triage. When a test step or
-a build fails, an agent collects evidence, and the **ConfidenceEngine** decides whether the system
-may act on its own or must hand the failure to an engineer.
+A shared decision engine for browser-test recovery and CI failure triage. QA and CI agents collect
+different evidence, then use the same **ConfidenceEngine** to diagnose likely causes and choose an
+action or escalate to a person.
 
-Final-year project, FAST School of Computing. Team: Taimoor Ahmad, Abdul Mohaimin, Shazil.
+Final-year project at FAST School of Computing.
 
-## The problem
+## How it works
 
-AI "self-healing" test tools relocate a broken selector and click the new element. If the click
-handler is itself broken, the test still passes and the bug ships. TriageCore heals only when the
-evidence after the click supports it.
+The engine groups observed signals, estimates cause probabilities with semi-naive Bayes, then
+chooses the action with the lowest expected loss for the configured risk tier. Missing evidence is
+left out, and escalation is always available. Groq proposes selectors or extracts CI facts; it does
+not make the decision.
 
-## Current state
+## Project status
 
-| Part | State |
+| Area | Current scope |
 |---|---|
-| ConfidenceEngine (`src/core/`) | Built. Bayesian diagnosis over evidence groups + minimum-expected-loss decision. QA weights are human-elicited; CI probabilities are provisional and final calibration is deferred pending more reviewed flaky cases ([ADR 004](docs/adr/004-bayesian-confidence-engine.md)) |
-| QA agent (`src/browser/`, `src/agents/`) | Built. Re-wait, Groq relocation, post-click observation, engine decision, and suggested selector patches (never applied automatically) |
-| QA evaluation (`src/eval/`) | Built. Frozen 22-step comparison of four policies, including confidence intervals |
-| CI agent (`src/ci/`, `src/agents/`) | Built for local demos: fixture and reviewed historical GitHub Actions cases, log fact extraction, commit tracing, engine decisions, and signed webhook intake. Final weight calibration is deferred. |
-| Persistence, deployment | SQLite decision and CI job storage is built. Remote deployment is not started. |
+| QA | Runs browser scenarios, gathers post-click evidence, and may suggest a selector patch. It never applies the patch automatically. |
+| CI | Analyzes saved fixture and reviewed historical cases. Logs are processed locally; the app does not fetch live GitHub logs. |
+| Webhooks | Verifies failed-run webhook signatures and stores accepted jobs. Stored jobs are not processed live. |
+| Evaluation | QA results are from a small project-built suite. CI evaluation and probability calibration remain preliminary; neither demonstrates real-world effectiveness. |
 
-Frozen QA evaluation (22 steps, Groq relocation, 2026-11-02):
-
-| Policy | Acceptable decisions | Real bugs let through |
-|---|---|---|
-| Blind healing | 9 / 22 | 10 / 10 |
-| Penalty rule | 19 / 22 | 0 / 10 |
-| Simple rule | 21 / 22 | 0 / 10 |
-| TriageCore | 22 / 22 | 0 / 10 |
-
-This is a small team-built suite, not evidence of generalisation. The latest CI fixture smoke check
-scored 2 cases: TriageCore made 1 acceptable decision, with 0 extraction failures. It is explicitly
-preliminary and is not real-world CI effectiveness evidence. See `docs/plan.md` §9 and
-`docs/progress.md` for current dataset and calibration status.
+CI calibration is waiting on enough human-reviewed flaky cases for a useful training and holdout split. See the [project plan](docs/plan.md) and [progress](docs/progress.md) for current limitations.
 
 ## Quickstart
 
-Requirements: Python 3.10+, Node.js 18+, a Groq API key. `GITHUB_WEBHOOK_SECRET` is needed only to
-accept GitHub webhooks.
+Requirements: Python 3.10+, Node.js 20.19+ or 22.12+, npm, and a Groq API key for selector
+relocation and CI fact extraction. `GITHUB_WEBHOOK_SECRET` is only needed to accept webhooks.
 
 ```bash
 cp .env.example .env      # set GROQ_API_KEY
 make setup                # venv, Python deps, Chromium, frontend deps
-make test                 # ~2 min
-make api                  # terminal 1: API on http://localhost:8000
-make ui                   # terminal 2: UI on http://localhost:5173
+make test                 # run the test suite
+make api                  # terminal 1: API at http://localhost:8000
+make ui                   # terminal 2: UI at http://localhost:5173
 ```
 
-Without a Groq key, relocation/fact extraction cannot run successfully and affected cases fail
-safe by escalating.
+The API and UI run in separate terminals. Without `GROQ_API_KEY`, selector relocation and fact
+extraction cannot run; affected cases fail safe by escalating.
 
-Other commands: `make test-engine`, `make lint`, `make weights`, `make sensitivity`, `make eval`,
-`make verify`.
+Useful checks: `make test-engine`, `make lint`, `make weights`, `make sensitivity`, `make eval`,
+and `make verify`.
 
-## The UI
+## What you can try
 
-- **QA Engine:** run a scenario in a real browser. For each step: what the browser saw, how each
-  piece of evidence moves the odds, the most likely cause, and the expected cost of each action.
-- **Evaluation:** run every scenario and compare blind healing, a penalty rule and TriageCore.
-- **CI Engine:** inspect fixtures and reviewed historical GitHub Actions runs, then run CI triage.
-- **Proposal PoC (scripted):** the proposal-defense demo, kept for reference. Its numbers are
-  hardcoded and are not results.
+- **QA Engine:** run a scenario in Chromium and inspect evidence, diagnosis, and action costs.
+- **CI Engine:** search saved fixture and reviewed historical cases, then analyze a selected case.
+- **Evaluation:** compare QA decisions against the included baselines.
 
-## API (`/api/qa`)
+## API
 
-| Route | Purpose |
-|---|---|
-| `GET /status` | Engine and Groq readiness |
-| `GET /engine` | QA weights and their decision thresholds |
-| `GET /scenarios` | Scenarios and ground truth |
-| `POST /run` `{"scenario_id": "shopflow_checkout"}` | Run one scenario live |
-| `POST /evaluate` | Run all scenarios, compare policies |
-| `GET /evaluation/latest` | Latest saved evaluation |
-| `GET /decisions` | Recent persisted QA decisions |
-
-## CI API (`/api/ci`)
+The API is available at `http://localhost:8000`; interactive OpenAPI docs are at `/docs`.
 
 | Route | Purpose |
 |---|---|
-| `GET /cases` | List demo fixtures and reviewed historical runs |
-| `POST /run` `{"case_id": "dependency_failure"}` | Triage one case |
-| `GET /evaluation/latest` | Latest preliminary fixture smoke summary |
-| `POST /webhook` | Accept signed GitHub `workflow_run` webhook events; requires `GITHUB_WEBHOOK_SECRET` |
+| `GET /health` | Service health |
+| `GET /api/qa/scenarios`, `POST /api/qa/run` | List scenarios and run one in Chromium |
+| `POST /api/qa/evaluate`, `GET /api/qa/evaluation/latest` | Run or view the QA evaluation |
+| `GET /api/ci/cases`, `POST /api/ci/run` | List and analyze saved CI cases |
+| `GET /api/ci/evaluation/latest` | View the latest saved CI evaluation report |
+| `POST /api/ci/webhook` | Verify and store a failed GitHub Actions run; requires `GITHUB_WEBHOOK_SECRET` |
 
-The API has no user authentication; run it on localhost only. The webhook verifies GitHub's
-`X-Hub-Signature-256` signature using `GITHUB_WEBHOOK_SECRET`.
+The API has no active authentication. Keep it on localhost. Webhooks require a valid
+`X-Hub-Signature-256` signature.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    subgraph inputs[" INPUTS "]
+        A[QA Scenarios]
+        B[CI Logs + Commits]
+        C[GitHub Webhooks]
+    end
+
+    subgraph agents[" AGENT PIPELINES "]
+        D[QA Agent<br/>Playwright + Evidence]
+        E[CI Agent<br/>Process + Extract + Trace]
+    end
+
+    subgraph core[" CONFIDENCE ENGINE "]
+        F[weights.yaml<br/>Priors + Likelihoods + Costs]
+        G[Semi-naive Bayes<br/>P of cause given evidence]
+        H[Min Expected Loss<br/>Select Action]
+    end
+
+    subgraph outputs[" OUTPUTS "]
+        I[Decisions + SQLite]
+        J[Evaluation Reports]
+    end
+
+    K[React Web UI]
+    L[Groq LLM]
+
+    A --> D
+    B --> E
+    C --> I
+
+    D --> F
+    E --> F
+
+    F --> G
+    G --> H
+    H --> I
+    H --> J
+
+    K -.->|View/Control| D
+    K -.->|View/Control| E
+    K -.->|View| I
+    K -.->|View| J
+
+    L -.->|Relocate| D
+    L -.->|Extract Facts| E
+
+    style core fill:#c8e6c9,stroke:#2e7d32,stroke-width:3px
+    style agents fill:#e1bee7,stroke:#7b1fa2,stroke-width:2px
+    style inputs fill:#bbdefb,stroke:#1976d2,stroke-width:2px
+    style outputs fill:#ffe0b2,stroke:#f57c00,stroke-width:2px
+    style K fill:#f8bbd0,stroke:#c2185b,stroke-width:2px
+    style L fill:#eeeeee,stroke:#616161,stroke-width:2px
+```
 
 ## Documentation
 
-- [Architecture diagram](.github/modernize/assessment/engines/facts/architecture-diagram.md)
-- **[TODO](TODO.md)** · [Brief](docs/brief.md) · [Spec](docs/spec.md) · [Plan](docs/plan.md) · [Tasks](docs/tasks.md) · [Progress](docs/progress.md)
-- [Engine contract](docs/contracts/engine_io.md) · [QA evidence contract](docs/contracts/raw_signals.md) · [ADRs](docs/adr/)
-- [Contributing](docs/contributing.md) · [Troubleshooting](docs/troubleshooting.md) · [Tools, AI use and risks](docs/disclosure.md)
-- [AI usage log](docs/log/ai-usage-log.md) · [Change log](docs/log/changes.md)
-- Course rules and proposal-stage material: `reference/`
+- [Architecture notes](.github/modernize/assessment/engines/facts/architecture-diagram.md) · [Project brief](docs/brief.md) · [Plan](docs/plan.md) · [Specification](docs/spec.md)
+- [Engine contract](docs/contracts/engine_io.md) · [QA evidence](docs/contracts/raw_signals.md) · [CI evidence](docs/contracts/ci_signals.md) · [Architecture decisions](docs/adr/)
+- [Contributing](docs/contributing.md) · [Troubleshooting](docs/troubleshooting.md) · [Project progress](docs/progress.md)

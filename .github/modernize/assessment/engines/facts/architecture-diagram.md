@@ -4,60 +4,7 @@ TriageCore uses one shared ConfidenceEngine for two agents: a QA self-healing ag
 
 ## System Overview
 
-```mermaid
-flowchart LR
-    subgraph inputs[" INPUTS "]
-        A[QA Scenarios]
-        B[CI Logs + Commits]
-        C[GitHub Webhooks]
-    end
-
-    subgraph agents[" AGENT PIPELINES "]
-        D[QA Agent<br/>Playwright + Evidence]
-        E[CI Agent<br/>Process + Extract + Trace]
-    end
-
-    subgraph core[" CONFIDENCE ENGINE "]
-        F[weights.yaml<br/>Priors + Likelihoods + Costs]
-        G[Semi-naive Bayes<br/>P of cause given evidence]
-        H[Min Expected Loss<br/>Select Action]
-    end
-
-    subgraph outputs[" OUTPUTS "]
-        I[Decisions + SQLite]
-        J[Evaluation Reports]
-    end
-
-    K[React Web UI]
-    L[Groq LLM]
-
-    A --> D
-    B --> E
-    C --> I
-    
-    D --> F
-    E --> F
-    
-    F --> G
-    G --> H
-    H --> I
-    H --> J
-    
-    K -.->|View/Control| D
-    K -.->|View/Control| E
-    K -.->|View| I
-    K -.->|View| J
-    
-    L -.->|Relocate| D
-    L -.->|Extract Facts| E
-
-    style core fill:#c8e6c9,stroke:#2e7d32,stroke-width:3px
-    style agents fill:#e1bee7,stroke:#7b1fa2,stroke-width:2px
-    style inputs fill:#bbdefb,stroke:#1976d2,stroke-width:2px
-    style outputs fill:#ffe0b2,stroke:#f57c00,stroke-width:2px
-    style K fill:#f8bbd0,stroke:#c2185b,stroke-width:2px
-    style L fill:#eeeeee,stroke:#616161,stroke-width:2px
-```
+The rendered diagram is kept in one place: [Architecture in the GitHub README](../../../../../README.md#architecture). This page provides the component details and design notes that accompany it.
 
 ## Architecture Overview
 
