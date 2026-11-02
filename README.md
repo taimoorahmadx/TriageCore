@@ -16,26 +16,30 @@ evidence after the click supports it.
 
 | Part | State |
 |---|---|
-| ConfidenceEngine (`src/core/`) | Built. Bayesian diagnosis over evidence groups + minimum-expected-loss decision. QA weights are human-elicited; initial CI probability tables may be agent-proposed for the initial benchmark, with final QA/CI calibration planned for the end on reviewed datasets ([ADR 004](docs/adr/004-bayesian-confidence-engine.md)) |
-| QA agent (`src/browser/`, `src/agents/`) | Built. Re-wait, Groq relocation, post-click observation, engine decision |
-| Evaluation (`src/eval/`) | Built. 12 hand-built steps, three policies on the same evidence |
-| CI agent (`src/ci/`) | Not started |
-| Persistence, deployment | Not started |
+| ConfidenceEngine (`src/core/`) | Built. Bayesian diagnosis over evidence groups + minimum-expected-loss decision. QA weights are human-elicited; CI probabilities are provisional and final calibration is deferred pending more reviewed flaky cases ([ADR 004](docs/adr/004-bayesian-confidence-engine.md)) |
+| QA agent (`src/browser/`, `src/agents/`) | Built. Re-wait, Groq relocation, post-click observation, engine decision, and suggested selector patches (never applied automatically) |
+| QA evaluation (`src/eval/`) | Built. Frozen 22-step comparison of four policies, including confidence intervals |
+| CI agent (`src/ci/`, `src/agents/`) | Built for local demos: fixture and reviewed historical GitHub Actions cases, log fact extraction, commit tracing, engine decisions, and signed webhook intake. Final weight calibration is deferred. |
+| Persistence, deployment | SQLite decision and CI job storage is built. Remote deployment is not started. |
 
-Latest evaluation (12 steps on the team's own test pages, Groq relocation, 2026-10-20):
+Frozen QA evaluation (22 steps, Groq relocation, 2026-11-02):
 
 | Policy | Acceptable decisions | Real bugs let through |
 |---|---|---|
-| Blind healing | 7 / 12 | 4 / 4 |
-| Simple penalty rule | 11 / 12 | 0 / 4 |
-| TriageCore | 12 / 12 | 0 / 4 |
+| Blind healing | 9 / 22 | 10 / 10 |
+| Penalty rule | 19 / 22 | 0 / 10 |
+| Simple rule | 21 / 22 | 0 / 10 |
+| TriageCore | 22 / 22 | 0 / 10 |
 
-This is a small, preliminary suite built by the team; it shows the method works on known cases,
-not that it generalises. See `docs/plan.md` §9.
+This is a small team-built suite, not evidence of generalisation. The latest CI fixture smoke check
+scored 2 cases: TriageCore made 1 acceptable decision, with 0 extraction failures. It is explicitly
+preliminary and is not real-world CI effectiveness evidence. See `docs/plan.md` §9 and
+`docs/progress.md` for current dataset and calibration status.
 
 ## Quickstart
 
-Requirements: Python 3.10+, Node.js 18+, a Groq API key.
+Requirements: Python 3.10+, Node.js 18+, a Groq API key. `GITHUB_WEBHOOK_SECRET` is needed only to
+accept GitHub webhooks.
 
 ```bash
 cp .env.example .env      # set GROQ_API_KEY
@@ -45,7 +49,8 @@ make api                  # terminal 1: API on http://localhost:8000
 make ui                   # terminal 2: UI on http://localhost:5173
 ```
 
-Without a Groq key, relocation fails and every renamed step escalates (fail-safe).
+Without a Groq key, relocation/fact extraction cannot run successfully and affected cases fail
+safe by escalating.
 
 Other commands: `make test-engine`, `make lint`, `make weights`, `make sensitivity`, `make eval`,
 `make verify`.
@@ -55,6 +60,7 @@ Other commands: `make test-engine`, `make lint`, `make weights`, `make sensitivi
 - **QA Engine:** run a scenario in a real browser. For each step: what the browser saw, how each
   piece of evidence moves the odds, the most likely cause, and the expected cost of each action.
 - **Evaluation:** run every scenario and compare blind healing, a penalty rule and TriageCore.
+- **CI Engine:** inspect fixtures and reviewed historical GitHub Actions runs, then run CI triage.
 - **Proposal PoC (scripted):** the proposal-defense demo, kept for reference. Its numbers are
   hardcoded and are not results.
 
@@ -68,8 +74,19 @@ Other commands: `make test-engine`, `make lint`, `make weights`, `make sensitivi
 | `POST /run` `{"scenario_id": "shopflow_checkout"}` | Run one scenario live |
 | `POST /evaluate` | Run all scenarios, compare policies |
 | `GET /evaluation/latest` | Latest saved evaluation |
+| `GET /decisions` | Recent persisted QA decisions |
 
-The API has no authentication; run it on localhost only.
+## CI API (`/api/ci`)
+
+| Route | Purpose |
+|---|---|
+| `GET /cases` | List demo fixtures and reviewed historical runs |
+| `POST /run` `{"case_id": "dependency_failure"}` | Triage one case |
+| `GET /evaluation/latest` | Latest preliminary fixture smoke summary |
+| `POST /webhook` | Accept signed GitHub `workflow_run` webhook events; requires `GITHUB_WEBHOOK_SECRET` |
+
+The API has no user authentication; run it on localhost only. The webhook verifies GitHub's
+`X-Hub-Signature-256` signature using `GITHUB_WEBHOOK_SECRET`.
 
 ## Documentation
 
