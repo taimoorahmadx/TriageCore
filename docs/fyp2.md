@@ -66,6 +66,9 @@ Plan the participants and consent **before FYP-2 Mid**, not in the final weeks.
 
 ## Optional improvements (only if the core is done)
 
+- Plain-English-to-test drafts: turn a user's request into a draft Playwright test, ask for missing details, run checks, and require human review before use.
+- API testing and monitoring: collect request and response evidence such as status codes, latency, and schema mismatches, then classify likely causes and recommend retrying or escalating.
+- Explore data pipeline or deployment failure triage, each with its own evidence, reviewed examples, and evaluation.
 - Deterministic locator ladder (role, text, structure) as a relocation fallback behind the `Relocator` interface.
 - Second LLM provider behind the same interfaces.
 - Visual (screenshot) matching remains out of scope unless the team records a scope change.
