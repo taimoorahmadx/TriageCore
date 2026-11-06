@@ -96,9 +96,9 @@ Groq is asked for **one** replacement selector. The code retries if the network 
 - **More than 1 match:** the runner refuses to choose, so `heal` is blocked.
 - **Exactly 1 match:** the runner clicks it and watches what happens.
 
-**Exactly one match only proves there is one match. It does not prove it is the intended element.** A wrong button can be the only match for a weak selector. That is why the result after the click matters. If the expected result is not reached, `heal` is blocked as a hard rule (task X1), whatever the probabilities say.
+**Exactly one match only proves there is one match. It does not prove it is the intended element.** A wrong button can be the only match for a weak selector. That is why the result after the click matters. If the expected result is not reached, `heal` is blocked as a hard rule, whatever the probabilities say.
 
-`heal` means: **use the replacement selector for this run instead of the broken one.** It does not change the app, does not write to `qa_scenarios.yaml`, and does not edit any test file. A healed step shows a **suggested selector patch** (task Q1) for a person to review. Nothing is ever applied automatically.
+`heal` means: **use the replacement selector for this run instead of the broken one.** It does not change the app, does not write to `qa_scenarios.yaml`, and does not edit any test file. A healed step shows a **suggested selector patch** for a person to review. Nothing is ever applied automatically.
 
 ### 4.3 What the runner does, step by step
 
@@ -109,7 +109,7 @@ Groq is asked for **one** replacement selector. The code retries if the network 
 5. Clicks it and watches for clues: did the expected result appear? Was there a page error, an error banner, a failed request, or console noise?
 6. Sends the evidence and the step's risk tier to the ConfidenceEngine.
 
-If anything crashes while collecting evidence, the step escalates instead of crashing the run (task A4).
+If anything crashes while collecting evidence, the step escalates instead of crashing the run.
 
 ### 4.4 What the user gets back
 
@@ -158,7 +158,7 @@ Two things are easy to mix up:
 4. **Trace the failure to a commit** (`src/ci/tracing.py`). It compares failing files and dependency files (lockfiles, `requirements.txt`, `package.json` and similar) with the files each recent commit changed. One matching commit is the **attributed commit**. Two or more matches set `ambiguous_commit = true`. It never picks one silently.
 5. **Send the evidence to the engine** through `CIAdapter` (`src/core/evidence.py`).
 
-If anything throws an error, the result is `escalate`. If fact extraction fails, the case is marked as an extraction failure and reported separately (task C13), so we never pretend the engine judged it.
+If anything throws an error, the result is `escalate`. If fact extraction fails, the case is marked as an extraction failure and reported separately, so we never pretend the engine judged it.
 
 ### 5.3 CI causes and actions
 
@@ -208,7 +208,22 @@ The calculations are established methods: Bayesian probability (a semi-naive Bay
 - escalating when acting is unsafe;
 - one engine shared by two domains.
 
+### Why use one shared engine?
+
+QA and CI see different clues, but both need to decide what likely caused a failure and what to do next. For example, QA may decide whether to heal a broken selector or ask a person. CI may decide whether to rerun a failed job or ask a person. The engine uses the same decision steps for both, with different clues and weights.
+
+Sharing those steps means a fix to the decision code can help both QA and CI. It also helps them make decisions consistently. If they use very different reasoning, sharing one engine may not help much.
+
 The value has to be shown by evaluation, not by the maths alone (section 9).
+
+**Possible extensions:** The same engine could support other domains that collect evidence, classify likely causes, and choose an action or escalate:
+
+1. **API monitoring:** diagnose outages, slow responses, dependency failures, and transient network errors; recommend retrying or escalating.
+2. **Data pipeline triage:** diagnose schema changes, missing or late data, transformation bugs, and infrastructure failures; recommend rerunning a safe step or escalating.
+3. **Deployment triage:** diagnose build, configuration, migration, and health-check failures; recommend rollback or human review.
+4. **Security alert triage:** group alert evidence to distinguish likely false positives from urgent risks; recommend prioritizing investigation or escalating.
+
+These are possible extensions, not features the project currently includes. Each would need its own evidence sources, reviewed examples, decision policies, and evaluation.
 
 ### 6.2 Bayes' rule, with QA numbers
 
