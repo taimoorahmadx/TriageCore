@@ -57,10 +57,10 @@ function Observed({ step }) {
     ['Elements matching it', s.relocated_match_count ?? <span key="v" className="text-neutral-500 font-mono">n/a</span>],
     ['Click went through', yesNo(s.action_succeeded)],
     ['Expected result appeared', yesNo(s.expected_state_reached)],
-    ['Error banner shown', s.error_state_shown ? <span className="text-[#ff453a] font-mono font-semibold">yes</span> : yesNo(s.error_state_shown)],
-    ['Page crashes (uncaught errors)', s.uncaught_page_errors > 0 ? <span className="text-[#ff453a] font-mono font-semibold">{s.uncaught_page_errors}</span> : (s.uncaught_page_errors ?? '—')],
-    ['Failed network requests', s.failed_requests > 0 ? <span className="text-[#ff453a] font-mono font-semibold">{s.failed_requests}</span> : (s.failed_requests ?? '—')],
-    ['Console errors', s.console_errors > 0 ? <span className="text-[#ff9f0a] font-mono font-semibold">{s.console_errors}</span> : (s.console_errors ?? '—')],
+    ['Error banner shown', s.error_state_shown ? <span key="v" className="text-[#ff453a] font-mono font-semibold">yes</span> : yesNo(s.error_state_shown)],
+    ['Page crashes (uncaught errors)', s.uncaught_page_errors > 0 ? <span key="v" className="text-[#ff453a] font-mono font-semibold">{s.uncaught_page_errors}</span> : (s.uncaught_page_errors ?? '—')],
+    ['Failed network requests', s.failed_requests > 0 ? <span key="v" className="text-[#ff453a] font-mono font-semibold">{s.failed_requests}</span> : (s.failed_requests ?? '—')],
+    ['Console errors', s.console_errors > 0 ? <span key="v" className="text-[#ff9f0a] font-mono font-semibold">{s.console_errors}</span> : (s.console_errors ?? '—')],
   ];
   const messages = [...(o.page_errors || []).map((m) => ['crash', m]), ...(o.failed_requests || []).map((m) => ['request', m]), ...(o.console_errors || []).map((m) => ['console', m])];
   return (

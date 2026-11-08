@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from starlette.routing import Mount
 
 from src.api.app import app
@@ -8,9 +10,9 @@ def test_modern_todomvc_preview_is_served_with_query_mutation() -> None:
     apps_mount = next(route for route in app.routes if isinstance(route, Mount) and route.path == "/apps")
     file_path, _ = apps_mount.app.lookup_path("modern-todomvc/index.html")
 
-    assert apps_mount.app.directory.endswith("tests/apps")
-    assert file_path.endswith("tests/apps/modern-todomvc/index.html")
-    assert 'js/bootstrap.js' in open(file_path, encoding="utf-8").read()
+    assert Path(apps_mount.app.directory).as_posix().endswith("tests/apps")
+    assert Path(file_path).as_posix().endswith("tests/apps/modern-todomvc/index.html")
+    assert 'js/bootstrap.js' in Path(file_path).read_text(encoding="utf-8")
 
 
 def test_scenarios_identify_all_modern_todomvc_cases() -> None:
