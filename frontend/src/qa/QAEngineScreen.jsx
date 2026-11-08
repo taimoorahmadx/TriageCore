@@ -169,16 +169,16 @@ export function QAEngineScreen() {
                     {scenario.source === 'Modern TodoMVC' ? 'Open app' : 'Open the test page'} <ExternalLink className="h-3 w-3" />
                   </a>
                 </div>
-                <div className="flex flex-col items-end gap-2.5">
+                <div className="flex w-44 flex-col items-end gap-2.5 shrink-0">
                   <button
                     onClick={run}
                     disabled={running || apiError}
-                    className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-black transition-all shadow-sm active:scale-[0.98] disabled:opacity-40 cursor-pointer"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold tabular-nums text-black transition-all shadow-sm active:scale-[0.98] disabled:opacity-40 cursor-pointer"
                   >
-                    {running ? <Loader2 className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
-                    {running ? `Running… ${(elapsed / 1000).toFixed(1)}s` : 'Run in browser'}
+                    {running ? <Loader2 className="h-4 w-4 shrink-0 animate-spin" /> : <Play className="h-4 w-4 shrink-0 fill-current" />}
+                    <span>{running ? `Running… ${(elapsed / 1000).toFixed(1)}s` : 'Run in browser'}</span>
                   </button>
-                  <label className="flex items-center gap-1.5 text-[11px] text-neutral-400 cursor-pointer select-none">
+                  <label className="flex w-full items-center justify-center gap-1.5 text-[11px] text-neutral-400 cursor-pointer select-none">
                     <input type="checkbox" checked={showBrowser} onChange={(e) => setShowBrowser(e.target.checked)} className="rounded accent-white" />
                     show the browser window
                   </label>
